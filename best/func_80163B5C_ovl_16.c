@@ -72,7 +72,7 @@ void func_80163B5C_ovl_16(S_main *p, s32 arg1, s32 arg2)
                 sp10[0] = *(u16 *)(s1 + 0x4E);
                 sp10[1] = *(u16 *)(s1 + 0x52) + 0xC8;
                 sp10[2] = *(u16 *)(s1 + 0x56);
-                func_800377B0_ovl_01(0x2400, 0, D_800E8FC8_ovl_01, sp10);
+                do { func_800377B0_ovl_01(0x2400, 0, D_800E8FC8_ovl_01, sp10); } while (0);
                 func_80052C00_ovl_01(5, 0);
                 func_80052D40_ovl_01(0xB, 0xC8, 0x28, 3);
                 if (func_80059E30_ovl_01(0xF, 0) & 2) {

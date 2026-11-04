@@ -18,7 +18,7 @@ extern u16 D_80143F6C;
 extern u8 *D_80143F70;
 extern u8 *D_80143F7C;
 extern S_Ent *D_80143F8C;
-extern void *func_80135C50_ovl_01(void *, u8 *);
+extern void *func_80135C50_overlay_001(void *, u8 *);
 
 s32 func_800A3314_ovl_01(s32 arg0) {
     S_Node *node;
@@ -56,7 +56,7 @@ s32 func_800A3314_ovl_01(s32 arg0) {
     node->state = 2;
     node->id = arg0;
     D_80143F70 += 0xC;
-    D_80143F7C = func_80135C50_ovl_01(D_80143F7C, D_80143F70);
+    D_80143F7C = func_80135C50_overlay_001(D_80143F7C, D_80143F70);
     idx = D_80143F6C;
     D_80143F8C[idx].unk4 = arg0;
     D_80143F8C[idx].unk0 = 0x100;

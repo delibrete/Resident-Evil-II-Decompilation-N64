@@ -8,7 +8,7 @@ void func_8016B5B0_ovl_11(void *p, s32 x, s32 y) {
  case 0:
   *(s32 *)(b+0x1E8)=0x0A000F00; b[6]=1;
   func_80032DEC_ovl_01(b,*(s32 *)(n+0x28),*(s32 *)(n+0x30),0x400);
-  func_80077D48_ovl_01(10,b); *(u16 *)(b+0x1F4)=0; b[0x26F]|=0x80;
+  do { func_80077D48_ovl_01(10,b); } while (0); *(u16 *)(b+0x1F4)=0; b[0x26F]|=0x80;
   /* fallthrough */
  case 1:
   *(u16 *)(b+0x1F4)=*(u16 *)(b+0x1F4)+1;

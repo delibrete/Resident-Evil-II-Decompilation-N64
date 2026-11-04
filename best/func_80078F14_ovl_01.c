@@ -29,7 +29,7 @@ void func_80078F14_ovl_01(s16 arg0, s32 arg2) {
         var_s2 = 0;
         var_s1 = temp_a0;
 loop_2:
-        temp_s0 = var_s1 + &D_8011A31C_ovl_01;
+        temp_s0 = (char *)(temp_a0); temp_s0 += (s32)(&D_8011A31C_ovl_01);
         if (M2C_FIELD(temp_s0, s32 *, 0x14) != 0) {
             if (func_800A2148_ovl_01(M2C_FIELD(temp_s0, s32 *, 4)) & 0xFF) {
                 func_800A21B8_ovl_01(0, (arg2 * 0x10) & 0xFFFF, M2C_FIELD(temp_s0, s32 *, 4), 1);

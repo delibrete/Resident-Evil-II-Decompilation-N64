@@ -51,7 +51,7 @@ block_11:
                 func_80032DEC_ovl_01(arg0, M2C_FIELD(arg0, s16 *, 0x260), M2C_FIELD(arg0, s16 *, 0x262), var_a3);
             }
         }
-        func_800334F8_ovl_01(arg0, arg1, arg2, 0);
+        func_800334F8_ovl_01(arg0, arg1, arg2);
         if ((u8) M2C_FIELD(arg0, u8 *, 0x1EA) >= 0x10U) {
             M2C_FIELD(arg0, u16 *, 0x1E0) = (u16) ((s32) (M2C_FIELD(arg0, u16 *, 0x1E0) << 0x10) >> 0x11);
         }

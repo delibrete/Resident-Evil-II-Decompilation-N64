@@ -4,7 +4,7 @@ extern u32 D_800E10D0_ovl_01;
 extern s32 func_801674BC_ovl_17;
 typedef void (*Fn)(void *, s32, s32);
 extern volatile Fn D_80167478_ovl_16[];
-static inline static u8 *inline_fn(u8 *arg0)
+static inline static static u8 *inline_fn(u8 *arg0)
 {
   return arg0 + 0x2c8;
 }
@@ -15,6 +15,8 @@ void func_80165828_ovl_16(void *arg0, s32 arg1, s32 arg2)
   s32 x;
   u32 new_var;
   u8 v;
+  volatile unsigned int new_var2;
+  new_var2 = arg2;
   if (p[5] != 255)
   {
     p[0x2cb] = v;
@@ -35,6 +37,6 @@ void func_80165828_ovl_16(void *arg0, s32 arg1, s32 arg2)
       *((u16 *) inline_fn(p)) &= 0xfd0f;
     }
   }
-  D_80167478_ovl_16[p[0x26e]](arg0, x, arg2);
+  D_80167478_ovl_16[p[0x26e]](arg0, x, new_var2);
 }
 

@@ -1,6 +1,6 @@
 s32 func_80036764_ovl_01_510_24(void *,s32,s32,s32);
 void func_80162768_ovl_15(void *p){
- u8 *b=p; s32 r=0; func_80162CE0_ovl_15(p);
+ u8 *b=p; s32 r=0; do { func_80162CE0_ovl_15(p); } while (0);
  switch(b[6]){
  case 0: func_80077D48_ovl_01(4,p); b[6]++; 
  case 1:

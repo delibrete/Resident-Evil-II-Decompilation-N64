@@ -28,7 +28,7 @@ void func_80183050_ovl_02(u8 *arg0, s8 *arg1, s32 arg2, s32 arg3, s32 arg4) {
     var_t3 = var_a0 + arg2;
     var_t2 = 0;
     if (arg4 > 0) {
-        var_t1 = var_a1 + 0xF;
+        var_t1 = (char *)(var_a1); var_t1 += (s32)(0xF);
         var_t0 = var_t3 + 0xF;
         var_a2 = var_a0 + 0xF;
         do {

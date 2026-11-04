@@ -16,9 +16,11 @@ s32 func_80069C90_ovl_01(s32 arg0, s32 arg1, s32 arg2, void *arg3) {
     s32 var_a2;
     s32 var_v0;
     s32 var_v0_2;
-    s32 var_v1;
+    
     u16 var_a0;
+u16 __repair_result_var_a0;
     u16 var_v1_2;
+u16 __repair_result_var_v1_2;
     u32 temp_v1;
 
     var_a2 = arg2;
@@ -29,8 +31,8 @@ s32 func_80069C90_ovl_01(s32 arg0, s32 arg1, s32 arg2, void *arg3) {
             if (temp_v1 != 0) {
 
             } else {
-                var_a0 = M2C_FIELD(arg3, u16 *, 4);
-                var_v1 = arg0 - (M2C_FIELD(arg3, s16 *, 0) + var_a0);
+                __repair_result_var_a0 = M2C_FIELD(arg3, u16 *, 4);
+                var_v0 = arg0 - (M2C_FIELD(arg3, s16 *, 0) + __repair_result_var_a0);
                 goto block_10;
             }
         } else if (temp_v1 != 2) {
@@ -39,14 +41,14 @@ s32 func_80069C90_ovl_01(s32 arg0, s32 arg1, s32 arg2, void *arg3) {
 
             } else {
                 var_v0_2 = (M2C_FIELD(arg3, s16 *, 2) - arg1) * 0x708;
-                var_v1_2 = M2C_FIELD(arg3, u16 *, 6);
+                __repair_result_var_v1_2 = M2C_FIELD(arg3, u16 *, 6);
                 goto block_12;
             }
         } else {
             var_a0 = M2C_FIELD(arg3, u16 *, 6);
-            var_v1 = arg1 - (M2C_FIELD(arg3, s16 *, 2) + var_a0);
+            var_v0 = arg1 - (M2C_FIELD(arg3, s16 *, 2) + var_a0);
 block_10:
-            var_a2 = (s32) -(var_v1 * 0x708) / (s32) var_a0;
+            var_a2 = (s32) -(var_v0 * 0x708) / (s32) var_a0;
             var_v0 = var_a2 < 0x709;
         }
     } else {

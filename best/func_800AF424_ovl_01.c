@@ -56,7 +56,7 @@ s32 func_800AF424_ovl_01(S_e *arg0, S_a1 *arg1)
   S_ent *ent;
   u8 *base;
   v = arg1->unk0;
-  t = arg0->unk4E + ((s32) (((s32) (v << 16)) >> 24));
+  t = arg0->unk4E; t += ((s32) (((s32) (v << 16)) >> 24));
   combined = (((v >> 16) << 16) | (arg1->unk5 << 8)) | arg1->unk4;
   if (t >= 0)
   {

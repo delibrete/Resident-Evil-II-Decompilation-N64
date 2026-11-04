@@ -5,6 +5,6 @@ s32 func_80032EA4_ovl_01(s32, s32, s32, s32);
 
 void func_801626F4_ovl_28(void *p)
 {
-    func_80032EA4_ovl_01((s32)p, D_800C7650_ovl_01.sub.f1, D_800C7650_ovl_01.sub.f2, 0x400);
-    func_80032EA4_ovl_01((s32)p, D_800C7650_ovl_01.sub.f1, D_800C7650_ovl_01.sub.f2, 0x320);
+    { func_80032EA4_ovl_01((s32)p, D_800C7650_ovl_01.sub.f1, D_800C7650_ovl_01.sub.f2, 0x400); }
+    do { func_80032EA4_ovl_01((s32)p, D_800C7650_ovl_01.sub.f1, D_800C7650_ovl_01.sub.f2, 0x320); } while (0);
 }

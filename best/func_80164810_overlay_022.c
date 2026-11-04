@@ -1,24 +1,22 @@
-typedef struct { u8 pad0[4]; s32 f4; u8 state; u8 pad7[0x25]; s32 timer; u8 pad30[0x17a]; u16 flags; u8 pad1ac[0x3c]; s16 x270; s16 x272; } Obj;
-extern s32 func_80089D34_ovl_01(Obj *, s32, s32, s32);
-void func_80164810_overlay_022(Obj *p) {
- switch(p->state) {
- case 0:
-  p->x270=0; p->x272=0; p->state++;
-  if(p->x270) {
-   p->timer=-4000; p->f4=0xE330000; p->flags &= 0xBFFF;
-   p->state++;
-   ((u8*)p)[0x1e8]=14; ((u8*)p)[0x1e9]=0x33;
-   func_80089D34_ovl_01(p,0,0,0x1000);
-   p->timer+=1000;
-   if(!p->timer) p->state++;
-  }
-  break;
- case 1:
-  ((u8*)p)[0x1e8]=14;
-  func_80089D34_ovl_01(p,0,0,0x1000);
-  p->state += 14;
-  break;
- case 2: case 3:
-  if(p->x272) p->f4=0x1010000;
- }
+s16 func_80032D44_ovl_01(s16,s16,s16,s16);
+s32 func_80032F24_ovl_01(void*,s16,s32);
+s32 func_80052D40_ovl_01(s32,s32,s32,s32);
+s32 func_80077B0C_ovl_01(s32,void*);
+s32 func_80089D34_ovl_01(void*,s32,s32,s32);
+s32 func_80164D84_ovl_15(u8);
+extern u8 D_800C7650_ovl_01[];
+void func_80164810_overlay_015(void *p,s32 a1,s32 a2) {
+ u8 *b=p; u8 st=b[6]; void *q=*(void**)(b+0x250);
+ if(st==1) goto active;
+ if(st>=2)return;
+ if(st!=0)return;
+ func_80077B0C_ovl_01(0x04030001,b+0x28);
+ func_80052D40_ovl_01(0x35,0xf0,0x28,0);
+ *(u32*)(b+0x1e8)=0x30000;
+ *(u32*)(D_800C7650_ovl_01+0x19a3c)|=0x04000000;
+ b[7]=0; b[6]++;
+active:
+ if(b[7]<3){func_80164D84_ovl_15(b[7]); b[7]++;}
+ func_80032F24_ovl_01(p,func_80032D44_ovl_01(*(s16*)((u8*)q+0x2a),*(s16*)((u8*)q+0x32),*(s16*)(b+0x2a),*(s16*)(b+0x32)),0x80);
+ b[6]+=func_80089D34_ovl_01(p,a1,a2,0x400);
 }

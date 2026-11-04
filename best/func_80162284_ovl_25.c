@@ -1,9 +1,13 @@
 extern s32 func_80089D34_ovl_01(void*,s32,s32,s32);
 extern void func_80032B8C_ovl_01(void*,s32,u16,s32);
 void func_80162284_ovl_25(void *p) {
+int __repair_literal;
+
  u8 *b=p; u8 st=b[6]; u16 t; s32 c,d; u8 mask; s32 one=1;
  if(st==one) goto dec;
- if(st<2){if(st==0)goto init; return;}
+__repair_literal = 2;
+
+ if(st<__repair_literal){if(st==0)goto init; return;}
  if(st==2)return;
  if(st==3)goto update;
  return;

@@ -7,14 +7,21 @@ extern u8 D_800E10D0_ovl_01[];
 void func_80162458_ovl_27(u8 *p, void *x, void *y)
 {
   u8 *object = *((u8 **) (p + 0x250));
+  u8 (*new_var4)[];
   u8 *sub = object + 0x2B4;
-  s32 state = p[6];
+  unsigned int state = p[6];
   s32 temp;
   s32 value;
   volatile s32 unused[2];
   u8 *new_var;
+  s32 *new_var3;
+  u8 (*new_var2)[];
+  u16 new_var5;
+  new_var4 = &D_800C7650_ovl_01;
+  new_var2 = new_var4;
   if (state < 5)
   {
+    new_var5 = *((u16 *) (object + 0x66));
     switch (state)
     {
       case 0:
@@ -28,17 +35,22 @@ void func_80162458_ovl_27(u8 *p, void *x, void *y)
         *((s32 *) (p + 0x1E8)) = ((((value & 1) + 5) << 24) + ((value & 7) << 16)) + 0x700;
         if (sub[0])
       {
-        temp = *((s32 *) ((D_800C7650_ovl_01 + 0x18000) + 0x1D3C));
+        temp = *((s32 *) (((*new_var2) + 0x18000) + 0x1D3C));
+      }
+      else
+        if (p || temp)
+      {
+        temp = (value = (s32) D_800E10D0_ovl_01);
       }
       else
       {
         temp = (value = (s32) D_800E10D0_ovl_01);
       }
         *((s16 *) (p + 0x1F4)) = func_80032D44_ovl_01(*((s16 *) new_var), *((s16 *) (p + 0x32)), *((s16 *) (((u8 *) temp) + 0x2A)), *((s16 *) (((u8 *) temp) + 0x32)));
-        *((s16 *) (p + 0x2BC)) = (*((s16 *) (p + 0x1F4))) - (*((u16 *) (object + 0x66)));
+        *((s16 *) (p + 0x2BC)) = new_var5;
+        *((s16 *) (p + 0x2BC)) = (*((s16 *) (p + 0x1F4))) - (*((s16 *) (p + 0x2BC)));
         value = func_80033634_ovl_01();
-        temp = (*((u16 *) (p + 0x2C2))) - ((value & 31) | 0x100);
-        *((s16 *) (p + 0x2C2)) = temp;
+        temp = (*((s16 *) (p + 0x2C2)) = (*((u16 *) (p + 0x2C2))) - ((value & 31) | 0x100));
         if (((s16) temp) < (-0x3FF))
       {
         p[6] = 2;
@@ -46,9 +58,10 @@ void func_80162458_ovl_27(u8 *p, void *x, void *y)
         break;
 
       case 2:
+        new_var3 = (s32 *) (p + 0x1E8);
         if (sub[0xF])
       {
-        *((s32 *) (p + 0x1E8)) = 0x1000700 + ((*((u8 *) (p + 0x2B4))) << 19);
+        *new_var3 = 0x1000700 + ((*((u8 *) (p + 0x2B4))) << 19);
         p[6] = 3;
       }
         break;
@@ -56,8 +69,9 @@ void func_80162458_ovl_27(u8 *p, void *x, void *y)
       case 3:
         *((s16 *) (p + 0x2BC)) = (*((u16 *) (p + 0x1F4))) - (*((u16 *) (object + 0x66)));
         value = func_80033634_ovl_01();
-        temp = (*((u16 *) (p + 0x2C2))) + ((value & 31) | 0x100);
-        *((s16 *) (p + 0x2C2)) = temp;
+        temp = 0x100;
+        temp = (*((u16 *) (p + 0x2C2))) + ((value & 31) | temp);
+        *((s16 *) (p + 0x2C2)) = (double) temp;
         func_80089D34_ovl_01(p, x, y, 0x200);
         if ((*((s16 *) (p + 0x2C2))) >= 0)
       {

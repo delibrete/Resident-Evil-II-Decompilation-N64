@@ -3,7 +3,7 @@ typedef struct { u8 pad[0x18000]; u8 sub[0x1D40]; } Big;
 extern Big D_800C7650_ovl_01;
 extern u8 D_800E10D0_ovl_01[];
 s32 func_80033634_ovl_01(void);
-s32 func_80162C10_ovl_18(Obj *, void *);
+s32 func_80162C10_overlay_018(Obj *, void *);
 void func_80162164_ovl_18(Obj *arg0) {
     u8 mode;
     u8 random;
@@ -34,7 +34,7 @@ void func_80162164_ovl_18(Obj *arg0) {
         arg0->timer = timer;
         if ((s16)timer == -1) arg0->f6 = 0x100;
     }
-    if (func_80162C10_ovl_18(arg0, (void *)0) == 0) {
+    if (func_80162C10_overlay_018(arg0, (void *)0) == 0) {
         arg0->f5 = 2;
         arg0->f6 = 0;
     }

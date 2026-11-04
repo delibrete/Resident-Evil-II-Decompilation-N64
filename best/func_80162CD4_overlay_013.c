@@ -16,7 +16,7 @@ M2C_UNK func_80032C08_ovl_01(void *, M2C_UNK, M2C_UNK); /* extern */
 M2C_UNK func_80032DEC_ovl_01(void *, s16, s16, M2C_UNK); /* extern */
 s32 func_80033634_ovl_01();                         /* extern */
 M2C_UNK func_80089D34_ovl_01(void *, M2C_UNK, M2C_UNK, M2C_UNK); /* extern */
-M2C_UNK func_80166158_ovl_13(void *, M2C_UNK);      /* extern */
+M2C_UNK func_80166158_overlay_013(void *, M2C_UNK);      /* extern */
 
 void func_80162CD4_overlay_013(void *arg0, M2C_UNK arg1, M2C_UNK arg2) {
     u8 temp_v0;
@@ -33,7 +33,7 @@ void func_80162CD4_overlay_013(void *arg0, M2C_UNK arg1, M2C_UNK arg2) {
             M2C_FIELD(arg0, s32 *, 0x1E8) = 0x04000700;
             var_v0 = 3;
             if (!(func_80033634_ovl_01() & 7)) {
-                func_80166158_ovl_13(arg0, 1);
+                func_80166158_overlay_013(arg0, 1);
                 var_v0 = 3;
             }
         }

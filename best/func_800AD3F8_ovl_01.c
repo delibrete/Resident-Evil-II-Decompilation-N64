@@ -1,5 +1,3 @@
-static __inline__ u16 __repair_inline(u16 a) { return a; }
-/* machine draft (m2c) for gcc-2.7.2-kmc -G0 -mips3 -mgp32 -mfp32 -O2, tried by autopilot */
 #ifndef M2C_DEFINES
 #define M2C_DEFINES
 typedef s32 M2C_UNK;
@@ -12,10 +10,12 @@ typedef s32 M2C_UNK32;
 #define M2C_CARRY 0
 #define M2C_OVERFLOW(a) (0)
 #endif
+static __inline__ u16 __repair_inline(u16 a) { return a; }
+/* machine draft (m2c) for gcc-2.7.2-kmc -G0 -mips3 -mgp32 -mfp32 -O2, tried by autopilot */
 
-M2C_UNK func_800A5618_ovl_01();                     /* extern */
-M2C_UNK func_800A5660_ovl_01();                     /* extern */
-M2C_UNK func_800A5C8C_ovl_01(u16 *, s32);           /* extern */
+s32 func_800A5618_overlay_001();
+s32 func_800A5660_overlay_001();
+s32 func_800A5C8C_overlay_001();
 extern s32 D_8014E10C;
 extern u16 *D_8014E110;
 
@@ -29,8 +29,8 @@ s32 func_800AD3F8_ovl_01(s32 arg0) {
     s32 var_v1_3;
     u16 **var_s2;
     u16 **var_v1_2;
-    u16 *var_s0;
-    u16 *var_s1;
+    char *var_s0;
+    char *var_s1;
     u16 temp_v0;
     u16 var_v1;
 u16 __repair_result_var_v1;
@@ -44,7 +44,7 @@ u16 __repair_result_var_v1;
         var_s2 = &D_8014E110;
 loop_2:
         var_s1 = *var_s2;
-        __repair_result_var_v1 = __repair_inline(*var_s1);
+        __repair_result_var_v1 = __repair_inline(*(u16 *)var_s1);
         var_s4 = 0;
         if (__repair_result_var_v1 != 0xFFFF) {
             var_s0 = var_s1 + 2;
@@ -54,7 +54,7 @@ loop_2:
                     M2C_FIELD(var_s0, u16 *, 0) = temp_v0;
                     var_a1 = 1;
                     if (!(temp_v0 & 0xFFFF)) {
-                        func_800A5C8C_ovl_01(var_s1 + 0xC, M2C_FIELD(var_s0, s32 *, 2));
+                        func_800A5C8C_overlay_001(var_s1 + 0xC, M2C_FIELD(var_s0, s32 *, 2));
                         var_a1 = 1;
                     }
                 }
@@ -62,7 +62,7 @@ loop_2:
                     var_s4 = 1;
                 }
                 var_s1 += 0x1C;
-                var_v1 = *var_s1;
+                var_v1 = *(u16 *)var_s1;
                 var_s0 += 0x1C;
             } while (var_v1 != 0xFFFF);
         }
@@ -83,7 +83,7 @@ loop_14:
                 }
                 var_v0 = 1;
                 if (var_s0_2 != D_8014E10C) {
-                    func_800A5618_ovl_01();{ s32 __repair_value; __repair_value = var_s0_2 + 1; var_v1_3 = __repair_value; }
+                    func_800A5618_overlay_001();{ s32 __repair_value; __repair_value = var_s0_2 + 1; var_v1_3 = __repair_value; }
                     if (var_v1_3 < D_8014E10C) {
                         temp_v0_2 = var_v1_3 * 0xC;
                         var_a1_2 = temp_v0_2 + &D_8014E110;
@@ -99,7 +99,7 @@ loop_14:
                         } while (var_v1_3 < D_8014E10C);
                     }
                     D_8014E10C -= 1;
-                    func_800A5660_ovl_01();
+                    func_800A5660_overlay_001();
                     return 1;
                 }
                 /* Duplicate return node #24. Try simplifying control flow for better match */

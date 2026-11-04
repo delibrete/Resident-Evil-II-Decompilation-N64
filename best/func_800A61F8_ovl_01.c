@@ -5,4 +5,5 @@ void func_800A9518_ovl_01(void){s32 i=0;u8 *base=&D_80148180;u8 *p;u8 count=D_80
 extern u8 D_801362B0_ovl_01; s32 func_800AF074_ovl_01(void); extern u8 D_801443E8;
 s32 func_800A81E8_ovl_01(void){s32 a0,s0=-1,v0;u8 *p; if(D_801362B0_ovl_01){a0=func_800AF074_ovl_01();if(a0!=-1){v0=a0&255;do{p=(u8 *)&D_801443E8; p += v0*0x1a0;if(*(s32*)(p+0x60)==a0){s0=0;*(s32*)(p+0x24)|=8;}a0=*(s32*)(p+0x10);v0=a0&255;}while(a0!=-1);}}return s0;}
 extern f64 D_800BA710_ovl_01,D_800BA718_ovl_01;
-f64 func_800A61F8_ovl_01(f64 arg0){f64 d; s32 v; if(!(D_800BA710_ovl_01<=arg0)){v=(s32)arg0;}else{d=arg0-D_800BA710_ovl_01;v=(s32)d;v|=0x80000000;}d=(f64)v;if(v<0)d+=D_800BA718_ovl_01;return d;}
+f64 func_800A61F8_ovl_01(f64 arg0){f64 d;
+f64 __repair_d_1; s32 v; if(!(D_800BA710_ovl_01<=arg0)){v=(s32)arg0;}else{d=arg0-D_800BA710_ovl_01;v=(s32)d;v|=0x80000000;}__repair_d_1=(f64)v;if(v<0)__repair_d_1+=D_800BA718_ovl_01;return __repair_d_1;}

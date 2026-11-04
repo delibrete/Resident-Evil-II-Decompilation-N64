@@ -22,6 +22,8 @@ extern s32 D_80135C3C_ovl_01;
 extern s32 D_801853FC_ovl_02;
 
 void func_8009F2C0_ovl_01(s32 arg0) {
+char *__repair_addr;
+
     s32 var_a2;
     s32 var_v1;
 
@@ -30,8 +32,10 @@ void func_8009F2C0_ovl_01(s32 arg0) {
         var_a2 = 0x2000;
     }
     D_80134450_ovl_01 = 0;
+__repair_addr = (char *)(((D_80134450_ovl_01 * 0x112) + &D_801344B0_ovl_01));
+
 loop_4:
-    if ((*((D_80134450_ovl_01 * 0x112) + &D_801344B0_ovl_01) != arg0) || !(M2C_FIELD(((D_80134450_ovl_01 * 0x112) + &D_801344B0_ovl_01), u16 *, 2) & var_a2)) {
+    if ((*((D_80134450_ovl_01 * 0x112) + &D_801344B0_ovl_01) != arg0) || !(M2C_FIELD(__repair_addr, u16 *, 2) & var_a2)) {
         D_80134450_ovl_01 += 1;
         if (D_80134450_ovl_01 < D_80135C3C_ovl_01) {
             goto loop_4;

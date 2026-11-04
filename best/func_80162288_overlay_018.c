@@ -16,7 +16,7 @@ M2C_UNK func_80032B8C_ovl_01(void *, s8);           /* extern */
 M2C_UNK func_80032DEC_ovl_01(void *, s32, s32, s8); /* extern */
 s32 func_80033634_ovl_01();                         /* extern */
 s32 func_80074D94_ovl_01(s32, s32);                 /* extern */
-s32 func_80162C10_ovl_18(void *);                   /* extern */
+s32 func_80162C10_overlay_018(void *);                   /* extern */
 
 void func_80162288_overlay_018(void *arg0) {
     u16 temp_v0;
@@ -50,7 +50,7 @@ void func_80162288_overlay_018(void *arg0) {
         M2C_FIELD(arg0, s32 *, 0x30) = (s32) M2C_FIELD(arg0, s16 *, 0x38);
         return;
     }
-    if (func_80162C10_ovl_18(arg0) == 0) {
+    if (func_80162C10_overlay_018(arg0) == 0) {
         M2C_FIELD(arg0, s8 *, 5) = 2;
         M2C_FIELD(arg0, s16 *, 6) = 0;
     }

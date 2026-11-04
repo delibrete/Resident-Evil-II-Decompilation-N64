@@ -1,3 +1,14 @@
-void func_801624DC_ovl_32(void) {
-    // placeholder
+void func_801624DC_ovl_32(void)
+{
+  volatile unsigned int pad;
+  int new_var;
+  int new_var2;
+  new_var2 = 0;
+  new_var = new_var2;
+  pad = new_var;
+  do
+  {
+  }
+  while (pad);
 }
+

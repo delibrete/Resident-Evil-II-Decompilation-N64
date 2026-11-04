@@ -70,34 +70,34 @@ void func_8016CE44_ovl_11(void *arg0, s32 arg1, s32 arg2);
 #define G16(o) (*(u16 *)(GBUF + (o)))
 
 void func_80161C70_overlay_011(S_obj *arg0) {
-    u8 *s1;
-    u32 f;
+    union { u8 * pointer; u32 value; } __repair_phase_storage;
+    
     u32 m;
 
-    s1 = D_800E10F8_ovl_01;
+    __repair_phase_storage.pointer = D_800E10F8_ovl_01;
     if (G32(0x1A5C) & 0x10000000) {
         if ((arg0->unk290 & 0xC0000000) == 0x40000000) {
-            s1 = (u8 *)*(void **)(GBUF + 0x1D3C) + 0x28;
+            __repair_phase_storage.pointer = (u8 *)*(void **)(GBUF + 0x1D3C) + 0x28;
         }
-        if ((func_800656BC_ovl_01(*(s16 *)(s1 + 2), *(s16 *)(s1 + 0xA)) & 0xFF) == 0xFF) {
-            s1 = D_800E10F8_ovl_01;
+        if ((func_800656BC_ovl_01(*(s16 *)(__repair_phase_storage.pointer + 2), *(s16 *)(__repair_phase_storage.pointer + 0xA)) & 0xFF) == 0xFF) {
+            __repair_phase_storage.pointer = D_800E10F8_ovl_01;
         }
     }
-    func_80065400_ovl_01(arg0, s1, arg0->unk2D1, 0);
+    func_80065400_ovl_01(arg0, __repair_phase_storage.pointer, arg0->unk2D1, 0);
     if (G32(0x1A60) & 0x20000000) {
         return;
     }
     if ((arg0->unk1AA & 1) || (arg0->unk2B6 & 2)) {
         arg0->unk00 |= 0x04000000;
     }
-    f = arg0->unk00;
-    m = f & 0x0C000000;
+    __repair_phase_storage.value =  arg0->unk00;
+    m = __repair_phase_storage.value & 0x0C000000;
     if (m == 0x04000000) {
-        arg0->unk00 = f | m;
+        arg0->unk00 = __repair_phase_storage.value | m;
         if ((G16(0x1C2A) & 0xFFF) != 0xE && (G16(0x1C2A) & 0xFFF) != 0x12) {
             if (G16(0x1C70) & 0x8000) {
                 if (G32(0x1AAC) - 0x5DC < arg0->unk28) {
-                    arg0->unk00 = (f | m) & 0xFBFFFFFF;
+                    arg0->unk00 = (__repair_phase_storage.value | m) & 0xFBFFFFFF;
                 }
             }
             if ((G16(0x1C70) & 0x4000) && (G32(0x1AAC) - 0x3E8 < arg0->unk28)) {

@@ -16,10 +16,14 @@ M2C_UNK func_80039AD0_ovl_01(void *, s32);          /* extern */
 extern void *D_800EBB34_ovl_01;
 
 void func_80039C64_ovl_01(void) {
+int __repair_literal;
+
     M2C_FIELD(D_800EBB34_ovl_01, u16 *, 0x18) = (u16) M2C_FIELD(D_800EBB34_ovl_01, u16 *, 0x12);
     M2C_FIELD(D_800EBB34_ovl_01, u16 *, 0x2A) = (u16) (M2C_FIELD(D_800EBB34_ovl_01, u16 *, 0x2A) | M2C_FIELD(D_800EBB34_ovl_01, u16 *, 0x14));
     M2C_FIELD(D_800EBB34_ovl_01, u8 *, 0x21) = (u8) (M2C_FIELD(D_800EBB34_ovl_01, u8 *, 2) + ((s32) (func_80033634_ovl_01() & 0xFF) % (s32) (M2C_FIELD(D_800EBB34_ovl_01, u16 *, 0x16) + 1)));
-    M2C_FIELD(D_800EBB34_ovl_01, u8 *, 0x20) = (u8) M2C_FIELD((M2C_FIELD(D_800EBB34_ovl_01, s32 *, 0x70) + (M2C_FIELD(D_800EBB34_ovl_01, u8 *, 0x21) * 8)), u8 *, 2);
+__repair_literal = 8;
+
+    M2C_FIELD(D_800EBB34_ovl_01, u8 *, 0x20) = (u8) M2C_FIELD((M2C_FIELD(D_800EBB34_ovl_01, s32 *, 0x70) + (M2C_FIELD(D_800EBB34_ovl_01, u8 *, 0x21) * __repair_literal)), u8 *, 2);
     M2C_FIELD(D_800EBB34_ovl_01, u8 *, 0x1F) = (u8) (M2C_FIELD(D_800EBB34_ovl_01, u8 *, 0x1F) + M2C_FIELD(D_800EBB34_ovl_01, u8 *, 0xB));
     func_80039AD0_ovl_01(D_800EBB34_ovl_01, M2C_FIELD(D_800EBB34_ovl_01, s32 *, 0x78) + (M2C_FIELD(D_800EBB34_ovl_01, u8 *, 0x1F) * 0x18));
 }

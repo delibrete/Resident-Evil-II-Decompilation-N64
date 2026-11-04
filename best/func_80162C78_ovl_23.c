@@ -1,22 +1,15 @@
-/* machine draft (m2c) for gcc-2.7.2-kmc -G0 -mips3 -mgp32 -mfp32 -O2, tried by autopilot */
-#ifndef M2C_DEFINES
-#define M2C_DEFINES
-typedef s32 M2C_UNK;
-typedef s8 M2C_UNK8;
-typedef s16 M2C_UNK16;
-typedef s32 M2C_UNK32;
-#define M2C_FIELD(expr, type_ptr, offset) (*(type_ptr)((s8 *)(expr) + (offset)))
-#define M2C_BITWISE(type, expr) ((type)(expr))
-#define M2C_ERROR(desc) (0)
-#define M2C_CARRY 0
-#define M2C_OVERFLOW(a) (0)
-#endif
-
-s32 func_80033174_ovl_01(M2C_UNK *);                /* extern */
-extern M2C_UNK D_800E10D0_ovl_01;
-
-void func_80162C78_ovl_23(s32 arg0) {
-    M2C_FIELD(&D_800E10D0_ovl_01, s32 *, 0x250) = arg0;
-    M2C_FIELD(&D_800E10D0_ovl_01, s32 *, 4) = 0x02000000;
-    M2C_FIELD(&D_800E10D0_ovl_01, u8 *, 5) = (u8) (M2C_FIELD(&D_800E10D0_ovl_01, u8 *, 5) + func_80033174_ovl_01(&D_800E10D0_ovl_01));
+s32 func_80033174_ovl_01(s32 *);
+extern s32 D_800E10D0_ovl_01;
+long long func_80162C78_ovl_23(s32 arg0)
+{
+  s32 new_var;
+  s32 *new_var2;
+  new_var2 = (s32 *) (((char *) (&D_800E10D0_ovl_01)) + 4);
+  *((s32 *) (((char *) (&D_800E10D0_ovl_01)) + 0x250)) = arg0;
+  *new_var2 = 0x02000000;
+  new_var2 = 0;
+  new_var = func_80033174_ovl_01(&D_800E10D0_ovl_01);
+  new_var2 = ((char *) (&D_800E10D0_ovl_01)) + 5;
+  *((u8 *) (((char *) (&D_800E10D0_ovl_01)) + 5)) = (u8) ((*((u8 *) new_var2)) + new_var);
 }
+

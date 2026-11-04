@@ -10,7 +10,7 @@ void func_8017CF64_ovl_05(void)
 {
   union 
   {
-    u64 q;
+    s64 q;
     struct 
     {
       u32 lo;

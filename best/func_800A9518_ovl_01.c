@@ -4,23 +4,32 @@ void func_800A94E0_ovl_01(void);
 s32 func_800A5BF0_ovl_01(s32, s32);
 extern u8 D_801479F8;
 extern u8 D_80148180;
+static inline int inline_fn(s32 arg0, s32 arg1)
+{
+  return arg0 < arg1;
+}
+
 void func_800A9518_ovl_01(void)
 {
+  u8 *new_var3;
+  u8 *new_var2;
   int new_var;
   s32 i = 0;
   new_var = 12;
   if (D_801479F8)
   {
     u8 *p = &D_80148180;
+    new_var3 = p;
     do
     {
-      if ((*p) == 1)
+      if ((*new_var3) == 1)
       {
-        func_800A5BF0_ovl_01(*((s32 *) (p + 8)), *((s32 *) (p + new_var)));
+        new_var2 = new_var3 + new_var;
+        func_800A5BF0_ovl_01(*((s32 *) (new_var3 + 8)), *((s32 *) new_var2));
       }
       p += 0x18;
     }
-    while (i < ((s32) D_801479F8));
+    while (inline_fn(i, (s32) D_801479F8));
     i++;
   }
 }

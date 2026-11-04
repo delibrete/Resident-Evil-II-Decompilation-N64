@@ -1,4 +1,4 @@
-extern s32 func_80164E08_ovl_26(void *, s32, s32);
+extern s32 func_80164E08_overlay_026(void *, s32, s32);
 extern s32 func_80166B18_ovl_26(void *, u8, s32);
 
 void func_801651F8_overlay_026(void *arg0, s32 arg1, s32 arg2) {
@@ -19,5 +19,5 @@ void func_801651F8_overlay_026(void *arg0, s32 arg1, s32 arg2) {
         }
         func_80166B18_ovl_26(arg0, a1, 2);
     }
-    func_80164E08_ovl_26(arg0, arg1, arg2);
+    func_80164E08_overlay_026(arg0, arg1, arg2);
 }

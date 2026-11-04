@@ -29,16 +29,17 @@ void func_80096E54_ovl_01(s32 arg0) {
     void *var_s2;
 
     var_s3 = 6;
-    var_s1 = D_800C527C_ovl_01 + 0x3BBF4;
+    var_s1 = D_800C527C_ovl_01; var_s1 += 0x3BBF4;
     if (arg0 != 0) {
         var_s3 = 0x11;
     }
-    var_s2 = var_s1 + 0xA;
+    var_s2 = (char *)(var_s1); var_s2 += (s32)(0xA);
     var_s0 = (var_s3 * 4) + &D_8013123C_ovl_01;
     do {
         var_s0 -= 4;
-        var_s3 -= 1;
-        func_80047B34_ovl_01(var_s1, 0);
+        var_s3 -= 1;/*__repair_call_balance*/if(var_s3){
+        func_80047B34_ovl_01(var_s1, 0);}else{
+        func_80047B34_ovl_01(var_s1, 0);}
         func_8004789C_ovl_01(var_s1, 0x80, 0x80, 0x80);
         func_800478DC_ovl_01(var_s1, M2C_FIELD(var_s0, u8 *, 0), M2C_FIELD(var_s0, u8 *, 1));
         temp_a0 = var_s1;

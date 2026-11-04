@@ -3,7 +3,7 @@ extern s32 func_80032B8C_ovl_01(void *, s32);
 extern s32 func_80089D34_ovl_01(void *, s32, s32, s32);
 
 void func_801678EC_ovl_20(u8 *p, s32 a1) {
-    s32 t;
+    short t;
     s32 r;
 
     switch (p[6]) {

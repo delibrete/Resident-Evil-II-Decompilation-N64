@@ -19,17 +19,18 @@ extern s32 D_800EFBE0_ovl_01;
 void func_80049BC4_ovl_01(void *arg0, void *arg1, s32 arg2) {
     f32 temp_ft0;
     s32 temp_ft2;
+s32 __repair_phase_temp_ft2;
     
     s32 temp_ft2_11;
     
     s32 temp_ft2_2;
     
-    s32 temp_ft2_4;
+    
     s32 temp_ft2_5;
-    s32 temp_ft2_6;
-    s32 temp_ft2_7;
+    
+    
     s32 temp_ft2_8;
-    s32 temp_ft2_9;
+    
 
     temp_ft0 = D_800B89B0_ovl_01 / (f32) (1 << D_800EFBE0_ovl_01);
     temp_ft2 = (s32) (M2C_FIELD(arg0, f32 *, 0) * temp_ft0 * D_800B89B4_ovl_01);
@@ -39,27 +40,27 @@ void func_80049BC4_ovl_01(void *arg0, void *arg1, s32 arg2) {
     temp_ft2 = (s32) (M2C_FIELD(arg0, f32 *, 8) * temp_ft0 * D_800B89B4_ovl_01);
     M2C_FIELD(arg1, s32 *, 4) = (s32) (temp_ft2 & 0xFFFF0000);
     M2C_FIELD(arg1, s32 *, 0x24) = (s32) ((temp_ft2 << 0x10) & 0xFFFF0000);
-    temp_ft2_4 = (s32) (M2C_FIELD(arg0, f32 *, 0xC) * temp_ft0 * D_800B89B4_ovl_01);
+    temp_ft2 = (s32) (M2C_FIELD(arg0, f32 *, 0xC) * temp_ft0 * D_800B89B4_ovl_01);
     temp_ft2_5 = (s32) (M2C_FIELD(arg0, f32 *, 0x10) * temp_ft0 * D_800B89B4_ovl_01);
-    M2C_FIELD(arg1, s32 *, 8) = (s32) ((temp_ft2_4 & 0xFFFF0000) | ((u32) temp_ft2_5 >> 0x10));
-    M2C_FIELD(arg1, s32 *, 0x28) = (s32) (((temp_ft2_4 << 0x10) & 0xFFFF0000) | (temp_ft2_5 & 0xFFFF));
-    temp_ft2_6 = (s32) (M2C_FIELD(arg0, f32 *, 0x14) * temp_ft0 * D_800B89B4_ovl_01);
-    M2C_FIELD(arg1, s32 *, 0xC) = (s32) (temp_ft2_6 & 0xFFFF0000);
-    M2C_FIELD(arg1, s32 *, 0x2C) = (s32) ((temp_ft2_6 << 0x10) & 0xFFFF0000);
-    temp_ft2_7 = (s32) (M2C_FIELD(arg0, f32 *, 0x18) * temp_ft0 * D_800B89B4_ovl_01);
+    M2C_FIELD(arg1, s32 *, 8) = (s32) ((temp_ft2 & 0xFFFF0000) | ((u32) temp_ft2_5 >> 0x10));
+    M2C_FIELD(arg1, s32 *, 0x28) = (s32) (((temp_ft2 << 0x10) & 0xFFFF0000) | (temp_ft2_5 & 0xFFFF));
+    temp_ft2 = (s32) (M2C_FIELD(arg0, f32 *, 0x14) * temp_ft0 * D_800B89B4_ovl_01);
+    M2C_FIELD(arg1, s32 *, 0xC) = (s32) (temp_ft2 & 0xFFFF0000);
+    M2C_FIELD(arg1, s32 *, 0x2C) = (s32) ((temp_ft2 << 0x10) & 0xFFFF0000);
+    temp_ft2 = (s32) (M2C_FIELD(arg0, f32 *, 0x18) * temp_ft0 * D_800B89B4_ovl_01);
     temp_ft2_8 = (s32) (M2C_FIELD(arg0, f32 *, 0x1C) * temp_ft0 * D_800B89B4_ovl_01);
-    M2C_FIELD(arg1, s32 *, 0x10) = (s32) ((temp_ft2_7 & 0xFFFF0000) | ((u32) temp_ft2_8 >> 0x10));
-    M2C_FIELD(arg1, s32 *, 0x30) = (s32) (((temp_ft2_7 << 0x10) & 0xFFFF0000) | (temp_ft2_8 & 0xFFFF));
-    temp_ft2_9 = (s32) (M2C_FIELD(arg0, f32 *, 0x20) * temp_ft0 * D_800B89B4_ovl_01);
-    M2C_FIELD(arg1, s32 *, 0x14) = (s32) (temp_ft2_9 & 0xFFFF0000);
-    M2C_FIELD(arg1, s32 *, 0x34) = (s32) ((temp_ft2_9 << 0x10) & 0xFFFF0000);
+    M2C_FIELD(arg1, s32 *, 0x10) = (s32) ((temp_ft2 & 0xFFFF0000) | ((u32) temp_ft2_8 >> 0x10));
+    M2C_FIELD(arg1, s32 *, 0x30) = (s32) (((temp_ft2 << 0x10) & 0xFFFF0000) | (temp_ft2_8 & 0xFFFF));
+    temp_ft2 = (s32) (M2C_FIELD(arg0, f32 *, 0x20) * temp_ft0 * D_800B89B4_ovl_01);
+    M2C_FIELD(arg1, s32 *, 0x14) = (s32) (temp_ft2 & 0xFFFF0000);
+    M2C_FIELD(arg1, s32 *, 0x34) = (s32) ((temp_ft2 << 0x10) & 0xFFFF0000);
     if (arg2 != 0) {
         temp_ft2 = (s32) (M2C_FIELD(arg0, f32 *, 0x24) * temp_ft0 * D_800B89B4_ovl_01);
         temp_ft2_11 = (s32) (M2C_FIELD(arg0, f32 *, 0x28) * temp_ft0 * D_800B89B4_ovl_01);
         M2C_FIELD(arg1, s32 *, 0x18) = (s32) ((temp_ft2 & 0xFFFF0000) | ((u32) temp_ft2_11 >> 0x10));
         M2C_FIELD(arg1, s32 *, 0x38) = (s32) (((temp_ft2 << 0x10) & 0xFFFF0000) | (temp_ft2_11 & 0xFFFF));
-        temp_ft2 = (s32) (M2C_FIELD(arg0, f32 *, 0x2C) * temp_ft0 * D_800B89B4_ovl_01);
-        M2C_FIELD(arg1, s32 *, 0x1C) = (s32) ((temp_ft2 & 0xFFFF0000) | 1);
-        M2C_FIELD(arg1, s32 *, 0x3C) = (s32) ((temp_ft2 << 0x10) & 0xFFFF0000);
+        __repair_phase_temp_ft2 = (s32) (M2C_FIELD(arg0, f32 *, 0x2C) * temp_ft0 * D_800B89B4_ovl_01);
+        M2C_FIELD(arg1, s32 *, 0x1C) = (s32) ((__repair_phase_temp_ft2 & 0xFFFF0000) | 1);
+        M2C_FIELD(arg1, s32 *, 0x3C) = (s32) ((__repair_phase_temp_ft2 << 0x10) & 0xFFFF0000);
     }
 }

@@ -4,7 +4,7 @@ void func_80162AAC_ovl_17(void *arg0, void *arg1, void *arg2) {
  switch(state) {
  case 0:
   *((u8*)arg0+6)=one; *(u32*)((u8*)arg0+0x1e8)=0x0b000300;
-  func_8016716C_ovl_17(arg0,*((u8*)arg0+0x2be)+8,(s16)(*(u16*)((u8*)arg0+0x66)+*(u16*)((u8*)arg0+0x2b6)));
+  do { func_8016716C_ovl_17(arg0,*((u8*)arg0+0x2be)+8,(s16)(*(u16*)((u8*)arg0+0x66)+*(u16*)((u8*)arg0+0x2b6))); } while (0);
  case 1: *((u8*)arg0+6)+=func_80089D34_ovl_01(arg0,arg1,arg2,0x400); break;
  case 3:
   if(func_80162BAC_ovl_17(arg0,arg1,arg2)) {

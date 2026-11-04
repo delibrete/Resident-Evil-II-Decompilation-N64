@@ -1,6 +1,7 @@
 extern u8 D_800C7650_ovl_01[];
 s32 func_8016A388_ovl_31(void *arg0, s32 arg1, s32 arg2) {
-    u8 *p=(u8*)arg0; s32 state=p[6]; s32 ret=0; s32 t; s32 *q; s32 i;
+    u8 *p=(u8*)arg0; s32 state=p[6]; s32 ret=0; s32 t;
+s32 __repair_phase_t; s32 *q; s32 i;
     switch(state) {
     case 0:
       *(s32*)(p+0x1e8)=0x01000700; p[6]=1;
@@ -9,7 +10,7 @@ s32 func_8016A388_ovl_31(void *arg0, s32 arg1, s32 arg2) {
       func_80077B0C_ovl_01(0x04010001,p+0x28);
       *(s32*)p|=2; func_80052C9C_ovl_01(30,120,5);
       t=*(s16*)(p+0x200)-*(s32*)(p+0x28); *(s32*)(p+0x28)+=t>>1;
-      t=*(s16*)(p+0x204)-*(s32*)(p+0x30); *(s32*)(p+0x30)+=t>>1;
+      __repair_phase_t=*(s16*)(p+0x204)-*(s32*)(p+0x30); *(s32*)(p+0x30)+=__repair_phase_t>>1;
       func_80032F24_ovl_01(p,*(s16*)(p+0x1f6),0x100);
       ret=func_80089D34_ovl_01(p,arg1,arg2,0x200);
       if(p[0x1e9]==8){p[6]=2;*(s16*)(p+0x66)=*(s16*)(p+0x1f6);func_80077B0C_ovl_01(0x04010001,p+0x28);} break;

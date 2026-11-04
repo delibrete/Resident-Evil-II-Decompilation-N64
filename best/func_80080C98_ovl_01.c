@@ -17,6 +17,8 @@ extern void *D_8011B4EC_ovl_01;
 extern u16 D_8011B500_ovl_01;
 
 void *func_80080C98_ovl_01(s32 arg0) {
+int *__repair_home0 = &arg0;
+
     s32 var_s3;
     u16 *var_s1;
     void **var_s2;
@@ -33,7 +35,7 @@ void *func_80080C98_ovl_01(s32 arg0) {
 loop_1:
     temp_s0 = *var_s2;
     if (temp_s0 != NULL) {
-        if (func_80032EA4_ovl_01(arg0, M2C_FIELD(temp_s0, s32 *, 0x28), M2C_FIELD(temp_s0, s32 *, 0x30), 0x400) == 0) {
+        if (func_80032EA4_ovl_01((*__repair_home0), M2C_FIELD(temp_s0, s32 *, 0x28), M2C_FIELD(temp_s0, s32 *, 0x30), 0x400) == 0) {
             if ((u16) *var_s1 < 0x7FFFFFFFU) {
                 var_s4 = temp_s0;
                 goto block_9;

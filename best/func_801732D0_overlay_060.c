@@ -1,4 +1,3 @@
-/* machine draft (m2c) for gcc-2.7.2-kmc -G0 -mips3 -mgp32 -mfp32 -O2, tried by autopilot */
 #ifndef M2C_DEFINES
 #define M2C_DEFINES
 typedef s32 M2C_UNK;
@@ -11,13 +10,17 @@ typedef s32 M2C_UNK32;
 #define M2C_CARRY 0
 #define M2C_OVERFLOW(a) (0)
 #endif
-
-s32 func_80084514_ovl_01(M2C_UNK, M2C_UNK);         /* extern */
-extern M2C_UNK D_800C7650;
-
-void func_801732D0_overlay_060(s32 arg0, M2C_UNK arg1) {
-    void *temp_s0;
-
-    temp_s0 = M2C_FIELD((((arg0 + 3) * 4) + &D_800C7650), void **, 0x19D38);
-    M2C_FIELD(temp_s0, s32 *, 4) = func_80084514_ovl_01(arg1, 0x18000);
+s32 func_80084514_ovl_01();
+extern s32 D_800C7650;
+void func_801732D0_overlay_060(s32 arg0, s32 arg1)
+{
+  int __repair_literal;
+  void *temp_s0;
+  char *new_var;
+  __repair_literal = 4;
+  __repair_literal = 0x19D38;
+  temp_s0 = *((void **) (((char *) (((arg0 + 3) * __repair_literal) + (&D_800C7650))) + __repair_literal));
+  new_var = (char *) temp_s0;
+  *((s32 *) (new_var + 4)) = func_80084514_ovl_01(arg1);
 }
+

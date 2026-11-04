@@ -7,7 +7,7 @@ s32 func_80033634_ovl_01(void);
 void func_80162F3C_ovl_11(Obj11 *p) {
  u32 s2=p->f28c; s32 s4,s3;
  u8 *g=D_800C7650_ovl_01+0x18000;
- func_80032EA4_ovl_01(p,*(s32 *)(g+0x1aa8),*(s32 *)(g+0x1ab0),0x400);
+ do { func_80032EA4_ovl_01(p,*(s32 *)(g+0x1aa8),*(s32 *)(g+0x1ab0),0x400); } while (0);
  s4=func_80032EA4_ovl_01(p,*(s32 *)(g+0x1aa8),*(s32 *)(g+0x1ab0),0x200);
  s3=func_80032EA4_ovl_01(p,*(s32 *)(g+0x1aa8),*(s32 *)(g+0x1ab0),0x514);
  if (p->f2da==0) { u32 t=p->f290; if ((t&0xc0000000)==0 && (t&0x3fffffff)<0x7d0 && !func_80032F94_ovl_01(p,p->f294,0x100)) p->f4=0x10e0000; }

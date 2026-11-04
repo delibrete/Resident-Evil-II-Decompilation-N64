@@ -1,1 +1,37 @@
-typedef struct{unsigned char p[0x2b8];unsigned short flags;} A; void func_80165F68_ovl_33(A*p,int a,int b){unsigned char x=p->p[6]; if(x<5){switch(x){case 0:p->p[6]=1;break;case 1:p->p[6]=2;break;case 2:p->p[6]=3;break;case 3:p->p[6]=4;break;case 4:p->p[6]=0;break;}}}
+typedef struct 
+{
+  unsigned char p[0x2b8];
+  unsigned short flags;
+} A;
+void func_80165F68_ovl_33(A *p, int a, int b)
+{
+  unsigned char x = p->p[6];
+  if (x < 5)
+  {
+    switch ((unsigned long long) x)
+    {
+      case 2:
+        p->p[6] = 3;
+        break;
+
+      case 1:
+        p->p[6] = 2;
+        break;
+
+      case 0:
+        p->p[6] = 1;
+        break;
+
+      case 4:
+        p->p[6] = 0;
+        break;
+
+      case 3:
+        p->p[6] = 4;
+        break;
+
+    }
+
+  }
+}
+

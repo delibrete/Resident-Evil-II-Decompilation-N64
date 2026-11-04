@@ -19,7 +19,7 @@ void func_80162A78_overlay_030(void *arg0) {
     s32 *temp_v0;
     s32 var_a0;
     u32 var_s0;
-    u32 var_s0_2;
+    
     u8 *var_v0;
 
     var_s0 = 0;
@@ -36,14 +36,14 @@ void func_80162A78_overlay_030(void *arg0) {
         func_80167B58_ovl_30(arg0, *var_v0, 0, 0);
         var_v0 = &(&D_80167D3C_ovl_30)[var_s0];
     } while (var_s0 < 8U);
-    var_s0_2 = 0x14;
+    var_s0 = 0x14;
     var_a0 = 0x1D60;
     do {
-        var_s0_2 += 1;
+        var_s0 += 1;
         temp_v0 = M2C_FIELD(arg0, s32 *, 0x234) + var_a0;
         *temp_v0 &= ~0x400;
         var_a0 += 0x178;
-    } while (var_s0_2 < 0x17U);
+    } while (var_s0 < 0x17U);
     M2C_FIELD(arg0, s8 *, 0x2C4) = 0;
     M2C_FIELD(arg0, s8 *, 0x2C5) = 1;
     M2C_FIELD(arg0, s8 *, 5) = 1;

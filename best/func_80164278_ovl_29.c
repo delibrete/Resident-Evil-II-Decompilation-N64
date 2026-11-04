@@ -8,7 +8,7 @@ void func_80164278_ovl_29(void *arg0) {
     int temp_a0;
     int result;
     temp_v1 = func_80032EA4_ovl_01(arg0, *(int *)(g+0x1AA8), *(int *)(g+0x1AB0), 0x5F4);
-    func_80032EA4_ovl_01(arg0, *(int *)(g+0x1AA8), *(int *)(g+0x1AB0), 0x338);
+    do { func_80032EA4_ovl_01(arg0, *(int *)(g+0x1AA8), *(int *)(g+0x1AB0), 0x338); } while (0);
     temp_v1 = func_80032EA4_ovl_01(arg0, *(int *)(g+0x1AA8), *(int *)(g+0x1AB0), 0x400);
     temp_a0 = temp_v1;
     if (*(unsigned short *)(p+0x2C0) == 0) {

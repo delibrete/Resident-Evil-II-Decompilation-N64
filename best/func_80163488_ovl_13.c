@@ -14,7 +14,7 @@ block:
 t0=p[0x2b6]-1;*(s8*)(s+2)=t0;if(((u8)t0)==255)p[0x2b6]=14;
 var_s1=0;func_80032DEC_ovl_01(p,*(s16*)(p+0x260),*(s16*)(p+0x262),0x60);
 *(u16*)(p+0x66)+=(s8)p[0x2b4];func_80032C08_ovl_01(p,0,0);
-func_80089D34_ovl_01(p,a1,a2,0x200);
+do { func_80089D34_ovl_01(p,a1,a2,0x200); } while (0);
 if(func_80032EA4_ovl_01(p,*(s16*)(p+0x260),*(s16*)(p+0x262),0x60)==0)var_s1=1;
 else {t1=p[0x2b5]-1;*(s8*)(s+1)=t1;if(((u8)t1)==255)var_s1=1;}
 if(var_s1)func_80165BE8_ovl_13(p,4);

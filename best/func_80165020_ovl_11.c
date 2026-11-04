@@ -5,11 +5,11 @@ s32 func_80089D34_ovl_01(void *, s32, s32, s32);
 
 void func_80165020_ovl_11(u8 *p, s32 arg1, s32 arg2) {
     static void *jtbl_8016DD10_ovl_11[5] = { &&L0, &&L1, &&L2, &&L2, &&L3 };
+    register u8 state;
     s32 pick;
-    u8 state;
 
     state = *(u8 *)(p + 6);
-    if (state >= 5) goto end;
+    if (5 <= state) goto end;
     goto *jtbl_8016DD10_ovl_11[state];
 
 L0:
@@ -17,8 +17,8 @@ L0:
     if (*(u16 *)(p + 0x2B6) & 4) {
         *(s32 *)(p + 0x1E8) = 0x16000000;
     }
-    func_80089D34_ovl_01(p, arg1, arg2, 0x100);
     *(u8 *)(p + 6) = 1;
+    func_80089D34_ovl_01(p, arg1, arg2, 0x100);
     *(u8 *)(p + 0x26F) |= 0x80;
     *(u8 *)(p + 0x25C) |= 1;
     if (!(*(u16 *)(p + 0x1AA) & 0x4000)) {
@@ -39,10 +39,11 @@ L2:
             pick = 0xC;
         } else if (func_80033634_ovl_01() & 1) {
             pick = 0xB;
-        } else {
-            pick = 0xA;
-        }
-        func_80077D48_ovl_01(pick, p);
+        
+        func_80077D48_ovl_01(pick, p);} else {
+            register pick = 0xA;
+        
+        func_80077D48_ovl_01(pick, p);}
         *(u8 *)(p + 0x2D5) = 0x96;
     }
     *(u8 *)(p + 6) += func_80089D34_ovl_01(p, arg1, arg2, 0x100);

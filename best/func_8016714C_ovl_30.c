@@ -1,7 +1,7 @@
 extern u8 D_80167CEA_ovl_30;
 s32 func_8016714C_ovl_30(s32 arg0){
     u8 *p = &D_80167CEA_ovl_30;
-    u8 v = *p + arg0;
+    s32 v = *p + arg0;
     *p = v;
     if ((s8)v >= 9) {
         *p = 8;

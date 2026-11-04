@@ -25,7 +25,7 @@ void func_80171490_overlay_047(void *arg0, s16 arg1, s16 arg2) {
     sp10 = 0;
     sp12 = arg2;
     sp14 = 0;
-    func_80040E88_ovl_01(&sp10, &sp18);
+    do { func_80040E88_ovl_01(&sp10, &sp18); } while (0);
     sp10 = arg1;
     sp12 = 0;
     sp14 = 0;

@@ -1,11 +1,15 @@
 extern u8 D_800C7650_ovl_01[];
 void func_80165920_ovl_33(void *p) {
+char *__repair_addr;
+
     u8 state = *(u8 *)((u8 *)p + 6);
     void *seg = *(void **)((u8 *)p + 0x234);
     s32 one = 1;
     switch (state) {
+__repair_addr = (char *)((u8 *)p + 0x1E8);
+
     case 0:
-        *(s32 *)((u8 *)p + 0x1E8) = 0x0D000000;
+        *(s32 *)(__repair_addr) = 0x0D000000;
         *(s16 *)((u8 *)p + 0x68) = 0;
         *(s16 *)((u8 *)p + 0x66) = 0;
         *(s16 *)((u8 *)p + 0x64) = 0;

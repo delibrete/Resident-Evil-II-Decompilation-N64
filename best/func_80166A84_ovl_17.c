@@ -6,29 +6,32 @@ typedef union
   u64 q;
   struct 
   {
-    u32 lo;
+    s32 lo;
     u32 hi;
   } w;
 } U64;
 void func_80166A84_ovl_17(void *arg0, s32 arg1)
 {
+  u8 *new_var2;
   U64 b;
   unsigned int new_var;
   s32 *q;
   u8 *base;
   s32 x;
   s32 y;
+  new_var2 = (u8 *) arg0;
   if (((u8 *) arg0)[0x2D3])
   {
+    x = 0x18000;
     b.w.lo = (u32) D_800C7650_ovl_01;
-    base = (u8 *) (b.w.lo + 0x18000);
+    base = (u8 *) (b.w.lo + x);
     q = *((s32 **) (base + 0x1D3C));
   }
   else
   {
     q = D_800E10D0_ovl_01;
   }
-  if (((u8 *) arg0)[0x2BE])
+  if (new_var2[0x2BE])
   {
     new_var = ((s32 *) arg0)[12];
     x = q[10] - ((s32 *) arg0)[10];

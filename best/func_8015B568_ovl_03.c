@@ -23,7 +23,7 @@ void func_8015B568_ovl_03(void) {
         M2C_FIELD(&D_80160B9C_ovl_03, u8 *, 2) = 0U;
         break;
     case 0:
-        func_8002751C_ovl_01(0, 0);
+        do { func_8002751C_ovl_01(0, 0); } while (0);
         M2C_FIELD(&D_80160B9C_ovl_03, s16 *, 0x14) = 0x36;
         M2C_FIELD(&D_80160B9C_ovl_03, s32 *, 0x18) = 0x16;
         M2C_FIELD(&D_80160B9C_ovl_03, s16 *, 0x16) = 0;

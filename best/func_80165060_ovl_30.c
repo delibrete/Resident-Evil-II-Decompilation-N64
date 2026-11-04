@@ -5,7 +5,7 @@ extern u32 D_80167ECC_ovl_30[];
 extern u8 D_80167F18_ovl_30[];
 extern u8 D_80167F2C_ovl_30[];
 void func_80077D48_ovl_01(s32, void *);
-void func_80162094_ovl_30(void *, s32, s32, u8);
+void func_80162094_overlay_030(void *, s32, s32, u8);
 void func_801673FC_ovl_30(void *, s32, s32, s16 *);
 
 void func_80165060_ovl_30(u8 *arg0, s32 arg1, s32 arg2) {
@@ -17,7 +17,7 @@ void func_80165060_ovl_30(u8 *arg0, s32 arg1, s32 arg2) {
     u16 t;
 
     ((void (*)(u8 *))D_80167ECC_ovl_30[*(u8 *)(arg0 + 5) - 1])(arg0);
-    s2 = arg0 + 0x2B4;
+    s2 = (char *)(arg0); s2 += (s32)(0x2B4);
     s2[0x10] = 2;
     s2[0x11] = 0;
     if (*(u8 *)(arg0 + 5) != 0x10)
@@ -65,7 +65,7 @@ void func_80165060_ovl_30(u8 *arg0, s32 arg1, s32 arg2) {
         }
     }
     *(s32 *)(arg0 + 4) = (s2[6] << 16) + (s2[7] << 8) + s2[8] + 0x01000000;
-    func_80162094_ovl_30(arg0, arg1, arg2, s2[8]);
+    func_80162094_overlay_030(arg0, arg1, arg2, s2[8]);
     return;
 success:
     s2[0x1C] = one;

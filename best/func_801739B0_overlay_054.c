@@ -33,7 +33,7 @@ void func_801739B0_overlay_054(void *arg0, void *arg1, s16 arg2) {
     sp18 = arg2;
     sp1C = 0;
     sp1A = 0;
-    func_8004279C_ovl_01(&sp20, &sp18, &sp10);
+    do { func_8004279C_ovl_01(&sp20, &sp18, &sp10); } while (0);
     M2C_FIELD(arg0, s32 *, 0x28) = (s32) (M2C_FIELD(arg1, s32 *, 0x28) + (s16) sp10);
     M2C_FIELD(arg0, s32 *, 0x30) = (s32) (M2C_FIELD(arg1, s32 *, 0x30) + (s16) sp14);
 }

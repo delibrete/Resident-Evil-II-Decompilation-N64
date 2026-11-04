@@ -3,7 +3,7 @@ extern unsigned char D_800E10D0_ovl_01[];
 extern int func_80033174_ovl_01(void *, void *);
 extern int func_80059E30_ovl_01(int, int);
 extern int func_80052C00_ovl_01(int, int);
-extern int func_80162B1C_ovl_18(void *, int, int);
+extern int func_80162B1C_overlay_018(void *, int, int);
 extern void func_80162BEC_ovl_18(void *, int);
 extern int func_80080D94_ovl_01(void);
 int func_801629EC_overlay_018(void *arg0, int arg1) {
@@ -28,7 +28,7 @@ int func_801629EC_overlay_018(void *arg0, int arg1) {
         } else {
             func_80080D94_ovl_01();
         }
-        func_80162B1C_ovl_18(arg0, 0, 1);
+        func_80162B1C_overlay_018(arg0, 0, 1);
         result = 1;
         state[9] = 1;
         *(unsigned short *)((char *)arg0 + 0x1E0) = 0x5A;
