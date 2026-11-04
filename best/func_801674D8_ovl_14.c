@@ -36,7 +36,7 @@ extern s32 func_80032F24_ovl_01(S *, s16, s32);
 extern s32 func_80077D48_ovl_01(s32, S *);
 extern s32 func_80083800_ovl_01(s16, void *, void *);
 extern s32 func_8008A974_ovl_01(S *, s32, s32, s32);
-extern s32 func_80162B24_ovl_14(S *, void *, s32);
+extern s32 func_80162B24_overlay_014(S *, void *, s32);
 extern s32 func_80166BFC_ovl_14(S *);
 void func_801674D8_ovl_14(S *a, s32 b, s32 c)
 {
@@ -49,7 +49,7 @@ void func_801674D8_ovl_14(S *a, s32 b, s32 c)
     case 0:
       a->unk26F |= 0x80;
       func_80077D48_ovl_01(7, a);
-      func_80162B24_ovl_14(a, ((u8 *) (&D_80168B74_ovl_14)) + (a->unk2CB * 8), 1);
+      func_80162B24_overlay_014(a, ((u8 *) (&D_80168B74_ovl_14)) + (a->unk2CB * 8), 1);
       a->unk1E0 = 100;
       a->unk1E4 = 0;
       a->unk1E2 = 0;

@@ -116,8 +116,8 @@ c0:
         u8 *p = D_800C7650_ovl_01 + 0x18000;
         self->u1E0.unk_1E0 = 0x12C;
         self->unk_207 = 0x32;
-        self->unk_1E2 = 0;
         self->unk_1E4 = 0;
+        self->unk_1E2 = 0;
         self->u1F6.unk_1F6 = 0;
         s0 = func_80032D44_ovl_01(self->u28.unk_28b.unk_2A,
                                   self->u30.unk_30b.unk_32,

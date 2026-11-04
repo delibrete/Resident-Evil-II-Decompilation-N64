@@ -37,5 +37,5 @@ void func_8002D1B8_ovl_01(Obj *s0) {
     } while (i < 16);
     ((NewObj *)s0->unk174)->table[0] = &D_8002B840_ovl_01;
     ((NewObj *)s0->unk174)->table[14] = &D_8002BB70_ovl_01;
-    func_8002D194_ovl_01(s0);
+    do { func_8002D194_ovl_01(s0); } while (0);
 }

@@ -12,7 +12,7 @@ void func_80162344_ovl_27(void *arg0) {
  result=func_80033634_ovl_01_44(arg0);
  flags=*(u32*)*(u32*)(p+0x214);
  if (flags & 0x20000) {
-   if (!p[0x2C5]) p[0x2C5]=func_801639B0_ovl_27(arg0,5);
+   if (!p[0x2C5]) p[0x2C5]=func_801639B0_overlay_027(arg0,5);
    active=0x10000;
  } else active=0x10000;
  if (!(flags & active)) {

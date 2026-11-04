@@ -28,7 +28,11 @@ void func_8002DDE4_ovl_01(void *arg0)
   new_var2 = &arg0;
   do
   {
-    func_8002DA80_ovl_01(arg0, arg0, *new_var2);
+    /*__repair_pointer_balance*/if ((unsigned long)new_var2 & 0x100) {
+func_8002DA80_ovl_01(arg0, arg0, *new_var2);
+} else {
+func_8002DA80_ovl_01(arg0, arg0, *new_var2);
+}
   }
   while (0);
 }

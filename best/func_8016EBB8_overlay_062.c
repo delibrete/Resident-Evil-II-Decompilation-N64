@@ -1,24 +1,26 @@
-/* machine draft (m2c) for gcc-2.7.2-kmc -G0 -mips3 -mgp32 -mfp32 -O2, tried by autopilot */
-#ifndef M2C_DEFINES
-#define M2C_DEFINES
-typedef s32 M2C_UNK;
-typedef s8 M2C_UNK8;
-typedef s16 M2C_UNK16;
-typedef s32 M2C_UNK32;
-#define M2C_FIELD(expr, type_ptr, offset) (*(type_ptr)((s8 *)(expr) + (offset)))
-#define M2C_BITWISE(type, expr) ((type)(expr))
-#define M2C_ERROR(desc) (0)
-#define M2C_CARRY 0
-#define M2C_OVERFLOW(a) (0)
-#endif
-
 extern int D_800E10F8;
 extern int D_800E1100;
 s32 func_80032EA4_ovl_01();
 extern char D_800C7650[];
-
-void func_8016EBB8_overlay_062(s32 arg0) {
-    func_80032EA4_ovl_01(arg0, D_800E10F8, D_800E1100, 0x5F4);
-    func_80032EA4_ovl_01(arg0, D_800E10F8, D_800E1100, 0x338);
-    func_80032EA4_ovl_01(arg0, D_800E10F8, D_800E1100, 0x400);
+void func_8016EBB8_overlay_062(s32 arg0)
+{
+  int *new_var3;
+  s32 new_var2;
+  int new_var;
+  new_var2 = arg0;
+  new_var3 = &D_800E10F8;
+  new_var = 0x5F4;
+  do
+  {
+    func_80032EA4_ovl_01(arg0, *new_var3, D_800E1100, new_var);
+  }
+  while (0);
+  do
+  {
+    func_80032EA4_ovl_01(arg0, *new_var3, D_800E1100, 0x338);
+  }
+  while (0);
+  new_var = *new_var3;
+  func_80032EA4_ovl_01(new_var2, new_var, D_800E1100, 0x400);
 }
+

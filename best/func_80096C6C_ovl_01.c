@@ -27,12 +27,12 @@ void func_80096C6C_ovl_01(void) {
     s32 count;
 
     base = D_800C527C_ovl_01;
-    lim = base + 0x3C004;
+    cptr = base + 0x3C004;
     other = base + 0x3BB64;
-    if (other < lim) {
-        other = lim;
+    if (other < cptr) {
+        other = cptr;
     }
-    p1 = (u8 *)(lim + 0x758);
+    p1 = (u8 *)(cptr + 0x758);
     flagp = (s16 *)D_8012BF38_ovl_01;
     count = 0x11;
     cptr = (u32)D_8012F4D0_ovl_01;

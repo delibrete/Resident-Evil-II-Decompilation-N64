@@ -2,7 +2,7 @@ typedef struct { u8 pad0[6]; u8 state; u8 pad7[0x21]; s32 x28; u8 pad2c[4]; s32 
 extern s32 func_80033634_ovl_01(void);
 extern s32 func_80089D34_ovl_01(void *, s32, s32, s32);
 extern void func_80077D48_ovl_01(s32, void *);
-extern void func_80165B44_ovl_13(void *);
+extern void func_80165B44_overlay_013(void *);
 void func_801622C0_ovl_13(A *a, s32 b, s32 c) {
  s32 r;
  switch(a->state) {
@@ -16,10 +16,10 @@ void func_801622C0_ovl_13(A *a, s32 b, s32 c) {
  case 7: if (!a->x2b5) { r=func_80033634_ovl_01()&255; a->x2b4=r%7; a->state=(a->x2b4==6 && !(func_80033634_ovl_01()&15))?0:a->x2b4; } else { a->x2b5--; } break;
  case 8: if(a->x2b5) a->state=3; a->x2b5--; break;
  case 9: r=func_80033634_ovl_01()&255; a->x2b5=r%100; break;
- case 10: if(func_80089D34_ovl_01(a,b,c,0x10200)) func_80165B44_ovl_13(a); break;
+ case 10: if(func_80089D34_ovl_01(a,b,c,0x10200)) func_80165B44_overlay_013(a); break;
  case 11: if(a->x2b5--==0) { if(!(a->x2c6&0x20) && (func_80033634_ovl_01()&1)) func_80077D48_ovl_01(6,a); func_80089D34_ovl_01(a,b,c,0x200); } break;
  case 12: if(func_80089D34_ovl_01(a,b,c,0x200)) { a->state=0; r=func_80033634_ovl_01()&255; a->x2b5=r%100; } break;
- case 13: func_80089D34_ovl_01(a,b,c,0x10200); func_80165B44_ovl_13(a); break;
+ case 13: func_80089D34_ovl_01(a,b,c,0x10200); func_80165B44_overlay_013(a); break;
  case 14: if(func_80089D34_ovl_01(a,b,c,0x200)) { a->state=0; a->x28=*(s16*)((u8*)a+0x2c0); a->x30=*(s16*)((u8*)a+0x2c2); } break;
  }
 }

@@ -36,8 +36,8 @@ typedef struct {
 s32 func_8002D290_ovl_01(Obj *a0) {
     s32 v1;
     s32 a1;
-    s32 a2;
-    s32 t;
+    
+    
     Obj2 *p;
     if (a0->f58 == 0) {
         if (a0->f100 == 0) {
@@ -45,24 +45,24 @@ s32 func_8002D290_ovl_01(Obj *a0) {
             if (v1 == 3) {
                 a1 = a0->f20;
                 if (a1 == v1) {
-                    a2 = a0->f28;
-                    if (a2 == 2) {
+                    v1 = a0->f28;
+                    if (v1 == 2) {
                         if (a0->f64 == a1) {
                             p = (Obj2 *)a0->fB0;
-                            if (p->f8 == a2) {
+                            if (p->f8 == v1) {
                                 a1 = p->f58;
                                 if (a1 == 1) {
-                                    a2 = p->fA8;
-                                    if (a2 == a1) {
+                                    v1 = p->fA8;
+                                    if (v1 == a1) {
                                         if (p->fC < 3) {
                                             a1 = p->f5C;
-                                            if (a1 == a2) {
+                                            if (a1 == v1) {
                                                 if (p->fAC == a1) {
                                                     a1 = p->f24;
                                                     if (a1 == a0->f10C) {
-                                                        t = p->f74;
-                                                        if (t == a1) {
-                                                            if (p->fC4 == t) {
+                                                        v1 = p->f74;
+                                                        if (v1 == a1) {
+                                                            if (p->fC4 == v1) {
                                                                 return 1;
                                                             }
                                                         }

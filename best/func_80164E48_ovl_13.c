@@ -28,7 +28,7 @@ void func_80077D48_ovl_01(s32, S_64E48 *);
 void func_80166214_ovl_13(S_64E48 *, s32);
 void func_80166080_ovl_13(S_64E48 *);
 s32 func_80033634_ovl_01(void);
-void func_80166158_ovl_13(S_64E48 *, s32);
+void func_80166158_overlay_013(S_64E48 *, s32);
 s32 func_80089D34_ovl_01(S_64E48 *,  s32);
 void func_80032B8C_ovl_01(S_64E48 *, s32);
 void func_80165BD8_ovl_13(S_64E48 *, s32, s32);
@@ -46,7 +46,7 @@ void func_80164E48_ovl_13(S_64E48 *arg0, s32 arg1, s32 arg2) {
         arg0->unk_1F2 = -1;
         func_80166080_ovl_13(arg0);
         v = (func_80033634_ovl_01() & 3) + 5;
-        func_80166158_ovl_13(arg0, v);
+        func_80166158_overlay_013(arg0, v);
         base = D_800C7650_ovl_01 + 0x18000;
         arg0->unk_1E0 = 0x258;
         arg0->unk_1E8 = 0x09000700;

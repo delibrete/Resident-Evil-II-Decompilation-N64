@@ -67,7 +67,8 @@ block_12:
                                 var_s0_2 = var_s0 - 4;
                             }
                             var_a1 = var_s0_2;
-                            goto block_21;
+                            {
+                        func_8008C31C_ovl_01(temp_s1, var_a1);goto block_22;}
                         }
                     default:
                         if (var_s0 == 0) {

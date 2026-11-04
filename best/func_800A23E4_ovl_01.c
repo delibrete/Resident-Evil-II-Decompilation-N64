@@ -1,4 +1,3 @@
-/* machine draft (m2c) for gcc-2.7.2-kmc -G0 -mips3 -mgp32 -mfp32 -O2, tried by autopilot */
 #ifndef M2C_DEFINES
 #define M2C_DEFINES
 typedef s32 M2C_UNK;
@@ -11,21 +10,22 @@ typedef s32 M2C_UNK32;
 #define M2C_CARRY 0
 #define M2C_OVERFLOW(a) (0)
 #endif
+/* machine draft (m2c) for gcc-2.7.2-kmc -G0 -mips3 -mgp32 -mfp32 -O2, tried by autopilot */
 
-M2C_UNK func_800A0EBC_ovl_01(s32);                  /* extern */
+s32 func_800A0EBC_overlay_001();
 extern s32 D_8013BC30;
 
 void func_800A23E4_ovl_01(void) {
-    s32 *var_s0;
+    char *var_s0;
     s32 temp_a0;
     u32 var_s1;
 
     var_s1 = 0;
     var_s0 = &D_8013BC30;
     do {
-        temp_a0 = *var_s0;
+        temp_a0 = *(s32 *)var_s0;
         var_s0 += 0xFF8;
         var_s1 += 1;
-        func_800A0EBC_ovl_01(temp_a0);
+        func_800A0EBC_overlay_001(temp_a0);
     } while (var_s1 < 8U);
 }

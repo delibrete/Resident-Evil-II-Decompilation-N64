@@ -18,7 +18,7 @@ extern M2C_UNK D_8011A31C_ovl_01;
 s32 func_80079448_ovl_01(s16 arg0) {
     void *temp_v1;
 
-    temp_v1 = (arg0 * 0x3C) + &D_8011A31C_ovl_01;
+    temp_v1 = (char *)((arg0 * 0x3C)); temp_v1 += (s32)(&D_8011A31C_ovl_01);
     if (M2C_FIELD(temp_v1, s8 *, 0x28) == 0) {
         return 0;
     }

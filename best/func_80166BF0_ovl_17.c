@@ -17,7 +17,7 @@ void func_80166BF0_ovl_17(void *arg0, s32 arg1) {
     u8 temp_v1;
     void *temp_a3;
 
-    temp_a3 = arg0 + 0x2B4;
+    temp_a3 = (char *)(arg0); temp_a3 += (s32)(0x2B4);
     temp_v1 = M2C_FIELD(temp_a3, u8 *, 0x18);
     var_a2 = arg1;
     if (temp_v1 & 1) {

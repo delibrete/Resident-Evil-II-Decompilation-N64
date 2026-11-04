@@ -53,7 +53,7 @@ typedef struct S_Inner {
 
 u32 func_80033634_ovl_01(s32 arg0);
 void func_800377B0_ovl_01(s32 arg0, s32 arg1, void *arg2, s32 arg3);
-void func_80038EC8_ovl_01(s32 arg0, s32 arg1, void *arg2);
+void func_80038EC8_ovl_01(s32 arg0);
 void func_80041350_ovl_01(s32 arg0, S_D_800E8FC8 *arg1);
 void func_80041484_ovl_01(s32 arg0, S_D_800E8FC8 *arg1);
 void func_800415B8_ovl_01(s32 arg0, S_D_800E8FC8 *arg1);
@@ -72,6 +72,7 @@ void func_8016D2C8_ovl_11(S_func_8016D2C8_ovl_11_arg0 *p)
     S_D_800E8FC8 sp10;
     s32 sp38, sp3C, sp40, sp44;
     s32 s5;
+s32 __repair_result_s5;
     u32 s6 = 0x91A2B3C5U;
     u32 s7 = 1U;
     void *s0_ptr;
@@ -108,7 +109,7 @@ void func_8016D2C8_ovl_11(S_func_8016D2C8_ovl_11_arg0 *p)
     s1->unk_50 += s1->unk_2A;
     s1->unk_54 += s1->unk_2C;
 
-    s5 = func_80069F4C_ovl_01(&sp38, 0x64, 0x2000, 1);
+    __repair_result_s5 = func_80069F4C_ovl_01(&sp38, 0x64, 0x2000, 1);
 
     s0_ptr = (u8 *)s2 + 0xC0C;
 
@@ -168,5 +169,5 @@ block_8:
     }
 
 block_11:
-    func_80038EC8_ovl_01(5, 3, a2_ptr);
+    func_80038EC8_ovl_01(5);
 }

@@ -17,6 +17,8 @@ extern M2C_UNK D_800C7650;
 extern M2C_UNK D_800E10D0;
 
 void func_801733FC_overlay_061(void *arg0) {
+int __repair_literal;
+
     s16 sp10;
     u16 sp12;
     u16 sp14;
@@ -27,8 +29,10 @@ void func_801733FC_overlay_061(void *arg0) {
     void *temp_a1_2;
     void *temp_a1_3;
     void *temp_s0;
+__repair_literal = 4;
 
-    temp_s0 = M2C_FIELD((((M2C_FIELD(arg0, u8 *, 0x2B4) - 1) * 4) + &D_800C7650), void **, 0x19D38);
+
+    temp_s0 = M2C_FIELD((((M2C_FIELD(arg0, u8 *, 0x2B4) - 1) * __repair_literal) + &D_800C7650), void **, 0x19D38);
     temp_v1 = M2C_FIELD(temp_s0, s32 *, 0x234);
     temp_a1 = temp_v1 + 0x468;
     M2C_FIELD(arg0, s32 *, 0x120) = (s32) M2C_FIELD(temp_a1, s32 *, 0x4C);

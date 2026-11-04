@@ -8,8 +8,8 @@ typedef union { u64 q; struct { u32 lo; u32 hi; } w; } U64x;
 s8 func_80164C84_ovl_30(void *p, s32 mode)
 {
     U64x b;
-    u32 off;
     u8 *g;
+    u32 off;
     s32 a, c;
     u8 *base;
 

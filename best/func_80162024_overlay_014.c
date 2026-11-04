@@ -7,7 +7,7 @@ extern s32 func_8006A81C_ovl_01(s32);
 
 void func_80162024_overlay_014(u8 *p) {
     Blob tmp;
-    s32 temp;
+    u32 temp;
     u8 *tbl;
     u16 *out;
     tmp = D_80168648_ovl_14;

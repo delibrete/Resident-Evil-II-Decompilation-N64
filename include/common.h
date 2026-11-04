@@ -183,3 +183,6 @@ void func_80083788_ovl_01(s32 *bits, u32 n);   /* set   */
 void func_800837B0_ovl_01(s32 *bits, u32 n);   /* clear */
 
 typedef struct S_D_80129E34 { s32 unk_00; s32 unk_04; s32 unk_08; s8 unk_0C; u8 unk_0D[0x3F]; s32 unk_4C; s32 unk_50; s32 unk_54; s32 unk_58; s32 unk_5C; s32 unk_60; u8 unk_64; u8 unk_65; } S_D_80129E34;
+
+s32 func_800A5618_ovl_01(void);
+s32 func_800A5660_ovl_01(void);

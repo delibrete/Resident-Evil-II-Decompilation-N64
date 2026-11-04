@@ -30,7 +30,7 @@ extern s8 D_80143EA8;
 extern s8 D_80143F88;
 extern s32 (*D_80143FA8)(M2C_UNK, M2C_UNK);
 
-s32 func_800A4FB8_ovl_01(s32 *arg0, s32 arg1, s32 arg2, u32 arg3) {
+s32 func_800A4FB8_ovl_01(s32 *arg0, u16 arg1, s32 arg2, u32 arg3) {
     s32 temp_v0;
     s32 temp_v0_2;
     s32 var_v0;

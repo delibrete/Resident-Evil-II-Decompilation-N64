@@ -103,7 +103,7 @@ void func_80029A2C_ovl_01(S_arg0_29A2C *arg0, u8 *arg1, S_out_29A2C **arg2) {
                     if (a1 > 0) {
                         do {
                             out->unk_D4[a0] = j;
-                            out->unk_4D4[a0] = arg1[i + 0x11];
+                            out->unk_4D4[a0] = (arg1 + i)[0x11];
                             a0++;
                             a1--;
                         } while (a1 > 0);

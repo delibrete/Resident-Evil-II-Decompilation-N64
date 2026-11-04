@@ -8,7 +8,7 @@ void func_80162370_ovl_34(Obj *p,s32 delta) {
  case 0:
    p->unk1e8=0x01060300; ((u8*)p)[6]=1; p->timer=0x320; p->unk1e4=0;
    *(u32*)((u8*)D_800C7650_ovl_01+0x18000+0x1a5c)|=0x40;
-   p->unk25c=1; p->flags|=0x80;
+   { int repair_store_value = 1; p->unk25c=repair_store_value; } p->flags|=0x80;
    { s32 d=func_80089D34_ovl_01(p,delta,0,0x400); ((u8*)p)[6]+=d; p->timer-=0x96; if ((s16)p->timer<0x12c) p->timer=0x12c; }
    break;
  case 2:

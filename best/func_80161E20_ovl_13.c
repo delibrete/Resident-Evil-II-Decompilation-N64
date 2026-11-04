@@ -129,7 +129,7 @@ void func_80161E20_ovl_13(S161E20 *arg0, s32 arg1, s32 arg2) {
     arg0->unk_130 = 0;
     arg0->unk_132 = 0;
     arg0->unk_13A = 0x212;
-    func_80166214_ovl_13(arg0, 0x15E);
+    do { func_80166214_ovl_13(arg0, 0x15E); } while (0);
 
     base = (u8 *)arg0 + 0x28;
     arg0->unk_28A = 0x12C;

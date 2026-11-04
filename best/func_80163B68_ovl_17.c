@@ -1,7 +1,7 @@
 s32 func_80033634_ovl_01(void);
 s32 func_80089D34_ovl_01(void *, s32, s32, s32);
 s32 func_80166BF0_ovl_17(void *, s16);
-s16 func_80166F04_ovl_26(void *, s32, s32);
+s16 func_80166F04_overlay_017(void *, s32, s32);
 s32 func_801678B8_ovl_17(void *);
 #define F(p,t,o) (*(t *)((u8 *)(p)+(o)))
 void func_80163B68_ovl_17(void *arg0, s32 arg1, s32 arg2) {
@@ -15,7 +15,7 @@ void func_80163B68_ovl_17(void *arg0, s32 arg1, s32 arg2) {
     switch(temp_v1) {
     case 0:
         F(arg0,u8,6)=1;
-        temp_v0=func_80166F04_ovl_26(arg0,0x20,1);
+        temp_v0=func_80166F04_overlay_017(arg0,0x20,1);
         F(arg0,s16,0x1F6)=temp_v0;
         if(temp_v0==0) { var_v0=7; goto block_15; }
         var_v1=-0x400;

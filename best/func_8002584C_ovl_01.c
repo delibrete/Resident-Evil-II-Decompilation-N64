@@ -48,6 +48,6 @@ void func_8002584C_ovl_01(Obj *arg0) {
     arg0->unk30 = (u32)D_800C6958_ovl_01;
     arg0->unk38 = 0;
     arg0->unk3C = 0;
-    arg0->unk28 = a;
     arg0->unk2C = b;
+    arg0->unk28 = a;
 }

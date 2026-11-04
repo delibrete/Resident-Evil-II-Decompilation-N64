@@ -18,6 +18,6 @@ extern char D_800C41B0[];
 
 void func_80161F6C_ovl_34(void *arg0) {
     func_80032EA4_ovl_01(arg0, *(void * *)(D_800C41B0 + 0x19AA8), *(void * *)(D_800C41B0 + 0x19AB0), (void *)0x400);
-    func_80032EA4_ovl_01(arg0, *(void * *)(D_800C41B0 + 0x19AA8), *(void * *)(D_800C41B0 + 0x19AB0), 0x320);
+    do { func_80032EA4_ovl_01(arg0, *(void * *)(D_800C41B0 + 0x19AA8), *(void * *)(D_800C41B0 + 0x19AB0), 0x320); } while (0);
     M2C_FIELD(arg0, s8 *, 5) = 1;
 }

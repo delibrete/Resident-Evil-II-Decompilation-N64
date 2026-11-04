@@ -70,8 +70,8 @@ void func_80166BDC_ovl_30(S_func_80166BDC_ovl_30_arg0 *arg0, void *arg1, void *a
         p = (u8 *)arg0->unk_234;
         *(s32 *)(p + 0xBC0) &= ~1;
         if (arg0->unk_08 & 1) {
-            i = 0xF;
             off = 0x1608;
+            i = 0xF;
             do {
                 i++;
                 *(s32 *)((u8 *)arg0->unk_234 + off) &= ~1;

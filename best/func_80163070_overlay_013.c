@@ -32,7 +32,7 @@ void func_80163070_overlay_013(void *arg0, s32 arg1, s32 arg2)
         p[0x2B5] = 15;
       }
     }
-      func_80032DEC_ovl_01(p, *((s16 *) (p + 0x260)), *((s16 *) (p + 0x262)), 0x20);
+      do { func_80032DEC_ovl_01(p, *((s16 *) (p + 0x260)), *((s16 *) (p + 0x262)), 0x20); } while (0);
       func_80032C08_ovl_01(p, 0, 0);
       timer = inline_fn(p);
       if (((s16) timer) < 300)

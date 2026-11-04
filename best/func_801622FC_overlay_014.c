@@ -17,8 +17,8 @@ s32 func_801622FC_overlay_014(u8 *o)
 L4:
     *(u8 *)(o + 0x2DC) = 0;
     *(u8 *)(o + 0x2B6) = *(u8 *)(o + 0x2B6) + 1;
-    v = *(u8 *)(o + 0x2DC) + 1;
     *(u8 *)(o + 0x2DC) = v;
+    v = *(u8 *)(o + 0x2DC);/*__repair_loop_weight*/do { v += 1;} while (0);
     if ((u8)v != 0x11) {
         goto end;
     }
@@ -47,8 +47,8 @@ L2:
     *(u8 *)(o + 0x2B6) = *(u8 *)(o + 0x2B6) + 1;
     goto end;
 L3:
-    v = *(u8 *)(o + 0x2DC);
     d = *(u8 **)(s0 + 0x120);
+    v = *(u8 *)(o + 0x2DC);
     *(u16 *)(d + v * 4 + 4) = *(u16 *)(d + v * 4 + 4) + 0x1000;
     func_800662B8_ovl_01(o, s0);
     v = *(u8 *)(o + 0x2DC);

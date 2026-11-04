@@ -20,7 +20,7 @@ u32 func_8016350C_ovl_21(s32 arg0, s32 arg1) {
     s32 var_a0;
     s32 var_a1;
     u32 temp_v0;
-    u32 temp_v1;
+    
     u32 var_s0;
     u32 var_v1;
 
@@ -28,13 +28,13 @@ u32 func_8016350C_ovl_21(s32 arg0, s32 arg1) {
     var_a1 = arg1;
     var_s0 = 0;
 loop_1:
-    temp_v1 = (u32) (func_80033634_ovl_01(var_a0, var_a1) & 0xFF) >> 3;
+    temp_v0 = (u32) (func_80033634_ovl_01(var_a0, var_a1) & 0xFF) >> 3;
     var_a0 = D_80163A80_ovl_21;
-    temp_a1 = 1 << temp_v1;
+    temp_a1 = 1 << temp_v0;
     var_s0 += 1;
     if (!(var_a0 & temp_a1)) {
         D_80163A80_ovl_21 = var_a0 | temp_a1;
-        return temp_v1;
+        return temp_v0;
     }
     var_a1 = 1;
     if (var_s0 >= 0x20U) {

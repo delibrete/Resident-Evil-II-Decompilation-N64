@@ -1,1 +1,40 @@
-void func_80167910_ovl_28(void *p,s32 a,s32 b){s32 state=((u8*)p)[6];if(state==1){func_800334F8_ovl_01(p,a,b,0);if(func_80089D34_ovl_01(p,a,b,1024)){((u8*)p)[6]=2;}}else if(state==2){func_80032DEC_ovl_01(p,0,0,16);func_800334F8_ovl_01(p,a,b,0);func_80032B8C_ovl_01(p,0);if(func_80089D34_ovl_01(p,a,b,512)){((u8*)p)[6]=3;func_800334F8_ovl_01(p,a,b,0);func_80077D48_ovl_01(3,p);}}else if(state==3){func_800334F8_ovl_01(p,a,b,0);func_80089D34_ovl_01(p,a,b,1024);func_80032B8C_ovl_01(p,0);}}
+void func_80167910_ovl_28(void *p, s32 a, s32 b)
+{
+  int new_var;
+  s32 state = ((u8 *) p)[6];
+  void *new_var2;
+  void *new_var3;
+  if (state == 1)
+  {
+    func_800334F8_ovl_01(p, a, b, 0);
+    new_var = 6;
+    if (func_80089D34_ovl_01(p, a, b, 1024))
+    {
+      ((u8 *) p)[new_var] = 2;
+    }
+  }
+  else
+    if (state == 2)
+  {
+    func_80032DEC_ovl_01(p, 0, 0, 16);
+    new_var3 = p;
+    func_800334F8_ovl_01(new_var3, a, b, 0);
+    func_80032B8C_ovl_01(new_var3, 0);
+    if (func_80089D34_ovl_01(p, a, b, 512))
+    {
+      ((u8 *) p)[6] = 3;
+      new_var2 = new_var3;
+      func_800334F8_ovl_01(new_var2, a, b, 0);
+      func_80077D48_ovl_01(3, p);
+    }
+  }
+  else
+  {
+    {
+      func_800334F8_ovl_01(new_var3, a, b, 0);
+      func_80089D34_ovl_01(new_var3, a, b, 1024);
+      func_80032B8C_ovl_01(p, 0);
+    }
+  }
+}
+

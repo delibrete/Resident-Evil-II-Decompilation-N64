@@ -12,7 +12,7 @@ void func_801636E0_overlay_029(u8 *arg0, s32 arg1, s32 arg2) {
     switch (state) {
     case 0:
         *(u32 *)(arg0 + 0x1E8) = 0x5000F00;
-        func_800334F8_ovl_01(arg0, arg1, arg2, 0);
+        do { func_800334F8_ovl_01(arg0, arg1, arg2, 0); } while (0);
         arg0[6] = 1;
         break;
     case 1:

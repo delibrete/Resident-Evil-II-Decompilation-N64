@@ -45,7 +45,7 @@ void func_80166D80_ovl_33(S_80166D80_arg0 *arg0)
     p = *((S_80166D80_g **) (base + 0x1D40));
     new_var3 = 2 << arg0->unk_2B4;
     p->unk_2BF |= new_var3;
-    func_80052C9C_ovl_01(3, 0x82, 0, p);
+    do { func_80052C9C_ovl_01(3, 0x82, 0, p); } while (0);
     func_80052D40_ovl_01(0x19, 0x82, 0, 3);
   }
 }

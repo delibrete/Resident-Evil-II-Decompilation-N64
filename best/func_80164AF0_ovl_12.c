@@ -1,1 +1,12 @@
-typedef struct { u8 pad[6]; u8 index; } Obj; extern void *D_80166D80_ovl_12[]; void func_80164AF0_ovl_12(Obj *arg0) { ((void (*)(Obj *))D_80166D80_ovl_12[arg0->index])(arg0); }
+extern u32 func_80166D80_ovl_33[];
+void func_80164AF0_ovl_12(void *arg0)
+{
+  volatile u32 *base = (volatile u32 *) func_80166D80_ovl_33;
+  void (*new_var)(void);
+  u32 new_var2;
+  u32 address = base[new_var2];
+  new_var2 = address;
+  new_var = (void (*)(void)) new_var2;
+  new_var();
+}
+

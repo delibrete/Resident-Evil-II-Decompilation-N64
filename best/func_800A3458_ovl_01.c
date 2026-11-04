@@ -1,3 +1,4 @@
+static __inline__ int __repair_inline(s32 a, s32 b) { return a > b; }
 /* machine draft (m2c) for gcc-2.7.2-kmc -G0 -mips3 -mgp32 -mfp32 -O2 -mcpu=r4600, tried by autopilot */
 #ifndef M2C_DEFINES
 #define M2C_DEFINES
@@ -31,8 +32,7 @@ void func_800A3458_ovl_01(s32 arg0) {
     void *var_a2;
     void *var_v1;
 
-    temp_s3 = arg0 & 0xFFFF;
-    temp_s2 = temp_s3 * 0x600;
+    temp_s3 = arg0 & 0xFFFF;{ s32 __repair_value; __repair_value = temp_s3 * 0x600; temp_s2 = __repair_value; }
     temp_v0 = M2C_FIELD(&D_80143F90, void *(**)(s32, M2C_UNK), 0x18)(temp_s2, 0);
     D_80143F2C = temp_v0;
     func_80007320(temp_v0, temp_s2);
@@ -44,8 +44,8 @@ void func_800A3458_ovl_01(s32 arg0) {
     D_80143F3C = temp_v0_2;
     M2C_FIELD(temp_v0_2, s32 *, 4) = 0;
     M2C_FIELD(temp_v0_2, void **, 0x14) = (void *) D_80143F2C;
-    if (temp_s3 > 1) {
-        var_a2 = D_80143F2C + 0x600;
+    if (__repair_inline(temp_s3, 1)) {
+        var_a2 = (char *)(D_80143F2C); var_a2 += (s32)(0x600);
         var_a1 = 0;
         var_v1 = temp_v0_2 + 0x18;
         do {

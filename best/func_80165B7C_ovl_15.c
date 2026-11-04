@@ -4,10 +4,8 @@ void func_80165B7C_ovl_15(void *a, void *b) {
     u8 *p = (u8 *)b;
     u32 x = *(u32 *)p;
     u32 off = 0x21962;
-    u8 f = *(u8 *)((u64)base + off);
-    if (f & 8) {
-        x |= 0x4a;
-    }
+    volatile u8 *q = (volatile u8 *)((u64)base + 0x20000); u8 f = q[0x1962];
+    if ((f & 8) == 0) x |= 0x4a;
     *(u32 *)p = x;
     *(u32 *)(p + 0x60) = 0x202038;
     *(s16 *)(p + 0x138) = 0x8000;

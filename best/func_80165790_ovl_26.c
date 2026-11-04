@@ -4,7 +4,7 @@ extern void func_801656F0_ovl_26(void *, s32, s32);
 extern void func_80166B18_ovl_26(void *, s32);
 void func_80165790_ovl_26(void *a)
 {
-  volatile unsigned short x = *(((u8 *) a) + 5);
+  volatile unsigned int x = (short) (*(((u8 *) a) + 5));
   s32 v;
   s32 w;
   u8 *new_var;
@@ -29,7 +29,7 @@ void func_80165790_ovl_26(void *a)
       w = 9;
     }
     func_80166B18_ovl_26(a, (v - 1) & 255);
-    if ((((*(new_var + 0x26e)) < 3) || (x == 6)) || (x == 8))
+    if ((((*(new_var + 0x26e)) < 3) || (x == 6)) || (((short) (*(((u8 *) a) + 5))) == 8))
     {
       func_801656F0_ovl_26(a, v, w);
     }

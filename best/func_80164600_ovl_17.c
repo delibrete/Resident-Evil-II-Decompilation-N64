@@ -15,10 +15,11 @@ void func_801646B4_ovl_17(void *arg0,s32 arg1,s32 arg2) {
 }
 void func_80164600_ovl_17(void *arg0) {
  u8 *p=arg0; u32 t;
- func_80089D34_ovl_01();
+u32 __repair_phase_t;
+ do { func_80089D34_ovl_01(); } while (0);
  if(p[0x2D3]) t=*(u32 *)(p+0x290)&0x3fffffff; else t=*(u32 *)(p+0x28c);
  if (t>=0x1c20 && !func_80166D98_ovl_17(arg0,*(s32 *)(p+0x2c4),p[0x2cc])) return;
- if(p[0x2D3]) {t=*(u32 *)(p+0x290)&0x3fffffff; if(t<0xbb8) p[5]=7; else p[5]=3;}
+ if(p[0x2D3]) {__repair_phase_t=*(u32 *)(p+0x290)&0x3fffffff; if(__repair_phase_t<0xbb8) p[5]=7; else p[5]=3;}
  else {t=*(u32 *)(p+0x28c); if(t<0xbb8) p[5]=7; else p[5]=3;}
  *(s16 *)(p+6)=0;
 }

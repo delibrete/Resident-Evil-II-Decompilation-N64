@@ -1,30 +1,38 @@
-typedef struct { u8 pad[0x18000]; u8 fields[0x2000]; } Global;
-typedef struct { s32 unk_00; s32 unk_04; u8 pad[0x284]; s32 unk_28C; u8 pad2[0x26]; u8 unk_2B6; u8 pad3; u16 unk_2B8; } Player;
-extern Global D_800C7650_ovl_01;
-s32 func_80032EA4_ovl_01(void *, s32, s32, s32);
-s32 func_80033634_ovl_01(void);
-void func_801629EC_overlay_028(Player *arg0) {
- s32 temp_s3; s32 temp_v0; s32 var_v0; s32 var_v0_2; s32 var_v0_3; u32 temp_s2;
- u8 *g=(u8 *)&D_800C7650_ovl_01+0x18000;
- temp_s2=arg0->unk_28C;
- func_80032EA4_ovl_01(arg0,*(s32 *)(g+0x1AA8),*(s32 *)(g+0x1AB0),0x5F4);
- temp_s3=func_80032EA4_ovl_01(arg0,*(s32 *)(g+0x1AA8),*(s32 *)(g+0x1AB0),0x270);
- temp_v0=func_80032EA4_ovl_01(arg0,*(s32 *)(g+0x1AA8),*(s32 *)(g+0x1AB0),0x338);
- if (((temp_v0<<16)==0)&&temp_s2<0x5DCU) { arg0->unk_04=0x01050000; if(arg0->unk_2B6<0xA&&(func_80033634_ovl_01()&1))arg0->unk_04=0x01030000; }
- if(arg0->unk_2B6==0) {
- var_v0=temp_s2<0xBB8U;
- if(*(g+0x1CEF)==0) {
- var_v0_2=temp_s3<<16;
- if((temp_v0<<16)==0) {
- if(temp_s2<0xBB8U) { var_v0_2=temp_s3<<16; if(temp_s2>=0x709U) { arg0->unk_04=0x01020000; if((arg0->unk_2B8&1)&&(func_80033634_ovl_01()&3))arg0->unk_04=0x01070000; if(arg0->unk_2B8&0x20)arg0->unk_04=0x01070000; goto L15; } } else { L15: var_v0_2=temp_s3<<16; }
- }
- var_v0_3=temp_v0<<16;
- if(var_v0_2==0) { if(temp_s2<0x9C4U) { var_v0_3=temp_v0<<16; if(temp_s2>=0x709U) {var_v0_3=temp_v0<<16;if(!(func_80033634_ovl_01()&3)){arg0->unk_04=0x01070000;goto L21;}}}else{L21:var_v0_3=temp_v0<<16;} }
- if(var_v0_3==0&&temp_s2<0x708U)arg0->unk_04=0x01030000;
- goto L26;
- }
- goto L27;
- }
- L26: var_v0=temp_s2<0xBB8U;
- if(*(g+0x1CEF)!=0) { L27: if(var_v0)arg0->unk_04=0x01040000; }
+extern unsigned char D_800C7650_ovl_01[];
+extern unsigned char D_800E10D0_ovl_01[];
+extern int func_80033174_ovl_01(void *, void *);
+extern int func_80059E30_ovl_01(int, int);
+extern int func_80052C00_ovl_01(int, int);
+extern int func_80162B1C_ovl_18(void *, int, int);
+extern void func_80162BEC_ovl_18(void *, int);
+extern int func_80080D94_ovl_01(void);
+int func_801629EC_overlay_018(void *arg0, int arg1) {
+    unsigned char *state = (unsigned char *)arg0 + 0x2B4;
+    unsigned char *path;
+    unsigned int value;
+    int result = 0;
+    if (arg1 == 0) {
+        value = *(unsigned int *)((char *)arg0 + 0x28C);
+        path = D_800E10D0_ovl_01;
+    } else {
+        value = *(unsigned int *)((char *)arg0 + 0x290) & 0x3FFFFFFF;
+        path = *(unsigned char **)(D_800C7650_ovl_01 + 0x18000 + 0x1D3C);
+    }
+    if (value < *(unsigned short *)(path + 0x136) + 0xA &&
+        (unsigned int)(*(int *)(path + 0x2C) - *(int *)((char *)arg0 + 0x2C)) < 0xBB8 &&
+        state[9] == 0 && (path[0x26F] & 0x80) == 0) {
+        if (arg1 == 0) {
+            func_80162BEC_ovl_18(path, func_80033174_ovl_01(arg0, path) & 0xFF);
+            func_80059E30_ovl_01(1, 1);
+            func_80052C00_ovl_01(3, 0);
+        } else {
+            func_80080D94_ovl_01();
+        }
+        func_80162B1C_ovl_18(arg0, 0, 1);
+        result = 1;
+        state[9] = 1;
+        *(unsigned short *)((char *)arg0 + 0x1E0) = 0x5A;
+        *(unsigned short *)((char *)arg0 + 0x66) += 0x800;
+    }
+    return result;
 }

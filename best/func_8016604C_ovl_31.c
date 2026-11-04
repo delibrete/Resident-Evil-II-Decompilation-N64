@@ -68,7 +68,7 @@ void func_8016604C_ovl_31(S_func_8016604C_ovl_31_arg0 *s0, s32 arg1, s32 arg2) {
         func_800334F8_ovl_01(s0, arg1, arg2, 0);
         s0->unk_2C0 = 0;
         p = D_800C7650_ovl_01 + 0x18000;
-        func_80032DEC_ovl_01(s0, *(s32 *)(p + 0x1AA8), *(s32 *)(p + 0x1AB0), 0x10);
+        do { func_80032DEC_ovl_01(s0, *(s32 *)(p + 0x1AA8), *(s32 *)(p + 0x1AB0), 0x10); } while (0);
         func_80089D34_ovl_01(s0, arg1, arg2, 0x200);
         s0->unk_04.w = 0x01050100;
         s0->unk_206 = 0;

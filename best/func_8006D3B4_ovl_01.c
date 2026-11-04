@@ -22,7 +22,7 @@ void func_8006D3B4_ovl_01(void) {
     void *temp_v1;
     void *temp_v1_2;
 
-    var_a1 = &D_800E10DA_ovl_01 + 0x2B6;
+    var_a1 = (char *)(&D_800E10DA_ovl_01); var_a1 += (s32)(0x2B6);
     D_800E10DA_ovl_01 = 0xFFFF;
     if (M2C_FIELD(&D_800C7650_ovl_01, s32 *, 0x1828C) != var_a1) {
         do {

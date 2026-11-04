@@ -6,7 +6,7 @@ extern u8 D_8017DDA0_ovl_05[];
 extern u8 D_8017DECC_ovl_05[];
 void func_8017BB9C_ovl_05(void) {
  u32 buttons;u8 idx;u8 count;
- func_8017B390_ovl_05();
+ func_8017B390_overlay_005();
  buttons=*(u32*)(D_800C7650_ovl_01+0x18000+0x268);
  if(buttons&0x2000){func_80077B0C_ovl_01(0x4050000,0);D_8017E549_ovl_05=2;D_8017E53F_ovl_05|=4;return;}
  if(buttons&0x1000){

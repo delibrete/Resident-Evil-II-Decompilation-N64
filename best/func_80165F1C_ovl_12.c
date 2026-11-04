@@ -1,11 +1,1 @@
-typedef struct { u8 pad[6]; u8 index; } Arg;
-typedef void (*Fn)(void);
-extern Fn D_80166ED8_ovl_12[];
-s32 func_80033634_ovl_01(void);
-void func_80166900_ovl_12(void *,s32,s32);
-void func_80165F1C_ovl_12(Arg *p) {
- D_80166ED8_ovl_12[p->index]();
- func_80166900_ovl_12(p,3,0);
- func_80166900_ovl_12(p,2,0);
- func_80166900_ovl_12(p,2,(func_80033634_ovl_01()&1)+1);
-}
+typedef struct { u8 x[0x400]; } Obj; extern s32 func_80033634_ovl_01(void); extern void func_80166900_ovl_12(Obj *, s32, s32); typedef void (*Fn)(void); extern volatile Fn jtbl_80166ED8_overlay_033[]; void func_80165F1C_ovl_12(Obj *a) { jtbl_80166ED8_overlay_033[a->x[6]](); func_80166900_ovl_12(a,3,0); func_80166900_ovl_12(a,2,0); func_80166900_ovl_12(a,2,(func_80033634_ovl_01()&1)+1); }

@@ -25,7 +25,7 @@ void func_80172FC0_overlay_063(void *arg0, s32 arg1, void *arg2, M2C_UNK arg3) {
     M2C_UNK sp18;
     void *temp_s0;
 
-    temp_s0 = ((arg1 & 0x7F) * 6) + &D_80173368_overlay_063;
+    temp_s0 = (char *)(((arg1 & 0x7F) * 6)); temp_s0 += (s32)(&D_80173368_overlay_063);
     func_80040E88_ovl_01(arg0 + 0x64, &sp18);
     func_8004279C_ovl_01(&sp18, arg3, &sp10);
     sp10 += M2C_FIELD(arg2, u16 *, 0);

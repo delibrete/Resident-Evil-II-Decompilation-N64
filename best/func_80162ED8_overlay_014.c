@@ -15,7 +15,7 @@ s32 func_80162ED8_overlay_014(u8 *p, s8 a1, s32 a2) {
     s32 absdiff;
 
     tmp = D_801686D8_ovl_14;
-    func_8008386C_ovl_01(*(s16 *)(p + 0x66), *(s32 *)(p + 0x70), &tmp, &tmp);
+    do { func_8008386C_ovl_01(*(s16 *)(p + 0x66), *(s32 *)(p + 0x70), &tmp, &tmp); } while (0);
     pos[0] = *(s32 *)(p + 0x28) + tmp.vx;
     pos[2] = *(s32 *)(p + 0x30) + tmp.vz;
     func_80066804_ovl_01(pos, 0x190, 1 << p[0x1A2], 0x400);
@@ -30,10 +30,10 @@ s32 func_80162ED8_overlay_014(u8 *p, s8 a1, s32 a2) {
         absdiff = diff;
         if (absdiff < 0) absdiff = -absdiff;
         if (absdiff >= 0x801) diff -= 0x1000;
-        if (diff == 0) {
-            p[0x2CC] = -a1;
-        } else {
+        if (diff != 0) {
             p[0x2CC] = a1;
+        } else {
+            p[0x2CC] = -a1;
         }
         if (a2 != 0) p[0x2CC] = -p[0x2CC];
     }

@@ -55,10 +55,10 @@ void func_801664D0_ovl_30(void *arg0, M2C_UNK arg1, M2C_UNK arg2) {
         }
         break;
     case 3:
-        func_80089D34_ovl_01(arg0, arg1, arg2, 0x100);
-        temp_v0 = M2C_FIELD(arg0, s16 *, 0x270);
-        if (temp_v0 == 2) {
-            M2C_FIELD(arg0, s8 *, 5) = (s8) temp_v0;
+        do { func_80089D34_ovl_01(arg0, arg1, arg2, 0x100); } while (0);
+        temp_v1_2 = M2C_FIELD(arg0, s16 *, 0x270);
+        if (temp_v1_2 == 2) {
+            M2C_FIELD(arg0, s8 *, 5) = (s8) temp_v1_2;
             M2C_FIELD(arg0, u8 *, 6) = 0;
         }
         break;

@@ -27,7 +27,7 @@ void func_80078B8C_ovl_01(s16 arg0) {
         var_s2 = 0;
         var_s1 = temp_v1;
 loop_2:
-        temp_s0 = var_s1 + &D_8011A31C_ovl_01;
+        temp_s0 = (char *)(var_s1); temp_s0 += (s32)(&D_8011A31C_ovl_01);
         if (M2C_FIELD(temp_s0, s32 *, 0x14) != 0) {
             if (func_800A2148_ovl_01(M2C_FIELD(temp_s0, s32 *, 4)) & 0xFF) {
                 func_800A1EE0_ovl_01(M2C_FIELD(temp_s0, s32 *, 4));

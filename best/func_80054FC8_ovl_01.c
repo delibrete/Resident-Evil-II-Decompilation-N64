@@ -39,12 +39,12 @@ void func_80054FC8_ovl_01(s32 arg0, s32 arg1) {
     temp_s1 = D_8010D8E0_ovl_01;
     func_800479F8_ovl_01(D_800C527C_ovl_01 + 0x3B800, &D_8010D8E4_ovl_01, 0x14D4, 1);
     M2C_FIELD(&D_800E9118_ovl_01, s8 *, 0xE) = 0;
-    func_80053D68_ovl_01();
+    do { func_80053D68_ovl_01(); } while (0);
     var_s0 = &D_8010C220_ovl_01;
     do {
         func_800540B4_ovl_01(temp_s1 + var_s2, var_s0);
-        var_s0 += 0x10;
-        var_s3 += 1;
+        var_s0 += 0x10;/*__repair_loop_weight*/do {
+        var_s3 += 1;} while (0);
         var_s2 += 0x10;
     } while (var_s3 < 0x16CU);
     M2C_FIELD(temp_s1, s8 *, 0x2DA) = 0x40;

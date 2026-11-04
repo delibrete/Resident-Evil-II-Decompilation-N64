@@ -15,7 +15,7 @@ typedef s32 M2C_UNK32;
 M2C_UNK func_800377B0_ovl_01(s32, s16, void *, s16 *); /* extern */
 M2C_UNK func_80077D48_ovl_01(M2C_UNK, void *);      /* extern */
 M2C_UNK func_80089D34_ovl_01(void *, M2C_UNK, M2C_UNK, M2C_UNK); /* extern */
-M2C_UNK func_80163950_ovl_26(void *, M2C_UNK, M2C_UNK); /* extern */
+M2C_UNK func_80163950_overlay_026(void *, M2C_UNK, M2C_UNK); /* extern */
 
 void func_80163828_overlay_026(void *arg0, M2C_UNK arg1, M2C_UNK arg2) {
     s16 sp10;
@@ -45,7 +45,7 @@ void func_80163828_overlay_026(void *arg0, M2C_UNK arg1, M2C_UNK arg2) {
         break;
     case 2:
         if (M2C_FIELD(temp_a0, u8 *, 0x13) != 0) {
-            func_80163950_ovl_26(arg0, arg1, arg2);
+            func_80163950_overlay_026(arg0, arg1, arg2);
         }
         break;
     }

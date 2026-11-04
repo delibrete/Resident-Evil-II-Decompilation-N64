@@ -117,7 +117,7 @@ void func_80161F5C_ovl_32(void *arg0) {
     temp_v1_2 = temp_v1 | 2;
     M2C_FIELD(arg0, s32 *, 0) = temp_v1_2;
     M2C_FIELD(arg0, s32 *, 0) = (s32) (temp_v1_2 | 0x0C000000);
-    func_80089D34_ovl_01(arg0, 0x100);
+    do { func_80089D34_ovl_01(arg0, 0x100); } while (0);
     M2C_FIELD((((M2C_FIELD(arg0, u8 *, 8) - 0x10) * 4) + &D_800C7650_ovl_01), M2C_UNK **, 0x18298) = &func_801652CC_ovl_32;
     M2C_FIELD((((M2C_FIELD(arg0, u8 *, 8) - 0x10) * 4) + &D_800C7650_ovl_01), M2C_UNK **, 0x18398) = &func_80165310_ovl_32;
     M2C_FIELD(arg0, s32 *, 0) = (s32) (M2C_FIELD(arg0, s32 *, 0) | 4);

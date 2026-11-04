@@ -12,5 +12,5 @@ void func_800070C0(void) {
  sp14 &= ~0xF; if(sp14!=0){D_800128C0=0;D_800128C4=sp14;}
  u.p.hi=D_800128C0;u.p.lo=D_800128C4;u.q=u.q*3;u.q=func_80006100(u.q,4);D_800128C0=u.p.hi;D_800128C4=u.p.lo;
  if(D_8000030C==0)func_80006650(D_8000031C,0x40);
- switch(D_80000300){case 0:D_800128C8=0x02F5B2D2;break;case 2:D_800128C8=0x02E6025C;break;default:D_800128C8=0x02E60354;break;}
+ switch(D_80000300){case 0:D_800128C8=0x02F5B2D2;break;default:D_800128C8=0x02E60354;break;case 2:D_800128C8=0x02E6025C;break;}
 }

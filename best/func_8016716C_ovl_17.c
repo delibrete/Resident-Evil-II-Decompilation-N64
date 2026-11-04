@@ -19,7 +19,9 @@ M2C_UNK func_80069F4C_ovl_01(s32, M2C_UNK, M2C_UNK, M2C_UNK); /* extern */
 extern M2C_UNK D_800E8FC8_ovl_01;
 
 void func_8016716C_ovl_17(void *arg0, s32 arg1, s16 arg2) {
-    u16 sp10;
+short __repair_constant = 0x3E8;
+
+    s16 sp10;
     u16 sp12;
     u16 sp14;
     s16 sp18;
@@ -36,7 +38,7 @@ void func_8016716C_ovl_17(void *arg0, s32 arg1, s16 arg2) {
     if (!(arg1 & 0x80)) {
         var_a0 = (arg1 << 0x10) | 0x1D001000;
         var_a2 = temp_s2 + 0x38;
-        sp10 = 0x3E8;
+        sp10 = __repair_constant;
         var_v0 = -0x64U;
         sp12 = 0;
     } else {
@@ -44,7 +46,7 @@ void func_8016716C_ovl_17(void *arg0, s32 arg1, s16 arg2) {
         sp12 = M2C_FIELD(arg0, u16 *, 0x66);
         sp14 = M2C_FIELD(arg0, u16 *, 0x68);
         func_80040E88_ovl_01(&sp10, &sp20);
-        sp18 = 0x3E8;
+        sp18 = __repair_constant;
         sp1A = 0;
         sp1C = -0x64;
         func_8004279C_ovl_01(&sp20, &sp18, &sp10);

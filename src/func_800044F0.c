@@ -1,0 +1,5 @@
+s32 func_80005074(u16*a0,u16*a1);                                                                                                                                                                                                                     
+extern s32 D_80012820,D_8010B698; extern s32 func_800013B0(s32),func_800013D4(s32);typedef struct { unsigned char pad_0[32]; int field_20; int field_24; int field_28; unsigned char pad_2C[32]; int field_4C; } __repair_record_p;
+ void *func_800044F0(void*p){s32 x=D_80012820;((__repair_record_p*)p)->field_20=0;((__repair_record_p*)p)->field_24=0;((__repair_record_p*)p)->field_28=0;if(x==0){D_80012820=D_8010B698;}func_800013B0(D_80012820);((__repair_record_p*)p)->field_4C=func_800013D4(0x8000);return p;}
+s32 func_800042F4(void *a,void *b);                                                                                                                                                                                                              
+extern s32 D_80013EC0; void*func_800040D4(s32*a,s32 b);                                                   

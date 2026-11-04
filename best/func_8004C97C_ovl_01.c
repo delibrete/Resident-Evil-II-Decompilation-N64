@@ -1,4 +1,3 @@
-/* machine draft (m2c) for gcc-2.7.2-kmc -G0 -mips3 -mgp32 -mfp32 -O2, tried by autopilot */
 #ifndef M2C_DEFINES
 #define M2C_DEFINES
 typedef s32 M2C_UNK;
@@ -11,13 +10,14 @@ typedef s32 M2C_UNK32;
 #define M2C_CARRY 0
 #define M2C_OVERFLOW(a) (0)
 #endif
+/* machine draft (m2c) for gcc-2.7.2-kmc -G0 -mips3 -mgp32 -mfp32 -O2, tried by autopilot */
 
-M2C_UNK func_8004C940_ovl_01(M2C_UNK, s32, M2C_UNK, M2C_UNK); /* extern */
-M2C_UNK func_8004CA04_ovl_01();                     /* extern */
-extern M2C_UNK D_800FE228_ovl_01;
+s32 func_8004C940_overlay_001();
+s32 func_8004CA04_overlay_001();
+extern char D_800FE228_ovl_01[];
 
 void func_8004C97C_ovl_01(void) {
-    M2C_UNK *var_v0_2;
+    unsigned char *var_v0_2;
     s32 var_a0;
     s32 var_a1;
     s32 var_v0;
@@ -28,7 +28,7 @@ void func_8004C97C_ovl_01(void) {
         var_v0 -= 1;
     } while (var_v0 != 0);
     var_v0_2 = &D_800FE228_ovl_01;
-    var_v1 = &D_800FE228_ovl_01 + 0x2800;
+    var_v1 = D_800FE228_ovl_01 + 0x2800;
     var_a0 = 0x200;
     var_a1 = 0x800;
     do {
@@ -43,6 +43,6 @@ void func_8004C97C_ovl_01(void) {
         var_a1 -= 1;
         var_v1 += 0x10;
     } while (var_a1 != 0);
-    func_8004C940_ovl_01(0x03000000, var_a1, 0x64808080, 0x04000000);
-    func_8004CA04_ovl_01();
+    func_8004C940_overlay_001(0x03000000, var_a1, 0x64808080);
+    func_8004CA04_overlay_001();
 }

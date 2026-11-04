@@ -1,23 +1,13 @@
-typedef union { u64 q; struct { u32 lo; u32 hi; } w; } U64;
+void func_80161CC8_ovl_24(void *, s32, s32);
+void func_80161D30_ovl_24(void *, s32, s32);
 
-extern u8 D_800C7650_ovl_01[];
-extern void (*D_80161FD0_ovl_38[])(void);
-
-void func_80161C70_overlay_038(u8 *p) {
-    U64 b;
-    u8 *base;
-    u32 off = 0x18000;
-    void (**tbl)(void);
-
-    b.w.lo = (u32)D_800C7650_ovl_01;
-    base = (u8 *)(b.w.lo + off);
-    if (*(u32 *)(base + 0x1A60) & 0x20000000) {
-        return;
-    }
-    tbl = D_80161FD0_ovl_38;
-    tbl[p[4]]();
-    if (*(s16 *)(p + 0x270) == 1) {
-        *(u32 *)(p + 4) = 0x03000000;
-        *(s16 *)(p + 0x270) = 0;
+void func_80161C70_overlay_024(u8 *arg0) {
+    switch (arg0[4]) {
+    case 0:
+        func_80161CC8_ovl_24(arg0, *(s32 *)(arg0 + 0x1A4), *(s32 *)(arg0 + 0x218));
+        break;
+    case 1:
+        func_80161D30_ovl_24(arg0, *(s32 *)(arg0 + 0x1A4), *(s32 *)(arg0 + 0x218));
+        break;
     }
 }

@@ -28,7 +28,7 @@ void func_80074C18_ovl_01(void) {
         if (M2C_FIELD(&D_800C7650_ovl_01, s32 *, 0x19A5C) & 0x200000) {
             func_800736E0_ovl_01(&D_800E10D0_ovl_01, 1, 0x10);
         }
-        func_800736E0_ovl_01(&D_800E10D0_ovl_01, 1, 0);
+        do { func_800736E0_ovl_01(&D_800E10D0_ovl_01, 1, 0); } while (0);
         var_s1 = &D_800E10D0_ovl_01 + 0x2C0;
         if (M2C_FIELD(&D_800C7650_ovl_01, s32 *, 0x1828C) != var_s1) {
             do {

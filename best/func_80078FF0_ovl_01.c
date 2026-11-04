@@ -30,7 +30,7 @@ void func_80078FF0_ovl_01(s16 arg0) {
         if (temp_v1 == -1) {
             var_s1 = temp_a1;
 loop_3:
-            temp_s0 = var_s1 + &D_8011A31C_ovl_01;
+            temp_s0 = (char *)(var_s1); temp_s0 += (s32)(&D_8011A31C_ovl_01);
             if (M2C_FIELD(temp_s0, s32 *, 0x14) != 0) {
                 var_s2 += 1;
                 if (func_800A2148_ovl_01(M2C_FIELD(temp_s0, s32 *, 4)) & 0xFF) {

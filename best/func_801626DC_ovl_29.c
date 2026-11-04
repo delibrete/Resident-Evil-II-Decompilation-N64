@@ -6,7 +6,7 @@ void func_801626DC_ovl_29(void *arg0) {
     b = (u64)(u32)D_800C7650_ovl_01;
     p = (u8 *)(u32)(b & 0xFFFFFFFF);
     p += 0x18000;
-    func_80032EA4_ovl_01((s32)arg0, *(s32 *)(p + 0x1AA8), *(s32 *)(p + 0x1AB0), 0x400);
+    do { func_80032EA4_ovl_01((s32)arg0, *(s32 *)(p + 0x1AA8), *(s32 *)(p + 0x1AB0), 0x400); } while (0);
     func_80032EA4_ovl_01((s32)arg0, *(s32 *)(p + 0x1AA8), *(s32 *)(p + 0x1AB0), 0x320);
     *(u8 *)((u8 *)arg0 + 5) = 1;
 }

@@ -19,10 +19,14 @@ void func_80166D80_ovl_33(void *arg0) {
  }
 }
 void func_80166E18_ovl_33(void *arg0) {
+int __repair_literal;
+
  u8 state; void *p; u16 timer;
  state=*((u8*)arg0+0x2BF);
  if(state==1) goto state1;
- if(state<2) return;
+__repair_literal = 2;
+
+ if(state<__repair_literal) return;
  if(state==2) goto state2;
  if(state==3) goto state3;
  return;

@@ -1,25 +1,16 @@
-/* machine draft (m2c) for gcc-2.7.2-kmc -G0 -mips3 -mgp32 -mfp32 -O2, tried by autopilot */
-#ifndef M2C_DEFINES
-#define M2C_DEFINES
-typedef s32 M2C_UNK;
-typedef s8 M2C_UNK8;
-typedef s16 M2C_UNK16;
-typedef s32 M2C_UNK32;
-#define M2C_FIELD(expr, type_ptr, offset) (*(type_ptr)((s8 *)(expr) + (offset)))
-#define M2C_BITWISE(type, expr) ((type)(expr))
-#define M2C_ERROR(desc) (0)
-#define M2C_CARRY 0
-#define M2C_OVERFLOW(a) (0)
-#endif
-
-s32 func_80033634_ovl_01();                         /* extern */
-M2C_UNK func_80171998_overlay_054(void *, M2C_UNK, M2C_UNK); /* extern */
-M2C_UNK func_801736A8_overlay_054(void *, u8, M2C_UNK); /* extern */
-extern M2C_UNK D_80173D40_overlay_054;
-
-void func_80171F54_overlay_054(void *arg0, M2C_UNK arg1, M2C_UNK arg2) {
-    func_801736A8_overlay_054(arg0, *((func_80033634_ovl_01() & 0xF) + &D_80173D40_overlay_054), 0xA);
-    func_801736A8_overlay_054(arg0, *((func_80033634_ovl_01() & 0xF) + &D_80173D40_overlay_054), 0xA);
-    M2C_FIELD(arg0, s8 *, 0x2D8) = 0xF;
-    func_80171998_overlay_054(arg0, arg1, arg2);
+extern s32 func_80033634_ovl_01(void);
+extern s32 func_801736A8_overlay_054(void *arg0, u8 arg1, s32 arg2);
+extern void func_80171998_overlay_054(void *arg0, s32 arg1, s32 arg2);
+extern u8 D_80173D40_overlay_054[];
+typedef struct S_obj { u8 pad_00[0x2D8]; s8 unk_2D8; } S_obj;
+void func_80171F54_overlay_054(S_obj *p, s32 a, s32 b) {
+    volatile u8 *tab = D_80173D40_overlay_054;
+    s32 x;
+    s32 __repair_phase_x;
+    x = func_80033634_ovl_01() & 0xF;
+    func_801736A8_overlay_054(p, tab[x], 10);
+    __repair_phase_x = func_80033634_ovl_01() & 0xF;
+    func_801736A8_overlay_054(p, tab[__repair_phase_x], 10);
+    p->unk_2D8 = 15;
+    func_80171998_overlay_054(p, a, b);
 }
