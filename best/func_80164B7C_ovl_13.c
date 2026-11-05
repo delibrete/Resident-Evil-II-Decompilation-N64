@@ -9,10 +9,12 @@ extern void func_80166214_ovl_13(void *, s32);
 extern u32 jtbl_80166458_ovl_13[];
 void func_80164B7C_ovl_13(u8 *p, s32 a1, s32 a2)
 {
-  s32 state = p[6];
+  unsigned int state = p[6];
   s16 *new_var;
   s32 x;
   s32 y;
+  unsigned char new_var3;
+  u8 *new_var2;
   s32 z;
   volatile s32 pad[2];
   if (state >= 6)
@@ -49,6 +51,7 @@ void func_80164B7C_ovl_13(u8 *p, s32 a1, s32 a2)
     case 1:
       func_80089D34_ovl_01(p, a1, a2, 0x200);
       break;
+      new_var2 = p + 0x1e4;
 
     case 2:
       func_80165BD8_ovl_13(p, 7, 2);
@@ -58,10 +61,11 @@ void func_80164B7C_ovl_13(u8 *p, s32 a1, s32 a2)
     {
       s32 z1 = *new_var;
       *((s32 *) (p + 0x28)) += z1;
-      *((s32 *) (p + 0x30)) += *((s16 *) (p + 0x1e4));
-      *new_var = z1 >> 1;
+      *((s32 *) (p + 0x30)) += *((s16 *) new_var2);
+      new_var3 = 0x2b5;
+      *new_var = (*new_var) >> 1;
       p[0x2b5]--;
-      if (((u8) p[0x2b5]) == 0xff)
+      if (((u8) p[new_var3]) == 0xff)
       {
         *((u32 *) (p + 0x1e8)) = 0x0b000700;
         p[0x2b5] = 11;

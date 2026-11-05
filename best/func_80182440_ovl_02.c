@@ -35,7 +35,7 @@ void func_80182440_ovl_02(s32 arg0, s32 arg1, s32 arg2, M2C_UNK arg3, s32 arg4, 
     s32 temp_t3;
 
     temp_t3 = arg9 & 1;
-    temp_a0 = arg0 + (arg2 * (arg7 + (arg9 >> 1))) + arg6 + (arg8 >> 1);
+    temp_a0 = arg0; temp_a0 += (arg2 * (arg7 + (arg9 >> 1))) + arg6 + (arg8 >> 1);
     temp_a1 = arg1 + (arg2 * arg7) + arg6;
     if (!(arg8 & 1)) {
         if (temp_t3 == 0) {

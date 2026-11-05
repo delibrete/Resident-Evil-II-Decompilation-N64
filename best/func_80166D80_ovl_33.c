@@ -32,12 +32,17 @@ void func_80166D80_ovl_33(S_80166D80_arg0 *arg0)
   short new_var3;
   u8 t;
   off = 0x18000;
+  t = 2;
   b.w.lo = (u32) D_800C7650_ovl_01;
   base = (u8 *) (off + b.w.lo);
-  new_var2 = *((S_80166D80_g **) (base + 0x1D40));
-  new_var = new_var2;
-  p = new_var;
-  p->unk_2BF &= ~(2 << arg0->unk_2B4);
+  do
+  {
+    new_var2 = *((S_80166D80_g **) (base + 0x1D40));
+    new_var = new_var2;
+    p = new_var;
+  }
+  while (0);
+  p->unk_2BF &= ~(t << arg0->unk_2B4);
   t = arg0->unk_2BE;
   if (t != 0)
   {
@@ -45,7 +50,11 @@ void func_80166D80_ovl_33(S_80166D80_arg0 *arg0)
     p = *((S_80166D80_g **) (base + 0x1D40));
     new_var3 = 2 << arg0->unk_2B4;
     p->unk_2BF |= new_var3;
-    do { func_80052C9C_ovl_01(3, 0x82, 0, p); } while (0);
+    do
+    {
+      func_80052C9C_ovl_01(3, 0x82, 0, p);
+    }
+    while (0);
     func_80052D40_ovl_01(0x19, 0x82, 0, 3);
   }
 }

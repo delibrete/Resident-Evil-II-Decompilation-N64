@@ -20,7 +20,7 @@ extern M2C_UNK D_800E8FC8_ovl_01;
 extern M2C_UNK D_80167334_ovl_26;
 
 void func_80166B18_ovl_26(void *arg0, s32 arg1, s32 arg2) {
-    u16 sp10;
+    s16 sp10;
     u16 sp12;
     u16 sp14;
     M2C_UNK *var_a2;
@@ -44,12 +44,11 @@ void func_80166B18_ovl_26(void *arg0, s32 arg1, s32 arg2) {
         var_a2 = &D_800E8FC8_ovl_01;
         sp12 = M2C_FIELD(temp_a0, u16 *, 0x52);
         sp14 = M2C_FIELD(temp_a0, u16 *, 0x56);
-    
-    func_800377B0_ovl_01(((temp_v1 & 0x7F) << 0x18) | ((M2C_FIELD(temp_s0, u8 *, 1) + M2C_FIELD(temp_s0, u16 *, 2)) << 0x10) | M2C_FIELD(temp_s0, u16 *, 4), temp_a1, var_a2, &sp10);} else {
+    } else {
         var_a2 = temp_a0 + 0x38;
         sp14 = 0;
         sp12 = 0;
         sp10 = 0;
-    
-    func_800377B0_ovl_01(((temp_v1 & 0x7F) << 0x18) | ((M2C_FIELD(temp_s0, u8 *, 1) + M2C_FIELD(temp_s0, u16 *, 2)) << 0x10) | M2C_FIELD(temp_s0, u16 *, 4), temp_a1, var_a2, &sp10);}
+    }
+    func_800377B0_ovl_01(((temp_v1 & 0x7F) << 0x18) | ((M2C_FIELD(temp_s0, u8 *, 1) + M2C_FIELD(temp_s0, u16 *, 2)) << 0x10) | M2C_FIELD(temp_s0, u16 *, 4), temp_a1, var_a2, &sp10);
 }

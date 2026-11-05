@@ -10,7 +10,7 @@ void func_8017BD30_ovl_10(void) {
  unsigned char *table=D_800C7650_ovl_01+0x18000;
  unsigned char *a1; unsigned char *a0;
  *(s32*)(base+0x28)=3000; *(s16*)(base+4)=0; *(s32*)(base+0x30)=0; *(s16*)base=8; *(s16*)(base+0x36)=1; *(s16*)(base+0x2e)=16;
- *(u16*)(base+0x2c)=*(u16*)(table+0x1ae6); a1=*(unsigned char**)(table+0x1cb4)+0x38; *(void**)(base+0x3c)=func_8017E29C_ovl_04+0x214;
+ *(u16*)(base+0x2c)=*(u16*)(table+0x1ae6); a1 = (char *)(*(unsigned char**)(table+0x1cb4)); a1 += (s32)(0x38); *(void**)(base+0x3c)=func_8017E29C_ovl_04+0x214;
  a0=base+8; *(s32*)(a0+8)=*(s32*)(a1+0x18)-1000; *(s32*)(a0+0x10)=*(s32*)(a1+0x14); *(s32*)(a0+0x18)=*(s32*)(a1+0x1c); *(s32*)(a0+0x14)=*(s32*)(a1+0x18)-300;
  func_8017C1B4_ovl_10(); func_8017BDEC_ovl_10(); func_8017C0E8_ovl_10(); func_8017C5E4_ovl_10();
 }

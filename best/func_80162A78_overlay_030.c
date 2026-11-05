@@ -38,8 +38,8 @@ void func_80162A78_overlay_030(void *arg0) {
     } while (var_s0 < 8U);
     var_s0 = 0x14;
     var_a0 = 0x1D60;
-    do {
-        var_s0 += 1;
+    do {/*__repair_loop_weight*/do {
+        var_s0 += 1;} while (0);
         temp_v0 = M2C_FIELD(arg0, s32 *, 0x234) + var_a0;
         *temp_v0 &= ~0x400;
         var_a0 += 0x178;

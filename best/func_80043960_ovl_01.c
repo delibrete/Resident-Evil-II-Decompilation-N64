@@ -39,9 +39,9 @@ void func_80043960_ovl_01(void *x, s32 *a1)
   new_var4 = (new_var4 = a1[1]);
   v.f = 8;
   v.b = new_var4;
+  v.e = new_var6;
   new_var6 = new_var7;
   v.c = new_var;
-  v.e = new_var6;
   do
   {
     v.d = new_var2;

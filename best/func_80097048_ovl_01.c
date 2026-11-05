@@ -43,7 +43,7 @@ void func_80097048_ovl_01(void) {
         count -= 1;
         func_80047B34_ovl_01(p1, 0);
         func_8004789C_ovl_01(p1,  0x80);
-        func_800478DC_ovl_01(p1);
+        do { func_800478DC_ovl_01(p1); } while (0);
         func_800479EC_ovl_01(p1, src->b2, src->b3);
         *(u32 *)(p2 + 2) = cptr;
         *(s16 *)p2 = 0;

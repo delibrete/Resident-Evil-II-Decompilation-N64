@@ -1,0 +1,10 @@
+{
+  "snapshot_saved_at_utc": "2026-11-05T16:41:34.463018+00:00",
+  "matched": 1287,
+  "best_drafts": 2205,
+  "previous_snapshot_matches": 1198,
+  "inventory_valid": true,
+  "verification_blob_hashes_valid": true,
+  "historical_source_mismatches": [],
+  "note": "Snapshot exported through the running app save API while helpers continued. Match counts reflect app verdicts. Listed selected sources differ from historical verification bundle sources; original evidence is preserved and these sources have not been freshly rejudged for this checkpoint. No full ROM rebuild or upstream reconciliation was performed."
+}

@@ -27,7 +27,7 @@ void func_80035118_ovl_01(u8 *a) {
     if (!(*(u8 *)(a + 0x25C) & 1))
         val = *(u16 *)(s2 + 0x130) + sum;
 
-    func_80034E3C_ovl_01(a, 0, (s16)val);
+    do { func_80034E3C_ovl_01(a, 0, (s16)val); } while (0);
     func_80034E3C_ovl_01(a, 1, (s16)val);
     func_80034E3C_ovl_01(a, 2, (s16)val);
     func_80034E3C_ovl_01(a, 3, (s16)val);

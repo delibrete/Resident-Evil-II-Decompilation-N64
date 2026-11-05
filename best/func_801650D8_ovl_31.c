@@ -1,8 +1,9 @@
 void func_801650D8_ovl_31(void *p,s32 a,s32 b) {
  u8 state=*(u8*)((u8*)p+6);
+ s32 one=1;
  switch(state) {
  case 0: {
-  u16 flags=*(u16*)((u8*)p+0x2b6)&0xff43;
+  s32 flags=*(u16*)((u8*)p+0x2b6)&0xff43;
   *(s32*)((u8*)p+0x1e8)=0x0f020300; *(u8*)((u8*)p+6)=1; *(u16*)((u8*)p+0x2b6)=flags;
   if(*(s16*)((u8*)p+0x25e)==-0xe10) {
    *(u16*)((u8*)p+0x2b6)=flags|0x20;

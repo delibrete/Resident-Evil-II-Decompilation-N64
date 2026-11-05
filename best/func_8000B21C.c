@@ -46,7 +46,8 @@ s32 func_8000B21C(void *arg0, void *arg1)
         {
           val = *(p++);
           j++;
-          high = ((u32) (val & 65535)) >> 8;
+          k = val & 65535;
+    high = ((u32) (k)) >> 8;
           if ((((s32) (val & 65535)) >= (*((s32 *) (((u8 *) arg0) + 96)))) && (high != mode))
           {
             u32 off = ((val & 255) >> 2) + ((high & 7) << 5);

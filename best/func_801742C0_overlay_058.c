@@ -5,8 +5,8 @@ s32 func_801742C0_overlay_058(s32 arg0, s32 arg1) {
     s32 temp_s1;
     s32 temp_v0;
     s32 result;
-    temp_v0 = func_8017411C_overlay_058();
-    if (temp_v0 == 0) goto no_work;
+    temp_s1 = func_8017411C_overlay_058();
+    if (temp_s1 == 0) goto no_work;
     temp_a0 = 0x14;
     if (arg1 & 2) temp_a0 = 0xA;
     temp_v0 = func_80059E30_ovl_01(temp_a0, 0);

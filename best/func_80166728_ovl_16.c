@@ -39,9 +39,10 @@ void func_80166728_ovl_16(S_func_80166728_ovl_16 *p, s32 arg1, s32 arg2)
 {
   s32 a3v;
   S_func_80166728_ovl_16 *new_var;
+  int new_var5;
   int new_var3;
   S_func_80166728_ovl_16 *new_var2;
-  volatile unsigned int new_var4;
+  char new_var4;
   switch (p->unk_07)
   {
     case 0:
@@ -53,17 +54,19 @@ void func_80166728_ovl_16(S_func_80166728_ovl_16 *p, s32 arg1, s32 arg2)
       p->unk_1E4 = 0;
       p->unk_1E0 = 0;
       new_var = p;
+      new_var5 = 0x1000;
       new_var->unk_1E2 = 0;
       p->unk_07++;
       new_var2 = p;
       new_var2->unk_2C += 0x546;
       do
     {
-      func_8008A974_ovl_01(p, arg1, arg2, 0x1000);
+      func_8008A974_ovl_01(p, arg1, arg2, new_var5);
     }
     while (0);
       ((u8 *) new_var2)[0x1E9] = 0;
-      if (p->unk_2C < 0)
+      a3v = p->unk_2C;
+      if (a3v < 0)
     {
       break;
     }
@@ -81,7 +84,8 @@ void func_80166728_ovl_16(S_func_80166728_ovl_16 *p, s32 arg1, s32 arg2)
       goto addstate;
 
     case 1:
-      if (p->unk_1F2 < 0)
+      new_var3 = p->unk_1F2 < 0;
+      if (new_var3)
     {
       p->unk_2CE = 3;
       p->unk_26F &= 0x7F;
@@ -91,7 +95,7 @@ void func_80166728_ovl_16(S_func_80166728_ovl_16 *p, s32 arg1, s32 arg2)
     }
       new_var2->unk_1E8 = 0x10000000;
       new_var2->unk_07++;
-      a3v = 0x1000;
+      a3v = new_var5;
       addstate:
     p->unk_07 += func_8008A974_ovl_01(p, arg1, arg2, a3v);
 
@@ -102,8 +106,8 @@ void func_80166728_ovl_16(S_func_80166728_ovl_16 *p, s32 arg1, s32 arg2)
     case 3:
 
     case 4:
+      new_var4 = 3;
 
-    new_var4 = 3;
     case 5:
       p->unk_2CE = new_var4;
       p->unk_26F &= 0x7F;

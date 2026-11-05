@@ -1,3 +1,4 @@
+static __inline__ int __repair_inline(s32 a, s32 b) { return a > b; }
 /* machine draft (m2c) for gcc-2.7.2-kmc -G0 -mips3 -mgp32 -mfp32 -O2, tried by autopilot */
 #ifndef M2C_DEFINES
 #define M2C_DEFINES
@@ -25,12 +26,12 @@ extern M2C_UNK D_80147F50;
 
 void func_800A8068_ovl_01(s32 arg0) {
     M2C_UNK *var_a1;
-    M2C_UNK *var_v1;
+    
     s16 *var_v0;
     s32 var_a2;
-    s32 var_a2_2;
+    
     s32 var_a2_3;
-    s32 var_a2_4;
+    
     s32 var_v1_2;
 
     var_a2 = 0;
@@ -65,18 +66,18 @@ void func_800A8068_ovl_01(s32 arg0) {
         M2C_FIELD(var_a1, s8 *, 0x98) = 0;
         var_a2 += 1;
         var_a1 += 0x1A0;
-    } while (var_a2 < 0x20);
-    var_a2_2 = 0;
-    var_v1 = &D_80147A40;
+    } while (__repair_inline(0x20, var_a2));
+    var_a2 = 0;
+    var_a1 = &D_80147A40;
     do {
-        M2C_FIELD(var_v1, s32 *, 0) = 0;
-        M2C_FIELD(var_v1, s32 *, 4) = 0;
-        M2C_FIELD(var_v1, s32 *, 0xC) = 0;
-        M2C_FIELD(var_v1, s8 *, 0x14) = 4;
-        M2C_FIELD(var_v1, s32 *, 0x18) = 0x7F0000;
-        var_a2_2 += 1;
-        var_v1 += 0x28;
-    } while (var_a2_2 < 0x20);
+        M2C_FIELD(var_a1, s32 *, 0) = 0;
+        M2C_FIELD(var_a1, s32 *, 4) = 0;
+        M2C_FIELD(var_a1, s32 *, 0xC) = 0;
+        M2C_FIELD(var_a1, s8 *, 0x14) = 4;
+        M2C_FIELD(var_a1, s32 *, 0x18) = 0x7F0000;
+        var_a2 += 1;
+        var_a1 += 0x28;
+    } while (__repair_inline(0x20, var_a2));
     M2C_FIELD(&D_80147A40, s8 *, 0x4EC) = 1;
     var_a2_3 = 0;
     var_v1_2 = 0x398;
@@ -84,17 +85,17 @@ void func_800A8068_ovl_01(s32 arg0) {
         M2C_FIELD((var_v1_2 + &D_80147A40), s8 *, 0x14) = 0;
         var_a2_3 += 1;
         var_v1_2 += 0x28;
-    } while (var_a2_3 < 8);
+    } while (__repair_inline(8, var_a2_3));
     M2C_FIELD(&D_80147A40, s32 *, 0x348) = 0x7F0000;
     M2C_FIELD(&D_80147A40, s32 *, 0x370) = 0x7F0000;
     func_800AF020_ovl_01(&D_80147A40, 4, var_a2_3, 0x1F4);
     func_800AEC6C_ovl_01();
-    var_a2_4 = 0xF;
+    var_a2_3 = 0xF;
     var_v0 = &D_80147F50 + 0x1E;
     do {
         *var_v0 = 0;
-        var_a2_4 -= 1;
+        var_a2_3 -= 1;
         var_v0 -= 2;
-    } while (var_a2_4 >= 0);
+    } while (var_a2_3 >= 0);
     func_800B1A38_ovl_01();
 }

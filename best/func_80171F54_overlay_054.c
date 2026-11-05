@@ -6,11 +6,11 @@ typedef struct S_obj { u8 pad_00[0x2D8]; s8 unk_2D8; } S_obj;
 void func_80171F54_overlay_054(S_obj *p, s32 a, s32 b) {
     volatile u8 *tab = D_80173D40_overlay_054;
     s32 x;
-    s32 __repair_phase_x;
+    
     x = func_80033634_ovl_01() & 0xF;
     func_801736A8_overlay_054(p, tab[x], 10);
-    __repair_phase_x = func_80033634_ovl_01() & 0xF;
-    func_801736A8_overlay_054(p, tab[__repair_phase_x], 10);
+    x = func_80033634_ovl_01() & 0xF;
+    func_801736A8_overlay_054(p, tab[x], 10);
     p->unk_2D8 = 15;
     func_80171998_overlay_054(p, a, b);
 }

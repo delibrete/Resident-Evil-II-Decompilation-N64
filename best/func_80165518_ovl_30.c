@@ -1,6 +1,6 @@
 s32 func_80033634_ovl_01(void);
 s32 func_801672F4_ovl_30(void *, u8, s32);
-extern u8 D_80167D30_ovl_30[];
+extern u8 D_80167D30_overlay_030[];
 void func_80165518_ovl_30(void *arg0)
 {
   u8 *p = (u8 *) arg0;
@@ -15,7 +15,7 @@ void func_80165518_ovl_30(void *arg0)
     do
     {
       i++;
-      flag = D_80167D30_ovl_30[off + (func_80033634_ovl_01() & 7)];
+      flag = D_80167D30_overlay_030[off + (func_80033634_ovl_01() & 7)];
       func_801672F4_ovl_30(arg0, flag, 4);
     }
     while (i < 3);
@@ -24,8 +24,8 @@ void func_80165518_ovl_30(void *arg0)
   {
     do
     {
+      func_801672F4_ovl_30(arg0, D_80167D30_overlay_030[off + (func_80033634_ovl_01() & 7)], 5);
       i++;
-      func_801672F4_ovl_30(arg0, D_80167D30_ovl_30[off + (func_80033634_ovl_01() & 7)], 5);
     }
     while (i < 4);
   }

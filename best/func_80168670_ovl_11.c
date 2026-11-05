@@ -18,7 +18,11 @@ s32 func_80089D34_ovl_01(void *, M2C_UNK, M2C_UNK, M2C_UNK); /* extern */
 
 void func_80168670_ovl_11(void *arg0, M2C_UNK arg1, M2C_UNK arg2) {
     u8 temp_v1;
+    volatile s16 local_a;
+    volatile s16 local_b;
 
+    local_a = -0x1C2;
+    local_b = 0xFA;
     temp_v1 = M2C_FIELD(arg0, u8 *, 6);
     switch (temp_v1) {                              /* irregular */
     case 0:

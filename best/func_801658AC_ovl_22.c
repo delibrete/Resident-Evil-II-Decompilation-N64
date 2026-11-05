@@ -1,1 +1,31 @@
-s32 func_801620C4_ovl_22(s32,s32*,s32*);extern s32 D_80166888_ovl_26[];void func_801658AC_ovl_22(u8*p){s32 v;if(*(s16*)(p+0x1f2)<0x4e20)v=3;else if(!func_801620C4_ovl_22(4,D_80166888_ovl_26+1,D_80166888_ovl_26+2))v=4;else if(*(u16*)(p+0x26c)&0x20)v=1;else{*(s8*)(p+0x26e)=0;return;}*(s8*)(p+0x26e)=v;}
+s32 func_801620C4_ovl_22(s32, s32 *, s32 *);
+extern s32 D_80166888_ovl_26[];
+void func_801658AC_ovl_22(u8 *p)
+{
+  s32 v;
+  s32 *new_var;
+  if ((*((s16 *) (p + 0x1f2))) < 0x4e20)
+  {
+    v = 3;
+  }
+  else
+  {
+    new_var = D_80166888_ovl_26 + 2;
+    if (!func_801620C4_ovl_22(4, D_80166888_ovl_26 + 1, new_var))
+    {
+      v = 4;
+    }
+    else
+      if ((*((u16 *) (p + 0x26c))) & 0x20)
+    {
+      v = 1;
+    }
+    else
+    {
+      *((s8 *) (p + 0x26e)) = 0;
+      return;
+    }
+  }
+  *((s8 *) (p + 0x26e)) = v;
+}
+

@@ -32,7 +32,7 @@ void func_8009200C_ovl_01(void)
   u8 var_v0;
   void *var_s3_2;
   var_s1 = 0x40;
-  temp_s2 = D_800C527C_ovl_01 + 0x40800;
+  var_a2 = D_800C527C_ovl_01 + 0x40800;
   if ((*((u8 *) (((char *) (&D_8012BF38_ovl_01)) + 0x29))) != 0)
   {
     if (((u8) (*((u8 *) (((char *) (&D_8012BF38_ovl_01)) + 0x28)))) < 0xAU)
@@ -52,7 +52,7 @@ void func_8009200C_ovl_01(void)
     }
   }
   *((u8 *) (((char *) (&D_8012BF38_ovl_01)) + 0x28)) = var_v0;
-  var_s2 = temp_s2 + 0x78;
+  var_s2 = var_a2 + 0x78;
   var_s4 = 2;
   temp_s2 = 0x1EA;
   var_s3 = 0x1A;
@@ -89,7 +89,7 @@ void func_8009200C_ovl_01(void)
             var_a2 = 0x50;
             var_s1 = 0x120;
           
-          func_800478DC_ovl_01(var_s2, *((u8 *) (((char *) new_var2[1]) + 0xE0)), var_a2);}
+          do { func_800478DC_ovl_01(var_s2, *((u8 *) (((char *) new_var2[1]) + 0xE0)), var_a2); } while (0);}
           else
           {
             var_a2 = 0x98;
@@ -102,7 +102,7 @@ void func_8009200C_ovl_01(void)
           if (func_800837DC_ovl_01(&D_800E8D4C_ovl_01, 0xBU) != 0)
           {
             var_s1 = 0x120;
-            func_800478DC_ovl_01(var_s2, *((u8 *) (((char *) var_s3_2) + 0)), 0x98);
+            do { func_800478DC_ovl_01(var_s2, *((u8 *) (((char *) var_s3_2) + 0)), 0x98); } while (0);
           }
           else
           {

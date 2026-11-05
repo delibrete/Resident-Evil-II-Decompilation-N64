@@ -27,12 +27,12 @@ extern M2C_UNK D_80113A70_ovl_01;
 void func_8006D920_ovl_01(void) {
     func_8006D2B4_ovl_01();
     func_8006D364_ovl_01();
-    func_8006D488_ovl_01();
+    do { func_8006D488_ovl_01(); } while (0);
     M2C_FIELD(&D_80113A70_ovl_01, s8 *, 0x1464) = 0;
     M2C_FIELD(&D_80113A70_ovl_01, s32 *, 0x145C) = (s32) M2C_FIELD(M2C_FIELD(&D_800C7650_ovl_01, void **, 0x1827C), s32 *, 0x48);
-    func_8006D658_ovl_01(0, 0);
+    do { func_8006D658_ovl_01(0, 0); } while (0);
     M2C_FIELD(&D_80113A70_ovl_01, s32 *, 0x145C) = (s32) M2C_FIELD(M2C_FIELD(&D_800C7650_ovl_01, void **, 0x1827C), s32 *, 0x4C);
-    func_8006D658_ovl_01(1, 0);
+    do { func_8006D658_ovl_01(1, 0); } while (0);
     func_8006DA44_ovl_01();
     func_8006D150_ovl_01();
     func_8006D748_ovl_01();

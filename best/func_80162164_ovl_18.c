@@ -5,8 +5,8 @@ extern u8 D_800E10D0_ovl_01[];
 s32 func_80033634_ovl_01(void);
 s32 func_80162C10_overlay_018(Obj *, void *);
 void func_80162164_ovl_18(Obj *arg0) {
-    u8 mode;
     u8 random;
+    u8 mode;
     u32 limit;
     u32 timerValue;
     s8 direction;

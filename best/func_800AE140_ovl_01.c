@@ -18,22 +18,26 @@ extern M2C_UNK *D_801583D0;
 extern M2C_UNK *D_801583D4;
 
 void func_800AE140_ovl_01(void *arg0) {
+char *__repair_addr;
+
     M2C_UNK **temp_v1_2;
     M2C_UNK *temp_v0_2;
     M2C_UNK *temp_v0_3;
     M2C_UNK *temp_v1_3;
     s32 temp_a1;
-    s32 temp_v0;
+    
     s32 temp_v1;
 
     func_800B1AA8_ovl_01();
     if (M2C_FIELD(arg0, s32 *, 0x60) != -1) {
         temp_a1 = M2C_FIELD(arg0, s32 *, 0x14);
         if (temp_a1 != -1) {
-            M2C_FIELD((((temp_a1 & 0xFF) * 0x1A0) + &D_801443E8), s32 *, 0x10) = (s32) M2C_FIELD(arg0, s32 *, 0x10);
-            temp_v0 = M2C_FIELD(arg0, s32 *, 0x10);
-            if (temp_v0 != -1) {
-                M2C_FIELD((((temp_v0 & 0xFF) * 0x1A0) + &D_801443E8), s32 *, 0x14) = (s32) M2C_FIELD(arg0, s32 *, 0x14);
+__repair_addr = (char *)((((temp_a1 & 0xFF) * 0x1A0) + &D_801443E8));
+
+            M2C_FIELD(__repair_addr, s32 *, 0x10) = (s32) M2C_FIELD(arg0, s32 *, 0x10);
+            temp_a1 = M2C_FIELD(arg0, s32 *, 0x10);
+            if (temp_a1 != -1) {
+                M2C_FIELD((((temp_a1 & 0xFF) * 0x1A0) + &D_801443E8), s32 *, 0x14) = (s32) M2C_FIELD(arg0, s32 *, 0x14);
             }
         } else {
             temp_v1 = M2C_FIELD(arg0, s32 *, 0x10);

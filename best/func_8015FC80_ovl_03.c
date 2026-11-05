@@ -3,9 +3,13 @@ extern u8 D_800C7650_ovl_01[];
 extern u8 D_801611A8_ovl_03[];
 void func_8015FC80_ovl_03(void)
 {
+  u8 (*new_var)[];
   volatile u32 base = 0x18000;
+  u8 *new_var2;
   u8 *p = D_800C7650_ovl_01 + base;
   base = *((s32 *) (p + 0x204));
-  *((s32 *) (p + 0x204)) = func_800439B8_ovl_01(base, D_801611A8_ovl_03, 0, 0);
+  new_var = &D_801611A8_ovl_03;
+  new_var2 = p + 0x204;
+  *((s32 *) new_var2) = func_800439B8_ovl_01(*((s32 *) (p + 0x204)), *new_var, 0, 0);
 }
 

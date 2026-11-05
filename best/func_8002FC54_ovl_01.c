@@ -21,7 +21,7 @@ s32 func_8002FC54_ovl_01(s32 arg0) {
     s32 var_a0;
 
     if (D_800C5694_ovl_01 != 0) {
-        var_a0 = D_800EA210_ovl_01 + D_8010B698_ovl_01;
+        var_a0 = (D_8010B698_ovl_01) + (D_800EA210_ovl_01);
     } else {
         var_a0 = D_800EA210_ovl_01 + D_8010B684_ovl_01;
     }

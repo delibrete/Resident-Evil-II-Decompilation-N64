@@ -31,7 +31,7 @@ void func_801627A0_ovl_29(S_arg *arg0)
     s32 v;
 
     s3 = 0;
-    base = (u8 *)D_800C7650_ovl_01 + 0x18000;
+    base = (char *)((u8 *)D_800C7650_ovl_01); base += (s32)(0x18000);
     s2 = arg0->unk_28C;
     t1 = func_80032EA4_ovl_01(arg0, *(s32 *)(base + 0x1AA8), *(s32 *)(base + 0x1AB0), 0x4C8);
     t2 = func_80032EA4_ovl_01(arg0, *(s32 *)(base + 0x1AA8), *(s32 *)(base + 0x1AB0), 0x270);

@@ -61,7 +61,7 @@ void func_800270E0_ovl_01(void)
     func_80024D60_ovl_01();
     t = func_800072E0();
     base[0] = 4;
-    func_8006B40C_ovl_01(0, 0, 2);
+    do { func_8006B40C_ovl_01(0, 0, 2); } while (0);
     *flag = 1;
     func_8006B40C_ovl_01(1, 0, 1);
     base[*flag] = 1;

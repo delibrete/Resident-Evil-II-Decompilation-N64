@@ -21,9 +21,9 @@ void func_801643A8_ovl_29(void *arg0) {
  x=func_80032EA4_ovl_01(arg0,*(void**)(base+0x1aa8),*(void**)(base+0x1ab0),0x400);
  if ((x<<16)==0 && *(u32*)((u8*)arg0+0x28c)>=0x9c5) *(s32*)((u8*)arg0+4)=0x01010000;
 }
-extern s16 D_80169814_ovl_29[];
+extern s16 D_80169814_overlay_029[];
 void func_80164DD0_ovl_29(void *arg0) {
  u16 f; s16 *p;
  f=*(u16*)((u8*)arg0+0x270);
- if(f&0x10) { *(s32*)((u8*)arg0+4)=0x01010000; p=D_80169814_ovl_29+(f&15)*2; *(s32*)((u8*)arg0+0x28)=p[0]; *(s32*)((u8*)arg0+0x30)=p[1]; }
+ if(f&0x10) { *(s32*)((u8*)arg0+4)=0x01010000; p=D_80169814_overlay_029+(f&15)*2; *(s32*)((u8*)arg0+0x28)=p[0]; *(s32*)((u8*)arg0+0x30)=p[1]; }
 }

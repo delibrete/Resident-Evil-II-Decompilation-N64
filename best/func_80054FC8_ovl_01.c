@@ -43,8 +43,8 @@ void func_80054FC8_ovl_01(s32 arg0, s32 arg1) {
     var_s0 = &D_8010C220_ovl_01;
     do {
         func_800540B4_ovl_01(temp_s1 + var_s2, var_s0);
-        var_s0 += 0x10;/*__repair_loop_weight*/do {
-        var_s3 += 1;} while (0);
+        var_s0 += 0x10;/*__repair_loop_weight*/{
+        var_s3 += 1;}
         var_s2 += 0x10;
     } while (var_s3 < 0x16CU);
     M2C_FIELD(temp_s1, s8 *, 0x2DA) = 0x40;
@@ -55,7 +55,7 @@ void func_80054FC8_ovl_01(s32 arg0, s32 arg1) {
     M2C_FIELD(temp_s1, s8 *, 0x2D8) = 0;
     M2C_FIELD(temp_s1, s8 *, 0x2DC) = 0;
     M2C_FIELD(temp_s1, u8 *, 0x2DD) = (u8) M2C_FIELD(&D_800C7650_ovl_01, u8 *, 0x215FD);
-    func_80027180_ovl_01(arg0);
+    do { func_80027180_ovl_01(arg0); } while (0);
     func_8004CDB8_ovl_01(1);
     if (arg1 != 0) {
         func_80077B0C_ovl_01(0x02060000, 0);

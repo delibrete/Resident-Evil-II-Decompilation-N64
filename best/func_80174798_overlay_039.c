@@ -47,8 +47,8 @@ void func_80174798_overlay_039(void *arg0) {
     sp12 = 0x80 - (func_80033634_ovl_01() & 0xFF);
     sp14 = 0x80 - (func_80033634_ovl_01() & 0xFF);
     func_800377B0_ovl_01((((func_80033634_ovl_01() & 0xFF) * 8) + 0xC18) | 0x06000000, M2C_FIELD(arg0, s16 *, 0x66), temp_s3_4 + 0x38, &sp10);
-    temp_s3_5 = M2C_FIELD(arg0, s32 *, 0x234);
-    func_800377B0_ovl_01(((func_80033634_ovl_01() & 0xFF) * 8) | 0x040C1000, M2C_FIELD(arg0, s16 *, 0x66), temp_s3_5 + 0x38, NULL);
+    temp_s3_4 = M2C_FIELD(arg0, s32 *, 0x234);
+    func_800377B0_ovl_01(((func_80033634_ovl_01() & 0xFF) * 8) | 0x040C1000, M2C_FIELD(arg0, s16 *, 0x66), temp_s3_4 + 0x38, NULL);
     temp_s0 = M2C_FIELD(arg0, s32 *, 0x234);
     func_800377B0_ovl_01((((func_80033634_ovl_01() & 0xFF) * 8) + 0xC18) | 0x06000000, M2C_FIELD(arg0, s16 *, 0x66), temp_s0 + 0xD70, &sp10);
     temp_s0_2 = M2C_FIELD(arg0, s32 *, 0x234);

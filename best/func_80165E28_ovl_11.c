@@ -1,6 +1,6 @@
 extern u8 D_800C7650_ovl_01[];
 extern u8 D_800E10F8_ovl_01[];
-extern s32 func_80032F94_ovl_01_48(void *,void *,s16,s32);
+extern s32 func_80032F94_ovl_01_48(void *,void *,int,s32);
 void func_80165E28_ovl_11(void *p) {
  u8 *base;
  if(*(u8*)((u8*)p+6)!=3) return;

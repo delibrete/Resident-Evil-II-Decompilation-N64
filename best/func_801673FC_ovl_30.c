@@ -18,7 +18,7 @@ extern M2C_UNK D_800E10D0_ovl_01;
 extern M2C_UNK D_800E8FC8_ovl_01;
 extern M2C_UNK D_80167F74_ovl_30;
 
-void func_801673FC_ovl_30(void *arg0, s32 arg1, s32 arg2, u16 *arg3) {
+void func_801673FC_ovl_30(void *arg0, u8 arg1, s32 arg2, u16 *arg3) {
     u16 sp10;
     s16 sp12;
     s16 sp14;

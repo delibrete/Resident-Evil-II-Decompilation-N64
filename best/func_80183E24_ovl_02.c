@@ -1,3 +1,4 @@
+static __inline__ u8 __repair_inline(u8 a) { return a; }
 /* machine draft (m2c) for gcc-2.7.2-kmc -G0 -mips3 -mgp32 -mfp32 -O2 -mcpu=r4600, tried by autopilot */
 #ifndef M2C_DEFINES
 #define M2C_DEFINES
@@ -37,13 +38,13 @@ void func_80183E24_ovl_02(u8 *arg0, u8 *arg1, s32 arg2, s32 arg3, s32 arg4) {
     var_t7 = var_t5 + arg2;
     var_t6 = 0;
     if (arg4 > 0) {
-        var_t2 = var_a1 + 7;
+        var_t2 = (char *)(var_a1); var_t2 += (s32)(7);
         var_t4 = var_t7 + 8;
         var_t3 = var_t5 + 8;
         do {
             temp_v1 = *var_t5;
             var_t5 += arg3;
-            temp_t0 = *var_t7;
+            temp_t0 = __repair_inline(*var_t7);
             var_t7 += arg3;
             var_t6 += 1;
             temp_t1 = M2C_FIELD(var_t3, u8 *, -7) + M2C_FIELD(var_t4, u8 *, -7) + 2;

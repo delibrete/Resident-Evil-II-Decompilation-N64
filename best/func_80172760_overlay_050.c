@@ -9,13 +9,22 @@ typedef struct
 extern void (* volatile D_80166588_ovl_23[])(void);
 void func_80172760_overlay_050(S *arg0)
 {
-  u32 value = arg0->unk298;
-  *((u32 *) (&arg0->unk4)) = value;
-  switch (arg0->unk4)
+  u32 value;
+  S *new_var;
+  u8 new_var2;
+  *((u32 *) (&arg0->unk4)) = arg0->unk298;
+  switch (value = arg0->unk4)
   {
     case 1:
     {
-      D_80166588_ovl_23[value = arg0->unk5]();
+      new_var = arg0;
+      value = new_var->unk5;
+      do
+      {
+        new_var2 = arg0->unk5;
+        D_80166588_ovl_23[value = new_var2]();
+      }
+      while (0);
     }
       break;
 

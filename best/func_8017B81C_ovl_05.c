@@ -59,14 +59,14 @@ void func_8017B81C_ovl_05(void) {
     func_8002751C_ovl_01(4, 1);
     temp_s3 = M2C_FIELD(&D_800C7650_ovl_01, u8 *, 0x18538);
     M2C_FIELD(&D_800C7650_ovl_01, u8 *, 0x18538) = 0U;
-    func_800275F8_ovl_01(0, 0x7FFF, 1, 0);
+    do { func_800275F8_ovl_01(0, 0x7FFF, 1, 0); } while (0);
     M2C_FIELD(&D_800C7650_ovl_01, u8 *, 0x18538) = 1U;
     func_800275F8_ovl_01(0, 0x7FFF, 1, 0);
     temp_v1 = M2C_FIELD(&D_800E9118_ovl_01, u8 *, 0xCB);
     M2C_FIELD(&D_800E9118_ovl_01, u8 *, 0xCB) = 0U;
     M2C_FIELD(&D_800C7650_ovl_01, u8 *, 0x18538) = temp_s3;
     D_8017E54B_ovl_05 = temp_v1;
-    func_80052BEC_ovl_01(0xF00C, 0xC04);
+    do { func_80052BEC_ovl_01(0xF00C, 0xC04); } while (0);
     M2C_FIELD(&D_800E9118_ovl_01, s8 *, 0xE) = 0;
     D_8017E54E_ovl_05 = M2C_FIELD(&D_800C7650_ovl_01, u8 *, 0x215FD);
     if (M2C_FIELD(&D_800C7650_ovl_01, void **, 0x1827C) != NULL) {

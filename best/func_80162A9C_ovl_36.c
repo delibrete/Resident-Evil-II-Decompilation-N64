@@ -52,6 +52,7 @@ void func_80162A9C_ovl_36(Obj *a)
       e = (Entry *) (((u8 *) a->arr) + off);
       e->x = v;
       e->y = v;
+e->x = v;
       e->z = v;
       e->w = 0x400000;
       e->q = 0x10101000;

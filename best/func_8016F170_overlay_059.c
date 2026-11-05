@@ -12,12 +12,10 @@ typedef s32 M2C_UNK32;
 #define M2C_OVERFLOW(a) (0)
 #endif
 
-extern int D_800E10F8;
-extern int D_800E1100;
 s32 func_80032EA4_ovl_01();
-extern char D_800C7650[];
+extern char D_800C7650_ovl_01[];
 
 void func_8016F170_overlay_059(s32 arg0) {
-    do { func_80032EA4_ovl_01(arg0, D_800E10F8, D_800E1100, 0x400); } while (0);
-    func_80032EA4_ovl_01(arg0, D_800E10F8, D_800E1100, 0x320);
+    func_80032EA4_ovl_01(arg0, *(s32 *)(D_800C7650_ovl_01 + 0x19AA8), *(s32 *)(D_800C7650_ovl_01 + 0x19AB0), 0x400);
+    func_80032EA4_ovl_01(arg0, *(s32 *)(D_800C7650_ovl_01 + 0x19AA8), *(s32 *)(D_800C7650_ovl_01 + 0x19AB0), 0x320);
 }

@@ -7,7 +7,7 @@ void func_80164D90_ovl_23(O *p)
 {
   O *new_var;
   volatile char new_var3;
-  int new_var2;
+  volatile unsigned long long new_var2;
   switch (p->state)
   {
     case 0:
