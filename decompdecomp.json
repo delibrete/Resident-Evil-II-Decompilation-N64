@@ -2493,7 +2493,8 @@
     "-mfp32",
     "-O2",
     "-g"
-   ]
+   ],
+   "timeout": 20
   },
   "69228236:2148938716": {
    "vram": 2148938716,
@@ -8179,7 +8180,8 @@
   "local_source_278287": "common_local_source_278287.h",
   "local_source_279812": "common_local_source_279812.h",
   "overlay_059": "common_overlay_059.h",
-  "main": "common_main.h"
+  "main": "common_main.h",
+  "overlay_001": "common_overlay_001.h"
  },
  "functions": {
   "func_80000518": {
@@ -58592,14 +58594,6 @@
    "score_after": 0
   },
   {
-   "function": "func_80025B0C_ovl_01",
-   "text": "Compiled a batch draft and inspected the assembly diff. Best attempt is saved. Initializer routines still need field/global pointer-vs-value and statement-order corrections; func_80025A60 needs its local pointer/short arithmetic layout reconstructed. Getter func_80025B0C remains a 3-instruction C output versus 4 target instructions (target has a delay-slot nop); tested ordinary and volatile loads and an equivalent arithmetic expression with no score change.",
-   "by": "codex-gpt-6-luna-1",
-   "created_at": 1793884655.98847,
-   "score_before": 0,
-   "score_after": 0
-  },
-  {
    "function": "func_80025474_ovl_01",
    "text": "Compiled three times; best prior attempt scores 1505. My reconstructed draft scored worse (3025). Target order begins storing the global pointer, then sets the first word, derives the offset using symbol addresses (not loaded words), and stores several globals by address; current C uses values and wrong order. Preserve best prior attempt.",
    "by": "codex-gpt-6-luna-1",
@@ -70320,14 +70314,6 @@
    "score_after": 10015
   },
   {
-   "function": "func_80025B0C_ovl_01",
-   "text": "Cannot get closer with any source shape: tried direct return, named local, volatile extern/load, array form (all score 160). Target is `lui v0,%hi; lw v0,%lo(v0); jr ra; nop` (4 insns); every available compiler build (KMC 2.7.2 -O1/-O2/-O3, -G0/-G8, -fno-schedule-insns, -fno-strength-reduce, IDO 7.1, IDO 5.3) fills the jr delay slot and emits `lui; jr ra; lw` (3 insns). That missing `nop`/reorder is a codegen difference of the provisioned build, matching open suggestion #23. Same pattern as func_8008AF3C (identical target, also unmatched) and func_8008AF4C.",
-   "by": "opencode-deepseek-v4.1-flash-low-1",
-   "created_at": 1793884679.209367,
-   "score_before": 0,
-   "score_after": 0
-  },
-  {
    "function": "func_8002616C_ovl_01",
    "text": "Tried the m2c-derived control flow and explicit byte base/Big state layouts. Best score 21932; later structural variants scored 22392\u201324152, with no improvement in 8/8 compiles. At best the diff was 77 missing and 95 extra instructions. Main unresolved issue is absolute globals/state base codegen (ROM uses s3-relative +0x18000 state while compiler materializes different global D_800DF850 and global base), plus resulting prologue/branch layout and call argument scheduling. No function matched; best attempt is retained.",
    "by": "codex-gpt-6-luna-1",
@@ -73486,14 +73472,6 @@
    "created_at": 1793884684.1770701,
    "score_before": 875,
    "score_after": 875
-  },
-  {
-   "function": "func_80025B0C_ovl_01",
-   "text": "Score 400 (0% match); only 2 instructions matched (stub). Function uses lui/lw pattern with global; compiler ceiling with KMC GCC 2.7.2 -O2 -mips3 -G0; no C construct can change instruction count.",
-   "by": "opencode-nemotron-3.5-lightning-f-1",
-   "created_at": 1793884684.1957061,
-   "score_before": 0,
-   "score_after": 0
   },
   {
    "function": "func_80004BAC",
@@ -84512,14 +84490,6 @@
    "score_after": 180
   },
   {
-   "function": "func_80025B0C_ovl_01",
-   "text": "Compiler ceiling: ROM has `lui; lw; jr ra; nop` (4 insns); all tested compiler builds (KMC 2.7.2 -O1/-O2/-O3, -G0/-G8, -fno-schedule-insns, -fno-strength-reduce, IDO 7.1, IDO 5.3) emit `lui; jr ra; lw` (3 insns) with lw in jr delay slot. No C source can force the explicit nop in delay slot; this is a codegen difference of the provisioned build (open suggestion #23). not_c=true.",
-   "by": "opencode-nemotron-3-ultra-550b-a5-1",
-   "created_at": 1793884702.284982,
-   "score_before": 0,
-   "score_after": 0
-  },
-  {
    "function": "func_80000F08",
    "text": "Three compiles all score 765; only diff is missing initial move $t9,$a0 and register allocation mismatches (target $t9/$t8/$t7/$t6 vs GCC $v1/$a3/$v0/$v0). Known KMC GCC 2.7.2 -O2 -mips3 -G0 ceiling; pure C cannot emit exact 18\u2011instruction pattern; likely hand\u2011written assembly or requires different compiler flags. Best attempt C matches 17/18 insns and high\u2011level logic.",
    "by": "opencode-nemotron-3.5-lightning-f-1",
@@ -91886,14 +91856,6 @@
    "created_at": 1793884709.909311,
    "score_before": 445,
    "score_after": 445
-  },
-  {
-   "function": "func_80025B0C_ovl_01",
-   "text": "Deep permuter: score 180 \u2192 180; 0 improvements; 20 candidates tested; 0 cached skips; 0 rejected; 157s elapsed. Budget rotation: soft allowance reached without recent progress.",
-   "by": "A.permuter-2376",
-   "created_at": 1793884709.914043,
-   "score_before": 0,
-   "score_after": 0
   },
   {
    "function": "func_80040A44_ovl_01",
@@ -132062,6 +132024,46 @@
    "created_at": 1793995617.4414852,
    "score_before": 10,
    "score_after": 0
+  },
+  {
+   "function": "func_80025B0C_ovl_01",
+   "text": "Compiled a batch draft and inspected the assembly diff. Best attempt is saved. Initializer routines still need field/global pointer-vs-value and statement-order corrections; func_80025A60 needs its local pointer/short arithmetic layout reconstructed. Getter func_80025B0C remains a 3-instruction C output versus 4 target instructions (target has a delay-slot nop); tested ordinary and volatile loads and an equivalent arithmetic expression with no score change.",
+   "by": "codex-gpt-6-luna-1",
+   "created_at": 1793884655.98847,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_80025B0C_ovl_01",
+   "text": "Cannot get closer with any source shape: tried direct return, named local, volatile extern/load, array form (all score 160). Target is `lui v0,%hi; lw v0,%lo(v0); jr ra; nop` (4 insns); every available compiler build (KMC 2.7.2 -O1/-O2/-O3, -G0/-G8, -fno-schedule-insns, -fno-strength-reduce, IDO 7.1, IDO 5.3) fills the jr delay slot and emits `lui; jr ra; lw` (3 insns). That missing `nop`/reorder is a codegen difference of the provisioned build, matching open suggestion #23. Same pattern as func_8008AF3C (identical target, also unmatched) and func_8008AF4C.",
+   "by": "opencode-deepseek-v4.1-flash-low-1",
+   "created_at": 1793884679.209367,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_80025B0C_ovl_01",
+   "text": "Score 400 (0% match); only 2 instructions matched (stub). Function uses lui/lw pattern with global; compiler ceiling with KMC GCC 2.7.2 -O2 -mips3 -G0; no C construct can change instruction count.",
+   "by": "opencode-nemotron-3.5-lightning-f-1",
+   "created_at": 1793884684.1957061,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_80025B0C_ovl_01",
+   "text": "Compiler ceiling: ROM has `lui; lw; jr ra; nop` (4 insns); all tested compiler builds (KMC 2.7.2 -O1/-O2/-O3, -G0/-G8, -fno-schedule-insns, -fno-strength-reduce, IDO 7.1, IDO 5.3) emit `lui; jr ra; lw` (3 insns) with lw in jr delay slot. No C source can force the explicit nop in delay slot; this is a codegen difference of the provisioned build (open suggestion #23). not_c=true.",
+   "by": "opencode-nemotron-3-ultra-550b-a5-1",
+   "created_at": 1793884702.284982,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_80025B0C_ovl_01",
+   "text": "Deep permuter: score 180 \u2192 180; 0 improvements; 20 candidates tested; 0 cached skips; 0 rejected; 157s elapsed. Budget rotation: soft allowance reached without recent progress.",
+   "by": "A.permuter-2376",
+   "created_at": 1793884709.914043,
+   "score_before": 0,
+   "score_after": 0
   }
  ],
  "set_aside": [
@@ -146035,8 +146037,8 @@
      "rom_sha1": "93187c4145cad272a255c17657cd9a1011b3fb3a"
     },
     "symbols_sha256": "bb629f57bc1a7dc4757d26842ea3c55c37e3025a8cd4b02d9a2fb5d58d2bc36b",
-    "recorded_at": 1793977048.2261271,
-    "attempt_id": 323340,
+    "recorded_at": 1793994575.457433,
+    "attempt_id": 329629,
     "source_sha256": "ce1ab0676c7ef9fe8f13a7daadeb939c53a042355cfd90bc4d2c98c34f5d1e45",
     "header_sha256": "6741617bf3c952bbf3b41f49aed7f8780fa9b0b41fb7a8e56fda2b5b9ed03d44",
     "context_version": 143,
