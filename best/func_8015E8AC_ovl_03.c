@@ -12,7 +12,7 @@ typedef s32 M2C_UNK32;
 #define M2C_OVERFLOW(a) (0)
 #endif
 
-s32 func_800439B8_ovl_01(s32, void *, M2C_UNK, M2C_UNK); /* extern */
+s32 func_800439B8_ovl_01(s32,  void *); /* extern */
 extern M2C_UNK D_800DF650_ovl_01;
 extern u16 D_80160B78_ovl_03;
 extern M2C_UNK D_80160B9C_ovl_03;
@@ -24,7 +24,7 @@ void func_8015E8AC_ovl_03(s32 arg0) {
     s32 var_a3;
     
     s32 var_s0_2;
-    s32 var_s0_3;
+    
     s32 var_t0;
     s32 var_t1;
     s8 temp_v1;
@@ -99,16 +99,16 @@ loop_2:
     M2C_FIELD(temp_a0_2, s8 *, 2) = temp_v1;
     M2C_FIELD(temp_a0_2, s8 *, 1) = temp_v1;
     M2C_FIELD(temp_a0_2, s8 *, 0) = temp_v1;
-    var_s0_3 = 0;
+    var_s0_2 = 0;
     do {
 loop_25:
-        __repair_phase_storage.value =  (&D_80160B78_ovl_03)[var_s1_2] + var_s0_3;
-        var_s0_3 += 1;
-        M2C_FIELD(&D_800DF650_ovl_01, s32 *, 0x204) = func_800439B8_ovl_01(M2C_FIELD(&D_800DF650_ovl_01, s32 *, 0x204), (__repair_phase_storage.value * 0x28) + &D_80160BB8_ovl_03, 0, 0);
-        if (var_s0_3 == 0) {
+        __repair_phase_storage.value =  (&D_80160B78_ovl_03)[var_s1_2] + var_s0_2;
+        var_s0_2 += 1;
+        M2C_FIELD(&D_800DF650_ovl_01, s32 *, 0x204) = func_800439B8_ovl_01(M2C_FIELD(&D_800DF650_ovl_01, s32 *, 0x204),  (__repair_phase_storage.value * 0x28) + &D_80160BB8_ovl_03);
+        if (var_s0_2 == 0) {
             goto loop_25;
         }
         var_s1_2 += 1;
-        var_s0_3 = 0;
+        var_s0_2 = 0;
     } while (var_s1_2 < 3U);
 }

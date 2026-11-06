@@ -63,8 +63,8 @@ void func_800A2714_ovl_01(void *arg0)
       do
       {
         temp_v0_2 = *((u16 *) (((char *) temp_v1) + 0x1E));
-        temp_v1 += 2;
-        var_a1_2 += 1;
+        temp_v1 += 2;/*__repair_loop_weight*/do {
+        var_a1_2 += 1;} while (0);
         *((u16 *) (((char *) var_a2_2) + 0x40)) = temp_v0_2;
         var_a2_2 += 2;
       }

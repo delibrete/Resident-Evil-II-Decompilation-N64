@@ -54,7 +54,7 @@ s32 __repair_phase_temp_v0;
             if (((M2C_FIELD(&D_8013A380, u8 *, 3) != 0) || ((__repair_phase_temp_v0 != 3) && ((M2C_FIELD(&D_8013A380, u8 *, 2) != 0) || (__repair_phase_temp_v0 != 2)))) && ((M2C_FIELD(&D_8013A380, u8 *, 0) != 0) || (__repair_phase_temp_v0 != 0))) {
                 func_800478E8_ovl_01(var_s1, ((arg2 >> 0x10) + var_s3) & 0xFFFF, arg2 & 0xFFFF);
                 var_s3 += 7;
-                func_800478DC_ovl_01(var_s1, *(__repair_phase_temp_v0 + &D_8013A380) * 8, 0x1A);
+                do { func_800478DC_ovl_01(var_s1, *(__repair_phase_temp_v0 + &D_8013A380) * 8, 0x1A); } while (0);
                 M2C_FIELD(var_s1, s16 *, 0xA) = (s16) (((arg3 & 0xF) + 2) << 5);
                 M2C_FIELD(&D_800DF650_ovl_01, s32 *, 0x204) = func_800439B8_ovl_01(M2C_FIELD(&D_800DF650_ovl_01, s32 *, 0x204), var_s1, 0, 0);
             }

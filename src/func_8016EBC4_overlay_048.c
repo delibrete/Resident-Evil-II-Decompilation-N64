@@ -1,4 +1,5 @@
-/* identical to func_80004A50 (matched), with its names changed by decompdecomp */
+/* identical to func_80004EC4 (matched), with its names changed by decompdecomp */
+/* identical to func_80028524_ovl_01 (matched), with its names changed by decompdecomp */
 /* machine draft (m2c) for gcc-2.7.2-kmc -G0 -mips3 -mgp32 -mfp32 -O2, tried by autopilot */
 #ifndef M2C_DEFINES
 #define M2C_DEFINES
@@ -13,7 +14,7 @@ typedef s32 M2C_UNK32;
 #define M2C_OVERFLOW(a) (0)
 #endif
 
-M2C_UNK D_80035E18();                            /* extern */
+M2C_UNK D_80035E18();                     /* extern */
 
 void func_8016EBC4_overlay_048(void) {
     D_80035E18();

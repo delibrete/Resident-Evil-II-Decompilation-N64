@@ -1,3 +1,4 @@
+/* identical to func_801645D0_overlay_017 (matched), with its names changed by decompdecomp */
 /* identical to func_8015C4C0_overlay_017 in Resident Evil II (matched), with its names changed by decompdecomp */
 /* machine draft (m2c) for gcc-2.7.2-kmc -G0 -mips3 -mgp32 -mfp32 -O2, tried by autopilot */
 #ifndef M2C_DEFINES

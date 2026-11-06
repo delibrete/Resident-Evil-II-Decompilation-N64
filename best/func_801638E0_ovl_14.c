@@ -115,7 +115,7 @@ void func_801638E0_ovl_14(P *p, s32 b, s32 c) {
             ch->u.unk4 = 0x02000000;
             ch->u.b.unk5 = ch->u.b.unk5 + func_80033174_ovl_01(p, D_800E10D0_ovl_01);
             func_80052C00_ovl_01(3, 0, ch);
-            func_80052D40_ovl_01(4, 0xFF, 0x32, 2);
+            do { func_80052D40_ovl_01(4, 0xFF, 0x32, 2); } while (0);
             func_80052D40_ovl_01(10, 0x8C, 0x32, 2);
             if (func_80059E30_ovl_01(0x19, 0) & 2) {
                 *(u32 *)(D_800E10D0_ovl_01 + 4) = 0x03000000;

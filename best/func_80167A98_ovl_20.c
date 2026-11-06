@@ -13,7 +13,7 @@ extern s8 D_80167F4A_ovl_20;
 extern s8 D_80167F4B_ovl_20;
 extern s32 D_800EB230_ovl_01;
 
-void func_80167F48_ovl_28(void *arg0,  s32 dy,  s32 dx,  s32 id);
+void func_80034224(void *arg0,  s32 dy,  s32 dx,  s32 id);
 
 void func_80167A98_ovl_20(void *arg0, void *arg1) {
     u16 oldXvel;
@@ -97,7 +97,7 @@ void func_80167A98_ovl_20(void *arg0, void *arg1) {
     if ((s8)D_80167F41_ovl_20 < -0xF) {
         D_80167F41_ovl_20 = -0xF;
     }
-    func_80167F48_ovl_28(arg1, 
+    func_80034224(arg1, 
         (s16)((s8)(u8)D_80167F41_ovl_20 - oldPy), 
         (s16)((s8)(u8)D_80167F40_ovl_20 - tx), 
         D_800EB230_ovl_01);

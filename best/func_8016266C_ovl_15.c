@@ -24,7 +24,7 @@ void func_8016266C_ovl_15(Obj *arg0)
   new_var2 = !(*(((u8 *) arg0) + 6));
   if (new_var2)
   {
-    func_80036764_ovl_01(arg0, new_var, 0x20, new_var);
+    func_80036C98_ovl_01(arg0, new_var, 0x20, new_var);
   }
   new_var = 0;
 }

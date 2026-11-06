@@ -1,18 +1,11 @@
-s32 func_80033634_ovl_01();
-s32 func_80089D34_ovl_01();
-static inline static char *inline_fn(char *arg0, int arg1)
-{
-  return arg0 + arg1;
-}
+/* identical to func_801621A4_ovl_27 (matched), with its names changed by decompdecomp */
+s32 func_80033634_ovl_01(void);
+s32 func_80089D34_ovl_01(void *arg0, s32 arg1, s32 arg2, s32 arg3);
 
-void func_8016ED34_overlay_055(void *arg0, s32 arg1, s32 arg2)
-{
-  int *new_var2;
-  int new_var;
-  *((u8 *) (((char *) arg0) + 6)) += 1;
-  new_var = (func_80033634_ovl_01() & 3) + 1;
-  new_var2 = &new_var;
-  *((s16 *) inline_fn((char *) arg0, 0x1F4)) = (s16) (((*((u8 *) (((char *) arg0) + 0x2B4))) * 2) + (*new_var2));
-  func_80089D34_ovl_01(arg0, arg1, arg2);
+void func_8016ED34_overlay_055(u8 *arg0, s32 arg1, s32 arg2) {
+    s32 r;
+    arg0[6] += 1;
+    r = (func_80033634_ovl_01() & 3) + 1;
+    *(s16 *)(arg0 + 0x1F4) = arg0[0x2B4] * 2 + r;
+    func_80089D34_ovl_01(arg0, arg1, arg2, 0x200);
 }
-

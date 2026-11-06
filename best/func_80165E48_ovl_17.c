@@ -1,31 +1,25 @@
-void func_80166138_ovl_17(void);
-extern volatile u32 D_80167F50_ovl_17[];
-void func_80165E48_ovl_17(void *arg0)
-{
-  u8 new_var;
-  u8 *p = (u8 *) arg0;
-  new_var = p[0x2BE];
-  if (p[0x2C0])
-  {
-    goto special;
-  }
-  {
-    u32 i = new_var;
-    if (i || p)
-    {
-      ((void (*)(void)) D_80167F50_ovl_17[i])();
-    }
-    else
-    {
-      ((void (*)(void)) D_80167F50_ovl_17[i])();
-    }
-  }
-  goto done;
-  done:
-  return;
+#ifndef M2C_DEFINES
+#define M2C_DEFINES
+typedef s32 M2C_UNK;
+typedef s8 M2C_UNK8;
+typedef s16 M2C_UNK16;
+typedef s32 M2C_UNK32;
+#define M2C_FIELD(expr, type_ptr, offset) (*(type_ptr)((s8 *)(expr) + (offset)))
+#define M2C_BITWISE(type, expr) ((type)(expr))
+#define M2C_ERROR(desc) (0)
+#define M2C_CARRY 0
+#define M2C_OVERFLOW(a) (0)
+#endif
+/* machine draft (m2c) for gcc-2.7.2-kmc -G0 -mips3 -mgp32 -mfp32 -O2, tried by autopilot */
 
-  special:
-  func_80166138_ovl_17();
 
+extern int (*D_80167F50_overlay_017[])();
+s32 func_80166138_overlay_017();
+
+void func_80165E48_ovl_17(void *arg0) {
+    if (M2C_FIELD(arg0, u8 *, 0x2C0) == 0) {
+        D_80167F50_overlay_017[M2C_FIELD(arg0, u8 *, 0x2BE)]();
+        return;
+    }
+    func_80166138_overlay_017();
 }
-

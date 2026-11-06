@@ -13,7 +13,7 @@ void func_800258D8_ovl_01(void *arg0,void *arg1,void *arg2,void *arg3) {
  if(n!=-1) {
   do { *p++=0; --n; } while(n!=-1);
  }
- func_8008AF30_ovl_01(3,D_8010B684_ovl_01);
+ func_8008AF30_ovl_01(3);
  tmp=func_8008B0CC_ovl_01(0x3A98); D_800C4E40_ovl_01=tmp; D_800C5684_ovl_01=tmp+0x3A98;
  func_8008AF30_ovl_01(1);
  func_80025474_ovl_01(arg0); func_800254F4_ovl_01(arg1); func_80025574_ovl_01(arg2); func_8002584C_ovl_01(arg3);

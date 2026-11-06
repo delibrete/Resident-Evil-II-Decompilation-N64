@@ -1,48 +1,27 @@
-/* identical to func_80166540_ovl_26 (matched), with its names changed by decompdecomp */
-extern void *func_8016730C_ovl_11;
-void func_80166504_ovl_26(void *arg0) {
-  void (**table)(void *) = (void (**)(void *))((u8 *)&func_8016730C_ovl_11 + 0x1C);
-  table[((u8 *)arg0)[0x2C6]]((u8 *)arg0 + 0x2B4);
-}
-void func_801730D0_overlay_054(void *arg0, void *arg1) {
-  u8 *p = arg1;
-  s16 value;
-  if (p[0x13] == 0) {
-    *(s8 *)(p + 4) = 1;
-    value = *(u16 *)(p + 6) + p[0x14];
-    *(u16 *)(p + 6) = value;
-    if (value < 0x100) return;
-    p[0x13] = 1;
-    *(u16 *)(p + 6) = 0x100;
-  }
-}
-void func_80166584_ovl_26(void *arg0, void *arg1) {
-  u8 *p = arg1;
-  s16 value;
-  if (p[0x13] == 0) {
-    *(s8 *)(p + 4) = 1;
-    value = *(u16 *)(p + 6) - p[0x14];
-    *(u16 *)(p + 6) = value;
-    if (value > 0) return;
-    p[0x13] = 1;
-    *(u16 *)(p + 6) = 0;
-    *(s8 *)(p + 4) = 0;
-  }
-}
-extern s32 func_8003420C_ovl_01(void *, s32);
-void func_8016646C_ovl_26(void *arg0) {
-  u8 *p = arg0;
-  u8 *s = *(u8 **)(p + 0x208);
-  u8 state = p[0x2CF];
-  if (state == 1) goto update;
-  if (state != 0) goto done;
-  p[0x2CF] = 1;
-  func_8003420C_ovl_01(s, 0x6F3F3F00);
-  p[0x207] = 0x5A;
-update:
-  *(u16 *)(s + 4) += 8;
-  *(u16 *)(s + 6) += 8;
-  p[0x207]--;
-  if (p[0x207] == 0) p[0x2CF] = 2;
-done:;
+/* machine draft (m2c) for gcc-2.7.2-kmc -G0 -mips3 -mgp32 -mfp32 -O2, tried by autopilot */
+#ifndef M2C_DEFINES
+#define M2C_DEFINES
+typedef s32 M2C_UNK;
+typedef s8 M2C_UNK8;
+typedef s16 M2C_UNK16;
+typedef s32 M2C_UNK32;
+#define M2C_FIELD(expr, type_ptr, offset) (*(type_ptr)((s8 *)(expr) + (offset)))
+#define M2C_BITWISE(type, expr) ((type)(expr))
+#define M2C_ERROR(desc) (0)
+#define M2C_CARRY 0
+#define M2C_OVERFLOW(a) (0)
+#endif
+
+void func_801730D0_overlay_054(s32 arg0, void *arg1) {
+    u16 temp_v0;
+
+    if (M2C_FIELD(arg1, u8 *, 0x13) == 0) {
+        M2C_FIELD(arg1, s8 *, 4) = 1;
+        temp_v0 = M2C_FIELD(arg1, u16 *, 6) + M2C_FIELD(arg1, u8 *, 0x14);
+        M2C_FIELD(arg1, u16 *, 6) = temp_v0;
+        if ((s16) temp_v0 >= 0x100) {
+            M2C_FIELD(arg1, u8 *, 0x13) = 1U;
+            M2C_FIELD(arg1, u16 *, 6) = 0x100U;
+        }
+    }
 }

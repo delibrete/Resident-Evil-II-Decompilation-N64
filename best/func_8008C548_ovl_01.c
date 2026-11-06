@@ -40,7 +40,9 @@ void func_8008C548_ovl_01(void) {
         M2C_FIELD(temp_v0_2, s8 *, 0x181A) = 0;
         return;
     }
-    if ((temp_v0 >= 0) && (var_s1 < 0xAU)) {
+    if (!((temp_v0 >= 0))) return;
+if (!((var_s1 < 0xAU))) return;
+{
         temp_v0_3 = var_s1 * 4;
         var_s3 = temp_v0_3 + &D_800C7650_ovl_01;
         var_s2 = temp_v0_3 - 4;

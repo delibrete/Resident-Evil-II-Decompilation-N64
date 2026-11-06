@@ -19,7 +19,9 @@ extern M2C_UNK D_800F9E60_ovl_01;
 extern M2C_UNK D_800FE228_ovl_01;
 extern M2C_UNK D_8010B25C_ovl_01;
 
-void func_8004BF9C_ovl_01(s32 arg0, s32 arg1, s32 arg2, s32 arg3) {
+void func_8004BF9C_ovl_01(s32 arg0, u16 arg1, s32 arg2, s32 arg3) {
+short __repair_constant = 0x14;
+
     s32 *var_s1;
     s32 temp_a0_2;
     s32 temp_s2;
@@ -42,29 +44,6 @@ void func_8004BF9C_ovl_01(s32 arg0, s32 arg1, s32 arg2, s32 arg3) {
 loop_2:
         var_t1 = 0xE;
         switch (var_v1) {                           /* irregular */
-        case 0xF0:
-            var_a2 += 1;
-            M2C_FIELD(var_a3, s8 *, -3) = (s8) ((((*var_a2 / 18) & 0xFF) * 0xE) - 0x3C);
-block_19:
-            *var_s1 = 0x64808080;
-            M2C_FIELD(var_a3, s32 *, -8) = (s32) ((arg1 & 0xFFFF) | (var_s0 << 0x10));
-            M2C_FIELD(var_a3, s32 *, 4) = 0xE000E;
-            var_s1 += 0x14;
-            M2C_FIELD(var_a3, s8 *, -9) = 0;
-            M2C_FIELD(var_a3, s16 *, -2) = (s16) ((arg2 & 0x30) * 4);
-            M2C_FIELD(var_a3, M2C_UNK **, 0) = &D_8010B25C_ovl_01;
-            M2C_FIELD(var_a3, s8 *, -4) = (s8) (((*var_a2 % 18) & 0xFF) * 0xE);
-            var_a3 += 0x14;
-            if (var_s1 != (&D_800FE228_ovl_01 + 0x1400)) {
-block_20:
-                var_a2 += 1;
-                var_v1 = *var_a2;
-                var_s0 += var_t1;
-                if (var_v1 != 0xF7) {
-                    goto loop_2;
-                }
-            }
-            break;
         case 0x0:
             if (temp_s2 != 0) {
                 var_s0 -= M2C_FIELD(&D_800F9E60_ovl_01, s8 *, 0);
@@ -91,6 +70,29 @@ block_20:
                 }
             }
             goto block_19;
+        case 0xF0:
+            var_a2 += 1;
+            M2C_FIELD(var_a3, s8 *, -3) = (s8) ((((*var_a2 / 18) & 0xFF) * 0xE) - 0x3C);
+block_19:
+            *var_s1 = 0x64808080;
+            M2C_FIELD(var_a3, s32 *, -8) = (s32) ((arg1 & 0xFFFF) | (var_s0 << 0x10));
+            M2C_FIELD(var_a3, s32 *, 4) = 0xE000E;
+            var_s1 += __repair_constant;
+            M2C_FIELD(var_a3, s8 *, -9) = 0;
+            M2C_FIELD(var_a3, s16 *, -2) = (s16) ((arg2 & 0x30) * 4);
+            M2C_FIELD(var_a3, M2C_UNK **, 0) = &D_8010B25C_ovl_01;
+            M2C_FIELD(var_a3, s8 *, -4) = (s8) (((*var_a2 % 18) & 0xFF) * 0xE);
+            var_a3 += __repair_constant;
+            if (var_s1 != (&D_800FE228_ovl_01 + 0x1400)) {
+block_20:
+                var_a2 += 1;
+                var_v1 = *var_a2;
+                var_s0 += var_t1;
+                if (var_v1 != 0xF7) {
+                    goto loop_2;
+                }
+            }
+            break;
         }
     }
     if (M2C_FIELD(&D_800FE228_ovl_01, s32 **, 0xC800) != var_s1) {

@@ -1,24 +1,18 @@
-/* machine draft (m2c) for gcc-2.7.2-kmc -G0 -mips3 -mgp32 -mfp32 -O2, tried by autopilot */
-#ifndef M2C_DEFINES
-#define M2C_DEFINES
-typedef s32 M2C_UNK;
-typedef s8 M2C_UNK8;
-typedef s16 M2C_UNK16;
-typedef s32 M2C_UNK32;
-#define M2C_FIELD(expr, type_ptr, offset) (*(type_ptr)((s8 *)(expr) + (offset)))
-#define M2C_BITWISE(type, expr) ((type)(expr))
-#define M2C_ERROR(desc) (0)
-#define M2C_CARRY 0
-#define M2C_OVERFLOW(a) (0)
-#endif
-
-void func_8004790C_ovl_01(void *arg0, s16 arg1, s16 arg2, s16 arg3, s32 arg4, s32 arg5, s32 arg6, s32 arg7, s32 arg8) {
-    M2C_FIELD(arg0, s16 *, 4) = arg1;
-    M2C_FIELD(arg0, s16 *, 6) = arg2;
-    M2C_FIELD(arg0, s16 *, 0xC) = arg3;
-    M2C_FIELD(arg0, s16 *, 0xE) = (s16) arg4;
-    M2C_FIELD(arg0, s16 *, 0x14) = (s16) arg5;
-    M2C_FIELD(arg0, s16 *, 0x16) = (s16) arg6;
-    M2C_FIELD(arg0, s16 *, 0x1C) = (s16) arg7;
-    M2C_FIELD(arg0, s16 *, 0x1E) = (s16) arg8;
+void func_8004790C_ovl_01(u8 *p, s32 a1, s32 a2, s32 a3, s32 s4, s32 s5, s32 s6, s32 s7, s32 s8) {
+    *(s16 *)(p + 0x4) = a1;
+    *(s16 *)(p + 0x6) = a2;
+    *(s16 *)(p + 0xC) = a3;
+    *(s16 *)(p + 0xE) = s4;
+    *(s16 *)(p + 0x14) = s5;
+    *(s16 *)(p + 0x16) = s6;
+    *(s16 *)(p + 0x1C) = s7;
+    *(s16 *)(p + 0x1E) = s8;
+    *(u8 *)(p + 0x8) = a1;
+    *(u8 *)(p + 0x9) = a2;
+    *(u8 *)(p + 0x14) = a3;
+    *(u8 *)(p + 0x15) = s4;
+    *(u8 *)(p + 0x20) = s5;
+    *(u8 *)(p + 0x21) = s6;
+    *(u8 *)(p + 0x2C) = s7;
+    *(u8 *)(p + 0x2D) = s8;
 }

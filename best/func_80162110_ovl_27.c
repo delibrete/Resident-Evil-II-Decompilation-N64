@@ -7,14 +7,14 @@ typedef struct S_func_80162110_ovl_27_arg0 {
     u8 unk_2C5;
 } S_func_80162110_ovl_27_arg0;
 
-extern void (* volatile D_80163D1C_ovl_27[])(void);
+extern void (* volatile func_80163D1C_ovl_30[])(void);
 extern u8 D_800C7650_ovl_01[];
 extern u8 D_800E10D0_ovl_01[];
 void func_801636DC_ovl_27(void *, s32);
 
 void func_80162110_ovl_27(S_func_80162110_ovl_27_arg0 *arg0) {
     u8 *p, *q;
-    D_80163D1C_ovl_27[arg0->unk_06]();
+    func_80163D1C_ovl_30[arg0->unk_06]();
     p = arg0->unk_250;
     if (p[0x2B4]) {
         union { u64 q; struct { u32 lo; u32 hi; } w; } b;

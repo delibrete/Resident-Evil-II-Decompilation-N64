@@ -12,8 +12,8 @@ typedef s32 M2C_UNK32;
 #define M2C_OVERFLOW(a) (0)
 #endif
 
-M2C_UNK func_8017BE48_ovl_02(M2C_UNK);              /* extern */
+M2C_UNK func_8017BE48_overlay_002(M2C_UNK);         /* extern */
 
 void func_8017BB4C_ovl_02(void) {
-    func_8017BE48_ovl_02(1);
+    func_8017BE48_overlay_002(1);
 }

@@ -1,6 +1,4 @@
-/* identical to osSetEventMesg in Resident Evil II (matched), with its names changed by decompdecomp */
-/* adapted from similar verified C in func_8000CC90 in V-RALLY-PAL (matched), with its names changed by decompdecomp */
-
+/* identical to osSetEventMesg in V-RALLY-PAL (local match library) (matched), with its names changed by decompdecomp */
 s32 func_800072E0();
 s32 func_80007300();
 extern char D_80010136[];

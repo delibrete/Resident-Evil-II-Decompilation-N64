@@ -83,8 +83,8 @@ s32 __repair_phase_v;
             u8 *base = arg0->unk234;
             arg0->unk1F2 = 0;
             arg0->unk206 = 1;
-            st = func_80033634_ovl_01();
-            func_800377B0_ovl_01(0x31F40, (st & 0xFF) << 4, (s32)(base + 0xBF8), (s32 *)sp10);
+            __repair_phase_v = func_80033634_ovl_01();
+            func_800377B0_ovl_01(0x31F40, (__repair_phase_v & 0xFF) << 4, (s32)(base + 0xBF8), (s32 *)sp10);
             arg0->unk1EA = 0xF;
         }
         if (arg0->unk2D5 == 0) {

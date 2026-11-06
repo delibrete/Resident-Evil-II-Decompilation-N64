@@ -16,8 +16,8 @@ extern M2C_UNK D_800C7650_ovl_01;
 extern M2C_UNK D_800E10D0_ovl_01;
 
 M2C_UNK *func_80167848_ovl_17(void *arg0) {
-    M2C_UNK *var_a2;
     s32 temp_a1;
+    M2C_UNK *var_a2;
 
     var_a2 = &D_800E10D0_ovl_01;
     M2C_FIELD(arg0, s8 *, 0x2D3) = 0;

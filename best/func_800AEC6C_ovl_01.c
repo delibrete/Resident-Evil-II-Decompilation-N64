@@ -1,4 +1,3 @@
-/* machine draft (m2c) for gcc-2.7.2-kmc -G0 -mips3 -mgp32 -mfp32 -O2, tried by autopilot */
 #ifndef M2C_DEFINES
 #define M2C_DEFINES
 typedef s32 M2C_UNK;
@@ -11,50 +10,55 @@ typedef s32 M2C_UNK32;
 #define M2C_CARRY 0
 #define M2C_OVERFLOW(a) (0)
 #endif
+/* machine draft (m2c) for gcc-2.7.2-kmc -G0 -mips3 -mgp32 -mfp32 -O2, tried by autopilot */
 
 extern u8 D_801479F8;
 extern s8 D_801587D8;
 extern s8 D_801587D9;
 extern s16 D_801587DA;
 extern s8 D_801587DC;
-extern M2C_UNK D_801587E0;
+extern char D_801587E0[];
 extern s8 D_80158860;
 extern s8 D_801588E0;
 extern s8 D_801589E0;
 
 void func_800AEC6C_ovl_01(void) {
-    M2C_UNK *var_v1;
+int __repair_literal;
+
+    char *var_v1;
     s8 *var_v0;
     s8 temp_v0;
-    u32 temp_a0;
+    
     u32 var_a2;
     u8 var_a0;
-    void *temp_v1;
+    union { void * pointer; u32 value; } __repair_phase_storage;
 
     var_a0 = 0;
     if (D_801479F8 != 0) {
         do {
-            temp_v1 = (var_a0 * 4) + &D_80158860;
+            __repair_phase_storage.pointer = (var_a0 * 4) + &D_80158860;
             temp_v0 = var_a0 - 1;
             var_a0 += 1;
-            M2C_FIELD(temp_v1, s8 *, 0) = temp_v0;
-            M2C_FIELD(temp_v1, u8 *, 1) = var_a0;
-            M2C_FIELD(temp_v1, s16 *, 2) = 1;
+            M2C_FIELD(__repair_phase_storage.pointer, s8 *, 0) = temp_v0;
+            M2C_FIELD(__repair_phase_storage.pointer, u8 *, 1) = var_a0;
+            M2C_FIELD(__repair_phase_storage.pointer, s16 *, 2) = 1;
         } while (var_a0 < (u8) D_801479F8);
     }
     var_a2 = 0;
     D_80158860 = 0xFF;
-    M2C_FIELD((((D_801479F8 - 1) * 4) + &D_80158860), s8 *, 1) = 0xFF;
+__repair_literal = 4;
+
+    M2C_FIELD((((D_801479F8 - 1) * __repair_literal) + &D_80158860), u8 *, 1) = 0xFF;
     D_801589E0 = 0;
-    temp_a0 = D_801479F8 & 0xFF;
+    __repair_phase_storage.value =  D_801479F8 & 0xFF;
     D_801587D9 = D_801479F8 - 1;
-    if (temp_a0 != 0) {
+    if (__repair_phase_storage.value != 0) {
         var_v1 = &D_801587E0;
         do {
             M2C_FIELD(var_v1, s16 *, 2) = 0;
             var_a2 += 1;
             var_v1 += 4;
-        } while (var_a2 < temp_a0);
+        } while (var_a2 < __repair_phase_storage.value);
         var_a2 = 0;
     }
     var_v0 = &D_801588E0;

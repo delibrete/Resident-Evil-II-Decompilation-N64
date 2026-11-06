@@ -20,6 +20,7 @@ s32 func_80083B2C_ovl_01(s32 arg0) {
     u8 *var_s0;
     u8 temp_v1;
     u8 var_a0_2;
+u8 __repair_result_var_a0_2;
     void *var_a0;
     void *var_s1;
 
@@ -41,8 +42,9 @@ block_6:
             if (func_80083D5C_ovl_01(var_a0, var_s1) == 0) {
                 goto block_9;
             }
-            var_a0_2 = M2C_FIELD(var_s1, u8 *, 3);
-            goto block_14;
+            __repair_result_var_a0_2 = M2C_FIELD(var_s1, u8 *, 3);
+            {
+    func_80083C44_ovl_01((s16) var_a0_2);return 1;}
         }
 block_9:
         var_s0 += 0x14;

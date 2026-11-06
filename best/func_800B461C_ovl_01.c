@@ -28,7 +28,7 @@ extern M2C_UNK D_8015AFC8;
 void func_800B461C_ovl_01(s32 arg0, s32 arg1, s32 arg2) {
     func_800A5618_ovl_01();
     if (D_80143F74 == NULL) {
-        func_80006D30(&D_8015AFB0, &D_8015AFC8, 1);
+        do { func_80006D30(&D_8015AFB0, &D_8015AFC8, 1); } while (0);
         D_8015AF60 = 0;
         D_80143F74 = &D_800B44E0_ovl_01;
     }

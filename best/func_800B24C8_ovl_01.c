@@ -12,19 +12,19 @@ typedef s32 M2C_UNK32;
 #define M2C_OVERFLOW(a) (0)
 #endif
 
-M2C_UNK func_800A5618_ovl_01();                     /* extern */
-M2C_UNK func_800A5660_ovl_01();                     /* extern */
-s32 func_800A7A2C_ovl_01(s32, s32);                 /* extern */
-extern u8 D_801362B0_ovl_01;
+M2C_UNK func_800A5618_overlay_001();                /* extern */
+M2C_UNK func_800A5660_overlay_001();                /* extern */
+s32 func_800A7A2C_overlay_001(s32, s32);            /* extern */
+extern u8 D_801362B0_overlay_001;
 
-s32 func_800B24C8_ovl_01(s32 arg0, s32 arg1) {
+s32 func_800B24C8_ovl_01(s32 arg0, u8 arg1) {
     s32 var_s1;
 
     var_s1 = -1;
-    if (D_801362B0_ovl_01 != 0) {
-        func_800A5618_ovl_01();
-        var_s1 = func_800A7A2C_ovl_01(arg0, arg1 & 0xFF);
-        func_800A5660_ovl_01();
+    if (D_801362B0_overlay_001 != 0) {
+        func_800A5618_overlay_001();
+        var_s1 = func_800A7A2C_overlay_001(arg0, arg1 & 0xFF);
+        func_800A5660_overlay_001();
     }
     return var_s1;
 }

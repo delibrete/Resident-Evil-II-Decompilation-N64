@@ -1,4 +1,3 @@
-static __inline__ int __repair_inline(s32 a, s32 b) { return a < b; }
 /* machine draft (m2c) for gcc-2.7.2-kmc -G0 -mips3 -mgp32 -mfp32 -O2 -mcpu=r4600, tried by autopilot */
 #ifndef M2C_DEFINES
 #define M2C_DEFINES
@@ -34,7 +33,7 @@ void func_801624FC_overlay_016(void *arg0) {
     switch (temp_v1) {                              /* irregular */
     case 0:
         var_a1 = 0x2328 - (M2C_FIELD(arg0, s16 *, 0x25E) - M2C_FIELD(temp_s2, s32 *, 0x50));
-        if (__repair_inline(var_a1, 0)) {
+        if (var_a1 < 0) {
             var_a1 = 0;
         }
         M2C_FIELD(temp_s0, u16 *, 4) = (u16) ((M2C_FIELD(arg0, u16 *, 0x2B8) * var_a1) / 9000);

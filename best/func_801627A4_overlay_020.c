@@ -4,7 +4,7 @@ void func_801627A4_overlay_020(void *arg0) {
     u32 offset = 0x18000;
     u64 b = (u64)(u32)D_800C7650_ovl_01;
     u8 *p = (u8 *)(u32)(b & 0xFFFFFFFF) + offset;
-    func_80032EA4_ovl_01(arg0, *(s32 *)(p + 0x1AA8), *(s32 *)(p + 0x1AB0), 0x400);
+    do { func_80032EA4_ovl_01(arg0, *(s32 *)(p + 0x1AA8), *(s32 *)(p + 0x1AB0), 0x400); } while (0);
     func_80032EA4_ovl_01(arg0, *(s32 *)(p + 0x1AA8), *(s32 *)(p + 0x1AB0), 0x320);
     *(s32 *)((u8 *)arg0 + 4) = 0x01010000;
 }

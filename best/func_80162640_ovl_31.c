@@ -26,6 +26,7 @@ void func_80162640_ovl_31(O *p, void *a, void *b)
       break;
       new_var = 5;
 
+    break;
     case 4:
       p->state = new_var;
       break;
@@ -43,7 +44,6 @@ void func_80162640_ovl_31(O *p, void *a, void *b)
     else
     {
       p->state = 7;
-      break;
     }
 
     case 7:

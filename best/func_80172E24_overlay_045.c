@@ -1,0 +1,7 @@
+/* identical to func_80166294_ovl_17 (matched), with its names changed by decompdecomp */
+s32 func_80033634_ovl_01(void); s32 jtbl_801729D8_overlay_043(void*,s32,s32); s32 func_80173B4C_overlay_045(void*,s32,s32);
+void func_80172E24_overlay_045(void *arg0,s32 arg1,s32 arg2){
+char *__repair_addr;
+s32 temp_s0; s32 temp_s0_2; s32 var_s3; u32 var_s1; if (*(u8*)((u8*)arg0+6)==0) { if (*(u8*)((u8*)arg0+0x2c0)==0) { var_s3=4; if(*(s16*)((u8*)arg0+0x1a8)!=0)var_s3=5; do { func_80173B4C_overlay_045(arg0,0,var_s3); } while (0); var_s1=0; do { temp_s0=(func_80033634_ovl_01()&0xf)+3;
+__repair_addr = (char *)(*(u32*)((u8*)arg0+0x234)+(temp_s0*0x178));
+ if ((*(u32*)(__repair_addr)&0x4b)==1) { temp_s0_2=temp_s0&0xff; func_80173B4C_overlay_045(arg0,temp_s0_2,var_s3&0xff); func_80173B4C_overlay_045(arg0,temp_s0_2,5); }/*__repair_loop_weight*/do {do {do { var_s1++;} while (0);} while (0);} while (0); } while(var_s1<3U); } } jtbl_801729D8_overlay_043(arg0,arg1,arg2); }

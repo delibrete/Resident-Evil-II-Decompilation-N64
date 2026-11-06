@@ -13,12 +13,10 @@ u32 __repair_phase_temp_a1; u32 temp_hi; u32 temp_v0; u32 temp_v1_2; u8 temp_v1;
   {u8*g=D_800C7650_ovl_01+0x18000;s32*q=*(s32**)(g+0x1CB4);func_80166684_ovl_33(arg0,q[20],q[21],8);}
   func_80089D34_ovl_01(arg0,arg1,arg2,0x40);temp_v0_2=arg0->unk_1F6-1;arg0->unk_1F6=temp_v0_2;
   if((s16)temp_v0_2==-1){
-u32 __repair_branch_temp_v0_0;
-
    temp_s0=func_80033634_ovl_01();temp_v0_3=func_80033634_ovl_01();
-   __repair_phase_temp_a1=(u32)temp_s0&0xFF;__repair_branch_temp_v0_0=(u32)temp_v0_3&0xFF;
-   arg0->unk_1E8=(s32)(((((__repair_phase_temp_a1%3)+9)<<24)+((__repair_branch_temp_v0_0%90)<<16)+0x3F00));
-   arg0->unk_1F4=(s16)((func_80033634_ovl_01(((__repair_branch_temp_v0_0/90)*3),__repair_branch_temp_v0_0>>1)&0xF)+0x3C);
+   __repair_phase_temp_a1=(u32)temp_s0&0xFF;temp_v0=(u32)temp_v0_3&0xFF;
+   arg0->unk_1E8=(s32)(((((__repair_phase_temp_a1%3)+9)<<24)+((temp_v0%90)<<16)+0x3F00));
+   arg0->unk_1F4=(s16)((func_80033634_ovl_01(((temp_v0/90)*3),temp_v0>>1)&0xF)+0x3C);
   }break;
  default:break;
  }

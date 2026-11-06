@@ -12,13 +12,13 @@ typedef s32 M2C_UNK32;
 #define M2C_OVERFLOW(a) (0)
 #endif
 
-M2C_UNK func_80079290_ovl_01(s16);                  /* extern */
-M2C_UNK func_800A1EE0_ovl_01(s32);                  /* extern */
-M2C_UNK func_800A1F24_ovl_01(s32);                  /* extern */
-M2C_UNK func_800A1F68_ovl_01(s32);                  /* extern */
-s32 func_800A2148_ovl_01(s32);                      /* extern */
-s32 func_800A8B68_ovl_01(u16, u16, s32, M2C_UNK);   /* extern */
-extern M2C_UNK D_8011A31C_ovl_01;
+M2C_UNK func_80079290_overlay_001(s16);             /* extern */
+M2C_UNK func_800A1EE0_overlay_001(s32);             /* extern */
+M2C_UNK func_800A1F24_overlay_001(s32);             /* extern */
+M2C_UNK func_800A1F68_overlay_001(s32);             /* extern */
+s32 func_800A2148_overlay_001(s32);                 /* extern */
+s32 func_800A8B68_overlay_001(u16, u16, s32, M2C_UNK); /* extern */
+extern M2C_UNK D_8011A31C_overlay_001;
 
 void func_80078C78_ovl_01(s16 arg0, u8 arg1, s16 arg3) {
     u8 sp10;
@@ -43,7 +43,7 @@ void func_80078C78_ovl_01(s16 arg0, u8 arg1, s16 arg3) {
     void *var_v0_2;
 
     temp_s0 = arg0 * 0x3C;
-    temp_v1 = temp_s0 + &D_8011A31C_ovl_01;
+    temp_v1 = temp_s0 + &D_8011A31C_overlay_001;
     temp_v0 = M2C_FIELD(temp_v1, s8 *, 0x28);
     sp10 = arg1;
     if (temp_v0 != 0) {
@@ -53,51 +53,51 @@ void func_80078C78_ovl_01(s16 arg0, u8 arg1, s16 arg3) {
             var_s3 = var_s1;
             var_s5 = var_s1;
 loop_3:
-            temp_s0_2 = var_s1 + &D_8011A31C_ovl_01;
+            temp_s0_2 = (char *)(var_s1); temp_s0_2 += (s32)(&D_8011A31C_overlay_001);
             if (M2C_FIELD(temp_s0_2, s32 *, 0x14) != 0) {
                 temp_a0 = M2C_FIELD(temp_s0_2, s32 *, 4);
-                var_v0 = var_s5 + &D_8011A31C_ovl_01;
+                var_v0 = var_s5 + &D_8011A31C_overlay_001;
                 if (temp_a0 != -1) {
-                    var_v0 = var_s5 + &D_8011A31C_ovl_01;
-                    if (func_800A2148_ovl_01(temp_a0) & 0xFF) {
-                        func_800A1EE0_ovl_01(M2C_FIELD(temp_s0_2, s32 *, 4));
-                        var_v0 = var_s5 + &D_8011A31C_ovl_01;
+                    var_v0 = var_s5 + &D_8011A31C_overlay_001;
+                    if (func_800A2148_overlay_001(temp_a0) & 0xFF) {
+                        func_800A1EE0_overlay_001(M2C_FIELD(temp_s0_2, s32 *, 4));
+                        var_v0 = var_s5 + &D_8011A31C_overlay_001;
                     }
                 }
-                M2C_FIELD(temp_s0_2, s32 *, 4) = func_800A8B68_ovl_01(M2C_FIELD(temp_v1, u16 *, 0x2A), M2C_FIELD(var_v0, u16 *, 0x2C), M2C_FIELD(temp_s0_2, s32 *, 0x14), 0);
+                M2C_FIELD(temp_s0_2, s32 *, 4) = func_800A8B68_overlay_001(M2C_FIELD(temp_v1, u16 *, 0x2A), M2C_FIELD(var_v0, u16 *, 0x2C), M2C_FIELD(temp_s0_2, s32 *, 0x14), 0);
                 M2C_FIELD(temp_v1, s8 *, 0x28) = -2;
-                if (arg3 != 0) {
-                    M2C_FIELD((var_s3 + &D_8011A31C_ovl_01), s8 *, 0x24) = 0;
+                if ((s16) M2C_ERROR(/* Read from unset register $a3 */) != 0) {
+                    M2C_FIELD((var_s3 + &D_8011A31C_overlay_001), s8 *, 0x24) = 0;
                 } else {
-                    M2C_FIELD((var_s3 + &D_8011A31C_ovl_01), s8 *, 0x24) = 0x7F;
+                    M2C_FIELD((var_s3 + &D_8011A31C_overlay_001), s8 *, 0x24) = 0x7F;
                 }
                 var_s3 += 1;
-                var_s1 += 4;
-                var_s2 += 1;
+                var_s1 += 4;/*__repair_loop_weight*/do {
+                var_s2 += 1;} while (0);
                 var_s5 += 2;
                 if (var_s2 < 4) {
                     goto loop_3;
                 }
             }
-            func_80079290_ovl_01(arg0);
+            func_80079290_overlay_001(arg0);
         }
         var_s2_2 = 0;
         if (sp10 == 0) {
             temp_v1_2 = arg0 * 0x3C;
             var_s1_2 = temp_v1_2;
 loop_14:
-            temp_s0_3 = var_s1_2 + &D_8011A31C_ovl_01;
+            temp_s0_3 = var_s1_2 + &D_8011A31C_overlay_001;
             if (M2C_FIELD(temp_s0_3, s32 *, 0x14) != 0) {
                 var_s2_2 += 1;
-                if ((M2C_FIELD((temp_v1_2 + &D_8011A31C_ovl_01), s8 *, 0x28) == -2) && (func_800A2148_ovl_01(M2C_FIELD(temp_s0_3, s32 *, 4)) & 0xFF)) {
-                    func_800A1F24_ovl_01(M2C_FIELD(temp_s0_3, s32 *, 4));
+                if ((M2C_FIELD((temp_v1_2 + &D_8011A31C_overlay_001), s8 *, 0x28) == -2) && (func_800A2148_overlay_001(M2C_FIELD(temp_s0_3, s32 *, 4)) & 0xFF)) {
+                    func_800A1F24_overlay_001(M2C_FIELD(temp_s0_3, s32 *, 4));
                 }
                 var_s1_2 += 4;
                 if (var_s2_2 < 4) {
                     goto loop_14;
                 }
             }
-            var_v0_2 = (arg0 * 0x3C) + &D_8011A31C_ovl_01;
+            var_v0_2 = (arg0 * 0x3C) + &D_8011A31C_overlay_001;
             var_v1 = -1;
             goto block_29;
         }
@@ -105,11 +105,11 @@ loop_14:
             temp_v1_3 = arg0 * 0x3C;
             var_s1_3 = temp_v1_3;
 loop_22:
-            temp_s0_4 = var_s1_3 + &D_8011A31C_ovl_01;
+            temp_s0_4 = var_s1_3 + &D_8011A31C_overlay_001;
             if (M2C_FIELD(temp_s0_4, s32 *, 0x14) != 0) {
                 var_s2_2 += 1;
-                if ((M2C_FIELD((temp_v1_3 + &D_8011A31C_ovl_01), s8 *, 0x28) == -1) && (func_800A2148_ovl_01(M2C_FIELD(temp_s0_4, s32 *, 4)) & 0xFF)) {
-                    func_800A1F68_ovl_01(M2C_FIELD(temp_s0_4, s32 *, 4));
+                if ((M2C_FIELD((temp_v1_3 + &D_8011A31C_overlay_001), s8 *, 0x28) == -1) && (func_800A2148_overlay_001(M2C_FIELD(temp_s0_4, s32 *, 4)) & 0xFF)) {
+                    func_800A1F68_overlay_001(M2C_FIELD(temp_s0_4, s32 *, 4));
                 }
                 var_s1_3 += 4;
                 if (var_s2_2 >= 4) {
@@ -118,7 +118,7 @@ loop_22:
                     goto loop_22;
                 }
             }
-            var_v0_2 = (arg0 * 0x3C) + &D_8011A31C_ovl_01;
+            var_v0_2 = (arg0 * 0x3C) + &D_8011A31C_overlay_001;
             var_v1 = -2;
 block_29:
             M2C_FIELD(var_v0_2, s8 *, 0x28) = var_v1;

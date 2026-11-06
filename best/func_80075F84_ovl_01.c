@@ -15,6 +15,8 @@ typedef s32 M2C_UNK32;
 extern M2C_UNK D_8011A31C_ovl_01;
 
 void func_80075F84_ovl_01(void) {
+char *__repair_addr;
+
     M2C_UNK *var_a2;
     s32 temp_v0;
     s32 var_a1;
@@ -30,17 +32,17 @@ void func_80075F84_ovl_01(void) {
         M2C_FIELD(var_a2, s8 *, 0x28) = 0;
         M2C_FIELD(var_a2, s16 *, 2) = 0;
         M2C_FIELD(var_a2, s16 *, 0) = 0;
-loop_2:
-        temp_v1 = var_a1 + &D_8011A31C_ovl_01;
+do {
+        temp_v1 = (char *)(var_a3); temp_v1 += (s32)(&D_8011A31C_ovl_01);
         temp_v0 = var_a0 + var_a3;
         var_a0 += 1;
         M2C_FIELD(temp_v1, s32 *, 4) = -1;
         M2C_FIELD(temp_v1, s32 *, 0x14) = 0;
-        M2C_FIELD((temp_v0 + &D_8011A31C_ovl_01), s8 *, 0x24) = 0;
+__repair_addr = (char *)((temp_v0 + &D_8011A31C_ovl_01));
+
+        M2C_FIELD(__repair_addr, s8 *, 0x24) = 0;
         var_a1 += 4;
-        if (var_a0 < 4U) {
-            goto loop_2;
-        }
+        } while (var_a0 < 4U);
         var_a2 += 0x3C;
         var_a3 += 0x3C;
     } while ((u32) var_a2 < (u32) (&D_8011A31C_ovl_01 + 0x384));

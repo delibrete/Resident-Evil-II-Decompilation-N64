@@ -43,6 +43,6 @@ void func_8004C97C_ovl_01(void) {
         var_a1 -= 1;
         var_v1 += 0x10;
     } while (var_a1 != 0);
-    func_8004C940_overlay_001(0x03000000, var_a1, 0x64808080);
+    func_8004C940_overlay_001(0x03000000);
     func_8004CA04_overlay_001();
 }

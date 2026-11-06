@@ -30,7 +30,7 @@ void func_80083C44_ovl_01(s32 arg0) {
     M2C_FIELD(&D_800C7650_ovl_01, s32 *, 0x18294) = func_80083D1C_ovl_01(arg0);
     if (M2C_FIELD(&D_800C7650_ovl_01, void **, 0x1827C) != NULL) {
         temp_a1 = M2C_FIELD(M2C_FIELD(&D_800C7650_ovl_01, void **, 0x1827C), s32 *, 0x24) + (M2C_FIELD(&D_800C7650_ovl_01, s16 *, 0x215FC) << 5);
-        func_800828DC_ovl_01(temp_a1 + 4, temp_a1 + 0x10);
+        do { func_800828DC_ovl_01(temp_a1 + 4, temp_a1 + 0x10); } while (0);
         temp_a1_2 = M2C_FIELD(M2C_FIELD(&D_800C7650_ovl_01, void **, 0x1827C), s32 *, 0x24) + (M2C_FIELD(&D_800C7650_ovl_01, s16 *, 0x215FC) << 5);
         func_800758A8_ovl_01(temp_a1_2 + 4, temp_a1_2 + 0x10);
         func_80042910_ovl_01((u16) M2C_FIELD(((M2C_FIELD(&D_800C7650_ovl_01, s16 *, 0x215FC) << 5) + M2C_FIELD(M2C_FIELD(&D_800C7650_ovl_01, void **, 0x1827C), s32 *, 0x24)), u16 *, 2) >> 7);

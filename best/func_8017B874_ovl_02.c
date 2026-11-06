@@ -15,17 +15,19 @@ u8 func_8017B874_ovl_02(void)
   unsigned int new_var;
   u8 *p;
   int new_var2;
+  int new_var4;
   u8 *new_var3;
   new_var = D_80186C14_ovl_02->unk0;
   if (D_80186C14_ovl_02->unk8 >= (new_var2 = new_var + 0x800))
   {
+    new_var4 = new_var2;
     do
     {
       func_8017B48C_ovl_02(D_80186C14_ovl_02->unk4, D_80186C14_ovl_02, 0x800);
       D_80186C14_ovl_02->unk8 -= 0x800;
       D_80186C14_ovl_02->unk18 -= 0x800;
     }
-    while (D_80186C14_ovl_02->unk8 >= new_var2);
+    while (D_80186C14_ovl_02->unk8 >= new_var4);
   }
   new_var3 = (u8 *) D_80186C14_ovl_02->unk8;
   p = new_var3;

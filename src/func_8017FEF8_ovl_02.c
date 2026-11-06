@@ -1,4 +1,36 @@
-extern s32 func_8017BB30_ovl_02(s32),func_8017BB68_ovl_02(s8),func_8017BE48_ovl_02(s8),func_8017FA10_ovl_02(s32),func_8017FC70_ovl_02(s32);extern s8 D_80184E4C_ovl_02[],D_80184E8C_ovl_02[];extern u8 *D_80186C14_ovl_02;
-s32 func_8017F96C_ovl_02(void){s32 a=func_8017BB30_ovl_02(5);s32 v;s8 c;s8 *p;if(a<31)p=D_80184E4C_ovl_02;else{a=func_8017BB30_ovl_02(10)-0x3e0;p=D_80184E8C_ovl_02;}p+=a*2;c=p[0];func_8017BB68_ovl_02(p[1]);if(c==0)return 0;v=func_8017BE48_ovl_02(c);if(((v>>(c-1))&1)==0)v=(v+1)-(1<<c);return v;}
-void func_8017ED64_ovl_02(s32 i){u8 *p=D_80186C14_ovl_02+(i<<7)+0x438;*(u32*)(p+0)=0;*(u32*)(p+4)=0;*(u32*)(p+8)=0;*(u32*)(p+12)=0;*(u32*)(p+16)=0;*(u32*)(p+20)=0;*(u32*)(p+24)=0;*(u32*)(p+28)=0;*(u32*)(p+32)=0;*(u32*)(p+36)=0;*(u32*)(p+40)=0;*(u32*)(p+44)=0;*(u32*)(p+48)=0;*(u32*)(p+52)=0;*(u32*)(p+56)=0;*(u32*)(p+60)=0;*(u32*)(p+64)=0;*(u32*)(p+68)=0;*(u32*)(p+72)=0;*(u32*)(p+76)=0;*(u32*)(p+80)=0;*(u32*)(p+84)=0;*(u32*)(p+88)=0;*(u32*)(p+92)=0;*(u32*)(p+96)=0;*(u32*)(p+100)=0;*(u32*)(p+104)=0;*(u32*)(p+108)=0;*(u32*)(p+112)=0;*(u32*)(p+116)=0;*(u32*)(p+120)=0;*(u32*)(p+124)=0;}
-void func_8017FEF8_ovl_02(s32 a){s32 p=a;func_8017FA10_ovl_02(p);func_8017FA10_ovl_02(p+16);func_8017FA10_ovl_02(p+32);func_8017FA10_ovl_02(p+48);func_8017FA10_ovl_02(p+64);func_8017FA10_ovl_02(p+80);func_8017FA10_ovl_02(p+96);func_8017FA10_ovl_02(p+112);func_8017FC70_ovl_02(p);func_8017FC70_ovl_02(p+2);func_8017FC70_ovl_02(p+4);func_8017FC70_ovl_02(p+6);func_8017FC70_ovl_02(p+8);func_8017FC70_ovl_02(p+10);func_8017FC70_ovl_02(p+12);func_8017FC70_ovl_02(p+14);}
+/* identical to func_80177E28_overlay_002 in Resident Evil II (local match library) (matched), with its names changed by decompdecomp */
+/* machine draft (m2c) for gcc-2.7.2-kmc -G0 -mips3 -mgp32 -mfp32 -O2, tried by autopilot */
+#ifndef M2C_DEFINES
+#define M2C_DEFINES
+typedef s32 M2C_UNK;
+typedef s8 M2C_UNK8;
+typedef s16 M2C_UNK16;
+typedef s32 M2C_UNK32;
+#define M2C_FIELD(expr, type_ptr, offset) (*(type_ptr)((s8 *)(expr) + (offset)))
+#define M2C_BITWISE(type, expr) ((type)(expr))
+#define M2C_ERROR(desc) (0)
+#define M2C_CARRY 0
+#define M2C_OVERFLOW(a) (0)
+#endif
+
+s32 func_8017FA10_ovl_02();
+s32 func_8017FC70_ovl_02();
+
+void func_8017FEF8_ovl_02(s32 arg0) {
+    func_8017FA10_ovl_02();
+    func_8017FA10_ovl_02(arg0 + 0x10);
+    func_8017FA10_ovl_02(arg0 + 0x20);
+    func_8017FA10_ovl_02(arg0 + 0x30);
+    func_8017FA10_ovl_02(arg0 + 0x40);
+    func_8017FA10_ovl_02(arg0 + 0x50);
+    func_8017FA10_ovl_02(arg0 + 0x60);
+    func_8017FA10_ovl_02(arg0 + 0x70);
+    func_8017FC70_ovl_02(arg0);
+    func_8017FC70_ovl_02(arg0 + 2);
+    func_8017FC70_ovl_02(arg0 + 4);
+    func_8017FC70_ovl_02(arg0 + 6);
+    func_8017FC70_ovl_02(arg0 + 8);
+    func_8017FC70_ovl_02(arg0 + 0xA);
+    func_8017FC70_ovl_02(arg0 + 0xC);
+    func_8017FC70_ovl_02(arg0 + 0xE);
+}

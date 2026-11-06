@@ -18,7 +18,7 @@ extern M2C_UNK D_80129FE0_ovl_01;
 void func_80088318_ovl_01(s32 arg0) {
     void *temp_a0;
 
-    temp_a0 = (arg0 * 8) + &D_80129FE0_ovl_01;
+    temp_a0 = (char *)((arg0 * 8)); temp_a0 += (s32)(&D_80129FE0_ovl_01);
     M2C_FIELD(temp_a0, s32 *, 0) = 4;
     M2C_FIELD(temp_a0, s32 *, 4) = arg0;
     func_800879D0_ovl_01(temp_a0);

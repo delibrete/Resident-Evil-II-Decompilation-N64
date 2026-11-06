@@ -51,7 +51,7 @@ void func_800352F4_ovl_01(u8 *arg0, u8 *arg1, s32 arg2, s32 arg3, s32 arg4, s32 
     func_80041484_ovl_01(SL(0x5A), (s32 *)stk);
     R(0x20) = (s32)((u16)arg2);
     S(0x24) = 0;
-    func_80042854_ovl_01((s32 *)stk, (s32 *)(stk + 0x20), (s32 *)(stk + 0x28));
+    do { func_80042854_ovl_01((s32 *)stk, (s32 *)(stk + 0x20), (s32 *)(stk + 0x28)); } while (0);
     s1 = (s16)(arg7 - arg2);
     v0 = R(0x28) + L(0x4C);
     R(0x28) = v0;
@@ -66,7 +66,7 @@ void func_800352F4_ovl_01(u8 *arg0, u8 *arg1, s32 arg2, s32 arg3, s32 arg4, s32 
     R(0x30) = v1;
     R(0x40) = v1 + ((s1 * S(0xE)) >> 12);
     func_8004251C_ovl_01((s32 *)D_800E10E4_ovl_01, s0 + 8, (s32 *)(stk + 0x58));
-    func_8004251C_ovl_01((s32 *)(stk + 0x58), s0 + 0xBC8, (s32 *)(s0 + 0xBF8));
+    do { func_8004251C_ovl_01((s32 *)(stk + 0x58), s0 + 0xBC8, (s32 *)(s0 + 0xBF8)); } while (0);
     for (i = 0; __repair_inline(8, i); i++)
         R(0x58 + i * 4) = D_800E8FC8_ovl_01[i];
     R(0x6C) = R(0x28);

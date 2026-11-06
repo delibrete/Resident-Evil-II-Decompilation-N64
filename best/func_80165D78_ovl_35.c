@@ -12,14 +12,14 @@ typedef s32 M2C_UNK32;
 #define M2C_OVERFLOW(a) (0)
 #endif
 
-M2C_UNK func_80165B50_ovl_35(s32, M2C_UNK, s16, M2C_UNK); /* extern */
-M2C_UNK func_80165E20_ovl_35(s32, void *);          /* extern */
+M2C_UNK func_80165B50_overlay_035(s32, M2C_UNK, s16, M2C_UNK); /* extern */
+M2C_UNK func_80165E20_overlay_035(s32, void *);     /* extern */
 
 void func_80165D78_ovl_35(s32 arg0, void *arg1) {
     if (M2C_FIELD(arg1, u8 *, 7) == 0) {
         M2C_FIELD(arg1, s8 *, 1) = 0;
     }
-    func_80165E20_ovl_35(arg0, arg1);
+    func_80165E20_overlay_035(arg0, arg1);
     if (M2C_FIELD(arg1, s8 *, 1) == 0) {
         if (M2C_FIELD(arg1, u8 *, 7) == 2) {
             M2C_FIELD(arg1, s8 *, 1) = 1;
@@ -27,6 +27,6 @@ void func_80165D78_ovl_35(s32 arg0, void *arg1) {
     } else if (M2C_FIELD(arg1, u8 *, 7) == 1) {
         M2C_FIELD(arg1, u8 *, 9) = (u8) (M2C_FIELD(arg1, u8 *, 9) & 0x7F);
     }
-    func_80165B50_ovl_35(arg0, 0x83, M2C_FIELD(arg1, s16 *, 2), 0);
-    func_80165B50_ovl_35(arg0, 0x84, M2C_FIELD(arg1, s16 *, 4), 0);
+    func_80165B50_overlay_035(arg0, 0x83, M2C_FIELD(arg1, s16 *, 2), 0);
+    func_80165B50_overlay_035(arg0, 0x84, M2C_FIELD(arg1, s16 *, 4), 0);
 }

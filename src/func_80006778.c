@@ -1,4 +1,4 @@
-/* identical to osContGetReadData in Resident Evil II (matched), with its names changed by decompdecomp */
+/* identical to osContGetReadData in Resident Evil II (local match library) (matched), with its names changed by decompdecomp */
 /* identical to func_80006778 in V-RALLY (matched), with its names changed by decompdecomp */
  
 

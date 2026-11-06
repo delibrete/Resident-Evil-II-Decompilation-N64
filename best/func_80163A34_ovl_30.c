@@ -52,7 +52,7 @@ void func_80163A34_ovl_30(u8 *p, s32 arg1, s32 arg2)
     {
       next = entry & 255;
     }
-    func_801672F4_ovl_30(p, next, 1);
+    do { func_801672F4_ovl_30(p, next, 1); } while (0);
     p[0x207]--;
   }
   base = D_80167CEC_ovl_30;

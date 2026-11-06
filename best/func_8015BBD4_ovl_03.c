@@ -7,11 +7,11 @@ s32 func_80077B0C_ovl_01(s32, s32, ...);
 s32 func_8015E2EC_ovl_03(u8, s32);
 void func_8015BBD4_ovl_03(void)
 {
-  u8 temp_s0;
+  
   u8 temp_v0;
   u8 *state = D_80160B9C_ovl_03;
-  u8 *global = D_800C7650_ovl_01 + 0x18000;
-  *((s32 *) (global + 0x1A3C)) &= ~0x20;
+  union { u8 * pointer; unsigned int value; } __repair_phase_storage = { D_800C7650_ovl_01 + 0x18000 };
+  *((s32 *) (__repair_phase_storage.pointer + 0x1A3C)) &= ~0x20;
   switch (state[3])
   {
     case 0:
@@ -21,9 +21,9 @@ void func_8015BBD4_ovl_03(void)
       state[3] = 1;
 
     case 1:
-      if ((*((s32 *) (global + 0x1A3C))) < 0)
+      if ((*((s32 *) (__repair_phase_storage.pointer + 0x1A3C))) < 0)
     {
-      if (((*((u16 *) (global + 0x25C))) & 0x4000) && (state[6] < 2))
+      if (((*((u16 *) (__repair_phase_storage.pointer + 0x25C))) & 0x4000) && (state[6] < 2))
       {
         state[6]++;
         do
@@ -47,8 +47,8 @@ void func_8015BBD4_ovl_03(void)
       func_8015E2EC_ovl_03(state[6], 0);
       if (((*((u32 *) ((D_800C7650_ovl_01 + 0x18000) + 0x268))) & 0x1000) || ((*((u32 *) ((D_800C7650_ovl_01 + 0x18000) + 0x258))) & 0x800))
     {
-      temp_s0 = state[6];
-      switch (temp_s0)
+      __repair_phase_storage.value = (u8)( state[6]);
+      switch (((u8)__repair_phase_storage.value))
       {
         case 0:
           state[5] = 0;
@@ -62,13 +62,13 @@ void func_8015BBD4_ovl_03(void)
         case 1:
           func_80077B0C_ovl_01(0x04060000, 0);
           state[6] = 0;
-          state[2] = temp_s0;
+          state[2] = ((u8)__repair_phase_storage.value);
           state[3] = 0;
           state[0xC] = 0;
           return;
 
         case 2:
-          state[5] = temp_s0;
+          state[5] = ((u8)__repair_phase_storage.value);
           state[2] = 6;
           state[3] = 0;
           break;

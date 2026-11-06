@@ -1,5 +1,4 @@
-/* identical to __osPfsGetOneChannelData in Resident Evil II (matched), with its names changed by decompdecomp */
-/* adapted from similar verified C in func_8000AB80 in V-RALLY-PAL (matched), with its names changed by decompdecomp */
+/* identical to __osPfsGetOneChannelData in V-RALLY-PAL (local match library) (matched), with its names changed by decompdecomp */
 extern u8 D_8000E5EE[];
 
 void func_8000AB80(s32 arg0, u8 *arg1) {

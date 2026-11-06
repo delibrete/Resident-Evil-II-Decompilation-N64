@@ -1,4 +1,3 @@
-/* machine draft (m2c) for gcc-2.7.2-kmc -G0 -mips3 -mgp32 -mfp32 -O2 -mcpu=r4600, tried by autopilot */
 #ifndef M2C_DEFINES
 #define M2C_DEFINES
 typedef s32 M2C_UNK;
@@ -11,15 +10,16 @@ typedef s32 M2C_UNK32;
 #define M2C_CARRY 0
 #define M2C_OVERFLOW(a) (0)
 #endif
+/* machine draft (m2c) for gcc-2.7.2-kmc -G0 -mips3 -mgp32 -mfp32 -O2 -mcpu=r4600, tried by autopilot */
 
-M2C_UNK func_80040E88_ovl_01(s32 *, s32 *);         /* extern */
-M2C_UNK func_800411E8_ovl_01(s32 *, s32 *);         /* extern */
-M2C_UNK func_8004251C_ovl_01(s32, s32 *, s32 *);    /* extern */
-M2C_UNK func_8004A7D0_ovl_01(M2C_UNK, M2C_UNK, M2C_UNK, M2C_UNK, u8 *); /* extern */
-M2C_UNK func_80085608_ovl_01(s32 *);                /* extern */
+s32 func_80040E88_overlay_001();
+s32 func_800411E8_overlay_001();
+s32 func_8004251C_overlay_001();
+s32 func_8004A7D0_overlay_001();
+s32 func_80085608_overlay_001();
 extern u8 D_800BA3CC_ovl_01;
 extern s32 D_800C4E4C_ovl_01;
-extern M2C_UNK D_801124DC_ovl_01;
+extern char D_801124DC_ovl_01[];
 extern s32 D_801247DC_ovl_01;
 extern s32 D_8012BA9C_ovl_01;
 extern s32 D_8013209C_ovl_01;
@@ -31,8 +31,8 @@ void func_8009BA0C_ovl_01(void) {
     u8 sp48;
     s32 *temp_s0;
     s32 *temp_s0_2;
-    s32 *var_s1;
-    s32 *var_s2;
+    char *var_s1;
+    char *var_s2;
     s32 temp_a0;
     s32 var_s3;
 
@@ -42,20 +42,20 @@ void func_8009BA0C_ovl_01(void) {
         D_801320B4_ovl_01 = temp_a0;
     }
     if (D_800C4E4C_ovl_01 != 0) {
-        func_8000D3D0(&sp48, &D_800BA3CC_ovl_01, D_8012BA9C_ovl_01, M2C_FIELD(&D_801124DC_ovl_01, u8 *, 0), (s32) M2C_FIELD(&D_801124DC_ovl_01, u8 *, 1), (s32) M2C_FIELD(&D_801124DC_ovl_01, u8 *, 2), (s32) M2C_FIELD(&D_801124DC_ovl_01, u8 *, 3), (s32) M2C_FIELD(&D_801124DC_ovl_01, u8 *, 4));
-        func_8004A7D0_ovl_01(0x32, 0x23, 0, 0, &sp48);
+        func_8000D3D0(&sp48, &D_800BA3CC_ovl_01, D_8012BA9C_ovl_01, *(u8 *)(D_801124DC_ovl_01 + 0), (s32) *(u8 *)(D_801124DC_ovl_01 + 1), (s32) *(u8 *)(D_801124DC_ovl_01 + 2), (s32) *(u8 *)(D_801124DC_ovl_01 + 3), (s32) *(u8 *)(D_801124DC_ovl_01 + 4));
+        func_8004A7D0_overlay_001(0x32, 0x23, 0, 0, &sp48);
     }
     D_801247DC_ovl_01 = 6;
     var_s3 = 0;
     var_s1 = var_s2 + 0x78;
     do {
         temp_s0 = var_s2 + 0x14;
-        if (*var_s2 != 0) {
-            func_80040E88_ovl_01(var_s2 + 0x64, temp_s0);
+        if (*(s32 *)var_s2 != 0) {
+            func_80040E88_overlay_001(var_s2 + 0x64, temp_s0);
             temp_s0_2 = var_s2 + 0x44;
-            func_8004251C_ovl_01(M2C_FIELD(var_s1, s32 *, -8), temp_s0, temp_s0_2);
-            func_800411E8_ovl_01(temp_s0_2, var_s2 + 0xE0);
-            func_80085608_ovl_01(var_s1);
+            func_8004251C_overlay_001(M2C_FIELD(var_s1, s32 *, -8), temp_s0, temp_s0_2);
+            func_800411E8_overlay_001(temp_s0_2, var_s2 + 0xE0);
+            func_80085608_overlay_001(var_s1);
         }
         var_s3 += 1;
         var_s1 += 0x1E8;

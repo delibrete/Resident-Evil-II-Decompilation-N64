@@ -54,8 +54,8 @@ void func_800A1E6C_ovl_01(void) {
     var_v1 = &D_8013BC30;
     do {
         FIELD(var_v1, u8, 0xFC0) = 0;
-        FIELD(var_v1, u8, 0xFC1) = 1;
-        var_a0 += 1;
+        FIELD(var_v1, u8, 0xFC1) = 1;/*__repair_loop_weight*/do {
+        var_a0 += 1;} while (0);
         var_v1 += 0xFF8;
     } while (var_a0 < 8U);
     var_a0_2 = NULL;

@@ -16,7 +16,7 @@ s32 func_80032C08_ovl_01();
 s32 func_80089D34_ovl_01();
 
 void func_80165E00_ovl_12(void *arg0, s32 arg1, s32 arg2) {
-    s16 temp_a0;
+    u16 temp_a0;
     void *temp_s1;
 
     temp_s1 = arg0 + 0x2B4;

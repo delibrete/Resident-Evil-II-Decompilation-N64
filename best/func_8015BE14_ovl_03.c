@@ -9,18 +9,20 @@ void func_80052C00_ovl_01(s32 arg0, s32 arg1);
 void func_80052C9C_ovl_01(s32 arg0, s32 arg1, s32 arg2);
 void func_80052D40_ovl_01(s32 arg0, s32 arg1, s32 arg2, s32 arg3);
 void func_80077B0C_ovl_01(s32 arg0, s32 arg1);
-void func_8015E2EC_ovl_03(s32 arg0, s32 arg1, s32 arg2, s32 arg3);
+void func_8015E2EC_ovl_03(s32 arg0);
 void func_8015E5E8_ovl_03(s32 arg0);
 
 #define G16(o) (*(u16 *)((u8 *)D_800C7650_ovl_01 + 0x18000 + (o)))
 #define G32(o) (*(u32 *)((u8 *)D_800C7650_ovl_01 + 0x18000 + (o)))
 
 void func_8015BE14_ovl_03(void) {
+int __repair_constant = 0x80;
+
     u8 *p = D_80160B9C_ovl_03;
 
     switch (p[3]) {
     case 0:
-        p[0xA] = 0x80;
+        p[0xA] = __repair_constant;
         p[8] = 2;
         p[9] = 0;
         p[0xB] = 0;
@@ -37,7 +39,7 @@ void func_8015BE14_ovl_03(void) {
             p[0xB] = p[0xB] + 0x10;
             if (v == 8) {
                 p[0xA] = 0;
-                p[0xB] = 0x80;
+                p[0xB] = __repair_constant;
                 p[3] = p[3] + 1;
             }
         }
@@ -114,7 +116,7 @@ block24:
             u8 v = p[9] - 1;
             p[9] = v;
             if (v == 0) {
-                p[0xA] = 0x80;
+                p[0xA] = __repair_constant;
                 p[0xB] = 0;
                 p[6] = 1;
                 p[2] = 0;
@@ -124,5 +126,5 @@ block24:
         break;
     }
     func_8015E5E8_ovl_03(D_80160BA2_ovl_03);
-    func_8015E2EC_ovl_03(1, 1, 0x1B, D_80161460_ovl_03);
+    func_8015E2EC_ovl_03(1);
 }

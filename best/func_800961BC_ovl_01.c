@@ -43,8 +43,9 @@ void func_800961BC_ovl_01(void)
     else
     {
       func_80047B34_ovl_01((s32) s1, 0);
-    }
-    func_8004789C_ovl_01((s32) s1, c80);
+    }/*__repair_call_balance*/if(s3){
+    func_8004789C_ovl_01((s32) s1, c80);}else{
+    func_8004789C_ovl_01((s32) s1, c80);}
     do
     {
       func_800478DC_ovl_01((s32) s1, s0[0], s0[1]);

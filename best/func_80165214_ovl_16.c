@@ -59,9 +59,9 @@ L0:
     func_8008A974_ovl_01(s0, s1, s2, 0x1000);
     if ((s0->unk_1AA & 0xF) == 1) {
         if (s0->unk_270 != 0) {
-            s0->unk_2CE = 5;
+            { int repair_store_value = 5; s0->unk_2CE = repair_store_value; }
             s0->unk_1E8 = 0x0C000000;
-            s0->unk_1F4 = 0xFFFF;
+            { int repair_store_value_ = 0xFFFF; s0->unk_1F4 = repair_store_value_; }
             s0->u4.ub.unk_06 = s0->u4.ub.unk_06 + 1;
         }
         goto tail;

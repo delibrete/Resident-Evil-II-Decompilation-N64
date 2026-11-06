@@ -5,11 +5,14 @@ s32 func_800AC068_ovl_01(s32 arg0, s32 arg1, s32 arg2)
   s32 temp_a0;
   s32 temp_a0_2;
   s32 __repair_phase_temp_a0_2;
-  s32 *new_var3;
+  union 
+  {
+    s32 *pointer;
+    unsigned int value;
+  } __repair_phase_storage;
   s32 temp_a3;
   s32 temp_v0;
   s32 temp_v0_2;
-  unsigned char new_var;
   s32 temp_v1;
   int new_var2;
   s32 temp_v1_2;
@@ -36,7 +39,7 @@ s32 func_800AC068_ovl_01(s32 arg0, s32 arg1, s32 arg2)
       var_v1_2 = temp_v1 + 0x20;
       goto block_3;
     }
-    new_var3 = &D_80148C20;
+    __repair_phase_storage.pointer = &D_80148C20;
     if (((u32) ((arg0 + 0x80) & 0xFF)) < 2U)
     {
       u8 *var_a1;
@@ -55,15 +58,15 @@ s32 func_800AC068_ovl_01(s32 arg0, s32 arg1, s32 arg2)
     }
     if (temp_a1_2 < 0x46U)
     {
-      var_v0_3 = ((u8) (*(((temp_a1_2 + ((arg1 & 0xFF) * 0x86)) + (temp_v0_2 * 0x860)) + new_var3))) < 0x40U;
+      var_v0_3 = ((u8) (*(((temp_a1_2 + ((arg1 & 0xFF) * 0x86)) + (temp_v0_2 * 0x860)) + __repair_phase_storage.pointer))) < 0x40U;
       goto block_9;
     }
-    new_var = (u32) ((arg0 - 0x60) & 0xFF);
-    if (new_var < 6U)
+    if (((unsigned char) __repair_phase_storage.value) < 6U)
     {
       return 0;
     }
     return (*(((temp_a1_2 + ((arg1 & 0xFF) * 0x86)) + (temp_v0_2 * 0x860)) + (&D_80148C20))) << 7;
+    __repair_phase_storage.value = (unsigned char) ((u32) ((arg0 - 0x60) & 0xFF));
   }
   var_v0_2 = arg0 & 0x1F;
   temp_a1 = arg0 & 0xFF;

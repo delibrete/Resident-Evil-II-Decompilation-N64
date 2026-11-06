@@ -25,10 +25,10 @@ void func_8003D230_ovl_01(void) {
     sp10 = (s32) M2C_FIELD(D_800EBB34_ovl_01, s16 *, 0x34);
     sp14 = (s32) M2C_FIELD(D_800EBB34_ovl_01, s16 *, 0x36);
     sp18 = (s32) M2C_FIELD(D_800EBB34_ovl_01, s16 *, 0x38);
-    func_80077B0C_ovl_01(0x03040001, &sp10);
+    do { func_80077B0C_ovl_01(0x03040001, &sp10); } while (0);
     M2C_FIELD(D_800EBB34_ovl_01, s8 *, 0x21) = 0xD;
     M2C_FIELD(D_800EBB34_ovl_01, s8 *, 0x20) = 2;
-    func_80038A50_ovl_01(0x030F2800, 0, &D_800E8FC8_ovl_01, D_800EBB34_ovl_01 + 0x34);
+    do { func_80038A50_ovl_01(0x030F2800, 0, &D_800E8FC8_ovl_01, D_800EBB34_ovl_01 + 0x34); } while (0);
     M2C_FIELD(D_800EBB34_ovl_01, s8 *, 9) = 0;
     M2C_FIELD(D_800EBB34_ovl_01, s8 *, 8) = 0;
     M2C_FIELD(D_800EBB34_ovl_01, s16 *, 0xE) = 0;

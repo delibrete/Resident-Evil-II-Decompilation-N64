@@ -31,8 +31,8 @@ void func_8006D7DC_ovl_01(void) {
     var_s0 = 0;
     if (temp_s2 != 0) {
         var_a2 = &D_800E1898_ovl_01;
-        do {
-            var_s0 += 1;
+        do {/*__repair_loop_weight*/do {do {do {
+            var_s0 += 1;} while (0);} while (0);} while (0);
             if (M2C_FIELD(var_a2, s32 *, 0) & 1) {
                 temp_a0 = M2C_FIELD(var_a2, u8 *, 0x1E1);
                 var_v0 = var_s0 < temp_s2;

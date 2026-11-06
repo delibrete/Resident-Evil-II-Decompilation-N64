@@ -6,9 +6,13 @@ s32 func_80089D34_ovl_01(void*,s32,s32,s32);
 s32 func_80164D84_ovl_15(u8);
 extern u8 D_800C7650_ovl_01[];
 void func_80164810_overlay_015(void *p,s32 a1,s32 a2) {
+int __repair_literal;
+
  u8 *b=p; u8 st=b[6]; void *q=*(void**)(b+0x250);
  if(st==1) goto active;
- if(st>=2)return;
+__repair_literal = 2;
+
+ if(st>=__repair_literal)return;
  if(st!=0)return;
  func_80077B0C_ovl_01(0x04030001,b+0x28);
  func_80052D40_ovl_01(0x35,0xf0,0x28,0);

@@ -2,9 +2,9 @@ extern char D_80011F00[];
 s32 func_800106C0(s32 arg0, unsigned short arg1, s32 arg2, s32 arg3)
 {
   s32 temp_a1;
-  s32 temp_a1_2;
+  
   s32 temp_a1_3;
-  s32 temp_a1_4;
+  
   s32 temp_a2;
   s32 temp_a2_3;
   s32 temp_a2_6;
@@ -12,6 +12,7 @@ s32 func_800106C0(s32 arg0, unsigned short arg1, s32 arg2, s32 arg3)
   s32 temp_t0_2;
   s32 temp_t1;
   s32 temp_t1_2;
+  u32 new_var;
   s32 temp_t3;
   s32 var_a0;
   s32 var_a1;
@@ -29,7 +30,7 @@ s32 func_800106C0(s32 arg0, unsigned short arg1, s32 arg2, s32 arg3)
   s32 var_v0_3;
   s32 var_v0_4;
   s32 var_v1_2;
-  s32 var_v1_6;
+  int var_v1_6;
   u32 temp_a0;
   u32 temp_a0_2;
   u32 temp_a0_3;
@@ -55,7 +56,6 @@ s32 func_800106C0(s32 arg0, unsigned short arg1, s32 arg2, s32 arg3)
   u32 temp_v1_4;
   u32 temp_v1_5;
   u32 temp_v1_6;
-  u32 temp_v1_7;
   u32 temp_v1_8;
   u32 var_a0_2;
   u32 var_a0_3;
@@ -145,7 +145,8 @@ s32 func_800106C0(s32 arg0, unsigned short arg1, s32 arg2, s32 arg3)
           var_a0_2 -= 1;
         }
       }
-      var_a2_2 = (var_a3_2 << 0x10) | var_a0_2;
+      var_a2_2 = var_a3_2;
+      var_a2_2 = (var_a2_2 << 0x10) | var_a0_2;
       goto block_73;
     }
     var_v0_2 = ((u32) var_t1) > 0xFFFFU;
@@ -156,7 +157,7 @@ s32 func_800106C0(s32 arg0, unsigned short arg1, s32 arg2, s32 arg3)
     }
     if (var_v0_2 == 0)
     {
-      var_v1_2 = (((u32) var_t1) >= 0x100U) * 8;
+      var_v1_2 = ((((u32) var_t1) >= 0x100U) * 4) * 2;
     }
     else
     {
@@ -181,9 +182,9 @@ s32 func_800106C0(s32 arg0, unsigned short arg1, s32 arg2, s32 arg3)
       var_t3 <<= temp_a2_3;
       temp_a2_4 = ((u32) var_t1) >> 0x10;
       var_t0_2 = temp_a3 / temp_a2_4;
-      temp_a1_2 = var_t1 & 0xFFFF;
-      temp_lo_3 = var_t0_2 * temp_a1_2;
-      var_v1_3 = ((temp_a3 % temp_a2_4) << 0x10) | (temp_a0 >> 0x10);
+      temp_a1 = var_t1 & 0xFFFF;
+      temp_lo_3 = var_t0_2 * temp_a1;
+      var_v1_3 = ((temp_a3 % temp_a2_4) << 0x10) | (temp_a2_2 = temp_a0 >> 0x10);
       if (var_v1_3 < temp_lo_3)
       {
         var_v1_3 += var_t1;
@@ -196,7 +197,7 @@ s32 func_800106C0(s32 arg0, unsigned short arg1, s32 arg2, s32 arg3)
       }
       temp_v1_4 = var_v1_3 - temp_lo_3;
       var_a2_3 = temp_v1_4 / temp_a2_4;
-      temp_lo_4 = temp_a1_2;
+      temp_lo_4 = temp_a1;
       temp_lo_4 = var_a2_3 * temp_lo_4;
       var_v1_4 = ((temp_v1_4 % temp_a2_4) << 0x10) | (temp_a0 & 0xFFFF);
       var_v0_3 = var_t0_2 << 0x10;
@@ -243,11 +244,12 @@ s32 func_800106C0(s32 arg0, unsigned short arg1, s32 arg2, s32 arg3)
     var_a0_4 = temp_v1_5 / temp_a2_5;
     temp_lo_6 = var_a0_4 * temp_t0_2;
     temp_v1_6 = ((temp_v1_5 % temp_a2_5) << 0x10) | (var_t3 & 0xFFFF);
-    temp_v1_7 = temp_v1_6 + var_t1;
+    temp_a0_2 = temp_v1_6 + var_t1;
+    temp_v1_5 = temp_a0_2;
     if (temp_v1_6 < temp_lo_6)
     {
       var_a0_4 -= 1;
-      if ((temp_v1_7 >= ((u32) var_t1)) && (temp_v1_7 < temp_lo_6))
+      if ((temp_v1_5 >= ((u32) var_t1)) && (temp_v1_5 < temp_lo_6))
       {
         var_a0_4 -= 1;
       }
@@ -262,7 +264,7 @@ s32 func_800106C0(s32 arg0, unsigned short arg1, s32 arg2, s32 arg3)
   }
   if (((u32) var_a2) <= 0xFFFFU)
   {
-    var_v1_6 = (((u32) var_a2) >= 0x100U) * 8;
+    var_v1_6 = ((((u32) var_a2) >= 0x100U) * 2) * 4;
   }
   else
   {
@@ -282,8 +284,8 @@ s32 func_800106C0(s32 arg0, unsigned short arg1, s32 arg2, s32 arg3)
     temp_a0_2 = (var_a0 << temp_a2_6) | (((u32) var_t3) >> temp_a1_3);
     temp_a2_7 = temp_t0_3 >> 0x10;
     var_t2_2 = temp_a3_2 / temp_a2_7;
-    temp_a1_4 = temp_t0_3 & 0xFFFF;
-    temp_lo_7 = var_t2_2 * temp_a1_4;
+    temp_a1_3 = temp_t0_3 & 0xFFFF;
+    temp_lo_7 = var_t2_2 * temp_a1_3;
     var_v1_7 = ((temp_a3_2 % temp_a2_7) << 0x10) | (temp_a0_2 >> 0x10);
     if (var_v1_7 < temp_lo_7)
     {
@@ -297,9 +299,10 @@ s32 func_800106C0(s32 arg0, unsigned short arg1, s32 arg2, s32 arg3)
     }
     temp_v1_8 = var_v1_7 - temp_lo_7;
     var_a2_4 = temp_v1_8 / temp_a2_7;
-    temp_lo_8 = var_a2_4 * temp_a1_4;
+    temp_lo_8 = var_a2_4 * temp_a1_3;
+    new_var = var_t2_2 << 0x10;
     var_v1_8 = ((temp_v1_8 % temp_a2_7) << 0x10) | (temp_a0_2 & 0xFFFF);
-    var_v0_4 = var_t2_2 << 0x10;
+    var_v0_4 = new_var;
     if (var_v1_8 < temp_lo_8)
     {
       var_v1_8 += temp_t0_3;

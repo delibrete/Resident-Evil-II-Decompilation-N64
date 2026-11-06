@@ -1,3 +1,5 @@
+/* identical to func_80170564_overlay_045 (matched), with its names changed by decompdecomp */
+/* identical to func_801639D4_ovl_17 (matched), with its names changed by decompdecomp */
 typedef struct { u8 pad[0x300]; } Obj;
 extern s32 func_80033634_ovl_01(void);
 extern s32 func_80089D34_ovl_01(void*,s32,s32,s32);

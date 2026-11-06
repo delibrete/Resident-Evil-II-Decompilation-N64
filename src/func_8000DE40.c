@@ -1,6 +1,4 @@
-/* identical to strchr in Resident Evil II (matched), with its names changed by decompdecomp */
-/* identical to func_80093B70 in V-RALLY (matched), with its names changed by decompdecomp */
-/* identical to func_8008E0E0 in V-RALLY (matched), with its names changed by decompdecomp */
+/* identical to func_8008E0E0 in V-RALLY-PAL (local match library) (matched), with its names changed by decompdecomp */
 u8 *func_8000DE40(u8 *arg0, s32 arg1) {
     u8 *p = arg0;
     u8 v = *p;

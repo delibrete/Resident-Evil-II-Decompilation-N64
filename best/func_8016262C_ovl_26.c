@@ -1,7 +1,13 @@
 extern u8 D_800C7650_ovl_01[]; extern u8 D_800E10D0_ovl_01[];
+static inline u8 *__repair_byte_address(void *base, int offset)
+{
+  return (u8 *)((u8 *)base + offset);
+}
+
 void func_8016262C_ovl_26(void *arg0,s32 arg1,s32 arg2) {
- s32 *a1; u8 *s1; u32 v; u32 n;
- if (*(u8*)((u8*)arg0+0x2B4)) { a1=(s32*)(D_800C7650_ovl_01+0x18000+0x1D3C); s1=(u8*)arg0+0x2B4; } else { a1=(s32*)D_800E10D0_ovl_01; s1=(u8*)arg0+0x2B4; }
+ s32 *a1; u8 *s1; u32 v;
+u32 __repair_phase_v; u32 n;
+ if (*__repair_byte_address(arg0, 692)) { a1=(s32*)(D_800C7650_ovl_01+0x18000+0x1D3C); s1=(u8*)arg0+0x2B4; } else { a1=(s32*)D_800E10D0_ovl_01; s1=(u8*)arg0+0x2B4; }
  switch(*(u8*)((u8*)arg0+6)) {
  case 0:
   v=*(u16*)((u8*)arg0+0x1AA);
@@ -14,7 +20,7 @@ void func_8016262C_ovl_26(void *arg0,s32 arg1,s32 arg2) {
   *(u16*)(D_800C7650_ovl_01+0x18000+0x1A78)&=0xFFBF;
   *(s32*)arg0 &= ~4; s1[2]=0; goto clear;
  case 1:
-  func_80065400_ovl_01(arg0,(u8*)a1+0x28,0,0);
+  do { func_80065400_ovl_01(arg0,(u8*)a1+0x28,0,0); } while (0);
   *(u16*)((u8*)arg0+0x66)+=func_80166CE4_ovl_26(arg0,*(s16*)((u8*)arg0+0x260),*(s16*)((u8*)arg0+0x262),6);
   func_800334F8_ovl_01(arg0,arg1,arg2,0); func_80089D34_ovl_01(arg0,arg1,arg2,0x40); func_80032B8C_ovl_01(arg0,0);
   if(!s1[0xB]) *(u8*)((u8*)arg0+6)=2;
@@ -22,11 +28,11 @@ void func_8016262C_ovl_26(void *arg0,s32 arg1,s32 arg2) {
   goto done;
  case 2: *(u8*)((u8*)arg0+6)=3; *(u16*)((u8*)arg0+0x1F4)=0x5A;
  case 3:
-  func_80065400_ovl_01(arg0,(u8*)a1+0x28,0,0);
+  do { func_80065400_ovl_01(arg0,(u8*)a1+0x28,0,0); } while (0);
   *(u16*)((u8*)arg0+0x66)+=func_80166CE4_ovl_26(arg0,*(s16*)((u8*)arg0+0x260),*(s16*)((u8*)arg0+0x262),6);
   s1[8]=0; func_800334F8_ovl_01(arg0,arg1,arg2,0); func_80089D34_ovl_01(arg0,arg1,arg2,0x40);
-  v=*(u16*)((u8*)arg0+0x1F4)-1; *(u16*)((u8*)arg0+0x1F4)=v;
-  if((s16)v==0) { *(u8*)((u8*)arg0+6)=1; goto clear; } goto done;
+  __repair_phase_v=*(u16*)((u8*)arg0+0x1F4)-1; *(u16*)((u8*)arg0+0x1F4)=__repair_phase_v;
+  if((s16)__repair_phase_v==0) { *(u8*)((u8*)arg0+6)=1; goto clear; } goto done;
  default: goto done;
  }
 clear: *(u8*)((u8*)arg0+0x2C9)=0;

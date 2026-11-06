@@ -164,11 +164,11 @@ void func_8016252C_ovl_21(S_obj_21 *arg0)
 
       base = D_800C7650_ovl_01 + 0x18000;
       e = &D_801638BC_ovl_21[arg0->unk2C2];
-      func_80040E88_ovl_01(e->unk8, stack + 0x20);
+      do { func_80040E88_ovl_01(e->unk8, stack + 0x20); } while (0);
       *((s32 *) (stack + 0x34)) = e->unk2;
       *((s32 *) (stack + 0x38)) = e->unk4;
       *((s32 *) (stack + 0x3C)) = e->unk6;
-      func_8004251C_ovl_01(inline_fn(base, e) + 0x38, stack + 0x20, stack);
+      do { func_8004251C_ovl_01(inline_fn(base, e) + 0x38, stack + 0x20, stack); } while (0);
       arg0->unk2BC = *((u16 *) (stack + 0x16));
       arg0->unk2BE = *((u16 *) (stack + 0x1A));
       arg0->unk2C0 = *((u16 *) (stack + 0x1E));

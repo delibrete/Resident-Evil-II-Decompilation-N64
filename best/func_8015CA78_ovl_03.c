@@ -1,136 +1,135 @@
-extern volatile u8 D_800C7650_ovl_01[];
-extern volatile u8 D_80160B9C_ovl_03[];
-extern volatile u8 D_80160BA2_ovl_03;
-extern volatile s32 D_80161478_ovl_03;
-void func_80077B0C_ovl_01(s32, s32, s32);
-void func_8015EEC4_ovl_03(u8);
-void func_8015E2EC_ovl_03(s32, s32, s32, s32);
+s32 func_8015E2EC_overlay_003(s32, s32, s32, s32);
+s32 func_8015EEC4_overlay_003(u8);
+extern s32 D_800C7650;
+extern s32 D_80160B9C_overlay_003;
+extern u8 D_80160BA2_overlay_003;
+extern s32 D_80161478_overlay_003;
 void func_8015CA78_ovl_03(void)
 {
-  u8 *a = D_80160B9C_ovl_03;
-  u8 v1;
+  s32 temp_v1_2;
+  u32 temp_a0;
+  u8 temp_v0;
+  u8 temp_v1;
   int new_var;
-  u8 v0;
-  u32 t;
-  u8 *base;
-  u8 *item;
-  switch (a[3])
+  u8 temp_v1_3;
+  switch (*((u8 *) (((char *) (&D_80160B9C_overlay_003)) + 3)))
   {
-    new_var = 10;
     case 0:
-      a[new_var] = 0x80;
-      a[8] = 2;
-      a[9] = 0;
-      a[11] = 0;
-      a[7] = 0;
-      D_80161478_ovl_03 = 0;
-      a[3] = 1;
-      item = ((u8 *) D_800C7650_ovl_01) + 0x21962;
-      item[0] &= 0xf3;
+      *((u8 *) (((char *) (&D_80160B9C_overlay_003)) + 0xA)) = 0x80U;
+      *((u8 *) (((char *) (&D_80160B9C_overlay_003)) + 8)) = 2U;
+      *((u8 *) (((char *) (&D_80160B9C_overlay_003)) + 9)) = 0U;
+      *((u8 *) (((char *) (&D_80160B9C_overlay_003)) + 0xB)) = 0U;
+      *((u8 *) (((char *) (&D_80160B9C_overlay_003)) + 7)) = 0U;
+      D_80161478_overlay_003 = 0;
+      *((u8 *) (((char *) (&D_80160B9C_overlay_003)) + 3)) = 1U;
+      *((u8 *) (((char *) (&D_800C7650)) + 0x21962)) = (u8) ((*((u8 *) (((char *) (&D_800C7650)) + 0x21962))) & 0xF3);
 
     case 1:
-      a[new_var] -= 0x10;
-      v1 = a[9] + 1;
-      a[9] = v1;
-      a[11] += 0x10;
-      if (v1 == 8)
+      *((u8 *) (((char *) (&D_80160B9C_overlay_003)) + 0xA)) = (u8) ((*((u8 *) (((char *) (&D_80160B9C_overlay_003)) + 0xA))) - 0x10);
+      temp_v1 = (*((u8 *) (((char *) (&D_80160B9C_overlay_003)) + 9))) + 1;
+      *((u8 *) (((char *) (&D_80160B9C_overlay_003)) + 9)) = temp_v1;
+      *((u8 *) (((char *) (&D_80160B9C_overlay_003)) + 0xB)) = (u8) ((*((u8 *) (((char *) (&D_80160B9C_overlay_003)) + 0xB))) + 0x10);
+      if ((temp_v1 & 0xFF) == 8)
     {
-      a[new_var] = 0;
-      a[11] = 0x80;
-      a[3]++;
+      *((u8 *) (((char *) (&D_80160B9C_overlay_003)) + 0xA)) = 0U;
+      *((u8 *) (((char *) (&D_80160B9C_overlay_003)) + 0xB)) = 0x80U;
+      *((u8 *) (((char *) (&D_80160B9C_overlay_003)) + 3)) = (u8) ((*((u8 *) (((char *) (&D_80160B9C_overlay_003)) + 3))) + 1);
     }
       break;
 
     case 2:
-      base = ((u8 *) D_800C7650_ovl_01) + 0x18000;
-      if ((*((u16 *) (base + 0x25e))) & 0x4000)
+      if ((*((u16 *) (((char *) (&D_800C7650)) + 0x1825E))) & 0x4000)
     {
-      if (!a[6])
+      if ((*((u8 *) (((char *) (&D_80160B9C_overlay_003)) + 6))) == 0)
       {
-        a[6]++;
-        func_80077B0C_ovl_01(0x4040000, 0, 0);
+        *((u8 *) (((char *) (&D_80160B9C_overlay_003)) + 6)) = (u8) ((*((u8 *) (((char *) (&D_80160B9C_overlay_003)) + 6))) + 1);
+        func_80077B0C_ovl_01(0x04040000, 0);
       }
     }
-      if ((*((u16 *) (base + 0x25e))) & 0x1000)
+      if ((*((u16 *) (((char *) (&D_800C7650)) + 0x1825E))) & 0x1000)
     {
-      if (a[6])
+      if ((*((u8 *) (((char *) (&D_80160B9C_overlay_003)) + 6))) != 0)
       {
-        a[6]--;
-        func_80077B0C_ovl_01(0x4040000, 0, 0);
+        *((u8 *) (((char *) (&D_80160B9C_overlay_003)) + 6)) = (u8) ((*((u8 *) (((char *) (&D_80160B9C_overlay_003)) + 6))) - 1);
+        func_80077B0C_ovl_01(0x04040000, 0, 0);
+        goto block_17;
       }
+      goto block_18;
     }
-      if (!D_80160BA2_ovl_03)
+      block_17:
+    if (D_80160BA2_overlay_003 == 0)
     {
-      if ((*((u16 *) (base + 0x25e))) & 0x8000)
+      block_18:
+      if ((*((u16 *) (((char *) (&D_800C7650)) + 0x1825E))) & 0x8000)
       {
-        item = ((u8 *) D_800C7650_ovl_01) + 0x21962;
-        v1 = item[0] & 12;
-        if (v1)
+        temp_v1_2 = (*((u8 *) (((char *) (&D_800C7650)) + 0x21962))) & 0xC;
+        if (temp_v1_2 != 0)
         {
-          item[0] = (item[0] & 0xf3) | (v1 - 4);
-          func_80077B0C_ovl_01(0x4040000, 0, 0);
+          *((u8 *) (((char *) (&D_800C7650)) + 0x21962)) = (u8) (((*((u8 *) (((char *) (&D_800C7650)) + 0x21962))) & 0xF3) | (temp_v1_2 - 4));
+          func_80077B0C_ovl_01(0x04040000, 0, 0);
         }
       }
-      if ((*((u16 *) (base + 0x25e))) & 0x2000)
+
+      if ((*((u16 *) (((char *) (&D_800C7650)) + 0x1825E))) & 0x2000)
       {
-        item = ((u8 *) D_800C7650_ovl_01) + 0x21962;
-        v1 = item[0];
-        t = (v1 & 12) >> 2;
-        if (t < 2)
+        temp_a0 = ((u32) ((*((u8 *) (((char *) (&D_800C7650)) + 0x21962))) & 0xC)) >> 2;
+        if (temp_a0 < 2U)
         {
-          item[0] = (v1 & 0xf3) | ((t + 1) * 4);
-          func_80077B0C_ovl_01(0x4040000, 0, 0);
+          *((u8 *) (((char *) (&D_800C7650)) + 0x21962)) = (u8) (((*((u8 *) (((char *) (&D_800C7650)) + 0x21962))) & 0xF3) | ((temp_a0 + 1) * 4));
+          func_80077B0C_ovl_01(0x04040000, 0, 0);
         }
       }
     }
-      v0 = a[7] + a[8];
-      a[7] = v0;
-      if (((v0 - 1) & 255) >= 0x30)
+
+      temp_v0 = ((*((u8 *) (((char *) (&D_80160B9C_overlay_003)) + 8)))) + ((*((u8 *) (((char *) (&D_80160B9C_overlay_003)) + 7))));
+      *((u8 *) (((char *) (&D_80160B9C_overlay_003)) + 7)) = temp_v0;
+      new_var = 1;
+      if (((u32) ((temp_v0 - new_var) & 0xFF)) >= 0x30U)
     {
-      a[8] = -(a[8] & 255);
+      *((u8 *) (((char *) (&D_80160B9C_overlay_003)) + 8)) = (u8) (-((*((u8 *) (((char *) (&D_80160B9C_overlay_003)) + 8))) & 0xFF));
     }
-      if ((*((u32 *) (base + 0x268))) & 0x2000)
+      if ((*((s32 *) (((char *) (&D_800C7650)) + 0x18268))) & 0x2000)
     {
-      func_80077B0C_ovl_01(0x4050000, 0, 0);
-      a[3] = 3;
+      func_80077B0C_ovl_01(0x04050000, 0, 0);
+      *((u8 *) (((char *) (&D_80160B9C_overlay_003)) + 3)) = 3U;
     }
-      if (((*((u32 *) (base + 0x268))) & 0x1000) || ((*((u32 *) (base + 0x258))) & 0x800))
+      if (((*((s32 *) (((char *) (&D_800C7650)) + 0x18268))) & 0x1000) || ((*((s32 *) (((char *) (&D_800C7650)) + 0x18258))) & 0x800))
     {
-      if (a[6] == 1)
+      if ((*((u8 *) (((char *) (&D_80160B9C_overlay_003)) + 6))) == 1)
       {
-        func_80077B0C_ovl_01(0x4050000, 0, 0);
-        a[3] = 3;
-        a[13] = 0;
+        func_80077B0C_ovl_01(0x04050000, 0, 0);
+        *((u8 *) (((char *) (&D_80160B9C_overlay_003)) + 3)) = 3U;
+        *((s8 *) (((char *) (&D_80160B9C_overlay_003)) + 0xD)) = 0;
       }
       else
       {
-        a[5] = 1;
-        a[2] = 5;
-        func_80077B0C_ovl_01(0x4060000, 0, 0);
+        *((s8 *) (((char *) (&D_80160B9C_overlay_003)) + 5)) = 1;
+        *((s8 *) (((char *) (&D_80160B9C_overlay_003)) + 2)) = 5;
+        func_80077B0C_ovl_01(0x04060000, 0, 0);
       }
     }
       break;
 
     case 3:
-      D_80161478_ovl_03 = 1;
-      a[7] = 0;
-      a[new_var] += 0x10;
-      a[11] -= 0x10;
-      v1 = a[9] - 1;
-      a[9] = v1;
-      if (!v1)
+      D_80161478_overlay_003 = 1;
+      *((u8 *) (((char *) (&D_80160B9C_overlay_003)) + 7)) = 0U;
+      *((u8 *) (((char *) (&D_80160B9C_overlay_003)) + 0xA)) = (u8) ((*((u8 *) (((char *) (&D_80160B9C_overlay_003)) + 0xA))) + 0x10);
+      *((u8 *) (((char *) (&D_80160B9C_overlay_003)) + 0xB)) = (u8) ((*((u8 *) (((char *) (&D_80160B9C_overlay_003)) + 0xB))) - 0x10);
+      temp_v1_3 = (*((u8 *) (((char *) (&D_80160B9C_overlay_003)) + 9))) - 1;
+      *((u8 *) (((char *) (&D_80160B9C_overlay_003)) + 9)) = temp_v1_3;
+      if (!(temp_v1_3 & 0xFF))
     {
-      a[new_var] = 0x80;
-      a[11] = 0;
-      a[6] = 1;
-      a[2] = 0;
-      a[3] = 0;
+      *((u8 *) (((char *) (&D_80160B9C_overlay_003)) + 0xA)) = 0x80U;
+      *((u8 *) (((char *) (&D_80160B9C_overlay_003)) + 0xB)) = 0U;
+      *((u8 *) (((char *) (&D_80160B9C_overlay_003)) + 6)) = 1U;
+      *((s8 *) (((char *) (&D_80160B9C_overlay_003)) + 2)) = 0;
+      *((u8 *) (((char *) (&D_80160B9C_overlay_003)) + 3)) = 0U;
     }
       break;
 
   }
 
-  func_8015EEC4_ovl_03(D_80160BA2_ovl_03);
-  func_8015E2EC_ovl_03(1, 1, 0x1b, D_80161478_ovl_03);
+  func_8015EEC4_overlay_003(D_80160BA2_overlay_003);
+  func_8015E2EC_overlay_003(1, 1, 0x1B, D_80161478_overlay_003);
 }
 

@@ -11,7 +11,7 @@ void func_801664E4_ovl_17(Obj *p,s32 a1,s32 a2) {
   base+=0x1BE8;
   *(s16*)(base+0x136)=90; *(s16*)(base+0x130)=0; *(s16*)(base+0x132)=0;
   *(u8*)(base+0x134)=100; *(u8*)(base+0x135)=100;
-  func_80167948_ovl_17(0x101F3F);
+  do { func_80167948_ovl_17(0x101F3F); } while (0);
   func_80166FBC_ovl_17(p,19,7); func_80166FBC_ovl_17(p,0,6); func_80166FBC_ovl_17(p,1,6);
   *((u8*)p+0x2D5)=1;
  }

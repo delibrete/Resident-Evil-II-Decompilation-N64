@@ -49,7 +49,7 @@ void func_8008BE08_ovl_01(s32 arg0) {
                 M2C_FIELD(var_a1, u8 *, 0x1853C) = (u8) M2C_FIELD(var_a1, u8 *, 0x21818);
                 M2C_FIELD(var_a1, u8 *, 0x1853D) = (u8) M2C_FIELD(var_a1, u8 *, 0x21819);
                 M2C_FIELD(var_a1, u8 *, 0x1853E) = (u8) M2C_FIELD(var_a1, u8 *, 0x2181A);
-                temp_v0 = ((var_a2 + var_s0) * 3) + &D_8012BE18_ovl_01;
+                temp_v0 = (char *)(((var_a2 + var_s0) * 3)); temp_v0 += (s32)(&D_8012BE18_ovl_01);
                 M2C_FIELD(var_a1, u8 *, 0x21818) = (u8) M2C_FIELD(temp_v0, u8 *, 0);
                 M2C_FIELD(var_a1, u8 *, 0x21819) = (u8) M2C_FIELD(temp_v0, u8 *, 1);
                 var_s0 += 1;

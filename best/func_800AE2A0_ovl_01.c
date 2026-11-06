@@ -58,10 +58,10 @@ loop_4:
         if (temp_v0 != NULL) {
             M2C_FIELD(temp_v0, s32 *, 4) = 0;
         }
-        if (var_t0 != NULL) {
-            *var_t0 = temp_a1;
-        } else {
+        if (var_t0 == NULL) {
             D_801583D0 = temp_a1;
+        } else {
+            *var_t0 = temp_a1;
         }
         M2C_FIELD(temp_a1, M2C_UNK **, 4) = var_t0;
         M2C_FIELD(temp_a1, M2C_UNK **, 0) = var_a2;

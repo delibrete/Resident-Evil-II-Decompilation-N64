@@ -9,6 +9,6 @@ void func_800038F0(void *a, void *b, void *c)
   {
   }
   while (new_var2);
-  new_var2 = new_var3;
+  new_var2 = (new_var3 = new_var3);
 }
 

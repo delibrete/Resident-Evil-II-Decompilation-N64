@@ -19,7 +19,7 @@ void func_801732B4_overlay_061(void *arg0) {
     u16 sp10;
     u16 sp12;
     u16 sp14;
-    u16 temp_a0_2;
+    int temp_a0_2;
     u16 temp_v0;
     u16 temp_v0_2;
     void *temp_a0;

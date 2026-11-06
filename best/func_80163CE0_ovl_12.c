@@ -1,4 +1,4 @@
-extern u8 D_80166C08_ovl_12[];
+extern u8 D_80166C08_overlay_012[];
 extern s32 func_80065400_ovl_01(void *,s32,u8,s32);
 extern s16 func_80032EA4_ovl_01(void *,s16,s16,s16);
 extern void func_80032B8C_ovl_01(void *,s32);
@@ -9,12 +9,13 @@ extern void func_80166510_ovl_12(void *,s16);
 extern void func_80166458_ovl_12(void *);
 extern void func_80166AE0_ovl_12(void *);
 void func_80163CE0_ovl_12(void *p,s32 a,s32 b) {
+ s32 s3=a, s4=b;
  u8 *q=(u8*)p+0x2b4; s16 t; u16 n;
  if(*(u8*)((u8*)p+6)==0) {
   func_80065400_ovl_01(p,0,0,0);
   *(u8*)((u8*)p+6)=1;
   *(u8*)((u8*)p+0x2b4)=func_80033634_ovl_01();
-  *(s16*)((u8*)p+0x1f4)=D_80166C08_ovl_12[func_80033634_ovl_01()&7]+30;
+  *(s16*)((u8*)p+0x1f4)=D_80166C08_overlay_012[func_80033634_ovl_01()&7]+30;
   *(u16*)(q+2)+=300;
  }
  func_80166B54_ovl_12(p);

@@ -7,7 +7,15 @@ void func_80163B60_ovl_31(void *p)
   {
   }
   while (x = new_var);
-  x = 0;
-  new_var = x;
+  if (p)
+  {
+    x = 0;
+  }
+  else
+  {
+    x = 0;
+    new_var = x;
+    new_var = x;
+  }
 }
 

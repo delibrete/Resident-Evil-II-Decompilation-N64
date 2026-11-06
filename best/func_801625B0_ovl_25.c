@@ -9,9 +9,20 @@ void func_801625B0_ovl_25(void *p)
   u8 n;
   s32 *new_var;
   s32 x;
-  i = ((*((u16 *) (q + 0x1AA))) & 1) * 7;
-  n = D_80162FA0_ovl_25[i + 2];
-  x = func_80032F94_ovl_01_48(D_800E10F8_ovl_01, ((*((s32 *) (q + 0x234))) + (n * 0x178)) + 0x4C);
+  if (g)
+  {
+    u32 __repair_branch_i_0;
+    __repair_branch_i_0 = ((*((u16 *) (q + 0x1AA))) & 1) * 7;
+    n = D_80162FA0_ovl_25[__repair_branch_i_0 + 2];
+    x = func_80032F94_ovl_01_48(D_800E10F8_ovl_01, ((*((s32 *) (q + 0x234))) + (n * 0x178)) + 0x4C);
+  }
+  else
+  {
+    u32 __repair_branch_i_1;
+    __repair_branch_i_1 = ((*((u16 *) (q + 0x1AA))) & 1) * 7;
+    n = D_80162FA0_ovl_25[__repair_branch_i_1 + 2];
+    x = func_80032F94_ovl_01_48(D_800E10F8_ovl_01, ((*((s32 *) (q + 0x234))) + (n * 0x178)) + 0x4C);
+  }
   if ((x << 16) != 0)
   {
     if (n || q)
@@ -20,7 +31,7 @@ void func_801625B0_ovl_25(void *p)
     }
     else
     {
-      new_var = (s32 *) (q + 4);
+      ;
     }
     if (q[0x1E9] >= 5)
     {
@@ -28,7 +39,7 @@ void func_801625B0_ovl_25(void *p)
       {
         if (!(g[0x1CEF] & 0x80))
         {
-          *new_var = 0x01040000;
+          *((s32 *) (q + 4)) = 0x01040000;
           g[0x1CEF] |= 0x80;
         }
         else

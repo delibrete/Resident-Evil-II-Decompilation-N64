@@ -12,13 +12,13 @@ typedef s32 M2C_UNK32;
 #define M2C_OVERFLOW(a) (0)
 #endif
 
-s32 func_8017BB4C_ovl_02();                         /* extern */
-M2C_UNK func_8017BB68_ovl_02(M2C_UNK);              /* extern */
+s32 func_8017BB4C_overlay_002();                    /* extern */
+M2C_UNK func_8017BB68_overlay_002(M2C_UNK);         /* extern */
 
 void func_8017DCF8_ovl_02(void) {
 loop_1:
-    if (func_8017BB4C_ovl_02() != 0) {
-        func_8017BB68_ovl_02(8);
+    if (func_8017BB4C_overlay_002() != 0) {
+        func_8017BB68_overlay_002(8);
         goto loop_1;
     }
 }

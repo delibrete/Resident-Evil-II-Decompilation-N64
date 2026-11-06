@@ -1,4 +1,4 @@
-/* machine draft (m2c) for gcc-2.7.2-kmc -G0 -mips3 -mgp32 -mfp32 -O2, tried by autopilot */
+/* machine draft (m2c) for gcc-2.8.1-pm-sn-as -G0 -mips3 -mgp32 -mfp32 -O2, tried by autopilot */
 #ifndef M2C_DEFINES
 #define M2C_DEFINES
 typedef s32 M2C_UNK;
@@ -13,8 +13,8 @@ typedef s32 M2C_UNK32;
 #endif
 
 s32 func_80033634_ovl_01();                         /* extern */
-M2C_UNK func_80164CDC_ovl_12(void *, M2C_UNK, M2C_UNK); /* extern */
-M2C_UNK func_80166900_ovl_12(void *, s32, M2C_UNK); /* extern */
+M2C_UNK func_80164CDC_overlay_012(void *, M2C_UNK, M2C_UNK); /* extern */
+M2C_UNK func_80166900_overlay_012(void *, s32, M2C_UNK); /* extern */
 
 void func_8016566C_ovl_12(void *arg0, M2C_UNK arg1, M2C_UNK arg2) {
     u32 var_s0;
@@ -24,11 +24,11 @@ void func_8016566C_ovl_12(void *arg0, M2C_UNK arg1, M2C_UNK arg2) {
     M2C_FIELD(arg0, u8 *, 0x2BB) = temp_v0;
     var_s0 = 0;
     if (temp_v0 & 0xFF) {
-        do {/*__repair_loop_weight*/do {
-            var_s0 += 1;} while (0);
-            func_80166900_ovl_12(arg0, func_80033634_ovl_01() & 0xF, 8);
+        do {
+            var_s0 += 1;
+            func_80166900_overlay_012(arg0, func_80033634_ovl_01() & 0xF, 8);
         } while (var_s0 < (u8) M2C_FIELD(arg0, u8 *, 0x2BB));
     }
     M2C_FIELD(arg0, s8 *, 5) = 1;
-    func_80164CDC_ovl_12(arg0, arg1, arg2);
+    func_80164CDC_overlay_012(arg0, arg1, arg2);
 }

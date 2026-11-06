@@ -54,21 +54,17 @@ s32 func_80009F8C(void *arg0, u16 *arg1)
     var_a1 = arg1;
     if (var_v0 == 0)
     {
-      do
       {
-        checksum(arg1, &sp20, &sp22);
+        do { checksum(arg1, &sp20, &sp22); } while (0);
         temp_a2 = sp20;
       }
-      while (0);
       temp_a0 = sp22;
       new_var3 = 10;
       if (((*((u16 *) (((s8 *) arg1) + 0x1c))) != (temp_a2 & 0xffff)) || ((*((u16 *) (((s8 *) arg1) + 0x1e))) != (temp_a0 & 0xffff)))
       {
-        do
         {
           var_s3++;
         }
-        while (0);
         var_s0++;
         if (var_s3 >= 4)
         {

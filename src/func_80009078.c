@@ -1,4 +1,4 @@
-/* identical to guMtxL2F in V-RALLY-PAL (matched), with its names changed by decompdecomp */
+/* identical to guMtxL2F in V-RALLY-PAL (local match library) (matched), with its names changed by decompdecomp */
 void func_80009078(f32 *arg0, s32 *arg1)
 {
     volatile s32 sp0;

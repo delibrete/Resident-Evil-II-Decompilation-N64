@@ -1,14 +1,25 @@
-s32 func_800276B4_ovl_01(s32);
-void func_80027530_ovl_01(s32, s32, s32, s32);
-void func_8006C0A0_ovl_01(s32);
-extern u8 D_8017E53F_ovl_05;
-extern u8 D_8017E549_ovl_05;
+/* machine draft (m2c) for gcc-2.7.2-kmc -G0 -mips3 -mgp32 -mfp32 -O2, tried by autopilot */
+#ifndef M2C_DEFINES
+#define M2C_DEFINES
+typedef s32 M2C_UNK;
+typedef s8 M2C_UNK8;
+typedef s16 M2C_UNK16;
+typedef s32 M2C_UNK32;
+#define M2C_FIELD(expr, type_ptr, offset) (*(type_ptr)((s8 *)(expr) + (offset)))
+#define M2C_BITWISE(type, expr) ((type)(expr))
+#define M2C_ERROR(desc) (0)
+#define M2C_CARRY 0
+#define M2C_OVERFLOW(a) (0)
+#endif
+
+extern u8 D_8017E53F_overlay_005;
+extern s8 D_8017E549_overlay_005;
 
 void func_8017B4F4_ovl_05(void) {
-    if (func_800276B4_ovl_01(0)) {
-        func_80027530_ovl_01(0x200, 0, 7, 1);
-        D_8017E549_ovl_05 = 1;
-        D_8017E53F_ovl_05 &= 0xF7;
+    if (func_800276B4_ovl_01(0) != 0) {
+        do { func_80027530_ovl_01(0x200, 0, 7, 1); } while (0);
+        D_8017E549_overlay_005 = 1;
+        D_8017E53F_overlay_005 &= 0xF7;
         func_8006C0A0_ovl_01(1);
     }
 }

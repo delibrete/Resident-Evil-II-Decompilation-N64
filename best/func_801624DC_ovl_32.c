@@ -5,9 +5,9 @@ void func_801624DC_ovl_32(void)
   int new_var2;
   new_var2 = 0;
   new_var = new_var2;
-  pad = new_var;
   do
   {
+    pad = new_var;
   }
   while (pad);
 }

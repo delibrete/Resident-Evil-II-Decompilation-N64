@@ -77,11 +77,11 @@ u32 __repair_phase_extra;
     bits -= extra;
     if (op & 0x10)
     {
-      extra = op & 15;
-      back = bits - extra;
-      tab = ((Table *) (((u8 *) tab) + 4)) + (hold & D_800127D0[extra]);
-      len = tab->val + (hold & D_800127D0[extra]);
-      hold >>= extra;
+      __repair_phase_extra = op & 15;
+      back = bits - __repair_phase_extra;
+      tab = ((Table *) (((u8 *) tab) + 4)) + (hold & D_800127D0[__repair_phase_extra]);
+      len = tab->val + (hold & D_800127D0[__repair_phase_extra]);
+      hold >>= __repair_phase_extra;
       bits = back;
       for (; bits < 15; bits += 8)
       {

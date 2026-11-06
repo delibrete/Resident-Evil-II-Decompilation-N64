@@ -1,13 +1,24 @@
-extern void (* volatile D_80166CB4_ovl_12[])(void);
-s32 func_80077D48_ovl_01(s32 arg0, void *arg1);
+/* machine draft (m2c) for sn-n64-281 -G0 -mips3 -O2 -mgas -meb -mcpu=VR4300 -mhard-float -mfp64, tried by autopilot */
+#ifndef M2C_DEFINES
+#define M2C_DEFINES
+typedef s32 M2C_UNK;
+typedef s8 M2C_UNK8;
+typedef s16 M2C_UNK16;
+typedef s32 M2C_UNK32;
+#define M2C_FIELD(expr, type_ptr, offset) (*(type_ptr)((s8 *)(expr) + (offset)))
+#define M2C_BITWISE(type, expr) ((type)(expr))
+#define M2C_ERROR(desc) (0)
+#define M2C_CARRY 0
+#define M2C_OVERFLOW(a) (0)
+#endif
+
+
+extern int (*D_80166CB4_overlay_012[])();
+M2C_UNK func_80077D48_ovl_01(M2C_UNK, void *);      /* extern */
 
 void func_801620C0_overlay_012(void *arg0) {
-    u8 *p = (u8 *)arg0;
-    u32 *q;
-
-    D_80166CB4_ovl_12[p[5]]();
-    q = *(u32 **)(p + 0x214);
-    if (*q & 0x40000) {
-        func_80077D48_ovl_01(8, p);
+    D_80166CB4_overlay_012[M2C_FIELD(arg0, u8 *, 5)]();
+    if (*M2C_FIELD(arg0, s32 **, 0x214) & 0x40000) {
+        func_80077D48_ovl_01(8, arg0);
     }
 }

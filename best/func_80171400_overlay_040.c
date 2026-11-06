@@ -1,10 +1,11 @@
-/* identical to func_80164664_overlay_012 (matched), with its names changed by decompdecomp */
-typedef void (*Fn)(void *);
-extern Fn D_80166D64_ovl_12[];
-extern void func_80166458_ovl_12(void *);
-void func_80171400_overlay_040(void *arg0) {
-    volatile Fn *table = D_80166D64_ovl_12;
-    u8 index = ((u8 *)arg0)[6];
-    table[index](arg0);
-    func_80166458_ovl_12(arg0);
+/* identical to func_80162A0C_ovl_36 (matched), with its names changed by decompdecomp */
+void jtbl_80172FE8_overlay_041(void *);
+extern volatile u32 D_80162FFC_ovl_36[];
+void func_80171400_overlay_040(void *arg0)
+{
+  void *p = arg0;
+  volatile u32 *base = D_80162FFC_ovl_36;
+  u32 i = *((u8 *)p + 6);
+  ((void (*)(void *))base[i])(p);
+  jtbl_80172FE8_overlay_041(p);
 }

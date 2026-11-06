@@ -82,7 +82,7 @@ void func_80097C2C_ovl_01(void)
     func_800478E8_ovl_01(temp_s2, (((*((u16 *) (((char *) (&D_801313A0_ovl_01)) + 0))) + var_s4) + 0x14) & 0xFFFF, ((*((u16 *) (((char *) (&D_801313A0_ovl_01)) + 2))) + temp_s5) & 0xFFFF);
     func_800479EC_ovl_01(temp_s2, 0x28, 0x1E);
   }
-  func_800478DC_ovl_01(temp_s2, (var_s6 & 1) * 0x28, ((var_s6 >> 1) * 0x1E) & 0xFFFE);
+  do { func_800478DC_ovl_01(temp_s2, (var_s6 & 1) * 0x28, ((var_s6 >> 1) * 0x1E) & 0xFFFE); } while (0);
   *((s32 **) (((char *) temp_s2) + 0xC)) = &D_8012F4D0_ovl_01;
   *((s16 *) (((char *) temp_s2) + 0xA)) = 0x200;
   if ((*((u8 *) (((char *) new_var) + 8))) != 0x80)

@@ -24,7 +24,7 @@ void func_8016B5B0_ovl_11(void *p, s32 x, s32 y) {
   *(s32 *)(n+4)=0x04200000; *(void **)(n+0x250)=b;
   *(s32 *)(n+0x224)=*(s32 *)(b+0x224); *(s32 *)(n+0x228)=*(s32 *)(b+0x228);
   *(s32 *)b|=0x1000; *(s32 *)n|=0x1000;
-  func_8003334C_ovl_01(b,x,y,0);
+  do { func_8003334C_ovl_01(b,x,y,0); } while (0);
   {s32 r=func_80089D34_ovl_01(b,x,y,0x100); b[6]+=r;}
   break;
  case 3: *(s32 *)(b+4)=0x08030200; break;

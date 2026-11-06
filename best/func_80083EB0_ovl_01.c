@@ -21,6 +21,7 @@ void func_80083EB0_ovl_01(f32 arg0, f32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 
     f32 temp_ft1;
     f32 temp_ft2;
     f32 var_a2;
+f32 __repair_var_a2_1;
     f32 var_a3;
     f32 var_fa0;
     f32 var_fa1;
@@ -29,7 +30,7 @@ void func_80083EB0_ovl_01(f32 arg0, f32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 
     temp_ft2 = arg2 - arg0;
     var_fa0 = arg4;
     temp_ft1 = arg3 - var_fa1;
-    temp_ft0 = ((var_fa0 - arg0) * temp_ft2) + ((arg5 - var_fa1) * temp_ft1);
+    temp_ft0 = (((arg5 - var_fa1) * temp_ft1)) + (((var_fa0 - arg0) * temp_ft2));
     if (temp_ft0 == 0.0f) {
         if (var_fa0 == arg0) {
             var_a2 = arg0;
@@ -41,12 +42,12 @@ void func_80083EB0_ovl_01(f32 arg0, f32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 
     } else {
         temp_ft0_2 = temp_ft0 / ((temp_ft2 * temp_ft2) + (temp_ft1 * temp_ft1));
         if (temp_ft0_2 < 0.0f) {
-            var_a2 = arg0;
+            __repair_var_a2_1 = arg0;
             var_a3 = var_fa1;
             var_fa1 = arg5;
         } else if (!(D_800B9CC8_ovl_01 < temp_ft0_2)) {
             var_a2 = arg0 + (temp_ft0_2 * temp_ft2);
-            var_a3 = var_fa1 + (temp_ft0_2 * temp_ft1);
+            var_a3 = ((temp_ft0_2 * temp_ft1)) + (var_fa1);
             var_fa0 = arg0;
         } else {
 block_7:

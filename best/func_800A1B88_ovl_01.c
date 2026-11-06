@@ -55,7 +55,11 @@ void func_800A1B88_ovl_01(void)
           {
             temp_a0 = *((s32 *) (((char *) temp_a1) + 4));
             *((s32 *) (((char *) D_80143BF8) + 0x124)) = temp_a0;
-            func_800A8278_ovl_01(temp_a0, *((u8 *) (((char *) new_var) + 3)), D_80143BF8, &D_80143BF0);
+            /*__repair_pointer_balance*/if ((unsigned long)new_var & 0x100) {
+func_800A8278_ovl_01(temp_a0, *((u8 *) (((char *) new_var) + 3)), D_80143BF8, &D_80143BF0);
+} else {
+func_800A8278_ovl_01(temp_a0, *((u8 *) (((char *) new_var) + 3)), D_80143BF8, &D_80143BF0);
+}
             temp_a0_2 = *((u32 **) (((char *) D_80143BF8) + 0xF6C));
             *((u32 **) (((char *) D_80143BF8) + 0xF6C)) = (u32 *) (temp_a0_2 + 8);
             if ((*((s32 *) (((char *) temp_a0_2) + 8))) != (-1))

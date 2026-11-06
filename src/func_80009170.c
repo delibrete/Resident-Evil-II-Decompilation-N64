@@ -1,4 +1,4 @@
-/* identical to guMtxIdent in V-RALLY-PAL (matched), with its names changed by decompdecomp */
+/* identical to guMtxIdent in V-RALLY-PAL (local match library) (matched), with its names changed by decompdecomp */
 typedef struct 
 {
   s32 m[4][4];

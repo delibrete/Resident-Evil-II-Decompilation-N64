@@ -35,7 +35,7 @@ void func_8009BB44_ovl_01(void *arg0, s32 arg1) {
     void *temp_s4;
     void *temp_v1;
     
-    void *temp_v1_3;
+    
     void *var_s0;
 
     M2C_FIELD(arg0, s32 *, 0xB8) = (s32) M2C_FIELD(D_8013A3D0, s32 *, 0x288);
@@ -65,7 +65,7 @@ loop_1:
             M2C_FIELD(temp_v1, s8 *, 0xC) = (s8) ((u16) *temp_a0 >> 4);
             var_a2 += 6;
         } while (var_a1 < 3);
-        temp_v1 = var_s1 + &D_800E8FFC_ovl_01;
+        temp_v1 = (char *)(var_s1); temp_v1 += (s32)(&D_800E8FFC_ovl_01);
         temp_fs1 = (f32) M2C_FIELD(temp_v1, s16 *, 0);
         temp_fs0 = (f32) M2C_FIELD(temp_v1, s16 *, 6);
         temp_fs2 = (f32) M2C_FIELD(temp_v1, s16 *, 0xC);
@@ -81,14 +81,14 @@ loop_1:
         }
         var_s2 += 0x10;
         var_s1 += 2;
-        temp_v1_3 = temp_s4 + var_s3;
+        temp_v1 = temp_s4 + var_s3;
         var_s3 += 1;
         M2C_FIELD(var_s0, s8 *, 0x10) = (s8) (s32) (var_ft1 * temp_fs1);
         M2C_FIELD(var_s0, s8 *, 0x11) = (s8) (s32) (var_ft1 * temp_fs0);
         M2C_FIELD(var_s0, s8 *, 0x12) = (s8) (s32) (var_ft1 * temp_fs2);
         var_s0 += 0x10;
-        M2C_FIELD(temp_v1_3, s8 *, 0) = 0x7D;
-        M2C_FIELD(temp_v1_3, s8 *, 4) = 0x7D;
+        M2C_FIELD(temp_v1, s8 *, 0) = 0x7D;
+        M2C_FIELD(temp_v1, s8 *, 4) = 0x7D;
         goto loop_1;
     }
     M2C_FIELD(temp_s4, s32 *, 0x38) = 3;

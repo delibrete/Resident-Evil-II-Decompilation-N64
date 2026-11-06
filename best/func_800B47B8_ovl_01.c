@@ -14,9 +14,9 @@ typedef s32 M2C_UNK32;
 
 M2C_UNK func_80006D30(M2C_UNK *, M2C_UNK *, M2C_UNK); /* extern */
 M2C_UNK func_80007320(s32, s32, u8 *);              /* extern */
-M2C_UNK func_800A5618_ovl_01();                     /* extern */
-M2C_UNK func_800A5660_ovl_01();                     /* extern */
-extern M2C_UNK D_800B44E0_ovl_01;
+M2C_UNK func_800A5618_overlay_001();                /* extern */
+M2C_UNK func_800A5660_overlay_001();                /* extern */
+extern M2C_UNK D_800B44E0_overlay_001;
 extern M2C_UNK *D_80143F74;
 extern u8 D_8015AF60;
 extern M2C_UNK D_8015AF70;
@@ -24,11 +24,11 @@ extern M2C_UNK D_8015AFB0;
 extern M2C_UNK D_8015AFC8;
 
 void func_800B47B8_ovl_01(s32 arg0, s32 arg1, s32 arg2) {
-    func_800A5618_ovl_01();
+    func_800A5618_overlay_001();
     if (D_80143F74 == NULL) {
-        func_80006D30(&D_8015AFB0, &D_8015AFC8, 1);
+        do { func_80006D30(&D_8015AFB0, &D_8015AFC8, 1); } while (0);
         D_8015AF60 = 0;
-        D_80143F74 = &D_800B44E0_ovl_01;
+        D_80143F74 = &D_800B44E0_overlay_001;
     }
     if ((u8) D_8015AF60 < 4U) {
         *((D_8015AF60 * 0xC) + &D_8015AF70) = arg0;
@@ -37,5 +37,5 @@ void func_800B47B8_ovl_01(s32 arg0, s32 arg1, s32 arg2) {
         D_8015AF60 += 1;
         func_80007320(arg0, arg2, &D_8015AF60);
     }
-    func_800A5660_ovl_01();
+    func_800A5660_overlay_001();
 }

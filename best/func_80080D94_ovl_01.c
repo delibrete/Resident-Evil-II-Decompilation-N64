@@ -18,23 +18,24 @@ extern M2C_UNK D_8011B4EC_ovl_01;
 
 s32 func_80080D94_ovl_01(s32 arg1) {
     s32 temp_v1;
-    s32 var_a0;
+s32 __repair_phase_temp_v1;
+    
     s32 var_a2;
     s32 var_a3;
     s32 var_t0;
-    s32 var_v0;
+    
     s32 var_v0_2;
 
     var_t0 = 0;
     var_a3 = 0;
-    var_a0 = 0;
+    __repair_phase_temp_v1 = 0;
     var_a2 = 2;
     var_v0_2 = 0 * 4;
     do {
         temp_v1 = *(var_v0_2 + &D_8011B4EC_ovl_01);
         if (temp_v1 != 0) {
             if (M2C_FIELD(&D_800DF650_ovl_01, s32 *, 0x1CD0) == temp_v1) {
-                var_a0 += 1;
+                __repair_phase_temp_v1 += 1;
                 var_t0 = 1;
             } else {
                 if (arg1 != temp_v1) {
@@ -44,19 +45,19 @@ s32 func_80080D94_ovl_01(s32 arg1) {
             }
         } else {
 block_6:
-            var_a0 += 1;
+            __repair_phase_temp_v1 += 1;
         }
         var_a2 -= 1;
-        var_v0_2 = var_a0 * 4;
+        var_v0_2 = __repair_phase_temp_v1 * 4;
     } while (var_a2 != -1);
-    var_v0 = var_a3;
+    temp_v1 = var_a3;
     if (var_a3 == 0) {
         if (var_t0 == 0) {
             return 0;
         }
-        var_v0 = M2C_FIELD(&D_800C7650_ovl_01, s32 *, 0x19CD0);
+        __repair_phase_temp_v1 = M2C_FIELD(&D_800C7650_ovl_01, s32 *, 0x19CD0);
         /* Duplicate return node #12. Try simplifying control flow for better match */
-        return var_v0;
+        return __repair_phase_temp_v1;
     }
-    return var_v0;
+    return temp_v1;
 }

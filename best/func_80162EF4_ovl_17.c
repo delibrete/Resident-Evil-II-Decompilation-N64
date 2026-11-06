@@ -1,10 +1,10 @@
 s32 func_80033634_ovl_01(void);
-void func_801621CC_ovl_17(void*);
+void func_801621CC_overlay_034(void*);
 s32 func_80166A84_ovl_17(void*,s32);
 extern u8 D_800C7650_ovl_01[];
 void func_80162EF4_ovl_17(void *p) {
  u8 *b=p; s32 t; u16 val;
- func_801621CC_ovl_17(p);
+ do { func_801621CC_overlay_034(p); } while (0);
  if(b[0x2d3]) { val=*(u16*)(b+0x292); } else { val=*(u16*)(b+0x28e); }
  t=func_80166A84_ovl_17(p,0x80);
  func_80166A84_ovl_17(p,0x100);

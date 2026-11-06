@@ -1,4 +1,4 @@
-/* machine draft (m2c) for gcc-2.7.2-kmc -G0 -mips3 -mgp32 -mfp32 -O2 -mcpu=r4600, tried by autopilot */
+/* machine draft (m2c) for gcc-2.8.1-pm-sn-as -G0 -mips3 -mgp32 -mfp32 -O2, tried by autopilot */
 #ifndef M2C_DEFINES
 #define M2C_DEFINES
 typedef s32 M2C_UNK;
@@ -13,7 +13,7 @@ typedef s32 M2C_UNK32;
 #endif
 
 M2C_UNK func_80165B50_overlay_035(s32, M2C_UNK, s16, M2C_UNK); /* extern */
-M2C_UNK func_80165E20_ovl_35(s32, void *);          /* extern */
+M2C_UNK func_80165E20_overlay_035(s32, void *);     /* extern */
 
 void func_80165C90_ovl_35(s32 arg0, void *arg1) {
     u8 temp_v0;
@@ -21,7 +21,7 @@ void func_80165C90_ovl_35(s32 arg0, void *arg1) {
     if (M2C_FIELD(arg1, u8 *, 7) == 0) {
         M2C_FIELD(arg1, u8 *, 1) = 0xCU;
     }
-    func_80165E20_ovl_35(arg0, arg1);
+    func_80165E20_overlay_035(arg0, arg1);
     temp_v0 = M2C_FIELD(arg1, u8 *, 1) - 1;
     M2C_FIELD(arg1, u8 *, 1) = temp_v0;
     if ((temp_v0 << 0x18) == 0) {

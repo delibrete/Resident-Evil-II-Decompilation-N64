@@ -105,7 +105,7 @@ void func_8006D658_ovl_01(u32 arg0, s32 arg1, s32 arg2)
     else
     {
       block_15:
-      temp_v1 = (&D_80113A70_ovl_01) + ((var_v0 + var_a0) * 0x7C);
+      temp_v1 = (char *)((&D_80113A70_ovl_01)); temp_v1 += (s32)(((var_v0 + var_a0) * 0x7C));
 
       *((s8 *) (((char *) temp_v1) + 2)) = 0;
       var_a0_2 = temp_v1 + 0x158;

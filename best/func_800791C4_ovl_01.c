@@ -24,18 +24,18 @@ void func_800791C4_ovl_01(s16 arg0) {
     void *temp_v1;
 
     temp_a0 = arg0 * 0x3C;
-    temp_v1 = temp_a0 + &D_8011A31C_ovl_01;
+    temp_v1 = (char *)(temp_a0); temp_v1 += (s32)(&D_8011A31C_ovl_01);
     var_s2 = 0;
     if (M2C_FIELD(temp_v1, s8 *, 0x28) != 0) {
         var_s1 = temp_a0;
 loop_2:
-        temp_s0 = var_s1 + &D_8011A31C_ovl_01;
+        temp_s0 = (char *)(var_s1); temp_s0 += (s32)(&D_8011A31C_ovl_01);
         if (M2C_FIELD(temp_s0, s32 *, 0x14) != 0) {
             if ((M2C_FIELD(temp_v1, s8 *, 0x28) == -2) && (func_800A2148_ovl_01(M2C_FIELD(temp_s0, s32 *, 4)) & 0xFF)) {
                 func_800A1F24_ovl_01(M2C_FIELD(temp_s0, s32 *, 4));
             }
-            M2C_FIELD(temp_v1, s8 *, 0x28) = -1;
-            var_s2 += 1;
+            M2C_FIELD(temp_v1, s8 *, 0x28) = -1;/*__repair_loop_weight*/do {
+            var_s2 += 1;} while (0);
             var_s1 += 4;
             if (var_s2 < 4) {
                 goto loop_2;

@@ -1,3 +1,4 @@
+/* identical to func_8015C71C_overlay_035 in Resident Evil II (local match library) (matched), with its names changed by decompdecomp */
 /* machine draft (m2c) for gcc-2.7.2-kmc -G0 -mips3 -mgp32 -mfp32 -O2, tried by autopilot */
 #ifndef M2C_DEFINES
 #define M2C_DEFINES
@@ -12,9 +13,9 @@ typedef s32 M2C_UNK32;
 #define M2C_OVERFLOW(a) (0)
 #endif
 
-s32 func_80033634_ovl_01();                         /* extern */
+s32 func_80033634_ovl_01();                    /* extern */
 M2C_UNK func_80164354_ovl_35(s32, M2C_UNK, M2C_UNK); /* extern */
-M2C_UNK func_801661F0_ovl_35(s32, s32, M2C_UNK);    /* extern */
+M2C_UNK func_801661F0_ovl_35(s32, s32, M2C_UNK); /* extern */
 
 void func_8016482C_ovl_35(s32 arg0, M2C_UNK arg1, M2C_UNK arg2) {
     func_801661F0_ovl_35(arg0, (func_80033634_ovl_01() + 1) & 1, 0);

@@ -17,7 +17,7 @@ s32 func_800A5CB0_ovl_01(s32 arg0)
   temp_fv0 = new_var / temp_fv0;
   if (D_800BA68C_ovl_01 <= temp_fv0)
   {
- do { return ((s32) (temp_fv0 - D_800BA68C_ovl_01)) | 0x80000000; } while (0);
+    return ((s32) (temp_fv0 - D_800BA68C_ovl_01)) | 0x80000000;
   }
   return (s32) temp_fv0;
 }

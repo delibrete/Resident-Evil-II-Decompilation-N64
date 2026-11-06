@@ -54,8 +54,8 @@ void func_80163AE0_ovl_13(O *o, void *a, void *b)
       func_80052C9C_ovl_01(10, 150, 0);
       func_80077D48_ovl_01(4, o);
       o->j = 0x9000700;
-      o->h = 0;
       o->g = 0;
+      o->h = 0;
       o->t = 0;
       o->y = 0;
       o->t = 0;

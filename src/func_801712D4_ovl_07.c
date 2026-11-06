@@ -1,5 +1,27 @@
-void func_801712D4_ovl_07(s16 **arg0) { s16 *p=*arg0; u32 i=0; do { *p=0; i++; p++; } while(i<0x140); *arg0=p; }
-void func_80171268_ovl_07(s16 **arg0, u8 **arg1) { s16 **holder=arg0; u8 *src=*arg1; s16 *dst=*holder; u32 i=0; u8 *q=src+1; do { u8 r=q[1], g=q[0], b=*src; q+=3; src+=3; i++; *dst=(((r>>3)*2)+((g>>3)<<6)+((b>>3)<<11))|1; dst++; } while(i<0x140); *holder=dst; *arg1=src; }
-void func_80171204_ovl_07(s16 **arg0, u8 **arg1) { s16 *dst=*arg0; u8 *src=*arg1; u32 x=0, bit=0; do { u8 *p=src+x; do { s16 *q=dst; s16 v; dst+=1; v=1; if (((*p >> bit)&1)!=0) v=-1; bit++; *q=v; } while(bit<8); x++; bit=0; } while(x<0x28); *arg1=src+0x28; *arg0=dst; }
-extern u8 D_800E9128_ovl_01[];
-void func_801711DC_ovl_07(s32 arg0, s16 arg1) { u8 *base=D_800E9128_ovl_01; s16 *p=(s16 *)(base + arg0 * 0x2C); *p=arg1; }
+/* machine draft (m2c) for gcc-2.7.2-kmc -G0 -mips3 -mgp32 -mfp32 -O2, tried by autopilot */
+#ifndef M2C_DEFINES
+#define M2C_DEFINES
+typedef s32 M2C_UNK;
+typedef s8 M2C_UNK8;
+typedef s16 M2C_UNK16;
+typedef s32 M2C_UNK32;
+#define M2C_FIELD(expr, type_ptr, offset) (*(type_ptr)((s8 *)(expr) + (offset)))
+#define M2C_BITWISE(type, expr) ((type)(expr))
+#define M2C_ERROR(desc) (0)
+#define M2C_CARRY 0
+#define M2C_OVERFLOW(a) (0)
+#endif
+
+void func_801712D4_ovl_07(s16 **arg0) {
+    char *var_v1;
+    u32 var_a1;
+
+    var_v1 = *arg0;
+    var_a1 = 0;
+    do {
+        *(s16 *)var_v1 = 0;
+        var_a1 += 1;
+        var_v1 += 2;
+    } while (var_a1 < 0x140U);
+    *arg0 = var_v1;
+}

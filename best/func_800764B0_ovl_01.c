@@ -37,7 +37,7 @@ void func_800764B0_ovl_01(void) {
         temp_s2 = temp_s1 * 2;
         temp_a1 = (D_800C527C_ovl_01 + 0x3310) & ~0xF;
         D_80119E78_ovl_01 = temp_a1;
-        func_80004CFC(*(temp_s2 + &D_80116F08_ovl_01), temp_a1, 1, &D_800B99E4_ovl_01);
+        do { func_80004CFC(*(temp_s2 + &D_80116F08_ovl_01), temp_a1, 1, &D_800B99E4_ovl_01); } while (0);
         func_8004CDB8_ovl_01(1);
         if (M2C_FIELD(&D_80119E48_ovl_01, s8 *, 3) >= 0) {
             func_80075638_ovl_01(7, 1);

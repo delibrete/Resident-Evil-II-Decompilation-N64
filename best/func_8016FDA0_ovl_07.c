@@ -1,4 +1,4 @@
-static inline int inline_fn(u8 *arg0, s32 arg1, int arg2)
+inline static int inline_fn(u8 *arg0, s32 arg1, int arg2)
 {
   return arg0[arg1 - arg2] * 2;
 }
@@ -44,7 +44,6 @@ void func_8016FDA0_ovl_07(void)
     s32 r = (*x) + t[8];
     s32 z = (*y) + t[9];
     func_80043650_ovl_01();
-    o.b[0] = f;
     if (o.b[2])
     {
       o.b[2] = (o.b[2] - 1) * 2;
@@ -66,6 +65,7 @@ void func_8016FDA0_ovl_07(void)
     new_var5 = (u16 *) (o.b + 20);
     *((u16 *) (o.b + 22)) = z;
     *new_var5 = *x;
+    o.b[0] = f;
     o.b[32] = p;
     o.b[25] = q;
     *((u16 *) (o.b + 28)) = r;

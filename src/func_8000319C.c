@@ -1,5 +1,19 @@
-extern int D_800117D0,D_800117F8; extern s32 func_800038F0(); extern s32 func_800042F4(); extern s32 func_8000305C(); extern s32 func_800022BC();
-s32 func_80003ED8(s32 arg0,s32 arg1,s32 *arg2,void *arg3){s32 v1=func_800038F0(0x13,0x13,0,0,arg2,arg1,arg3); if(v1==-3){*(void**)((u8*)arg3+24)=&D_800117D0;} else if(v1==-5){func_800042F4(*arg2,arg3);v1=-3;*(void**)((u8*)arg3+24)=&D_800117F8;}return v1;}
-void func_800073D0(u32 a0,s32 a1){u32 t0,t1,t2,t3=0x4000;if(a1<=0)return;if((u32)a1>=t3){t0=0x80000000;t1=t0+t3-0x20;do{t0+=0x20;}while(t0<t1);return;}t0=a0;t1=a0+a1;if(t0>=t1)return;t1-=0x20;t2=t0&31;t0-=t2;do{t0+=0x20;}while(t0<t1);}
-void func_8000319C(s32 a0,s32 a1,s32 a2){s32 v0=a1;func_8000305C(a0,0xE,v0,a2);}
-s32 func_80002FE8(void *arg0){s32 sp10; s32 t; void *p; s32 v; if(arg0){p=*(void**)((u8*)arg0+0x1c);v=-2;if(p){if(!*(void**)((u8*)arg0+0x24)){return -2;}t=*(s32*)((u8*)p+0x14);if(t)func_800022BC(t,arg0,&sp10);((void(*)(s32,void*))*(void**)((u8*)arg0+0x24))(*(s32*)((u8*)arg0+0x28),p);v=0;*(void**)((u8*)arg0+0x1c)=0;return v;}return v;}return -2;}
+/* machine draft (m2c) for gcc-2.8.1-pm-sn-as -G0 -mips3 -mgp32 -mfp32 -O2, tried by autopilot */
+#ifndef M2C_DEFINES
+#define M2C_DEFINES
+typedef s32 M2C_UNK;
+typedef s8 M2C_UNK8;
+typedef s16 M2C_UNK16;
+typedef s32 M2C_UNK32;
+#define M2C_FIELD(expr, type_ptr, offset) (*(type_ptr)((s8 *)(expr) + (offset)))
+#define M2C_BITWISE(type, expr) ((type)(expr))
+#define M2C_ERROR(desc) (0)
+#define M2C_CARRY 0
+#define M2C_OVERFLOW(a) (0)
+#endif
+
+s32 func_8000305C();
+
+void func_8000319C(s32 arg0, s32 arg1, s32 arg2) {
+    func_8000305C(arg0, 0xE, arg1, arg2);
+}

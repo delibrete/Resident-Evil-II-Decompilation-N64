@@ -20,7 +20,7 @@ s32 func_80089D34_ovl_01(void *, s32, s32, M2C_UNK); /* extern */
 extern M2C_UNK D_800C7650_ovl_01;
 
 void func_80165B78_ovl_33(void *arg0) {
-    M2C_UNK sp10;
+    M2C_UNK sp10[8];
     s16 sp30;
     s16 sp32;
     s16 sp34;

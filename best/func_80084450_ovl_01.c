@@ -32,9 +32,10 @@ void func_80084450_ovl_01(void)
     {
       s32 a = *((s16 *) (p + 0x215f8));
       s32 b = *((s16 *) (p + 0x215fa));
-      s32 c = *((s16 *) (p + 0x215fc));
+      s32 c;
       u16 n = *((u16 *) ((new_var2[a] + (b * 4)) + (c * new_var)));
       func_80026948_ovl_01(n, base);
+      c = *((s16 *) (p + 0x215fc));
       if (1)
       {
         func_80026AC0_ovl_01();

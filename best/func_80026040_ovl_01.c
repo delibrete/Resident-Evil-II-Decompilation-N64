@@ -33,15 +33,22 @@ typedef struct
 void func_8002A528_ovl_01(C2A *p);
 void func_80026040_ovl_01(void)
 {
+  volatile u8 *new_var3;
+  volatile u8 *new_var2;
+  volatile u8 *new_var;
   extern s32 func_80025A60_ovl_01(s32);
   *((volatile u8 *) (D_800C4EA8_ovl_01 + 0x17)) = 2;
+  new_var = 0x17 + D_800C4E58_ovl_01;
+  new_var3 = (volatile u8 *) new_var;
+  new_var = D_800C4E58_ovl_01;
+  new_var2 = new_var3;
   do
   {
-    *((volatile u8 *) (0x17 + D_800C4E58_ovl_01)) = 2;
+    *new_var2 = 2;
   }
   while (0);
   *((volatile u8 *) (D_800C4EA8_ovl_01 + 0x16)) = 0;
-  *((volatile u8 *) (D_800C4E58_ovl_01 + 0x16)) = 0;
+  *((volatile u8 *) (new_var + 0x16)) = 0;
   func_80025A60_ovl_01(2);
 }
 

@@ -18,7 +18,7 @@ extern M2C_UNK D_801664AC_ovl_23;
 void func_80162E5C_ovl_23(void *arg0) {
     M2C_UNK *var_a3;
     M2C_UNK *var_s0;
-    s16 temp_a0;
+    u16 temp_a0;
     s32 temp_s3;
     s32 temp_v0;
     s32 temp_v1;

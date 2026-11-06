@@ -1,26 +1,31 @@
-/* identical to func_80166A48_ovl_12 (matched), with its names changed by decompdecomp */
-extern s32 D_800C7650_ovl_01;
-extern s32 D_800E10D0_ovl_01;
-void func_80172CE8_overlay_063(s32 arg0, s32 arg1)
-{
-  char *new_var2;
-  s32 *var_a0;
-  u8 *new_var;
-  if (arg0 != 0)
-  {
-    new_var = (char *) (&D_800C7650_ovl_01);
-    var_a0 = *((s32 **) (new_var + 0x19D3C));
-  }
-  else
-  {
- do { } while (0);
-    var_a0 = &D_800E10D0_ovl_01;
-  }
-  new_var = &(*((u8 *) (((char *) var_a0) + 0x26F)));
-  new_var2 = (char *) var_a0;
-  *((s8 *) (new_var2 + 4)) = 2;
-  *((s8 *) (((char *) var_a0) + 5)) = (s8) (arg1 + 2);
-  *((s8 *) (new_var2 + 6)) = 0;
-  *((s8 *) (new_var2 + 7)) = 0;
-  *((u8 *) (new_var2 + 0x26F)) = (u8) ((*new_var) | 0x80);
+/* machine draft (m2c) for gcc-2.8.1-pm-sn-as -G0 -mips3 -mgp32 -mfp32 -O2, tried by autopilot */
+#ifndef M2C_DEFINES
+#define M2C_DEFINES
+typedef s32 M2C_UNK;
+typedef s8 M2C_UNK8;
+typedef s16 M2C_UNK16;
+typedef s32 M2C_UNK32;
+#define M2C_FIELD(expr, type_ptr, offset) (*(type_ptr)((s8 *)(expr) + (offset)))
+#define M2C_BITWISE(type, expr) ((type)(expr))
+#define M2C_ERROR(desc) (0)
+#define M2C_CARRY 0
+#define M2C_OVERFLOW(a) (0)
+#endif
+
+extern M2C_UNK D_800C7650;
+extern M2C_UNK D_800E10D0;
+
+void func_80172CE8_overlay_063(s32 arg0, s32 arg1) {
+    M2C_UNK *var_a0;
+
+    if (arg0 != 0) {
+        var_a0 = M2C_FIELD(&D_800C7650, M2C_UNK **, 0x19D3C);
+    } else {
+        var_a0 = &D_800E10D0;
+    }
+    M2C_FIELD(var_a0, s8 *, 4) = 2;
+    M2C_FIELD(var_a0, s8 *, 5) = (s8) (arg1 + 2);
+    M2C_FIELD(var_a0, s8 *, 6) = 0;
+    M2C_FIELD(var_a0, s8 *, 7) = 0;
+    M2C_FIELD(var_a0, u8 *, 0x26F) = (u8) (M2C_FIELD(var_a0, u8 *, 0x26F) | 0x80);
 }

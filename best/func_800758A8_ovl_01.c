@@ -42,5 +42,5 @@ void func_800758A8_ovl_01(void *arg0, void *arg1) {
     M2C_FIELD(&D_80119D40_ovl_01, f32 *, 0) = (f32) (temp_fv1 * (f32) temp_s0);
     M2C_FIELD(&D_80119D40_ovl_01, f32 *, 4) = (f32) (temp_fv1 * (f32) temp_s1);
     M2C_FIELD(&D_80119D40_ovl_01, f32 *, 8) = (f32) (temp_fv1 * (f32) temp_s2);
-    func_800AA658_ovl_01(&D_8013A110, &D_80119D28_ovl_01, &D_80119D34_ovl_01, &D_80119D40_ovl_01, &D_80119D4C_ovl_01, 0x7F);
+    do { func_800AA658_ovl_01(&D_8013A110, &D_80119D28_ovl_01, &D_80119D34_ovl_01, &D_80119D40_ovl_01, &D_80119D4C_ovl_01, 0x7F); } while (0);
 }
