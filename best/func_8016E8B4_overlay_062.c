@@ -18,6 +18,8 @@ extern M2C_UNK func_8016EDA0_overlay_062;
 extern M2C_UNK func_8016F078_overlay_062;
 
 void func_8016E8B4_overlay_062(void *arg0) {
+int __repair_literal;
+
     M2C_FIELD(arg0, s32 *, 4) = 0x01000000;
     M2C_FIELD(arg0, s16 *, 0x1F2) = 0xC8;
     M2C_FIELD(arg0, s8 *, 0x1ED) = -0x7E;
@@ -39,7 +41,9 @@ void func_8016E8B4_overlay_062(void *arg0) {
     M2C_FIELD(arg0, s16 *, 0x132) = 0;
     M2C_FIELD(arg0, s32 *, 0) = (s32) (M2C_FIELD(arg0, s32 *, 0) | 0x0C000000);
     func_80033A0C_ovl_01(arg0 + 0x208, 0, 0x02BC0320, 0, M2C_FIELD(arg0, s32 *, 0x234) + 0x4C);
-    M2C_FIELD((((M2C_FIELD(arg0, u8 *, 8) - 0x10) * 4) + &D_800C7650), M2C_UNK **, 0x18298) = &func_8016EDA0_overlay_062;
+__repair_literal = 4;
+
+    M2C_FIELD((((M2C_FIELD(arg0, u8 *, 8) - 0x10) * __repair_literal) + &D_800C7650), M2C_UNK **, 0x18298) = &func_8016EDA0_overlay_062;
     M2C_FIELD((((M2C_FIELD(arg0, u8 *, 8) - 0x10) * 4) + &D_800C7650), M2C_UNK **, 0x18398) = &func_8016F078_overlay_062;
     M2C_FIELD(arg0, s32 *, 0) = (s32) (M2C_FIELD(arg0, s32 *, 0) | 4);
 }

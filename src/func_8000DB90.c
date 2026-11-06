@@ -1,4 +1,4 @@
-/* identical to osStartThread in Resident Evil II (matched), with its names changed by decompdecomp */
+/* identical to osStartThread in Resident Evil II (local match library) (matched), with its names changed by decompdecomp */
 /* identical to func_8000DB90 in V-RALLY (matched), with its names changed by decompdecomp */
  
 

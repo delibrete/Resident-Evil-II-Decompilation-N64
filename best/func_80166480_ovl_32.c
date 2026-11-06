@@ -21,6 +21,8 @@ typedef struct {
 
 void func_80166480_ovl_32(S_a *p, S_b *arg1)
 {
+int __repair_literal;
+
     s16 sp10[3];
     u8 *s2;
     s32 s4;
@@ -50,7 +52,9 @@ s32 __repair_result_s0;
     case 1:
         s0 = func_80033634_ovl_01() & 0xFF;
         v = arg1->unk_120;
-        *(u16 *)(v + 0xC) = *(u16 *)(v + 0xC) + 0x20 + s0 * 4 * (1 - (p->unk_2BA & 1) * 2);
+__repair_literal = 4;
+
+        *(u16 *)(v + 0xC) = *(u16 *)(v + 0xC) + 0x20 + s0 * __repair_literal * (1 - (p->unk_2BA & 1) * 2);
         v = arg1->unk_120;
         if (*(s16 *)(v + 0xC) >= 0x1F41) {
             *(s16 *)(v + 0xC) = 0x1F40;

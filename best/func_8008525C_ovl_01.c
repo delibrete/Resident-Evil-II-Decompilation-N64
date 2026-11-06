@@ -27,10 +27,10 @@ s32 func_8008525C_ovl_01(s32 arg0, s32 arg1) {
     if (temp_s0 >= 0) {
         M2C_FIELD(&D_801247F8_ovl_01, s32 *, 4) = (s32) M2C_FIELD(((temp_s0 * 0x10) + &D_801247F8_ovl_01), s32 *, 0x28);
     }
-    func_80007300(temp_a0);
-    temp_a0_2 = ((temp_s0 >> 5) * 4) + &D_801247F8_ovl_01;
+    do { func_80007300(temp_a0); } while (0);
+    temp_a0_2 = (char *)(((temp_s0 >> 5) * 4)); temp_a0_2 += (s32)(&D_801247F8_ovl_01);
     M2C_FIELD(temp_a0_2, s32 *, 0x14) = (s32) (M2C_FIELD(temp_a0_2, s32 *, 0x14) | (1 << (temp_s0 & 0x1F)));
-    temp_v1 = (temp_s0 * 0x10) + &D_801247F8_ovl_01;
+    temp_v1 = (char *)((temp_s0 * 0x10)); temp_v1 += (s32)(&D_801247F8_ovl_01);
     M2C_FIELD(temp_v1, s32 *, 0x28) = arg0;
     M2C_FIELD(temp_v1, s32 *, 0x30) = arg1;
     M2C_FIELD(temp_v1, s32 *, 0x2C) = 0;

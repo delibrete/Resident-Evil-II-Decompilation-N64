@@ -120,8 +120,8 @@ loop_27:
                                 temp_v1_3 = ((((var_v0_6 + var_t0_2) * 4) + var_t0_2) << 5) + &D_801443E8;
                                 var_v0_7 = var_t0_2 * 4;
                                 if (M2C_FIELD(temp_v1_3, u8 *, 0xBD) == 0) {
-                                    if (M2C_FIELD(temp_v1_3, u16 *, 0xBA) == (arg2 & 0xFFFF)) {
-                                        var_t3 += 1;
+                                    if (M2C_FIELD(temp_v1_3, u16 *, 0xBA) == (arg2 & 0xFFFF)) {/*__repair_loop_weight*/do {
+                                        var_t3 += 1;} while (0);
                                     }
                                     var_v0_7 = var_t0_2 * 4;
                                 }

@@ -29,7 +29,7 @@ void func_800342B0_ovl_01(void *arg0, s16 arg1)
   u16 temp_a2_3;
   u16 temp_s2;
   int var_a1;
-  u16 var_a1_2;
+  int var_a1_2;
   u16 var_v0;
   void *temp_a0;
   void *temp_a1;

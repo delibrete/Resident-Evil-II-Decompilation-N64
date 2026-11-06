@@ -1,4 +1,5 @@
-/* machine draft (m2c) for gcc-2.7.2-kmc -G0 -mips3 -mgp32 -mfp32 -O2 -mcpu=r4600, tried by autopilot */
+static __inline__ u16 __repair_inline(u16 a) { return a; }
+/* machine draft (m2c) for gcc-2.7.2-kmc -G0 -mips3 -mgp32 -mfp32 -O2, tried by autopilot */
 #ifndef M2C_DEFINES
 #define M2C_DEFINES
 typedef s32 M2C_UNK;
@@ -12,10 +13,10 @@ typedef s32 M2C_UNK32;
 #define M2C_OVERFLOW(a) (0)
 #endif
 
-s32 func_8009F850_ovl_01(void *, void *, u16 *, M2C_UNK, s32); /* extern */
-M2C_UNK func_800A5618_ovl_01(void *, void *, s32, void **); /* extern */
-M2C_UNK func_800A5660_ovl_01();                     /* extern */
-extern u8 D_801362B0_ovl_01;
+s32 func_8009F850_overlay_001(void *, void *, u16 *, M2C_UNK, s32); /* extern */
+M2C_UNK func_800A5618_overlay_001(void *, void *, s32, void **); /* extern */
+M2C_UNK func_800A5660_overlay_001();                /* extern */
+extern u8 D_801362B0_overlay_001;
 extern s16 D_80147F70;
 extern void *D_80147F80;
 
@@ -29,7 +30,7 @@ s32 func_800A8C94_ovl_01(s32 arg0, s32 arg1, M2C_UNK arg2, s32 arg3, u8 arg4) {
     void *temp_s1;
     void *temp_s2;
 
-    if (D_801362B0_ovl_01 != 0) {
+    if (D_801362B0_overlay_001 != 0) {
         var_a2 = 0;
         if (D_80147F70 > 0) {
             var_a3 = &D_80147F80;
@@ -38,7 +39,7 @@ loop_3:
             if (M2C_FIELD(temp_a1, u16 *, 4) == (arg0 & 0xFFFF)) {
                 if (M2C_FIELD(temp_a1, u16 *, 6) == 0) {
                     var_s0_2 = temp_a1 + (M2C_FIELD(temp_a1, s32 *, 0x24) + 8);
-                    var_a0 = *var_s0_2;
+                    var_a0 = __repair_inline(*var_s0_2);
                     temp_s2 = temp_a1 + (M2C_FIELD(temp_a1, s32 *, 0x20) + 8);
                     temp_s1 = temp_a1 + (M2C_FIELD(temp_a1, s32 *, 0x1C) + 8);
                     if (var_a0 != 0xFFFF) {
@@ -52,11 +53,11 @@ loop_6:
                             goto loop_6;
                         }
                         if (arg4 & 0xFF) {
-                            var_s0 = func_8009F850_ovl_01(temp_s1, temp_s2, var_s0_2, arg2, arg3);
+                            var_s0 = func_8009F850_overlay_001(temp_s1, temp_s2, var_s0_2, arg2, arg3);
                         } else {
-                            func_800A5618_ovl_01(temp_s1, temp_a1, var_a2, var_a3);
-                            var_s0 = func_8009F850_ovl_01(temp_s1, temp_s2, var_s0_2, arg2, arg3);
-                            func_800A5660_ovl_01();
+                            func_800A5618_overlay_001(temp_s1, temp_a1, var_a2, var_a3);
+                            var_s0 = func_8009F850_overlay_001(temp_s1, temp_s2, var_s0_2, arg2, arg3);
+                            func_800A5660_overlay_001();
                         }
                         return var_s0;
                     }

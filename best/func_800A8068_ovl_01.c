@@ -63,8 +63,8 @@ void func_800A8068_ovl_01(s32 arg0) {
         M2C_FIELD(var_a1, s32 *, 0x178) = 0;
         M2C_FIELD(var_a1, s16 *, 0x17C) = 0;
         M2C_FIELD(var_a1, s32 *, 0x8C) = 0x1F4;
-        M2C_FIELD(var_a1, s8 *, 0x98) = 0;
-        var_a2 += 1;
+        M2C_FIELD(var_a1, s8 *, 0x98) = 0;/*__repair_loop_weight*/do {
+        var_a2 += 1;} while (0);
         var_a1 += 0x1A0;
     } while (__repair_inline(0x20, var_a2));
     var_a2 = 0;

@@ -1,4 +1,4 @@
-/* machine draft (m2c) for gcc-2.7.2-kmc -G0 -mips3 -mgp32 -mfp32 -O2 -mcpu=r4600, tried by autopilot */
+/* machine draft (m2c) for gcc-2.8.1-pm-sn-as -G0 -mips3 -mgp32 -mfp32 -O2, tried by autopilot */
 #ifndef M2C_DEFINES
 #define M2C_DEFINES
 typedef s32 M2C_UNK;
@@ -12,7 +12,7 @@ typedef s32 M2C_UNK32;
 #define M2C_OVERFLOW(a) (0)
 #endif
 
-s32 func_8004F57C_ovl_01(void *, void *);           /* extern */
+s32 func_8004F57C_overlay_001(void *, void *);      /* extern */
 
 void func_8004F514_ovl_01(void *arg0, void *arg1, s32 arg2, s32 arg3) {
     s32 temp_a0;
@@ -30,5 +30,5 @@ void func_8004F514_ovl_01(void *arg0, void *arg1, s32 arg2, s32 arg3) {
     }
     M2C_FIELD(arg0, s32 *, 0x30) = var_v1;
     M2C_FIELD(temp_t0, s32 *, 8) = (s32) (M2C_FIELD(temp_t0, s32 *, 8) + (var_v1 - temp_a0));
-    M2C_FIELD(arg0, s32 *, 0x280) = func_8004F57C_ovl_01(arg0, temp_t0);
+    M2C_FIELD(arg0, s32 *, 0x280) = func_8004F57C_overlay_001(arg0, temp_t0);
 }

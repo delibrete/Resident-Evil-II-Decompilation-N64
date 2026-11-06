@@ -5,8 +5,8 @@ extern u32 func_800AB4B4_ovl_01(u32 *, void *);
 void func_800AF828_ovl_01(void *arg0, void *arg1) {
     u32 sp10;
     u32 temp_v0;
-    u32 temp_a0;
-    u32 temp_v1;
+    unsigned char temp_a0;
+    char temp_v1;
     s32 var_a2;
     u8 *v0 = (u8 *)arg1;
 
@@ -21,9 +21,7 @@ void func_800AF828_ovl_01(void *arg0, void *arg1) {
     } else {
         func_800AB4B4_ovl_01(&sp10, arg0);
     }
-    if (sp10 == 0) {
-        ((u32 *)arg0)[4] = ((u32 *)arg0)[4] & ~0x4000;
-    } else {
+    if (sp10 != 0) {
         ((u32 *)arg0)[70] = sp10;
         ((u32 *)arg0)[4] = ((u32 *)arg0)[4] | 0x4000;
         temp_v0 = ((u32 *)arg1)[0];
@@ -48,5 +46,7 @@ void func_800AF828_ovl_01(void *arg0, void *arg1) {
             }
             ((s8 *)arg0)[0x78] = (s8)var_a2;
         }
+    } else {
+        ((u32 *)arg0)[4] = ((u32 *)arg0)[4] & ~0x4000;
     }
 }

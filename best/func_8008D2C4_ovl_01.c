@@ -6,18 +6,20 @@ s32 func_8008D2C4_ovl_01(s32 arg0)
   s32 temp_s0;
   s32 temp_s0_2;
   s32 var_s2;
+  int new_var;
   s32 var_v0;
   char *var_s1;
   u16 temp_a0;
   var_s2 = 0;
   var_s1 = &D_8012BE60_ovl_01;
   temp_s0 = arg0 + 7;
+  new_var = 2;
   do
   {
     temp_s0_2 = ~7;
     temp_s0_2 = temp_s0 & temp_s0_2;
     temp_a0 = *((u16 *) var_s1);
-    var_s1 += 2;
+    var_s1 += (temp_s0 = new_var);
     var_s2 += 1;
     do
     {

@@ -1,4 +1,4 @@
-/* machine draft (m2c) for gcc-2.7.2-kmc -G0 -mips3 -mgp32 -mfp32 -O2, tried by autopilot */
+/* machine draft (m2c) for gcc-2.8.1-pm-sn-as -G0 -mips3 -mgp32 -mfp32 -O2, tried by autopilot */
 #ifndef M2C_DEFINES
 #define M2C_DEFINES
 typedef s32 M2C_UNK;
@@ -12,8 +12,8 @@ typedef s32 M2C_UNK32;
 #define M2C_OVERFLOW(a) (0)
 #endif
 
-M2C_UNK func_80088744_ovl_01(M2C_UNK, s32);         /* extern */
+M2C_UNK func_80088744_overlay_001(M2C_UNK, s32);    /* extern */
 
 void func_800888CC_ovl_01(s32 arg0, M2C_UNK arg1) {
-    func_80088744_ovl_01(arg1, arg0);
+    func_80088744_overlay_001(arg1, arg0);
 }

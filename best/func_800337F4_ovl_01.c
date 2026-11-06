@@ -22,6 +22,7 @@ void func_800337F4_ovl_01(void) {
     s32 t0;
     s32 size;
     s32 i;
+s32 __repair_phase_i;
     s32 n;
 
     func_80004CFC(0x1EC2, D_80138640, 1, D_800B864C_ovl_01);
@@ -57,7 +58,7 @@ void func_800337F4_ovl_01(void) {
         u8 *elem = D_800DFBB4_ovl_01;
         u8 *slot = elem + 0x18;
         u8 *tbl = D_801379B0 + 0x32;
-        i = 0x32;
+        __repair_phase_i = 0x32;
         do {
             u8 *a0 = elem + 0x40;
             u8 *a1 = slot;
@@ -77,9 +78,9 @@ void func_800337F4_ovl_01(void) {
             *(s16 *)(tbl - 0x10) = 0;
             *(s16 *)(tbl + 0) = 0;
             *(s16 *)(tbl + 6) = (u16)(*(u16 *)(eb + 6) - 1) << 6;
-            i--;
+            __repair_phase_i--;
             func_800824A4_ovl_01(a0, a1, 0x28);
             tbl += 0x40;
-        } while (i != 0);
+        } while (__repair_phase_i != 0);
     }
 }

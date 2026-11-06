@@ -12,7 +12,7 @@ typedef s32 M2C_UNK32;
 #define M2C_OVERFLOW(a) (0)
 #endif
 
-M2C_UNK func_8006B40C_ovl_01(s32, s32, M2C_UNK);    /* extern */
+M2C_UNK func_8006B40C_overlay_001(s32, s32, M2C_UNK); /* extern */
 
 void func_8006B3B0_ovl_01(void) {
     s32 var_s0;
@@ -23,7 +23,7 @@ loop_1:
     var_s0 = 0;
     if (var_s1 < 5) {
         do {
-            func_8006B40C_ovl_01(var_s1, var_s0, 0);
+            func_8006B40C_overlay_001(var_s1, var_s0, 0);
             var_s0 += 1;
         } while (var_s0 < 3);
         var_s1 += 1;

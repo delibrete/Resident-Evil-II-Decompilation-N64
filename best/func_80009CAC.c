@@ -123,8 +123,8 @@ block_19:
                             sp5C = 4;
                             sp5E = 6;
 loop_23:
-                            var_v0 = func_80008B70(M2C_FIELD(arg0, s32 *, 4), M2C_FIELD(arg0, s32 *, 8), M2C_FIELD(var_s2_2, u16 *, 0x40), arg2, 1);
-                            var_s0_2 += 1;
+                            var_v0 = func_80008B70(M2C_FIELD(arg0, s32 *, 4), M2C_FIELD(arg0, s32 *, 8), M2C_FIELD(var_s2_2, u16 *, 0x40), arg2, 1);/*__repair_loop_weight*/do {
+                            var_s0_2 += 1;} while (0);
                             if (var_v0 == 0) {
                                 var_s2_2 += 2;
                                 if (var_s0_2 >= 4) {

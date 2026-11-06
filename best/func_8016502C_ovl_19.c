@@ -1,85 +1,100 @@
-typedef struct 
+s32 func_80032B8C_ovl_01(void *, s32);
+s32 func_800334F8_ovl_01(void *, s32, s32, s32);
+s32 func_80033634_ovl_01();
+s32 func_800377B0_ovl_01(s32, s16, void *, s32);
+s32 func_80077B0C_ovl_01(s32, void *);
+s32 func_80089D34_ovl_01(void *, s32, s32, s32);
+void func_8016502C_ovl_19(void *arg0, s32 arg1, s32 arg2)
 {
-  u8 b[0x300];
-} O;
-extern void func_80077B0C_ovl_01(s32, s32 *);
-extern s32 func_80089D34_ovl_01(O *, s32, s32, s32);
-extern void func_80032B8C_ovl_01(O *, s32);
-extern void func_800334F8_ovl_01(O *, s32, s32, s32);
-extern s32 func_80033634_ovl_01(void);
-extern void func_800377B0_ovl_01(s32, s32, void *, s32);
-void func_8016502C_ovl_19(O *p, s32 a1, s32 a2)
-{
-  s16 *new_var;
-  u8 *q = *((u8 **) (&p->b[0x234]));
-  s32 i;
-  switch (p->b[6])
+  int __repair_constant = 0x40;
+  u8 temp_v1_3;
+  u8 temp_v1_4;
+  void *temp_s0;
+  void *temp_s0_2;
+  void *temp_s0_3;
+  void *temp_s2;
+  void *temp_v1_2;
+  __repair_constant = *((u8 *) (((char *) arg0) + 6));
+  switch (__repair_constant)
   {
     case 0:
-      *((s32 *) (&p->b[0x1E8])) = 0x700;
-      p->b[6] = 1;
-      func_80077B0C_ovl_01(0x4000001, (s32 *) (&p->b[0x28]));
-      func_80089D34_ovl_01(p, a1, a2, 0x200);
-      break;
+      *((s32 *) (((char *) arg0) + 0x1E8)) = 0x700;
+      *((u8 *) (((char *) arg0) + 6)) = 1U;
+      func_80077B0C_ovl_01(0x04000001, arg0 + 0x28);
 
     case 1:
-      *((s32 *) (&p->b[0x1E8])) = 0x4000700;
-      p->b[6] = 3;
-      p->b[0x26F] &= 0x7F;
-    {
-      func_80089D34_ovl_01(p, a1, a2, 0x100);
-    }
-      if (0)
-    {
-      *((s32 *) (&p->b[4])) = 0x1000000;
-    }
-      break;
+      func_80089D34_ovl_01(arg0, arg1, arg2, 0x200);
+      return;
 
     case 2:
-      *((s32 *) (&p->b[0x1E8])) = 0x1000F00;
-      p->b[6] = 5;
-      p->b[0x25C] = 1;
-      *((s32 *) (&q[0x130])) = 0x40;
-      *((s32 *) (&q[0x134])) = 0x101010;
-      *((s32 *) (&q[0])) |= 0x80;
-      do
-    {
-      func_80089D34_ovl_01(p, a1, a2, 0x100);
-    }
-    while (0);
-      break;
+      *((s32 *) (((char *) arg0) + 0x1E8)) = 0x04000700;
+      *((u8 *) (((char *) arg0) + 6)) = 3U;
+      *((u8 *) (((char *) arg0) + 0x26F)) = (u8) ((*((u8 *) (((char *) arg0) + 0x26F))) & 0x7F);
 
-    new_var = &(*((s16 *) (&p->b[0x66])));
     case 3:
-      *((s32 *) (&p->b[0x1E8])) = 0x2000F00;
-      p->b[6] = 7;
-      *((s32 *) (&q[0xBC0])) |= 0x80;
-      *((s32 *) (&q[0xCBC])) = 0x40;
-      *((s32 *) (&q[0xCC0])) = 0x101010;
-      do
+      if (func_80089D34_ovl_01(arg0, arg1, arg2, 0x100) != 0)
     {
-      func_80089D34_ovl_01(p, a1, a2, 0x100);
+      *((s32 *) (((char *) arg0) + 4)) = 0x01000000;
+      return;
     }
-    while (0);
-      break;
+
+    default:
+      return;
 
     case 4:
-      *((s32 *) (&p->b[0x1E8])) = 0x3000F00;
-      p->b[6] = 9;
-      func_800377B0_ovl_01(0x3000F00, *new_var, q + 0xBF8, 0);
-      func_800377B0_ovl_01(0x21000, (*((s16 *) (&p->b[0x66]))) + 0x800, q + 0xBF8, 0);
-      for (i = 0; i < 2; i++)
-    {
-      func_80033634_ovl_01();
-    }
+      temp_s0 = *((void **) (((char *) arg0) + 0x234));
+      *((s32 *) (((char *) arg0) + 0x1E8)) = 0x01000F00;
+      *((u8 *) (((char *) arg0) + 6)) = 5U;
+      *((s8 *) (((char *) arg0) + 0x25C)) = 1;
+      *((s32 *) (((char *) temp_s0) + 0x130)) = __repair_constant;
+      *((s32 *) (((char *) temp_s0) + 0x134)) = 0x101010;
+      *((s32 *) (((char *) temp_s0) + 0)) = (s32) ((*((s32 *) (((char *) temp_s0) + 0))) | 0x80);
 
-      func_800334F8_ovl_01(p, a1, a2, 0);
-      func_80089D34_ovl_01(p, a1, a2, 0x100);
-      func_80032B8C_ovl_01(p, 0);
-      break;
+    case 5:
+
+    case 7:
+      block_9:
+    func_80089D34_ovl_01(arg0, arg1, arg2, 0x100);
+
+      return;
+
+    case 6:
+      temp_v1_2 = *((void **) (((char *) arg0) + 0x234));
+      *((s32 *) (((char *) arg0) + 0x1E8)) = 0x02000F00;
+      *((u8 *) (((char *) arg0) + 6)) = 7U;
+      temp_s0_2 = temp_v1_2 + 0xBC0;
+      *((s32 *) (((char *) temp_v1_2) + 0xBC0)) = (s32) ((*((s32 *) (((char *) temp_v1_2) + 0xBC0))) | 0x80);
+      *((s32 *) (((char *) temp_s0_2) + 0x130)) = __repair_constant;
+      *((s32 *) (((char *) temp_s0_2) + 0x134)) = 0x101010;
+      goto block_9;
+
+    case 8:
+      *((s32 *) (((char *) arg0) + 0x1E8)) = 0x03000F00;
+      *((u8 *) (((char *) arg0) + 6)) = 9U;
+      temp_s0_3 = (*((void **) (((char *) arg0) + 0x234))) + 0xBF8;
+      do { func_800377B0_ovl_01(0x213E8, *((s16 *) (((char *) arg0) + 0x66)), temp_s0_3, 0); } while (0);
+      func_800377B0_ovl_01(0x21000, (s16) (((u16) (*((s16 *) (((char *) arg0) + 0x66)))) + 0x800), temp_s0_3, 0);
+
+    case 9:
+      temp_s2 = *((void **) (((char *) arg0) + 0x234));
+      temp_v1_3 = *((u8 *) (((char *) arg0) + 0x1E9));
+      if ((temp_v1_3 < 0xFU) && (!(temp_v1_3 & 1)))
+    {
+      func_800377B0_ovl_01(((func_80033634_ovl_01() & 0xFF) * 8) + 0x400, *((s16 *) (((char *) arg0) + 0x66)), temp_s2 + 0xBF8, 0);
+    }
+      temp_v1_4 = *((u8 *) (((char *) arg0) + 0x1E9));
+      if (((temp_v1_4 == 0x2D) || (temp_v1_4 == 0x30)) || (temp_v1_4 == 5))
+    {
+      func_800377B0_ovl_01(0x21000, *((s16 *) (((char *) arg0) + 0x66)), (temp_s2 + 0xBC0) + 0x38, 0);
+    }
+      func_800334F8_ovl_01(arg0, arg1, arg2, 0);
+      *((u8 *) (((char *) arg0) + 6)) = (u8) ((*((u8 *) (((char *) arg0) + 6))) + func_80089D34_ovl_01(arg0, arg1, arg2, 0x100));
+      func_80032B8C_ovl_01(arg0, 0);
+      return;
 
     case 10:
-      *((s32 *) (&p->b[4])) = 0x7000000;
+      *((s32 *) (((char *) arg0) + 4)) = 0x07000000;
+      break;
 
   }
 

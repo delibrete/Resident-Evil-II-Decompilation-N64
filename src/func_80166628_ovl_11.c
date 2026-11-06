@@ -1,3 +1,5 @@
+/* identical to func_801731B8_overlay_039 (matched), with its names changed by decompdecomp */
+/* identical to func_80166628_ovl_11 (matched), with its names changed by decompdecomp */
 /* machine draft (m2c) for gcc-2.7.2-kmc -G0 -mips3 -mgp32 -mfp32 -O2 -mcpu=r4600, tried by autopilot */
 #ifndef M2C_DEFINES
 #define M2C_DEFINES

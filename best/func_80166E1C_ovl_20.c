@@ -79,7 +79,7 @@ void func_80166E1C_ovl_20(u8 *arg0, s32 arg1, s32 arg2)
       func_80164CC0_ovl_20(arg0);
     }
       *((u16 *) (arg0 + 0x2BA)) |= 0x4000;
-      func_800334F8_ovl_01(arg0, arg1, arg2, new_var2);
+      do { func_800334F8_ovl_01(arg0, arg1, arg2, new_var2); } while (0);
       break;
 
     case 1:

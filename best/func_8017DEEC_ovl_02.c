@@ -56,6 +56,8 @@ extern s32 D_801865FC_ovl_02;
 extern M2C_UNK *D_80186C14_ovl_02;
 
 void func_8017DEEC_ovl_02(void) {
+int __repair_constant = 2;
+
     s32 sp28;
     s32 sp2C;
     s32 sp30;
@@ -415,7 +417,7 @@ block_89:
     if (D_80185720_ovl_02 != 3) {
         goto block_93;
     }
-    sp7C = 2;
+    sp7C = __repair_constant;
     goto block_94;
 block_93:
     sp7C = 1;
@@ -464,7 +466,7 @@ block_103:
     if (D_80185720_ovl_02 != 3) {
         goto block_105;
     }
-    sp7C = 2;
+    sp7C = __repair_constant;
     goto block_106;
 block_105:
     temp_v0 = D_80185720_ovl_02 == 2;

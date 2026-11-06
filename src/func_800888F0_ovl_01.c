@@ -15,14 +15,14 @@ typedef s32 M2C_UNK32;
 M2C_UNK func_8000BE60(M2C_UNK, M2C_UNK *, M2C_UNK *, M2C_UNK); /* extern */
 M2C_UNK func_8000DB90(M2C_UNK *);                   /* extern */
 M2C_UNK osCreateThread(M2C_UNK *, M2C_UNK, M2C_UNK *, M2C_UNK, M2C_UNK *, s32); /* extern */
-extern M2C_UNK D_80088648_ovl_01;
-extern M2C_UNK D_800C4E40_ovl_01;
-extern M2C_UNK D_8012BAA0_ovl_01;
-extern M2C_UNK D_8012BC60_ovl_01;
-extern M2C_UNK D_8012BC78_ovl_01;
+extern M2C_UNK D_80088648_overlay_001;
+extern M2C_UNK D_800C4E40_overlay_001;
+extern M2C_UNK D_8012BAA0_overlay_001;
+extern M2C_UNK D_8012BC60_overlay_001;
+extern M2C_UNK D_8012BC78_overlay_001;
 
 void func_800888F0_ovl_01(void) {
-    func_8000BE60(0x96, &D_8012BC60_ovl_01, &D_8012BC78_ovl_01, 8);
-    osCreateThread(&D_8012BAA0_ovl_01, 9, &D_80088648_ovl_01, 0, &D_800C4E40_ovl_01, 0x3C);
-    func_8000DB90(&D_8012BAA0_ovl_01);
+    func_8000BE60(0x96, &D_8012BC60_overlay_001, &D_8012BC78_overlay_001, 8);
+    osCreateThread(&D_8012BAA0_overlay_001, 9, &D_80088648_overlay_001, 0, &D_800C4E40_overlay_001, 0x3C);
+    func_8000DB90(&D_8012BAA0_overlay_001);
 }

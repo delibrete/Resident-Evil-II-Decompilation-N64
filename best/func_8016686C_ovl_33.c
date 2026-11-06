@@ -1,4 +1,4 @@
-extern s32 D_800C7650_ovl_01; extern s32 D_800E10D0_ovl_01; s32 func_8004D3D0_ovl_01(void*);
+extern s32 D_800C7650_ovl_01; extern s32 D_800E10D0_ovl_01; s32 func_8004D3D0(void *arg0, void*);
 void func_8016686C_ovl_33(void *arg0){
 int __repair_literal;
 
@@ -17,5 +17,5 @@ __repair_literal = 4;
  *(s32*)((u8*)arg0+0x188)= (((s32)delta[2]>>1)) + (*(s32*)((u8*)arg0+0x168));
  *(s8*)((u8*)arg0+0xd)=-1;
  mask=*(u16*)((u8*)entry+0x2bc);mask &= 0xfff9;*(u16*)((u8*)entry+0x2bc)=mask;
- mask|=func_8004D3D0_ovl_01(&D_800E10D0_ovl_01)*6;*(u16*)((u8*)entry+0x2bc)=mask;
+ mask|=func_8004D3D0(arg0, &D_800E10D0_ovl_01)*6;*(u16*)((u8*)entry+0x2bc)=mask;
 }

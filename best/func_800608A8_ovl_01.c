@@ -1,1 +1,0 @@
-s32 func_800608A8_ovl_01(s32 a,s32 b,s32 c,s16 *d) { s32 t; s32 x; s32 y; t=c+(a-b); t&=0xfff; x=b-c; if(t<((s32)(c<<16)>>15)) { *d=(s16)a; return 0; } y=x; if((u32)t<0x801U) y=x+c*2; *d=y; return 1; }

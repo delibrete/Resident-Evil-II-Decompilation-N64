@@ -12,12 +12,12 @@ typedef s32 M2C_UNK32;
 #define M2C_OVERFLOW(a) (0)
 #endif
 
-M2C_UNK func_801662F0_ovl_12();                     /* extern */
+M2C_UNK func_801662F0_overlay_012();                /* extern */
 
 void func_801662B8_ovl_12(void *arg0) {
     if (M2C_FIELD(arg0, u8 *, 5) == 0) {
         M2C_FIELD(arg0, u8 *, 5) = 1U;
         M2C_FIELD(arg0, s32 *, 0) = (s32) (M2C_FIELD(arg0, s32 *, 0) | 2);
     }
-    func_801662F0_ovl_12();
+    func_801662F0_overlay_012();
 }

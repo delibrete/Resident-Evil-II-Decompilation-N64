@@ -12,12 +12,12 @@ typedef s32 M2C_UNK32;
 #define M2C_OVERFLOW(a) (0)
 #endif
 
-M2C_UNK func_8008C31C_ovl_01(u8, s32);              /* extern */
-s32 func_8008C4FC_ovl_01(u8);                       /* extern */
-M2C_UNK func_8008C548_ovl_01(void *);               /* extern */
-extern M2C_UNK D_800C7650_ovl_01;
-extern u8 D_8012BF40_ovl_01;
-extern M2C_UNK D_8012FF48_ovl_01;
+M2C_UNK func_8008C31C_overlay_001(u8, s32);         /* extern */
+s32 func_8008C4FC_overlay_001(u8);                  /* extern */
+M2C_UNK func_8008C548_overlay_001(void *);          /* extern */
+extern M2C_UNK D_800C7650_overlay_001;
+extern u8 D_8012BF40_overlay_001;
+extern M2C_UNK D_8012FF48_overlay_001;
 
 void func_8008D070_ovl_01(void) {
 char *__repair_addr;
@@ -26,19 +26,19 @@ char *__repair_addr;
     u8 var_s2;
     void *temp_v0;
     void *temp_v0_2;
-__repair_addr = (char *)(((D_8012BF40_ovl_01 * 4) + &D_800C7650_ovl_01));
+__repair_addr = (char *)(((D_8012BF40_overlay_001 * 4) + &D_800C7650_overlay_001));
 
 
-    temp_v0 = (M2C_FIELD(__repair_addr, u8 *, 0x21818) * 8) + &D_8012FF48_ovl_01;
+    temp_v0 = (M2C_FIELD(__repair_addr, u8 *, 0x21818) * 8) + &D_8012FF48_overlay_001;
     var_s2 = M2C_FIELD(temp_v0, u8 *, 0);
-    temp_v0_2 = (func_8008C4FC_ovl_01(*M2C_FIELD(temp_v0, u8 **, 4)) * 4) + &D_800C7650_ovl_01;
+    temp_v0_2 = (func_8008C4FC_overlay_001(*M2C_FIELD(temp_v0, u8 **, 4)) * 4) + &D_800C7650_overlay_001;
     temp_v1 = M2C_FIELD(temp_v0_2, u8 *, 0x21819);
     if (var_s2 < temp_v1) {
         M2C_FIELD(temp_v0_2, u8 *, 0x21819) = (u8) (temp_v1 - var_s2);
     } else {
         var_s2 = temp_v1;
         M2C_FIELD(temp_v0_2, s8 *, 0x21818) = 0;
-        func_8008C548_ovl_01(temp_v0_2 + 0x20000);
+        func_8008C548_overlay_001(temp_v0_2 + 0x20000);
     }
-    func_8008C31C_ovl_01(D_8012BF40_ovl_01, M2C_FIELD(((D_8012BF40_ovl_01 * 4) + &D_800C7650_ovl_01), u8 *, 0x21819) + temp_v1);
+    func_8008C31C_overlay_001(D_8012BF40_overlay_001, M2C_FIELD(((D_8012BF40_overlay_001 * 4) + &D_800C7650_overlay_001), u8 *, 0x21819) + temp_v1);
 }

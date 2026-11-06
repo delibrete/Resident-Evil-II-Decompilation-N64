@@ -1,4 +1,4 @@
-static inline static static int __repair_inline(s32 a, s32 b)
+inline static static static int __repair_inline(s32 a, s32 b)
 {
   return a > b;
 }
@@ -10,6 +10,7 @@ extern void *D_8013BC20;
 extern s32 D_80143BF0;
 extern u8 D_80143BF4;
 extern void *D_80143BF8;
+typedef struct { void * value; } __repair_field_0;
 u8 func_8009FE58_ovl_01(void)
 {
   s32 sp28;
@@ -56,7 +57,8 @@ u8 func_8009FE58_ovl_01(void)
       loop_3:
       temp_t0 = D_80143BF8 + var_s3;
 
-      temp_s2 = (*((u16 *) (((char *) (*((void **) (((char *) temp_t0) + 0x574)))) + 0))) + (*((u32 *) (((char *) temp_t0) + 0x570)));
+      temp_s2 = *((u16 *) (((char *) (*((void **) (((char *) temp_t0) + 0x574)))) + 0));
+      temp_s2 += *((u32 *) (((char *) temp_t0) + 0x570));
       if (((u32) ((*((s32 *) (((char *) temp_t0) + 0x56C))) + (*((s32 *) (((char *) __repair_cached_pointer) + 0x120))))) >= temp_s2)
       {
         *((u32 *) (((char *) temp_t0) + 0x570)) = temp_s2;
@@ -76,13 +78,14 @@ u8 func_8009FE58_ovl_01(void)
             {
               temp_v0_2 = 0x7F;
               temp_v0_2 = temp_a3 & temp_v0_2;
-              temp_a1_2 = temp_a1 & 0xFF;
+              temp_a1_2 = 0xFF;
+              temp_a1_2 = temp_a1 & temp_a1_2;
               if (temp_a1_2 != 9)
               {
                 temp_v1 = *((u8 *) (((char *) (temp_v0_2 + D_80143BF8)) + 8));
                 if (temp_v1 != 0xFF)
                 {
-                  temp_t0 = (temp_v1 * 8) + (*((s32 *) (((char *) D_80143BF8) + 4)));
+                  temp_t0 = (char *)((temp_v1 * 8)); temp_t0 += (s32)((*((s32 *) (((char *) D_80143BF8) + 4))));
                   *((s32 *) (((char *) (D_80143BF8 + (temp_a1_2 * 4))) + 0xF80)) = (s32) ((((*((u16 *) (((char *) temp_t0) + 0))) << 0x10) | ((*((u8 *) (((char *) temp_t0) + 2))) << 8)) | (*((u8 *) (((char *) temp_t0) + 3))));
                 }
                 temp_v0 = *((void **) (((char *) temp_t0) + 0x574));
@@ -175,7 +178,7 @@ u8 func_8009FE58_ovl_01(void)
                   temp_v1_5 = D_8013BC20;
                   if (temp_v1_5 != NULL)
                   {
-                    temp_v0_3 = *((void **) (((char *) temp_v1_5) + 0));
+                    temp_v0_3 = ((__repair_field_0 *)temp_v1_5)->value;
                     D_8013BC20 = temp_v0_3;
                     if (temp_v0_3 != NULL)
                     {
@@ -183,7 +186,7 @@ u8 func_8009FE58_ovl_01(void)
                     }
                     *((void ***) (((char *) temp_v1_5) + 4)) = NULL;
                     temp_v0_4 = *((void **) (((char *) D_80143BF8) + 0xF78));
-                    *((void **) (((char *) temp_v1_5) + 0)) = temp_v0_4;
+                    ((__repair_field_0 *)temp_v1_5)->value = temp_v0_4;
                     if (temp_v0_4 != NULL)
                     {
                       *((void **) (((char *) (*((void **) (((char *) D_80143BF8) + 0xF78)))) + 4)) = temp_v1_5;

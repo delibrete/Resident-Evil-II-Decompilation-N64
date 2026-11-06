@@ -39,7 +39,7 @@ void func_80088744_ovl_01(s32 arg0, s32 arg1, u32 arg2)
         D_8012BA9C_ovl_01 = D_8012BA98_ovl_01;
     }
     func_80007300(tmp, D_8012BA98_ovl_01);
-    func_8000EFA0(arg0, arg2);
+    do { func_8000EFA0(arg0, arg2); } while (0);
     i = 0;
     if (D_8012BA90_ovl_01 != 0) {
         do {

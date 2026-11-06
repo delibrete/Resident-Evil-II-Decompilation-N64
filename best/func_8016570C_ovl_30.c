@@ -1,4 +1,4 @@
-static inline static static static static static static static static static static static static volatile short inline_fn(volatile short arg0)
+inline static static static static static static static static static static static static static volatile short inline_fn(volatile short arg0)
 {
   return arg0;
 }
@@ -12,6 +12,7 @@ void func_8016570C_ovl_30(void *arg0)
   volatile unsigned short new_var2;
   volatile unsigned short new_var5;
   volatile unsigned short new_var8;
+  volatile unsigned short new_var4;
   volatile short new_var9;
   ;
   new_var = 1;
@@ -28,11 +29,11 @@ void func_8016570C_ovl_30(void *arg0)
   }
   new_var7 = new_var;
   new_var2 = new_var7;
-  new_var7 = new_var2;
+  new_var4 = new_var2;
+  new_var7 = new_var4;
   new_var8 = new_var7;
   ;
   new_var3 = new_var8;
-  if (new_var3)
   {
   }
 }

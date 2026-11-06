@@ -25,6 +25,7 @@ void func_800B49A4_ovl_01(void *arg0) {
     u32 temp_v1;
     u32 temp_v1_4;
     u32 var_a0;
+u32 __repair_result_var_a0;
     u8 temp_v1_2;
     u8 var_s1;
 
@@ -39,10 +40,10 @@ void func_800B49A4_ovl_01(void *arg0) {
             }
             temp_v1 = M2C_FIELD(arg0, u32 *, 0x11A4);
             M2C_FIELD(arg0, s32 *, 0x11D0) = (s32) (M2C_FIELD(arg0, s32 *, 0x11D0) + 0x400);
-            if (temp_v1 < 0x101U) {
-                M2C_FIELD(arg0, u32 *, 0x11A4) = 0U;
-            } else {
+            if (temp_v1 >= 0x101U) {
                 M2C_FIELD(arg0, u32 *, 0x11A4) = (u32) (temp_v1 - 0x100);
+            } else {
+                M2C_FIELD(arg0, u32 *, 0x11A4) = 0U;
             }
             M2C_FIELD(arg0, u8 *, 0x11DC) = 0U;
         }
@@ -58,10 +59,10 @@ block_10:
                 if (temp_v1_3 == 0) {
                     var_a2 = 0x400;
                 } else {
-                    temp_v1_4 = M2C_FIELD(arg0, u32 *, 0x11A4);
+                    temp_v1 = M2C_FIELD(arg0, u32 *, 0x11A4);
                     var_a2 = 0x400;
-                    if (temp_v1_4 < 0x101U) {
-                        var_a2 = temp_v1_4 * 4;
+                    if (temp_v1 < 0x101U) {
+                        var_a2 = temp_v1 * 4;
                     }
                 }
                 if (var_a2 > 0) {
@@ -90,11 +91,11 @@ loop_21:
         }
     }
     if (((u32) (M2C_FIELD(arg0, u8 *, 0x11DD) - 3) < 2U) && (M2C_FIELD(arg0, u16 *, 0x11A0) == 0)) {
-        var_a0 = M2C_FIELD(arg0, u32 *, 0x11D8);
-        if (((u32) (var_a0 - M2C_FIELD(arg0, s32 *, 0x11D4)) < (u32) (M2C_FIELD(arg0, u32 *, 0x19C) - 0xA0)) & ((s32) var_s1 > 0)) {
+        __repair_result_var_a0 = M2C_FIELD(arg0, u32 *, 0x11D8);
+        if (((u32) (__repair_result_var_a0 - M2C_FIELD(arg0, s32 *, 0x11D4)) < (u32) (M2C_FIELD(arg0, u32 *, 0x19C) - 0xA0)) & ((s32) var_s1 > 0)) {
             do {
                 var_s1 -= 1;
-                func_80006650(M2C_FIELD(arg0, s32 *, 0x198) + (((u32) (var_a0 % M2C_FIELD(arg0, u32 *, 0x19C)) >> 2) * 8), 0x140);
+                func_80006650(M2C_FIELD(arg0, s32 *, 0x198) + (((u32) (__repair_result_var_a0 % M2C_FIELD(arg0, u32 *, 0x19C)) >> 2) * 8), 0x140);
                 var_a0 = M2C_FIELD(arg0, u32 *, 0x11D8) + 0xA0;
                 M2C_FIELD(arg0, u32 *, 0x11D8) = var_a0;
             } while (((u32) (var_a0 - M2C_FIELD(arg0, s32 *, 0x11D4)) < (u32) (M2C_FIELD(arg0, u32 *, 0x19C) - 0xA0)) & ((s32) var_s1 > 0));

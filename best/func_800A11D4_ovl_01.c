@@ -39,7 +39,7 @@ loop_1:
             M2C_FIELD(((var_a0 * 0xFF8) + &D_8013BC30), s8 *, 0xFC0) = 1;
             return;
         }
-        temp_v0 = ((var_a0 & 0x7FFFFFFF) * 0xFF8) + &D_8013BC30;
+        temp_v0 = (char *)(((var_a0 & 0x7FFFFFFF) * 0xFF8)); temp_v0 += (s32)(&D_8013BC30);
         M2C_FIELD(temp_v0, u8 *, 0xFEE) = (u8) (M2C_FIELD(temp_v0, u8 *, 0xFEE) & 0xF7);
     }
 }

@@ -12,6 +12,7 @@ void func_80162644_ovl_23(A *a)
 {
   s32 new_var2[2];
   u8 *b = ((u8 *) a->p) + 0x758;
+  int new_var;
   switch (a->state)
   {
     case 0:
@@ -36,10 +37,11 @@ void func_80162644_ovl_23(A *a)
       goto calc2;
 
     case 4:
+      new_var = 1;
       new_var2[1] = (D_801665D0_ovl_23 = D_801665D0_ovl_23 - 1);
       if (!new_var2[1])
     {
-      a->state = 1;
+      a->state = new_var;
     }
       calc:
     new_var2[1] = new_var2[1] * (new_var2[1] << 11);

@@ -1,4 +1,4 @@
-/* identical to func_8016553C_ovl_26 (matched), with its names changed by decompdecomp */
+/* machine draft (m2c) for gcc-2.7.2-kmc -G0 -mips3 -mgp32 -mfp32 -O2, tried by autopilot */
 #ifndef M2C_DEFINES
 #define M2C_DEFINES
 typedef s32 M2C_UNK;
@@ -11,19 +11,18 @@ typedef s32 M2C_UNK32;
 #define M2C_CARRY 0
 #define M2C_OVERFLOW(a) (0)
 #endif
-/* machine draft (m2c) for gcc-2.7.2-kmc -G0 -mips3 -mgp32 -mfp32 -O2, tried by autopilot */
 
-s32 func_8016559C_overlay_026();
-s32 func_80165640_overlay_026();
-s32 func_80166B18_overlay_026();
+M2C_UNK func_8017212C_overlay_054();                /* extern */
+M2C_UNK func_801721D0_overlay_054(void *);          /* extern */
+M2C_UNK func_801736A8_overlay_054(void *, M2C_UNK, M2C_UNK); /* extern */
 
 void func_801720CC_overlay_054(void *arg0) {
     if (M2C_FIELD(arg0, u8 *, 6) == 0) {
-        func_8016559C_overlay_026();
+        func_8017212C_overlay_054();
         if (M2C_FIELD(arg0, u8 *, 5) != 1) {
-            func_80166B18_overlay_026(arg0, 0xA, 1);
+            func_801736A8_overlay_054(arg0, 0xA, 1);
         }
     } else {
-        func_80165640_overlay_026(arg0);
+        func_801721D0_overlay_054(arg0);
     }
 }

@@ -13,7 +13,8 @@ u32 func_8017B448_ovl_04(s32 n)
   register s32 sum = 0;
   register u8 c;
   a = D_80180900_ovl_04;
-  p = D_80180370_ovl_04 + (*((u16 *) (D_8018065C_ovl_04 + (n * 2))));
+  p += (s32) (*((u16 *) (D_8018065C_ovl_04 + (n * 2))));
+  p = (char *) D_80180370_ovl_04;
   loop2:
   c = *p;
 

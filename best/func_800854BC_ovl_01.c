@@ -6,10 +6,12 @@ void func_800854BC_ovl_01(void *arg0, void *arg1, s32 arg2)
 {
   s32 *a0 = (s32 *) arg0;
   s32 *a1;
+  s32 new_var;
   unsigned long long t3 = a0[20];
+  new_var = ((s32 *) arg1)[12];
   t3 = (!(a0[0] & 8)) || (((unsigned long long) a0[42]) == 0);
   {
-    if (t3 || ((t3 = a0[42], ((s32 *) arg1)[12] == 0)))
+    if (t3 || ((t3 = a0[42], new_var == 0)))
     {
       t3 = a0[1];
     }

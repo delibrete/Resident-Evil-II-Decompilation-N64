@@ -11,6 +11,7 @@ void func_80165C40_ovl_17(void *arg0, s32 arg1, s32 arg2)
   s32 a = arg1;
   s32 b = arg2;
   s32 v;
+s32 __repair_phase_v;
   void **new_var;
   s32 t;
   s32 q;
@@ -64,8 +65,8 @@ void func_80165C40_ovl_17(void *arg0, s32 arg1, s32 arg2)
     *((s32 *) (((u8 *) arg0) + 0x138)) = t;
     *((s32 *) (((u8 *) arg0) + 0x13C)) = q;
     *((s8 *) (((u8 *) (*new_var)) + 0xD)) = 0;
-    v = *((s8 *) (((u8 *) arg0) + 0x2D6));
-    if (v < 0)
+    __repair_phase_v = *((s8 *) (((u8 *) arg0) + 0x2D6));
+    if (__repair_phase_v < 0)
     {
       v = 6;
     }

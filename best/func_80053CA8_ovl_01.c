@@ -47,7 +47,7 @@ void func_80053CA8_ovl_01(void) {
         a += 0x1E;
     }
     for (i = 0; i < 0x1E; i++) {
-        p[i + 0x14E] = 0x20;
+        (p + i)[0x14E] = 0x20;
         p[i + 0x2B6] = 0;
     }
 }

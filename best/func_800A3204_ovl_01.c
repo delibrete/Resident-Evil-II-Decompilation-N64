@@ -43,8 +43,8 @@ void func_800A3204_ovl_01(s32 arg0)
       temp_v0_2 = D_80143F18 + var_a0;
       var_a0 += 0x14;
       *((void **) (((char *) var_v1) + 4)) = temp_v0_2;
-      *((void **) (((char *) var_v1) + (-0x14))) = *new_var;
-      var_a1 += 1;
+      *((void **) (((char *) var_v1) + (-0x14))) = *new_var;/*__repair_loop_weight*/do {
+      var_a1 += 1;} while (0);
       var_v1 += 0x14;
     }
     while (var_a1 < arg0);

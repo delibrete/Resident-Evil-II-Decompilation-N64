@@ -1,3 +1,4 @@
+/* machine draft (m2c) for sn-n64-281 -G0 -mips3 -O2 -mgas -meb -mcpu=VR4300 -mhard-float -mfp64, tried by autopilot */
 #ifndef M2C_DEFINES
 #define M2C_DEFINES
 typedef s32 M2C_UNK;
@@ -10,57 +11,21 @@ typedef s32 M2C_UNK32;
 #define M2C_CARRY 0
 #define M2C_OVERFLOW(a) (0)
 #endif
-typedef struct { u16 f; u8 pad[0x1C8 - 2]; } E1C8;
 
-extern E1C8 D_8010B2C8_ovl_01[];
-extern s32 D_8010B660_ovl_01[];
-
-s32 func_8008B028_overlay_001();
-s32 func_8008B0CC_ovl_01();
-void func_8004D1B4_ovl_01();
-void func_8004D1A8_ovl_01();
 s32 func_8004CF60_overlay_001();
-
-s32 func_8004CF60_overlay_001(void **arg0) ;
-            
-           
-           
-           
-
-                                                
-                  
-                                     
-                  
-               
-        
-                                     
-                
-                
-                       
-                             
-               
-                       
-                     
- 
-
-u16 func_8004CF28_ovl_01(s32 arg0) ;
-                                     
- 
-
-void func_8004CEF4_ovl_01(s32 arg0) ;
-                                       
- 
+s32 func_8008B028_overlay_001();
+extern s32 D_8010B660_overlay_001;
 
 s32 func_8004CFFC_ovl_01(s32 arg0) {
-    s32 i;
-    s32 *p;
+    char *var_s0;
+    s32 var_s1;
 
-    i = 0;
-    p = D_8010B660_ovl_01;
+    var_s1 = 0;
+    var_s0 = &D_8010B660_overlay_001;
     do {
-        *p = func_8004CF60_overlay_001((void **)func_8008B028_overlay_001(4));
-        i += 1;
-        p += 1;
-    } while (i < 4);
+        *(s32 *)var_s0 = func_8004CF60_overlay_001(func_8008B028_overlay_001(4));
+        var_s1 += 1;
+        var_s0 += 4;
+    } while (var_s1 < 4);
     return arg0;
 }

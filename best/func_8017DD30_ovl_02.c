@@ -40,8 +40,8 @@ void func_8017DD30_ovl_02(s32 arg0) {
     }
     var_a0 = &D_801856B4_ovl_02;
     var_a1 = &D_80185690_ovl_02;
-    var_a2 = &D_8018569C_ovl_02;
     var_a3 = &D_801856A8_ovl_02;
+    var_a2 = &D_8018569C_ovl_02;
     do {
         if (D_801856EC_ovl_02 == 3) {
             *var_a0 = *var_a3;

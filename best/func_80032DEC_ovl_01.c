@@ -1,2 +1,3 @@
+static __inline__ u16 __repair_inline(u16 a) { return a; }
 s16 func_80032D44_ovl_01(s16,s16,s16,s16);
-void func_80032DEC_ovl_01(void*p,s16 a,s16 b,s16 d){s16 dir=d; s32 v; s32 x; u16 ang; v=func_80032D44_ovl_01(*(s16*)((u8*)p+0x2a),*(s16*)((u8*)p+0x32),a,b); if(d&0x8000){dir=-d; v=(v+0x800)&0xfff;} ang=*(u16*)((u8*)p+0x66); x=(dir+(v-ang))&0xfff; if(x<((s32)(dir<<16)>>15)){*(u16*)((u8*)p+0x66)=v; return;} ang=ang-dir; *(u16*)((u8*)p+0x66)=ang; if((u32)x<0x801) *(u16*)((u8*)p+0x66)=ang+dir*2;}
+void func_80032DEC_ovl_01(void*p,s16 a,s16 b,s16 d){s16 dir=d; s32 v; s32 x; u16 ang; v=func_80032D44_ovl_01(*(s16*)((u8*)p+0x2a),*(s16*)((u8*)p+0x32),a,b); if(d&0x8000){dir=-d; v=(v+0x800)&0xfff;} ang=__repair_inline(*(u16*)((u8*)p+0x66)); x=(dir+(v-ang))&0xfff; if(x<((s32)(dir<<16)>>15)){*(u16*)((u8*)p+0x66)=v; return;} ang=ang-dir; *(u16*)((u8*)p+0x66)=ang; if((u32)x<0x801) *(u16*)((u8*)p+0x66)=ang+dir*2;}

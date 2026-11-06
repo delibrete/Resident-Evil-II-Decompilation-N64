@@ -5,9 +5,13 @@ extern s32 D_8015AF14;
 extern s32 D_8015AF18;
 extern s32 D_8015AF1C;
 extern s32 D_8015AF20;
-
-s32 func_800B3EF4_ovl_01(s32 arg0, s32 arg1) {
-    (void)arg0;
-    (void)arg1;
-    return 0;
+s32 func_800B3EF4_ovl_01(s32 arg0, s32 arg1)
+{
+  s32 new_var;
+  s32 *new_var2;
+  new_var = arg0;
+  (void) new_var;
+  (void) (*(new_var2 = &arg1));
+  return 0;
 }
+

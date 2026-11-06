@@ -96,7 +96,7 @@ u16 __repair_result_spE;
     u8 var_s4;
     u8 var_t4;
     void *temp_a0;
-    void *temp_a1_5;
+    
     void *temp_a2_10;
     void *temp_a2_11;
     void *temp_a2_12;
@@ -444,7 +444,7 @@ block_73:
                                 M2C_FIELD(temp_a2_19, s32 *, 4) = (s32) ((((var_v1_4 * 4) & 0xFFC) << 0xC) | ((temp_a1_4 * 4) & 0xFFF));
                                 temp_a2_20 = temp_a2_19 + 8;
                                 temp_t2_6 = var_t2 + 0x10;
-                                temp_a1_5 = temp_t2_6;
+                                temp_a0 = temp_t2_6;
                                 var_t2 = temp_t2_6 + 8;
                                 M2C_FIELD(temp_a2_19, s32 *, 8) = 0xE1000000;
                                 M2C_FIELD(temp_a2_20, s32 *, 4) = (s32) (sp16 << 0x15);
@@ -464,7 +464,7 @@ block_73:
                                 } else {
                                     var_v0_3 = ((s32) (temp_fv0_6 - D_800B8840_ovl_01) | 0x80000000) & 0xFFFF;
                                 }
-                                M2C_FIELD(temp_a1_5, s32 *, 4) = (s32) ((var_a0_5 << 0x10) | var_v0_3);
+                                M2C_FIELD(temp_a0, s32 *, 4) = (s32) ((var_a0_5 << 0x10) | var_v0_3);
                             }
                         }
                     }

@@ -16,8 +16,8 @@ void func_8009E86C_ovl_01(s8 arg0, s32 arg1) {
         }
         if (*((u8 *)var_v1 + 1) & 0x10) {
             *(s8 *)var_v1 = 0;
-        }
-        var_a2 += 1;
+        }/*__repair_loop_weight*/do {
+        var_a2 += 1;} while (0);
         var_v1 = (u8 *)var_v1 + 0xC;
     } while (var_a2 < (u32) D_801326D8_ovl_01);
 }

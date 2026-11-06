@@ -45,11 +45,11 @@ void func_800A4D64_ovl_01(s32 *arg0, s32 arg1, s32 arg2, s32 arg3)
     func_800A2B70_ovl_01(temp_s0, *arg0, arg3 & 0xFF);
   }
   while (0);
-  temp_a2 = arg2 & 0xFFFF;
-  if (((long long) temp_a2) != 0)
+  var_a2 = arg2 & 0xFFFF;
+  if (((long long) var_a2) != 0)
   {
     D_80143F08 = 0;
-    temp_a2_2 = (((((*arg0) * temp_a2) / 1000) / 192) * 0xC0) + 0xC0;
+    temp_a2_2 = (((((*arg0) * var_a2) / 1000) / 192) * 0xC0) + 0xC0;
     D_80143F14 = temp_a2_2;
     D_80143F10 = D_80143FA8(temp_a2_2 * 2, 0, temp_a2_2);
   }

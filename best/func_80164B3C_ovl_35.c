@@ -3,7 +3,7 @@ void func_80164B3C_ovl_35(void *arg0)
   char *var_a3_2;
   s32 temp_v0_2;
   s32 var_a3;
-  s32 var_v1;
+  
   u32 var_a2;
   u8 temp_v1;
   union 
@@ -14,7 +14,7 @@ void func_80164B3C_ovl_35(void *arg0)
   void *temp_a1_2;
   void *temp_t0;
   void *var_a1;
-  void *var_v1_2;
+  
   temp_v1 = *((u8 *) (((char *) arg0) + 7));
   temp_t0 = (char *)(arg0); temp_t0 += (s32)(0x2B4);
   switch (temp_v1)
@@ -29,16 +29,16 @@ void func_80164B3C_ovl_35(void *arg0)
       if ((*((s8 *) (((char *) temp_t0) + 0x17))) == 0)
     {
       var_a2 = 3;
-      var_v1 = 0x468;
+      var_a3 = 0x468;
       do
       {
         var_a2 += 1;
-        __repair_phase_storage.pointer = (*((s32 *) (((char *) arg0) + 0x234))) + var_v1;
+        __repair_phase_storage.pointer = (*((s32 *) (((char *) arg0) + 0x234))) + var_a3;
         *((s16 *) (((char *) __repair_phase_storage.pointer) + 0x128)) = 0xFFF;
         *((s16 *) (((char *) __repair_phase_storage.pointer) + 0x126)) = 0xFFF;
         *((s16 *) (((char *) __repair_phase_storage.pointer) + 0x124)) = 0xFFF;
         *((s32 *) (((char *) __repair_phase_storage.pointer) + 0)) |= 0x400;
-        var_v1 += 0x178;
+        var_a3 += 0x178;
       }
       while (var_a2 < 7U);
       *((s8 *) (((char *) temp_t0) + 0x18)) = 0x20;
@@ -71,18 +71,18 @@ void func_80164B3C_ovl_35(void *arg0)
       __repair_phase_storage.value = *((s32 *) (((char *) arg0) + 0x234));
       var_a3_2 = __repair_phase_storage.value + 0x468;
       ;
-      var_v1_2 = __repair_phase_storage.value + 0x1378;
+      temp_a1_2 = __repair_phase_storage.value + 0x1378;
       do
       {
         *((s32 *) var_a3_2) &= ~0x400;
-        *((s32 *) (((char *) (__repair_phase_storage.value + 0x4C8)) + 0x54)) = (s32) (*((s32 *) (((char *) var_v1_2) + 0x54)));
-        *((s32 *) (((char *) (__repair_phase_storage.value + 0x4C8)) + 0x5C)) = (s32) (*((s32 *) (((char *) var_v1_2) + 0x5C)));
+        *((s32 *) (((char *) (__repair_phase_storage.value + 0x4C8)) + 0x54)) = (s32) (*((s32 *) (((char *) temp_a1_2) + 0x54)));
+        *((s32 *) (((char *) (__repair_phase_storage.value + 0x4C8)) + 0x5C)) = (s32) (*((s32 *) (((char *) temp_a1_2) + 0x5C)));
         var_a2 += 1;
-        *((s32 *) (((char *) (__repair_phase_storage.value + 0x4C8)) + 0x58)) = (s32) (*((s32 *) (((char *) var_v1_2) + 0x58)));
+        *((s32 *) (((char *) (__repair_phase_storage.value + 0x4C8)) + 0x58)) = (s32) (*((s32 *) (((char *) temp_a1_2) + 0x58)));
         var_a3_2 += 0x178;
-        *((s32 *) (((char *) (__repair_phase_storage.value + 0x4C8)) + 0x60)) = (s32) (*((s32 *) (((char *) var_v1_2) + 0x60)));
-        temp_v0_2 = *((s32 *) (((char *) var_v1_2) + 0));
-        var_v1_2 += 0x178;
+        *((s32 *) (((char *) (__repair_phase_storage.value + 0x4C8)) + 0x60)) = (s32) (*((s32 *) (((char *) temp_a1_2) + 0x60)));
+        temp_v0_2 = *((s32 *) (((char *) temp_a1_2) + 0));
+        temp_a1_2 += 0x178;
         *((s32 *) (((char *) (__repair_phase_storage.value + 0x4C8)) + 0)) = temp_v0_2;
         var_a1 += 0x178;
       }

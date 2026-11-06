@@ -55,7 +55,7 @@ void func_8016BEE8_ovl_31(void *arg0)
   }
   do
   {
-    temp_v0 = (((var_s1 & 0xFF) + (var_s0 & 0xFF)) * 4) + (&D_8016C230_ovl_31);
+    temp_v0 = (char *)((((var_s1 & 0xFF) + (var_s0 & 0xFF)) * 4)); temp_v0 += (s32)((&D_8016C230_ovl_31));
     var_v0 = var_s0 + 1;
     if (func_80032EA4_ovl_01(arg0, *((s16 *) (((char *) temp_v0) + 0)), *((s16 *) (((char *) temp_v0) + 2)), 0x270) == 0)
     {

@@ -90,10 +90,10 @@ void func_80166A8C_ovl_14(void *p)
   S5:
   *(((u8 *) p) + 0x26e) = 5;
 
-  return;
   S1:
   *(((u8 *) p) + 0x26e) = 1;
 
+  return;
   return;
   S4:
   *(((u8 *) p) + 0x26e) = 4;

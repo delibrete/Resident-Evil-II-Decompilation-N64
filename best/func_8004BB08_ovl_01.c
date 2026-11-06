@@ -15,8 +15,10 @@ void *func_8004BB08_ovl_01(s8 arg0)
   int new_var;
   u32 temp_a0;
   u8 var_s0;
+int __repair_constant;
   var_s0 = 0;
-  new_var = 2;
+  new_var = __repair_constant;
+__repair_constant = 2;
   temp_a0 = arg0 & 0xFF;
   if (temp_a0 < 0x64U)
   {
@@ -26,7 +28,7 @@ void *func_8004BB08_ovl_01(s8 arg0)
   {
     if ((var_s0 != 0) && (func_800837DC_ovl_01(&D_800E8D18_ovl_01, var_s0) != 0))
     {
-      __repair_literal = 2;
+      __repair_literal = __repair_constant;
       var_v1 = *(((var_s0 + 0x91) * __repair_literal) + (&D_800FB398_ovl_01));
       var_v0 = &D_800FAC50_ovl_01;
     }

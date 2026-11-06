@@ -1,4 +1,4 @@
-/* identical to osSetTimer in Resident Evil II (matched), with its names changed by decompdecomp */
+/* identical to osSetTimer in Resident Evil II (local match library) (matched), with its names changed by decompdecomp */
 /* identical to func_8000CEC0 in V-RALLY (matched), with its names changed by decompdecomp */
  
 

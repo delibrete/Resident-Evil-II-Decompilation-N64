@@ -13,6 +13,8 @@ typedef s32 M2C_UNK32;
 #endif
 
 s32 func_80069C90_ovl_01(s32 arg0, s32 arg1, s32 arg2, void *arg3) {
+int __repair_literal;
+
     s32 var_a2;
     s32 var_v0;
     s32 var_v0_2;
@@ -26,7 +28,9 @@ u16 __repair_result_var_v1_2;
     var_a2 = arg2;
     temp_v1 = (u32) (M2C_FIELD(arg3, u16 *, 0xA) & 0x30) >> 4;
     if (temp_v1 != 1) {
-        if ((s32) temp_v1 < 2) {
+__repair_literal = 2;
+
+        if ((s32) temp_v1 < __repair_literal) {
             var_v0 = var_a2 < 0x709;
             if (temp_v1 != 0) {
 

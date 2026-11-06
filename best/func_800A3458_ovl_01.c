@@ -54,8 +54,8 @@ void func_800A3458_ovl_01(s32 arg0) {
             temp_v0_3 = temp_v0_2 + var_a1;
             var_a1 += 0x18;
             M2C_FIELD(var_v1, void **, -0x18) = var_v1;
-            M2C_FIELD(var_v1, void **, 4) = temp_v0_3;
-            var_a3 += 1;
+            M2C_FIELD(var_v1, void **, 4) = temp_v0_3;/*__repair_loop_weight*/do {
+            var_a3 += 1;} while (0);
             var_v1 += 0x18;
         } while (var_a3 < temp_s3);
     }

@@ -1,6 +1,65 @@
-s16 func_80040BE4_ovl_01(s32);s32 func_80040E88_ovl_01(void*,void*);s32 func_8004251C_ovl_01(void*,void*,void*);
-void func_8016A9A0_ovl_31(void *arg0,s32 arg1,s32 arg2){u8*p=arg0;u8*obj=*(u8**)(p+0x234);u8 tmp[0x20];u8*at;s32 dx,dy;
-func_80040E88_ovl_01(p+0x64,p+0x14);func_8004251C_ovl_01(p+0x14,obj+8,tmp);func_8004251C_ovl_01(tmp,obj+0xd40,tmp);func_8004251C_ovl_01(tmp,obj+0xeb8,tmp);
-at=obj+0x1be8;if(arg2){at=obj+0x1490;}else{func_8004251C_ovl_01(tmp,at-0x5d8,tmp);}
-func_8004251C_ovl_01(tmp,at-0x460,tmp);func_8004251C_ovl_01(tmp,at-0x2e8,tmp);func_8004251C_ovl_01(tmp,at-0x170,tmp);func_8004251C_ovl_01(tmp,at+8,tmp);
-dx=*(s32*)(tmp+0x14)-*(s32*)(at+0x4c);dy=*(s32*)(tmp+0x1c)-*(s32*)(at+0x54);if(arg1==0){*(s32*)(p+0x28)-=dx;*(s32*)(p+0x30)-=dy;}else{*(s16*)(p+0x1e0)=func_80040BE4_ovl_01(dx*dx+dy*dy);}}
+s16 func_80040BE4_ovl_01(s32);
+s32 func_80040E88_ovl_01(s32, s32 *);
+s32 func_8004251C_ovl_01(s32 *, s32, s32 *);
+void func_8016A9A0_ovl_31(void *arg0, s32 arg1, s32 arg2)
+{
+  union 
+  {
+    unsigned char bytes[72];
+    struct 
+    {
+      unsigned char pad[16];
+      s32 value;
+    } view_sp10;
+    struct 
+    {
+      unsigned char pad[36];
+      s32 value;
+    } view_sp24;
+    struct 
+    {
+      unsigned char pad[44];
+      s32 value;
+    } view_sp2C;
+  } m2c_initial_frame;
+  s32 *temp_s0;
+  s32 temp_s2;
+  s32 temp_v0;
+  s32 temp_v0_2;
+  void *var_s2;
+  temp_s0 = arg0 + 0x14;
+  temp_s2 = *((s32 *) (((char *) arg0) + 0x234));
+  func_80040E88_ovl_01(arg0 + 0x64, temp_s0);
+  func_8004251C_ovl_01(temp_s0, temp_s2 + 8, &m2c_initial_frame.view_sp10.value);
+  do
+  {
+    func_8004251C_ovl_01(&m2c_initial_frame.view_sp10.value, temp_s2 + 0xD40, &m2c_initial_frame.view_sp10.value);
+  }
+  while (0);
+  temp_v0 = arg2;
+  func_8004251C_ovl_01(&m2c_initial_frame.view_sp10.value, temp_s2 + 0xEB8, &m2c_initial_frame.view_sp10.value);
+  if (temp_v0 == 0)
+  {
+    var_s2 = (char *) temp_s2;
+    var_s2 += (s32) 0x1BE8;
+    func_8004251C_ovl_01(&m2c_initial_frame.view_sp10.value, var_s2 - 0x5D8, &m2c_initial_frame.view_sp10.value);
+  }
+  else
+  {
+    var_s2 = temp_s2 + 0x1490;
+  }
+  func_8004251C_ovl_01(&m2c_initial_frame.view_sp10.value, var_s2 - 0x460, &m2c_initial_frame.view_sp10.value);
+  func_8004251C_ovl_01(&m2c_initial_frame.view_sp10.value, var_s2 - 0x2E8, &m2c_initial_frame.view_sp10.value);
+  func_8004251C_ovl_01(&m2c_initial_frame.view_sp10.value, var_s2 - 0x170, &m2c_initial_frame.view_sp10.value);
+  func_8004251C_ovl_01(&m2c_initial_frame.view_sp10.value, var_s2 + 8, &m2c_initial_frame.view_sp10.value);
+  if (arg1 == 0)
+  {
+    *((s32 *) (((char *) arg0) + 0x28)) = (s32) ((*((s32 *) (((char *) arg0) + 0x28))) - (m2c_initial_frame.view_sp24.value - (*((s32 *) (((char *) var_s2) + 0x4C)))));
+    *((s32 *) (((char *) arg0) + 0x30)) = (s32) ((*((s32 *) (((char *) arg0) + 0x30))) - (m2c_initial_frame.view_sp2C.value - (*((s32 *) (((char *) var_s2) + 0x54)))));
+    return;
+  }
+  temp_v0 = m2c_initial_frame.view_sp24.value - (*((s32 *) (((char *) var_s2) + 0x4C)));
+  temp_v0_2 = m2c_initial_frame.view_sp2C.value - (*((s32 *) (((char *) var_s2) + 0x54)));
+  *((s16 *) (((char *) arg0) + 0x1E0)) = func_80040BE4_ovl_01((temp_v0 * temp_v0) + (temp_v0_2 * temp_v0_2));
+}
+

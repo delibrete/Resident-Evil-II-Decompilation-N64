@@ -1,7 +1,20 @@
-typedef struct {void *field0; void *field4; void *field8; void *fieldc;} V;
-void func_800283E0_ovl_01(void *arg0);
-void func_8002E840(void *arg0){
- V *obj=(V*)arg0;
- ((void(*)(void))((V*)obj->field0)->field8)();
- func_800283E0_ovl_01(arg0);
+/* machine draft (m2c) for gcc-2.7.2-kmc -G0 -mips3 -mgp32 -mfp32 -O2, tried by autopilot */
+#ifndef M2C_DEFINES
+#define M2C_DEFINES
+typedef s32 M2C_UNK;
+typedef s8 M2C_UNK8;
+typedef s16 M2C_UNK16;
+typedef s32 M2C_UNK32;
+#define M2C_FIELD(expr, type_ptr, offset) (*(type_ptr)((s8 *)(expr) + (offset)))
+#define M2C_BITWISE(type, expr) ((type)(expr))
+#define M2C_ERROR(desc) (0)
+#define M2C_CARRY 0
+#define M2C_OVERFLOW(a) (0)
+#endif
+
+M2C_UNK func_800283E0_overlay_001(void **);         /* extern */
+
+void func_8002E840(void **arg0) {
+    M2C_FIELD(*arg0, M2C_UNK (**)(), 8)();
+    func_800283E0_overlay_001(arg0);
 }

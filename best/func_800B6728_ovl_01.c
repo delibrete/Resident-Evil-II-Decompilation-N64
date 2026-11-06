@@ -7,7 +7,7 @@ void func_800B6728_ovl_01(u8 *a0) {
     if (*(s16 *)(a0 + 0x188) != 0) {
         t0 = (s16 *)(a0 + 0x178);
         t1 = (s16 *)(a0 + 0x168);
-        D_fn_ptr(t1[0]);
+        do { D_fn_ptr(t1[0]); } while (0);
         D_fn_ptr(t1[1]);
     }
 }

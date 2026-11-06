@@ -6,7 +6,7 @@ s32 func_800AB36C_ovl_01(void)
   u32 temp_lo;
   new_var2 = 6;
   D_801362C0_ovl_01 = (temp_lo = D_801362C0_ovl_01 * 0xA8351D63);
-  new_var = (temp_lo >> new_var2) & 0xFFFF;
   return new_var;
+  new_var = (temp_lo >> new_var2) & 0xFFFF;
 }
 

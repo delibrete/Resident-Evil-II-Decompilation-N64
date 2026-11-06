@@ -45,15 +45,15 @@ void func_80183B10_ovl_02(u8 *arg0, u8 *arg1, s32 arg2, s32 arg3, s32 arg4) {
     var_t7 = var_t5 + arg2;
     var_t6 = 0;
     if (arg4 > 0) {
-        var_t2 = var_a1 + 0xF;
+        var_t2 = (char *)(var_a1); var_t2 += (s32)(0xF);
         var_t4 = var_t7 + 0x10;
         var_t3 = var_t5 + 0x10;
         do {
             temp_v1 = *var_t5;
             var_t5 += arg3;
             temp_t0 = *var_t7;
-            var_t7 += arg3;
-            var_t6 += 1;
+            var_t7 += arg3;/*__repair_loop_weight*/do {
+            var_t6 += 1;} while (0);
             temp_t1 = M2C_FIELD(var_t3, u8 *, -0xF) + M2C_FIELD(var_t4, u8 *, -0xF) + 2;
             *var_a1 = (u8) ((u32) (*var_a1 + ((u32) (temp_v1 + temp_t0 + temp_t1) >> 2) + 1) >> 1);
             var_a1 += arg3;

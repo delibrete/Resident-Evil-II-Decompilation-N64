@@ -1,3 +1,4 @@
+static __inline__ u8 __repair_inline(u8 a) { return a; }
 /* machine draft (m2c) for gcc-2.7.2-kmc -G0 -mips3 -mgp32 -mfp32 -O2, tried by autopilot */
 #ifndef M2C_DEFINES
 #define M2C_DEFINES
@@ -70,7 +71,7 @@ loop_10:
                 }
             } else {
 block_13:
-                temp_s3 = *var_s1;
+                temp_s3 = __repair_inline(*var_s1);
                 var_s1 += 1;
                 if (temp_s3 != 0xFF) {
                     if (temp_s3 == 0) {

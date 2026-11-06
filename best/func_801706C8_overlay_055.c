@@ -21,7 +21,7 @@ void func_801706C8_overlay_055(void *arg0, s32 arg1, s32 arg2) {
     s16 sp14;
     void *temp_v1;
 
-    temp_v1 = (char *)(((arg2 & 0xFF) * 6)); temp_v1 += (s32)(&D_8017092C_overlay_055);
+    temp_v1 = ((arg2 & 0xFF) * 6) + &D_8017092C_overlay_055;
     sp10 = 0;
     sp12 = 0;
     sp14 = 0;

@@ -1,5 +1,6 @@
 unsigned char func_8017C400_ovl_05(void)
 {
+  volatile char new_var15;
   long new_var5;
   volatile char new_var;
   volatile char new_var7;
@@ -21,8 +22,9 @@ unsigned char func_8017C400_ovl_05(void)
   new_var11 = (new_var14 = new_var);
   new_var13 = new_var2;
   new_var4 = new_var3;
+  new_var15 = (new_var7 = new_var9);
   new_var9 = new_var13;
-  new_var8 = (new_var7 = new_var9);
+  new_var8 = new_var15;
   new_var11 = new_var4[new_var8];
   new_var5 = new_var11;
   new_var = new_var5;

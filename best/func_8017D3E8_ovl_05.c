@@ -12,7 +12,7 @@ void func_8017D3E8_ovl_05(void) {
  case 0:
   D_8017DECC_ovl_05[0x28]=0x40; D_8017DECC_ovl_05[0x30]=0x40;
   D_8017DECC_ovl_05[0x38]=0x40; D_8017DECC_ovl_05[0x40]=0x40;
-  p=(s8*)D_8017DECC_ovl_05+((D_800C7650_ovl_01[0x2148e]+5)*8); *p=0x41;
+  p = (char *)((s8*)D_8017DECC_ovl_05); p += (s32)(((D_800C7650_ovl_01[0x2148e]+5)*8)); *p=0x41;
   D_8017DECC_ovl_05[0x48]=0x40; D_8017DECC_ovl_05[0x50]=0x40;
   p=(s8*)D_8017DECC_ovl_05+((D_800C7650_ovl_01[0x18539]+9)*8); *p=0x41;
   break;

@@ -1,8 +1,13 @@
 extern u8 D_800C7650_ovl_01[]; extern u8 D_800E10D0_ovl_01[];
+static inline u8 *__repair_byte_address(void *base, int offset)
+{
+  return (u8 *)((u8 *)base + offset);
+}
+
 void func_8016262C_ovl_26(void *arg0,s32 arg1,s32 arg2) {
  s32 *a1; u8 *s1; u32 v;
 u32 __repair_phase_v; u32 n;
- if (*(u8*)((u8*)arg0+0x2B4)) { a1=(s32*)(D_800C7650_ovl_01+0x18000+0x1D3C); s1=(u8*)arg0+0x2B4; } else { a1=(s32*)D_800E10D0_ovl_01; s1=(u8*)arg0+0x2B4; }
+ if (*__repair_byte_address(arg0, 692)) { a1=(s32*)(D_800C7650_ovl_01+0x18000+0x1D3C); s1=(u8*)arg0+0x2B4; } else { a1=(s32*)D_800E10D0_ovl_01; s1=(u8*)arg0+0x2B4; }
  switch(*(u8*)((u8*)arg0+6)) {
  case 0:
   v=*(u16*)((u8*)arg0+0x1AA);

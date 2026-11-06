@@ -1,0 +1,12 @@
+/* identical to func_801659DC_overlay_012 (matched), with its names changed by decompdecomp */
+void func_8017256C_overlay_040(u8 *a, s32 b) {
+    if (b == 0) {
+        *(s16 *)(a + 0x134) = -500;
+        *(s16 *)(a + 0x13A) = 500;
+        *(u32 *)a = (*(u32 *)a & 0xE7FFFFFF) | 0x04000000;
+    } else {
+        *(s16 *)(a + 0x134) = -1000;
+        *(s16 *)(a + 0x13A) = 1000;
+        *(u32 *)a |= 0x0C000000;
+    }
+}

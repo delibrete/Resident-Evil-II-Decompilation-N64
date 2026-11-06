@@ -87,7 +87,7 @@ s32 func_800A9DF8_ovl_01(void *arg0, f32 arg1, f32 arg2, f32 arg3, f32 arg4, f32
       *((s32 **) (((char *) temp_a2) + 4)) = temp_v1;
     }
     temp_a0 = D_801489E0;
-    temp_v1_2 = (temp_a0 * 0x1C) + (&D_80148660);
+    temp_v1_2 = (char *)((temp_a0 * 0x1C)); temp_v1_2 += (s32)((&D_80148660));
     var_v1 = arg0;
     *((void **) (((char *) temp_v1_2) + 0x18)) = var_v1;
     *((f32 *) (((char *) temp_v1_2) + 8)) = arg2;

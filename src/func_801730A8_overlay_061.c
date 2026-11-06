@@ -1,6 +1,23 @@
-/* identical to func_80166518_ovl_33 (matched), with its names changed by decompdecomp */
-typedef s32 (*Fn)(void); extern Fn D_80167210_ovl_33[]; s32 func_80040E88_ovl_01(s32,s32); s32 func_80036038_ovl_01(s32,s32,s32,s32); s32 func_800362C0_ovl_01(s32,s32,s32); s32 func_80036764_ovl_01(s32,s32); extern s32 D_801672C0_ovl_33[],D_80167348_ovl_33[],D_801673C0_ovl_33[]; extern u8 D_801314F0_ovl_01[];
-void func_80165A58_ovl_33(u8*p){u32 n=(p[5]-1)*9+p[0x26e];((Fn*)D_80167210_ovl_33)[n]();}
-void func_801730A8_overlay_061(s32 a0,s32 p){func_80040E88_ovl_01(p+0x58,p+8);func_80040E88_ovl_01(p+0x1d0,p+0x180);func_80040E88_ovl_01(p+0x348,p+0x2f8);func_80040E88_ovl_01(p+0x4c0,p+0x470);}
-void func_80166568_ovl_33(s32 p,s32 a1){s32 r;r=func_80036038_ovl_01(*(s32*)(p+0x234),(s32)D_801672C0_ovl_33,a1,0);r=func_80036038_ovl_01(p,*(s32*)(p+0x234),(s32)D_80167348_ovl_33,r);func_80036038_ovl_01(p,*(s32*)(p+0x234),(s32)D_801673C0_ovl_33,r);}
-void func_801665CC_ovl_33(s32 p){s32 s=*(s32*)(p+0x234);func_800362C0_ovl_01(s,(s32)D_801672C0_ovl_33,0);func_800362C0_ovl_01(p,s,(s32)D_80167348_ovl_33);func_800362C0_ovl_01(p,s,(s32)D_801673C0_ovl_33);}
+/* identical to func_8015E408_overlay_033 in Resident Evil II (local match library) (matched), with its names changed by decompdecomp */
+/* machine draft (m2c) for gcc-2.7.2-kmc -G0 -mips3 -mgp32 -mfp32 -O2, tried by autopilot */
+#ifndef M2C_DEFINES
+#define M2C_DEFINES
+typedef s32 M2C_UNK;
+typedef s8 M2C_UNK8;
+typedef s16 M2C_UNK16;
+typedef s32 M2C_UNK32;
+#define M2C_FIELD(expr, type_ptr, offset) (*(type_ptr)((s8 *)(expr) + (offset)))
+#define M2C_BITWISE(type, expr) ((type)(expr))
+#define M2C_ERROR(desc) (0)
+#define M2C_CARRY 0
+#define M2C_OVERFLOW(a) (0)
+#endif
+
+s32 func_80040E88_ovl_01();
+
+void func_801730A8_overlay_061(s32 arg0, s32 arg1) {
+    func_80040E88_ovl_01(arg1 + 0x58, arg1 + 8);
+    func_80040E88_ovl_01(arg1 + 0x1D0, arg1 + 0x180);
+    func_80040E88_ovl_01(arg1 + 0x348, arg1 + 0x2F8);
+    func_80040E88_ovl_01(arg1 + 0x4C0, arg1 + 0x470);
+}

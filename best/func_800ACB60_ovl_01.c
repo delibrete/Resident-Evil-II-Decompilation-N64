@@ -8,6 +8,6 @@ void func_800ACB60_ovl_01(s16 arg0, s32 arg1)
   {
     new_var = (short) new_var3;
   }
-  while (*(new_var2 = &new_var));
+  while (new_var = *(new_var2 = &new_var));
 }
 

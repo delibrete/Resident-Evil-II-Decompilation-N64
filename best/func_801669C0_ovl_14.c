@@ -13,7 +13,6 @@ void func_801669C0_ovl_14(void *arg0, s32 arg1, volatile int arg2)
   u8 *new_var;
   if (p[5] != 255)
   {
-    y = p[5];
     p[0x2cb] = y;
     new_var = p;
     x = new_var[0xc];
@@ -30,6 +29,7 @@ void func_801669C0_ovl_14(void *arg0, s32 arg1, volatile int arg2)
       *((u32 *) new_var) &= ~0xe;
       *((u16 *) (new_var + 0x2c8)) &= 0xfd0f;
     }
+    y = p[5];
   }
   D_80168C94_ovl_14[new_var[0x26e]](arg0, a1, arg2);
 }

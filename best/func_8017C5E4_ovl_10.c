@@ -6,7 +6,7 @@ typedef struct { s32 a,b,c,d,e,f,g; } Vec;
 void func_8017C5E4_ovl_10(void) {
  u8 *s=(u8*)0x8017E680; s32 *v=(s32*)(s+8); s16 angle; s16 mode; s32 *target;
  *(s32*)(s+0x28)-=*(s32*)(s+0x30);
- target=*(s32**)(s+0x3C); mode=*(s16*)((u8*)target+0x16);
+  mode=*(s16*)((u8*)(*(s32**)(s+0x3C))+0x16);
  if(mode==0) {
   if(!(*(u8*)(s+0x34)&1)) {
    target=*(s32**)(D_800C7650_ovl_01+0x19CB4);
@@ -29,7 +29,7 @@ void func_8017C5E4_ovl_10(void) {
  v[4]+= (target[5]-v[4])/30;
  v[6]+= (target[7]-v[6])/30;
  v[5]+= (target[6]-(v[5]+0x12C))/5;
- func_800828DC_ovl_01(v+1,v+4,0);
+ do { func_800828DC_ovl_01(v+1,v+4,0); } while (0);
  func_80042910_ovl_01(0xD0);
  func_80042D90_ovl_01(D_800E90D8_ovl_01);
  func_80042DDC_ovl_01(D_800E90D8_ovl_01);

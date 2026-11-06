@@ -31,7 +31,7 @@ void func_80182BA8_ovl_02(u8 *arg0, s8 *arg1, s32 arg2, s32 arg3) {
     var_a1 = arg1;
     var_t3 = 0;
     if (arg3 > 0) {
-        var_t2 = var_a1 + 7;
+        var_t2 = (char *)(var_a1); var_t2 += (s32)(7);
         var_t1 = var_a0 + 8;
         do {
             temp_t0 = M2C_FIELD(var_t1, u8 *, -7);

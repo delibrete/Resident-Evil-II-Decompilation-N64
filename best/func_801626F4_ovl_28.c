@@ -8,6 +8,6 @@ void func_801626F4_ovl_28(void *p) {
 
     b.w.lo = (u32)D_800C7650_ovl_01;
     base = off + b.w.lo;
-    func_80032EA4_ovl_01((s32)p, *(s32 *)(base + 0x1AA8), *(s32 *)(base + 0x1AB0), 0x400);
+    do { func_80032EA4_ovl_01((s32)p, *(s32 *)(base + 0x1AA8), *(s32 *)(base + 0x1AB0), 0x400); } while (0);
     func_80032EA4_ovl_01((s32)p, *(s32 *)(base + 0x1AA8), *(s32 *)(base + 0x1AB0), 0x320);
 }

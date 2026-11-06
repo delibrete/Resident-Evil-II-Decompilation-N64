@@ -1,48 +1,46 @@
-extern s32 D_800C7650_ovl_01;
-s32 func_80052C9C_ovl_01(s32,s32,s32,void*);
-s32 func_80052D40_ovl_01(s32,s32,s32,s32);
-void func_80166D80_ovl_33(void *arg0) {
- void *p; u8 idx,n;
- p=(void*)((u8*)&D_800C7650_ovl_01+0x18000);
- p=*(void**)((u8*)p+0x1D40);
- idx=*((u8*)arg0+0x2B4);
- *((u8*)p+0x2BF)=*((u8*)p+0x2BF)&~(2<<idx);
- n=*((u8*)arg0+0x2BE);
- if(n) {
-  *((u8*)arg0+0x2BE)=n-1;
-  p=(void*)((u8*)&D_800C7650_ovl_01+0x18000);
-  p=*(void**)((u8*)p+0x1D40);
-  idx=*((u8*)arg0+0x2B4);
-  *((u8*)p+0x2BF)=*((u8*)p+0x2BF)|(2<<idx);
-  func_80052C9C_ovl_01(3,0x82,0,p);
-  func_80052D40_ovl_01(0x19,0x82,0,3);
- }
-}
+/* identical to func_801739A8_overlay_061 (matched), with its names changed by decompdecomp */
+/* machine draft (m2c) for gcc-2.7.2-kmc -G0 -mips3 -mgp32 -mfp32 -O2, tried by autopilot */
+#ifndef M2C_DEFINES
+#define M2C_DEFINES
+typedef s32 M2C_UNK;
+typedef s8 M2C_UNK8;
+typedef s16 M2C_UNK16;
+typedef s32 M2C_UNK32;
+#define M2C_FIELD(expr, type_ptr, offset) (*(type_ptr)((s8 *)(expr) + (offset)))
+#define M2C_BITWISE(type, expr) ((type)(expr))
+#define M2C_ERROR(desc) (0)
+#define M2C_CARRY 0
+#define M2C_OVERFLOW(a) (0)
+#endif
+
 void func_80166E18_ovl_33(void *arg0) {
-int __repair_literal;
+    u16 temp_v0;
+    u8 temp_v1;
+    void *temp_a0;
+    void *temp_v0_2;
 
- u8 state; void *p; u16 timer;
- state=*((u8*)arg0+0x2BF);
- if(state==1) goto state1;
-__repair_literal = 2;
-
- if(state<__repair_literal) return;
- if(state==2) goto state2;
- if(state==3) goto state3;
- return;
-state1:
- p=*(void**)((u8*)arg0+0x234);
- *(s32*)((u8*)p+0x5E0)=(*(s32*)((u8*)p+0x5E0)&~0x4000)|0x40;
- *((u8*)arg0+0x2BF)=2;
- *(u16*)((u8*)arg0+0x2C0)=0x96;
-state2:
- timer=*(u16*)((u8*)arg0+0x2C0);
- timer--;
- *(u16*)((u8*)arg0+0x2C0)=timer;
- if(timer!=0xFFFF) return;
- *((u8*)arg0+0x2BF)=3; return;
-state3:
- p=*(void**)((u8*)arg0+0x234);
- *(s32*)((u8*)p+0x5E0)=(*(s32*)((u8*)p+0x5E0)|0x4000)&~0x40;
- *((u8*)arg0+0x2BF)=0;
+    temp_v1 = M2C_FIELD(arg0, u8 *, 0x2BF);
+    switch (temp_v1) {
+case 0: break;
+                              /* irregular */
+    case 1:
+        temp_a0 = M2C_FIELD(arg0, void **, 0x234);
+        M2C_FIELD(temp_a0, s32 *, 0x5E0) = (s32) ((M2C_FIELD(temp_a0, s32 *, 0x5E0) & ~0x4000) | 0x40);
+        M2C_FIELD(arg0, u8 *, 0x2BF) = 2U;
+        M2C_FIELD(arg0, u16 *, 0x2C0) = 0x96U;
+        /* fallthrough */
+    case 2:
+        temp_v0 = M2C_FIELD(arg0, u16 *, 0x2C0) - 1;
+        M2C_FIELD(arg0, u16 *, 0x2C0) = temp_v0;
+        if ((temp_v0 & 0xFFFF) == 0xFFFF) {
+            M2C_FIELD(arg0, u8 *, 0x2BF) = 3U;
+            return;
+        }
+        return;
+    case 3:
+        temp_v0_2 = M2C_FIELD(arg0, void **, 0x234);
+        M2C_FIELD(temp_v0_2, s32 *, 0x5E0) = (s32) ((M2C_FIELD(temp_v0_2, s32 *, 0x5E0) | 0x4000) & ~0x40);
+        M2C_FIELD(arg0, u8 *, 0x2BF) = 0U;
+        return;
+    }
 }

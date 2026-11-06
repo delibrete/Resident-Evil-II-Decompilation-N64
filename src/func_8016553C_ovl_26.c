@@ -1,3 +1,4 @@
+/* machine draft (m2c) for sn-n64-281 -G0 -mips3 -O2 -mgas -meb -mcpu=VR4300 -mhard-float -mfp64, tried by autopilot */
 #ifndef M2C_DEFINES
 #define M2C_DEFINES
 typedef s32 M2C_UNK;
@@ -10,11 +11,10 @@ typedef s32 M2C_UNK32;
 #define M2C_CARRY 0
 #define M2C_OVERFLOW(a) (0)
 #endif
-/* machine draft (m2c) for gcc-2.7.2-kmc -G0 -mips3 -mgp32 -mfp32 -O2, tried by autopilot */
 
-s32 func_8016559C_overlay_026();
-s32 func_80165640_overlay_026();
-s32 func_80166B18_overlay_026();
+M2C_UNK func_8016559C_overlay_026();                /* extern */
+M2C_UNK func_80165640_overlay_026(void *);          /* extern */
+M2C_UNK func_80166B18_overlay_026(void *, M2C_UNK, M2C_UNK); /* extern */
 
 void func_8016553C_ovl_26(void *arg0) {
     if (M2C_FIELD(arg0, u8 *, 6) == 0) {

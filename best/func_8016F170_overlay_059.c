@@ -16,6 +16,10 @@ s32 func_80032EA4_ovl_01();
 extern char D_800C7650_ovl_01[];
 
 void func_8016F170_overlay_059(s32 arg0) {
-    func_80032EA4_ovl_01(arg0, *(s32 *)(D_800C7650_ovl_01 + 0x19AA8), *(s32 *)(D_800C7650_ovl_01 + 0x19AB0), 0x400);
-    func_80032EA4_ovl_01(arg0, *(s32 *)(D_800C7650_ovl_01 + 0x19AA8), *(s32 *)(D_800C7650_ovl_01 + 0x19AB0), 0x320);
+char *__repair_addr;
+
+    do { func_80032EA4_ovl_01(arg0, *(s32 *)(D_800C7650_ovl_01 + 0x19AA8), *(s32 *)(D_800C7650_ovl_01 + 0x19AB0), 0x400); } while (0);
+__repair_addr = (char *)(D_800C7650_ovl_01 + 0x19AB0);
+
+    func_80032EA4_ovl_01(arg0, *(s32 *)(D_800C7650_ovl_01 + 0x19AA8), *(s32 *)(__repair_addr), 0x320);
 }

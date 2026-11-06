@@ -12,8 +12,8 @@ typedef s32 M2C_UNK32;
 #define M2C_OVERFLOW(a) (0)
 #endif
 
-M2C_UNK func_800A5618_ovl_01(s32, s32, s16);        /* extern */
-M2C_UNK func_800A5660_ovl_01();                     /* extern */
+s32 func_800A5618_overlay_001();
+s32 func_800A5660_overlay_001();
 extern s32 D_80157DB0;
 extern u16 D_80157DC0;
 
@@ -26,7 +26,7 @@ s32 func_800ADAE8_ovl_01(s32 arg0, void *arg1, s16 arg2) {
     s32 var_a1;
     s32 var_a1_2;
     s32 var_v0;
-    u16 *var_v1;
+    char *var_v1;
     void *temp_v0;
     void *var_s0;
 
@@ -41,7 +41,7 @@ s32 func_800ADAE8_ovl_01(s32 arg0, void *arg1, s16 arg2) {
         var_a0 = D_80157DB0;
         var_v1 = &D_80157DC0;
 loop_2:
-        if (*var_v1 != var_a2) {
+        if (*(u16 *)var_v1 != var_a2) {
             var_a1 += 1;
             var_v1 += 8;
             if (var_a1 >= var_a0) {
@@ -55,7 +55,7 @@ loop_2:
     if (var_a1 == D_80157DB0) {
         var_v0 = 0;
         if (var_a1 < 0x80) {
-            func_800A5618_ovl_01(var_a0, var_a1, var_a2);
+            func_800A5618_overlay_001(var_a0);
             var_a1_2 = 0;
             temp_a2 = temp_s3 & 0xFFFF;
             temp_v0 = (D_80157DB0 * 8) + &D_80157DC0;
@@ -70,7 +70,7 @@ loop_2:
                 } while (var_a1_2 < temp_a2);
             }
             D_80157DB0 += 1;
-            func_800A5660_ovl_01();
+            func_800A5660_overlay_001();
             var_v0 = 1;
         }
     }

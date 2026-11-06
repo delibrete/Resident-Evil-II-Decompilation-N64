@@ -86,7 +86,7 @@ loop_14:
                     func_800A5618_overlay_001();{ s32 __repair_value; __repair_value = var_s0_2 + 1; var_v1_3 = __repair_value; }
                     if (var_v1_3 < D_8014E10C) {
                         temp_v0_2 = var_v1_3 * 0xC;
-                        var_a1_2 = temp_v0_2 + &D_8014E110;
+                        var_a1_2 = (char *)(temp_v0_2); var_a1_2 += (s32)(&D_8014E110);
                         var_a0 = temp_v0_2 - 0xC;
                         do {
                             temp_v0_3 = var_a0 + &D_8014E110;

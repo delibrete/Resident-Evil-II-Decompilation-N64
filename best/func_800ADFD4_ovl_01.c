@@ -19,8 +19,8 @@ s32 func_800ADFD4_ovl_01(s16 arg0) {
         do {
             if (func_800AB3DC_ovl_01(g, *(s32 *)(s0 + 4), *(u16 *)(s0 + 2), 0xC, D_800AE124_ovl_01) != 0) {
                 return 1;
-            }
-            i++;
+            }/*__repair_loop_weight*/do {
+            i++;} while (0);
             s0 += 8;
         } while (i < *cnt);
     }

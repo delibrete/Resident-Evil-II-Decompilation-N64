@@ -1,4 +1,4 @@
-/* machine draft (m2c) for gcc-2.7.2-kmc -G0 -mips3 -mgp32 -mfp32 -O2, tried by autopilot */
+/* machine draft (m2c) for sn-n64-281 -G0 -mips3 -O2 -mgas -meb -mcpu=VR4300 -mhard-float -mfp64, tried by autopilot */
 #ifndef M2C_DEFINES
 #define M2C_DEFINES
 typedef s32 M2C_UNK;
@@ -12,15 +12,15 @@ typedef s32 M2C_UNK32;
 #define M2C_OVERFLOW(a) (0)
 #endif
 
-extern void *D_8017E860_ovl_10;
+extern void *D_8017E860_overlay_010;
 
 void func_8017D8E8_ovl_10(void) {
-    register u16 temp_v0;
+    u16 temp_v0;
 
-    temp_v0 = M2C_FIELD(D_8017E860_ovl_10, u16 *, 2) + 1;
-    M2C_FIELD(D_8017E860_ovl_10, u16 *, 2) = temp_v0;
+    temp_v0 = M2C_FIELD(D_8017E860_overlay_010, u16 *, 2) + 1;
+    M2C_FIELD(D_8017E860_overlay_010, u16 *, 2) = temp_v0;
     if ((s16) temp_v0 >= 0xB5) {
-        M2C_FIELD(D_8017E860_ovl_10, u16 *, 2) = 0U;
-        M2C_FIELD(D_8017E860_ovl_10, s16 *, 0) = 0;
+        M2C_FIELD(D_8017E860_overlay_010, u16 *, 2) = 0U;
+        M2C_FIELD(D_8017E860_overlay_010, s16 *, 0) = 0;
     }
 }

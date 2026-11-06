@@ -21,8 +21,8 @@ void func_800AE074_ovl_01(void) {
     D_801535A0 = 0;
     do {
         p[0] = 0;
-        p[1] = 0;
-        i += 1;
+        p[1] = 0;/*__repair_loop_weight*/do {
+        i += 1;} while (0);
         p += 2;
     } while (i < 0x200);
     func_800A5C7C_ovl_01(i);

@@ -1,3 +1,4 @@
+/* identical to func_80161CD0_ovl_37 (matched), with its names changed by decompdecomp */
 /* Partial candidate from function #265716 in project #68; rechecked locally. */
 /* machine draft (m2c) for gcc-2.7.2-kmc -G0 -mips3 -mgp32 -mfp32 -O2, tried by autopilot */
 #ifndef M2C_DEFINES

@@ -7,7 +7,7 @@ extern s32 D_8010B698_ovl_01;
 
 void func_80077B0C_ovl_01(s32 arg0, s32 arg1);
 void func_8015E8AC_ovl_03(s32 arg0);
-void func_8015E2EC_ovl_03(s32 a0, s32 a1, s32 a2, s32 a3);
+void func_8015E2EC_ovl_03(s32 a0);
 s32 func_8009BE70_ovl_01(s32 arg0);
 
 #define G16(o) (*(u16 *)((u8 *)D_800C7650_ovl_01 + 0x18000 + (o)))
@@ -97,7 +97,7 @@ block24:
                 p[2] = (r & 1) ? 7 : 4;
             }
             if (D_8016148C_ovl_03 & 1) {
-                G32(0x1A5C) = G32(0x1A5C) | 0x80000000;
+                G32(0x1A5C) = G32(0x1A5C) | 0x7fffffff;
             } else {
                 G32(0x1A5C) = G32(0x1A5C) & 0x7FFFFFFF;
             }
@@ -123,5 +123,5 @@ block24:
         break;
     }
     func_8015E8AC_ovl_03(D_80160BA2_ovl_03);
-    func_8015E2EC_ovl_03(1, 1, 0x1B, D_80161468_ovl_03);
+    func_8015E2EC_ovl_03(1);
 }

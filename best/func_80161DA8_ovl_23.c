@@ -1,5 +1,17 @@
-s32 func_80040E88_ovl_01(void *, void *);
-s32 func_80083800_ovl_01(s16, u16 *, u16 *, s32);
+#ifndef M2C_DEFINES
+#define M2C_DEFINES
+typedef s32 M2C_UNK;
+typedef s8 M2C_UNK8;
+typedef s16 M2C_UNK16;
+typedef s32 M2C_UNK32;
+#define M2C_FIELD(expr, type_ptr, offset) (*(type_ptr)((s8 *)(expr) + (offset)))
+#define M2C_BITWISE(type, expr) ((type)(expr))
+#define M2C_ERROR(desc) (0)
+#define M2C_CARRY 0
+#define M2C_OVERFLOW(a) (0)
+#endif
+s32 func_80040E88_ovl_01();
+s32 func_80083800_ovl_01();
 extern s32 D_80166260_ovl_23;
 typedef struct { unsigned short field_0; unsigned short field_2; unsigned short field_4; unsigned short field_6; unsigned short field_8; unsigned short field_A; unsigned short field_C; unsigned short field_E; short field_10; } __repair_record_var_s0;
 void func_80161DA8_ovl_23(void *arg0)
@@ -7,7 +19,7 @@ void func_80161DA8_ovl_23(void *arg0)
   int new_var;
   u16 sp10;
   s16 sp14;
-  s32 *var_s0;
+  char *var_s0;
   s16 temp_a0_2;
   s16 temp_v1_3;
   s16 temp_v1_4;
@@ -34,7 +46,7 @@ void func_80161DA8_ovl_23(void *arg0)
     if ((*((s32 *) (((char *) temp_s1) + 0x50))) >= 0)
     {
       ((__repair_record_var_s0*)var_s0)->field_4 = (u16) ((((__repair_record_var_s0*)var_s0)->field_4) / 20);
-      var_a3 = MULT_HI((s16) (((__repair_record_var_s0*)var_s0)->field_8), 0x92492493);
+      var_a3 = MULT_HI((s16) (((__repair_record_var_s0*)var_s0)->field_8));
       ((__repair_record_var_s0*)var_s0)->field_8 = (u16) ((((__repair_record_var_s0*)var_s0)->field_8) / (-28));
       *((s32 *) (((char *) temp_s1) + 0x50)) = 0;
       ((__repair_record_var_s0*)var_s0)->field_A = 0U;
@@ -99,7 +111,7 @@ void func_80161DA8_ovl_23(void *arg0)
     }
     sp14 = 0;
     sp10 = ((__repair_record_var_s0*)var_s0)->field_4;
-    func_80083800_ovl_01((s16) ((*((u16 *) (((char *) arg0) + 0x66))) + (((__repair_record_var_s0*)var_s0)->field_2)), &sp10, &sp10, var_a3);
+    func_80083800_ovl_01((s16) ((*((u16 *) (((char *) arg0) + 0x66))) + (((__repair_record_var_s0*)var_s0)->field_2)),  &sp10);
     *((s32 *) (((char *) temp_s1) + 0x4C)) = (s32) ((*((s32 *) (((char *) temp_s1) + 0x4C))) + ((s16) sp10));
     *((s32 *) (((char *) temp_s1) + 0x50)) = (s32) ((*((s32 *) (((char *) temp_s1) + 0x50))) + ((s16) (((__repair_record_var_s0*)var_s0)->field_8)));
     *((s32 *) (((char *) temp_s1) + 0x54)) = (s32) ((*((s32 *) (((char *) temp_s1) + 0x54))) + sp14);

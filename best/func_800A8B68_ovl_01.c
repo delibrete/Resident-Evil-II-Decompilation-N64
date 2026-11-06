@@ -12,7 +12,7 @@ extern void *D_80147F80;
 s32 func_800A8B68_ovl_01(s32 arg0, s32 arg1, s32 arg2, s32 arg3)
 {
   s32 temp_a3;
-  s32 temp_s0;
+  
   s32 var_v1;
   char *var_s0;
   u16 var_a0;
@@ -20,7 +20,7 @@ s32 func_800A8B68_ovl_01(s32 arg0, s32 arg1, s32 arg2, s32 arg3)
   void **var_a2;
   void *temp_a1;
   void *temp_s1;
-  void *temp_s2;
+  union { void * pointer; s32 value; } __repair_phase_storage;
   void *new_var;
   if (D_801362B0_ovl_01 != 0)
   {
@@ -40,7 +40,7 @@ s32 func_800A8B68_ovl_01(s32 arg0, s32 arg1, s32 arg2, s32 arg3)
           __repair_result_var_a0 = __repair_inline(*((u16 *) var_s0));
           new_var = temp_a1 + ((*((s32 *) (((char *) temp_a1) + 0x1C))) + 8);
           temp_s1 = temp_a1 + ((*((s32 *) (((char *) temp_a1) + 0x20))) + 8);
-          temp_s2 = new_var;
+          __repair_phase_storage.pointer = new_var;
           if (__repair_result_var_a0 != 0xFFFF)
           {
             loop_6:
@@ -60,9 +60,9 @@ s32 func_800A8B68_ovl_01(s32 arg0, s32 arg1, s32 arg2, s32 arg3)
               func_800A5618_overlay_001(*((u16 *) var_s0), temp_a1, var_a2, temp_a3);
             }
             while (0);
-            temp_s0 = func_8009F850_overlay_001(temp_s2, temp_s1, var_s0, arg2, arg3);
+            __repair_phase_storage.value = func_8009F850_overlay_001(__repair_phase_storage.pointer, temp_s1, var_s0, arg2, arg3);
             func_800A5660_overlay_001();
-            return temp_s0;
+            return __repair_phase_storage.value;
           }
           goto block_13;
         }

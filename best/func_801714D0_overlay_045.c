@@ -1,4 +1,4 @@
-/* identical to func_80164940_ovl_17 (matched), with its names changed by decompdecomp */
+/* machine draft (m2c) for gcc-2.8.1-pm-sn-as -G0 -mips3 -mgp32 -mfp32 -O2, tried by autopilot */
 #ifndef M2C_DEFINES
 #define M2C_DEFINES
 typedef s32 M2C_UNK;
@@ -11,18 +11,17 @@ typedef s32 M2C_UNK32;
 #define M2C_CARRY 0
 #define M2C_OVERFLOW(a) (0)
 #endif
-/* machine draft (m2c) for gcc-2.7.2-kmc -G0 -mips3 -mgp32 -mfp32 -O2 -mcpu=r4600, tried by autopilot */
 
-s32 func_8016EC58_overlay_045();
-s32 func_80173B4C_overlay_045();
+M2C_UNK func_8016EC58_overlay_045(void *, M2C_UNK, M2C_UNK, u8); /* extern */
+M2C_UNK func_80173B4C_overlay_045(M2C_UNK, M2C_UNK); /* extern */
 
-void func_801714D0_overlay_045(void *arg0, s32 arg1, s32 arg2) {
+void func_801714D0_overlay_045(void *arg0, M2C_UNK arg1, M2C_UNK arg2) {
     u8 temp_a3;
     void *temp_s0;
 
     temp_s0 = arg0 + 0x2B4;
     if (M2C_FIELD(arg0, u8 *, 0x2D8) != 1) {
-        func_80173B4C_overlay_045(arg0, 1, 0);
+        func_80173B4C_overlay_045(1, 0);
     }
     if (M2C_FIELD(temp_s0, u8 *, 0x1E) != 0) {
         temp_a3 = M2C_FIELD(temp_s0, u8 *, 0x1D);

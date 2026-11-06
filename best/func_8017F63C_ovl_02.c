@@ -12,49 +12,49 @@ typedef s32 M2C_UNK32;
 #define M2C_OVERFLOW(a) (0)
 #endif
 
-s32 func_8017BB30_ovl_02(M2C_UNK);                  /* extern */
-s32 func_8017BB4C_ovl_02();                         /* extern */
-M2C_UNK func_8017BB68_ovl_02(s8);                   /* extern */
-extern M2C_UNK D_80184BF4_ovl_02;
-extern M2C_UNK D_80184C04_ovl_02;
-extern M2C_UNK D_80184C14_ovl_02;
-extern s32 D_80185700_ovl_02;
+s32 func_8017BB30_overlay_002(M2C_UNK);             /* extern */
+s32 func_8017BB4C_overlay_002();                    /* extern */
+M2C_UNK func_8017BB68_overlay_002(s8);              /* extern */
+extern M2C_UNK D_80184BF4_overlay_002;
+extern M2C_UNK D_80184C04_overlay_002;
+extern M2C_UNK D_80184C14_overlay_002;
+extern s32 D_80185700_overlay_002;
 
 s8 func_8017F63C_ovl_02(void) {
     M2C_UNK *var_v0_2;
     s32 temp_v0;
     s32 temp_v1;
-    s32 var_v1;
+    
     s8 *var_s0;
     s8 var_v0;
 
     var_v0 = 0;
-    if (func_8017BB4C_ovl_02() == 0) {
-        temp_v0 = func_8017BB30_ovl_02(9);
+    if (func_8017BB4C_overlay_002() == 0) {
+        temp_v0 = func_8017BB30_overlay_002(9);
         if (temp_v0 >= 0x40) {
-            var_v1 = temp_v0 >> 6;
-            var_v0_2 = &D_80184BF4_ovl_02;
+            temp_v1 = temp_v0 >> 6;
+            var_v0_2 = &D_80184BF4_overlay_002;
             goto block_3;
         }
         if (temp_v0 < 0x18) {
             temp_v1 = temp_v0 - 0xC;
             if (temp_v1 >= 0) {
-                var_s0 = (temp_v1 * 2) + &D_80184C14_ovl_02;
-                func_8017BB68_ovl_02(M2C_FIELD(var_s0, s8 *, 1));
-                if (func_8017BB4C_ovl_02() != 0) {
+                var_s0 = (temp_v1 * 2) + &D_80184C14_overlay_002;
+                func_8017BB68_overlay_002(M2C_FIELD(var_s0, s8 *, 1));
+                if (func_8017BB4C_overlay_002() != 0) {
                     goto block_14;
                 }
                 goto block_15;
             }
-            D_80185700_ovl_02 = 1;
+            D_80185700_overlay_002 = 1;
             return 0;
         }
-        var_v1 = temp_v0 >> 3;
-        var_v0_2 = &D_80184C04_ovl_02;
+        temp_v1 = temp_v0 >> 3;
+        var_v0_2 = &D_80184C04_overlay_002;
 block_3:
-        var_s0 = (var_v1 * 2) + var_v0_2;
-        func_8017BB68_ovl_02(M2C_FIELD(var_s0, s8 *, 1));
-        if (func_8017BB4C_ovl_02() != 0) {
+        var_s0 = (char *)((temp_v1 * 2)); var_s0 += (s32)(var_v0_2);
+        func_8017BB68_overlay_002(M2C_FIELD(var_s0, s8 *, 1));
+        if (func_8017BB4C_overlay_002() != 0) {
 block_14:
             return -*var_s0;
         }

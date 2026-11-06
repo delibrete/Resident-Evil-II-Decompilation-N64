@@ -1,46 +1,37 @@
-/* machine draft (m2c) for gcc-2.7.2-kmc -G0 -mips3 -mgp32 -mfp32 -O2 -mcpu=r4600, tried by autopilot */
-#ifndef M2C_DEFINES
-#define M2C_DEFINES
-typedef s32 M2C_UNK;
-typedef s8 M2C_UNK8;
-typedef s16 M2C_UNK16;
-typedef s32 M2C_UNK32;
-#define M2C_FIELD(expr, type_ptr, offset) (*(type_ptr)((s8 *)(expr) + (offset)))
-#define M2C_BITWISE(type, expr) ((type)(expr))
-#define M2C_ERROR(desc) (0)
-#define M2C_CARRY 0
-#define M2C_OVERFLOW(a) (0)
-#endif
+s32 func_800A2148_ovl_01(s32);
+s32 func_800A21B8_ovl_01(s32, s32, s32, s32);
+extern s32 D_8011A31C_ovl_01;
+void func_80079290_ovl_01(s16 arg0)
+{
+  s32 temp_a0;
+  s32 var_s2;
+  s32 var_s3;
+  u32 temp_s0;
+  void *temp_s1;
+  void *temp_v1;
+  temp_a0 = arg0 * 0x3C;
+  temp_v1 = &D_8011A31C_ovl_01;
+  temp_v1 = temp_a0 + temp_v1;
+  var_s2 = 0;
+  if ((*((s8 *) (((char *) temp_v1) + 0x28))) != 0)
+  {
+    var_s3 = temp_a0;
+    loop_2:
+    temp_s1 = (char *)(var_s3); temp_s1 += (s32)((&D_8011A31C_ovl_01));
 
-s32 func_800A2148_ovl_01(s32);                      /* extern */
-M2C_UNK func_800A21B8_ovl_01(s32, M2C_UNK, s32, M2C_UNK); /* extern */
-extern M2C_UNK D_8011A31C_ovl_01;
-
-void func_80079290_ovl_01(s16 arg0) {
-    s32 temp_a0;
-    s32 var_s2;
-    s32 var_s3;
-    u32 temp_s0;
-    void *temp_s1;
-    void *temp_v1;
-
-    temp_a0 = arg0 * 0x3C;
-    temp_v1 = temp_a0 + &D_8011A31C_ovl_01;
-    var_s2 = 0;
-    if (M2C_FIELD(temp_v1, s8 *, 0x28) != 0) {
-        var_s3 = temp_a0;
-loop_2:
-        temp_s1 = var_s3 + &D_8011A31C_ovl_01;
-        if (M2C_FIELD(temp_s1, s32 *, 0x14) != 0) {
-            temp_s0 = (u32) (M2C_FIELD(temp_v1, u16 *, 2) * M2C_FIELD((var_s2 + temp_a0 + &D_8011A31C_ovl_01), u8 *, 0x24)) >> 7;
-            if (func_800A2148_ovl_01(M2C_FIELD(temp_s1, s32 *, 4)) & 0xFF) {
-                func_800A21B8_ovl_01(temp_s0 & 0xFF, 0, M2C_FIELD(temp_s1, s32 *, 4), 0);
-            }
-            var_s2 += 1;
-            var_s3 += 4;
-            if (var_s2 < 4) {
-                goto loop_2;
-            }
-        }
+    if ((*((s32 *) (((char *) temp_s1) + 0x14))) != 0)
+    {
+      temp_s0 = ((u32) ((*((u16 *) (((char *) temp_v1) + 2))) * (*((u8 *) (((char *) ((var_s2 + temp_a0) + (&D_8011A31C_ovl_01))) + 0x24))))) >> 7;
+      if (func_800A2148_ovl_01(*((s32 *) (((char *) temp_s1) + 4))) & 0xFF)
+      {
+ do { func_800A21B8_ovl_01(temp_s0 & 0xFF, 0, *((s32 *) (((char *) temp_s1) + 4)), 0); } while (0);
+      }/*__repair_loop_weight*/do {do {do {
+      var_s2 += 1;} while (0);} while (0);} while (0);
+      var_s3 += 4;
+      if (var_s2 < 4)
+      {
+        goto loop_2;
+      }
     }
+  }
 }

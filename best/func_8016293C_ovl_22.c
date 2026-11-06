@@ -42,13 +42,11 @@ void func_8016293C_ovl_22(void *arg0)
       temp_s0 *= 0x178;
       temp_s0 += temp_s3;
       temp_s0 += 0x38;
-      do
       {
         p = (s32 *) (((u8 *) p) + 0xc);
         temp_s3 = ((func_80033634_ovl_01() & 255) * 2) + 0x1000;
         func_800377B0_ovl_01(temp_s3 | 0x06000000, 0, temp_s0, p);
       }
-      while (0);
     }
     D_80166888_ovl_22 = p;
   }

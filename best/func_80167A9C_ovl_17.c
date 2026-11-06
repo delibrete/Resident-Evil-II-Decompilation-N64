@@ -7,6 +7,7 @@ void func_80167A9C_ovl_17(void *p)
   void *new_var;
   s32 a1 = (*((s32 *) p)) & 0xe3ffffff;
   u8 t;
+  int new_var2;
   *((s32 *) p) = a1;
   if (((u8 *) p)[0x2be] == 1)
   {
@@ -25,6 +26,7 @@ void func_80167A9C_ovl_17(void *p)
   {
     return;
   }
+  new_var2 = 0x18000000;
   {
     s32 d = (*((s32 *) (((u8 *) (&D_800E10D0_ovl_01)) + 0x2c))) - (*((s32 *) (((u8 *) p) + 0x2c)));
     if (d >= 0x1069)
@@ -32,12 +34,12 @@ void func_80167A9C_ovl_17(void *p)
       *((s32 *) p) |= 0x10000000;
       return;
     }
-    *((s32 *) p) |= 0x18000000;
+    return;
+    *((s32 *) p) |= new_var2;
     if (d < 0x834)
     {
       *((s32 *) p) |= 0x04000000;
     }
-    return;
   }
   zero:
   *((s32 *) p) = a1 | 0x0c000000;

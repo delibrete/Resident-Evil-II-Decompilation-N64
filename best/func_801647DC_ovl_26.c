@@ -6,7 +6,7 @@ typedef struct
 void func_801647DC_ovl_26(A *p, void *a1, s32 a2)
 {
   volatile int new_var2;
-  volatile unsigned int new_var;
+  unsigned long long new_var;
   volatile int new_var6[2];
   u8 new_var5;
   new_var6[1] = p->state;

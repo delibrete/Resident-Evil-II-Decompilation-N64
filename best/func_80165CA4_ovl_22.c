@@ -1,28 +1,9 @@
-extern volatile u32 D_80166870_ovl_22[];
-static inline static u8 *inline_fn(void *arg0)
-{
-  return (u8 *) arg0;
-}
-
+/* identical to func_8016550C_ovl_13 (matched), with its names changed by decompdecomp */
+extern volatile u32 D_80166658_ovl_13[];
 void func_80165CA4_ovl_22(void *arg0)
 {
   volatile u32 *base;
-  volatile u32 *new_var2;
-  volatile u32 *new_var;
-  u32 i = *(inline_fn(arg0) + 5);
-  if (D_80166870_ovl_22)
-  {
-    new_var = base;
-    new_var2 = new_var;
-    ((void (*)(void)) new_var2[i])();
-    base = D_80166870_ovl_22;
-  }
-  else
-  {
-    new_var = base;
-    new_var2 = new_var;
-    ((void (*)(void)) new_var2[i])();
-    base = D_80166870_ovl_22;
-  }
+  base = D_80166658_ovl_13;
+  ((void (*)(void)) base[((u8 *) arg0)[5]])();
 }
 

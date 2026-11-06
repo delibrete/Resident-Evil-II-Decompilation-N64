@@ -20,7 +20,7 @@ extern M2C_UNK D_80160BB8_ovl_03;
 extern s32 D_8016148C_ovl_03;
 
 void func_8015EBB8_ovl_03(s32 arg0) {
-    s32 temp_v0_2;
+    
     s32 var_a3;
     
     s32 var_s0_2;
@@ -32,7 +32,7 @@ void func_8015EBB8_ovl_03(s32 arg0) {
     u32 var_s1;
     u32 var_s1_2;
     u8 temp_v0;
-    void *temp_a0;
+    union { void * pointer; s32 value; } __repair_phase_storage;
     void *temp_a0_2;
     void *temp_a1;
 
@@ -41,12 +41,12 @@ void func_8015EBB8_ovl_03(s32 arg0) {
     do {
         var_a3 = 0;
 loop_2:
-        temp_a0 = ((*var_a2 + var_a3) * 0x28) + &D_80160BB8_ovl_03;
+        __repair_phase_storage.pointer = ((*var_a2 + var_a3) * 0x28) + &D_80160BB8_ovl_03;
         temp_v0 = M2C_FIELD((&D_80160BB8_ovl_03 - 0x1C), u8 *, 0xB);
         var_a3 += 1;
-        M2C_FIELD(temp_a0, u8 *, 2) = temp_v0;
-        M2C_FIELD(temp_a0, u8 *, 1) = temp_v0;
-        M2C_FIELD(temp_a0, u8 *, 0) = temp_v0;
+        M2C_FIELD(__repair_phase_storage.pointer, u8 *, 2) = temp_v0;
+        M2C_FIELD(__repair_phase_storage.pointer, u8 *, 1) = temp_v0;
+        M2C_FIELD(__repair_phase_storage.pointer, u8 *, 0) = temp_v0;
         if (var_a3 == 0) {
             goto loop_2;
         }
@@ -102,9 +102,9 @@ loop_2:
     var_s0_2 = 0;
     do {
 loop_25:
-        temp_v0_2 = (&D_80160B80_ovl_03)[var_s1_2] + var_s0_2;
+        __repair_phase_storage.value = (&D_80160B80_ovl_03)[var_s1_2] + var_s0_2;
         var_s0_2 += 1;
-        M2C_FIELD(&D_800DF650_ovl_01, s32 *, 0x204) = func_800439B8_ovl_01(M2C_FIELD(&D_800DF650_ovl_01, s32 *, 0x204),  (temp_v0_2 * 0x28) + &D_80160BB8_ovl_03);
+        M2C_FIELD(&D_800DF650_ovl_01, s32 *, 0x204) = func_800439B8_ovl_01(M2C_FIELD(&D_800DF650_ovl_01, s32 *, 0x204),  (__repair_phase_storage.value * 0x28) + &D_80160BB8_ovl_03);
         if (var_s0_2 == 0) {
             goto loop_25;
         }

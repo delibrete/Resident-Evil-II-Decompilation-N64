@@ -18,18 +18,18 @@ extern void *D_8013A3D0;
 void func_8009B644_ovl_01(void)
 {
   s16 temp_v1_3;
-  s32 temp_s6;
-  s32 *new_var;
+  
+  union { s32 * pointer; s32 value; } __repair_phase_storage;
   void *temp_v1;
   void *temp_v1_2;
-  new_var = (s32 *) (((char *) (&D_800C7650_ovl_01)) + 0x19A3C);
-  if ((*new_var) & 0x10000)
+  __repair_phase_storage.pointer = (s32 *) (((char *) (&D_800C7650_ovl_01)) + 0x19A3C);
+  if ((*__repair_phase_storage.pointer) & 0x10000)
   {
     do
     {
       func_8004CDB8_ovl_01(1);
     }
-    while ((*new_var) & 0x10000);
+    while ((*__repair_phase_storage.pointer) & 0x10000);
   }
   do
   {
@@ -37,14 +37,14 @@ void func_8009B644_ovl_01(void)
   }
   while (0);
   D_801320B0_ovl_01 = 1;
-  temp_s6 = ((*((u16 *) (((char *) D_801320B8_ovl_01) + 0x1E0))) & 0x8000) == 0;
+  __repair_phase_storage.value = ((*((u16 *) (((char *) D_801320B8_ovl_01) + 0x1E0))) & 0x8000) == 0;
   loop_4:
   if ((*((u8 *) (((char *) (&D_80113A70_ovl_01)) + 0xE89))) != 0)
   {
     if (D_801320AC_ovl_01 != 0)
     {
       func_8009B854_ovl_01();
-      if (temp_s6 != 0)
+      if (__repair_phase_storage.value != 0)
       {
         func_8009B854_ovl_01();
       }
@@ -66,11 +66,11 @@ void func_8009B644_ovl_01(void)
       {
         func_8004C24C_ovl_01(0x20, 0xC8, (*((u16 *) (((char *) (&D_80131EFC_ovl_01)) + 0))) + (&D_80131EC0_ovl_01), 0x4000);
       }
-      temp_s6 = 0x20;
+      __repair_phase_storage.value = 0x20;
       if (temp_v1_3 == 0x34)
       {
-        func_8004C24C_ovl_01(temp_s6, 0xB8, (*((u16 *) (((char *) (&D_80131EFC_ovl_01)) + 2))) + (&D_80131EC0_ovl_01), 0x4000);
-        func_8004C24C_ovl_01(temp_s6, 0xC8, (*((u16 *) (((char *) (&D_80131EFC_ovl_01)) + 4))) + (&D_80131EC0_ovl_01), 0x4000);
+        do { func_8004C24C_ovl_01(__repair_phase_storage.value, 0xB8, (*((u16 *) (((char *) (&D_80131EFC_ovl_01)) + 2))) + (&D_80131EC0_ovl_01), 0x4000); } while (0);
+        func_8004C24C_ovl_01(__repair_phase_storage.value, 0xC8, (*((u16 *) (((char *) (&D_80131EFC_ovl_01)) + 4))) + (&D_80131EC0_ovl_01), 0x4000);
       }
     }
     func_80042B08_ovl_01();

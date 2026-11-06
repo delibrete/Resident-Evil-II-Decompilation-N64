@@ -1,3 +1,5 @@
+/* identical to func_80173540_overlay_058 (matched), with its names changed by decompdecomp */
+/* identical to func_801669B0_ovl_30 (matched), with its names changed by decompdecomp */
 s32 func_80032B8C_ovl_01(void *, s32);
 s32 func_80077B0C_ovl_01(s32, void *);
 s32 func_80089D34_ovl_01(void *, s32, s32, s32);

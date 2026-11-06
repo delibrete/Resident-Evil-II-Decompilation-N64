@@ -1,4 +1,4 @@
-/* identical to func_801627F0_ovl_23 (matched), with its names changed by decompdecomp */
+/* identical to func_8016520C_ovl_15 (matched), with its names changed by decompdecomp */
 /* machine draft (m2c) for gcc-2.7.2-kmc -G0 -mips3 -mgp32 -mfp32 -O2, tried by autopilot */
 #ifndef M2C_DEFINES
 #define M2C_DEFINES

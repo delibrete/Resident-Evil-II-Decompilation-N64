@@ -32,7 +32,7 @@ cmpdone:
 next:
     i++;
    } while(i<*(s32*)((u8*)arg0+0x50));
-   *arg5=-1;
+   do {*arg5=-1;}while(0);
    result=5;
    goto out;
   }

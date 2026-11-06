@@ -1,9 +1,9 @@
-static inline static static static static static static static static static static static static static static static static static static volatile short inline_fn(volatile short arg0)
+inline static static static static static static static static static static static static static static static static static static static volatile short inline_fn(volatile short arg0)
 {
   return arg0;
 }
 
-static inline static static static static static static static static static static static static static volatile short inline_fn2(volatile short arg0)
+inline static static static static static static static static static static static static static static volatile short inline_fn2(volatile short arg0)
 {
   return inline_fn((unsigned char) arg0);
 }
@@ -21,8 +21,8 @@ void func_80167C40_ovl_31(void *arg0)
   volatile short new_var;
   volatile char new_var2;
   volatile unsigned char new_var9;
-  new_var8[1] = 0;
   new_var4 = (char) new_var8[1];
+  new_var8[1] = 0;
   new_var = new_var4;
   new_var6 = 0;
   do

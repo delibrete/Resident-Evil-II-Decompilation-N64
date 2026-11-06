@@ -15,7 +15,8 @@ int func_80162E94_ovl_19(void)
   volatile short new_var14;
   volatile char *new_var8;
   new_var6 = (new_var9 = (new_var4 = 0));
-  new_var3 = (unsigned short) new_var6;
+  new_var12 = (unsigned short) new_var6;
+  new_var3 = new_var12;
   new_var2 = new_var3;
   new_var2 = new_var2;
   new_var5 = new_var2;

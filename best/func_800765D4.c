@@ -13,5 +13,6 @@ char *__repair_addr;
 __repair_addr = (char *)(a1 + 0x214AC);
 
         *(u16 *)(__repair_addr) = *(u16 *)a0;
+__repair_addr = 0;
     } while (n != 0);
 }

@@ -1,4 +1,3 @@
-/* machine draft (m2c) for gcc-2.7.2-kmc -G0 -mips3 -mgp32 -mfp32 -O2, tried by autopilot */
 #ifndef M2C_DEFINES
 #define M2C_DEFINES
 typedef s32 M2C_UNK;
@@ -11,72 +10,83 @@ typedef s32 M2C_UNK32;
 #define M2C_CARRY 0
 #define M2C_OVERFLOW(a) (0)
 #endif
+s32 func_80083D5C_overlay_001();
+s32 func_80083E44_overlay_001();
+extern s32 D_800C7650_ovl_01;
+s16 func_80074D94_ovl_01(s32 arg0, s32 arg1)
+{
+  s32 sp10;
+  s32 sp14;
+  s32 sp18;
+  char *new_var;
+  s32 sp20;
+  u16 sp24;
+  u16 sp26;
+  u16 sp28;
+  u16 sp2A;
+  u16 sp2C;
+  u16 sp2E;
+  u16 sp30;
+  u16 sp32;
+  char *var_s2;
+  s32 var_v0;
+  u32 var_s1;
+  u8 temp_s3;
+  void *temp_s0;
+  temp_s3 = *((u8 *) (((char *) (&D_800C7650_ovl_01)) + 0x20F54));
+  var_s1 = 0;
+  sp10 = arg0;
+  sp14 = 0;
+  sp18 = arg1;
+  if (temp_s3 != 0)
+  {
+    var_s2 = &D_800C7650_ovl_01;
+    loop_2:
+    temp_s0 = *((void **) (((char *) var_s2) + 0x184B0));
 
-s32 func_80083D5C_ovl_01(s32 *, M2C_UNK *);         /* extern */
-s32 func_80083E44_ovl_01(s32 *, void *);            /* extern */
-extern M2C_UNK D_800C7650_ovl_01;
-
-s16 func_80074D94_ovl_01(s32 arg0, s32 arg1) {
-    s32 sp10;
-    s32 sp14;
-    s32 sp18;
-    M2C_UNK sp20;
-    u16 sp24;
-    u16 sp26;
-    u16 sp28;
-    u16 sp2A;
-    u16 sp2C;
-    u16 sp2E;
-    u16 sp30;
-    u16 sp32;
-    M2C_UNK *var_s2;
-    s32 var_v0;
-    u32 var_s1;
-    u8 temp_s3;
-    void *temp_s0;
-
-    temp_s3 = M2C_FIELD(&D_800C7650_ovl_01, u8 *, 0x20F54);
-    var_s1 = 0;
-    sp10 = arg0;
-    sp14 = 0;
-    sp18 = arg1;
-    if (temp_s3 != 0) {
-        var_s2 = &D_800C7650_ovl_01;
-loop_2:
-        temp_s0 = M2C_FIELD(var_s2, void **, 0x184B0);
-        var_s2 += 4;
-        if (temp_s0 != NULL) {
-            var_s1 += 1;
-            if (M2C_FIELD(temp_s0, u8 *, 0) == 7) {
-                if (M2C_FIELD(temp_s0, u8 *, 1) & 0x80) {
-                    sp24 = M2C_FIELD(temp_s0, u16 *, 4);
-                    sp26 = M2C_FIELD(temp_s0, u16 *, 6);
-                    sp28 = M2C_FIELD(temp_s0, u16 *, 8);
-                    sp2A = M2C_FIELD(temp_s0, u16 *, 0xA);
-                    sp2C = M2C_FIELD(temp_s0, u16 *, 0xC);
-                    sp2E = M2C_FIELD(temp_s0, u16 *, 0xE);
-                    sp30 = M2C_FIELD(temp_s0, u16 *, 0x10);
-                    sp32 = M2C_FIELD(temp_s0, u16 *, 0x12);
-                    var_v0 = var_s1 < temp_s3;
-                    if (func_80083D5C_ovl_01(&sp10, &sp20) != 0) {
-                        return M2C_FIELD(temp_s0, s16 *, 0x14);
-                    }
-                    goto block_10;
-                }
-                var_v0 = var_s1 < temp_s3;
-                if (func_80083E44_ovl_01(&sp10, temp_s0 + 4) != 0) {
-                    return (s16) M2C_FIELD(temp_s0, u16 *, 0xC);
-                }
-                goto block_10;
-            }
+    var_s2 += 4;
+    if (temp_s0 != NULL)
+    {
+      var_s1 += 1;
+      if ((*((u8 *) (((char *) temp_s0) + 0))) == 7)
+      {
+        if ((*((u8 *) (((char *) temp_s0) + 1))) & 0x80)
+        {
+          new_var = (char *) temp_s0;
+          sp24 = *((u16 *) (new_var + 4));
+          sp26 = *((u16 *) (new_var + 6));
+          sp28 = *((u16 *) (new_var + 8));
+          sp2A = *((u16 *) (new_var + 0xA));
+          sp2C = *((u16 *) (new_var + 0xC));
+          sp2E = *((u16 *) (new_var + 0xE));
+          sp30 = *((u16 *) (new_var + 0x10));
+          sp32 = *((u16 *) (new_var + 0x12));
+          var_v0 = var_s1 < temp_s3;
+          if (func_80083D5C_overlay_001(&sp10, &sp20) != 0)
+          {
+            return *((s16 *) (new_var + 0x14));
+          }
+          goto block_10;
         }
         var_v0 = var_s1 < temp_s3;
-block_10:
-        if (var_v0 == 0) {
-            goto block_11;
+        if (func_80083E44_overlay_001(&sp10, temp_s0 + 4) != 0)
+        {
+          return (s16) (*((u16 *) (new_var + 0xC)));
         }
-        goto loop_2;
+        goto block_10;
+      }
     }
-block_11:
-    return 0;
+    var_v0 = var_s1 < temp_s3;
+    block_10:
+    if (var_v0 == 0)
+    {
+      goto block_11;
+    }
+
+    goto loop_2;
+  }
+  block_11:
+  return 0;
+
 }
+

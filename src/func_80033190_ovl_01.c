@@ -1,4 +1,4 @@
-/* machine draft (m2c) for gcc-2.7.2-kmc -G0 -mips3 -mgp32 -mfp32 -O2 -mcpu=r4600, tried by autopilot */
+/* machine draft (m2c) for gcc-2.8.1-pm-sn-as -G0 -mips3 -mgp32 -mfp32 -O2, tried by autopilot */
 #ifndef M2C_DEFINES
 #define M2C_DEFINES
 typedef s32 M2C_UNK;
@@ -12,8 +12,8 @@ typedef s32 M2C_UNK32;
 #define M2C_OVERFLOW(a) (0)
 #endif
 
-s16 func_80032D44_ovl_01(s16, s16, s16, s16);       /* extern */
+s16 func_80032D44_overlay_001(s16, s16, s16, s16);  /* extern */
 
 s32 func_80033190_ovl_01(void *arg0, void *arg1) {
-    return (((M2C_FIELD(arg1, s16 *, 0x66) - func_80032D44_ovl_01(M2C_FIELD(arg0, s16 *, 0x2A), M2C_FIELD(arg0, s16 *, 0x32), M2C_FIELD(arg1, s16 *, 0x2A), M2C_FIELD(arg1, s16 *, 0x32))) + 0x400) & 0xFFF) < 0x800;
+    return (((M2C_FIELD(arg1, s16 *, 0x66) - func_80032D44_overlay_001(M2C_FIELD(arg0, s16 *, 0x2A), M2C_FIELD(arg0, s16 *, 0x32), M2C_FIELD(arg1, s16 *, 0x2A), M2C_FIELD(arg1, s16 *, 0x32))) + 0x400) & 0xFFF) < 0x800;
 }

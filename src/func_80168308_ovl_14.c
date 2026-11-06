@@ -1,3 +1,4 @@
+/* identical to func_80174CE8_overlay_042 (matched), with its names changed by decompdecomp */
 /* identical to func_80168158_ovl_14 (matched), with its names changed by decompdecomp */
 extern void func_80077D48_ovl_01(s32, void *);
 extern s32 func_801676DC_ovl_14(void *);
