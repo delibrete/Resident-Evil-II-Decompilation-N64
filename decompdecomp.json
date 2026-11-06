@@ -132197,22 +132197,6 @@
    "score_after": 230
   },
   {
-   "function": "func_80163D1C_ovl_30",
-   "text": "Best 225 with volatile u32 table indexed by arg0 byte 6 and indirect void call. Attempted explicit local base, index-first, entry pointer, and pointer arithmetic. Target loads table base to v0 before lbu into v1, whereas compiler emits base in v1 after index into v0. Could try representing as function-pointer table based on func_80167DA4_ovl_28 + 0x10 to retain the exact relocation and changing declaration order/types.",
-   "by": "codex-gpt-6-luna-1",
-   "created_at": 1793884692.657522,
-   "score_before": 0,
-   "score_after": 0
-  },
-  {
-   "function": "func_80163D1C_ovl_30",
-   "text": "Deep permuter: score 230 \u2192 230; 0 improvements; 0 candidates tested; 0 cached skips; 0 rejected; 2s elapsed. Stopped: func_80163D1C_ovl_30 is claimed by codex-gpt-6-luna-12 for another 26 min.",
-   "by": "Retroreversing.permuter-5058",
-   "created_at": 1793884732.831582,
-   "score_before": 0,
-   "score_after": 0
-  },
-  {
    "function": "func_80164464_ovl_30",
    "text": "Same small indirect dispatch template. Best score 225 from volatile u32 table indexing and calling the loaded pointer. Explicit locals and source order did not change codegen; pointer arithmetic worsened score. Target base relocation is D_80167DA4_ovl_28+0x1C, loaded before arg0[6]. Explore pointer/function symbol expression to force target load ordering.",
    "by": "codex-gpt-6-luna-1",
@@ -132227,6 +132211,22 @@
    "created_at": 1793884731.146125,
    "score_before": 20,
    "score_after": 20
+  },
+  {
+   "function": "func_80163D1C_ovl_30",
+   "text": "Best 225 with volatile u32 table indexed by arg0 byte 6 and indirect void call. Attempted explicit local base, index-first, entry pointer, and pointer arithmetic. Target loads table base to v0 before lbu into v1, whereas compiler emits base in v1 after index into v0. Could try representing as function-pointer table based on func_80167DA4_ovl_28 + 0x10 to retain the exact relocation and changing declaration order/types.",
+   "by": "codex-gpt-6-luna-1",
+   "created_at": 1793884692.657522,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_80163D1C_ovl_30",
+   "text": "Deep permuter: score 230 \u2192 230; 0 improvements; 0 candidates tested; 0 cached skips; 0 rejected; 2s elapsed. Stopped: func_80163D1C_ovl_30 is claimed by codex-gpt-6-luna-12 for another 26 min.",
+   "by": "Retroreversing.permuter-5058",
+   "created_at": 1793884732.831582,
+   "score_before": 0,
+   "score_after": 0
   }
  ],
  "set_aside": [
@@ -189567,9 +189567,9 @@
      "rom_sha1": "93187c4145cad272a255c17657cd9a1011b3fb3a"
     },
     "symbols_sha256": "bb629f57bc1a7dc4757d26842ea3c55c37e3025a8cd4b02d9a2fb5d58d2bc36b",
-    "recorded_at": 1793996792.8612192,
-    "attempt_id": 330147,
-    "source_sha256": "0a8ecf4a31d2f4533c3961868772291c0df568d8ed36d910541e8472ebb30a58",
+    "recorded_at": 1793996839.449415,
+    "attempt_id": 330155,
+    "source_sha256": "ab7299adef92cf5e6a2a26f7ff3df3673d318960298af82614c1aa06f1522814",
     "header_sha256": "6741617bf3c952bbf3b41f49aed7f8780fa9b0b41fb7a8e56fda2b5b9ed03d44",
     "context_version": 193,
     "compiler": {
