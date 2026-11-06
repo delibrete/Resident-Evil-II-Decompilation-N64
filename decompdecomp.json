@@ -7596,6 +7596,22 @@
    "timeout": 20,
    "function": "func_8000E7F0",
    "vram": 2147543024
+  },
+  "69163032:2148946696": {
+   "toolchain": "sn-n64-281",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-O2",
+    "-mgas",
+    "-meb",
+    "-mcpu=VR4300",
+    "-mhard-float",
+    "-mfp64"
+   ],
+   "timeout": 20,
+   "function": "func_80165308_overlay_032",
+   "vram": 2148946696
   }
  },
  "instructions": "",
@@ -8181,7 +8197,8 @@
   "local_source_279812": "common_local_source_279812.h",
   "overlay_059": "common_overlay_059.h",
   "main": "common_main.h",
-  "overlay_001": "common_overlay_001.h"
+  "overlay_001": "common_overlay_001.h",
+  "overlay_032": "common_overlay_032.h"
  },
  "functions": {
   "func_80000518": {
@@ -18951,7 +18968,7 @@
   },
   "func_80165308_overlay_032": {
    "vram": 2148946696,
-   "matched_by": "autopilot",
+   "matched_by": "restored",
    "readable": false
   },
   "func_80165310_ovl_32": {
@@ -90650,14 +90667,6 @@
    "score_after": 12183
   },
   {
-   "function": "func_80165308_overlay_032",
-   "text": "Deep permuter: score 2150 \u2192 2150; 0 improvements; 0 candidates tested; 0 cached skips; 0 rejected; 5s elapsed. Stopped: func_80165308_overlay_032 is already matched; use get_function to read its source.",
-   "by": "A.permuter-5233",
-   "created_at": 1793884708.7976372,
-   "score_before": 0,
-   "score_after": 0
-  },
-  {
    "function": "func_80163E18_ovl_32",
    "text": "Deep permuter: score 11078 \u2192 11078; 0 improvements; 22 candidates tested; 0 cached skips; 0 rejected; 158s elapsed. Budget rotation: soft allowance reached without recent progress.",
    "by": "A.permuter-5223",
@@ -132062,6 +132071,14 @@
    "text": "Deep permuter: score 180 \u2192 180; 0 improvements; 20 candidates tested; 0 cached skips; 0 rejected; 157s elapsed. Budget rotation: soft allowance reached without recent progress.",
    "by": "A.permuter-2376",
    "created_at": 1793884709.914043,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_80165308_overlay_032",
+   "text": "Deep permuter: score 2150 \u2192 2150; 0 improvements; 0 candidates tested; 0 cached skips; 0 rejected; 5s elapsed. Stopped: func_80165308_overlay_032 is already matched; use get_function to read its source.",
+   "by": "A.permuter-5233",
+   "created_at": 1793884708.7976372,
    "score_before": 0,
    "score_after": 0
   }
@@ -200109,43 +200126,47 @@
      "rom_sha1": "93187c4145cad272a255c17657cd9a1011b3fb3a"
     },
     "symbols_sha256": "bb629f57bc1a7dc4757d26842ea3c55c37e3025a8cd4b02d9a2fb5d58d2bc36b",
-    "recorded_at": 1793973879.571075,
-    "attempt_id": 321283,
+    "recorded_at": 1793994727.2708302,
+    "attempt_id": 329860,
     "source_sha256": "29bb72ee51653b00ccd133fe3b1599e03148528fcaabad1c0260047ac4adc605",
     "header_sha256": "6741617bf3c952bbf3b41f49aed7f8780fa9b0b41fb7a8e56fda2b5b9ed03d44",
     "context_version": 143,
     "compiler": {
-     "toolchain": "gcc-2.7.2-kmc",
+     "toolchain": "sn-n64-281",
      "flags": [
       "-G0",
       "-mips3",
-      "-mgp32",
-      "-mfp32",
-      "-O2"
+      "-O2",
+      "-mgas",
+      "-meb",
+      "-mcpu=VR4300",
+      "-mhard-float",
+      "-mfp64"
      ],
      "timeout": 20
     },
     "compiler_identity": {
-     "toolchain": "gcc-2.7.2-kmc",
-     "registry_sha256": "d940dca827e94a5f7484530ff8aacf51e3dada87e9bc8258b83e478e584d31e9",
-     "install_sha256": "581abceb0d6e157668aae83b7f785123222f245b407d3ba84c7747065535b4c1",
+     "toolchain": "sn-n64-281",
+     "registry_sha256": "c190fb42d661ba78ff8ff481879e164589ca62173549239a84c0c418896f5946",
+     "install_sha256": "0cf4df18ef52ce4c10c9e4a82bad43070ed0d1c7434f314f225dc81ad88aae79",
      "executables": {
-      "gcc": "c95e212b056473aacbee514936ff394f3354729abfbf895bf7831e164f168f25",
-      "cc1": "3160c6f0fb4697cdc6bd3412333a5a8e64b23e9e4dd6d01951422a63bee2c60a",
-      "as": "0d75e9d3446ddab2c9c1dd7b402031316d3dc47131ba96399c2a37c74e050f45"
+      "cc1n64.exe": "d90df1028c46d826e37146dbcc3e3385f78c59e05a9ddd952daa94c9ad379d9c"
      }
     },
     "settings": {
      "mode": "rom",
      "platform": "n64",
      "compiler": {
-      "toolchain": "gcc-2.7.2-kmc",
+      "toolchain": "sn-n64-281",
       "flags": [
        "-G0",
        "-mips3",
-       "-mgp32",
-       "-mfp32",
-       "-O2"
+       "-O2",
+       "-mgas",
+       "-meb",
+       "-mcpu=VR4300",
+       "-mhard-float",
+       "-mfp64"
       ],
       "timeout": 20
      },
@@ -200159,18 +200180,29 @@
       "byte_order": "z64"
      },
      "effective_command": [
-      "/Users/a/Library/Application Support/decompnet/toolchains/gcc-2.7.2-kmc/gcc",
-      "-B/Users/a/Library/Application Support/decompnet/toolchains/gcc-2.7.2-kmc/",
-      "-c",
+      "/Volumes/Data/Github/decompdecomp-rr/.venv/bin/python",
+      "/Volumes/Data/Github/decompdecomp-rr/src/decompnet/consoles/n64/sn64.py",
+      "--cc",
+      "/Users/a/Library/Application Support/decompnet/toolchains/sn-n64-281/cc1n64.exe",
+      "--cpp",
+      "/Users/a/Library/Application Support/decompnet/toolchains/sn-n64-281/cppn64.exe",
+      "--assembler",
+      "/Users/a/Library/Application Support/decompnet/toolchains/sn-n64-281/asn64.exe",
+      "--converter",
+      "/Users/a/Library/Application Support/decompnet/toolchains/psyq-obj-parser/psyq-obj-parser",
+      "--runner",
+      "/Users/a/Library/Application Support/decompnet/toolchains/wibo/wibo",
+      "{src}",
+      "{obj}",
+      "{include}",
       "-G0",
       "-mips3",
-      "-mgp32",
-      "-mfp32",
       "-O2",
-      "-I{include}",
-      "{src}",
-      "-o",
-      "{obj}"
+      "-mgas",
+      "-meb",
+      "-mcpu=VR4300",
+      "-mhard-float",
+      "-mfp64"
      ],
      "language": "c",
      "context_unit": "",
