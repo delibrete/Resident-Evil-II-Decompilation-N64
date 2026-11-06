@@ -1,6 +1,6 @@
 {
  "format": 1,
- "saved_at": 1793998212.281913,
+ "saved_at": 1793998219.893706,
  "revision": 32723,
  "title": "Resident Evil II",
  "platform": "n64",
@@ -2305,7 +2305,8 @@
     "-mcpu=VR4300",
     "-mhard-float",
     "-mfp64"
-   ]
+   ],
+   "timeout": 20
   },
   "68744316:2148934092": {
    "vram": 2148934092,
@@ -66426,14 +66427,6 @@
    "score_after": 540
   },
   {
-   "function": "func_80025D80_ovl_01",
-   "text": "Release anyway - cannot get closer with the current toolchain build. Body is confirmed correct: func_800269B8_ovl_01(D_800C5680_ovl_01); func_80026948_ovl_01(D_800E91F0_ovl_01); func_80026AC0_ovl_01();. Only diffs are the compiler's symbol-address expansion (ROM: `lui $v0,%hi(D); lw $a0,%lo(D)($v0)` hoisted above the prologue; ours: `lui $a0,%hi(D); lw $a0,%lo(D)($a0)` after it) - the open project setup suggestion about split data addresses. Nothing source-side changes it (tested direct arg, explicit temp, reused temp, all flags, IDO). Will match automatically once the setup fix lands.",
-   "by": "opencode-deepseek-v4.1-flash-1",
-   "created_at": 1793884671.935849,
-   "score_before": 0,
-   "score_after": 0
-  },
-  {
    "function": "func_8004797C_ovl_01",
    "text": "Four compiles; best score 680. Direct parameters correctly store first group but target has five u16 stack arguments at sp+0x12,+0x16,+0x1A,+0x1E,+0x22; prototype likely arg0 plus three byte params followed by five u16 params. Second group starts at +0x48 and uses same values; preserve explicit duplicate stores and stack argument prototype.",
    "by": "codex-gpt-6-luna-1",
@@ -73410,14 +73403,6 @@
    "score_after": 0
   },
   {
-   "function": "func_80025D80_ovl_01",
-   "text": "Compiled three times; best score 180. Correct calls confirmed, but this compiler uses $a0 as address base rather than target $v0 and moves the second jal before its global load. Split-symbol/global codegen limitation likely.",
-   "by": "codex-gpt-6-luna-1",
-   "created_at": 1793884684.248032,
-   "score_before": 0,
-   "score_after": 0
-  },
-  {
    "function": "func_8004F514_ovl_01",
    "text": "Compiled three times; best score remains prior 520. Tried explicit temp for arg0+0x120 and direct offset accesses. Main remaining issue: GCC folds +0x120 into field offsets rather than retaining $t0 base, and branch/code scheduling plus helper argument register differs. Source arithmetic follows target.",
    "by": "codex-gpt-6-luna-1",
@@ -74952,14 +74937,6 @@
    "created_at": 1793884687.248816,
    "score_before": 3098,
    "score_after": 3098
-  },
-  {
-   "function": "func_80025D80_ovl_01",
-   "text": "Body confirmed correct. Best 180 (14 vs 15 insns). The whole diff is the known split-data-address codegen ceiling (open setup suggestion), not the source:\n- ROM: `lui $v0,%hi(D); lw $a0,%lo(D)($v0)` \u2014 %hi in v0, %lo folded into the load; first pair hoisted above the prologue; loads precede their jal with a nop delay slot.\n- This cc1 for a direct global arg: `lui $a0,%hi(D); lw $a0,%lo(D)($a0)` (address pseudo merged into dest a0).\n- Using `volatile s32 *p = &D; ...(*p)` puts the address in v0 like ROM, but emits the full la: `lui $v0,%hi; addiu $v0,v0,%lo; lw $a0,($v0)` and puts the lw in the jal delay slot -> 680. So there is no source form that gives `lui %hi` in v0 with `%lo` folded into the load; it needs the setup's split-address fix. Tested: direct arg (180), reordered temps (650 with s0 saves), volatile globals (180), volatile pointer locals (680). Flags can't change regalloc.",
-   "by": "opencode-deepseek-v4.1-flash-low-1",
-   "created_at": 1793884687.268917,
-   "score_before": 0,
-   "score_after": 0
   },
   {
    "function": "func_8015D890_ovl_03",
@@ -132240,6 +132217,30 @@
    "created_at": 1793884732.831582,
    "score_before": 0,
    "score_after": 0
+  },
+  {
+   "function": "func_80025D80_ovl_01",
+   "text": "Release anyway - cannot get closer with the current toolchain build. Body is confirmed correct: func_800269B8_ovl_01(D_800C5680_ovl_01); func_80026948_ovl_01(D_800E91F0_ovl_01); func_80026AC0_ovl_01();. Only diffs are the compiler's symbol-address expansion (ROM: `lui $v0,%hi(D); lw $a0,%lo(D)($v0)` hoisted above the prologue; ours: `lui $a0,%hi(D); lw $a0,%lo(D)($a0)` after it) - the open project setup suggestion about split data addresses. Nothing source-side changes it (tested direct arg, explicit temp, reused temp, all flags, IDO). Will match automatically once the setup fix lands.",
+   "by": "opencode-deepseek-v4.1-flash-1",
+   "created_at": 1793884671.935849,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_80025D80_ovl_01",
+   "text": "Compiled three times; best score 180. Correct calls confirmed, but this compiler uses $a0 as address base rather than target $v0 and moves the second jal before its global load. Split-symbol/global codegen limitation likely.",
+   "by": "codex-gpt-6-luna-1",
+   "created_at": 1793884684.248032,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_80025D80_ovl_01",
+   "text": "Body confirmed correct. Best 180 (14 vs 15 insns). The whole diff is the known split-data-address codegen ceiling (open setup suggestion), not the source:\n- ROM: `lui $v0,%hi(D); lw $a0,%lo(D)($v0)` \u2014 %hi in v0, %lo folded into the load; first pair hoisted above the prologue; loads precede their jal with a nop delay slot.\n- This cc1 for a direct global arg: `lui $a0,%hi(D); lw $a0,%lo(D)($a0)` (address pseudo merged into dest a0).\n- Using `volatile s32 *p = &D; ...(*p)` puts the address in v0 like ROM, but emits the full la: `lui $v0,%hi; addiu $v0,v0,%lo; lw $a0,($v0)` and puts the lw in the jal delay slot -> 680. So there is no source form that gives `lui %hi` in v0 with `%lo` folded into the load; it needs the setup's split-address fix. Tested: direct arg (180), reordered temps (650 with s0 saves), volatile globals (180), volatile pointer locals (680). Flags can't change regalloc.",
+   "by": "opencode-deepseek-v4.1-flash-low-1",
+   "created_at": 1793884687.268917,
+   "score_before": 0,
+   "score_after": 0
   }
  ],
  "set_aside": [
@@ -146401,8 +146402,8 @@
      "rom_sha1": "93187c4145cad272a255c17657cd9a1011b3fb3a"
     },
     "symbols_sha256": "bb629f57bc1a7dc4757d26842ea3c55c37e3025a8cd4b02d9a2fb5d58d2bc36b",
-    "recorded_at": 1793978621.663363,
-    "attempt_id": 323739,
+    "recorded_at": 1793998086.9476118,
+    "attempt_id": 330310,
     "source_sha256": "b78836b1b9b62096ee155db82ce44643e077afd5ddf57954c0be13f2be13d0d1",
     "header_sha256": "e344e28888e8adc61a3e295f0cc2732492474a1f9063c51954783241ddf71de9",
     "context_version": 135,
