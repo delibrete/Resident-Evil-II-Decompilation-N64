@@ -1,7 +1,7 @@
 {
  "format": 1,
- "saved_at": 1794008730.864372,
- "revision": 33454,
+ "saved_at": 1794008857.423551,
+ "revision": 33474,
  "title": "Resident Evil II",
  "platform": "n64",
  "game": {
@@ -7322,7 +7322,8 @@
     "-mcpu=VR4300",
     "-mhard-float",
     "-mfp64"
-   ]
+   ],
+   "timeout": 20
   },
   "69515360:2149008192": {
    "vram": 2149008192,
@@ -26390,8 +26391,8 @@
   },
   "func_80172A24_overlay_045": {
    "vram": 2149001764,
-   "best_score": 7300,
-   "best_by": "autopilot"
+   "matched_by": "Retroreversing.saved-progress",
+   "readable": false
   },
   "func_80172A8C_overlay_054": {
    "vram": 2149001868,
@@ -122680,14 +122681,6 @@
    "score_after": 19413
   },
   {
-   "function": "func_80172A24_overlay_045",
-   "text": "Deep permuter: score 1165 \u2192 1165; 0 improvements; 1 candidates tested; 0 cached skips; 0 rejected; 62s elapsed. Budget rotation: soft allowance reached without recent progress.",
-   "by": "Retroreversing.permuter-5969",
-   "created_at": 1793958686.44401,
-   "score_before": 1165,
-   "score_after": 1165
-  },
-  {
    "function": "func_80163E64_ovl_11",
    "text": "Deep permuter: score 57405 \u2192 57405; 0 improvements; 1 candidates tested; 0 cached skips; 0 rejected; 62s elapsed. Budget rotation: soft allowance reached without recent progress.",
    "by": "Retroreversing.permuter-3945",
@@ -132798,6 +132791,14 @@
    "created_at": 1793948515.551562,
    "score_before": 170,
    "score_after": 170
+  },
+  {
+   "function": "func_80172A24_overlay_045",
+   "text": "Deep permuter: score 1165 \u2192 1165; 0 improvements; 1 candidates tested; 0 cached skips; 0 rejected; 62s elapsed. Budget rotation: soft allowance reached without recent progress.",
+   "by": "Retroreversing.permuter-5969",
+   "created_at": 1793958686.44401,
+   "score_before": 1165,
+   "score_after": 1165
   }
  ],
  "set_aside": [
@@ -255747,11 +255748,11 @@
      "rom_sha1": "93187c4145cad272a255c17657cd9a1011b3fb3a"
     },
     "symbols_sha256": "bb629f57bc1a7dc4757d26842ea3c55c37e3025a8cd4b02d9a2fb5d58d2bc36b",
-    "recorded_at": 1793988548.208993,
-    "attempt_id": 325882,
+    "recorded_at": 1794008368.698318,
+    "attempt_id": 332222,
     "source_sha256": "9fe35181b606a84e1669143ed4f2dd79945b229dceeef27fc66c0d6d5fe1ead6",
     "header_sha256": "6741617bf3c952bbf3b41f49aed7f8780fa9b0b41fb7a8e56fda2b5b9ed03d44",
-    "context_version": 716,
+    "context_version": 807,
     "compiler": {
      "toolchain": "sn-n64-281",
      "flags": [
@@ -255827,7 +255828,7 @@
      ],
      "language": "c",
      "context_unit": "local_source_277242",
-     "scoring_revision": "410a938219f799f42a41bcf80063f29ed792577587a651bc895e31f6e56c0fb1",
+     "scoring_revision": "b1c374721b6b811ab03c074bbc732988e17d95cbfdd8ac0fda9ba44e5e32b002",
      "context_sha256": "6741617bf3c952bbf3b41f49aed7f8780fa9b0b41fb7a8e56fda2b5b9ed03d44"
     },
     "target_sha256": "d95c889626cd822c2e8c87db8958028d4a08ba2eedb3c214f0abf0a3cf757c4e",
