@@ -131685,14 +131685,6 @@
    "score_after": 225
   },
   {
-   "function": "func_8016587C_ovl_17",
-   "text": "Four compiles; best score 225 with volatile u32 table, byte index at +6. Same systematic address order/register allocator mismatch as prior dispatch wrappers. Explicit volatile entry temp increases stack frame to 0x20.",
-   "by": "codex-gpt-6-luna-1",
-   "created_at": 1793884691.4798121,
-   "score_before": 0,
-   "score_after": 0
-  },
-  {
    "function": "func_80165B58_ovl_17",
    "text": "Four compiles; best 225 with volatile u32 table and byte index +6. Same systematic dispatch wrapper register/address-order mismatch; explicit volatile table entry temp worsens stack frame.",
    "by": "codex-gpt-6-luna-1",
@@ -132225,6 +132217,14 @@
    "text": "Deep permuter: score 230 \u2192 230; 0 improvements; 0 candidates tested; 0 cached skips; 0 rejected; 2s elapsed. Stopped: func_80163D1C_ovl_30 is claimed by codex-gpt-6-luna-12 for another 26 min.",
    "by": "Retroreversing.permuter-5058",
    "created_at": 1793884732.831582,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_8016587C_ovl_17",
+   "text": "Four compiles; best score 225 with volatile u32 table, byte index at +6. Same systematic address order/register allocator mismatch as prior dispatch wrappers. Explicit volatile entry temp increases stack frame to 0x20.",
+   "by": "codex-gpt-6-luna-1",
+   "created_at": 1793884691.4798121,
    "score_before": 0,
    "score_after": 0
   }
@@ -202832,9 +202832,9 @@
      "rom_sha1": "93187c4145cad272a255c17657cd9a1011b3fb3a"
     },
     "symbols_sha256": "bb629f57bc1a7dc4757d26842ea3c55c37e3025a8cd4b02d9a2fb5d58d2bc36b",
-    "recorded_at": 1793994860.7882931,
-    "attempt_id": 329908,
-    "source_sha256": "27e1f00a4cc93c748d4e161b9857ca334f23658c8d2002bbfa26e54b20ead211",
+    "recorded_at": 1793996841.581731,
+    "attempt_id": 330156,
+    "source_sha256": "08561bfcb31b8d06f6dcde6702182e47cb8ec41c51cec2661ab7bd09d66acb8f",
     "header_sha256": "e344e28888e8adc61a3e295f0cc2732492474a1f9063c51954783241ddf71de9",
     "context_version": 117,
     "compiler": {
