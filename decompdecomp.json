@@ -7661,6 +7661,19 @@
    "timeout": 20,
    "function": "func_80002360",
    "vram": 2147492704
+  },
+  "8336:2147489040": {
+   "toolchain": "gcc-2.8.1-pm-sn-as",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_80001510",
+   "vram": 2147489040
   }
  },
  "instructions": "",
@@ -60718,14 +60731,6 @@
    "score_after": 1178
   },
   {
-   "function": "func_80001510",
-   "text": "Best 10/99.8% (52/52 insns). Only difference: target passes zero args as `move $a1,$a0` / `move $a2,$a0` after `move $a0,$zero`; we always get `move $a1,$zero` / `move $a2,$zero`. Tried: literal 0,0,0; a single local s32 zero=0 reused 3x; `*(s32*)(arg0+0)` read 3x (gives `lw`, score 200); NULL. The ROM form looks like the compiler CSE'd one zero pseudo into $a0 and copied it for args 1/2, but kmc folds constants to $zero. Remaining idea: make the third-arg value opaque to constant folding, e.g. a global that is known-0 at runtime, or pass through a (s32) expression with a cast the compiler cannot fold while still keeping the single `move $a0,$zero` materialization. Everything else (all memory ops, branches, calls, stack) already matches.",
-   "by": "opencode-deepseek-v4.1-flash-free-1",
-   "created_at": 1793884660.236238,
-   "score_before": 0,
-   "score_after": 0
-  },
-  {
    "function": "func_80165A58_ovl_33",
    "text": "IMPORTANT: with the project flags this source scores 335, but with `-mcpu=r4600` added it scores 25 (98.6%) and the whole instruction ORDER matches the target exactly; only 2 registers differ (target table base in $t0, p[0x26E] in $a3; compiler uses $a1/$a2 and $a0/$a1). Source: `typedef void(*Fn)(void); extern Fn D_80167210_ovl_33[]; void func_80165A58_ovl_33(u8*p){ volatile Fn *table=D_80167210_ovl_33; u32 n=(p[5]-1)*9+p[0x26E]; table[n](); }`. Try_compiler with flags \"-G0 -mips3 -mgp32 -mfp32 -O2 -mcpu=r4600\". This suggests the original build may have used -mcpu=r4600 (VR4300 is R4600-class); check other scheduling-only mismatches with it.",
    "by": "opencode-deepseek-v4.1-flash-1",
@@ -66518,14 +66523,6 @@
    "score_after": 3090
   },
   {
-   "function": "func_80001510",
-   "text": "Release anyway: the only remaining 2-instruction diff is KMC constant materialization in call argument setup (ROM: one zero in a0 copied to a1/a2; KMC: three separate $zero moves). No C form and no source-level trick changes it; everything else is byte-identical. Best attempt saved.",
-   "by": "opencode-deepseek-v4.1-flash-1",
-   "created_at": 1793884672.1703649,
-   "score_before": 0,
-   "score_after": 0
-  },
-  {
    "function": "func_80000F50",
    "text": "Release anyway: 4/4 instructions, only the temp register differs (ROM t9, KMC v1/v0, IDO t6) - a compiler register-choice difference, no C construct can steer a 4-instruction leaf to t9. Trivial: `old=*arg0; *arg0=(s32*)*old; return old;`.",
    "by": "opencode-deepseek-v4.1-flash-1",
@@ -68108,14 +68105,6 @@
    "created_at": 1793884674.717366,
    "score_before": 10,
    "score_after": 10
-  },
-  {
-   "function": "func_80001510",
-   "text": "Ceiling at score 10 (52/52): only the three indirect-call zero arguments differ. ROM materialises one zero in a0 (`move a0,zero`) then copies it to a1/a2 (`move a1,a0`, `move a2,a0`); this cc1 emits `move a1,zero` / `move a2,zero`. Confirmed again with `s32 z=0; fn(z,z,z)` - identical score. Prior agents also tried literal 0s, NULL, one reused local, and reading arg0->0 (gives lw, 200). search_flags/all KMC flags = 10. Everything else in the 52 instructions matches exactly. Compiler constant-materialisation ceiling; best attempt saved.",
-   "by": "opencode-deepseek-v4.1-flash-1",
-   "created_at": 1793884674.723315,
-   "score_before": 0,
-   "score_after": 0
   },
   {
    "function": "func_80004FA0",
@@ -70742,14 +70731,6 @@
    "score_after": 0
   },
   {
-   "function": "func_80001510",
-   "text": "4 compiles completed; best score 10 (99.8%, 52/52 instructions), same as inherited attempt. Exact remaining diff is only KMC argument-zero materialization in final indirect call: target uses move a0,zero then move a1,a0 and move a2,a0; compiler emits move a1,zero and move a2,zero. Tested volatile local, pointer-difference zero forms, repeated literal zeros; no improvement. search_flags was already exhausted by prior agent. All other instructions match.",
-   "by": "codex-gpt-6-luna-1",
-   "created_at": 1793884679.798966,
-   "score_before": 0,
-   "score_after": 0
-  },
-  {
    "function": "func_80162104_overlay_031",
    "text": "This was accidentally claimed after the requested eight-claim session was already complete. I did one stub compile only and am stopping here; no analysis or useful implementation was performed.",
    "by": "codex-gpt-6-luna-1",
@@ -71108,14 +71089,6 @@
    "created_at": 1793884680.398185,
    "score_before": 15795,
    "score_after": 15795
-  },
-  {
-   "function": "func_80001510",
-   "text": "52/52 instructions, score 10, only the final indirect call's zero args differ: ROM materialises zero once in $a0 and copies it (`move $a1,$a0`, delay-slot `move $a2,$a0`); this KMC build emits independent `move $a1,$zero` / `move $a2,$zero`. Tried literal 0s, NULL, one reused local, volatile local, and `z = t - t` (GCC folds t-t and intermediates to constant 0), so no source form produces a shared zero pseudo. Everything else byte-identical. Compiler constant-materialisation ceiling; needs the setup fix.",
-   "by": "opencode-deepseek-v4.1-flash-low-1",
-   "created_at": 1793884680.416964,
-   "score_before": 0,
-   "score_after": 0
   },
   {
    "function": "func_801669B4_ovl_33",
@@ -73124,14 +73097,6 @@
    "created_at": 1793884683.660434,
    "score_before": 710,
    "score_after": 710
-  },
-  {
-   "function": "func_80001510",
-   "text": "Compile error parsing C; will need different source.",
-   "by": "opencode-nemotron-3.5-lightning-f-1",
-   "created_at": 1793884683.66533,
-   "score_before": 0,
-   "score_after": 0
   },
   {
    "function": "func_80000F50",
@@ -75758,14 +75723,6 @@
    "score_after": 13633
   },
   {
-   "function": "func_80001510",
-   "text": "Score 10/52 instructions matched; only remaining diff is KMC GCC 2.7.2 codegen for final indirect call argument zero materialization. ROM emits `move $a0,$zero` then `move $a1,$a0` / `move $a2,$a0` (single zero in $a0 copied). This KMC build always emits `move $a1,$zero` / `move $a2,$zero` independent. All other 51 instructions match byte-identical. Tried: single local zero variable reused (zero=0), literal 0s, volatile, different expression forms \u2013 no change. Also tried passing zero via local variable instead of literal 0; same result. This is a compiler codegen ceiling with KMC 2.7.2 -O2; no C can produce the ROM's shared-zero pattern for call arguments. All other structure, control flow, memory ops, branches, calls match exactly. Best attempt saved for next agent.",
-   "by": "opencode-nemotron-3.5-lightning-f-1",
-   "created_at": 1793884688.4323142,
-   "score_before": 0,
-   "score_after": 0
-  },
-  {
    "function": "func_8015F4C8_ovl_03",
    "text": "Eight compiles; best prior score 3885 (78.1%, 176/178 instructions). This is already a strong transcription, with remaining differences documented in the claim notes: split-symbol address materialization, reload of D_80160BB8 header byte inside loop instead of hoisting, and local base-pointer lifetime/register allocation across func_800439B8. Repeated trivial alternatives regressed.",
    "by": "codex-gpt-6-luna-1",
@@ -76052,14 +76009,6 @@
    "created_at": 1793884689.161827,
    "score_before": 10,
    "score_after": 10
-  },
-  {
-   "function": "func_80001510",
-   "text": "Compiled once with best C draft; score 10, only difference is register allocation in final indirect call: target copies a single zero in $a0 then moves to $a1/$a2 (`move $a1,$a0`, `move $a2,$a0`), GCC emits independent `move $a1,$zero` / `move $a2,$zero`. This is a KMC GCC 2.7.2 codegen ceiling; no C construct can steer the allocator to emulate the ROM's shared-zero pattern. All other 51 instructions match byte-identical.",
-   "by": "opencode-nemotron-3.5-lightning-f-1",
-   "created_at": 1793884689.17438,
-   "score_before": 0,
-   "score_after": 0
   },
   {
    "function": "func_800051B8",
@@ -78572,14 +78521,6 @@
    "created_at": 1793884694.3643038,
    "score_before": 10,
    "score_after": 10
-  },
-  {
-   "function": "func_80001510",
-   "text": "Two compiles attempted (scores both 10). The only diff is register allocation in final indirect call: target copies a single zero in $a0 then moves to $a1/$a2 (`move $a1,$a0`, `move $a2,$a0`), GCC emits independent `move $a1,$zero` / `move $a2,$zero`. This is a KMC GCC 2.7.2 -O2 -mips3 -G0 codegen ceiling for shared-zero argument materialization; no C construct can reproduce the ROM's shared-zero pattern. All other 51 instructions match byte-identically. No further C variations expected to improve score. Next agent can start from this best attempt (score 10) or try different compiler flags.",
-   "by": "opencode-nemotron-3.5-lightning-f-1",
-   "created_at": 1793884694.3974311,
-   "score_before": 0,
-   "score_after": 0
   },
   {
    "function": "func_8016217C_ovl_34",
@@ -81502,14 +81443,6 @@
    "score_after": 710
   },
   {
-   "function": "func_80001510",
-   "text": "Four compiles all score 10, only register allocation diff (target moves $a1,$a0 then $a2,$a0; GCC emits independent $zero moves). KMC GCC 2.7.2 -O2 -mips3 -G0 codegen ceiling for shared-zero argument materialization; no C construct can reproduce ROM's shared-zero pattern. All other 51 instructions match byte-identically. Best attempt C code as above; no further changes improve.",
-   "by": "opencode-nemotron-3.5-lightning-f-1",
-   "created_at": 1793884698.422218,
-   "score_before": 0,
-   "score_after": 0
-  },
-  {
    "function": "func_80000F08",
    "text": "Three compiles all score 765, only differences: missing initial move $t9,$a0 and register allocation mismatches (target uses $t9/$t8/$t7/$t6 vs GCC $v1/$a3/$v0/$v0). KMC GCC 2.7.2 -O2 -mips3 -G0 ceiling; pure C cannot reproduce exact 18\u2011instruction pattern. Function appears hand\u2011written assembly or requires compiler settings not reproducible.",
    "by": "opencode-nemotron-3.5-lightning-f-1",
@@ -82246,14 +82179,6 @@
    "score_after": 80
   },
   {
-   "function": "func_80001510",
-   "text": "Compiled empty C `void func_80001510(void){}` produced score 5060, far from match; only 2 of 52 instructions generated (jr $ra and addiu $sp). The function is complex with many calls and struct accesses; pure C cannot reproduce without proper struct declarations and prototypes. This is a compiler ceiling / complex function; no better score in 4 compiles.",
-   "by": "opencode-nemotron-3.5-lightning-f-1",
-   "created_at": 1793884699.170107,
-   "score_before": 0,
-   "score_after": 0
-  },
-  {
    "function": "func_80000F08",
    "text": "Compiled minimal C `void func_80000F08(s32 *arg0, s32 *arg1){}` produced score 1660, only 2 of 18 instructions generated (jr $ra). The function is complex with loads, branches, and moves; pure C cannot reproduce the exact 18\u2011instruction pattern with KMC GCC 2.7.2 -O2 -mips3 -G0; compiler ceiling / hand\u2011written assembly likely needed. Three compiles without better score.",
    "by": "opencode-nemotron-3.5-lightning-f-1",
@@ -82870,14 +82795,6 @@
    "score_after": 1015
   },
   {
-   "function": "func_80001510",
-   "text": "Score 10. The only diff is register allocation in the final indirect call: target uses `move $a1,$a0` then `move $a2,$a0` (single zero in $a0 copied), while GCC emits independent `move $a1,$zero` / `move $a2,$zero`. All other 51 instructions match byte\u2011identically. This is a known KMC GCC 2.7.2 -O2 -mips3 -G0 codegen ceiling for shared-zero argument materialization; no C construct can reproduce the ROM's shared-zero pattern. Best attempt C code matches instruction count and control flow, only the three move instructions differ. No further C changes can achieve byte\u2011identical match with the project's compiler/flags.",
-   "by": "opencode-nemotron-3.5-lightning-f-1",
-   "created_at": 1793884699.762762,
-   "score_before": 0,
-   "score_after": 0
-  },
-  {
    "function": "func_80000F50",
    "text": "Score 10; only register allocation diff (target $t9 vs GCC $v0). Pure C cannot steer KMC GCC 2.7.2 -O2 -mips3 -G0 to allocate $t9 for this leaf function; compiler ceiling. Best attempt `void func_80000F50(s32 **arg0) { *arg0 = **arg0; }`. No further C changes can achieve byte\u2011identical match with current compiler/flags.",
    "by": "opencode-nemotron-3.5-lightning-f-1",
@@ -82892,14 +82809,6 @@
    "created_at": 1793884699.7749639,
    "score_before": 524,
    "score_after": 524
-  },
-  {
-   "function": "func_80001510",
-   "text": "Score 10; only register allocation diff (target $a1 moves $a0 then $a2 moves $a0, GCC emits independent $zero moves). Pure C cannot steer KMC GCC 2.7.2 -O2 -mips3 -G0 to emulate ROM's shared-zero argument materialization; compiler ceiling (setup suggestion #47). All 51 other instructions match byte\u2011identically. Best attempt C code as above.",
-   "by": "opencode-nemotron-3.5-lightning-f-1",
-   "created_at": 1793884699.7869902,
-   "score_before": 0,
-   "score_after": 0
   },
   {
    "function": "func_80000F08",
@@ -83324,14 +83233,6 @@
    "created_at": 1793884700.282516,
    "score_before": 710,
    "score_after": 710
-  },
-  {
-   "function": "func_80001510",
-   "text": "Score 10; only register allocation diff (target moves $a1,$a0 then $a2,$a0; GCC emits independent $zero moves). Known KMC GCC 2.7.2 -O2 -mips3 -G0 codegen ceiling for shared-zero argument materialization (setup suggestion #47) not fixable from C source; all other 51 instructions match byte\u2011identically. Best attempt C code matches insn count and control flow; no further C changes can achieve byte\u2011identical match with current compiler/flags.",
-   "by": "opencode-nemotron-3.5-lightning-f-1",
-   "created_at": 1793884700.2900102,
-   "score_before": 0,
-   "score_after": 0
   },
   {
    "function": "func_800013D4",
@@ -84098,14 +83999,6 @@
    "text": "Re-releasing func_80004FA0: cannot get closer than score 10 because the residual diff is pure register allocation ($at vs ROM's $v0 for the %hi base of the absolute store `sb $a0,%lo(D_80012888)($v0)`), a compiler codegen choice no C construct can change. Exhausted: baseline C (direct s8 store, score 10); earlier-agent shapes (pointer local, volatile symbol, volatile pointer \u2014 all 10); search_flags all 6 variants (all 10); try_compiler IDO 5.3 (110, adds sw + $at) and IDO 7.1 (310, adds sw/sll/sra + $at). Matches the open setup suggestion: split addresses, provided KMC GCC uses assembler scratch $at where ROM build used general reg $v0. Not solvable from C in this toolchain; recommend user reviews compiler/flags. Best attempt (score 10) saved. No new prototypes/structs needed (`extern s8 D_80012888;` suffices).",
    "by": "opencode-nemotron-3.5-super-vl-fr-1",
    "created_at": 1793884700.988698,
-   "score_before": 0,
-   "score_after": 0
-  },
-  {
-   "function": "func_80001510",
-   "text": "Score 10/52 insns. Register allocation diff only; KMC GCC 2.7.2 -O2 -mips3 -G0 ceiling for shared-zero; no further attempts.",
-   "by": "opencode-nemotron-3.5-lightning-f-1",
-   "created_at": 1793884700.997428,
    "score_before": 0,
    "score_after": 0
   },
@@ -85358,14 +85251,6 @@
    "score_after": 10
   },
   {
-   "function": "func_80001510",
-   "text": "Score 5060, only 2 instructions matched (jr $ra, addiu $sp). C empty body produced large diff; function is complex with many struct accesses and calls; pure C cannot match without proper declarations. This compile counts as claim.",
-   "by": "opencode-nemotron-3.5-lightning-f-1",
-   "created_at": 1793884703.82515,
-   "score_before": 0,
-   "score_after": 0
-  },
-  {
    "function": "func_801652F4_ovl_30",
    "text": "Best 606/39 (ours 42). KEY FINDING: to stop GCC folding `q = p + 0x2B4` (note #54), hide the pointer in a u64 union and read only its low word:\n```c\ntypedef union { u64 q; struct { u32 lo; u32 hi; } w; } U64;\nvoid func_801652F4_ovl_30(void *arg0, s32 arg1, s32 arg2) {\n    u8 *p = arg0; U64 b; u8 *q;\n    func_800334F8_ovl_01(arg0, arg1, arg2, 0);\n    b.w.lo = (u32)p;\n    q = (u8 *)(b.w.lo + 0x2B4);\n    if (func_80089D34_ovl_01(arg0, arg1, arg2, 0x100) != 0) {\n        *(s32 *)(p + 4) = 0x01020000;\n        p[0x26F] &= 0x7F;\n        q[6] = p[5]; q[7] = p[6]; q[8] = p[7];\n    }\n    func_80032B8C_ovl_01(arg0, 0);\n}\n```\nThis reproduces the ROM's `addiu s3,s2,0x2b4` (q live across the 2nd call) and the lazy lbu p[6]/p[7] interleaved with the sb's \u2014 all logic rows match. Without the union it folds to 0x2ba/0x2bb/0x2bc(s2) and scores 834 (36 insns). m2c's `func_800334F8_ovl_01(0)` is WRONG: the ROM leaves a0..a2 = incoming args and only sets a3=0, so prototype is (void*,s32,s32,s32) called as (arg0,arg1,arg2,0).\n\nRemaining diff (only regalloc/saves from the DImode union): GCC allocates the u64 union in a reg pair s4/s5, so it saves s4+s5 extra and p lands in s2 while q in s0 (ROM: q in s3, p in s2, 5 saved regs, frame 0x28). Ours frame is also 0x28. Tried: constant-inline q (same 606); b.w.hi=0 first (761, worse, adds moves); u32-only union (folds, 834); 32-bit struct union (1150); Tail struct pointer (834). Next: get the u64 union to not occupy a second register (e.g. make the high word provably dead without a zero move, or another way to obscure the pointer arithmetic in 32 bits). Target first call's delay slot holds `addiu s3,s2,0x2b4` and a3=0 is set before the call.",
    "by": "opencode-deepseek-v4.1-flash-low-1",
@@ -86340,14 +86225,6 @@
    "created_at": 1793884704.886584,
    "score_before": 1360,
    "score_after": 1360
-  },
-  {
-   "function": "func_80001510",
-   "text": "Deep permuter: score 10 \u2192 10; 0 improvements; 21 candidates tested; 0 cached skips; 0 rejected; 152s elapsed. Budget rotation: soft allowance reached without recent progress.",
-   "by": "A.permuter-2143",
-   "created_at": 1793884704.8924959,
-   "score_before": 0,
-   "score_after": 0
   },
   {
    "function": "func_80048A70_ovl_01",
@@ -132132,6 +132009,142 @@
    "created_at": 1793884689.790199,
    "score_before": 0,
    "score_after": 0
+  },
+  {
+   "function": "func_80001510",
+   "text": "Best 10/99.8% (52/52 insns). Only difference: target passes zero args as `move $a1,$a0` / `move $a2,$a0` after `move $a0,$zero`; we always get `move $a1,$zero` / `move $a2,$zero`. Tried: literal 0,0,0; a single local s32 zero=0 reused 3x; `*(s32*)(arg0+0)` read 3x (gives `lw`, score 200); NULL. The ROM form looks like the compiler CSE'd one zero pseudo into $a0 and copied it for args 1/2, but kmc folds constants to $zero. Remaining idea: make the third-arg value opaque to constant folding, e.g. a global that is known-0 at runtime, or pass through a (s32) expression with a cast the compiler cannot fold while still keeping the single `move $a0,$zero` materialization. Everything else (all memory ops, branches, calls, stack) already matches.",
+   "by": "opencode-deepseek-v4.1-flash-free-1",
+   "created_at": 1793884660.236238,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_80001510",
+   "text": "Release anyway: the only remaining 2-instruction diff is KMC constant materialization in call argument setup (ROM: one zero in a0 copied to a1/a2; KMC: three separate $zero moves). No C form and no source-level trick changes it; everything else is byte-identical. Best attempt saved.",
+   "by": "opencode-deepseek-v4.1-flash-1",
+   "created_at": 1793884672.1703649,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_80001510",
+   "text": "Ceiling at score 10 (52/52): only the three indirect-call zero arguments differ. ROM materialises one zero in a0 (`move a0,zero`) then copies it to a1/a2 (`move a1,a0`, `move a2,a0`); this cc1 emits `move a1,zero` / `move a2,zero`. Confirmed again with `s32 z=0; fn(z,z,z)` - identical score. Prior agents also tried literal 0s, NULL, one reused local, and reading arg0->0 (gives lw, 200). search_flags/all KMC flags = 10. Everything else in the 52 instructions matches exactly. Compiler constant-materialisation ceiling; best attempt saved.",
+   "by": "opencode-deepseek-v4.1-flash-1",
+   "created_at": 1793884674.723315,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_80001510",
+   "text": "4 compiles completed; best score 10 (99.8%, 52/52 instructions), same as inherited attempt. Exact remaining diff is only KMC argument-zero materialization in final indirect call: target uses move a0,zero then move a1,a0 and move a2,a0; compiler emits move a1,zero and move a2,zero. Tested volatile local, pointer-difference zero forms, repeated literal zeros; no improvement. search_flags was already exhausted by prior agent. All other instructions match.",
+   "by": "codex-gpt-6-luna-1",
+   "created_at": 1793884679.798966,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_80001510",
+   "text": "52/52 instructions, score 10, only the final indirect call's zero args differ: ROM materialises zero once in $a0 and copies it (`move $a1,$a0`, delay-slot `move $a2,$a0`); this KMC build emits independent `move $a1,$zero` / `move $a2,$zero`. Tried literal 0s, NULL, one reused local, volatile local, and `z = t - t` (GCC folds t-t and intermediates to constant 0), so no source form produces a shared zero pseudo. Everything else byte-identical. Compiler constant-materialisation ceiling; needs the setup fix.",
+   "by": "opencode-deepseek-v4.1-flash-low-1",
+   "created_at": 1793884680.416964,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_80001510",
+   "text": "Compile error parsing C; will need different source.",
+   "by": "opencode-nemotron-3.5-lightning-f-1",
+   "created_at": 1793884683.66533,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_80001510",
+   "text": "Score 10/52 instructions matched; only remaining diff is KMC GCC 2.7.2 codegen for final indirect call argument zero materialization. ROM emits `move $a0,$zero` then `move $a1,$a0` / `move $a2,$a0` (single zero in $a0 copied). This KMC build always emits `move $a1,$zero` / `move $a2,$zero` independent. All other 51 instructions match byte-identical. Tried: single local zero variable reused (zero=0), literal 0s, volatile, different expression forms \u2013 no change. Also tried passing zero via local variable instead of literal 0; same result. This is a compiler codegen ceiling with KMC 2.7.2 -O2; no C can produce the ROM's shared-zero pattern for call arguments. All other structure, control flow, memory ops, branches, calls match exactly. Best attempt saved for next agent.",
+   "by": "opencode-nemotron-3.5-lightning-f-1",
+   "created_at": 1793884688.4323142,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_80001510",
+   "text": "Compiled once with best C draft; score 10, only difference is register allocation in final indirect call: target copies a single zero in $a0 then moves to $a1/$a2 (`move $a1,$a0`, `move $a2,$a0`), GCC emits independent `move $a1,$zero` / `move $a2,$zero`. This is a KMC GCC 2.7.2 codegen ceiling; no C construct can steer the allocator to emulate the ROM's shared-zero pattern. All other 51 instructions match byte-identical.",
+   "by": "opencode-nemotron-3.5-lightning-f-1",
+   "created_at": 1793884689.17438,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_80001510",
+   "text": "Two compiles attempted (scores both 10). The only diff is register allocation in final indirect call: target copies a single zero in $a0 then moves to $a1/$a2 (`move $a1,$a0`, `move $a2,$a0`), GCC emits independent `move $a1,$zero` / `move $a2,$zero`. This is a KMC GCC 2.7.2 -O2 -mips3 -G0 codegen ceiling for shared-zero argument materialization; no C construct can reproduce the ROM's shared-zero pattern. All other 51 instructions match byte-identically. No further C variations expected to improve score. Next agent can start from this best attempt (score 10) or try different compiler flags.",
+   "by": "opencode-nemotron-3.5-lightning-f-1",
+   "created_at": 1793884694.3974311,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_80001510",
+   "text": "Four compiles all score 10, only register allocation diff (target moves $a1,$a0 then $a2,$a0; GCC emits independent $zero moves). KMC GCC 2.7.2 -O2 -mips3 -G0 codegen ceiling for shared-zero argument materialization; no C construct can reproduce ROM's shared-zero pattern. All other 51 instructions match byte-identically. Best attempt C code as above; no further changes improve.",
+   "by": "opencode-nemotron-3.5-lightning-f-1",
+   "created_at": 1793884698.422218,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_80001510",
+   "text": "Compiled empty C `void func_80001510(void){}` produced score 5060, far from match; only 2 of 52 instructions generated (jr $ra and addiu $sp). The function is complex with many calls and struct accesses; pure C cannot reproduce without proper struct declarations and prototypes. This is a compiler ceiling / complex function; no better score in 4 compiles.",
+   "by": "opencode-nemotron-3.5-lightning-f-1",
+   "created_at": 1793884699.170107,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_80001510",
+   "text": "Score 10. The only diff is register allocation in the final indirect call: target uses `move $a1,$a0` then `move $a2,$a0` (single zero in $a0 copied), while GCC emits independent `move $a1,$zero` / `move $a2,$zero`. All other 51 instructions match byte\u2011identically. This is a known KMC GCC 2.7.2 -O2 -mips3 -G0 codegen ceiling for shared-zero argument materialization; no C construct can reproduce the ROM's shared-zero pattern. Best attempt C code matches instruction count and control flow, only the three move instructions differ. No further C changes can achieve byte\u2011identical match with the project's compiler/flags.",
+   "by": "opencode-nemotron-3.5-lightning-f-1",
+   "created_at": 1793884699.762762,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_80001510",
+   "text": "Score 10; only register allocation diff (target $a1 moves $a0 then $a2 moves $a0, GCC emits independent $zero moves). Pure C cannot steer KMC GCC 2.7.2 -O2 -mips3 -G0 to emulate ROM's shared-zero argument materialization; compiler ceiling (setup suggestion #47). All 51 other instructions match byte\u2011identically. Best attempt C code as above.",
+   "by": "opencode-nemotron-3.5-lightning-f-1",
+   "created_at": 1793884699.7869902,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_80001510",
+   "text": "Score 10; only register allocation diff (target moves $a1,$a0 then $a2,$a0; GCC emits independent $zero moves). Known KMC GCC 2.7.2 -O2 -mips3 -G0 codegen ceiling for shared-zero argument materialization (setup suggestion #47) not fixable from C source; all other 51 instructions match byte\u2011identically. Best attempt C code matches insn count and control flow; no further C changes can achieve byte\u2011identical match with current compiler/flags.",
+   "by": "opencode-nemotron-3.5-lightning-f-1",
+   "created_at": 1793884700.2900102,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_80001510",
+   "text": "Score 10/52 insns. Register allocation diff only; KMC GCC 2.7.2 -O2 -mips3 -G0 ceiling for shared-zero; no further attempts.",
+   "by": "opencode-nemotron-3.5-lightning-f-1",
+   "created_at": 1793884700.997428,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_80001510",
+   "text": "Score 5060, only 2 instructions matched (jr $ra, addiu $sp). C empty body produced large diff; function is complex with many struct accesses and calls; pure C cannot match without proper declarations. This compile counts as claim.",
+   "by": "opencode-nemotron-3.5-lightning-f-1",
+   "created_at": 1793884703.82515,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_80001510",
+   "text": "Deep permuter: score 10 \u2192 10; 0 improvements; 21 candidates tested; 0 cached skips; 0 rejected; 152s elapsed. Budget rotation: soft allowance reached without recent progress.",
+   "by": "A.permuter-2143",
+   "created_at": 1793884704.8924959,
+   "score_before": 0,
+   "score_after": 0
   }
  ],
  "set_aside": [
@@ -135184,9 +135197,9 @@
      "rom_sha1": "93187c4145cad272a255c17657cd9a1011b3fb3a"
     },
     "symbols_sha256": "bb629f57bc1a7dc4757d26842ea3c55c37e3025a8cd4b02d9a2fb5d58d2bc36b",
-    "recorded_at": 1793977514.839066,
-    "attempt_id": 323432,
-    "source_sha256": "5356b891388947d38c4c1383403bcb0c4ee9f167e080058b8a6ab7aeff1533aa",
+    "recorded_at": 1793995195.240206,
+    "attempt_id": 329970,
+    "source_sha256": "d81857886391d6458a6fa9343837e7dab900545e483fceb6b31f20bcf287e2b3",
     "header_sha256": "e344e28888e8adc61a3e295f0cc2732492474a1f9063c51954783241ddf71de9",
     "context_version": 415,
     "compiler": {
@@ -271231,7 +271244,8 @@
    "f2be884432f5be2adda873bc982cf92f7706fec87141bcea331d958499461229": "/* machine draft (m2c) for sn-n64-281 -G0 -mips3 -O2 -mgas -meb -mcpu=VR4300 -mhard-float -mfp64, tried by autopilot */\n#ifndef M2C_DEFINES\n#define M2C_DEFINES\ntypedef s32 M2C_UNK;\ntypedef s8 M2C_UNK8;\ntypedef s16 M2C_UNK16;\ntypedef s32 M2C_UNK32;\n#define M2C_FIELD(expr, type_ptr, offset) (*(type_ptr)((s8 *)(expr) + (offset)))\n#define M2C_BITWISE(type, expr) ((type)(expr))\n#define M2C_ERROR(desc) (0)\n#define M2C_CARRY 0\n#define M2C_OVERFLOW(a) (0)\n#endif\n\n\nextern int (*D_801667BC_overlay_035[])();\nvoid func_80165478_ovl_35(void *arg0) {\n    D_801667BC_overlay_035[M2C_FIELD(arg0, u8 *, 6)]();\n}\n",
    "27e1f00a4cc93c748d4e161b9857ca334f23658c8d2002bbfa26e54b20ead211": "/* machine draft (m2c) for sn-n64-281 -G0 -mips3 -O2 -mgas -meb -mcpu=VR4300 -mhard-float -mfp64, tried by autopilot */\n#ifndef M2C_DEFINES\n#define M2C_DEFINES\ntypedef s32 M2C_UNK;\ntypedef s8 M2C_UNK8;\ntypedef s16 M2C_UNK16;\ntypedef s32 M2C_UNK32;\n#define M2C_FIELD(expr, type_ptr, offset) (*(type_ptr)((s8 *)(expr) + (offset)))\n#define M2C_BITWISE(type, expr) ((type)(expr))\n#define M2C_ERROR(desc) (0)\n#define M2C_CARRY 0\n#define M2C_OVERFLOW(a) (0)\n#endif\n\n\nextern int (*D_80167EF8_overlay_017[])();\nvoid func_8016587C_ovl_17(void *arg0) {\n    D_80167EF8_overlay_017[M2C_FIELD(arg0, u8 *, 6)]();\n}\n",
    "997f1c92eb770f184edb21c116fafd8a153939a785d5d43c29830b0cc3c872d9": "/* machine draft (m2c) for sn-n64-281 -G0 -mips3 -O2 -mgas -meb -mcpu=VR4300 -mhard-float -mfp64, tried by autopilot */\n#ifndef M2C_DEFINES\n#define M2C_DEFINES\ntypedef s32 M2C_UNK;\ntypedef s8 M2C_UNK8;\ntypedef s16 M2C_UNK16;\ntypedef s32 M2C_UNK32;\n#define M2C_FIELD(expr, type_ptr, offset) (*(type_ptr)((s8 *)(expr) + (offset)))\n#define M2C_BITWISE(type, expr) ((type)(expr))\n#define M2C_ERROR(desc) (0)\n#define M2C_CARRY 0\n#define M2C_OVERFLOW(a) (0)\n#endif\n\n\nextern int (*D_80167F44_overlay_017[])();\nvoid func_80165B58_ovl_17(void *arg0) {\n    D_80167F44_overlay_017[M2C_FIELD(arg0, u8 *, 6)]();\n}\n",
-   "77a0d5a7b0fecccadde47d266d1c1df4e66b5b54c82aee9d5245c7f242e50a25": "/* machine draft (m2c) for gcc-2.8.1-pm-sn-as -G0 -mips3 -mgp32 -mfp32 -O2, tried by autopilot */\n#ifndef M2C_DEFINES\n#define M2C_DEFINES\ntypedef s32 M2C_UNK;\ntypedef s8 M2C_UNK8;\ntypedef s16 M2C_UNK16;\ntypedef s32 M2C_UNK32;\n#define M2C_FIELD(expr, type_ptr, offset) (*(type_ptr)((s8 *)(expr) + (offset)))\n#define M2C_BITWISE(type, expr) ((type)(expr))\n#define M2C_ERROR(desc) (0)\n#define M2C_CARRY 0\n#define M2C_OVERFLOW(a) (0)\n#endif\n\nvoid func_80002360(s8 arg0, s8 arg1, s32 arg2, s32 arg3, void *arg4) {\n    void *temp_v0;\n\n    temp_v0 = M2C_FIELD(arg4, void *(**)(s32, M2C_UNK, M2C_UNK), 0x20)(M2C_FIELD(arg4, s32 *, 0x28), 1, 0x1C);\n    if (temp_v0 != NULL) {\n        M2C_FIELD(temp_v0, s32 *, 0) = 0;\n        M2C_FIELD(temp_v0, s8 *, 0x10) = arg0;\n        M2C_FIELD(temp_v0, s8 *, 0x11) = arg1;\n        M2C_FIELD(temp_v0, s32 *, 0x14) = arg2;\n        M2C_FIELD(temp_v0, s32 *, 0x18) = arg3;\n    }\n}\n"
+   "77a0d5a7b0fecccadde47d266d1c1df4e66b5b54c82aee9d5245c7f242e50a25": "/* machine draft (m2c) for gcc-2.8.1-pm-sn-as -G0 -mips3 -mgp32 -mfp32 -O2, tried by autopilot */\n#ifndef M2C_DEFINES\n#define M2C_DEFINES\ntypedef s32 M2C_UNK;\ntypedef s8 M2C_UNK8;\ntypedef s16 M2C_UNK16;\ntypedef s32 M2C_UNK32;\n#define M2C_FIELD(expr, type_ptr, offset) (*(type_ptr)((s8 *)(expr) + (offset)))\n#define M2C_BITWISE(type, expr) ((type)(expr))\n#define M2C_ERROR(desc) (0)\n#define M2C_CARRY 0\n#define M2C_OVERFLOW(a) (0)\n#endif\n\nvoid func_80002360(s8 arg0, s8 arg1, s32 arg2, s32 arg3, void *arg4) {\n    void *temp_v0;\n\n    temp_v0 = M2C_FIELD(arg4, void *(**)(s32, M2C_UNK, M2C_UNK), 0x20)(M2C_FIELD(arg4, s32 *, 0x28), 1, 0x1C);\n    if (temp_v0 != NULL) {\n        M2C_FIELD(temp_v0, s32 *, 0) = 0;\n        M2C_FIELD(temp_v0, s8 *, 0x10) = arg0;\n        M2C_FIELD(temp_v0, s8 *, 0x11) = arg1;\n        M2C_FIELD(temp_v0, s32 *, 0x14) = arg2;\n        M2C_FIELD(temp_v0, s32 *, 0x18) = arg3;\n    }\n}\n",
+   "d81857886391d6458a6fa9343837e7dab900545e483fceb6b31f20bcf287e2b3": "/* machine draft (m2c) for gcc-2.8.1-pm-sn-as -G0 -mips3 -mgp32 -mfp32 -O2, tried by autopilot */\n#ifndef M2C_DEFINES\n#define M2C_DEFINES\ntypedef s32 M2C_UNK;\ntypedef s8 M2C_UNK8;\ntypedef s16 M2C_UNK16;\ntypedef s32 M2C_UNK32;\n#define M2C_FIELD(expr, type_ptr, offset) (*(type_ptr)((s8 *)(expr) + (offset)))\n#define M2C_BITWISE(type, expr) ((type)(expr))\n#define M2C_ERROR(desc) (0)\n#define M2C_CARRY 0\n#define M2C_OVERFLOW(a) (0)\n#endif\n\nM2C_UNK func_80002B8C(s32, void *);                 /* extern */\nM2C_UNK func_800042F4(s32, void *);                 /* extern */\n\nvoid func_80001510(void *arg0, void *arg1, s32 *arg2) {\n    s32 (*temp_v1)(M2C_UNK, M2C_UNK, M2C_UNK);\n    s32 temp_v0;\n    s32 temp_v0_2;\n\n    if (M2C_FIELD(arg0, s32 (**)(M2C_UNK, M2C_UNK, M2C_UNK), 0x34) != NULL) {\n        *arg2 = M2C_FIELD(arg0, s32 *, 0x38);\n    }\n    if ((u32) (M2C_FIELD(arg0, s32 *, 0) - 4) < 2U) {\n        M2C_FIELD(arg1, M2C_UNK (**)(s32, s32), 0x24)(M2C_FIELD(arg1, s32 *, 0x28), M2C_FIELD(arg0, s32 *, 0xC));\n    }\n    if (M2C_FIELD(arg0, s32 *, 0) == 6) {\n        func_80002B8C(M2C_FIELD(arg0, s32 *, 0xC), arg1);\n        func_800042F4(M2C_FIELD(arg0, s32 *, 8), arg1);\n        func_800042F4(M2C_FIELD(arg0, s32 *, 4), arg1);\n    }\n    temp_v0 = M2C_FIELD(arg0, s32 *, 0x24);\n    temp_v1 = M2C_FIELD(arg0, s32 (**)(M2C_UNK, M2C_UNK, M2C_UNK), 0x34);\n    M2C_FIELD(arg0, s32 *, 0) = 0;\n    M2C_FIELD(arg0, s32 *, 0x1C) = 0;\n    M2C_FIELD(arg0, s32 *, 0x20) = 0;\n    M2C_FIELD(arg0, s32 *, 0x30) = temp_v0;\n    M2C_FIELD(arg0, s32 *, 0x2C) = temp_v0;\n    if (temp_v1 != NULL) {\n        temp_v0_2 = temp_v1(0, 0, 0);\n        M2C_FIELD(arg0, s32 *, 0x38) = temp_v0_2;\n        M2C_FIELD(arg1, s32 *, 0x30) = temp_v0_2;\n    }\n}\n"
   },
   "headers": {
    "6741617bf3c952bbf3b41f49aed7f8780fa9b0b41fb7a8e56fda2b5b9ed03d44": "/* context.h for Resident Evil II: shared by every function. Agents grow it with edit_context:\n * add a prototype or struct the moment you work one out, so the next function benefits. */\n\ntypedef signed char s8;\ntypedef unsigned char u8;\ntypedef signed short s16;\ntypedef unsigned short u16;\ntypedef signed int s32;\ntypedef unsigned int u32;\ntypedef signed long long s64;\ntypedef unsigned long long u64;\ntypedef float f32;\ntypedef double f64;\ntypedef volatile u8 vu8;\ntypedef volatile u16 vu16;\ntypedef volatile u32 vu32;\ntypedef volatile s32 vs32;\ntypedef int s32_bool;\n\n#define NULL ((void *)0)\n#define TRUE 1\n#define FALSE 0\n#define ARRAY_COUNT(arr) (s32)(sizeof(arr) / sizeof(arr[0]))\n\ns32 func_80036764_ovl_01_510(void *arg0, s32 arg1);\ns32 func_80036764_ovl_01_510_24(void *arg0, s32 arg1, s32 arg2, s32 arg3);\ns32 func_80162CE0_ovl_15(void *arg0);\ns32 func_8016352C_ovl_15(s32 arg0, s16 arg1, s32 arg2);\ns32 func_801635F4_ovl_15(s32 arg0, s16 arg1, s32 arg2);\nvoid func_80162F38_ovl_15(void *arg0);\ns32 func_80162BAC_ovl_17(void *arg0, void *arg1, void *arg2);\n\n/* ovl_01: 2-arg getter used by the func_800AC828/848/868/888 wrappers\n * (called as f(p, p + 0xC4/0xD6/0xE8/0xFA), result & 0xFFFF). */\ns32 func_800AC334_ovl_01(s32 arg0, s32 arg1);\n\n/* main-segment list builder (func_80009640 calls it); returns 0 or an error */\ns32 func_800099D0(u8 *arg0, u16 *arg1, s32 arg2, s32 *arg3, u8 arg4, s32 *arg5, s32 *arg6);\n\n/* main-segment string/formatter helpers */\ns32 func_8000F050(void *arg0, void *arg1, void *arg2, void *arg3);\ns32 func_8000A2D0(void *arg0);\ns32 func_8000A394(void *arg0, u16 *arg1, s32 arg2, s32 arg3);\nextern f64 D_80012100;\nextern s32 D_800128C8;\nextern f64 D_80011AC8;\nextern f64 D_80011AD0;\nextern f64 D_80011AD8;\nextern f64 D_80011AE0;\nextern f64 D_80011AE8;\nextern f64 D_80011AF0;\nextern f64 D_80011AF8;\nextern f32 D_80011B00;\nextern f64 D_80011B08;\nextern f64 D_80011B10;\nextern f32 D_80011B20;\ns32 func_8000D3D0(u8 *arg0, u8 *arg1, ...);\n\ntypedef struct S_func_80162C04_ovl_36_arg0 { u8 unk_00[5]; u8 unk_05; u8 unk_06; u8 unk_07[0x1ED]; u16 unk_1F4; u8 unk_1F6[0x12]; struct S_func_80162C04_ovl_36_arg0_208 *unk_208; u8 unk_20C[0x28]; struct S_func_80162C04_ovl_36_arg0_234 *unk_234; u8 unk_238[0x80]; u8 unk_2B8; } S_func_80162C04_ovl_36_arg0;\ntypedef struct S_func_80162C04_ovl_36_arg0_208 { u8 unk_00[4]; s16 unk_04; s16 unk_06; u8 unk_08[6]; u8 unk_0E; } S_func_80162C04_ovl_36_arg0_208;\ntypedef struct S_func_80162C04_ovl_36_arg0_234 { u8 unk_00[0x124]; u16 unk_124; u8 unk_126[2]; u16 unk_128; } S_func_80162C04_ovl_36_arg0_234;\ns32 func_80031C44_ovl_01_868(void);\ntypedef struct S_func_80162BC0_ovl_13_arg0 { u8 unk_00[0xD]; u8 unk_0D; u8 unk_0E[0x1E]; s32 unk_2C; u8 unk_30[0x1B0]; s16 unk_1E0; u8 unk_1E2[0x12]; u16 unk_1F4; u8 unk_1F6[0x96]; s32 unk_28C; u8 unk_290[0x28]; u8 unk_2B8; u8 unk_2B9; u8 unk_2BA; s8 unk_2BB; s8 unk_2BC; s8 unk_2BD; u8 unk_2BE[6]; s32 unk_2C4; u8 unk_2C8[5]; } S_func_80162BC0_ovl_13_arg0;\n\ntypedef struct S_func_80163254_ovl_33_arg0 { u8 unk_00[4]; s32 unk_04; u8 unk_08[0x26]; s16 unk_2E; u8 unk_30[2]; u16 unk_32; u8 unk_34[0x30]; u16 unk_64; u8 unk_66[0x182]; s32 unk_1E8; u8 unk_1EC[8]; s16 unk_1F4; u16 unk_1F6; u8 unk_1F8[0xE]; s8 unk_206; } S_func_80163254_ovl_33_arg0;\n\ntypedef struct S_func_80162984_ovl_35_arg0 { u8 unk_00[6]; s16 unk_06; u8 unk_08[0x1E0]; s32 unk_1E8; u8 unk_1EC[8]; s16 unk_1F4; u8 unk_1F6[0x10]; s8 unk_206; s8 unk_207; u8 unk_208[0x24]; s32 unk_22C; u8 unk_230[0x2BD-0x230]; u8 unk_2BD; } S_func_80162984_ovl_35_arg0;\n\n/* func_80166480_ovl_32 is a function; the old extern s32[] declaration was wrong. */\n\n/* ovl_21 object used by func_801622B8_ovl_21 (state machine at 0x6; 0x1E0 is a\n * u16 timer whose low byte pair is read both signed (compare) and unsigned\n * (increment), modelled as a volatile/signed union so the compiler emits the\n * ROM's separate lh/lhu loads). */\ntypedef struct S_func_801622B8_ovl_21_arg0 {\n    /* 0x000 */ u8 unk_00[4];\n    /* 0x004 */ union { s32 unk_04; struct { u16 unk_04h; u8 unk_06; u8 unk_07; } unk_04b; } u04;\n    /* 0x008 */ u8 unk_08[0x20];\n    /* 0x028 */ s32 unk_28;\n    /* 0x02C */ union { s32 unk_2C; struct { s16 unk_2Ch; s16 unk_2E; } unk_2Cw; } u2C;\n    /* 0x030 */ union { s32 unk_30; struct { s16 unk_30h; s16 unk_32; } unk_30w; } u30;\n    /* 0x034 */ u8 unk_34[0x32];\n    /* 0x066 */ u16 unk_66;\n    /* 0x068 */ u8 unk_68[8];\n    /* 0x070 */ s32 unk_70;\n    /* 0x074 */ u8 unk_74[0x164];\n    /* 0x1D8 */ s16 unk_1D8[3];\n    /* 0x1DE */ u8 unk_1DE[2];\n    /* 0x1E0 */ union { volatile u16 unk_1E0; s16 unk_1E0s; } u1E0;\n    /* 0x1E2 */ u8 unk_1E2[0xD2];\n    /* 0x2B4 */ u16 unk_2B4;\n    /* 0x2B6 */ s16 unk_2B6;\n    /* 0x2B8 */ s16 unk_2B8;\n    /* 0x2BA */ u16 unk_2BA;\n} S_func_801622B8_ovl_21_arg0;\n\n/* ---- main segment: 64-bit integer formatting (printf %d/%i/%u/%x/%X/%o) ----\n * func_80006100/80010EC0 are the 64-bit divide/remainder helpers: both take\n * (value_hi, value_lo) in a0/a1 and (divisor_hi, divisor_lo) in a2/a3 and\n * return a 64-bit result in v0 (high) / v1 (low). func_80010584 writes\n * out[0..1]=quotient, out[2..3]=remainder; its u64 value sits in a2/a3\n * (a1 is ABI padding) and the u64 divisor goes on the stack. */\nu64 func_80006100(u64 value, u64 divisor);\nu64 func_80010EC0(u64 value, u64 divisor);\nvoid *func_80010584(u64 *out, u64 value, u64 divisor);\nextern u8 D_80013860[];\nextern u8 D_80013874[];\n\ntypedef union S_qword {\n    s64 q;\n    u64 uq;\n    f64 d;\n    struct { s32 hi; s32 lo; } w;\n} S_qword;\n\n/* the number-formatting working object (func_8000F5C0/8000FA80/8000FF58/80010C70):\n * unk_00 is a 64-bit value; reading it as two s32 words avoids the compiler\n * merging the pair. */\ntypedef struct S_func_8000F5C0_arg0 {\n    /* 0x00 */ S_qword unk_00;\n    /* 0x08 */ u8 *unk_08;\n    /* 0x0C */ s32 unk_0C;\n    /* 0x10 */ s32 unk_10;\n    /* 0x14 */ s32 unk_14;\n    /* 0x18 */ s32 unk_18;\n    /* 0x1C */ s32 unk_1C;\n    /* 0x20 */ s32 unk_20;\n    /* 0x24 */ s32 unk_24;\n    /* 0x28 */ s32 unk_28;\n    /* 0x2C */ s32 unk_2C;\n    /* 0x30 */ s32 unk_30;\n    /* 0x34 */ u8 unk_34;\n} S_func_8000F5C0_arg0;\n\n/* func_8002655C initialization globals and callees */\nvoid func_80042A54_ovl_01(void);\nvoid func_8004CA48_ovl_01(void);\nvoid func_80004A20(void);\nvoid func_800278AC_ovl_01(void);\nvoid func_800750E0_ovl_01(s32, s32);\nvoid func_80075F84_ovl_01(void);\nvoid func_8004C97C_ovl_01(void);\nvoid func_800850D4_ovl_01(void);\nvoid func_8004CD84_ovl_01(s32, s32 *);\nextern s8 D_80119E13_ovl_01;\nextern s8 D_80119E14_ovl_01;\n\ntypedef struct S_func_80162870_ovl_23_arg0 { u8 unk_00[4]; s32 unk_04; u8 unk_08[0x20]; s32 unk_28; u8 unk_2C[4]; s32 unk_30; u8 unk_34[0x32]; s16 unk_66; u8 unk_68[0x13C]; s32 unk_1A4; u8 unk_1A8[4]; s32 unk_1AC; u8 unk_1B0[0x30]; u16 unk_1E0; u8 unk_1E2[2]; s16 unk_1E4; u8 unk_1E6[2]; s32 unk_1E8; u8 unk_1EC[8]; u16 unk_1F4; s16 unk_1F6; u8 unk_1F8[0xE]; s8 unk_206; u8 unk_207[0x11]; s32 unk_218; u8 unk_21C[8]; s32 unk_224; s32 unk_228; u8 unk_22C[8]; void *unk_234; u8 unk_238[0x18]; void *unk_250; u8 unk_254[8]; u8 unk_25C; u8 unk_25D[0xF]; u16 unk_26C; u8 unk_26E; u8 unk_26F; u8 unk_270[0x48]; u16 unk_2B8; u8 unk_2BA; u8 unk_2BB; s32 unk_2BC; u8 unk_2C0[4]; u8 unk_2C4; u8 unk_2C5[3]; s16 unk_2C8; s16 unk_2CA; u8 unk_2CC[4]; s16 unk_2D0; } S_func_80162870_ovl_23_arg0;\ns32 func_80162998_ovl_23(S_func_80162870_ovl_23_arg0 *, s32, s32, s32, s32, s32);\n\ntypedef struct S_func_8016B5C8_ovl_31_arg0 { u8 unk_00[0x2C3]; u8 unk_2C3; u8 unk_2C4; u8 unk_2C5; u16 unk_2C6; s16 unk_2C8; s8 unk_2CA; s8 unk_2CB; u8 unk_2CC[4]; u8 unk_2D0; u8 unk_2D1; } S_func_8016B5C8_ovl_31_arg0;\ntypedef struct S_func_8016B5C8_ovl_31_arg1_120 { u16 unk_00; u8 unk_02[0xE]; s16 unk_10; } S_func_8016B5C8_ovl_31_arg1_120;\ntypedef struct S_func_8016B5C8_ovl_31_arg1 { u8 unk_00[0x120]; S_func_8016B5C8_ovl_31_arg1_120 *unk_120; } S_func_8016B5C8_ovl_31_arg1;\n\ntypedef struct S_func_80009CAC_arg1 { u8 unk_00[8]; s32 unk_08; s32 unk_0C; s32 unk_10; s32 unk_14; u16 unk_18; u8 unk_1A; u8 unk_1B; } S_func_80009CAC_arg1;\ntypedef struct S_func_80009CAC_arg2 { u32 unk_00; s32 unk_04; s32 unk_08; s32 unk_0C; s32 unk_10; s32 unk_14; s16 unk_18; s8 unk_1A; s8 unk_1B; u16 unk_1C; u16 unk_1E; } S_func_80009CAC_arg2;\n\n/* main-segment queue used by func_8000CB60 (push, matched) and func_80007450:\n * +0x0 lock pointer (a non-zero *lock triggers a notify), +0x4 event/mutex\n * object passed by address to func_80000DD4, +0x8 count, +0xC index,\n * +0x10 size, +0x14 s32* data. */\ntypedef struct S_func_8000CB60_queue {\n    s32 *lock;\n    u8 pad4[4];\n    s32 count;\n    s32 index;\n    s32 size;\n    s32 *data;\n} S_func_8000CB60_queue;\n\ntypedef struct S_func_80166934_ovl_32_entry { s8 unk_00; s8 unk_01; s8 unk_02; s8 unk_03; s16 unk_04; s16 unk_06; s16 unk_08; s16 unk_0A; u8 unk_0C[8]; u8 unk_14; u8 unk_15; u8 unk_16; u8 unk_17; u8 unk_18; u8 unk_19[7]; } S_func_80166934_ovl_32_entry;\ns32 func_8003420C_ovl_01_18(void *, s16, s16, u32);\n\n/* ---- ovl_01 keyframe/entity tables (recovered in func_80088238/800882B8/80088528/80087A58) ---- */\ntypedef struct S_8002A060_ovl_01 { s32 unk_00; void *unk_04; s32 unk_08; } S_8002A060_ovl_01;            /* stride 0x0C */\ntypedef struct S_80029FE0_ovl_01 { s32 unk_00; void *unk_04; } S_80029FE0_ovl_01;                        /* stride 0x08, unk_00 = kind (2/3) */\ntypedef struct S_8002A000_ovl_01 { s32 unk_00; s32 unk_04; s32 unk_08; s32 unk_0C; s32 unk_10; s32 unk_14; } S_8002A000_ovl_01; /* stride 0x18 */\ntypedef struct S_80087A58_ovl_01_arg0 { s32 unk_00; s32 *unk_04; s32 unk_08; } S_80087A58_ovl_01_arg0;  /* index, result slot, handle */\ntypedef struct S_80088528_ovl_01_arg0 { u16 unk_00; s16 unk_02; s32 unk_04; } S_80088528_ovl_01_arg0;\n\n/* bit-array helpers over a u32 array (bit = (0x80000000U >> (n & 0x1F)), word n >> 5) */\nvoid func_80083788_ovl_01(s32 *bits, u32 n);   /* set   */\nvoid func_800837B0_ovl_01(s32 *bits, u32 n);   /* clear */\n\ntypedef struct S_D_80129E34 { s32 unk_00; s32 unk_04; s32 unk_08; s8 unk_0C; u8 unk_0D[0x3F]; s32 unk_4C; s32 unk_50; s32 unk_54; s32 unk_58; s32 unk_5C; s32 unk_60; u8 unk_64; u8 unk_65; } S_D_80129E34;\n\ns32 func_800A5618_ovl_01(void);\ns32 func_800A5660_ovl_01(void);\n",
