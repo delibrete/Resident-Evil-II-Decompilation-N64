@@ -1425,7 +1425,8 @@
     "-mfp32",
     "-O2",
     "-mcpu=r4600"
-   ]
+   ],
+   "timeout": 20
   },
   "69707208:2149004312": {
    "vram": 2149004312,
@@ -24210,8 +24211,8 @@
   },
   "func_80170F04_overlay_054": {
    "vram": 2148994820,
-   "best_score": 8600,
-   "best_by": "autopilot"
+   "matched_by": "autopilot",
+   "readable": false
   },
   "func_80170F70_ovl_07": {
    "vram": 2148994928,
@@ -242854,8 +242855,8 @@
      "rom_sha1": "93187c4145cad272a255c17657cd9a1011b3fb3a"
     },
     "symbols_sha256": "bb629f57bc1a7dc4757d26842ea3c55c37e3025a8cd4b02d9a2fb5d58d2bc36b",
-    "recorded_at": 1793988542.634775,
-    "attempt_id": 325848,
+    "recorded_at": 1793994750.9141288,
+    "attempt_id": 329873,
     "source_sha256": "fa99472678df9faa73b44592366c7a9ccaef4a35d55bb15976603c0d0545c036",
     "header_sha256": "e344e28888e8adc61a3e295f0cc2732492474a1f9063c51954783241ddf71de9",
     "context_version": 724,
