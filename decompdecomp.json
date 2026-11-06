@@ -7631,6 +7631,20 @@
    "timeout": 20,
    "function": "func_80163374_ovl_12",
    "vram": 2148938612
+  },
+  "7984:2147488688": {
+   "toolchain": "sn-n64-272-0004",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-O1",
+    "-mgas",
+    "-meb",
+    "-mhard-float"
+   ],
+   "timeout": 20,
+   "function": "func_800013B0",
+   "vram": 2147488688
   }
  },
  "instructions": "",
@@ -62151,14 +62165,6 @@
    "score_after": 10
   },
   {
-   "function": "func_800013B0",
-   "text": "3 compiles done, best score 40. Straight stores yield 9 instructions; target uses v0 as address temp, compiler uses at; register local did not alter it. No operand/control-flow differences.",
-   "by": "codex-gpt-6-luna-1",
-   "created_at": 1793884662.902836,
-   "score_before": 0,
-   "score_after": 0
-  },
-  {
    "function": "func_8000DB80",
    "text": "3 compiles, no improvement. __builtin_sqrtf produces target sqrt.s but not in jr delay slot and adds NaN check/frame. Best remains 960; pure C likely cannot force target scheduling.",
    "by": "codex-gpt-6-luna-1",
@@ -66519,14 +66525,6 @@
    "score_after": 10
   },
   {
-   "function": "func_800013B0",
-   "text": "Release anyway: C is exact (4 global stores); the entire remaining diff is KMC's use of `$at` for absolute symbol stores where the ROM's build uses a general register ($v0). Nothing source-side changes it (verified with plain globals and with literal addresses). Needs the project's compiler/setup fix.",
-   "by": "opencode-deepseek-v4.1-flash-1",
-   "created_at": 1793884672.180319,
-   "score_before": 0,
-   "score_after": 0
-  },
-  {
    "function": "func_8002D740_ovl_01",
    "text": "Compiled through the 8/8 move-on threshold. Best score 2630/130 instructions (79.7%). Fixed the item table interpretation: entries are pointers at object+0x11C+4*i, and both modulo operations must be unsigned to reproduce divu. Remaining diff is primarily register allocation through the loop arithmetic and a few instruction scheduling differences; best source retains exact first 51 instructions before the remaining regalloc mismatch.",
    "by": "codex-gpt-6-luna-1",
@@ -68107,14 +68105,6 @@
    "text": "Ceiling at score 10 (52/52): only the three indirect-call zero arguments differ. ROM materialises one zero in a0 (`move a0,zero`) then copies it to a1/a2 (`move a1,a0`, `move a2,a0`); this cc1 emits `move a1,zero` / `move a2,zero`. Confirmed again with `s32 z=0; fn(z,z,z)` - identical score. Prior agents also tried literal 0s, NULL, one reused local, and reading arg0->0 (gives lw, 200). search_flags/all KMC flags = 10. Everything else in the 52 instructions matches exactly. Compiler constant-materialisation ceiling; best attempt saved.",
    "by": "opencode-deepseek-v4.1-flash-1",
    "created_at": 1793884674.723315,
-   "score_before": 0,
-   "score_after": 0
-  },
-  {
-   "function": "func_800013B0",
-   "text": "Cannot get closer: only diff is the scratch register for the four absolute stores ($at vs ROM $v0), which is the documented split-address compiler-build defect (open setup suggestion). Plain globals, volatile globals, array[0], and local-pointer forms all produce $at (local pointer would also add an addiu). This is a compiler-instruction-selection ceiling, not C structure. Best attempt saved.",
-   "by": "opencode-deepseek-v4.1-flash-1",
-   "created_at": 1793884674.7289448,
    "score_before": 0,
    "score_after": 0
   },
@@ -70711,14 +70701,6 @@
    "score_after": 60
   },
   {
-   "function": "func_800013B0",
-   "text": "Compiled with previous best C; score 40 (95.5% match). Diff is solely register allocation: target uses $v0 for absolute symbol stores, compiler uses $at. This is a known KMC codegen ceiling, not fixable via C source. Marking as not C.",
-   "by": "opencode-nemotron-3.5-lightning-f-1",
-   "created_at": 1793884679.7561312,
-   "score_before": 0,
-   "score_after": 0
-  },
-  {
    "function": "func_800013D4",
    "text": "Compiled with best attempt C; score 3305 (38.7% match). Diff extensive: register allocation differences (move $t1 vs $a2), operand mismatches, struct field offsets, and control flow variations. Appears to be compiler codegen ceiling; no pure C can emit exact target. Marking as not C.",
    "by": "opencode-nemotron-3.5-lightning-f-1",
@@ -71107,14 +71089,6 @@
    "text": "MATCHED. Key trick for the ROM's 47-insn shape: assign the call-argument pointer `a0 = s0 + 0x58` at the end of BOTH if/else branches (not once after the branches). Then gcc fills the `j` delay slot with `addiu a0,s0,0x58` and uses `addiu a0,s0,0x58` in the branch delays, exactly like the ROM. Also: `s16 v = *(u16*)(s0+0x11E) - 8; ... if (v < 0) *(u16*)(s0+0x11E) = 0;` gives the ROM's bltzl+`sh zero` delay, and `if (v >= 0x201)` gives the bnez+addiu-0x200 delay. The func_80040E88_ovl_01 call here takes 2 args (a0=s0+0x58, a1=s0+8); note other matched functions declare it 3-arg, so do NOT add a prototype to context.h.",
    "by": "opencode-deepseek-v4.1-flash-low-1",
    "created_at": 1793884680.383563,
-   "score_before": 0,
-   "score_after": 0
-  },
-  {
-   "function": "func_800013B0",
-   "text": "Confirmed again: four plain global stores, target uses $v0 as the %hi base for each absolute store while this KMC build uses $at. Only regalloc diffs (8 rows), 9/9 instructions. Two models already agree this is the documented split-symbol-address codegen ceiling (open setup suggestion), not fixable from C: plain globals, volatile globals, array[0], local pointer, and literal-address forms all yield $at (or add an addiu).",
-   "by": "opencode-deepseek-v4.1-flash-low-1",
-   "created_at": 1793884680.389119,
    "score_before": 0,
    "score_after": 0
   },
@@ -71527,14 +71501,6 @@
    "score_after": 10
   },
   {
-   "function": "func_800013B0",
-   "text": "Compile once gave score 40; diff shows all stores use $at base vs ROM $v0; known KMC codegen ceiling for absolute symbol addressing, not resolvable via C. Ready to hand over.",
-   "by": "opencode-nemotron-3.5-lightning-f-1",
-   "created_at": 1793884681.0955951,
-   "score_before": 0,
-   "score_after": 0
-  },
-  {
    "function": "func_80164CB4_ovl_16",
    "text": "Five compile calls, identical empty stubs, score 26065/262. Full implementation still needed.",
    "by": "codex-gpt-6-luna-1",
@@ -71757,14 +71723,6 @@
    "created_at": 1793884681.345053,
    "score_before": 180,
    "score_after": 180
-  },
-  {
-   "function": "func_800013B0",
-   "text": "Score 40, all 9 instructions match except the scratch register for absolute symbol addressing: target uses $v0, KMC GCC uses $at. This is the documented split\u2011symbol codegen ceiling (open setup suggestion #23), not fixable from C source with the project's compiler/flags.",
-   "by": "opencode-nemotron-3.5-lightning-f-1",
-   "created_at": 1793884681.349993,
-   "score_before": 0,
-   "score_after": 0
   },
   {
    "function": "func_80163FD4_ovl_13",
@@ -72117,14 +72075,6 @@
    "created_at": 1793884681.824553,
    "score_before": 60,
    "score_after": 60
-  },
-  {
-   "function": "func_800013B0",
-   "text": "Compiled once with best C draft; score 40, diff shows all four absolute symbol stores use $at as scratch register instead of ROM's $v0. This is the documented KMC codegen ceiling for split\u2011symbol addressing (setup suggestion #23), not fixable from C source with the project's compiler/flags.",
-   "by": "opencode-nemotron-3.5-lightning-f-1",
-   "created_at": 1793884681.830047,
-   "score_before": 0,
-   "score_after": 0
   },
   {
    "function": "func_8000F050",
@@ -73119,14 +73069,6 @@
    "score_after": 10
   },
   {
-   "function": "func_800013B0",
-   "text": "Score 40; only regalloc diff $at vs $v0 for absolute symbol stores, compiler ceiling, not fixable via C with current KMC GCC 2.7.2 -O2 -mips3 -G0.",
-   "by": "opencode-nemotron-3.5-lightning-f-1",
-   "created_at": 1793884683.600084,
-   "score_before": 0,
-   "score_after": 0
-  },
-  {
    "function": "func_800A10D4_ovl_01",
    "text": "Ceiling confirmed: 6 compiles, best 775, instruction count 64 = ROM. All remaining rows are (a) the split-symbol address fold \u2014 the positive-path store always comes out as `lui $at,%hi(D_8013CBF2); sh $s1,%lo(...)($at)` where the ROM keeps base+scaled index in a register and uses `sh $s1,0xfc2($v0)` (tried plain expression, temp pointer variable, block-scoped `u8 *b=D_8013BC30`, and `M2C_FIELD`; all fold) \u2014 this is the same codegen ceiling as the open setup suggestions #23/#24; and (b) a few register/block-placement differences (found block inlined after the -1 exit, prologue `move a1,s0` order, negative path v0/v1). Source structure is correct and documented in the previous note. Move on.",
    "by": "opencode-deepseek-v4.1-flash-low-1",
@@ -73227,14 +73169,6 @@
    "text": "Compiled candidate signatures; best score 160/10 instructions. First instruction and parameter packing mostly match; target loads the spilled fifth argument and stores ra after the packing, while C schedules ra save earlier and elides the argument load. Try a volatile stack parameter arrangement.",
    "by": "codex-gpt-6-luna-1",
    "created_at": 1793884683.738028,
-   "score_before": 0,
-   "score_after": 0
-  },
-  {
-   "function": "func_800013B0",
-   "text": "Compiled once; score 40; regalloc diff; compiler ceiling.",
-   "by": "opencode-nemotron-3.5-lightning-f-1",
-   "created_at": 1793884683.754953,
    "score_before": 0,
    "score_after": 0
   },
@@ -75711,14 +75645,6 @@
    "score_after": 10
   },
   {
-   "function": "func_800013B0",
-   "text": "Compiled twice, score 40 both times; only regalloc diff $at vs $v0 for absolute symbol stores. Documented KMC codegen ceiling (setup suggestion #23) not fixable via C source with project's compiler/flags. Next agent can start from this best attempt.",
-   "by": "opencode-nemotron-3.5-lightning-f-1",
-   "created_at": 1793884688.233485,
-   "score_before": 0,
-   "score_after": 0
-  },
-  {
    "function": "func_80163DE0_ovl_35",
    "text": "Best score remains 2420; 3 compiles since claim, no improvement. Reproduced saved attempt exactly. Prior extensive trials establish split-address folding and unexplained 16-byte frame overhead; the source logic is substantially recovered. No feasible remaining C tweak identified.",
    "by": "codex-gpt-6-luna-1",
@@ -76125,14 +76051,6 @@
    "created_at": 1793884689.161827,
    "score_before": 10,
    "score_after": 10
-  },
-  {
-   "function": "func_800013B0",
-   "text": "Compiled once with best C draft; score 40, only difference is register allocation: target uses $v0 for absolute symbol stores (lui $v0, %hi...; sw ... ($v0)), GCC uses $at. This is the documented KMC codegen ceiling for split\u2011symbol addressing (setup suggestion #23), not fixable from C source with the project's compiler/flags.",
-   "by": "opencode-nemotron-3.5-lightning-f-1",
-   "created_at": 1793884689.168871,
-   "score_before": 0,
-   "score_after": 0
   },
   {
    "function": "func_80001510",
@@ -78175,14 +78093,6 @@
    "score_after": 3095
   },
   {
-   "function": "func_800013B0",
-   "text": "Score 40, only difference is register allocation: target uses $v0 for absolute symbol stores (lui $v0, %hi...; sw ... ($v0)), GCC uses $at. This is the documented KMC codegen ceiling for split\u2011symbol addressing (setup suggestion #23), not fixable from C source with the project's compiler/flags. All 9 instructions match except the scratch register for absolute symbol addressing.",
-   "by": "opencode-nemotron-3.5-lightning-f-1",
-   "created_at": 1793884693.8947,
-   "score_before": 0,
-   "score_after": 0
-  },
-  {
    "function": "func_80032D44_ovl_01",
    "text": "Semantics certain: s32 f(s16 a0,s16 a1,s16 a2,s16 a3){ v0=0x400; dx=(s32)a2-(s32)a0; dy=(s32)a3-(s32)a1; if(dy>0)v0=0xC00; if(dx!=0){ r=(s16)func_80040A44_ovl_01((dy<<12)/dx,a1,a2,a3); v0=0x1000; if(dx<0)v0=0x800; v0=(v0-r)&0xFFF; } return v0; }. The ROM keeps both constant selects as BRANCHES (`addiu v0,0x400` hoisted; `blez a0,skip; sw ra(delay); addiu v0,0xC00`; `bgez s0,skip; addiu v0,0x1000(delay); addiu v0,0x800`). This KMC build always lowers the first select to the branchless bit trick `slt v0,zero,dy; negu; andi 0xc00; ori 0x400` for every spelling tried: plain if with pre-init, if/else, `dy>=1`, `arg3>arg1` (1690, best of mine but still branchless `slt a1,a3`), pre-init before/after dx, declaration reorders. Flags: -O2 1690-1900, -O1 1360 still branchless, -fno-expensive-optimizations 1800 still branchless, -fno-schedule-insns 1160 still branchless, IDO 2995 wrong. Only the second select stays a branch. Division break-7/break-6 sequence and the call match exactly. Saved best 1600 is the earlier agent's. Best source from me (1690): `s32 v0; s32 dx; s32 dy; s32 r; v0=0x400; dx=(s32)arg2-(s32)arg0; dy=(s32)arg3-(s32)arg1; if(arg3>arg1) v0=0xC00; ...`. This is another KMC-build codegen difference (constant-select fold absent in the ROM compiler); with such a build the source above should match, after checking the sign-extend order (target: a2,a0 -> dx -> a3,a1 -> dy; ours emits a3,a1 first because of the fold).",
    "by": "opencode-deepseek-v4.1-flash-low-1",
@@ -78671,14 +78581,6 @@
    "score_after": 0
   },
   {
-   "function": "func_800013B0",
-   "text": "Force release after 1 compile; score 40, 9\u2011instruction target, 9 generated. Regalloc diff $v0 vs $at; compiler ceiling.",
-   "by": "opencode-nemotron-3.5-lightning-f-1",
-   "created_at": 1793884694.3385768,
-   "score_before": 0,
-   "score_after": 0
-  },
-  {
    "function": "func_80033434_ovl_01",
    "text": "Cannot get closer with this cc1: the sole blocker is the game-wide split-data-address limitation (D_800C7650+0x18000 is always folded to D_800DF8D8), which removes the target's 4-insn lui/ori/lui/addiu/addu sequence and shifts all downstream registers. Full recovered logic and exact source are in my previous note. Nothing further is achievable in pure C here; needs the compiler/data-address setup fix.",
    "by": "opencode-deepseek-v4.1-flash-low-1",
@@ -78701,14 +78603,6 @@
    "created_at": 1793884694.3643038,
    "score_before": 10,
    "score_after": 10
-  },
-  {
-   "function": "func_800013B0",
-   "text": "One compile attempted: C directly assigning to externs `D_800138A0 = arg0; ...` produced score 40, only difference is register allocation for %hi of absolute symbols: target uses $v0, GCC uses $at. This is the documented KMC GCC 2.7.2 -O2 -mips3 -G0 codegen ceiling for split\u2011symbol addressing (setup suggestion #23), not fixable from C source. All 9 instructions match structurally; only scratch register differs. No further C variations expected to improve score; function is a compiler register\u2011choice ceiling.",
-   "by": "opencode-nemotron-3.5-lightning-f-1",
-   "created_at": 1793884694.3788319,
-   "score_before": 0,
-   "score_after": 0
   },
   {
    "function": "func_80001510",
@@ -79541,14 +79435,6 @@
    "created_at": 1793884696.347494,
    "score_before": 60,
    "score_after": 60
-  },
-  {
-   "function": "func_800013B0",
-   "text": "Forced release after 1 compile; function is a compiler register\u2011choice ceiling with KMC GCC 2.7.2 -O2 -mips3 -G0; pure C cannot allocate $v0 for absolute symbol stores; next agent starts from best attempt.",
-   "by": "opencode-nemotron-3.5-lightning-f-1",
-   "created_at": 1793884696.354762,
-   "score_before": 0,
-   "score_after": 0
   },
   {
    "function": "func_8003334C_ovl_01",
@@ -81095,14 +80981,6 @@
    "score_after": 1755
   },
   {
-   "function": "func_800013B0",
-   "text": "Compiled three times, score 40 unchanged, diff only register allocation $v0 vs $at for absolute symbol stores (lui $v0, %hi...); compiler ceiling with KMC GCC 2.7.2 -O2 -mips3 -G0; pure C cannot steer allocator to $v0 for these stores. Notes saved.",
-   "by": "opencode-nemotron-3.5-lightning-f-1",
-   "created_at": 1793884697.867991,
-   "score_before": 0,
-   "score_after": 0
-  },
-  {
    "function": "func_80082230_ovl_01",
    "text": "SOLVED for the real function: the first 9 instructions (0x80082230-0x80082253, the memset-like body) match byte-for-byte with: void func_80082230_ovl_01(u8 *arg0, u8 arg1, s32 arg2){ u8 *p; s32 i; p=arg0; i=arg2-1; if(arg2!=0){ do{ *p=arg1; i-=1; p+=1; }while(i!=-1); } } (do-while shape is required; a for loop adds a stack frame and a duplicate beqz). The remaining 57 instructions are three more separate functions merged into this block: 0x80082254 (strncpy-like: addu a3,a0; beqz a2; loop lbu v0,0(a1); sb v0,0(a3); lbu v0,0(a1); bnel v0,zero,skip; addiu a1; ...), 0x8008228C (frame -0x20, calls func_8000DE9C, returns s1+s0) and 0x800822C0 (frame -0x20, calls func_800823B8_ovl_01 then func_8008B0CC_ovl_01, copies s0+1 bytes). I reported the boundary at 0x80082254.",
    "by": "opencode-deepseek-v4.1-flash-low-1",
@@ -81645,14 +81523,6 @@
    "created_at": 1793884698.4036732,
    "score_before": 3095,
    "score_after": 3095
-  },
-  {
-   "function": "func_800013B0",
-   "text": "Three compiles all score 40, only register allocation diff (target $v0 vs GCC $at) for absolute symbol addressing via lui/%hi. KMC GCC 2.7.2 -O2 -mips3 -G0 ceiling; pure C cannot steer allocator to $v0. Best attempt C code as above; no further changes improve. Release.",
-   "by": "opencode-nemotron-3.5-lightning-f-1",
-   "created_at": 1793884698.409298,
-   "score_before": 0,
-   "score_after": 0
   },
   {
    "function": "func_800014AC",
@@ -82399,14 +82269,6 @@
    "score_after": 240
   },
   {
-   "function": "func_800013B0",
-   "text": "Compiled C assignment to externs produced score 40; only difference is register allocation for absolute symbol addressing via lui: target uses $v0, GCC uses $at. This is a known KMC GCC 2.7.2 -O2 -mips3 -G0 codegen ceiling (setup suggestion #23) not fixable from C source. All 9 instructions match structurally; only scratch register differs. Three compiles without better score.",
-   "by": "opencode-nemotron-3.5-lightning-f-1",
-   "created_at": 1793884699.1563368,
-   "score_before": 0,
-   "score_after": 0
-  },
-  {
    "function": "func_80163950_overlay_026",
    "text": "Best 175 (91.6%, 20 vs 21 insns): everything matches except the table access. C: `extern s32 func_80033634_ovl_01(void); extern volatile u8 D_8016723C_ovl_26[]; void func_80163950_ovl_26(u8 *a){ u8 v = D_8016723C_ovl_26[func_80033634_ovl_01() & 7]; a[5]=1; *(s16*)(a+6)=0; *(s16*)(a+0x1E4)=0; *(s16*)(a+0x1E0)=0; *(u8*)(a+0x2BE)=v+0x3C; }`. The frame, s0 save, `addu s0,a0` in the jal delay slot, all four zero stores and the final `addiu v1,v1,0x3C; sb v1,0x2BE(s0)` are byte-identical; the RNG call result mask also matches. Remaining 4 rows: ROM has `lui v1,%hi(D_8016723C); addiu v1,v1,%lo(D_8016723C)` (full split base) then `andi v0,v0,7; addu v0,v0,v1; lbu v1,0($v0)`; our KMC always emits `andi; lui v1,%hi; addu v1,v1,v0; lbu v1,%lo(D_8016723C)($v1)` (folds the low half into the byte load). Tried: volatile u8 array, local u8* base, `&D[i]` into a pointer, volatile u32[] cast back to u8, u32 index temp, base += i. All compile identically (score 175). This is the documented split-address build gap (open setup #1/#2); a byte load lets this cc1 fold %lo into the displacement. Note func_801632B8_ovl_21 got the split form with a `volatile u32[]` table because its element load was `lw` - so a word-sized element may be the key if the compiler build is ever fixed.",
    "by": "opencode-deepseek-v4.1-flash-low-1",
@@ -82637,14 +82499,6 @@
    "created_at": 1793884699.3819242,
    "score_before": 10,
    "score_after": 10
-  },
-  {
-   "function": "func_800013B0",
-   "text": "Score 40, only register allocation diff: target $v0 vs GCC $at for absolute symbol addressing via lui. Pure C cannot allocate $v0 with KMC GCC 2.7.2 -O2 -mips3 -G0; compiler ceiling (setup suggestion #23). All 9 instructions match except scratch register. Next agent should accept score 40 or try different compiler/flags.",
-   "by": "opencode-nemotron-3.5-lightning-f-1",
-   "created_at": 1793884699.387939,
-   "score_before": 0,
-   "score_after": 0
   },
   {
    "function": "func_80166A48_ovl_12",
@@ -82967,14 +82821,6 @@
    "score_after": 10
   },
   {
-   "function": "func_800013B0",
-   "text": "Score 40. The only diff is register allocation for absolute symbol addressing via lui: target uses $v0, GCC uses $at. All 9 instructions match structurally; only scratch register differs. This is a known KMC GCC 2.7.2 -O2 -mips3 -G0 codegen ceiling (setup suggestion #23) not fixable from C source. Best attempt C code matches instruction count and control flow, only register alloc differs. No further C changes can achieve byte\u2011identical match with the project's compiler/flags.",
-   "by": "opencode-nemotron-3.5-lightning-f-1",
-   "created_at": 1793884699.691177,
-   "score_before": 0,
-   "score_after": 0
-  },
-  {
    "function": "func_8017D79C_ovl_02",
    "text": "Best 10 (25/25 insns; only the global store's base register differs). Correct C: `extern s32 D_80185798_ovl_02; void f(void){ func_8017BE48_ovl_02(3); if(func_8017BE48_ovl_02(1)){ func_8017BE48_ovl_02(8); func_8017BE48_ovl_02(8); D_80185798_ovl_02 = func_8017BE48_ovl_02(8); } func_8017BE48_ovl_02(0xE); func_8017BB68_ovl_02(1); func_8017BE48_ovl_02(0xE); }`. ROM stores via `lui $v1,%hi; sw $v0,%lo($v1)`; this KMC build emits `lui $at,%hi; sw $v0,%lo($at)`. Tried extern s32/array[0]/volatile s32, search_flags (all 6 variants = 10). Same documented open split-data-address build limitation (see func_8017F2F0, func_8015B1CC notes). Not fixable in C with this cc1.",
    "by": "opencode-deepseek-v4.1-flash-low-1",
@@ -83077,14 +82923,6 @@
    "created_at": 1793884699.7749639,
    "score_before": 524,
    "score_after": 524
-  },
-  {
-   "function": "func_800013B0",
-   "text": "Score 40; only register allocation diff (target $v0 vs GCC $at for absolute symbol addressing via lui). Pure C cannot steer KMC GCC 2.7.2 -O2 -mips3 -G0 to allocate $v0 for these lui instructions; compiler ceiling (setup suggestion #23). All 9 instructions match structurally; only scratch register differs. Best attempt C code as above.",
-   "by": "opencode-nemotron-3.5-lightning-f-1",
-   "created_at": 1793884699.7809548,
-   "score_before": 0,
-   "score_after": 0
   },
   {
    "function": "func_80001510",
@@ -83501,14 +83339,6 @@
    "created_at": 1793884700.2578309,
    "score_before": 765,
    "score_after": 765
-  },
-  {
-   "function": "func_800013B0",
-   "text": "Score 40; only register allocation diff (target $v0 vs GCC $at for absolute symbol addressing via lui). Known KMC GCC 2.7.2 -O2 -mips3 -G0 codegen ceiling (setup suggestion #23) not fixable from C source. All 9 instructions match structurally; only scratch register differs. Best attempt C code matches insn count and control flow; no further C changes can achieve byte\u2011identical match with current compiler/flags.",
-   "by": "opencode-nemotron-3.5-lightning-f-1",
-   "created_at": 1793884700.264487,
-   "score_before": 0,
-   "score_after": 0
   },
   {
    "function": "func_8017FE8C_ovl_04",
@@ -84279,14 +84109,6 @@
    "score_after": 10
   },
   {
-   "function": "func_800013B0",
-   "text": "Score 40/9 insns. Register allocation diff only; KMC GCC 2.7.2 -O2 -mips3 -G0 ceiling; pure C cannot allocate $v0 for absolute symbol stores. No further attempts.",
-   "by": "opencode-nemotron-3.5-lightning-f-1",
-   "created_at": 1793884700.961469,
-   "score_before": 0,
-   "score_after": 0
-  },
-  {
    "function": "func_800014AC",
    "text": "Score 840/23 insns. Register allocation diff only; KMC GCC 2.7.2 -O2 -mips3 -G0 ceiling; pure C cannot allocate $a2 for absolute symbol %hi. No further attempts.",
    "by": "opencode-nemotron-3.5-lightning-f-1",
@@ -84541,14 +84363,6 @@
    "created_at": 1793884702.461165,
    "score_before": 225,
    "score_after": 225
-  },
-  {
-   "function": "func_800013B0",
-   "text": "Forced release after 1 compile; score 40; diff register allocation for lui; known KMC GCC 2.7.2 -O2 -mips3 -G0 ceiling.",
-   "by": "opencode-nemotron-3.5-lightning-f-1",
-   "created_at": 1793884702.4668312,
-   "score_before": 0,
-   "score_after": 0
   },
   {
    "function": "func_8016492C_overlay_035",
@@ -85573,14 +85387,6 @@
    "created_at": 1793884703.803702,
    "score_before": 10,
    "score_after": 10
-  },
-  {
-   "function": "func_800013B0",
-   "text": "Score 40, only register allocation diff: target $v0 vs GCC $at for lui/abs-store. C source matches insn count and control flow; pure C cannot allocate $v0 with KMC GCC 2.7.2 -O2 -mips3 -G0 ceiling (setup suggestion #23). No further C changes can achieve byte\u2011identical match with current compiler/flags.",
-   "by": "opencode-nemotron-3.5-lightning-f-1",
-   "created_at": 1793884703.815559,
-   "score_before": 0,
-   "score_after": 0
   },
   {
    "function": "func_80001510",
@@ -132101,6 +131907,214 @@
    "created_at": 1793884728.4948878,
    "score_before": 20,
    "score_after": 0
+  },
+  {
+   "function": "func_800013B0",
+   "text": "3 compiles done, best score 40. Straight stores yield 9 instructions; target uses v0 as address temp, compiler uses at; register local did not alter it. No operand/control-flow differences.",
+   "by": "codex-gpt-6-luna-1",
+   "created_at": 1793884662.902836,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_800013B0",
+   "text": "Release anyway: C is exact (4 global stores); the entire remaining diff is KMC's use of `$at` for absolute symbol stores where the ROM's build uses a general register ($v0). Nothing source-side changes it (verified with plain globals and with literal addresses). Needs the project's compiler/setup fix.",
+   "by": "opencode-deepseek-v4.1-flash-1",
+   "created_at": 1793884672.180319,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_800013B0",
+   "text": "Cannot get closer: only diff is the scratch register for the four absolute stores ($at vs ROM $v0), which is the documented split-address compiler-build defect (open setup suggestion). Plain globals, volatile globals, array[0], and local-pointer forms all produce $at (local pointer would also add an addiu). This is a compiler-instruction-selection ceiling, not C structure. Best attempt saved.",
+   "by": "opencode-deepseek-v4.1-flash-1",
+   "created_at": 1793884674.7289448,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_800013B0",
+   "text": "Compiled with previous best C; score 40 (95.5% match). Diff is solely register allocation: target uses $v0 for absolute symbol stores, compiler uses $at. This is a known KMC codegen ceiling, not fixable via C source. Marking as not C.",
+   "by": "opencode-nemotron-3.5-lightning-f-1",
+   "created_at": 1793884679.7561312,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_800013B0",
+   "text": "Confirmed again: four plain global stores, target uses $v0 as the %hi base for each absolute store while this KMC build uses $at. Only regalloc diffs (8 rows), 9/9 instructions. Two models already agree this is the documented split-symbol-address codegen ceiling (open setup suggestion), not fixable from C: plain globals, volatile globals, array[0], local pointer, and literal-address forms all yield $at (or add an addiu).",
+   "by": "opencode-deepseek-v4.1-flash-low-1",
+   "created_at": 1793884680.389119,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_800013B0",
+   "text": "Compile once gave score 40; diff shows all stores use $at base vs ROM $v0; known KMC codegen ceiling for absolute symbol addressing, not resolvable via C. Ready to hand over.",
+   "by": "opencode-nemotron-3.5-lightning-f-1",
+   "created_at": 1793884681.0955951,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_800013B0",
+   "text": "Score 40, all 9 instructions match except the scratch register for absolute symbol addressing: target uses $v0, KMC GCC uses $at. This is the documented split\u2011symbol codegen ceiling (open setup suggestion #23), not fixable from C source with the project's compiler/flags.",
+   "by": "opencode-nemotron-3.5-lightning-f-1",
+   "created_at": 1793884681.349993,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_800013B0",
+   "text": "Compiled once with best C draft; score 40, diff shows all four absolute symbol stores use $at as scratch register instead of ROM's $v0. This is the documented KMC codegen ceiling for split\u2011symbol addressing (setup suggestion #23), not fixable from C source with the project's compiler/flags.",
+   "by": "opencode-nemotron-3.5-lightning-f-1",
+   "created_at": 1793884681.830047,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_800013B0",
+   "text": "Score 40; only regalloc diff $at vs $v0 for absolute symbol stores, compiler ceiling, not fixable via C with current KMC GCC 2.7.2 -O2 -mips3 -G0.",
+   "by": "opencode-nemotron-3.5-lightning-f-1",
+   "created_at": 1793884683.600084,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_800013B0",
+   "text": "Compiled once; score 40; regalloc diff; compiler ceiling.",
+   "by": "opencode-nemotron-3.5-lightning-f-1",
+   "created_at": 1793884683.754953,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_800013B0",
+   "text": "Compiled twice, score 40 both times; only regalloc diff $at vs $v0 for absolute symbol stores. Documented KMC codegen ceiling (setup suggestion #23) not fixable via C source with project's compiler/flags. Next agent can start from this best attempt.",
+   "by": "opencode-nemotron-3.5-lightning-f-1",
+   "created_at": 1793884688.233485,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_800013B0",
+   "text": "Compiled once with best C draft; score 40, only difference is register allocation: target uses $v0 for absolute symbol stores (lui $v0, %hi...; sw ... ($v0)), GCC uses $at. This is the documented KMC codegen ceiling for split\u2011symbol addressing (setup suggestion #23), not fixable from C source with the project's compiler/flags.",
+   "by": "opencode-nemotron-3.5-lightning-f-1",
+   "created_at": 1793884689.168871,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_800013B0",
+   "text": "Score 40, only difference is register allocation: target uses $v0 for absolute symbol stores (lui $v0, %hi...; sw ... ($v0)), GCC uses $at. This is the documented KMC codegen ceiling for split\u2011symbol addressing (setup suggestion #23), not fixable from C source with the project's compiler/flags. All 9 instructions match except the scratch register for absolute symbol addressing.",
+   "by": "opencode-nemotron-3.5-lightning-f-1",
+   "created_at": 1793884693.8947,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_800013B0",
+   "text": "Force release after 1 compile; score 40, 9\u2011instruction target, 9 generated. Regalloc diff $v0 vs $at; compiler ceiling.",
+   "by": "opencode-nemotron-3.5-lightning-f-1",
+   "created_at": 1793884694.3385768,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_800013B0",
+   "text": "One compile attempted: C directly assigning to externs `D_800138A0 = arg0; ...` produced score 40, only difference is register allocation for %hi of absolute symbols: target uses $v0, GCC uses $at. This is the documented KMC GCC 2.7.2 -O2 -mips3 -G0 codegen ceiling for split\u2011symbol addressing (setup suggestion #23), not fixable from C source. All 9 instructions match structurally; only scratch register differs. No further C variations expected to improve score; function is a compiler register\u2011choice ceiling.",
+   "by": "opencode-nemotron-3.5-lightning-f-1",
+   "created_at": 1793884694.3788319,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_800013B0",
+   "text": "Forced release after 1 compile; function is a compiler register\u2011choice ceiling with KMC GCC 2.7.2 -O2 -mips3 -G0; pure C cannot allocate $v0 for absolute symbol stores; next agent starts from best attempt.",
+   "by": "opencode-nemotron-3.5-lightning-f-1",
+   "created_at": 1793884696.354762,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_800013B0",
+   "text": "Compiled three times, score 40 unchanged, diff only register allocation $v0 vs $at for absolute symbol stores (lui $v0, %hi...); compiler ceiling with KMC GCC 2.7.2 -O2 -mips3 -G0; pure C cannot steer allocator to $v0 for these stores. Notes saved.",
+   "by": "opencode-nemotron-3.5-lightning-f-1",
+   "created_at": 1793884697.867991,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_800013B0",
+   "text": "Three compiles all score 40, only register allocation diff (target $v0 vs GCC $at) for absolute symbol addressing via lui/%hi. KMC GCC 2.7.2 -O2 -mips3 -G0 ceiling; pure C cannot steer allocator to $v0. Best attempt C code as above; no further changes improve. Release.",
+   "by": "opencode-nemotron-3.5-lightning-f-1",
+   "created_at": 1793884698.409298,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_800013B0",
+   "text": "Compiled C assignment to externs produced score 40; only difference is register allocation for absolute symbol addressing via lui: target uses $v0, GCC uses $at. This is a known KMC GCC 2.7.2 -O2 -mips3 -G0 codegen ceiling (setup suggestion #23) not fixable from C source. All 9 instructions match structurally; only scratch register differs. Three compiles without better score.",
+   "by": "opencode-nemotron-3.5-lightning-f-1",
+   "created_at": 1793884699.1563368,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_800013B0",
+   "text": "Score 40, only register allocation diff: target $v0 vs GCC $at for absolute symbol addressing via lui. Pure C cannot allocate $v0 with KMC GCC 2.7.2 -O2 -mips3 -G0; compiler ceiling (setup suggestion #23). All 9 instructions match except scratch register. Next agent should accept score 40 or try different compiler/flags.",
+   "by": "opencode-nemotron-3.5-lightning-f-1",
+   "created_at": 1793884699.387939,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_800013B0",
+   "text": "Score 40. The only diff is register allocation for absolute symbol addressing via lui: target uses $v0, GCC uses $at. All 9 instructions match structurally; only scratch register differs. This is a known KMC GCC 2.7.2 -O2 -mips3 -G0 codegen ceiling (setup suggestion #23) not fixable from C source. Best attempt C code matches instruction count and control flow, only register alloc differs. No further C changes can achieve byte\u2011identical match with the project's compiler/flags.",
+   "by": "opencode-nemotron-3.5-lightning-f-1",
+   "created_at": 1793884699.691177,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_800013B0",
+   "text": "Score 40; only register allocation diff (target $v0 vs GCC $at for absolute symbol addressing via lui). Pure C cannot steer KMC GCC 2.7.2 -O2 -mips3 -G0 to allocate $v0 for these lui instructions; compiler ceiling (setup suggestion #23). All 9 instructions match structurally; only scratch register differs. Best attempt C code as above.",
+   "by": "opencode-nemotron-3.5-lightning-f-1",
+   "created_at": 1793884699.7809548,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_800013B0",
+   "text": "Score 40; only register allocation diff (target $v0 vs GCC $at for absolute symbol addressing via lui). Known KMC GCC 2.7.2 -O2 -mips3 -G0 codegen ceiling (setup suggestion #23) not fixable from C source. All 9 instructions match structurally; only scratch register differs. Best attempt C code matches insn count and control flow; no further C changes can achieve byte\u2011identical match with current compiler/flags.",
+   "by": "opencode-nemotron-3.5-lightning-f-1",
+   "created_at": 1793884700.264487,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_800013B0",
+   "text": "Score 40/9 insns. Register allocation diff only; KMC GCC 2.7.2 -O2 -mips3 -G0 ceiling; pure C cannot allocate $v0 for absolute symbol stores. No further attempts.",
+   "by": "opencode-nemotron-3.5-lightning-f-1",
+   "created_at": 1793884700.961469,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_800013B0",
+   "text": "Forced release after 1 compile; score 40; diff register allocation for lui; known KMC GCC 2.7.2 -O2 -mips3 -G0 ceiling.",
+   "by": "opencode-nemotron-3.5-lightning-f-1",
+   "created_at": 1793884702.4668312,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_800013B0",
+   "text": "Score 40, only register allocation diff: target $v0 vs GCC $at for lui/abs-store. C source matches insn count and control flow; pure C cannot allocate $v0 with KMC GCC 2.7.2 -O2 -mips3 -G0 ceiling (setup suggestion #23). No further C changes can achieve byte\u2011identical match with current compiler/flags.",
+   "by": "opencode-nemotron-3.5-lightning-f-1",
+   "created_at": 1793884703.815559,
+   "score_before": 0,
+   "score_after": 0
   }
  ],
  "set_aside": [
@@ -134974,8 +134988,8 @@
      "rom_sha1": "93187c4145cad272a255c17657cd9a1011b3fb3a"
     },
     "symbols_sha256": "bb629f57bc1a7dc4757d26842ea3c55c37e3025a8cd4b02d9a2fb5d58d2bc36b",
-    "recorded_at": 1793976011.4035819,
-    "attempt_id": 323247,
+    "recorded_at": 1793994771.2560031,
+    "attempt_id": 329880,
     "source_sha256": "c82ee25cde4c11ca0bf485ba5e35db59b54762f628cbc7dc61b9b848962e21f7",
     "header_sha256": "e344e28888e8adc61a3e295f0cc2732492474a1f9063c51954783241ddf71de9",
     "context_version": 18,
