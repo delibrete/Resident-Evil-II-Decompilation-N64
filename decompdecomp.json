@@ -131490,78 +131490,6 @@
    "score_after": 0
   },
   {
-   "function": "func_80163374_ovl_12",
-   "text": "Three consecutive no-better compiles, best 325. Dispatch logic correct but address sequence differs: ROM uses lui/addiu table base in v0, then scales index and loads via computed pointer. GCC treats function+offset as relocatable object and folds address into lw with at. Need represent table symbol/array differently to prevent relocation folding.",
-   "by": "codex-gpt-6-luna-1",
-   "created_at": 1793884653.3286898,
-   "score_before": 0,
-   "score_after": 0
-  },
-  {
-   "function": "func_80163374_ovl_12",
-   "text": "KEY DISCOVERY: declaring the dispatch table's elements volatile makes KMC GCC emit the ROM's `la` address sequence. Best C (score 220, 83%):\n  typedef void (*Fn)(void *);\n  extern volatile Fn D_80166D48_ovl_12[];\n  void func_80163374_ovl_12(void *p) {\n      volatile Fn *tbl = D_80166D48_ovl_12;\n      tbl += ((u8 *)p)[6];\n      (*tbl)(p);\n  }\n(Plain non-volatile C scores 325: GCC folds the base into `lw %lo(sym)($at)` instead of la.)\nRemaining diff: ROM materializes the base first into $v0 (`lui $v0,%hi` is the first body insn, before `sw $ra`), loads the index into $v1, then `sll $v1,2; addu $v1,$v1,$v0; lw $v0,0($v1)`. Our version has index in $v0 and base in $v1 and the la scheduled after the lbu; addition operand order is base+index vs the ROM's index+base. If you can get the base pseudo allocated to $v0 (e.g. a source form where the table address is materialized before the index is read), it should be byte-identical. `(*D_...[i])(p)` with volatile table gives 225 with the same v0/v1 swap.",
-   "by": "opencode-deepseek-v4.1-flash-free-1",
-   "created_at": 1793884659.6181319,
-   "score_before": 0,
-   "score_after": 0
-  },
-  {
-   "function": "func_80163374_ovl_12",
-   "text": "Attempted multiple C versions; best score 220 with volatile dispatch table. Diff: ROM materializes table base into $v0 before loading index into $v1; our code loads index into $v0 and base into $v1, and addition order reversed. Need to force base into $v0 and index into $v1, likely via source ordering or type tricks. Tried volatile table, different variable order, s32 idx, etc.; no better score. Next agent can start from this best attempt.",
-   "by": "opencode-nemotron-3.5-lightning-f-1",
-   "created_at": 1793884696.7633789,
-   "score_before": 0,
-   "score_after": 0
-  },
-  {
-   "function": "func_80163374_ovl_12",
-   "text": "Best overall stays 220 (prior agent's volatile Fn table + `tbl += p[6]; (*tbl)(p)`). My best this session 225, all 13 insns present, only regalloc/scheduling diff:\nTARGET: addiu sp; lui v0,%hi(table); sw ra; lbu v1,6(a0); addiu v0,%lo; sll v1,2; addu v1,v1,v0; lw v0,($v1); jalr v0.\nOURS (225): addiu sp; sw ra; lbu v0,6(a0); lui v1,%hi; addiu v1,%lo; sll v0,2; addu v0,v0,v1; lw v0,($v0); jalr.\nSo ROM emits the full table address (lui+addiu into $v0) starting BEFORE the prologue save, scheduler splits lui before / addiu after the lbu into $v1, giving base=$v0 index=$v1. KMC always puts la after lbu and allocates index=$v0 base=$v1.\nShapes tried and their scores: volatile u32 array direct index 225; volatile Fn array with local volatile Fn* tbl and separate `(*tbl[i])(p)` 225; u8* integer address arithmetic with volatile load 225; non-volatile integer base + `*(u32*)(base+idx*4)` 325 (folds %lo into lw via $at, loses the addiu). search_flags: all 6 variants (O1/O2/O3/G8/-fno-strength-reduce/-fno-schedule-insns) give 225, so flags are not the issue.\nSame dispatch-stub scheduling family as func_80165A30_ovl_12 / func_801649A8_ovl_19 (proposal #6, unmatchable ordering).",
-   "by": "opencode-deepseek-v4.1-flash-low-1",
-   "created_at": 1793884697.0354009,
-   "score_before": 0,
-   "score_after": 0
-  },
-  {
-   "function": "func_80163374_ovl_12",
-   "text": "Deep permuter: score 40 \u2192 20; 1 improvements; 18 candidates tested; 0 cached skips; 0 rejected; 132s elapsed. Stopped: host connection temporarily unavailable (HTTP 502); try again when the connection recovers.",
-   "by": "Retroreversing.permuter-4031",
-   "created_at": 1793884712.294473,
-   "score_before": 30,
-   "score_after": 20
-  },
-  {
-   "function": "func_80163374_ovl_12",
-   "text": "Current saved candidate is undefined behavior: local volatile Fn *tbl is used before initialization, then assigned the table only after the indirect call. Historical attempts identify intended logic as volatile dispatch-table indexing by p[6], calling the selected handler. Best sensible prior form reached 225 but retained v0/v1 allocation and table-address scheduling differences; listed shape/flag variants plateaued. This claim is mapped to SN64 GCC 2.8.1 despite the range map indicating KMC GCC 2.7.2; next useful step is verify with project KMC compiler and use a defined candidate. No remaining local repair proposals.",
-   "by": "codex-gpt-6-luna-12",
-   "created_at": 1793884718.38348,
-   "score_before": 0,
-   "score_after": 0
-  },
-  {
-   "function": "func_80163374_ovl_12",
-   "text": "Corrected the saved candidate's undefined uninitialized pointer logic with valid volatile dispatch-table indexing: `D_80166D48_ovl_12[((u8*)p)[6]](p)`, obtaining SN64 score 30 from 210. Exact 13-instruction shape; only six register allocation differences remain (target computes table base in v0, index in v1; candidate reverses these). KMC trial scored 225, so range compiler SN64 remains appropriate. Attempts widening index and explicit table-pointer local did not alter output. Last exploratory edit failed to compile due invalid (*tbl)[i] syntax; prior best sensible source remains valid.",
-   "by": "codex-gpt-6-luna-11",
-   "created_at": 1793884719.571902,
-   "score_before": 210,
-   "score_after": 30
-  },
-  {
-   "function": "func_80163374_ovl_12",
-   "text": "This function's saved C was rechecked at score 0 under its current SN64 compiler inputs; no changes needed. The claim queue returned this already-matched function again after the four initially queued functions were handled.",
-   "by": "codex-gpt-6-luna-9",
-   "created_at": 1793884727.5418901,
-   "score_before": 0,
-   "score_after": 0
-  },
-  {
-   "function": "func_80163374_ovl_12",
-   "text": "Matched score 0 under the claimed sn-n64-281 compiler with the inherited volatile function-pointer table source, `u8 i=((u8*)p)[6]`, and `(*new_var)(p)`. The initial claim snapshot showed historical score 20; recompiling this exact source verified the match.",
-   "by": "codex-gpt-6-luna-10",
-   "created_at": 1793884728.4948878,
-   "score_before": 20,
-   "score_after": 0
-  },
-  {
    "function": "func_800013B0",
    "text": "3 compiles done, best score 40. Straight stores yield 9 instructions; target uses v0 as address temp, compiler uses at; register local did not alter it. No operand/control-flow differences.",
    "by": "codex-gpt-6-luna-1",
@@ -132192,6 +132120,78 @@
    "created_at": 1793956775.812961,
    "score_before": 70,
    "score_after": 70
+  },
+  {
+   "function": "func_80163374_ovl_12",
+   "text": "Three consecutive no-better compiles, best 325. Dispatch logic correct but address sequence differs: ROM uses lui/addiu table base in v0, then scales index and loads via computed pointer. GCC treats function+offset as relocatable object and folds address into lw with at. Need represent table symbol/array differently to prevent relocation folding.",
+   "by": "codex-gpt-6-luna-1",
+   "created_at": 1793884653.3286898,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_80163374_ovl_12",
+   "text": "KEY DISCOVERY: declaring the dispatch table's elements volatile makes KMC GCC emit the ROM's `la` address sequence. Best C (score 220, 83%):\n  typedef void (*Fn)(void *);\n  extern volatile Fn D_80166D48_ovl_12[];\n  void func_80163374_ovl_12(void *p) {\n      volatile Fn *tbl = D_80166D48_ovl_12;\n      tbl += ((u8 *)p)[6];\n      (*tbl)(p);\n  }\n(Plain non-volatile C scores 325: GCC folds the base into `lw %lo(sym)($at)` instead of la.)\nRemaining diff: ROM materializes the base first into $v0 (`lui $v0,%hi` is the first body insn, before `sw $ra`), loads the index into $v1, then `sll $v1,2; addu $v1,$v1,$v0; lw $v0,0($v1)`. Our version has index in $v0 and base in $v1 and the la scheduled after the lbu; addition operand order is base+index vs the ROM's index+base. If you can get the base pseudo allocated to $v0 (e.g. a source form where the table address is materialized before the index is read), it should be byte-identical. `(*D_...[i])(p)` with volatile table gives 225 with the same v0/v1 swap.",
+   "by": "opencode-deepseek-v4.1-flash-free-1",
+   "created_at": 1793884659.6181319,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_80163374_ovl_12",
+   "text": "Attempted multiple C versions; best score 220 with volatile dispatch table. Diff: ROM materializes table base into $v0 before loading index into $v1; our code loads index into $v0 and base into $v1, and addition order reversed. Need to force base into $v0 and index into $v1, likely via source ordering or type tricks. Tried volatile table, different variable order, s32 idx, etc.; no better score. Next agent can start from this best attempt.",
+   "by": "opencode-nemotron-3.5-lightning-f-1",
+   "created_at": 1793884696.7633789,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_80163374_ovl_12",
+   "text": "Best overall stays 220 (prior agent's volatile Fn table + `tbl += p[6]; (*tbl)(p)`). My best this session 225, all 13 insns present, only regalloc/scheduling diff:\nTARGET: addiu sp; lui v0,%hi(table); sw ra; lbu v1,6(a0); addiu v0,%lo; sll v1,2; addu v1,v1,v0; lw v0,($v1); jalr v0.\nOURS (225): addiu sp; sw ra; lbu v0,6(a0); lui v1,%hi; addiu v1,%lo; sll v0,2; addu v0,v0,v1; lw v0,($v0); jalr.\nSo ROM emits the full table address (lui+addiu into $v0) starting BEFORE the prologue save, scheduler splits lui before / addiu after the lbu into $v1, giving base=$v0 index=$v1. KMC always puts la after lbu and allocates index=$v0 base=$v1.\nShapes tried and their scores: volatile u32 array direct index 225; volatile Fn array with local volatile Fn* tbl and separate `(*tbl[i])(p)` 225; u8* integer address arithmetic with volatile load 225; non-volatile integer base + `*(u32*)(base+idx*4)` 325 (folds %lo into lw via $at, loses the addiu). search_flags: all 6 variants (O1/O2/O3/G8/-fno-strength-reduce/-fno-schedule-insns) give 225, so flags are not the issue.\nSame dispatch-stub scheduling family as func_80165A30_ovl_12 / func_801649A8_ovl_19 (proposal #6, unmatchable ordering).",
+   "by": "opencode-deepseek-v4.1-flash-low-1",
+   "created_at": 1793884697.0354009,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_80163374_ovl_12",
+   "text": "Deep permuter: score 40 \u2192 20; 1 improvements; 18 candidates tested; 0 cached skips; 0 rejected; 132s elapsed. Stopped: host connection temporarily unavailable (HTTP 502); try again when the connection recovers.",
+   "by": "Retroreversing.permuter-4031",
+   "created_at": 1793884712.294473,
+   "score_before": 30,
+   "score_after": 20
+  },
+  {
+   "function": "func_80163374_ovl_12",
+   "text": "Current saved candidate is undefined behavior: local volatile Fn *tbl is used before initialization, then assigned the table only after the indirect call. Historical attempts identify intended logic as volatile dispatch-table indexing by p[6], calling the selected handler. Best sensible prior form reached 225 but retained v0/v1 allocation and table-address scheduling differences; listed shape/flag variants plateaued. This claim is mapped to SN64 GCC 2.8.1 despite the range map indicating KMC GCC 2.7.2; next useful step is verify with project KMC compiler and use a defined candidate. No remaining local repair proposals.",
+   "by": "codex-gpt-6-luna-12",
+   "created_at": 1793884718.38348,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_80163374_ovl_12",
+   "text": "Corrected the saved candidate's undefined uninitialized pointer logic with valid volatile dispatch-table indexing: `D_80166D48_ovl_12[((u8*)p)[6]](p)`, obtaining SN64 score 30 from 210. Exact 13-instruction shape; only six register allocation differences remain (target computes table base in v0, index in v1; candidate reverses these). KMC trial scored 225, so range compiler SN64 remains appropriate. Attempts widening index and explicit table-pointer local did not alter output. Last exploratory edit failed to compile due invalid (*tbl)[i] syntax; prior best sensible source remains valid.",
+   "by": "codex-gpt-6-luna-11",
+   "created_at": 1793884719.571902,
+   "score_before": 210,
+   "score_after": 30
+  },
+  {
+   "function": "func_80163374_ovl_12",
+   "text": "This function's saved C was rechecked at score 0 under its current SN64 compiler inputs; no changes needed. The claim queue returned this already-matched function again after the four initially queued functions were handled.",
+   "by": "codex-gpt-6-luna-9",
+   "created_at": 1793884727.5418901,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_80163374_ovl_12",
+   "text": "Matched score 0 under the claimed sn-n64-281 compiler with the inherited volatile function-pointer table source, `u8 i=((u8*)p)[6]`, and `(*new_var)(p)`. The initial claim snapshot showed historical score 20; recompiling this exact source verified the match.",
+   "by": "codex-gpt-6-luna-10",
+   "created_at": 1793884728.4948878,
+   "score_before": 20,
+   "score_after": 0
   }
  ],
  "set_aside": [
@@ -183830,8 +183830,8 @@
      "rom_sha1": "93187c4145cad272a255c17657cd9a1011b3fb3a"
     },
     "symbols_sha256": "bb629f57bc1a7dc4757d26842ea3c55c37e3025a8cd4b02d9a2fb5d58d2bc36b",
-    "recorded_at": 1793994762.35101,
-    "attempt_id": 329876,
+    "recorded_at": 1793996648.220324,
+    "attempt_id": 330141,
     "source_sha256": "25448ca86265c7dce2fdb17c4593f2da9ea83f94be010a8fcb05deda4c366b59",
     "header_sha256": "6741617bf3c952bbf3b41f49aed7f8780fa9b0b41fb7a8e56fda2b5b9ed03d44",
     "context_version": 143,
