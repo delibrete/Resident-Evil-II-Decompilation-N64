@@ -1,7 +1,7 @@
 {
  "format": 1,
- "saved_at": 1794002379.2590349,
- "revision": 32858,
+ "saved_at": 1794002421.747083,
+ "revision": 32860,
  "title": "Resident Evil II",
  "platform": "n64",
  "game": {
@@ -7093,7 +7093,8 @@
     "-mcpu=VR4300",
     "-mhard-float",
     "-mfp64"
-   ]
+   ],
+   "timeout": 20
   },
   "69232136:2148942616": {
    "vram": 2148942616,
@@ -17780,8 +17781,8 @@
   },
   "func_80163D70_ovl_35": {
    "vram": 2148941168,
-   "best_score": 2800,
-   "best_by": "autopilot"
+   "matched_by": "Retroreversing.saved-progress",
+   "readable": false
   },
   "func_80163D88_ovl_13": {
    "vram": 2148941192,
@@ -58775,14 +58776,6 @@
    "score_after": 20
   },
   {
-   "function": "func_80163D70_ovl_35",
-   "text": "Three distinct compiles exhausted budget; best score 335 (88%). Call behavior and trailing helper call are modeled, remaining discrepancy is dispatch table relocation plus prologue save ordering (target saves s2 before ra), and one missing instruction.",
-   "by": "codex-gpt-6-luna-1",
-   "created_at": 1793884655.872134,
-   "score_before": 20,
-   "score_after": 20
-  },
-  {
    "function": "func_80163D24_ovl_35",
    "text": "Three distinct compiles; current score 200 versus prior autopilot best 5. Initial autopilot form gave closest score; subsequent branch restructuring increased mismatch. Last attempt matches through store, but emits two zero argument register moves before func_80089D34. Keep prior best attempt.",
    "by": "codex-gpt-6-luna-1",
@@ -82959,14 +82952,6 @@
    "score_after": 170
   },
   {
-   "function": "func_80163D70_ovl_35",
-   "text": "Best 60 (saved). Function is correct and 28/28 insns: `typedef void(*Fn)(void*,void*,void*); extern volatile Fn D_801666A4_ovl_35[]; void f(u8*a,void*b,void*c){ D_801666A4_ovl_35[a[6]](a,b,c); func_80089D34_ovl_01(a,b,c,0x200); func_80033678(a); }`. The `extern volatile Fn[]` (proposal #43) gives the ROM's split table base `lui v1,%hi(D); addiu v1,v1,%lo(D); sll; addu; lw`. Only remaining diff is scheduling: target has `lui v1,%hi(D)` two instructions earlier, between `sw $s2,0x18($sp)` and `sw $ra,0x1c($sp)`, with `lbu v0,6($s0)` after; ours emits `sw $ra; lbu; lui`. Everything else identical. Tried: direct `D[((u8*)a)[6]](...)`; local `volatile Fn *tbl = D`; local `u8 state` then index; local `Fn fn = D[a[6]]` then call. All 60. flags: search_flags gives 60 for O2/O3/G8/fno-strength-reduce/fno-schedule-insns, so flags aren't it. This is the same %hi placement/pre-reload-scheduler gap noted in proposal #50/#46; needs the original source form that makes GCC hoist the lui before the ra save.",
-   "by": "opencode-deepseek-v4.1-flash-low-1",
-   "created_at": 1793884700.122553,
-   "score_before": 20,
-   "score_after": 20
-  },
-  {
    "function": "func_80165F00_ovl_13",
    "text": "Matched first try after one setup fix: the ROM calls `func_80065400_ovl_01+0x258` (0x80065658), an argument-less helper that was merged into func_80065400_ovl_01. Did `split_function(func_80065400_ovl_01, at=0x80065658, new_name=func_80065658_ovl_01)` (now 150+25 insns); call it as `s32 func_80065658_ovl_01(void)`. Body: if (*(u16*)(p+0x2C6) & 0x10) { func_80166214_ovl_13(p,0x15E); v = func_80033634_ovl_01() & 0x9D; *(s8*)(p+0x2BC)=v; *(s8*)(p+0x2BB)=func_80065658_ovl_01(); *(s8*)(p+0x2B8)=0x1E; func_80165BE8_ovl_13(p,4); *(u16*)(p+0x2C6) &= 0xFFA7; } \u2014 the stores land in the following jal delay slots exactly as in the ROM.",
    "by": "opencode-deepseek-v4.1-flash-low-1",
@@ -83349,14 +83334,6 @@
    "created_at": 1793884700.5317261,
    "score_before": 225,
    "score_after": 225
-  },
-  {
-   "function": "func_80163D70_ovl_35",
-   "text": "Score 60 persistent. Diff: target places `lui $v1,%hi(D_801666A4_ovl_33+0x20)` between `sw $s2,0x18($sp)` and `sw $ra,0x1c($sp)`, before `lbu $v0,6($s0)`. All C attempts emit compiler default order (sw ra then lbu then lui) giving 2 reordered insns and score 60. Function indirect-calls through u8 offset[6] from arg, then calls func_80089D34_ovl_01 with 0x200, then func_80033678. Same %hi placement/pre-reload-scheduler gap as func_80162364_ovl_35; no plain C can force %hi before ra save with KMC gcc -O2. See proposals #46/#50 for split-address tricks.",
-   "by": "opencode-nemotron-3.5-lightning-f-1",
-   "created_at": 1793884700.539286,
-   "score_before": 20,
-   "score_after": 20
   },
   {
    "function": "func_80164D8C_ovl_26",
@@ -117319,14 +117296,6 @@
    "score_after": 3426
   },
   {
-   "function": "func_80163D70_ovl_35",
-   "text": "Deep permuter: score 60 \u2192 60; 0 improvements; 6 candidates tested; 1 cached skips; 0 rejected; 61s elapsed. Budget rotation: soft allowance reached without recent progress.",
-   "by": "Retroreversing.permuter-5380",
-   "created_at": 1793956087.8934588,
-   "score_before": 60,
-   "score_after": 60
-  },
-  {
    "function": "func_801737CC_overlay_045",
    "text": "Deep permuter: score 1734 \u2192 1734; 0 improvements; 5 candidates tested; 22 cached skips; 0 rejected; 64s elapsed. Budget rotation: soft allowance reached without recent progress.",
    "by": "Retroreversing.permuter-5987",
@@ -132333,6 +132302,38 @@
    "created_at": 1793884700.523853,
    "score_before": 210,
    "score_after": 210
+  },
+  {
+   "function": "func_80163D70_ovl_35",
+   "text": "Three distinct compiles exhausted budget; best score 335 (88%). Call behavior and trailing helper call are modeled, remaining discrepancy is dispatch table relocation plus prologue save ordering (target saves s2 before ra), and one missing instruction.",
+   "by": "codex-gpt-6-luna-1",
+   "created_at": 1793884655.872134,
+   "score_before": 20,
+   "score_after": 20
+  },
+  {
+   "function": "func_80163D70_ovl_35",
+   "text": "Best 60 (saved). Function is correct and 28/28 insns: `typedef void(*Fn)(void*,void*,void*); extern volatile Fn D_801666A4_ovl_35[]; void f(u8*a,void*b,void*c){ D_801666A4_ovl_35[a[6]](a,b,c); func_80089D34_ovl_01(a,b,c,0x200); func_80033678(a); }`. The `extern volatile Fn[]` (proposal #43) gives the ROM's split table base `lui v1,%hi(D); addiu v1,v1,%lo(D); sll; addu; lw`. Only remaining diff is scheduling: target has `lui v1,%hi(D)` two instructions earlier, between `sw $s2,0x18($sp)` and `sw $ra,0x1c($sp)`, with `lbu v0,6($s0)` after; ours emits `sw $ra; lbu; lui`. Everything else identical. Tried: direct `D[((u8*)a)[6]](...)`; local `volatile Fn *tbl = D`; local `u8 state` then index; local `Fn fn = D[a[6]]` then call. All 60. flags: search_flags gives 60 for O2/O3/G8/fno-strength-reduce/fno-schedule-insns, so flags aren't it. This is the same %hi placement/pre-reload-scheduler gap noted in proposal #50/#46; needs the original source form that makes GCC hoist the lui before the ra save.",
+   "by": "opencode-deepseek-v4.1-flash-low-1",
+   "created_at": 1793884700.122553,
+   "score_before": 20,
+   "score_after": 20
+  },
+  {
+   "function": "func_80163D70_ovl_35",
+   "text": "Score 60 persistent. Diff: target places `lui $v1,%hi(D_801666A4_ovl_33+0x20)` between `sw $s2,0x18($sp)` and `sw $ra,0x1c($sp)`, before `lbu $v0,6($s0)`. All C attempts emit compiler default order (sw ra then lbu then lui) giving 2 reordered insns and score 60. Function indirect-calls through u8 offset[6] from arg, then calls func_80089D34_ovl_01 with 0x200, then func_80033678. Same %hi placement/pre-reload-scheduler gap as func_80162364_ovl_35; no plain C can force %hi before ra save with KMC gcc -O2. See proposals #46/#50 for split-address tricks.",
+   "by": "opencode-nemotron-3.5-lightning-f-1",
+   "created_at": 1793884700.539286,
+   "score_before": 20,
+   "score_after": 20
+  },
+  {
+   "function": "func_80163D70_ovl_35",
+   "text": "Deep permuter: score 60 \u2192 60; 0 improvements; 6 candidates tested; 1 cached skips; 0 rejected; 61s elapsed. Budget rotation: soft allowance reached without recent progress.",
+   "by": "Retroreversing.permuter-5380",
+   "created_at": 1793956087.8934588,
+   "score_before": 60,
+   "score_after": 60
   }
  ],
  "set_aside": [
@@ -189943,11 +189944,11 @@
      "rom_sha1": "93187c4145cad272a255c17657cd9a1011b3fb3a"
     },
     "symbols_sha256": "bb629f57bc1a7dc4757d26842ea3c55c37e3025a8cd4b02d9a2fb5d58d2bc36b",
-    "recorded_at": 1793988531.092173,
-    "attempt_id": 325780,
+    "recorded_at": 1794002420.917332,
+    "attempt_id": 331295,
     "source_sha256": "e255c15e58c574dc832be1d0ad559dd69e4bf92369b52f4e66e3941504fcb125",
     "header_sha256": "6741617bf3c952bbf3b41f49aed7f8780fa9b0b41fb7a8e56fda2b5b9ed03d44",
-    "context_version": 682,
+    "context_version": 803,
     "compiler": {
      "toolchain": "sn-n64-281",
      "flags": [
