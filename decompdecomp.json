@@ -6049,7 +6049,8 @@
     "-mcpu=VR4300",
     "-mhard-float",
     "-mfp64"
-   ]
+   ],
+   "timeout": 20
   },
   "67174464:2147642048": {
    "vram": 2147642048,
@@ -57511,14 +57512,6 @@
    "score_after": 840
   },
   {
-   "function": "func_80026948_ovl_01",
-   "text": "Four no-better compiles; best score 10. Simple global assignment generates lui at / sw at; target uses v0, likely requires a slightly different declaration or pointer expression.",
-   "by": "codex-gpt-6-luna-1",
-   "created_at": 1793884653.437957,
-   "score_before": 10,
-   "score_after": 10
-  },
-  {
    "function": "func_80026954_ovl_01",
    "text": "Four no-better compiles, best 2680 from autopilot. Float and ABI behavior still differs substantially; this remains hard.",
    "by": "codex-gpt-6-luna-1",
@@ -60669,14 +60662,6 @@
    "created_at": 1793884660.104074,
    "score_before": 20,
    "score_after": 20
-  },
-  {
-   "function": "func_80026948_ovl_01",
-   "text": "Best 10/3 insns (96.6%): only the address register differs. Target: lui $v0,%hi(D_800E90AC); jr $ra; sw $a0,%lo(D_800E90AC)($v0). Any C form compiles to the assembler-macro form lui $at,%hi; ... %lo($at) ($at), so score stays 10. Tried: direct assignment, s32* local deref, register pointer, static/tentative local definition, volatile object, volatile-cast store (that one gives lui v0; addiu v0; sw 0(v0) = extra addiu, 110). Flags: -msplit-addresses/-mno-split-addresses invalid in cc1, -mhalf-pic unsupported, -mno-abicalls no change; IDO 7.1/5.3 also use $at. The ROM form needs GCC to emit MEM(LO_SUM(high, sym)) explicitly (2 insns, general reg). If someone finds the construct/compiler setting, this is an instant match.",
-   "by": "opencode-deepseek-v4.1-flash-free-1",
-   "created_at": 1793884660.11075,
-   "score_before": 10,
-   "score_after": 10
   },
   {
    "function": "func_800270E0_ovl_01",
@@ -73279,14 +73264,6 @@
    "score_after": 160
   },
   {
-   "function": "func_80026948_ovl_01",
-   "text": "Score 10; only register allocation difference: target uses $v0 for %hi base of absolute store, GCC uses $at. This matches the documented split-address compiler-build defect (open setup suggestion). No C construct can change the scratch register chosen by KMC GCC 2.7.2 -O2 -mips3 -G0 for this 3\u2011instruction leaf.",
-   "by": "opencode-nemotron-3.5-lightning-f-1",
-   "created_at": 1793884684.0100539,
-   "score_before": 10,
-   "score_after": 10
-  },
-  {
    "function": "func_80028420_ovl_01",
    "text": "Three compile attempts have reached move-on. Best C kept. Main remaining differences: 28420 indirect call loads target object field rather than treating field as function itself; CE44/CEC0 direct base global causes compiler addressing/reordering mismatch; CE70 table global/member layout is incorrect in draft.",
    "by": "codex-gpt-6-luna-1",
@@ -74453,14 +74430,6 @@
    "created_at": 1793884686.303246,
    "score_before": 385,
    "score_after": 385
-  },
-  {
-   "function": "func_80026948_ovl_01",
-   "text": "Please release: bare-symbol store `D_800E90AC_ovl_01 = arg0;`, score 10, only difference is the ROM's `lui $v0,%hi; sw $a0,%lo($v0)` vs this build's `lui $at,%hi; sw $a0,%lo($at)`. Documented split-address ceiling (#23), same as func_80004FA0/80004C14/80026AC0. Best saved 10.",
-   "by": "opencode-deepseek-v4.1-flash-low-1",
-   "created_at": 1793884686.31037,
-   "score_before": 10,
-   "score_after": 10
   },
   {
    "function": "func_80163E90_ovl_12",
@@ -83981,14 +83950,6 @@
    "created_at": 1793884700.988698,
    "score_before": 0,
    "score_after": 0
-  },
-  {
-   "function": "func_80026948_ovl_01",
-   "text": "Re-releasing func_80026948_ovl_01: cannot get closer than score 10 because the residual diff is pure register allocation ($at vs ROM's $v0 for the %hi base of `sw $a0,%lo(D_800E90AC)($v0)`), a compiler codegen choice no C construct can change. Exhausted: baseline C (direct s32 store, score 10); earlier-agent shapes (s32* local, register pointer, static/tentative local, volatile object, volatile-cast store \u2014 all 10 or worse); search_flags all 6 variants (all 10); try_compiler IDO 7.1 (10, $at) and IDO 5.3 (10, $at). Same open setup split-address defect as func_80004FA0: provided KMC GCC uses assembler scratch $at where the ROM build kept %hi in general reg $v0. Not solvable from C in this toolchain; recommend user reviews compiler/flags. Best attempt (score 10) saved. extern s32 D_800E90AC_ovl_01; suffices \u2014 no new context.h entries needed.",
-   "by": "opencode-nemotron-3.5-super-vl-fr-1",
-   "created_at": 1793884701.0081751,
-   "score_before": 10,
-   "score_after": 10
   },
   {
    "function": "func_801627D8_ovl_35",
@@ -93959,14 +93920,6 @@
    "score_after": null
   },
   {
-   "function": "func_80026948_ovl_01",
-   "text": "Best remains score 10; direct global store emits correct 3 instructions but compiler uses $at instead of target $v0 for lui/sw base. Volatile cast added an unwanted addiu, then reverted. Trying global volatile qualifier produced same $at allocation. No local repairs were available. Likely compiler register-allocation quirk; no semantics left to adjust.",
-   "by": "codex-gpt-6-luna-10",
-   "created_at": 1793884717.29925,
-   "score_before": 10,
-   "score_after": 10
-  },
-  {
    "function": "func_80164664_overlay_012",
    "text": "Three candidate forms tested around dispatch setup: baseline expression, explicit index local, and explicit handler local all rechecked at score 60 with identical 18 instructions; remaining mismatch is solely scheduling the table-address lui before swra/lbu (target lui at row 3, candidate later at row 6). A pointer-to-volatile local worsened to score 420 from extra stack storage, so avoid that. Best source retained is handler local at revision 201def6929bd7593d8a7.",
    "by": "codex-gpt-6-luna-12",
@@ -98447,14 +98400,6 @@
    "score_after": 1178
   },
   {
-   "function": "func_80026948_ovl_01",
-   "text": "Deep permuter: score 10 \u2192 10; 0 improvements; 6 candidates tested; 2 cached skips; 0 rejected; 65s elapsed. Budget rotation: soft allowance reached without recent progress.",
-   "by": "Retroreversing.permuter-2392",
-   "created_at": 1793956053.04482,
-   "score_before": 10,
-   "score_after": 10
-  },
-  {
    "function": "func_80162E04_ovl_13",
    "text": "Deep permuter: score 1208 \u2192 1150; 3 improvements; 100 candidates tested; 0 cached skips; 0 rejected; 469s elapsed. Variant limit reached.",
    "by": "Retroreversing.permuter-4125",
@@ -101061,14 +101006,6 @@
    "created_at": 1793958309.428222,
    "score_before": 580,
    "score_after": 580
-  },
-  {
-   "function": "func_80026948_ovl_01",
-   "text": "The store's only mismatch is relocation base register: target uses lui v0 and sw a0,lo(global)(v0); GCC 2.7.2 emits lui at and sw a0,lo(global)(at). Explicit pointer local, volatile global, and cached dead-pointer-clear repair all produce identical instructions/score 10. Potential compiler/address-staging behavior; best source is direct global assignment.",
-   "by": "codex-gpt-6-luna-11",
-   "created_at": 1793884730.378033,
-   "score_before": 10,
-   "score_after": 10
   },
   {
    "function": "func_801651E0_ovl_17",
@@ -132189,6 +132126,70 @@
    "created_at": 1793995617.4414852,
    "score_before": 10,
    "score_after": 0
+  },
+  {
+   "function": "func_80026948_ovl_01",
+   "text": "Four no-better compiles; best score 10. Simple global assignment generates lui at / sw at; target uses v0, likely requires a slightly different declaration or pointer expression.",
+   "by": "codex-gpt-6-luna-1",
+   "created_at": 1793884653.437957,
+   "score_before": 10,
+   "score_after": 10
+  },
+  {
+   "function": "func_80026948_ovl_01",
+   "text": "Best 10/3 insns (96.6%): only the address register differs. Target: lui $v0,%hi(D_800E90AC); jr $ra; sw $a0,%lo(D_800E90AC)($v0). Any C form compiles to the assembler-macro form lui $at,%hi; ... %lo($at) ($at), so score stays 10. Tried: direct assignment, s32* local deref, register pointer, static/tentative local definition, volatile object, volatile-cast store (that one gives lui v0; addiu v0; sw 0(v0) = extra addiu, 110). Flags: -msplit-addresses/-mno-split-addresses invalid in cc1, -mhalf-pic unsupported, -mno-abicalls no change; IDO 7.1/5.3 also use $at. The ROM form needs GCC to emit MEM(LO_SUM(high, sym)) explicitly (2 insns, general reg). If someone finds the construct/compiler setting, this is an instant match.",
+   "by": "opencode-deepseek-v4.1-flash-free-1",
+   "created_at": 1793884660.11075,
+   "score_before": 10,
+   "score_after": 10
+  },
+  {
+   "function": "func_80026948_ovl_01",
+   "text": "Score 10; only register allocation difference: target uses $v0 for %hi base of absolute store, GCC uses $at. This matches the documented split-address compiler-build defect (open setup suggestion). No C construct can change the scratch register chosen by KMC GCC 2.7.2 -O2 -mips3 -G0 for this 3\u2011instruction leaf.",
+   "by": "opencode-nemotron-3.5-lightning-f-1",
+   "created_at": 1793884684.0100539,
+   "score_before": 10,
+   "score_after": 10
+  },
+  {
+   "function": "func_80026948_ovl_01",
+   "text": "Please release: bare-symbol store `D_800E90AC_ovl_01 = arg0;`, score 10, only difference is the ROM's `lui $v0,%hi; sw $a0,%lo($v0)` vs this build's `lui $at,%hi; sw $a0,%lo($at)`. Documented split-address ceiling (#23), same as func_80004FA0/80004C14/80026AC0. Best saved 10.",
+   "by": "opencode-deepseek-v4.1-flash-low-1",
+   "created_at": 1793884686.31037,
+   "score_before": 10,
+   "score_after": 10
+  },
+  {
+   "function": "func_80026948_ovl_01",
+   "text": "Re-releasing func_80026948_ovl_01: cannot get closer than score 10 because the residual diff is pure register allocation ($at vs ROM's $v0 for the %hi base of `sw $a0,%lo(D_800E90AC)($v0)`), a compiler codegen choice no C construct can change. Exhausted: baseline C (direct s32 store, score 10); earlier-agent shapes (s32* local, register pointer, static/tentative local, volatile object, volatile-cast store \u2014 all 10 or worse); search_flags all 6 variants (all 10); try_compiler IDO 7.1 (10, $at) and IDO 5.3 (10, $at). Same open setup split-address defect as func_80004FA0: provided KMC GCC uses assembler scratch $at where the ROM build kept %hi in general reg $v0. Not solvable from C in this toolchain; recommend user reviews compiler/flags. Best attempt (score 10) saved. extern s32 D_800E90AC_ovl_01; suffices \u2014 no new context.h entries needed.",
+   "by": "opencode-nemotron-3.5-super-vl-fr-1",
+   "created_at": 1793884701.0081751,
+   "score_before": 10,
+   "score_after": 10
+  },
+  {
+   "function": "func_80026948_ovl_01",
+   "text": "Best remains score 10; direct global store emits correct 3 instructions but compiler uses $at instead of target $v0 for lui/sw base. Volatile cast added an unwanted addiu, then reverted. Trying global volatile qualifier produced same $at allocation. No local repairs were available. Likely compiler register-allocation quirk; no semantics left to adjust.",
+   "by": "codex-gpt-6-luna-10",
+   "created_at": 1793884717.29925,
+   "score_before": 10,
+   "score_after": 10
+  },
+  {
+   "function": "func_80026948_ovl_01",
+   "text": "Deep permuter: score 10 \u2192 10; 0 improvements; 6 candidates tested; 2 cached skips; 0 rejected; 65s elapsed. Budget rotation: soft allowance reached without recent progress.",
+   "by": "Retroreversing.permuter-2392",
+   "created_at": 1793956053.04482,
+   "score_before": 10,
+   "score_after": 10
+  },
+  {
+   "function": "func_80026948_ovl_01",
+   "text": "The store's only mismatch is relocation base register: target uses lui v0 and sw a0,lo(global)(v0); GCC 2.7.2 emits lui at and sw a0,lo(global)(at). Explicit pointer local, volatile global, and cached dead-pointer-clear repair all produce identical instructions/score 10. Potential compiler/address-staging behavior; best source is direct global assignment.",
+   "by": "codex-gpt-6-luna-11",
+   "created_at": 1793884730.378033,
+   "score_before": 10,
+   "score_after": 10
   }
  ],
  "set_aside": [
@@ -146735,8 +146736,8 @@
      "rom_sha1": "93187c4145cad272a255c17657cd9a1011b3fb3a"
     },
     "symbols_sha256": "bb629f57bc1a7dc4757d26842ea3c55c37e3025a8cd4b02d9a2fb5d58d2bc36b",
-    "recorded_at": 1793976963.084492,
-    "attempt_id": 323317,
+    "recorded_at": 1793995964.0947149,
+    "attempt_id": 330063,
     "source_sha256": "2ceff60b57740cf14ceea40d9e9e9dbd2f9f9ae81379ca67200f1349955d64e9",
     "header_sha256": "6741617bf3c952bbf3b41f49aed7f8780fa9b0b41fb7a8e56fda2b5b9ed03d44",
     "context_version": 143,
