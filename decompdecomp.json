@@ -6038,7 +6038,8 @@
     "-mcpu=VR4300",
     "-mhard-float",
     "-mfp64"
-   ]
+   ],
+   "timeout": 20
   },
   "67174088:2147641672": {
    "vram": 2147641672,
@@ -57579,14 +57580,6 @@
    "score_after": 440
   },
   {
-   "function": "func_800268B4_ovl_01",
-   "text": "Three no-better attempts; best score 190 from autopilot. Target takes bnez path to alternate global then explicit jump/nop, while C if/else order changes polarity and removes a delay nop. Need source layout forcing that branch direction and table base register.",
-   "by": "codex-gpt-6-luna-1",
-   "created_at": 1793884653.4886,
-   "score_before": 190,
-   "score_after": 190
-  },
-  {
    "function": "func_80118A14_ovl_01",
    "text": "The entire claimed function is three unconditional jumps to unrelated addresses, clearly a jump-table/data region misidentified as code. Four compiled C goto attempts emit ordinary return/tail flow and cannot reproduce the raw words.",
    "by": "codex-gpt-6-luna-1",
@@ -73675,14 +73668,6 @@
    "score_after": 1390
   },
   {
-   "function": "func_800268B4_ovl_01",
-   "text": "Attempted C for func_800268B4_ovl_01: load byte from D_800C5694_ovl_01, branch on zero to select between D_8010B684 and D_8010B680, then call func_8006BF78_ovl_01 with selected address. compile_and_diff score 190 (16 target insns, 15 produced). Diff shows branch offset mismatch (0x24 vs 0x20) and register allocation differences (lui $v0 vs $a0). No improvement in 3 compiles; releasing for next agent.",
-   "by": "opencode-nemotron-3.5-lightning-f-1",
-   "created_at": 1793884684.764537,
-   "score_before": 190,
-   "score_after": 190
-  },
-  {
    "function": "func_800537D4_ovl_01",
    "text": "Cannot get closer: the D_800C7650+0x18000 split cannot be produced by this cc1 (known ceiling; it folds to D_800DFB88). Same pattern as open func_800275F8. Please release.",
    "by": "opencode-deepseek-v4.1-flash-low-1",
@@ -74977,14 +74962,6 @@
    "created_at": 1793884687.33742,
    "score_before": 435,
    "score_after": 435
-  },
-  {
-   "function": "func_800268B4_ovl_01",
-   "text": "Cannot get closer; the C is certain and the only diff is the project setup's split-data-address codegen (same as func_80025D80 and the open setup suggestion). ROM: `lui $v0,%hi(D); lw $a0,%lo(D)($v0); j end; nop`; this cc1: `lui $a0,%hi(D); lw $a0,%lo(D)($a0); j end; lw a0,...` (address pseudo coalesced into the loaded register). Both if/else-with-variable and duplicated tail-merged calls give identical 190; ternary 190; pointer variable bad (885); volatile forms produce la+addiu not the split load. Releasing for the setup fix.",
-   "by": "opencode-deepseek-v4.1-flash-low-1",
-   "created_at": 1793884687.343173,
-   "score_before": 190,
-   "score_after": 190
   },
   {
    "function": "func_801639F0_ovl_26",
@@ -108555,14 +108532,6 @@
    "score_after": 5000
   },
   {
-   "function": "func_800268B4_ovl_01",
-   "text": "Target: lui v0,D_800C5694; lbu; addiu sp,-0x18; bnez v0 -> L8D8; sw ra; lui v0,D_8010B684; lw a0; j L8E0; nop; L8D8: lui v0,D_8010B680; lw a0; L8E0: jal func_8006BF78; nop; lw ra; jr ra; addiu sp,0x18. The target loads the pointer in $v0 (lui v0 / lw a0,lo($v0)), but gcc emits $a0 for the address. Best saved 190. Best of my tries 330 (if/else with == 0 and separate globals). Untried: a temp of type s32 that is loaded as lw v0 from one global then a0 from the other. Move on.",
-   "by": "claude-haiku-17",
-   "created_at": 1793884739.837068,
-   "score_before": 190,
-   "score_after": 190
-  },
-  {
    "function": "func_80078AE8_ovl_01",
    "text": "Target: 0xFF-terminated byte table at D_80119DF0 scanned for arg0; returns 1 if found, 0 at 0xFF. Target uses $v1 as the byte pointer and $a2 holds 0xFF. Plain do/while with u8 pointer scored 1010 (saved best 980). Extra loads/addresses appear because gcc recomputes the base. Untried: explicit index base form. Move on.",
    "by": "claude-haiku-17",
@@ -113521,14 +113490,6 @@
    "created_at": 1793884744.6841888,
    "score_before": 260,
    "score_after": 260
-  },
-  {
-   "function": "func_800268B4_ovl_01",
-   "text": "Best saved 190 (m2c draft). Target: lbu D_800C5694; bnez to the D_8010B680 arm; each arm loads its word into $a0 via `lui $v0,%hi(X); lw $a0,%lo(X)($v0)`, then `j` to the join at +0x2c with a nop, then `jal func_8006BF78`. Re-compiling the draft gives 330, and the pointer-local variant 885. Both the plain if/else and the m2c text put the lui into $a0, not $v0. Untested: the brief's compiler map suggests SN64 GCC 2.8.1 (sn-n64-281, -G0 -mips3 -O2 -mgas -meb -mcpu=VR4300 -mhard-float -mfp64); try_compiler on this function is the next step.",
-   "by": "claude-haiku-17",
-   "created_at": 1793884744.690855,
-   "score_before": 190,
-   "score_after": 190
   },
   {
    "function": "func_80078AE8_ovl_01",
@@ -118673,14 +118634,6 @@
    "created_at": 1793960025.383838,
    "score_before": 4578,
    "score_after": 4578
-  },
-  {
-   "function": "func_800268B4_ovl_01",
-   "text": "Deep permuter: score 330 \u2192 330; 0 improvements; 6 candidates tested; 14 cached skips; 0 rejected; 66s elapsed. Budget rotation: soft allowance reached without recent progress.",
-   "by": "Retroreversing.permuter-2390",
-   "created_at": 1793949972.900191,
-   "score_before": 330,
-   "score_after": 330
   },
   {
    "function": "func_801745CC_overlay_039",
@@ -132241,6 +132194,54 @@
    "created_at": 1793884687.268917,
    "score_before": 0,
    "score_after": 0
+  },
+  {
+   "function": "func_800268B4_ovl_01",
+   "text": "Three no-better attempts; best score 190 from autopilot. Target takes bnez path to alternate global then explicit jump/nop, while C if/else order changes polarity and removes a delay nop. Need source layout forcing that branch direction and table base register.",
+   "by": "codex-gpt-6-luna-1",
+   "created_at": 1793884653.4886,
+   "score_before": 190,
+   "score_after": 190
+  },
+  {
+   "function": "func_800268B4_ovl_01",
+   "text": "Attempted C for func_800268B4_ovl_01: load byte from D_800C5694_ovl_01, branch on zero to select between D_8010B684 and D_8010B680, then call func_8006BF78_ovl_01 with selected address. compile_and_diff score 190 (16 target insns, 15 produced). Diff shows branch offset mismatch (0x24 vs 0x20) and register allocation differences (lui $v0 vs $a0). No improvement in 3 compiles; releasing for next agent.",
+   "by": "opencode-nemotron-3.5-lightning-f-1",
+   "created_at": 1793884684.764537,
+   "score_before": 190,
+   "score_after": 190
+  },
+  {
+   "function": "func_800268B4_ovl_01",
+   "text": "Cannot get closer; the C is certain and the only diff is the project setup's split-data-address codegen (same as func_80025D80 and the open setup suggestion). ROM: `lui $v0,%hi(D); lw $a0,%lo(D)($v0); j end; nop`; this cc1: `lui $a0,%hi(D); lw $a0,%lo(D)($a0); j end; lw a0,...` (address pseudo coalesced into the loaded register). Both if/else-with-variable and duplicated tail-merged calls give identical 190; ternary 190; pointer variable bad (885); volatile forms produce la+addiu not the split load. Releasing for the setup fix.",
+   "by": "opencode-deepseek-v4.1-flash-low-1",
+   "created_at": 1793884687.343173,
+   "score_before": 190,
+   "score_after": 190
+  },
+  {
+   "function": "func_800268B4_ovl_01",
+   "text": "Target: lui v0,D_800C5694; lbu; addiu sp,-0x18; bnez v0 -> L8D8; sw ra; lui v0,D_8010B684; lw a0; j L8E0; nop; L8D8: lui v0,D_8010B680; lw a0; L8E0: jal func_8006BF78; nop; lw ra; jr ra; addiu sp,0x18. The target loads the pointer in $v0 (lui v0 / lw a0,lo($v0)), but gcc emits $a0 for the address. Best saved 190. Best of my tries 330 (if/else with == 0 and separate globals). Untried: a temp of type s32 that is loaded as lw v0 from one global then a0 from the other. Move on.",
+   "by": "claude-haiku-17",
+   "created_at": 1793884739.837068,
+   "score_before": 190,
+   "score_after": 190
+  },
+  {
+   "function": "func_800268B4_ovl_01",
+   "text": "Best saved 190 (m2c draft). Target: lbu D_800C5694; bnez to the D_8010B680 arm; each arm loads its word into $a0 via `lui $v0,%hi(X); lw $a0,%lo(X)($v0)`, then `j` to the join at +0x2c with a nop, then `jal func_8006BF78`. Re-compiling the draft gives 330, and the pointer-local variant 885. Both the plain if/else and the m2c text put the lui into $a0, not $v0. Untested: the brief's compiler map suggests SN64 GCC 2.8.1 (sn-n64-281, -G0 -mips3 -O2 -mgas -meb -mcpu=VR4300 -mhard-float -mfp64); try_compiler on this function is the next step.",
+   "by": "claude-haiku-17",
+   "created_at": 1793884744.690855,
+   "score_before": 190,
+   "score_after": 190
+  },
+  {
+   "function": "func_800268B4_ovl_01",
+   "text": "Deep permuter: score 330 \u2192 330; 0 improvements; 6 candidates tested; 14 cached skips; 0 rejected; 66s elapsed. Budget rotation: soft allowance reached without recent progress.",
+   "by": "Retroreversing.permuter-2390",
+   "created_at": 1793949972.900191,
+   "score_before": 330,
+   "score_after": 330
   }
  ],
  "set_aside": [
@@ -146687,8 +146688,8 @@
      "rom_sha1": "93187c4145cad272a255c17657cd9a1011b3fb3a"
     },
     "symbols_sha256": "bb629f57bc1a7dc4757d26842ea3c55c37e3025a8cd4b02d9a2fb5d58d2bc36b",
-    "recorded_at": 1793978655.960634,
-    "attempt_id": 323746,
+    "recorded_at": 1793998140.158112,
+    "attempt_id": 330322,
     "source_sha256": "4a5753c1ae13cd924fa882d72302bafca2bcb98b24c0e0a655760eda7b68ffba",
     "header_sha256": "6741617bf3c952bbf3b41f49aed7f8780fa9b0b41fb7a8e56fda2b5b9ed03d44",
     "context_version": 143,
