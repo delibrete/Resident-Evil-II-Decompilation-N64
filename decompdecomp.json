@@ -1,7 +1,7 @@
 {
  "format": 1,
- "saved_at": 1794003012.942498,
- "revision": 32895,
+ "saved_at": 1794003258.495931,
+ "revision": 32902,
  "title": "Resident Evil II",
  "platform": "n64",
  "game": {
@@ -8015,6 +8015,22 @@
     "-mfp64"
    ],
    "timeout": 20
+  },
+  "67222940:2147690524": {
+   "vram": 2147690524,
+   "function": "func_8003281C_ovl_01",
+   "toolchain": "sn-n64-281",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-O2",
+    "-mgas",
+    "-meb",
+    "-mcpu=VR4300",
+    "-mhard-float",
+    "-mfp64"
+   ],
+   "timeout": 20
   }
  },
  "instructions": "",
@@ -10392,8 +10408,8 @@
   },
   "func_8003281C_ovl_01": {
    "vram": 2147690524,
-   "best_score": 20,
-   "best_by": "Retroreversing.saved-progress"
+   "matched_by": "autopilot",
+   "readable": false
   },
   "func_800328AC_ovl_01": {
    "vram": 2147690668,
@@ -63145,14 +63161,6 @@
    "score_after": 3500
   },
   {
-   "function": "func_8003281C_ovl_01",
-   "text": "Best 130 (96.3%), only ONE nop + one reg + branch offset left. Function: `s32 f(S3281C *a0, S3281C *a1){ s32 n=a0->f4; if(n){ if(n != a0->fC - a0->f8){ Buf buf; s32 r=...; func_80004550(&buf, D_8010B698, n); func_800045DC(&buf, a0->f0, a1->f8, a0->f4); r=buf.result; func_80004594(&buf, 2); return r; } func_800888CC_ovl_01(a0->f0, a0->f8, n); } return 0; }` with Buf = 0x58 bytes, result at +0x14 (frame 0x78, buffer at sp+0x10). Remaining diff: for the `beq a2,v0` that tests n == a0->fC-a0->f8, target fills the delay slot with `lui v0,%hi(D_8010B698)` and then `lw a1,%lo(D)(v0)` (v0 scratch), so no nop; ours emits `nop; lui a1,%hi(D); lw a1,%lo(D)(a1)`. Making a1 (a0->f8) live across that branch (so reorg can't use a1 as scratch) is the key: tried local a1 before the if (gets f8 loaded before fC, score 150/540), assignment inside the comparison (150), direct a0->f8 twice (130, fC first but a1 not kept). Need both fC-then-f8 load order and f8 live -> then compiler must use v0 scratch and fills delay slot.",
-   "by": "opencode-deepseek-v4.1-flash-1",
-   "created_at": 1793884664.673507,
-   "score_before": 20,
-   "score_after": 20
-  },
-  {
    "function": "func_80031AE0_ovl_01",
    "text": "Expanded the draft with the full loop; best score 3380/50. Major issue: assembly after the apparent call wrapper is actually still part of the same function (no return at that point) but target has jr ra/nop before more code, suggesting disassembly contains unreachable/dead linker tail after return. C cannot normally emit code after return under -O2. Attempts to append loop source caused compiler to omit/reorder the wrapper return and lower global-base expressions as unrelated absolute addresses. Need a control-flow formulation that makes tail reachable after a return path (e.g., conditional early return) while retaining the exact call prologue. Loop target has explicit count and alignment calculations; consider padded composite object for base 0x18000 per shared trick #8.",
    "by": "codex-gpt-6-luna-1",
@@ -74265,14 +74273,6 @@
    "score_after": 200
   },
   {
-   "function": "func_8003281C_ovl_01",
-   "text": "best prior 130; changed to typed buffer and direct arguments, score 825 due to wrong local frame/register allocation; prior attempt's buffer size/frame is closer. Need make a->count persist in a2 and arg1 in s1, preserve buffer result offset 0x24 from sp.",
-   "by": "codex-gpt-6-luna-1",
-   "created_at": 1793884685.575069,
-   "score_before": 20,
-   "score_after": 20
-  },
-  {
    "function": "func_8007AAD8_ovl_01",
    "text": "best 320; repeated base loads are hoisted across calls; need inhibit compiler hoisting, target loads base after each call, final uses a0 base.",
    "by": "codex-gpt-6-luna-1",
@@ -77023,22 +77023,6 @@
    "created_at": 1793884691.0666392,
    "score_before": 1235,
    "score_after": 1235
-  },
-  {
-   "function": "func_8003281C_ovl_01",
-   "text": "Best 130 (36 target vs 37, only one extra nop). Source:\n```c\ntypedef struct { s32 f0; s32 f4; s32 f8; s32 fC; } S3281C;\ntypedef struct { u8 pad[0x14]; s32 result; u8 pad2[0x40]; } Buf3281C;\nextern s32 D_8010B698_ovl_01;\nvoid func_80004550(void *buf, s32 a, s32 b);\nvoid func_800045DC(void *buf, s32 a, s32 b, s32 c);\nvoid func_80004594(void *buf, s32 a);\nvoid func_800888CC_ovl_01(s32 a, s32 b, s32 c);\ns32 func_8003281C_ovl_01(S3281C *arg0, S3281C *arg1) {\n    s32 count = arg0->f4;\n    if (count != 0) {\n        s32 fC = arg0->fC;\n        s32 f8 = arg0->f8;\n        if (count != fC - f8) {\n            Buf3281C buf; s32 result;\n            func_80004550(&buf, D_8010B698_ovl_01, count);\n            func_800045DC(&buf, arg0->f0, arg1->f8, arg0->f4);\n            result = buf.result;\n            func_80004594(&buf, 2);\n            return result;\n        }\n        func_800888CC_ovl_01(arg0->f0, f8, count);\n    }\n    return 0;\n}\n```\nKey facts: Buf is 0x58 bytes so frame is 0x78 and buf is at sp+0x10; buf.result at +0x14 (sp+0x24). Declaring `fC` then `f8` gives the target's load order (lw v0,0xC then lw a1,8) and keeping `f8` as a local used by the func_800888CC call keeps a1=count/f8 live across the beq. Remaining single diff: target's `beq a2,v0` delay slot holds `lui v0,%hi(D_8010B698)` and the following load is `lw a1,%lo(D)(v0)`; ours emits `nop; lui a1,%hi(D); lw a1,%lo(D)(a1)`. Our regalloc coalesces the address base into the destination a1 (dead on the then path) while target uses scratch v0 so reorg can fill the delay slot. Tried: local g = D, `s32 *g = &D` + `*g`, direct expression, reloading variants \u2014 all identical 130; making f8/v0 distinctions didn't change the choice. Recorded best source is the one above.",
-   "by": "opencode-deepseek-v4.1-flash-low-1",
-   "created_at": 1793884691.084926,
-   "score_before": 20,
-   "score_after": 20
-  },
-  {
-   "function": "func_8003281C_ovl_01",
-   "text": "Best 130 (36 vs 37 insns), source and analysis in add_note. One difference left: target fills the `beq` delay slot with `lui v0,%hi(D_8010B698)` and loads `lw a1,%lo(D)(v0)`; our regalloc uses a1 as the %hi base, so reorg emits nop then `lui a1; lw a1,%lo(a1)`. a1 is live on the else path (f8 for func_800888CC), so the target needs a scratch v0. Tried hoisting/copying the global into locals and `&D` pointer locals; compiler always picks a1. Likely needs a scheduling/regalloc quirk; behaviour is otherwise identical.",
-   "by": "opencode-deepseek-v4.1-flash-low-1",
-   "created_at": 1793884691.090903,
-   "score_before": 20,
-   "score_after": 20
   },
   {
    "function": "func_8000B700",
@@ -89087,14 +89071,6 @@
    "created_at": 1793884707.876096,
    "score_before": 481,
    "score_after": 481
-  },
-  {
-   "function": "func_8003281C_ovl_01",
-   "text": "Deep permuter: score 150 \u2192 150; 0 improvements; 21 candidates tested; 0 cached skips; 0 rejected; 153s elapsed. Budget rotation: soft allowance reached without recent progress.",
-   "by": "A.permuter-2489",
-   "created_at": 1793884707.884493,
-   "score_before": 20,
-   "score_after": 20
   },
   {
    "function": "func_80167B9C_ovl_30",
@@ -111889,14 +111865,6 @@
    "score_after": 900
   },
   {
-   "function": "func_8003281C_ovl_01",
-   "text": "Released because its agent stopped (decompdecomp closed while it worked); its attempts are kept.",
-   "by": "claude-haiku-19",
-   "created_at": 1793884743.2421901,
-   "score_before": 20,
-   "score_after": 20
-  },
-  {
    "function": "func_80039BD8_ovl_01",
    "text": "Released because its agent stopped (decompdecomp closed while it worked); its attempts are kept.",
    "by": "claude-haiku-19",
@@ -112775,14 +112743,6 @@
    "created_at": 1793884743.952331,
    "score_before": 700,
    "score_after": 700
-  },
-  {
-   "function": "func_8003281C_ovl_01",
-   "text": "Best this session: score 140 (96.1%), revision c5acbbaf14124e12fd4f: brief's draft (count=arg0->f4; if count!=0 { if count != fC-f8 {buf; func_80004550(&buf, D_8010B698, count); func_800045DC(&buf, f0, a1->f8, f4); result=buf.result; func_80004594(&buf,2); return result;} func_800888CC(f0,f8,count);} return 0). Remaining diffs: (1) target has no nop after `beq a2,v0`; the extra nop shifts later branches. (2) target loads D_8010B698 as `lui v0; lw a1,%lo(v0)` (base in v0), mine uses a1 as base. Tried swapping to `fC-f8 != count`: 200, worse. Untried: reorder the count/buf setup or let the delay slot fill; a temp for the global load.",
-   "by": "claude-haiku-18",
-   "created_at": 1793884743.959706,
-   "score_before": 20,
-   "score_after": 20
   },
   {
    "function": "func_800608F4_ovl_01",
@@ -117855,14 +117815,6 @@
    "created_at": 1793934825.769254,
    "score_before": null,
    "score_after": null
-  },
-  {
-   "function": "func_8003281C_ovl_01",
-   "text": "Deep permuter: score 140 \u2192 140; 0 improvements; 6 candidates tested; 9 cached skips; 0 rejected; 63s elapsed. Budget rotation: soft allowance reached without recent progress.",
-   "by": "Retroreversing.permuter-2489",
-   "created_at": 1793947537.8263738,
-   "score_before": 140,
-   "score_after": 140
   },
   {
    "function": "func_800B01F4_ovl_01",
@@ -128617,14 +128569,6 @@
    "score_after": 60
   },
   {
-   "function": "func_8003281C_ovl_01",
-   "text": "Best this run: 140 (96.1%) with no local temp for count (reload arg0->f4 in each use; a local count forced an extra saved reg s2 and frame changes). Buf3281C (pad 0x14, result, pad 0x40) gives the right 0x78 frame and the sp+0x24 result slot. Remaining: (1) target keeps no spare reg, so `lw a2,4(s0)` then beqz is the same but my build inserts a nop after `beq a2,v0` and the branch target is 0x7c vs 0x78, i.e. one instruction extra before the `lui`; the target puts `lui $v0,%hi(D_8010B698)` in the delay slot of the beq and loads the D_8010B698 value with `lw $a1,%lo(...)($v0)`, so the global is loaded through a register v0 not a1. (2) The return path: target's tail `j` to the epilogue at +0x7c vs mine +0x80. Ideas not yet tried: write the D_8010B698 argument via a local `s32 d = D_8010B698_ovl_01;` before the if, or swap the two beq branches (use `if (count == fC-f8) {...} else {...}` form). Candidate from the earlier saved (20) is by a different author and uses a different structure; check it as a comparison.",
-   "by": "claude-haiku-19",
-   "created_at": 1793941534.650531,
-   "score_before": 20,
-   "score_after": 20
-  },
-  {
    "function": "func_800260D0_ovl_01",
    "text": "Best stays 910 (m2c-derived source, 76.6%). Call sequence matches: 12 void calls in order (8006BC70(0), 8006BB3C(0), 8002751C(2,1), 8004CE44(0), 8004CE44(1), 80075CCC, 80075CA8, 800278AC, [D_800E91E1=0 sb], 8004CA04, 8008459C, [D_80012820=0], 8004CCD8(0,1)). Blocker: the first store `sh $zero,0x25C(base)` with base = &D_800C7650 + 0x18000 is always constant-folded to %hi(D_800DF8AC) by gcc, so the target's `lui $v1,1; ori $v1,0x8000; lui/addiu $v0,D_800C7650; addu $v0,$v0,$v1` sequence never appears. Tried: local base pointer, u32 off=0x18000 with p = base + off, and a (u8*) cast chain; all folded. Next idea: make the offset opaque (a function parameter or a value read from a volatile) so gcc cannot fold; sanity-check the sb to D_800E91E1 uses lui $v0 (not $at) in the target, which points to a register-allocation difference. Do not retry the folded forms.",
    "by": "claude-haiku-19",
@@ -132495,6 +132439,78 @@
    "created_at": 1793955183.029994,
    "score_before": 355,
    "score_after": 355
+  },
+  {
+   "function": "func_8003281C_ovl_01",
+   "text": "Best 130 (96.3%), only ONE nop + one reg + branch offset left. Function: `s32 f(S3281C *a0, S3281C *a1){ s32 n=a0->f4; if(n){ if(n != a0->fC - a0->f8){ Buf buf; s32 r=...; func_80004550(&buf, D_8010B698, n); func_800045DC(&buf, a0->f0, a1->f8, a0->f4); r=buf.result; func_80004594(&buf, 2); return r; } func_800888CC_ovl_01(a0->f0, a0->f8, n); } return 0; }` with Buf = 0x58 bytes, result at +0x14 (frame 0x78, buffer at sp+0x10). Remaining diff: for the `beq a2,v0` that tests n == a0->fC-a0->f8, target fills the delay slot with `lui v0,%hi(D_8010B698)` and then `lw a1,%lo(D)(v0)` (v0 scratch), so no nop; ours emits `nop; lui a1,%hi(D); lw a1,%lo(D)(a1)`. Making a1 (a0->f8) live across that branch (so reorg can't use a1 as scratch) is the key: tried local a1 before the if (gets f8 loaded before fC, score 150/540), assignment inside the comparison (150), direct a0->f8 twice (130, fC first but a1 not kept). Need both fC-then-f8 load order and f8 live -> then compiler must use v0 scratch and fills delay slot.",
+   "by": "opencode-deepseek-v4.1-flash-1",
+   "created_at": 1793884664.673507,
+   "score_before": 20,
+   "score_after": 20
+  },
+  {
+   "function": "func_8003281C_ovl_01",
+   "text": "best prior 130; changed to typed buffer and direct arguments, score 825 due to wrong local frame/register allocation; prior attempt's buffer size/frame is closer. Need make a->count persist in a2 and arg1 in s1, preserve buffer result offset 0x24 from sp.",
+   "by": "codex-gpt-6-luna-1",
+   "created_at": 1793884685.575069,
+   "score_before": 20,
+   "score_after": 20
+  },
+  {
+   "function": "func_8003281C_ovl_01",
+   "text": "Best 130 (36 target vs 37, only one extra nop). Source:\n```c\ntypedef struct { s32 f0; s32 f4; s32 f8; s32 fC; } S3281C;\ntypedef struct { u8 pad[0x14]; s32 result; u8 pad2[0x40]; } Buf3281C;\nextern s32 D_8010B698_ovl_01;\nvoid func_80004550(void *buf, s32 a, s32 b);\nvoid func_800045DC(void *buf, s32 a, s32 b, s32 c);\nvoid func_80004594(void *buf, s32 a);\nvoid func_800888CC_ovl_01(s32 a, s32 b, s32 c);\ns32 func_8003281C_ovl_01(S3281C *arg0, S3281C *arg1) {\n    s32 count = arg0->f4;\n    if (count != 0) {\n        s32 fC = arg0->fC;\n        s32 f8 = arg0->f8;\n        if (count != fC - f8) {\n            Buf3281C buf; s32 result;\n            func_80004550(&buf, D_8010B698_ovl_01, count);\n            func_800045DC(&buf, arg0->f0, arg1->f8, arg0->f4);\n            result = buf.result;\n            func_80004594(&buf, 2);\n            return result;\n        }\n        func_800888CC_ovl_01(arg0->f0, f8, count);\n    }\n    return 0;\n}\n```\nKey facts: Buf is 0x58 bytes so frame is 0x78 and buf is at sp+0x10; buf.result at +0x14 (sp+0x24). Declaring `fC` then `f8` gives the target's load order (lw v0,0xC then lw a1,8) and keeping `f8` as a local used by the func_800888CC call keeps a1=count/f8 live across the beq. Remaining single diff: target's `beq a2,v0` delay slot holds `lui v0,%hi(D_8010B698)` and the following load is `lw a1,%lo(D)(v0)`; ours emits `nop; lui a1,%hi(D); lw a1,%lo(D)(a1)`. Our regalloc coalesces the address base into the destination a1 (dead on the then path) while target uses scratch v0 so reorg can fill the delay slot. Tried: local g = D, `s32 *g = &D` + `*g`, direct expression, reloading variants \u2014 all identical 130; making f8/v0 distinctions didn't change the choice. Recorded best source is the one above.",
+   "by": "opencode-deepseek-v4.1-flash-low-1",
+   "created_at": 1793884691.084926,
+   "score_before": 20,
+   "score_after": 20
+  },
+  {
+   "function": "func_8003281C_ovl_01",
+   "text": "Best 130 (36 vs 37 insns), source and analysis in add_note. One difference left: target fills the `beq` delay slot with `lui v0,%hi(D_8010B698)` and loads `lw a1,%lo(D)(v0)`; our regalloc uses a1 as the %hi base, so reorg emits nop then `lui a1; lw a1,%lo(a1)`. a1 is live on the else path (f8 for func_800888CC), so the target needs a scratch v0. Tried hoisting/copying the global into locals and `&D` pointer locals; compiler always picks a1. Likely needs a scheduling/regalloc quirk; behaviour is otherwise identical.",
+   "by": "opencode-deepseek-v4.1-flash-low-1",
+   "created_at": 1793884691.090903,
+   "score_before": 20,
+   "score_after": 20
+  },
+  {
+   "function": "func_8003281C_ovl_01",
+   "text": "Deep permuter: score 150 \u2192 150; 0 improvements; 21 candidates tested; 0 cached skips; 0 rejected; 153s elapsed. Budget rotation: soft allowance reached without recent progress.",
+   "by": "A.permuter-2489",
+   "created_at": 1793884707.884493,
+   "score_before": 20,
+   "score_after": 20
+  },
+  {
+   "function": "func_8003281C_ovl_01",
+   "text": "Released because its agent stopped (decompdecomp closed while it worked); its attempts are kept.",
+   "by": "claude-haiku-19",
+   "created_at": 1793884743.2421901,
+   "score_before": 20,
+   "score_after": 20
+  },
+  {
+   "function": "func_8003281C_ovl_01",
+   "text": "Best this session: score 140 (96.1%), revision c5acbbaf14124e12fd4f: brief's draft (count=arg0->f4; if count!=0 { if count != fC-f8 {buf; func_80004550(&buf, D_8010B698, count); func_800045DC(&buf, f0, a1->f8, f4); result=buf.result; func_80004594(&buf,2); return result;} func_800888CC(f0,f8,count);} return 0). Remaining diffs: (1) target has no nop after `beq a2,v0`; the extra nop shifts later branches. (2) target loads D_8010B698 as `lui v0; lw a1,%lo(v0)` (base in v0), mine uses a1 as base. Tried swapping to `fC-f8 != count`: 200, worse. Untried: reorder the count/buf setup or let the delay slot fill; a temp for the global load.",
+   "by": "claude-haiku-18",
+   "created_at": 1793884743.959706,
+   "score_before": 20,
+   "score_after": 20
+  },
+  {
+   "function": "func_8003281C_ovl_01",
+   "text": "Deep permuter: score 140 \u2192 140; 0 improvements; 6 candidates tested; 9 cached skips; 0 rejected; 63s elapsed. Budget rotation: soft allowance reached without recent progress.",
+   "by": "Retroreversing.permuter-2489",
+   "created_at": 1793947537.8263738,
+   "score_before": 140,
+   "score_after": 140
+  },
+  {
+   "function": "func_8003281C_ovl_01",
+   "text": "Best this run: 140 (96.1%) with no local temp for count (reload arg0->f4 in each use; a local count forced an extra saved reg s2 and frame changes). Buf3281C (pad 0x14, result, pad 0x40) gives the right 0x78 frame and the sp+0x24 result slot. Remaining: (1) target keeps no spare reg, so `lw a2,4(s0)` then beqz is the same but my build inserts a nop after `beq a2,v0` and the branch target is 0x7c vs 0x78, i.e. one instruction extra before the `lui`; the target puts `lui $v0,%hi(D_8010B698)` in the delay slot of the beq and loads the D_8010B698 value with `lw $a1,%lo(...)($v0)`, so the global is loaded through a register v0 not a1. (2) The return path: target's tail `j` to the epilogue at +0x7c vs mine +0x80. Ideas not yet tried: write the D_8010B698 argument via a local `s32 d = D_8010B698_ovl_01;` before the if, or swap the two beq branches (use `if (count == fC-f8) {...} else {...}` form). Candidate from the earlier saved (20) is by a different author and uses a different structure; check it as a comparison.",
+   "by": "claude-haiku-19",
+   "created_at": 1793941534.650531,
+   "score_before": 20,
+   "score_after": 20
   }
  ],
  "set_aside": [
@@ -271201,6 +271217,106 @@
     "vram": 2149029384,
     "unit": "overlay_039",
     "mode": "rom"
+   },
+   "func_8003281C_ovl_01": {
+    "format": 1,
+    "verdict": "exact",
+    "abi": {
+     "arch": "mips",
+     "big_endian": true,
+     "gp": 0,
+     "platform": "n64",
+     "rom_sha1": "93187c4145cad272a255c17657cd9a1011b3fb3a"
+    },
+    "symbols_sha256": "bb629f57bc1a7dc4757d26842ea3c55c37e3025a8cd4b02d9a2fb5d58d2bc36b",
+    "recorded_at": 1794003104.4470952,
+    "attempt_id": 331442,
+    "source_sha256": "9760dfd42dd0095523e5f220cb5a30b4316dfef06c87836fe8534a3a25564628",
+    "header_sha256": "6741617bf3c952bbf3b41f49aed7f8780fa9b0b41fb7a8e56fda2b5b9ed03d44",
+    "context_version": 143,
+    "compiler": {
+     "toolchain": "sn-n64-281",
+     "flags": [
+      "-G0",
+      "-mips3",
+      "-O2",
+      "-mgas",
+      "-meb",
+      "-mcpu=VR4300",
+      "-mhard-float",
+      "-mfp64"
+     ],
+     "timeout": 20
+    },
+    "compiler_identity": {
+     "toolchain": "sn-n64-281",
+     "registry_sha256": "c190fb42d661ba78ff8ff481879e164589ca62173549239a84c0c418896f5946",
+     "install_sha256": "0cf4df18ef52ce4c10c9e4a82bad43070ed0d1c7434f314f225dc81ad88aae79",
+     "executables": {
+      "cc1n64.exe": "d90df1028c46d826e37146dbcc3e3385f78c59e05a9ddd952daa94c9ad379d9c"
+     }
+    },
+    "settings": {
+     "mode": "rom",
+     "platform": "n64",
+     "compiler": {
+      "toolchain": "sn-n64-281",
+      "flags": [
+       "-G0",
+       "-mips3",
+       "-O2",
+       "-mgas",
+       "-meb",
+       "-mcpu=VR4300",
+       "-mhard-float",
+       "-mfp64"
+      ],
+      "timeout": 20
+     },
+     "settings_source": "compile invocation snapshot",
+     "gp": 0,
+     "big_endian": true,
+     "rom": {
+      "sha1": "93187c4145cad272a255c17657cd9a1011b3fb3a",
+      "game_code": "NREE",
+      "region": "North America",
+      "byte_order": "z64"
+     },
+     "effective_command": [
+      "/Volumes/Data/Github/decompdecomp-rr/.venv/bin/python",
+      "/Volumes/Data/Github/decompdecomp-rr/src/decompnet/consoles/n64/sn64.py",
+      "--cc",
+      "/Users/a/Library/Application Support/decompnet/toolchains/sn-n64-281/cc1n64.exe",
+      "--cpp",
+      "/Users/a/Library/Application Support/decompnet/toolchains/sn-n64-281/cppn64.exe",
+      "--assembler",
+      "/Users/a/Library/Application Support/decompnet/toolchains/sn-n64-281/asn64.exe",
+      "--converter",
+      "/Users/a/Library/Application Support/decompnet/toolchains/psyq-obj-parser/psyq-obj-parser",
+      "--runner",
+      "/Users/a/Library/Application Support/decompnet/toolchains/wibo/wibo",
+      "{src}",
+      "{obj}",
+      "{include}",
+      "-G0",
+      "-mips3",
+      "-O2",
+      "-mgas",
+      "-meb",
+      "-mcpu=VR4300",
+      "-mhard-float",
+      "-mfp64"
+     ],
+     "language": "c",
+     "context_unit": "",
+     "scoring_revision": "410a938219f799f42a41bcf80063f29ed792577587a651bc895e31f6e56c0fb1",
+     "context_sha256": "6741617bf3c952bbf3b41f49aed7f8780fa9b0b41fb7a8e56fda2b5b9ed03d44"
+    },
+    "target_sha256": "249ba56544276074dd1c8def1be7c0780c61af2fc6e3f5af9386c9d90d0e042b",
+    "relocations_sha256": "f37c8ab400adb85c040834cf5eddd2050eff9047c7adf2868cd054ead54e798b",
+    "vram": 2147690524,
+    "unit": "overlay_001",
+    "mode": "rom"
    }
   },
   "sources": {
@@ -272746,7 +272862,8 @@
    "e6b5aedc0d7ae099dca35976bb3d252db2afab75296be521042e680589bf6abd": "extern u8 func_80166D68_ovl_14[];\nextern void func_80166458_ovl_12(void *);\nvoid func_80164870_ovl_12(void *arg0) {\n    volatile u32 *table = (volatile u32 *)(func_80166D68_ovl_14 + 8);\n    u8 idx = *(u8 *)((u8 *)arg0 + 6);\n    void (*fn)(void) = (void (*)(void))table[idx];\n    fn();\n    func_80166458_ovl_12(arg0);\n}\n",
    "e480cf64df5925375ac940f9d00fe18035223c90157a73dea8682ba2b8ae88dd": "/* identical to func_80165138_ovl_15 (matched), with its names changed by decompdecomp */\nextern s16 D_800F9DE0_ovl_01[30];\nvoid func_8016FB2C_overlay_051(void) {\n    s16 *p;\n    u32 i;\n    p = D_800F9DE0_ovl_01;\n    for (i = 0; i < 30; i++) {\n        p[i] = (s16)(p[i] / 6);\n    }\n}\n",
    "1ae1f87c7f7043437be98d408e3512c3e9a373f73b54a46ea02db2779d6559e4": "extern volatile u32 D_80167F40_ovl_30[];\nvoid func_8016643C_ovl_30(void *arg0) { void (*fn)(void) = (void (*)(void))D_80167F40_ovl_30[((u8 *)arg0)[5]]; fn(); }\n",
-   "ae8fb96775e618b5574ddb7911613db590e63cf24791a7e57025da541024cdee": "/* machine draft (m2c) for gcc-2.7.2-kmc -G0 -mips3 -mgp32 -mfp32 -O2, tried by autopilot */\n#ifndef M2C_DEFINES\n#define M2C_DEFINES\ntypedef s32 M2C_UNK;\ntypedef s8 M2C_UNK8;\ntypedef s16 M2C_UNK16;\ntypedef s32 M2C_UNK32;\n#define M2C_FIELD(expr, type_ptr, offset) (*(type_ptr)((s8 *)(expr) + (offset)))\n#define M2C_BITWISE(type, expr) ((type)(expr))\n#define M2C_ERROR(desc) (0)\n#define M2C_CARRY 0\n#define M2C_OVERFLOW(a) (0)\n#endif\n\n\nextern int (*D_8017B36C_overlay_039[])();\nM2C_UNK func_80077B0C_ovl_01(M2C_UNK, void *);      /* extern */\nM2C_UNK func_8017A288_overlay_039(void *);          /* extern */\n\nvoid func_80179608_overlay_039(void *arg0) {\n    s16 temp_v1;\n\n    D_8017B36C_overlay_039[M2C_FIELD(arg0, u8 *, 5)]();\n    temp_v1 = M2C_FIELD(arg0, s16 *, 0x1A8);\n    if ((temp_v1 != 0) && ((M2C_FIELD(M2C_FIELD(arg0, void **, 0x234), s32 *, 0x50) - 0x1F4) < temp_v1) && ((M2C_FIELD(arg0, u8 *, 0x1E9) & 0xF) == 1)) {\n        func_8017A288_overlay_039(arg0);\n        func_80077B0C_ovl_01(0x02020001, arg0 + 0x28);\n    }\n}\n"
+   "ae8fb96775e618b5574ddb7911613db590e63cf24791a7e57025da541024cdee": "/* machine draft (m2c) for gcc-2.7.2-kmc -G0 -mips3 -mgp32 -mfp32 -O2, tried by autopilot */\n#ifndef M2C_DEFINES\n#define M2C_DEFINES\ntypedef s32 M2C_UNK;\ntypedef s8 M2C_UNK8;\ntypedef s16 M2C_UNK16;\ntypedef s32 M2C_UNK32;\n#define M2C_FIELD(expr, type_ptr, offset) (*(type_ptr)((s8 *)(expr) + (offset)))\n#define M2C_BITWISE(type, expr) ((type)(expr))\n#define M2C_ERROR(desc) (0)\n#define M2C_CARRY 0\n#define M2C_OVERFLOW(a) (0)\n#endif\n\n\nextern int (*D_8017B36C_overlay_039[])();\nM2C_UNK func_80077B0C_ovl_01(M2C_UNK, void *);      /* extern */\nM2C_UNK func_8017A288_overlay_039(void *);          /* extern */\n\nvoid func_80179608_overlay_039(void *arg0) {\n    s16 temp_v1;\n\n    D_8017B36C_overlay_039[M2C_FIELD(arg0, u8 *, 5)]();\n    temp_v1 = M2C_FIELD(arg0, s16 *, 0x1A8);\n    if ((temp_v1 != 0) && ((M2C_FIELD(M2C_FIELD(arg0, void **, 0x234), s32 *, 0x50) - 0x1F4) < temp_v1) && ((M2C_FIELD(arg0, u8 *, 0x1E9) & 0xF) == 1)) {\n        func_8017A288_overlay_039(arg0);\n        func_80077B0C_ovl_01(0x02020001, arg0 + 0x28);\n    }\n}\n",
+   "9760dfd42dd0095523e5f220cb5a30b4316dfef06c87836fe8534a3a25564628": "/* func_80025474_ovl_01 */\ntypedef struct {\n    s32 f0;\n    s32 f4;\n    s32 f8;\n    s32 fC;\n    s32 f10;\n    s32 f14;\n    s32 f18;\n    s32 f1C;\n    s32 f20;\n    s32 f24;\n    s32 f28;\n    s32 f2C;\n    s32 f30;\n    s32 f34;\n    s32 f38;\n    s32 f3C;\n} S25474;\n\nextern volatile s32 D_800C568C_ovl_01;\nextern volatile s32 D_800C4E40_ovl_01;\nextern volatile s32 D_800C5684_ovl_01;\nextern u8 D_80018B50_ovl_01;\nextern u8 D_800C5280_ovl_01;\nextern u8 D_800C5698_ovl_01;\nvoid func_80018A80_ovl_01(void);\n\nvoid func_80025474_ovl_01(volatile S25474 *arg0) {\n    s32 v1, v2;\n\n    D_800C568C_ovl_01 = (s32)arg0;\n    arg0->f0 = 1;\n    arg0->fC = (s32)((u8 *)&D_80018B50_ovl_01 - (u8 *)func_80018A80_ovl_01);\n    arg0->f14 = 0x1000;\n    arg0->f1C = 0x800;\n    arg0->f20 = (s32)&D_800C5280_ovl_01;\n    arg0->f8 = (s32)func_80018A80_ovl_01;\n    arg0->f24 = 0x400;\n    v1 = D_800C4E40_ovl_01;\n    v2 = D_800C5684_ovl_01;\n    arg0->f30 = (s32)&D_800C5698_ovl_01;\n    arg0->f38 = 0;\n    arg0->f3C = 0;\n    arg0->f28 = v1;\n    arg0->f2C = v2;\n}\n\n/* func_80031BB0_ovl_01 */\ntypedef struct {\n    s32 f0;\n    s32 f4;\n    u8 *f8;\n    s32 fC;\n} Entry31BB0;\n\ntypedef struct {\n    s32 pad0;\n    s32 count;\n    Entry31BB0 *entries;\n} List31BB0;\n\ntypedef struct {\n    u8 pad0[0x48];\n    s32 f48;\n    List31BB0 *f4C;\n} Obj31BB0;\n\ns32 func_80031BB0_ovl_01(Obj31BB0 *arg0, s32 arg1) {\n    s32 t1;\n    s16 t0;\n    List31BB0 *list;\n    s32 count;\n    Entry31BB0 *entry;\n    s32 n;\n    u8 *p;\n    u8 *q;\n    s32 val;\n\n    t1 = 0;\n    t0 = t1;\n    list = arg0->f4C;\n    count = list->count;\n    entry = list->entries;\nloop:\n    count -= 1;\n    if (count != -1) {\n        p = entry->f8;\n        if (p == 0) {\n            entry++;\n        } else {\n            n = entry->f0 - 1;\n            if (n != -1) {\n                q = p + 0xE;\n                do {\n                    val = *(s16 *)q;\n                    *(s16 *)(q - 2) = t0;\n                    q += 0x10;\n                    n -= 1;\n                    t1 += val;\n                    t0 += val;\n                } while (n != -1);\n            }\n            entry++;\n        }\n        goto loop;\n    }\n    if (t1 > 0) {\n        arg1 = (arg1 + 7) & ~7;\n        arg0->f48 = arg1;\n        arg1 += t1 << 4;\n    } else {\n        arg0->f48 = 0;\n    }\n    return arg1;\n}\n\n/* func_8003281C_ovl_01 */\ntypedef struct {\n    s32 f0;\n    s32 f4;\n    s32 f8;\n    s32 fC;\n} S3281C;\n\ntypedef struct {\n    u8 pad[0x14];\n    s32 result;\n    u8 pad2[0x40];\n} Buf3281C;\n\nextern s32 D_8010B698_ovl_01;\nvoid func_80004550(void *buf, s32 a, s32 b);\nvoid func_800045DC(void *buf, s32 a, s32 b, s32 c);\nvoid func_80004594(void *buf, s32 a);\nvoid func_800888CC_ovl_01(s32 a, s32 b, s32 c);\n\ns32 func_8003281C_ovl_01(S3281C *arg0, S3281C *arg1) {\n    s32 count = arg0->f4;\n\n    if (count != 0) {\n        if (count != arg0->fC - arg0->f8) {\n            Buf3281C buf;\n            s32 result;\n            func_80004550(&buf, D_8010B698_ovl_01, count);\n            func_800045DC(&buf, arg0->f0, arg1->f8, arg0->f4);\n            result = buf.result;\n            func_80004594(&buf, 2);\n            return result;\n        }\n        func_800888CC_ovl_01(arg0->f0, arg0->f8, count);\n    }\n    return 0;\n}\n\n/* func_80032D44_ovl_01 */\ns16 func_80040A44_ovl_01(s32, s16, s16, s16);\n\ns32 func_80032D44_ovl_01(s16 arg0, s16 arg1, s16 arg2, s16 arg3) {\n    s32 v;\n    s32 dx;\n    s32 dy;\n\n    v = 0x400;\n    dx = arg2 - arg0;\n    dy = arg3 - arg1;\n    if (dy <= 0) {\n        goto after;\n    }\n    v = 0xC00;\nafter:\n    if (dx != 0) {\n        s16 r = func_80040A44_ovl_01((dy << 12) / dx, arg1, arg2, arg3);\n        v = 0x1000;\n        if (dx < 0) {\n            v = 0x800;\n        }\n        v = (v - r) & 0xFFF;\n    }\n    return v;\n}\n"
   },
   "headers": {
    "6741617bf3c952bbf3b41f49aed7f8780fa9b0b41fb7a8e56fda2b5b9ed03d44": "/* context.h for Resident Evil II: shared by every function. Agents grow it with edit_context:\n * add a prototype or struct the moment you work one out, so the next function benefits. */\n\ntypedef signed char s8;\ntypedef unsigned char u8;\ntypedef signed short s16;\ntypedef unsigned short u16;\ntypedef signed int s32;\ntypedef unsigned int u32;\ntypedef signed long long s64;\ntypedef unsigned long long u64;\ntypedef float f32;\ntypedef double f64;\ntypedef volatile u8 vu8;\ntypedef volatile u16 vu16;\ntypedef volatile u32 vu32;\ntypedef volatile s32 vs32;\ntypedef int s32_bool;\n\n#define NULL ((void *)0)\n#define TRUE 1\n#define FALSE 0\n#define ARRAY_COUNT(arr) (s32)(sizeof(arr) / sizeof(arr[0]))\n\ns32 func_80036764_ovl_01_510(void *arg0, s32 arg1);\ns32 func_80036764_ovl_01_510_24(void *arg0, s32 arg1, s32 arg2, s32 arg3);\ns32 func_80162CE0_ovl_15(void *arg0);\ns32 func_8016352C_ovl_15(s32 arg0, s16 arg1, s32 arg2);\ns32 func_801635F4_ovl_15(s32 arg0, s16 arg1, s32 arg2);\nvoid func_80162F38_ovl_15(void *arg0);\ns32 func_80162BAC_ovl_17(void *arg0, void *arg1, void *arg2);\n\n/* ovl_01: 2-arg getter used by the func_800AC828/848/868/888 wrappers\n * (called as f(p, p + 0xC4/0xD6/0xE8/0xFA), result & 0xFFFF). */\ns32 func_800AC334_ovl_01(s32 arg0, s32 arg1);\n\n/* main-segment list builder (func_80009640 calls it); returns 0 or an error */\ns32 func_800099D0(u8 *arg0, u16 *arg1, s32 arg2, s32 *arg3, u8 arg4, s32 *arg5, s32 *arg6);\n\n/* main-segment string/formatter helpers */\ns32 func_8000F050(void *arg0, void *arg1, void *arg2, void *arg3);\ns32 func_8000A2D0(void *arg0);\ns32 func_8000A394(void *arg0, u16 *arg1, s32 arg2, s32 arg3);\nextern f64 D_80012100;\nextern s32 D_800128C8;\nextern f64 D_80011AC8;\nextern f64 D_80011AD0;\nextern f64 D_80011AD8;\nextern f64 D_80011AE0;\nextern f64 D_80011AE8;\nextern f64 D_80011AF0;\nextern f64 D_80011AF8;\nextern f32 D_80011B00;\nextern f64 D_80011B08;\nextern f64 D_80011B10;\nextern f32 D_80011B20;\ns32 func_8000D3D0(u8 *arg0, u8 *arg1, ...);\n\ntypedef struct S_func_80162C04_ovl_36_arg0 { u8 unk_00[5]; u8 unk_05; u8 unk_06; u8 unk_07[0x1ED]; u16 unk_1F4; u8 unk_1F6[0x12]; struct S_func_80162C04_ovl_36_arg0_208 *unk_208; u8 unk_20C[0x28]; struct S_func_80162C04_ovl_36_arg0_234 *unk_234; u8 unk_238[0x80]; u8 unk_2B8; } S_func_80162C04_ovl_36_arg0;\ntypedef struct S_func_80162C04_ovl_36_arg0_208 { u8 unk_00[4]; s16 unk_04; s16 unk_06; u8 unk_08[6]; u8 unk_0E; } S_func_80162C04_ovl_36_arg0_208;\ntypedef struct S_func_80162C04_ovl_36_arg0_234 { u8 unk_00[0x124]; u16 unk_124; u8 unk_126[2]; u16 unk_128; } S_func_80162C04_ovl_36_arg0_234;\ns32 func_80031C44_ovl_01_868(void);\ntypedef struct S_func_80162BC0_ovl_13_arg0 { u8 unk_00[0xD]; u8 unk_0D; u8 unk_0E[0x1E]; s32 unk_2C; u8 unk_30[0x1B0]; s16 unk_1E0; u8 unk_1E2[0x12]; u16 unk_1F4; u8 unk_1F6[0x96]; s32 unk_28C; u8 unk_290[0x28]; u8 unk_2B8; u8 unk_2B9; u8 unk_2BA; s8 unk_2BB; s8 unk_2BC; s8 unk_2BD; u8 unk_2BE[6]; s32 unk_2C4; u8 unk_2C8[5]; } S_func_80162BC0_ovl_13_arg0;\n\ntypedef struct S_func_80163254_ovl_33_arg0 { u8 unk_00[4]; s32 unk_04; u8 unk_08[0x26]; s16 unk_2E; u8 unk_30[2]; u16 unk_32; u8 unk_34[0x30]; u16 unk_64; u8 unk_66[0x182]; s32 unk_1E8; u8 unk_1EC[8]; s16 unk_1F4; u16 unk_1F6; u8 unk_1F8[0xE]; s8 unk_206; } S_func_80163254_ovl_33_arg0;\n\ntypedef struct S_func_80162984_ovl_35_arg0 { u8 unk_00[6]; s16 unk_06; u8 unk_08[0x1E0]; s32 unk_1E8; u8 unk_1EC[8]; s16 unk_1F4; u8 unk_1F6[0x10]; s8 unk_206; s8 unk_207; u8 unk_208[0x24]; s32 unk_22C; u8 unk_230[0x2BD-0x230]; u8 unk_2BD; } S_func_80162984_ovl_35_arg0;\n\n/* func_80166480_ovl_32 is a function; the old extern s32[] declaration was wrong. */\n\n/* ovl_21 object used by func_801622B8_ovl_21 (state machine at 0x6; 0x1E0 is a\n * u16 timer whose low byte pair is read both signed (compare) and unsigned\n * (increment), modelled as a volatile/signed union so the compiler emits the\n * ROM's separate lh/lhu loads). */\ntypedef struct S_func_801622B8_ovl_21_arg0 {\n    /* 0x000 */ u8 unk_00[4];\n    /* 0x004 */ union { s32 unk_04; struct { u16 unk_04h; u8 unk_06; u8 unk_07; } unk_04b; } u04;\n    /* 0x008 */ u8 unk_08[0x20];\n    /* 0x028 */ s32 unk_28;\n    /* 0x02C */ union { s32 unk_2C; struct { s16 unk_2Ch; s16 unk_2E; } unk_2Cw; } u2C;\n    /* 0x030 */ union { s32 unk_30; struct { s16 unk_30h; s16 unk_32; } unk_30w; } u30;\n    /* 0x034 */ u8 unk_34[0x32];\n    /* 0x066 */ u16 unk_66;\n    /* 0x068 */ u8 unk_68[8];\n    /* 0x070 */ s32 unk_70;\n    /* 0x074 */ u8 unk_74[0x164];\n    /* 0x1D8 */ s16 unk_1D8[3];\n    /* 0x1DE */ u8 unk_1DE[2];\n    /* 0x1E0 */ union { volatile u16 unk_1E0; s16 unk_1E0s; } u1E0;\n    /* 0x1E2 */ u8 unk_1E2[0xD2];\n    /* 0x2B4 */ u16 unk_2B4;\n    /* 0x2B6 */ s16 unk_2B6;\n    /* 0x2B8 */ s16 unk_2B8;\n    /* 0x2BA */ u16 unk_2BA;\n} S_func_801622B8_ovl_21_arg0;\n\n/* ---- main segment: 64-bit integer formatting (printf %d/%i/%u/%x/%X/%o) ----\n * func_80006100/80010EC0 are the 64-bit divide/remainder helpers: both take\n * (value_hi, value_lo) in a0/a1 and (divisor_hi, divisor_lo) in a2/a3 and\n * return a 64-bit result in v0 (high) / v1 (low). func_80010584 writes\n * out[0..1]=quotient, out[2..3]=remainder; its u64 value sits in a2/a3\n * (a1 is ABI padding) and the u64 divisor goes on the stack. */\nu64 func_80006100(u64 value, u64 divisor);\nu64 func_80010EC0(u64 value, u64 divisor);\nvoid *func_80010584(u64 *out, u64 value, u64 divisor);\nextern u8 D_80013860[];\nextern u8 D_80013874[];\n\ntypedef union S_qword {\n    s64 q;\n    u64 uq;\n    f64 d;\n    struct { s32 hi; s32 lo; } w;\n} S_qword;\n\n/* the number-formatting working object (func_8000F5C0/8000FA80/8000FF58/80010C70):\n * unk_00 is a 64-bit value; reading it as two s32 words avoids the compiler\n * merging the pair. */\ntypedef struct S_func_8000F5C0_arg0 {\n    /* 0x00 */ S_qword unk_00;\n    /* 0x08 */ u8 *unk_08;\n    /* 0x0C */ s32 unk_0C;\n    /* 0x10 */ s32 unk_10;\n    /* 0x14 */ s32 unk_14;\n    /* 0x18 */ s32 unk_18;\n    /* 0x1C */ s32 unk_1C;\n    /* 0x20 */ s32 unk_20;\n    /* 0x24 */ s32 unk_24;\n    /* 0x28 */ s32 unk_28;\n    /* 0x2C */ s32 unk_2C;\n    /* 0x30 */ s32 unk_30;\n    /* 0x34 */ u8 unk_34;\n} S_func_8000F5C0_arg0;\n\n/* func_8002655C initialization globals and callees */\nvoid func_80042A54_ovl_01(void);\nvoid func_8004CA48_ovl_01(void);\nvoid func_80004A20(void);\nvoid func_800278AC_ovl_01(void);\nvoid func_800750E0_ovl_01(s32, s32);\nvoid func_80075F84_ovl_01(void);\nvoid func_8004C97C_ovl_01(void);\nvoid func_800850D4_ovl_01(void);\nvoid func_8004CD84_ovl_01(s32, s32 *);\nextern s8 D_80119E13_ovl_01;\nextern s8 D_80119E14_ovl_01;\n\ntypedef struct S_func_80162870_ovl_23_arg0 { u8 unk_00[4]; s32 unk_04; u8 unk_08[0x20]; s32 unk_28; u8 unk_2C[4]; s32 unk_30; u8 unk_34[0x32]; s16 unk_66; u8 unk_68[0x13C]; s32 unk_1A4; u8 unk_1A8[4]; s32 unk_1AC; u8 unk_1B0[0x30]; u16 unk_1E0; u8 unk_1E2[2]; s16 unk_1E4; u8 unk_1E6[2]; s32 unk_1E8; u8 unk_1EC[8]; u16 unk_1F4; s16 unk_1F6; u8 unk_1F8[0xE]; s8 unk_206; u8 unk_207[0x11]; s32 unk_218; u8 unk_21C[8]; s32 unk_224; s32 unk_228; u8 unk_22C[8]; void *unk_234; u8 unk_238[0x18]; void *unk_250; u8 unk_254[8]; u8 unk_25C; u8 unk_25D[0xF]; u16 unk_26C; u8 unk_26E; u8 unk_26F; u8 unk_270[0x48]; u16 unk_2B8; u8 unk_2BA; u8 unk_2BB; s32 unk_2BC; u8 unk_2C0[4]; u8 unk_2C4; u8 unk_2C5[3]; s16 unk_2C8; s16 unk_2CA; u8 unk_2CC[4]; s16 unk_2D0; } S_func_80162870_ovl_23_arg0;\ns32 func_80162998_ovl_23(S_func_80162870_ovl_23_arg0 *, s32, s32, s32, s32, s32);\n\ntypedef struct S_func_8016B5C8_ovl_31_arg0 { u8 unk_00[0x2C3]; u8 unk_2C3; u8 unk_2C4; u8 unk_2C5; u16 unk_2C6; s16 unk_2C8; s8 unk_2CA; s8 unk_2CB; u8 unk_2CC[4]; u8 unk_2D0; u8 unk_2D1; } S_func_8016B5C8_ovl_31_arg0;\ntypedef struct S_func_8016B5C8_ovl_31_arg1_120 { u16 unk_00; u8 unk_02[0xE]; s16 unk_10; } S_func_8016B5C8_ovl_31_arg1_120;\ntypedef struct S_func_8016B5C8_ovl_31_arg1 { u8 unk_00[0x120]; S_func_8016B5C8_ovl_31_arg1_120 *unk_120; } S_func_8016B5C8_ovl_31_arg1;\n\ntypedef struct S_func_80009CAC_arg1 { u8 unk_00[8]; s32 unk_08; s32 unk_0C; s32 unk_10; s32 unk_14; u16 unk_18; u8 unk_1A; u8 unk_1B; } S_func_80009CAC_arg1;\ntypedef struct S_func_80009CAC_arg2 { u32 unk_00; s32 unk_04; s32 unk_08; s32 unk_0C; s32 unk_10; s32 unk_14; s16 unk_18; s8 unk_1A; s8 unk_1B; u16 unk_1C; u16 unk_1E; } S_func_80009CAC_arg2;\n\n/* main-segment queue used by func_8000CB60 (push, matched) and func_80007450:\n * +0x0 lock pointer (a non-zero *lock triggers a notify), +0x4 event/mutex\n * object passed by address to func_80000DD4, +0x8 count, +0xC index,\n * +0x10 size, +0x14 s32* data. */\ntypedef struct S_func_8000CB60_queue {\n    s32 *lock;\n    u8 pad4[4];\n    s32 count;\n    s32 index;\n    s32 size;\n    s32 *data;\n} S_func_8000CB60_queue;\n\ntypedef struct S_func_80166934_ovl_32_entry { s8 unk_00; s8 unk_01; s8 unk_02; s8 unk_03; s16 unk_04; s16 unk_06; s16 unk_08; s16 unk_0A; u8 unk_0C[8]; u8 unk_14; u8 unk_15; u8 unk_16; u8 unk_17; u8 unk_18; u8 unk_19[7]; } S_func_80166934_ovl_32_entry;\ns32 func_8003420C_ovl_01_18(void *, s16, s16, u32);\n\n/* ---- ovl_01 keyframe/entity tables (recovered in func_80088238/800882B8/80088528/80087A58) ---- */\ntypedef struct S_8002A060_ovl_01 { s32 unk_00; void *unk_04; s32 unk_08; } S_8002A060_ovl_01;            /* stride 0x0C */\ntypedef struct S_80029FE0_ovl_01 { s32 unk_00; void *unk_04; } S_80029FE0_ovl_01;                        /* stride 0x08, unk_00 = kind (2/3) */\ntypedef struct S_8002A000_ovl_01 { s32 unk_00; s32 unk_04; s32 unk_08; s32 unk_0C; s32 unk_10; s32 unk_14; } S_8002A000_ovl_01; /* stride 0x18 */\ntypedef struct S_80087A58_ovl_01_arg0 { s32 unk_00; s32 *unk_04; s32 unk_08; } S_80087A58_ovl_01_arg0;  /* index, result slot, handle */\ntypedef struct S_80088528_ovl_01_arg0 { u16 unk_00; s16 unk_02; s32 unk_04; } S_80088528_ovl_01_arg0;\n\n/* bit-array helpers over a u32 array (bit = (0x80000000U >> (n & 0x1F)), word n >> 5) */\nvoid func_80083788_ovl_01(s32 *bits, u32 n);   /* set   */\nvoid func_800837B0_ovl_01(s32 *bits, u32 n);   /* clear */\n\ntypedef struct S_D_80129E34 { s32 unk_00; s32 unk_04; s32 unk_08; s8 unk_0C; u8 unk_0D[0x3F]; s32 unk_4C; s32 unk_50; s32 unk_54; s32 unk_58; s32 unk_5C; s32 unk_60; u8 unk_64; u8 unk_65; } S_D_80129E34;\n\ns32 func_800A5618_ovl_01(void);\ns32 func_800A5660_ovl_01(void);\n",
