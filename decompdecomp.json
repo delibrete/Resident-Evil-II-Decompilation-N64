@@ -6066,7 +6066,8 @@
     "-mcpu=VR4300",
     "-mhard-float",
     "-mfp64"
-   ]
+   ],
+   "timeout": 20
   },
   "67183472:2147651056": {
    "vram": 2147651056,
@@ -60657,14 +60658,6 @@
    "score_after": 230
   },
   {
-   "function": "func_80026AC0_ovl_01",
-   "text": "Best 70/4 insns. Target: lui $v1,%hi(D_800E90B4); addiu $v0,$zero,1; jr $ra; sw $v0,%lo(D_800E90B4)($v1). Ours: addiu $v0,1; lui $at,%hi; jr $ra; sw $v0,%lo($at) = 70 (only register $at vs $v1 and the li before/after the lui). Same global-store idiom as func_80026948_ovl_01 / func_80026858_ovl_01; see those notes. Body is `D_800E90B4_ovl_01 = 1;` (s32). NOTE: the disassembler had merged the next function into this one; it is now split, func_80026AD0_ovl_01 at 0x80026AD0 is the identical `D_800E90D4_ovl_01 = 1;` function.",
-   "by": "opencode-deepseek-v4.1-flash-free-1",
-   "created_at": 1793884660.104074,
-   "score_before": 20,
-   "score_after": 20
-  },
-  {
    "function": "func_800270E0_ovl_01",
    "text": "Best 1400/41 insns. Target is 40 insns with frame 0x28 (s0-s3 + ra; s3 = func_800072E0 return, s1 = base=&D_80112908, s0 = flag high=&D_80112720, s2 = constant 1), ours frame 0x20 and only s0/s1. Body determined: func_80026AE0_ovl_01(); func_80024D60_ovl_01(); t=func_800072E0(); D_80112908[0]=4; func_8006B40C_ovl_01(0,0,2); D_80112720=1; func_8006B40C_ovl_01(1,0,1); D_80112908[D_80112720]=1; func_80007300(t); func_8006B6E4_ovl_01();  (D_80112908/D_80112720 u8). Best source uses u8* base/flag locals. Differences: target keeps base/flag as %hi-only pseudos (lui s1,lui s0, stores with %lo in displacement, s1 completed by addiu later) and reuses s2=1; ours materializes full pointers and gets different regalloc/schedule. Uses 3 values across calls so frame must be 0x28. Prototypes used: s32 func_800072E0(void), void func_80007300(s32), void func_8006B40C_ovl_01(s32,s32,s32), void func_8006B6E4/80024D60/80026AE0(v). Same LO_SUM global-addressing root cause as the other functions in this batch.",
    "by": "opencode-deepseek-v4.1-flash-free-1",
@@ -61751,14 +61744,6 @@
    "created_at": 1793884662.053223,
    "score_before": 0,
    "score_after": 0
-  },
-  {
-   "function": "func_80026AC0_ovl_01",
-   "text": "Best 70, 4/4 insns. Body is `D_800E90B4_ovl_01 = 1;`. Target: `lui $v1,%hi(D_800E90B4); addiu $v0,$zero,1; jr $ra; sw $v0,%lo(D_800E90B4)($v1)`. KMC emits `... lui $at,%hi; sw ...,%lo($at)` (assembler-macro form). Same $at-vs-general-register family as func_80026948_ovl_01 and func_80026858_ovl_01 (see their notes; unsolved). Tried: direct assignment; s32 temp then assign; struct member at offset 0; parent-struct member at D_800E90AC+8 (the reloc canonicalised to D_800E90B4 but still used $at); pointer local; volatile. Nothing changes $at. Needs a construct that makes GCC emit an explicit MEM(LO_SUM(high,sym)) with a general register instead of the bare-symbol store macro.",
-   "by": "opencode-deepseek-v4.1-flash-1",
-   "created_at": 1793884662.059602,
-   "score_before": 20,
-   "score_after": 20
   },
   {
    "function": "func_8002607C_ovl_01",
@@ -73097,14 +73082,6 @@
    "score_after": 10
   },
   {
-   "function": "func_80026AC0_ovl_01",
-   "text": "Compiled several direct, volatile and pointer-store forms; best score 70. KMC uses $at and schedules the constant before lui while ROM uses $v1, matching known absolute-store codegen limitation.",
-   "by": "codex-gpt-6-luna-1",
-   "created_at": 1793884683.6752908,
-   "score_before": 20,
-   "score_after": 20
-  },
-  {
    "function": "func_8004A410_ovl_01",
    "text": "Compiled multiple drafts; best score 2795/2955 range against 44 instructions. The diff is driven by struct/global address interpretation, a too-small stack frame, and register/address scheduling; no match. Need accurate table/entity layout and locals.",
    "by": "codex-gpt-6-luna-1",
@@ -74319,14 +74296,6 @@
    "created_at": 1793884686.0404081,
    "score_before": 0,
    "score_after": 0
-  },
-  {
-   "function": "func_80026AC0_ovl_01",
-   "text": "Please release: lone symbolic store, same hard compiler ceiling as func_80004C14 / shared note #23. Target `lui $v1,%hi(D_800E90B4); addiu $v0,$zero,1; jr $ra; sw $v0,%lo($v1)`; this build always emits `addiu $v0,$zero,1` first, then `lui $at,%hi; sw %lo($at)` (score 70), regardless of direct assign, temp, volatile, struct member, or pointer local. Not C-fixable here. Best saved 70.",
-   "by": "opencode-deepseek-v4.1-flash-low-1",
-   "created_at": 1793884686.046947,
-   "score_before": 20,
-   "score_after": 20
   },
   {
    "function": "func_80004FA0",
@@ -83983,14 +83952,6 @@
    "created_at": 1793884701.061913,
    "score_before": 200,
    "score_after": 200
-  },
-  {
-   "function": "func_80026AC0_ovl_01",
-   "text": "Re-releasing func_80026AC0_ovl_01: stuck at score 70 \u2014 residual is scheduling (addiu before lui) + regalloc ($at vs ROM's $v1 for the %hi base of `sw $v0,%lo(D_800E90B4)($v1)`), a compiler codegen choice no C construct changes. Exhausted: baseline direct s32 store of 1 (my compile, score 70); earlier agents' 20 attempts (s32 temp, volatile, struct member at offset 0, parent-struct member, pointer local \u2014 all 70). Same open setup split-symbol/store ceiling as func_80004FA0/80026948_ovl_01/func_80004C14: provided KMC GCC uses $at and constant-first scheduling; ROM build used general reg $v1 with lui first. Not solvable from C in this toolchain; recommend user reviews compiler/flags. Best attempt (score 70) saved. extern s32 D_800E90B4_ovl_01; suffices \u2014 nothing new needed in context.h. Note func_80026AD0_ovl_01 (0x80026AD0) is the identical pattern (D_800E90D4_ovl_01 = 1) \u2014 same blocker.",
-   "by": "opencode-nemotron-3.5-super-vl-fr-1",
-   "created_at": 1793884701.073301,
-   "score_before": 20,
-   "score_after": 20
   },
   {
    "function": "func_801639B0_overlay_027",
@@ -106369,14 +106330,6 @@
    "score_after": 865
   },
   {
-   "function": "func_80026AC0_ovl_01",
-   "text": "Historical best score 20 used suffixed symbol declaration; current recheck with corrected unsuffixed D_800E90B4 scored 70 due $at allocation and reordered constant. Symbol/address naming or prior header state affects result; target is simply D_800E90B4 = 1 with lui in v1 before addiu.",
-   "by": "Reggie2.codex-gpt-56-luna-1",
-   "created_at": 1793884737.750943,
-   "score_before": 20,
-   "score_after": 20
-  },
-  {
    "function": "func_801626DC_ovl_29",
    "text": "Best 145 retained. Attempted simplifying union/base arithmetic caused major regression (1758), restored conceptually not compiled. Target schedules 0x18000 in v0 and data symbol in s0; original union candidate closest.",
    "by": "Reggie2.codex-gpt-56-luna-1",
@@ -121961,14 +121914,6 @@
    "score_after": 200
   },
   {
-   "function": "func_80026AC0_ovl_01",
-   "text": "Deep permuter: score 70 \u2192 70; 0 improvements; 9 candidates tested; 1 cached skips; 0 rejected; 66s elapsed. Budget rotation: soft allowance reached without recent progress.",
-   "by": "Retroreversing.permuter-2395",
-   "created_at": 1793956775.812961,
-   "score_before": 70,
-   "score_after": 70
-  },
-  {
    "function": "func_801755F4_overlay_057",
    "text": "Deep permuter: score 10936 \u2192 10936; 0 improvements; 9 candidates tested; 13 cached skips; 0 rejected; 66s elapsed. Budget rotation: soft allowance reached without recent progress.",
    "by": "Retroreversing.permuter-6558",
@@ -132191,6 +132136,62 @@
    "created_at": 1793884730.378033,
    "score_before": 10,
    "score_after": 10
+  },
+  {
+   "function": "func_80026AC0_ovl_01",
+   "text": "Best 70/4 insns. Target: lui $v1,%hi(D_800E90B4); addiu $v0,$zero,1; jr $ra; sw $v0,%lo(D_800E90B4)($v1). Ours: addiu $v0,1; lui $at,%hi; jr $ra; sw $v0,%lo($at) = 70 (only register $at vs $v1 and the li before/after the lui). Same global-store idiom as func_80026948_ovl_01 / func_80026858_ovl_01; see those notes. Body is `D_800E90B4_ovl_01 = 1;` (s32). NOTE: the disassembler had merged the next function into this one; it is now split, func_80026AD0_ovl_01 at 0x80026AD0 is the identical `D_800E90D4_ovl_01 = 1;` function.",
+   "by": "opencode-deepseek-v4.1-flash-free-1",
+   "created_at": 1793884660.104074,
+   "score_before": 20,
+   "score_after": 20
+  },
+  {
+   "function": "func_80026AC0_ovl_01",
+   "text": "Best 70, 4/4 insns. Body is `D_800E90B4_ovl_01 = 1;`. Target: `lui $v1,%hi(D_800E90B4); addiu $v0,$zero,1; jr $ra; sw $v0,%lo(D_800E90B4)($v1)`. KMC emits `... lui $at,%hi; sw ...,%lo($at)` (assembler-macro form). Same $at-vs-general-register family as func_80026948_ovl_01 and func_80026858_ovl_01 (see their notes; unsolved). Tried: direct assignment; s32 temp then assign; struct member at offset 0; parent-struct member at D_800E90AC+8 (the reloc canonicalised to D_800E90B4 but still used $at); pointer local; volatile. Nothing changes $at. Needs a construct that makes GCC emit an explicit MEM(LO_SUM(high,sym)) with a general register instead of the bare-symbol store macro.",
+   "by": "opencode-deepseek-v4.1-flash-1",
+   "created_at": 1793884662.059602,
+   "score_before": 20,
+   "score_after": 20
+  },
+  {
+   "function": "func_80026AC0_ovl_01",
+   "text": "Compiled several direct, volatile and pointer-store forms; best score 70. KMC uses $at and schedules the constant before lui while ROM uses $v1, matching known absolute-store codegen limitation.",
+   "by": "codex-gpt-6-luna-1",
+   "created_at": 1793884683.6752908,
+   "score_before": 20,
+   "score_after": 20
+  },
+  {
+   "function": "func_80026AC0_ovl_01",
+   "text": "Please release: lone symbolic store, same hard compiler ceiling as func_80004C14 / shared note #23. Target `lui $v1,%hi(D_800E90B4); addiu $v0,$zero,1; jr $ra; sw $v0,%lo($v1)`; this build always emits `addiu $v0,$zero,1` first, then `lui $at,%hi; sw %lo($at)` (score 70), regardless of direct assign, temp, volatile, struct member, or pointer local. Not C-fixable here. Best saved 70.",
+   "by": "opencode-deepseek-v4.1-flash-low-1",
+   "created_at": 1793884686.046947,
+   "score_before": 20,
+   "score_after": 20
+  },
+  {
+   "function": "func_80026AC0_ovl_01",
+   "text": "Re-releasing func_80026AC0_ovl_01: stuck at score 70 \u2014 residual is scheduling (addiu before lui) + regalloc ($at vs ROM's $v1 for the %hi base of `sw $v0,%lo(D_800E90B4)($v1)`), a compiler codegen choice no C construct changes. Exhausted: baseline direct s32 store of 1 (my compile, score 70); earlier agents' 20 attempts (s32 temp, volatile, struct member at offset 0, parent-struct member, pointer local \u2014 all 70). Same open setup split-symbol/store ceiling as func_80004FA0/80026948_ovl_01/func_80004C14: provided KMC GCC uses $at and constant-first scheduling; ROM build used general reg $v1 with lui first. Not solvable from C in this toolchain; recommend user reviews compiler/flags. Best attempt (score 70) saved. extern s32 D_800E90B4_ovl_01; suffices \u2014 nothing new needed in context.h. Note func_80026AD0_ovl_01 (0x80026AD0) is the identical pattern (D_800E90D4_ovl_01 = 1) \u2014 same blocker.",
+   "by": "opencode-nemotron-3.5-super-vl-fr-1",
+   "created_at": 1793884701.073301,
+   "score_before": 20,
+   "score_after": 20
+  },
+  {
+   "function": "func_80026AC0_ovl_01",
+   "text": "Historical best score 20 used suffixed symbol declaration; current recheck with corrected unsuffixed D_800E90B4 scored 70 due $at allocation and reordered constant. Symbol/address naming or prior header state affects result; target is simply D_800E90B4 = 1 with lui in v1 before addiu.",
+   "by": "Reggie2.codex-gpt-56-luna-1",
+   "created_at": 1793884737.750943,
+   "score_before": 20,
+   "score_after": 20
+  },
+  {
+   "function": "func_80026AC0_ovl_01",
+   "text": "Deep permuter: score 70 \u2192 70; 0 improvements; 9 candidates tested; 1 cached skips; 0 rejected; 66s elapsed. Budget rotation: soft allowance reached without recent progress.",
+   "by": "Retroreversing.permuter-2395",
+   "created_at": 1793956775.812961,
+   "score_before": 70,
+   "score_after": 70
   }
  ],
  "set_aside": [
@@ -146837,8 +146838,8 @@
      "rom_sha1": "93187c4145cad272a255c17657cd9a1011b3fb3a"
     },
     "symbols_sha256": "bb629f57bc1a7dc4757d26842ea3c55c37e3025a8cd4b02d9a2fb5d58d2bc36b",
-    "recorded_at": 1793977059.073247,
-    "attempt_id": 323342,
+    "recorded_at": 1793996080.855656,
+    "attempt_id": 330078,
     "source_sha256": "35d6247c13d7a0aa7c64d51d80ceb541023390ba4190d7252b60b588217c10d4",
     "header_sha256": "6741617bf3c952bbf3b41f49aed7f8780fa9b0b41fb7a8e56fda2b5b9ed03d44",
     "context_version": 143,
