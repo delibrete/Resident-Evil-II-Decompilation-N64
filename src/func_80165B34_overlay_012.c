@@ -1,3 +1,4 @@
+/* identical to func_801726C4_overlay_040 (matched), with its names changed by decompdecomp */
 /* machine draft (m2c) for gcc-2.7.2-kmc -G0 -mips3 -mgp32 -mfp32 -O2 -mcpu=r4600, tried by autopilot */
 #ifndef M2C_DEFINES
 #define M2C_DEFINES
@@ -14,12 +15,12 @@ typedef s32 M2C_UNK32;
 
 s32 func_80032B8C_ovl_01();
 s32 func_80089D34_ovl_01();
-s32 func_801664DC_overlay_012();
+s32 func_801664DC_ovl_12();
 
 void func_80165B34_overlay_012(void *arg0, s32 arg1, s32 arg2) {
     if (M2C_FIELD(arg0, u8 *, 0x2BC) == 0) {
         func_80032B8C_ovl_01(arg0, M2C_FIELD(arg0, s16 *, 0x1F4));
-        func_801664DC_overlay_012(arg0, 0xA, 0);
+        func_801664DC_ovl_12(arg0, 0xA, 0);
     }
     if (func_80089D34_ovl_01(arg0, arg1, arg2, M2C_FIELD(arg0, s16 *, 0x1F6)) != 0) {
         if (M2C_FIELD(arg0, u8 *, 7) == 0) {
