@@ -1,7 +1,7 @@
 {
  "format": 1,
- "saved_at": 1794005243.095585,
- "revision": 33090,
+ "saved_at": 1794005943.469707,
+ "revision": 33150,
  "title": "Resident Evil II",
  "platform": "n64",
  "game": {
@@ -8137,6 +8137,19 @@
     "-mfp64"
    ],
    "timeout": 20
+  },
+  "70002120:2148987928": {
+   "vram": 2148987928,
+   "function": "func_8016F418_overlay_064",
+   "toolchain": "gcc-2.8.1-pm-sn-as",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20
   }
  },
  "instructions": "",
@@ -8739,7 +8752,8 @@
   "overlay_042": "common_overlay_042.h",
   "overlay_044": "common_overlay_044.h",
   "overlay_054": "common_overlay_054.h",
-  "overlay_026": "common_overlay_026.h"
+  "overlay_026": "common_overlay_026.h",
+  "overlay_064": "common_overlay_064.h"
  },
  "functions": {
   "func_80000518": {
@@ -23324,8 +23338,8 @@
   },
   "func_8016F418_overlay_064": {
    "vram": 2148987928,
-   "best_score": 235,
-   "best_by": "restored"
+   "matched_by": "autopilot",
+   "readable": false
   },
   "func_8016F420_overlay_050": {
    "vram": 2148987936,
@@ -129541,14 +129555,6 @@
    "score_after": 5965
   },
   {
-   "function": "func_8016F418_overlay_064",
-   "text": "Deep permuter: score 235 \u2192 235; 0 improvements; 1 candidates tested; 7 cached skips; 0 rejected; 62s elapsed. Budget rotation: soft allowance reached without recent progress.",
-   "by": "Retroreversing.permuter-6975",
-   "created_at": 1793960688.844606,
-   "score_before": 235,
-   "score_after": 235
-  },
-  {
    "function": "func_8017F190_ovl_04",
    "text": "Range check #81: is this part of the game built by SN64 GCC 2.8.1 -G0 -mips3 -O2 -mgas -meb -mcpu=VR4300 -mhard-float -mfp64? An agent's C for a function next to func_8017F190_ovl_04 matches with it. Match func_8017F190_ovl_04 as usual; then try_compiler(\"func_8017F190_ovl_04\", \"sn-n64-281\", \"-G0 -mips3 -O2 -mgas -meb -mcpu=VR4300 -mhard-float -mfp64\"). Matching with SN64 GCC 2.8.1 -G0 -mips3 -O2 -mgas -meb -mcpu=VR4300 -mhard-float -mfp64 and not with the project's compiler confirms the range; matching with the project's compiler only shows it was a quirk. Either answer helps.",
    "by": "autopilot",
@@ -132627,6 +132633,14 @@
    "created_at": 1793941002.256873,
    "score_before": 460,
    "score_after": 230
+  },
+  {
+   "function": "func_8016F418_overlay_064",
+   "text": "Deep permuter: score 235 \u2192 235; 0 improvements; 1 candidates tested; 7 cached skips; 0 rejected; 62s elapsed. Budget rotation: soft allowance reached without recent progress.",
+   "by": "Retroreversing.permuter-6975",
+   "created_at": 1793960688.844606,
+   "score_before": 235,
+   "score_after": 235
   }
  ],
  "set_aside": [
@@ -229931,8 +229945,8 @@
      "rom_sha1": "93187c4145cad272a255c17657cd9a1011b3fb3a"
     },
     "symbols_sha256": "bb629f57bc1a7dc4757d26842ea3c55c37e3025a8cd4b02d9a2fb5d58d2bc36b",
-    "recorded_at": 1793961677.401244,
-    "attempt_id": 315315,
+    "recorded_at": 1794005942.621217,
+    "attempt_id": 331944,
     "source_sha256": "53993041627caed380152b8f91e6e5bb74343eedaa9aedf5f09603129da43fd5",
     "header_sha256": "6741617bf3c952bbf3b41f49aed7f8780fa9b0b41fb7a8e56fda2b5b9ed03d44",
     "context_version": 143,
@@ -229970,7 +229984,7 @@
       ],
       "timeout": 20
      },
-     "settings_source": "project configuration at recording; temporary compile overrides may differ",
+     "settings_source": "compile invocation snapshot",
      "gp": 0,
      "big_endian": true,
      "rom": {
@@ -229979,6 +229993,27 @@
       "region": "North America",
       "byte_order": "z64"
      },
+     "effective_command": [
+      "/Volumes/Data/Github/decompdecomp-rr/.venv/bin/python",
+      "/Volumes/Data/Github/decompdecomp-rr/src/decompnet/consoles/n64/sn64.py",
+      "--gcc",
+      "/Users/a/Library/Application Support/decompnet/toolchains/gcc-2.8.1-pm-sn-as/gcc",
+      "--assembler",
+      "/Users/a/Library/Application Support/decompnet/toolchains/sn-n64-272-0001/asn64.exe",
+      "--converter",
+      "/Users/a/Library/Application Support/decompnet/toolchains/psyq-obj-parser/psyq-obj-parser",
+      "--runner",
+      "/Users/a/Library/Application Support/decompnet/toolchains/wibo/wibo",
+      "{src}",
+      "{obj}",
+      "{include}",
+      "-G0",
+      "-mips3",
+      "-mgp32",
+      "-mfp32",
+      "-O2"
+     ],
+     "language": "c",
      "context_unit": "",
      "scoring_revision": "410a938219f799f42a41bcf80063f29ed792577587a651bc895e31f6e56c0fb1",
      "context_sha256": "6741617bf3c952bbf3b41f49aed7f8780fa9b0b41fb7a8e56fda2b5b9ed03d44"
