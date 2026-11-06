@@ -7721,6 +7721,22 @@
    "timeout": 20,
    "function": "func_8016690C_ovl_32",
    "vram": 2148952332
+  },
+  "69070800:2148939744": {
+   "toolchain": "sn-n64-281",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-O2",
+    "-mgas",
+    "-meb",
+    "-mcpu=VR4300",
+    "-mhard-float",
+    "-mfp64"
+   ],
+   "timeout": 20,
+   "function": "func_801637E0_ovl_30",
+   "vram": 2148939744
   }
  },
  "instructions": "",
@@ -8310,7 +8326,8 @@
   "overlay_032": "common_overlay_032.h",
   "overlay_012": "common_overlay_012.h",
   "overlay_035": "common_overlay_035.h",
-  "overlay_060": "common_overlay_060.h"
+  "overlay_060": "common_overlay_060.h",
+  "overlay_030": "common_overlay_030.h"
  },
  "functions": {
   "func_80000518": {
@@ -17260,7 +17277,7 @@
   },
   "func_801637E0_ovl_30": {
    "vram": 2148939744,
-   "matched_by": "restored",
+   "matched_by": "autopilot",
    "readable": false
   },
   "func_801637E8_ovl_17": {
@@ -77299,14 +77316,6 @@
    "score_after": 1130
   },
   {
-   "function": "func_801637E0_ovl_30",
-   "text": "Compiled three more times after an initial improvement. Best 225 with extern volatile u32 table and indexed function pointer. Target materializes base address first and uses v0 for base, v1 for index; attempts loaded byte into v0 then base into v1. Explicit local base did not alter scheduling. Try an actual pointer-valued symbol expression for func_80167DA4_ovl_28 + 4 to preserve relocation/base load, then shape local declarations for target registers.",
-   "by": "codex-gpt-6-luna-1",
-   "created_at": 1793884692.635605,
-   "score_before": 230,
-   "score_after": 230
-  },
-  {
    "function": "func_80163D1C_ovl_30",
    "text": "Best 225 with volatile u32 table indexed by arg0 byte 6 and indirect void call. Attempted explicit local base, index-first, entry pointer, and pointer arithmetic. Target loads table base to v0 before lbu into v1, whereas compiler emits base in v1 after index into v0. Could try representing as function-pointer table based on func_80167DA4_ovl_28 + 0x10 to retain the exact relocation and changing declaration order/types.",
    "by": "codex-gpt-6-luna-1",
@@ -102705,14 +102714,6 @@
    "created_at": 1793884732.181257,
    "score_before": 10,
    "score_after": 10
-  },
-  {
-   "function": "func_801637E0_ovl_30",
-   "text": "Deep permuter: score 230 \u2192 230; 0 improvements; 100 candidates tested; 7 cached skips; 0 rejected; 320s elapsed. Variant limit reached.",
-   "by": "Retroreversing.permuter-5054",
-   "created_at": 1793884732.192471,
-   "score_before": 230,
-   "score_after": 230
   },
   {
    "function": "func_80162CD4_overlay_013",
@@ -132193,6 +132194,22 @@
    "created_at": 1793884731.785249,
    "score_before": 0,
    "score_after": 0
+  },
+  {
+   "function": "func_801637E0_ovl_30",
+   "text": "Compiled three more times after an initial improvement. Best 225 with extern volatile u32 table and indexed function pointer. Target materializes base address first and uses v0 for base, v1 for index; attempts loaded byte into v0 then base into v1. Explicit local base did not alter scheduling. Try an actual pointer-valued symbol expression for func_80167DA4_ovl_28 + 4 to preserve relocation/base load, then shape local declarations for target registers.",
+   "by": "codex-gpt-6-luna-1",
+   "created_at": 1793884692.635605,
+   "score_before": 230,
+   "score_after": 230
+  },
+  {
+   "function": "func_801637E0_ovl_30",
+   "text": "Deep permuter: score 230 \u2192 230; 0 improvements; 100 candidates tested; 7 cached skips; 0 rejected; 320s elapsed. Variant limit reached.",
+   "by": "Retroreversing.permuter-5054",
+   "created_at": 1793884732.192471,
+   "score_before": 230,
+   "score_after": 230
   }
  ],
  "set_aside": [
@@ -187245,8 +187262,8 @@
      "rom_sha1": "93187c4145cad272a255c17657cd9a1011b3fb3a"
     },
     "symbols_sha256": "bb629f57bc1a7dc4757d26842ea3c55c37e3025a8cd4b02d9a2fb5d58d2bc36b",
-    "recorded_at": 1793972740.0085492,
-    "attempt_id": 320686,
+    "recorded_at": 1793996761.706604,
+    "attempt_id": 330145,
     "source_sha256": "1d0c61288ccf0137b498b4e02c8e22cc5dc6904cd89c6a829adbc0e815cee21a",
     "header_sha256": "6741617bf3c952bbf3b41f49aed7f8780fa9b0b41fb7a8e56fda2b5b9ed03d44",
     "context_version": 143,
