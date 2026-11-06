@@ -7674,6 +7674,20 @@
    "timeout": 20,
    "function": "func_80001510",
    "vram": 2147489040
+  },
+  "59136:2147539840": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2",
+    "-ffast-math"
+   ],
+   "timeout": 20,
+   "function": "func_8000DB80",
+   "vram": 2147539840
   }
  },
  "instructions": "",
@@ -62187,14 +62201,6 @@
    "score_after": 10
   },
   {
-   "function": "func_8000DB80",
-   "text": "3 compiles, no improvement. __builtin_sqrtf produces target sqrt.s but not in jr delay slot and adds NaN check/frame. Best remains 960; pure C likely cannot force target scheduling.",
-   "by": "codex-gpt-6-luna-1",
-   "created_at": 1793884662.922722,
-   "score_before": 0,
-   "score_after": 0
-  },
-  {
    "function": "func_8000DD70",
    "text": "6 compiles total; best score now 915 from explicit 32-bit carry and early return. Improved vs autopilot 1026. Target 48 instructions, source 50; diff mostly register allocation in carry math and pointer unlink. Early null branch currently lands 0xB4 vs target 0xAC; need cut two instructions before branch (avoid extra 64-bit carry branch). Target saves global list head to a0 before unlinking, likely keep it in local for both comparison and pointer update.",
    "by": "codex-gpt-6-luna-1",
@@ -73235,22 +73241,6 @@
    "score_after": 0
   },
   {
-   "function": "func_8000DB80",
-   "text": "Solved: `f32 func_8000DB80(f32 x){ return __builtin_sqrtf(x); }` matches byte-for-byte ONLY with `-ffast-math` (try_compiler confirmed). Under the project's current -O2 flags KMC emits c.eq.s NaN check + frame (score 960). Suggestion filed with range 0x8000DB80-0x8000DB88. Once -ffast-math is applied this becomes score 0 with the source above.",
-   "by": "opencode-deepseek-v4.1-flash-low-1",
-   "created_at": 1793884683.9209971,
-   "score_before": 0,
-   "score_after": 0
-  },
-  {
-   "function": "func_8000DB80",
-   "text": "Cannot get closer under the current flags: the only difference is KMC's IEEE NaN check/frame that -ffast-math removes. Source `f32 func_8000DB80(f32 x){ return __builtin_sqrtf(x); }` proven byte-identical with -ffast-math via try_compiler. Suggestion filed for 0x8000DB80-0x8000DB88. Please release now so another function can be claimed; revisit only after the flag lands.",
-   "by": "opencode-deepseek-v4.1-flash-low-1",
-   "created_at": 1793884683.928187,
-   "score_before": 0,
-   "score_after": 0
-  },
-  {
    "function": "func_80026858_ovl_01",
    "text": "Three consecutive compiles have completed without improvement; best source retained. Diffs show compiler-generated prologue/argument reorder for table wrappers and fixed $at versus $v1 global store behavior for byte flag. CCD8 also needs correcting function-pointer/result semantics.",
    "by": "codex-gpt-6-luna-1",
@@ -74103,14 +74093,6 @@
    "text": "Compiled several C iterations; best score 320. Core layout and first 13 instructions match. Remaining diff is argument load scheduling between repeated calls: target delays each lw 0x234 until after the previous call, then uses a0 as base on the final load. C compiler hoists loads; attempt with separate block locals did not change output.",
    "by": "codex-gpt-6-luna-1",
    "created_at": 1793884685.5339782,
-   "score_before": 0,
-   "score_after": 0
-  },
-  {
-   "function": "func_8000DB80",
-   "text": "Achieved score 0 with KMC GCC 2.7.2 -ffast-math flag. Default -O2 yields score 960 due to NaN check/frame. C source: `f32 func_8000DB80(f32 arg0) { return sqrtf(arg0); }`. Function is now matched and can be released.",
-   "by": "opencode-nemotron-3.5-lightning-f-1",
-   "created_at": 1793884685.560839,
    "score_before": 0,
    "score_after": 0
   },
@@ -132145,6 +132127,38 @@
    "created_at": 1793884704.8924959,
    "score_before": 0,
    "score_after": 0
+  },
+  {
+   "function": "func_8000DB80",
+   "text": "3 compiles, no improvement. __builtin_sqrtf produces target sqrt.s but not in jr delay slot and adds NaN check/frame. Best remains 960; pure C likely cannot force target scheduling.",
+   "by": "codex-gpt-6-luna-1",
+   "created_at": 1793884662.922722,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_8000DB80",
+   "text": "Solved: `f32 func_8000DB80(f32 x){ return __builtin_sqrtf(x); }` matches byte-for-byte ONLY with `-ffast-math` (try_compiler confirmed). Under the project's current -O2 flags KMC emits c.eq.s NaN check + frame (score 960). Suggestion filed with range 0x8000DB80-0x8000DB88. Once -ffast-math is applied this becomes score 0 with the source above.",
+   "by": "opencode-deepseek-v4.1-flash-low-1",
+   "created_at": 1793884683.9209971,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_8000DB80",
+   "text": "Cannot get closer under the current flags: the only difference is KMC's IEEE NaN check/frame that -ffast-math removes. Source `f32 func_8000DB80(f32 x){ return __builtin_sqrtf(x); }` proven byte-identical with -ffast-math via try_compiler. Suggestion filed for 0x8000DB80-0x8000DB88. Please release now so another function can be claimed; revisit only after the flag lands.",
+   "by": "opencode-deepseek-v4.1-flash-low-1",
+   "created_at": 1793884683.928187,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_8000DB80",
+   "text": "Achieved score 0 with KMC GCC 2.7.2 -ffast-math flag. Default -O2 yields score 960 due to NaN check/frame. C source: `f32 func_8000DB80(f32 arg0) { return sqrtf(arg0); }`. Function is now matched and can be released.",
+   "by": "opencode-nemotron-3.5-lightning-f-1",
+   "created_at": 1793884685.560839,
+   "score_before": 0,
+   "score_after": 0
   }
  ],
  "set_aside": [
@@ -143990,8 +144004,8 @@
      "rom_sha1": "93187c4145cad272a255c17657cd9a1011b3fb3a"
     },
     "symbols_sha256": "bb629f57bc1a7dc4757d26842ea3c55c37e3025a8cd4b02d9a2fb5d58d2bc36b",
-    "recorded_at": 1793976922.496953,
-    "attempt_id": 323303,
+    "recorded_at": 1793995536.5831711,
+    "attempt_id": 329978,
     "source_sha256": "a7b07d3b10cf26de0c1ebf6f670d8fdb51809cc7cb2794b5cdc7b0780d52221e",
     "header_sha256": "d789543ba7ec5f483d3bce700f262911dd0d34416933846943c0ddc3a13e191c",
     "context_version": 6,
