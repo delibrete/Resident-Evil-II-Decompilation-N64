@@ -1,7 +1,7 @@
 {
  "format": 1,
- "saved_at": 1794005098.515934,
- "revision": 33069,
+ "saved_at": 1794005243.095585,
+ "revision": 33090,
  "title": "Resident Evil II",
  "platform": "n64",
  "game": {
@@ -4708,7 +4708,8 @@
     "-mfp32",
     "-O2",
     "-mcpu=r4600"
-   ]
+   ],
+   "timeout": 20
   },
   "69509224:2149002056": {
    "vram": 2149002056,
@@ -26248,8 +26249,8 @@
   },
   "func_80172B28_overlay_040": {
    "vram": 2149002024,
-   "best_score": 10,
-   "best_by": "autopilot"
+   "matched_by": "Retroreversing.saved-progress",
+   "readable": false
   },
   "func_80172B48_overlay_045": {
    "vram": 2149002056,
@@ -255909,11 +255910,11 @@
      "rom_sha1": "93187c4145cad272a255c17657cd9a1011b3fb3a"
     },
     "symbols_sha256": "bb629f57bc1a7dc4757d26842ea3c55c37e3025a8cd4b02d9a2fb5d58d2bc36b",
-    "recorded_at": 1793988548.496885,
-    "attempt_id": 325884,
+    "recorded_at": 1794005240.790936,
+    "attempt_id": 331825,
     "source_sha256": "77c92b8e97010cfb0754b8ee0595c4455cf0dd28592518c057a23da557989832",
     "header_sha256": "e344e28888e8adc61a3e295f0cc2732492474a1f9063c51954783241ddf71de9",
-    "context_version": 699,
+    "context_version": 804,
     "compiler": {
      "toolchain": "gcc-2.7.2-kmc",
      "flags": [
