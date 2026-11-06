@@ -1,7 +1,7 @@
 {
  "format": 1,
- "saved_at": 1794005943.469707,
- "revision": 33150,
+ "saved_at": 1794006891.309165,
+ "revision": 33233,
  "title": "Resident Evil II",
  "platform": "n64",
  "game": {
@@ -8141,6 +8141,19 @@
   "70002120:2148987928": {
    "vram": 2148987928,
    "function": "func_8016F418_overlay_064",
+   "toolchain": "gcc-2.8.1-pm-sn-as",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20
+  },
+  "69705928:2149003032": {
+   "vram": 2149003032,
+   "function": "func_80172F18_overlay_054",
    "toolchain": "gcc-2.8.1-pm-sn-as",
    "flags": [
     "-G0",
@@ -26448,8 +26461,8 @@
   },
   "func_80172F18_overlay_054": {
    "vram": 2149003032,
-   "best_score": 310,
-   "best_by": "restored"
+   "matched_by": "autopilot",
+   "readable": false
   },
   "func_80172F24_overlay_040": {
    "vram": 2149003044,
@@ -127539,14 +127552,6 @@
    "score_after": 2735
   },
   {
-   "function": "func_80172F18_overlay_054",
-   "text": "Deep permuter: score 955 \u2192 955; 0 improvements; 8 candidates tested; 26 cached skips; 0 rejected; 65s elapsed. Budget rotation: soft allowance reached without recent progress.",
-   "by": "Retroreversing.permuter-6372",
-   "created_at": 1793948264.6862311,
-   "score_before": 955,
-   "score_after": 955
-  },
-  {
    "function": "func_8006BBEC_ovl_01",
    "text": "Deep permuter: score 2360 \u2192 2360; 0 improvements; 8 candidates tested; 12 cached skips; 0 rejected; 68s elapsed. Budget rotation: soft allowance reached without recent progress.",
    "by": "Retroreversing.permuter-2835",
@@ -132641,6 +132646,14 @@
    "created_at": 1793960688.844606,
    "score_before": 235,
    "score_after": 235
+  },
+  {
+   "function": "func_80172F18_overlay_054",
+   "text": "Deep permuter: score 955 \u2192 955; 0 improvements; 8 candidates tested; 26 cached skips; 0 rejected; 65s elapsed. Budget rotation: soft allowance reached without recent progress.",
+   "by": "Retroreversing.permuter-6372",
+   "created_at": 1793948264.6862311,
+   "score_before": 955,
+   "score_after": 955
   }
  ],
  "set_aside": [
@@ -257942,8 +257955,8 @@
      "rom_sha1": "93187c4145cad272a255c17657cd9a1011b3fb3a"
     },
     "symbols_sha256": "bb629f57bc1a7dc4757d26842ea3c55c37e3025a8cd4b02d9a2fb5d58d2bc36b",
-    "recorded_at": 1793961677.505455,
-    "attempt_id": 315318,
+    "recorded_at": 1794006868.7928472,
+    "attempt_id": 332073,
     "source_sha256": "432e6fb5fa6565a41bc920b57998aa5962689ba7f1fce3aebb10b60487411cee",
     "header_sha256": "6741617bf3c952bbf3b41f49aed7f8780fa9b0b41fb7a8e56fda2b5b9ed03d44",
     "context_version": 143,
@@ -257981,7 +257994,7 @@
       ],
       "timeout": 20
      },
-     "settings_source": "project configuration at recording; temporary compile overrides may differ",
+     "settings_source": "compile invocation snapshot",
      "gp": 0,
      "big_endian": true,
      "rom": {
@@ -257990,6 +258003,27 @@
       "region": "North America",
       "byte_order": "z64"
      },
+     "effective_command": [
+      "/Volumes/Data/Github/decompdecomp-rr/.venv/bin/python",
+      "/Volumes/Data/Github/decompdecomp-rr/src/decompnet/consoles/n64/sn64.py",
+      "--gcc",
+      "/Users/a/Library/Application Support/decompnet/toolchains/gcc-2.8.1-pm-sn-as/gcc",
+      "--assembler",
+      "/Users/a/Library/Application Support/decompnet/toolchains/sn-n64-272-0001/asn64.exe",
+      "--converter",
+      "/Users/a/Library/Application Support/decompnet/toolchains/psyq-obj-parser/psyq-obj-parser",
+      "--runner",
+      "/Users/a/Library/Application Support/decompnet/toolchains/wibo/wibo",
+      "{src}",
+      "{obj}",
+      "{include}",
+      "-G0",
+      "-mips3",
+      "-mgp32",
+      "-mfp32",
+      "-O2"
+     ],
+     "language": "c",
      "context_unit": "",
      "scoring_revision": "410a938219f799f42a41bcf80063f29ed792577587a651bc895e31f6e56c0fb1",
      "context_sha256": "6741617bf3c952bbf3b41f49aed7f8780fa9b0b41fb7a8e56fda2b5b9ed03d44"
