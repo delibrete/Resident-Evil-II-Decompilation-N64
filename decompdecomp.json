@@ -2419,7 +2419,8 @@
     "-mcpu=VR4300",
     "-mhard-float",
     "-mfp64"
-   ]
+   ],
+   "timeout": 20
   },
   "67437528:2147905112": {
    "vram": 2147905112,
@@ -10128,7 +10129,7 @@
   },
   "func_800044F0": {
    "vram": 2147501296,
-   "matched_by": "autopilot",
+   "matched_by": "Retroreversing.saved-progress",
    "readable": false
   },
   "func_80004550": {
@@ -63747,14 +63748,6 @@
    "score_after": 0
   },
   {
-   "function": "func_800044F0",
-   "text": "Reached the compile move-on threshold. Best score and remaining diff are in the most recent compile_and_diff report; this source was the closest C trial. Preserve the best saved attempt for follow-up.",
-   "by": "codex-gpt-6-luna-1",
-   "created_at": 1793884663.086763,
-   "score_before": 0,
-   "score_after": 0
-  },
-  {
    "function": "func_800040D4",
    "text": "Reached the compile move-on threshold. Best score and remaining diff are in the most recent compile_and_diff report; this source was the closest C trial. Preserve the best saved attempt for follow-up.",
    "by": "codex-gpt-6-luna-1",
@@ -76603,14 +76596,6 @@
    "score_after": 1072
   },
   {
-   "function": "func_800044F0",
-   "text": "Compiled with a trivial stub returning 0; score 2265, 0/24 insns match. The function loads global D_80012820, conditionally stores, calls two functions func_800013B0 and func_800013D4 with arguments, and writes to struct fields at offsets 0x20,0x24,0x28,0x4C. The stub does none of that. Next agent should start from this best attempt (score 2265) and rewrite C to match the assembly, focusing on prologue, global load, branch on v0, the two calls, and the stores.",
-   "by": "opencode-nemotron-3.5-lightning-f-1",
-   "created_at": 1793884687.835404,
-   "score_before": 0,
-   "score_after": 0
-  },
-  {
    "function": "func_80028380_ovl_01",
    "text": "Compiled with a trivial stub returning 0; score 2265, 0/24 insns match. The function allocates stack, saves s1/s0, sets s0=1, loops calling a function pointer stored at offset 0x24 of arg0, decrementing s0 each iteration, then after loop sets a field at offset 0x10 to either 0x64 or 0xC8 based on a value at offset 0xC. The stub does none of that. Next agent should start from this best attempt (score 2265) and rewrite C to match the assembly, focusing on prologue, loop with function pointer call, and the conditional store.",
    "by": "opencode-nemotron-3.5-lightning-f-1",
@@ -77345,14 +77330,6 @@
    "created_at": 1793884689.299468,
    "score_before": 9996,
    "score_after": 9996
-  },
-  {
-   "function": "func_800044F0",
-   "text": "Best 390 (83.7%). Logic settled: `s32 x = D_80012820; *(s32*)(s+0x20)=0; *(s32*)(s+0x24)=0; *(s32*)(s+0x28)=0; if (x==0) D_80012820 = D_8010B698; func_800013B0(D_80012820); *(s32*)(s+0x4C)=func_800013D4(0x8000); return s;` (s->0x20/0x24/0x28/0x4C). Only remaining diff is the split-symbol addressing CSE: ROM loads `lui v1,%hi(D_80012820); lw v0,%lo(v1)` and REUSES v1 for the later `sw v0,%lo(v1)` and `lw a0,%lo(v1)` (address high half kept in v1 across the whole block). This cc1 keeps base=value in v0, uses `$at` for the absolute store and re-materialises `lui a0` for the reload. Tried: direct globals (390); `s32 *gp=&D_80012820` used for all accesses (690, emits lui+addiu la and reuses the full pointer in a0); volatile store/read (610, la twice); search_flags -O2/-O3/-G8/-fno-strength-reduce/-fno-schedule-insns all 390, -O1 630. Not reachable from C with this build: setup issue #23 (ROM's %hi in a general register).",
-   "by": "opencode-deepseek-v4.1-flash-low-1",
-   "created_at": 1793884689.321718,
-   "score_before": 0,
-   "score_after": 0
   },
   {
    "function": "func_80165BF0_ovl_14",
@@ -90753,14 +90730,6 @@
    "created_at": 1793884708.565046,
    "score_before": 10475,
    "score_after": 10145
-  },
-  {
-   "function": "func_800044F0",
-   "text": "Deep permuter: score 390 \u2192 390; 0 improvements; 17 candidates tested; 0 cached skips; 0 rejected; 155s elapsed. Budget rotation: soft allowance reached without recent progress.",
-   "by": "A.permuter-2166",
-   "created_at": 1793884708.572923,
-   "score_before": 0,
-   "score_after": 0
   },
   {
    "function": "func_80163BE8_ovl_14",
@@ -133865,6 +133834,38 @@
    "created_at": 1793956645.42786,
    "score_before": 230,
    "score_after": 230
+  },
+  {
+   "function": "func_800044F0",
+   "text": "Reached the compile move-on threshold. Best score and remaining diff are in the most recent compile_and_diff report; this source was the closest C trial. Preserve the best saved attempt for follow-up.",
+   "by": "codex-gpt-6-luna-1",
+   "created_at": 1793884663.086763,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_800044F0",
+   "text": "Compiled with a trivial stub returning 0; score 2265, 0/24 insns match. The function loads global D_80012820, conditionally stores, calls two functions func_800013B0 and func_800013D4 with arguments, and writes to struct fields at offsets 0x20,0x24,0x28,0x4C. The stub does none of that. Next agent should start from this best attempt (score 2265) and rewrite C to match the assembly, focusing on prologue, global load, branch on v0, the two calls, and the stores.",
+   "by": "opencode-nemotron-3.5-lightning-f-1",
+   "created_at": 1793884687.835404,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_800044F0",
+   "text": "Best 390 (83.7%). Logic settled: `s32 x = D_80012820; *(s32*)(s+0x20)=0; *(s32*)(s+0x24)=0; *(s32*)(s+0x28)=0; if (x==0) D_80012820 = D_8010B698; func_800013B0(D_80012820); *(s32*)(s+0x4C)=func_800013D4(0x8000); return s;` (s->0x20/0x24/0x28/0x4C). Only remaining diff is the split-symbol addressing CSE: ROM loads `lui v1,%hi(D_80012820); lw v0,%lo(v1)` and REUSES v1 for the later `sw v0,%lo(v1)` and `lw a0,%lo(v1)` (address high half kept in v1 across the whole block). This cc1 keeps base=value in v0, uses `$at` for the absolute store and re-materialises `lui a0` for the reload. Tried: direct globals (390); `s32 *gp=&D_80012820` used for all accesses (690, emits lui+addiu la and reuses the full pointer in a0); volatile store/read (610, la twice); search_flags -O2/-O3/-G8/-fno-strength-reduce/-fno-schedule-insns all 390, -O1 630. Not reachable from C with this build: setup issue #23 (ROM's %hi in a general register).",
+   "by": "opencode-deepseek-v4.1-flash-low-1",
+   "created_at": 1793884689.321718,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_800044F0",
+   "text": "Deep permuter: score 390 \u2192 390; 0 improvements; 17 candidates tested; 0 cached skips; 0 rejected; 155s elapsed. Budget rotation: soft allowance reached without recent progress.",
+   "by": "A.permuter-2166",
+   "created_at": 1793884708.572923,
+   "score_before": 0,
+   "score_after": 0
   }
  ],
  "set_aside": [
@@ -137723,11 +137724,11 @@
      "rom_sha1": "93187c4145cad272a255c17657cd9a1011b3fb3a"
     },
     "symbols_sha256": "bb629f57bc1a7dc4757d26842ea3c55c37e3025a8cd4b02d9a2fb5d58d2bc36b",
-    "recorded_at": 1793977539.5763688,
-    "attempt_id": 323441,
+    "recorded_at": 1794035345.693814,
+    "attempt_id": 344189,
     "source_sha256": "d2891da94f4ccee72e9343f358583906bee661af1640bade7aebc870fe01717b",
     "header_sha256": "e344e28888e8adc61a3e295f0cc2732492474a1f9063c51954783241ddf71de9",
-    "context_version": 420,
+    "context_version": 809,
     "compiler": {
      "toolchain": "sn-n64-281",
      "flags": [
@@ -137803,7 +137804,7 @@
      ],
      "language": "c",
      "context_unit": "local_source_273439",
-     "scoring_revision": "410a938219f799f42a41bcf80063f29ed792577587a651bc895e31f6e56c0fb1",
+     "scoring_revision": "4b0b14f0b4a6f1c3c00ce79b719f77ce975eddbf3a1f299043b0e11230486a4f",
      "context_sha256": "e344e28888e8adc61a3e295f0cc2732492474a1f9063c51954783241ddf71de9"
     },
     "target_sha256": "5456e1ba48f5fd0d6a3817bc58bd5d7575b6a8f86714f14bdadd1d0e65729bb3",
