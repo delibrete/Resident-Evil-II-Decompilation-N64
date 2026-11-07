@@ -1,7 +1,7 @@
 {
  "format": 1,
- "saved_at": 1794034897.191584,
- "revision": 34794,
+ "saved_at": 1794036227.396055,
+ "revision": 34907,
  "title": "Resident Evil II",
  "platform": "n64",
  "game": {
@@ -24042,7 +24042,7 @@
   },
   "func_8016F824_overlay_053": {
    "vram": 2148988964,
-   "matched_by": "autopilot",
+   "matched_by": "restored",
    "readable": false
   },
   "func_8016F84C_overlay_051": {
@@ -132952,14 +132952,6 @@
    "score_after": null
   },
   {
-   "function": "func_8016F824_overlay_053",
-   "text": "Deep permuter: score 230 \u2192 230; 0 improvements; 11 candidates tested; 0 cached skips; 0 rejected; 66s elapsed. Budget rotation: soft allowance reached without recent progress.",
-   "by": "Retroreversing.permuter-6294",
-   "created_at": 1793956347.7197728,
-   "score_before": 230,
-   "score_after": 230
-  },
-  {
    "function": "func_8015B420_ovl_03",
    "text": "Tried indirect dispatch through typed function table. Score 255. Difference stems from access schedule/address arithmetic: target loads table base into v1 before state byte in v0, forms base+index*4, then loads pointer. Need force that ordering, likely table struct/address expression.",
    "by": "codex-gpt-6-luna-1",
@@ -133030,6 +133022,14 @@
    "created_at": 1793947931.86036,
    "score_before": 270,
    "score_after": 270
+  },
+  {
+   "function": "func_8016F824_overlay_053",
+   "text": "Deep permuter: score 230 \u2192 230; 0 improvements; 11 candidates tested; 0 cached skips; 0 rejected; 66s elapsed. Budget rotation: soft allowance reached without recent progress.",
+   "by": "Retroreversing.permuter-6294",
+   "created_at": 1793956347.7197728,
+   "score_before": 230,
+   "score_after": 230
   }
  ],
  "set_aside": [
@@ -274542,8 +274542,8 @@
      "rom_sha1": "93187c4145cad272a255c17657cd9a1011b3fb3a"
     },
     "symbols_sha256": "bb629f57bc1a7dc4757d26842ea3c55c37e3025a8cd4b02d9a2fb5d58d2bc36b",
-    "recorded_at": 1794010674.934716,
-    "attempt_id": 332415,
+    "recorded_at": 1794013501.858452,
+    "attempt_id": 333442,
     "source_sha256": "be3333c52f917a91347499bfa702621d5eb0dd3e58c4491e38eda05cf08f3b22",
     "header_sha256": "6741617bf3c952bbf3b41f49aed7f8780fa9b0b41fb7a8e56fda2b5b9ed03d44",
     "context_version": 143,
