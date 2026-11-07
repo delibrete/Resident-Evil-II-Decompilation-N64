@@ -7473,7 +7473,8 @@
     "-mcpu=VR4300",
     "-mhard-float",
     "-mfp64"
-   ]
+   ],
+   "timeout": 20
   },
   "69872636:2149011036": {
    "vram": 2149011036,
@@ -27876,8 +27877,8 @@
   },
   "func_80174DA8_overlay_057": {
    "vram": 2149010856,
-   "best_score": 7800,
-   "best_by": "autopilot"
+   "matched_by": "autopilot",
+   "readable": false
   },
   "func_80174E5C_overlay_059": {
    "vram": 2149011036,
@@ -122707,14 +122708,6 @@
    "score_after": 6450
   },
   {
-   "function": "func_80174DA8_overlay_057",
-   "text": "Deep permuter: score 760 \u2192 760; 0 improvements; 1 candidates tested; 0 cached skips; 0 rejected; 61s elapsed. Budget rotation: soft allowance reached without recent progress.",
-   "by": "Retroreversing.permuter-6548",
-   "created_at": 1793958790.1365309,
-   "score_before": 760,
-   "score_after": 760
-  },
-  {
    "function": "func_80163054_ovl_31",
    "text": "Deep permuter: score 4306 \u2192 4306; 0 improvements; 8 candidates tested; 0 cached skips; 0 rejected; 62s elapsed. Budget rotation: soft allowance reached without recent progress.",
    "by": "Retroreversing.permuter-5121",
@@ -133353,6 +133346,14 @@
    "created_at": 1793960299.160342,
    "score_before": 300,
    "score_after": 300
+  },
+  {
+   "function": "func_80174DA8_overlay_057",
+   "text": "Deep permuter: score 760 \u2192 760; 0 improvements; 1 candidates tested; 0 cached skips; 0 rejected; 61s elapsed. Budget rotation: soft allowance reached without recent progress.",
+   "by": "Retroreversing.permuter-6548",
+   "created_at": 1793958790.1365309,
+   "score_before": 760,
+   "score_after": 760
   }
  ],
  "set_aside": [
@@ -264180,8 +264181,8 @@
      "rom_sha1": "93187c4145cad272a255c17657cd9a1011b3fb3a"
     },
     "symbols_sha256": "bb629f57bc1a7dc4757d26842ea3c55c37e3025a8cd4b02d9a2fb5d58d2bc36b",
-    "recorded_at": 1793988552.9271228,
-    "attempt_id": 325923,
+    "recorded_at": 1794024946.617686,
+    "attempt_id": 341691,
     "source_sha256": "c983326a0d82b95f0965dc40827415b632b651fdb0a89b4c0e19abfea821917d",
     "header_sha256": "6741617bf3c952bbf3b41f49aed7f8780fa9b0b41fb7a8e56fda2b5b9ed03d44",
     "context_version": 735,
@@ -264260,7 +264261,7 @@
      ],
      "language": "c",
      "context_unit": "local_source_277821",
-     "scoring_revision": "410a938219f799f42a41bcf80063f29ed792577587a651bc895e31f6e56c0fb1",
+     "scoring_revision": "4b0b14f0b4a6f1c3c00ce79b719f77ce975eddbf3a1f299043b0e11230486a4f",
      "context_sha256": "6741617bf3c952bbf3b41f49aed7f8780fa9b0b41fb7a8e56fda2b5b9ed03d44"
     },
     "target_sha256": "1f43b55e6d31a8fb00d46b654e8ec1c07189fa02b4f2561fa7a68c50f4957426",
