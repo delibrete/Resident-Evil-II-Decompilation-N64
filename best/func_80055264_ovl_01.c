@@ -127,9 +127,9 @@ void func_80055264_ovl_01(void *arg0, s32 arg1)
     return;
   }
   temp_s0 = *((s8 *) (((char *) new_var5) + 0x18210));
-  temp_s1 = -(*((s8 *) (((char *) (&D_800C7650_ovl_01)) + 0x18211)));
-  temp_fs1 = func_80047DA0_ovl_01((f32) temp_s1, (f32) temp_s0) - D_800B8EEC_ovl_01;
-  temp_fs0 = (f32) ((temp_s0 * temp_s0) + (temp_s1 * temp_s1));
+  var_v0_4 = (s8)(-(*((s8 *) (((char *) (&D_800C7650_ovl_01)) + 0x18211))));
+  temp_fs1 = func_80047DA0_ovl_01((f32) var_v0_4, (f32) temp_s0) - D_800B8EEC_ovl_01;
+  temp_fs0 = (f32) ((temp_s0 * temp_s0) + (var_v0_4 * var_v0_4));
   temp_fs0_2 = temp_fs0 * func_80048090_ovl_01(temp_fs0);
   D_8010DBAC_ovl_01 = temp_fs1;
   new_var3 = temp_fs0_2;
