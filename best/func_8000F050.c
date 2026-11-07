@@ -58,7 +58,7 @@ s32 func_8000F050(void *fn, void *dst0, void *fmt0, void *ap0)
     while (func_8000DE40(D_80011D10, *p))
     {
       __repair_literal = 4;
-      flags |= *((s32 *) (D_80011D18 + ((((u32) func_8000DE40(D_80011D10, *p)) - (0x80011D10)) * __repair_literal)));
+      flags |= *((s32 *) (D_80011D18 + ((((u32) func_8000DE40(D_80011D10, *p)) - 0x80011D10) * __repair_literal)));
       p++;
     }
 
@@ -131,7 +131,7 @@ s32 func_8000F050(void *fn, void *dst0, void *fmt0, void *ap0)
     func_8000F5C0(&f, &ap, *p, &f);
     n = width - (((((f.b + f.c) + f.d) + f.e) + f.a) + f.f);
     width = n;
-    if ((!(flags & 4)) && (n > ((double) 0)))
+    if ((!(flags & 4)) && (n > ((unsigned short) ((double) 0))))
     {
       while (n > 0)
       {
@@ -207,7 +207,8 @@ s32 func_8000F050(void *fn, void *dst0, void *fmt0, void *ap0)
     {
       while (f.f > 0)
       {
-        chunk = (f.f < 32) ? (f.f) : (32);
+        __repair_literal = (f.f < 32) ? (f.f) : (32);
+        chunk = __repair_literal;
         dst = out(dst, D_80013834, chunk);
         f.f -= chunk;
         if (!dst)

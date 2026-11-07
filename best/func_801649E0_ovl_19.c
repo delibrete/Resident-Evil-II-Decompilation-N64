@@ -1,4 +1,4 @@
-static inline static u8 __repair_inline(u8 a)
+inline static static u8 __repair_inline(u8 a)
 {
   return a;
 }
@@ -15,7 +15,6 @@ void func_801649E0_ovl_19(void *arg0, s32 arg1, s32 arg2)
   s16 sp14;
   s16 temp_a0_2;
   s16 temp_v0;
-  s16 temp_v1_5;
   s32 *temp_s0;
   s32 *var_s0;
   s32 *var_v1_2;
@@ -47,7 +46,7 @@ void func_801649E0_ovl_19(void *arg0, s32 arg1, s32 arg2)
       temp_v1_2 = __repair_inline(*((u8 *) (((char *) new_var2) + 5)));
       *((s16 *) (((char *) new_var2) + 0x1F2)) = -1;
       *((s8 *) (((char *) new_var2) + 0x207)) = 0;
-      if (((((u32) (temp_v1_2 - 9)) < 2U) || ((temp_v1_3 = temp_v1_2 & 0xFF, temp_v1_3 == 0x10))) || (temp_v1_3 == 0x11))
+      if (((((u32) (temp_v1_2 - 9)) < 2U) || ((temp_v1_3 = temp_v1_2 & 0xFF, temp_v1_3 == 0x10))) || ((temp_v1_2 & 0xFF) == 0x11))
     {
       func_800377B0_ovl_01((((func_80033634_ovl_01() & 0xFF) * 4) + 0xC18) | 0x05040000, *((s16 *) (((char *) new_var2) + 0x66)), new_var2 + 0x14, NULL);
       *((s8 *) (((char *) new_var2) + 0x207)) = 1;
@@ -94,11 +93,11 @@ void func_801649E0_ovl_19(void *arg0, s32 arg1, s32 arg2)
       break;
 
     case 2:
-      temp_v1_5 = *((s16 *) (((char *) new_var2) + 0x1F4));
-      if ((temp_v1_5 == 0x1E) || (temp_v1_5 == 0x3C))
+      arg2 = *((s16 *) (((char *) new_var2) + 0x1F4));
+      if ((arg2 == 0x1E) || (arg2 == 0x3C))
     {
       *((s8 *) (((char *) new_var2) + 0x1EA)) = 7;
-      *((s32 *) (((char *) new_var2) + 0x1E8)) = (s8) (((u8) (*((s32 *) (((char *) new_var2) + 0x1E8)))) + 1);
+      *(((char *) new_var2) + 0x1E8) = (s8) (((u8) (*((s32 *) (((char *) new_var2) + 0x1E8)))) + 1);
     }
       temp_v0 = ((u16) (*((s16 *) (((char *) new_var2) + 0x1F4)))) + 1;
       *((s16 *) (((char *) new_var2) + 0x1F4)) = temp_v0;
@@ -111,7 +110,7 @@ void func_801649E0_ovl_19(void *arg0, s32 arg1, s32 arg2)
       func_800377B0_ovl_01(0x805F4, (func_80033634_ovl_01() & 0xFF) * 0x10, temp_s0 + 0x38, &sp10);
     }
       var_a0_2 = 0xA;
-      var_a2 = (char *) (*((s32 **) (((char *) new_var2) + 0x234)));
+      var_a2 = (char *) (*(((char *) new_var2) + 0x234));
       var_a2 += (s32) 0x128;
       do
     {

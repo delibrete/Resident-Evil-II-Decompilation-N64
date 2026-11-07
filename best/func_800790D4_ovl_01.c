@@ -4,6 +4,8 @@ extern s32 D_8011A31C_ovl_01;
 void func_800790D4_ovl_01(s16 arg0)
 {
   s32 var_s1;
+  int new_var;
+  unsigned int new_var2;
   s32 var_s2;
   void *temp_s0;
   var_s2 = arg0 * 0x3C;
@@ -11,6 +13,8 @@ void func_800790D4_ovl_01(s16 arg0)
   {
     var_s2 = 0;
     var_s1 = var_s2;
+    new_var2 = 1;
+    new_var = 4;
     loop_2:
     temp_s0 = (char *) var_s1;
 
@@ -19,10 +23,10 @@ void func_800790D4_ovl_01(s16 arg0)
     {
       if (func_800A2148_ovl_01(*((s32 *) (((char *) temp_s0) + 4))) & 0xFF)
       {
-        var_s2 = *((s32 *) (((char *) temp_s0) + 4));
+        var_s2 = *((s32 *) (((char *) temp_s0) + new_var));
         func_800A1EE0_ovl_01(var_s2);
       }
-      *((s32 *) (((char *) temp_s0) + 4)) = -1;
+      *((s32 *) (((char *) temp_s0) + new_var)) = -new_var2;
       var_s2 += 1;
       var_s1 += 4;
       if (var_s2 >= 4)

@@ -18,7 +18,7 @@ extern s32 D_8010DD08_ovl_01;
 extern u16 D_8010DD0A_ovl_01;
 extern f32 D_8010DD0C_ovl_01;
 extern s32 D_8010DD10_ovl_01;
-static inline int inline_fn(u16 *arg0)
+inline static int inline_fn(u16 *arg0)
 {
   return (*arg0) + D_8010DD0A_ovl_01;
 }
@@ -38,6 +38,7 @@ void func_80055264_ovl_01(void *arg0, s32 arg1)
   s32 var_v0_2;
   s32 var_v0_3;
   s32 var_v0_4;
+  s32 *new_var5;
   s32 new_var;
   s8 temp_s0;
   s8 temp_s1;
@@ -46,8 +47,9 @@ void func_80055264_ovl_01(void *arg0, s32 arg1)
   u32 temp_v1_2;
   if (((u8) (*((u8 *) (((char *) (&D_800C7650_ovl_01)) + 0x2148E)))) < 2U)
   {
-    var_a0 = *((s8 *) (((char *) (&D_800C7650_ovl_01)) + 0x18210));
-    if (((D_8010DBA9_ovl_01 < (*((s8 *) (((char *) (&D_800C7650_ovl_01)) + 0x18211)))) || ((*((s8 *) (((char *) (&D_800C7650_ovl_01)) + 0x18211))) < D_8010DBA8_ovl_01)) && (((var_v0 = var_a0 * 2, (D_8010DBA7_ovl_01 < var_a0) != 0)) || ((var_v0 = var_a0 * 2, 0 != (var_a0 < D_8010DBA8_ovl_01)))))
+    new_var5 = &D_800C7650_ovl_01;
+    var_a0 = *((s8 *) (((char *) new_var5) + 0x18210));
+    if (((D_8010DBA9_ovl_01 < (*((s8 *) (((char *) new_var5) + 0x18211)))) || ((*((s8 *) (((char *) new_var5) + 0x18211))) < D_8010DBA8_ovl_01)) && (((var_v0 = var_a0 * 2, (D_8010DBA7_ovl_01 < var_a0) != 0)) || ((var_v0 = var_a0 * 2, 0 != (var_a0 < D_8010DBA8_ovl_01)))))
     {
       var_a0 += var_v0;
     }
@@ -124,7 +126,7 @@ void func_80055264_ovl_01(void *arg0, s32 arg1)
     *((u16 *) (((char *) arg0) + 0x66)) = (u16) inline_fn((u16 *) (((char *) arg0) + 0x66));
     return;
   }
-  temp_s0 = *((s8 *) (((char *) (&D_800C7650_ovl_01)) + 0x18210));
+  temp_s0 = *((s8 *) (((char *) new_var5) + 0x18210));
   temp_s1 = -(*((s8 *) (((char *) (&D_800C7650_ovl_01)) + 0x18211)));
   temp_fs1 = func_80047DA0_ovl_01((f32) temp_s1, (f32) temp_s0) - D_800B8EEC_ovl_01;
   temp_fs0 = (f32) ((temp_s0 * temp_s0) + (temp_s1 * temp_s1));

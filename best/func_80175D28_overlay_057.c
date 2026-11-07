@@ -39,7 +39,8 @@ void func_80175D28_overlay_057(void *arg0, void *arg1, u32 arg2) {
             M2C_FIELD(arg0, u8 *, 0x2BD) = 1U;
             M2C_FIELD(arg0, u16 *, 0x2BE) = 0U;
             temp_v0_2 = func_80033634_ovl_01(arg0);
-            D_801762FB_overlay_057 = 7 - ((temp_v0_2 & 0xFF) % 14);
+            var_a2 = temp_v0_2 & 0xFF;
+    D_801762FB_overlay_057 = 7 - ((var_a2) % 14);
             temp_v0_3 = func_80033634_ovl_01((void *) ((temp_v0_2 & 0xFF) / 14), &D_801762FB_overlay_057, MULTU_HI(((u32) (temp_v0_2 & 0xFF) >> 1), 0x92492493));
             var_a2 = MULTU_HI(((u32) (temp_v0_3 & 0xFF) >> 1), 0x92492493);
             D_801762FA_overlay_057 = 7 - ((temp_v0_3 & 0xFF) % 14);

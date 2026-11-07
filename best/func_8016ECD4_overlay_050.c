@@ -1,30 +1,27 @@
-#ifndef M2C_DEFINES
-#define M2C_DEFINES
-typedef s32 M2C_UNK;
-typedef s8 M2C_UNK8;
-typedef s16 M2C_UNK16;
-typedef s32 M2C_UNK32;
-#define M2C_FIELD(expr, type_ptr, offset) (*(type_ptr)((s8 *)(expr) + (offset)))
-#define M2C_BITWISE(type, expr) ((type)(expr))
-#define M2C_ERROR(desc) (0)
-#define M2C_CARRY 0
-#define M2C_OVERFLOW(a) (0)
-#endif
 extern short D_800E10FA;
 extern short D_800E1102;
-/* machine draft (m2c) for gcc-2.7.2-kmc -G0 -mips3 -mgp32 -mfp32 -O2, tried by autopilot */
-
 s32 func_80032D44_ovl_01();
 extern char D_800E10D0[];
-
-s16 func_8016ECD4_overlay_050(void *arg0) {
-    s16 temp_a0;
-    s16 var_v1;
-
-    temp_a0 = (func_80032D44_ovl_01(M2C_FIELD(arg0, s16 *, 0x2A),  M2C_FIELD(arg0, s16 *, 0x32)) - M2C_FIELD(arg0, u16 *, 0x66)) & 0xFFF;
-    var_v1 = temp_a0;
-    if (temp_a0 >= 0x801) {
-        var_v1 = temp_a0 | 0xF000;
-    }
-    return var_v1;
+s16 func_8016ECD4_overlay_050(void *arg0)
+{
+  char *new_var2;
+  s16 temp_a0;
+  char *new_var3;
+  s16 var_v1;
+  char *new_var;
+  s16 *new_var4;
+  char *new_var5;
+  new_var2 = ((char *) arg0) + 0x32;
+  new_var5 = ((char *) arg0) + 0x2A;
+  new_var = new_var2;
+  var_v1 = *(new_var4 = (s16 *) new_var5);
+  new_var3 = ((char *) arg0) + 0x66;
+  temp_a0 = (func_80032D44_ovl_01(var_v1, *((s16 *) new_var)) - (*((u16 *) new_var3))) & 0xFFF;
+  var_v1 = temp_a0;
+  if (temp_a0 >= 0x801)
+  {
+    var_v1 = temp_a0 | 0xF000;
+  }
+  return var_v1;
 }
+

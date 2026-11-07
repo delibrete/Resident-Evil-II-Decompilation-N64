@@ -2,6 +2,7 @@ s32 func_80033634_ovl_01();
 s32 func_800377B0_ovl_01();
 extern char D_80173214_overlay_050[];
 extern s32 *D_80173418_overlay_050;
+typedef struct { unsigned char pad_0[8]; unsigned short field_8; unsigned short field_A; } __repair_record_D_80173418_overlay_050;
 void func_8016F4CC_overlay_050(void *arg0)
 {
   s32 temp_s3;
@@ -20,9 +21,9 @@ void func_8016F4CC_overlay_050(void *arg0)
   }
   do
   {
-    if (!((*((u16 *) (((char *) D_80173418_overlay_050) + 0xA))) & 2))
+    if (!((((__repair_record_D_80173418_overlay_050*)D_80173418_overlay_050)->field_A) & 2))
     {
-      temp_s0 = (temp_s3 + ((*((u16 *) (((char *) D_80173418_overlay_050) + 8))) * 0x178)) + 0x38;
+      temp_s0 = (temp_s3 + ((((__repair_record_D_80173418_overlay_050*)D_80173418_overlay_050)->field_8) * 0x178)) + 0x38;
       do
       {
         func_800377B0_ovl_01((((func_80033634_ovl_01() & 0xFF) * 2) + 0x1000) | 0x06000000, 0, temp_s0);
@@ -31,7 +32,7 @@ void func_8016F4CC_overlay_050(void *arg0)
     }
     D_80173418_overlay_050 += 0xC;
   }
-  while ((*((u16 *) (((char *) D_80173418_overlay_050) + 0xA))) & 1);
+  while ((((__repair_record_D_80173418_overlay_050*)D_80173418_overlay_050)->field_A) & 1);
   if (new_var)
   {
     *((void (**)(void *)) (((char *) arg0) + 0x2BC)) = NULL;

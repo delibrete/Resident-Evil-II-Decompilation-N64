@@ -11,8 +11,10 @@ inline static static static static static static static static static static sta
 void func_80167C40_ovl_31(void *arg0)
 {
   volatile short new_var11;
+  volatile short new_var14;
   unsigned char new_var3;
   volatile short new_var5;
+  volatile char new_var12;
   volatile short new_var8[2];
   volatile short new_var4;
   volatile short new_var10;
@@ -21,10 +23,11 @@ void func_80167C40_ovl_31(void *arg0)
   volatile short new_var;
   volatile char new_var2;
   volatile unsigned char new_var9;
+  int new_var13;
   new_var4 = (char) new_var8[1];
+  new_var12 = (new_var6 = 0);
   new_var8[1] = 0;
   new_var = new_var4;
-  new_var6 = 0;
   do
   {
   }
@@ -36,8 +39,9 @@ void func_80167C40_ovl_31(void *arg0)
     new_var3 = new_var8[1];
     new_var4 = new_var;
     new_var6 = new_var4;
+    new_var13 = new_var6;
     new_var5 = (new_var5 = *new_var7);
-    new_var10 = inline_fn2(new_var6);
+    new_var10 = inline_fn2(new_var13);
     new_var8[0] = new_var10;
     new_var8[1] = new_var5;
     ;
@@ -45,9 +49,10 @@ void func_80167C40_ovl_31(void *arg0)
   }
   else
   {
-    new_var7 = &new_var8[new_var6];
+    new_var7 = &new_var8[new_var13];
     new_var3 = new_var8[1];
-    new_var4 = new_var;
+    new_var14 = new_var;
+    new_var4 = new_var14;
     new_var9 = new_var4;
     new_var11 = new_var4;
     new_var6 = new_var9;

@@ -1,8 +1,8 @@
-extern volatile u32 D_80167E70_ovl_17[];
+extern volatile u32 D_80174A00_overlay_045[];
 void func_80171588_overlay_045(void *arg0)
 {
   int new_var3;
-  volatile u32 *base = D_80167E70_ovl_17;
+  volatile u32 *base = D_80174A00_overlay_045;
   u32 new_var;
   u32 i = *(((u8 *) arg0) + 0x2BE);
   u32 new_var2;
@@ -13,4 +13,3 @@ void func_80171588_overlay_045(void *arg0)
   new_var3 = new_var2;
   ((void (*)(void)) base[new_var3])();
 }
-

@@ -2,7 +2,7 @@ s32 func_800AC63C_ovl_01(s32, s32, s32, s32);
 s32 func_800AC6D4_ovl_01(s32, s32, s32);
 extern s32 D_80148C20;
 extern s32 D_8014CF20;
-static inline int inline_fn(s32 arg0, int arg1)
+inline static int inline_fn(s32 arg0, int arg1)
 {
   return ((arg0 & 0xFF) * 0x86) + arg1;
 }
@@ -10,6 +10,7 @@ static inline int inline_fn(s32 arg0, int arg1)
 void func_800ABA74_ovl_01(s32 arg0, s32 arg1, s32 arg3)
 {
   int __repair_constant = 0x40;
+  char *new_var2;
   s32 temp_a2;
   s32 new_var;
   s32 temp_s0;
@@ -65,6 +66,7 @@ void func_800ABA74_ovl_01(s32 arg0, s32 arg1, s32 arg3)
   {
     *((s8 *) (((char *) (((arg0 & 0xFF) * 0x86) + (&D_8014CF20))) + 7)) = 0x7F;
   }
+  new_var2 = (char *) (((arg0 & 0xFF) * 0x86) + (&D_8014CF20));
   var_a2_2 = arg1 & 0xFF;
   if (var_a2_2 != 0xFF)
   {
@@ -72,7 +74,7 @@ void func_800ABA74_ovl_01(s32 arg0, s32 arg1, s32 arg3)
   }
   else
   {
-    *((s8 *) (((char *) (((arg0 & 0xFF) * 0x86) + (&D_8014CF20))) + 0xA)) = __repair_constant;
+    *((s8 *) (new_var2 + 0xA)) = __repair_constant;
     var_a2_2 = arg1 & 0xFF;
   }
   if (var_a2_2 != 0xFF)
@@ -90,16 +92,16 @@ void func_800ABA74_ovl_01(s32 arg0, s32 arg1, s32 arg3)
   }
   else
   {
-    *((s8 *) (((char *) (((arg0 & 0xFF) * 0x86) + (&D_8014CF20))) + 0x81)) = 0;
+    *((s8 *) (new_var2 + 0x81)) = 0;
     var_a2_3 = arg1 & 0xFF;
   }
-  if (var_a2_3 != 0xFF)
+  if (var_a2_3 == 0xFF)
   {
-    *(((((arg0 & 0xFF) * 0x86) + 0x40) + (var_a2_3 * 0x860)) + (&D_80148C20)) = 0;
+    *((s8 *) (new_var2 + 0x40)) = 0;
   }
   else
   {
-    *((s8 *) (((char *) (((arg0 & 0xFF) * 0x86) + (&D_8014CF20))) + 0x40)) = 0;
+    *(((((arg0 & 0xFF) * 0x86) + 0x40) + (var_a2_3 * 0x860)) + (&D_80148C20)) = 0;
   }
   var_a2_4 = arg1 & 0xFF;
   if (var_a2_4 != 0xFF)
@@ -108,7 +110,7 @@ void func_800ABA74_ovl_01(s32 arg0, s32 arg1, s32 arg3)
   }
   else
   {
-    *((s8 *) (((char *) (((arg0 & 0xFF) * 0x86) + (&D_8014CF20))) + 0x41)) = 0;
+    *((s8 *) (new_var2 + 0x41)) = 0;
     var_a2_4 = arg1 & 0xFF;
   }
   if (var_a2_4 != 0xFF)
@@ -117,7 +119,7 @@ void func_800ABA74_ovl_01(s32 arg0, s32 arg1, s32 arg3)
   }
   else
   {
-    *((s8 *) (((char *) (((arg0 & 0xFF) * 0x86) + (&D_8014CF20))) + 0x5B)) = 0;
+    *((s8 *) (new_var2 + 0x5B)) = 0;
   }
   var_a2_5 = arg1 & 0xFF;
   if (var_a2_5 != 0xFF)
@@ -126,7 +128,7 @@ void func_800ABA74_ovl_01(s32 arg0, s32 arg1, s32 arg3)
   }
   else
   {
-    *((s8 *) (((char *) (((arg0 & 0xFF) * 0x86) + (&D_8014CF20))) + 0x83)) = 0;
+    *((s8 *) (new_var2 + 0x83)) = 0;
     var_a2_5 = arg1 & 0xFF;
   }
   if (var_a2_5 != 0xFF)

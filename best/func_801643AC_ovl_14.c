@@ -35,10 +35,12 @@ typedef struct
 void func_801643AC_ovl_14(S_func_801643AC_ovl_14 *p, s32 arg1, s32 arg2)
 {
   s32 v;
+  s32 *new_var3;
   void *obj;
   long long new_var;
   s16 tmp[4];
   s32 new_var2;
+  new_var3 = (s32 *) (((u8 *) p) + 4);
   switch (p->unk_06)
   {
     case 0:
@@ -104,7 +106,7 @@ void func_801643AC_ovl_14(S_func_801643AC_ovl_14 *p, s32 arg1, s32 arg2)
       v = func_8008A974_ovl_01(p, arg1, arg2, 0x1000);
       p->unk_2C = 0;
     {
-      *((s32 *) (((u8 *) p) + 4)) = 0x01000000;
+      do {*new_var3 = 0x01000000;}while(0);
     }
       break;
 

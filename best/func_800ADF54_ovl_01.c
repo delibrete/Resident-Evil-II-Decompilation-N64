@@ -22,8 +22,7 @@ s32 func_800ADF54_ovl_01(volatile unsigned int arg0, s16 *arg1)
 {
   s32 v;
   *((s16 *) (D_8014E0F0 + 4)) = arg0;
-  v = func_800AB3DC_ovl_01(D_8014E0F0, D_801529A0, D_80152990, 12, D_800AE114_ovl_01);
-  D_8014E0FC = v;
+  D_8014E0FC = (v = func_800AB3DC_ovl_01(D_8014E0F0, D_801529A0, D_80152990, 12, D_800AE114_ovl_01));
   if (v)
   {
     *arg1 = *((u16 *) (v + 6));

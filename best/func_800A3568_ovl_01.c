@@ -42,6 +42,7 @@ Node *func_800A3568_ovl_01(void)
       node->next = 0;
       D_80143F38->next = node;
       node->prev = D_80143F38;
+      node->prev = node;
       D_80143F38 = node;
     }
     return node;
@@ -51,8 +52,7 @@ Node *func_800A3568_ovl_01(void)
   next = node->next;
   next->prev = 0;
   node->next = 0;
-  node->prev = node;
-  node->next = new_var2;
+  node->next = node;
   D_80143F38 = node;
   D_80143F34 = next;
   return node;

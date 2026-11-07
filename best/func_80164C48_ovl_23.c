@@ -2,9 +2,11 @@ s32 func_80033634_ovl_01(void);
 s32 func_80032DEC_ovl_01(void *, s32, s32, s32);
 s32 func_80036764_ovl_01(void *, s32, s32, s32);
 extern u32 D_800C7650_ovl_01;
-void func_80164C48_ovl_23(void *arg0)
+volatile char func_80164C48_ovl_23(void *arg0)
 {
   s32 state;
+  s32 *new_var;
+  s32 __repair_phase_state;
   s32 value;
   s32 result;
   value = 1;
@@ -35,12 +37,15 @@ void func_80164C48_ovl_23(void *arg0)
   active:
   result = func_80036764_ovl_01(arg0, (*((s16 *) (((u8 *) arg0) + 0x1f4))) + 6, 3, 0);
 
-  state = *((u8 *) (((u8 *) arg0) + 7));
-  *((u8 *) (((u8 *) arg0) + 7)) = state + result;
-  func_80032DEC_ovl_01(arg0, *((s32 *) ((((u8 *) (&D_800C7650_ovl_01)) + 0x18000) + 0x1aa8)), *((s32 *) ((((u8 *) (&D_800C7650_ovl_01)) + 0x18000) + 0x1ab0)), 8);
+  __repair_phase_state = *((u8 *) (((u8 *) arg0) + 7));
+  *((u8 *) (((u8 *) arg0) + 7)) = __repair_phase_state + result;
+  new_var = (s32 *) ((((u8 *) (&D_800C7650_ovl_01)) + 0x18000) + 0x1ab0);
+  func_80032DEC_ovl_01(arg0, *((s32 *) ((((u8 *) (&D_800C7650_ovl_01)) + 0x18000) + 0x1aa8)), *new_var, 8);
   end:
   ;
 
+  ;
+  ;
   ;
 }
 

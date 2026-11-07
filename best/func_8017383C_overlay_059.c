@@ -25,6 +25,7 @@ void func_8017383C_overlay_059(void *arg0, s32 arg1, s32 arg2)
   int temp_a1;
   s16 temp_a2;
   s16 temp_a3;
+  s32 *new_var;
   s32 temp_v0_2;
   s32 temp_v0_3;
   u16 temp_a0;
@@ -83,7 +84,7 @@ void func_8017383C_overlay_059(void *arg0, s32 arg1, s32 arg2)
       func_80032DEC_ovl_01(arg0, (s16) temp_s5, (s16) temp_s6, 0x40);
       *((u8 *) (((char *) arg0) + 6)) = (u8) ((*((u8 *) (((char *) arg0) + 6))) + func_80089D34_ovl_01(arg0, arg1, arg2, 0x200));
       temp_a0 = *((u16 *) (((char *) arg0) + 0x2C0));
-      *((s32 *) (((char *) arg0) + 0x2C)) = (s32) ((*((s32 *) (((char *) arg0) + 0x2C))) + (*((s16 *) (((char *) arg0) + 0x1E2))));
+      *(new_var = (s32 *) (((char *) arg0) + 0x2C)) = (s32) ((*new_var) + (*((s16 *) (((char *) arg0) + 0x1E2))));
       *((s16 *) (((char *) arg0) + 0x1E2)) = (s16) ((((u16) (*((s16 *) (((char *) arg0) + 0x1E2)))) + 0x78) - temp_a0);
       *((u16 *) (((char *) arg0) + 0x2C0)) = (u16) (temp_a0 + 2);
       break;
@@ -104,7 +105,7 @@ void func_8017383C_overlay_059(void *arg0, s32 arg1, s32 arg2)
       func_80089D34_ovl_01(arg0, arg1, arg2, 0x100);
     }
     while (0);
-      *((s32 *) (((char *) arg0) + 0x2C)) = (s32) ((*((s32 *) (((char *) arg0) + 0x2C))) + (*((s16 *) (((char *) arg0) + 0x1E2))));
+      *new_var = (s32) ((*((s32 *) (((char *) arg0) + 0x2C))) + (*((s16 *) (((char *) arg0) + 0x1E2))));
       temp_a0 = *((u16 *) (((char *) arg0) + 0x2C0));
       *((s16 *) (((char *) arg0) + 0x1E2)) = (s16) ((((u16) (*((s16 *) (((char *) arg0) + 0x1E2)))) + 0x78) - temp_a0);
       *((u16 *) (((char *) arg0) + 0x2C0)) = (u16) (temp_a0 + 2);
@@ -128,7 +129,7 @@ void func_8017383C_overlay_059(void *arg0, s32 arg1, s32 arg2)
       if (temp_a1 < (*((s32 *) (((char *) arg0) + 0x2C))))
     {
       *((s32 *) (((char *) arg0) + 4)) = 0x01060000;
-      *((s32 *) (((char *) arg0) + 0x2C)) = (s32) temp_a1;
+      *new_var = (s32) temp_a1;
       *((s16 *) (((char *) arg0) + 0x1E2)) = 0;
       if (temp_a1 == (-0xE10))
       {
@@ -136,11 +137,11 @@ void func_8017383C_overlay_059(void *arg0, s32 arg1, s32 arg2)
       }
       func_80052C9C_ovl_01(8, 0x64, 0);
     }
-      if ((*((s32 *) (((char *) arg0) + 0x2C))) < (-0xED8))
+      if ((*new_var) < (-0xED8))
     {
       *((s8 *) (((char *) arg0) + 0x1A2)) = 2;
     }
-      if ((*((s32 *) (((char *) arg0) + 0x2C))) >= (-0xE0F))
+      if ((*new_var) >= (-0xE0F))
     {
       *((s8 *) (((char *) arg0) + 0x1A2)) = 0;
     }

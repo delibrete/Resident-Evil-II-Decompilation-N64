@@ -9,8 +9,8 @@ void func_8015E2EC_ovl_03(s32, s32);
 s32 func_80076074_ovl_01(s32);
 s32 func_8015D200_ovl_03(void)
 {
-short __repair_constant = 2;
-
+  int __repair_literal;
+  short __repair_constant = 2;
   u8 *a = D_80160B9C_ovl_03;
   u8 v = a[3];
   u8 *q;
@@ -20,7 +20,8 @@ short __repair_constant = 2;
   {
     goto state1;
   }
-  if (v < 2)
+  __repair_literal = 2;
+  if (v < __repair_literal)
   {
     a[10] = 128;
     a[8] = __repair_constant;
@@ -78,11 +79,9 @@ short __repair_constant = 2;
         q = (D_800C7650_ovl_01 + 0x18000) + 0x539;
         if (*q)
         {
-          do
           {
-            *q = 0;
+            do {*q = 0;}while(0);
           }
-          while (0);
           func_80077B0C_ovl_01(3.0f, 0);
         }
       }
@@ -90,7 +89,8 @@ short __repair_constant = 2;
       {
         v = 0x18000;
         q = (D_800C7650_ovl_01 + v) + 0x539;
-        if (!(*q))
+        v = *q;
+        if (!v)
         {
           do
           {

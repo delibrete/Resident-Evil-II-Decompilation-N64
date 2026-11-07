@@ -8,7 +8,7 @@ extern void func_801625F8_ovl_26(void *);
 extern void func_80166984_ovl_26(void *);
 extern u8 D_800C7650_ovl_01[];
 extern u8 D_800E10D0_ovl_01[];
-void func_80162440_ovl_26(u8 *p)
+int func_80162440_ovl_26(u8 *p)
 {
   u8 *t;
   u8 st;
@@ -19,6 +19,7 @@ void func_80162440_ovl_26(u8 *p)
     t = (D_800C7650_ovl_01 + 0x18000) + 0x1d3c;
   }
   else
+    if (1)
   {
     t = D_800E10D0_ovl_01;
   }
@@ -38,7 +39,7 @@ void func_80162440_ovl_26(u8 *p)
       p[6] = 1;
       p[0x2c1] = 1;
       p[0x2c3] = 3;
-      *((u32 *) (p + 0x1e8)) = ((((u32) p[0x2cd]) * 13) << 24) + 0x3f00;
+      *((u32 *) (p + 0x1e8)) = (((((u32) p[0x2cd]) * 13) ^ 0) << 24) + 0x3f00;
       p[0x25c] |= 2;
       *((u16 *) ((D_800C7650_ovl_01 + 0x18000) + 0x1a78)) &= 0xffbf;
       p[0x2b6] = 1;
@@ -59,7 +60,11 @@ void func_80162440_ovl_26(u8 *p)
       {
         new_var = (u16 *) (p + 0x1f4);
         p[6] = 2;
-        do {*new_var = 30;}while(0);
+        do
+        {
+          *new_var = 30;
+        }
+        while (0);
         p[0x2c1] = 3;
         p[0x2c3] = 3;
         p[0x25c] &= 0xfd;
@@ -67,6 +72,7 @@ void func_80162440_ovl_26(u8 *p)
 
     }
       break;
+      p[6] = 0;
 
     case 2:
       x = (*((u16 *) (p + 0x1f4))) - 1;
@@ -74,7 +80,6 @@ void func_80162440_ovl_26(u8 *p)
       if (!x)
     {
       p[5] = 1;
-      p[6] = 0;
       p[0x2c9] = 0;
     }
 

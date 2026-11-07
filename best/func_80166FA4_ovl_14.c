@@ -20,6 +20,8 @@ void func_80166FA4_ovl_14(u8 *p, void *a1, void *a2)
   }
   switch (state)
   {
+case 0: break;
+
     case 7:
       p[0x26f] |= 128;
       func_80077D48_ovl_01(7, p);
@@ -42,14 +44,8 @@ void func_80166FA4_ovl_14(u8 *p, void *a1, void *a2)
       *((s16 *) (p + 0x1e0)) = -150;
     }
     else
-      if (v1 == 3)
     {
-      *((s16 *) (p + 0x1e4)) = 150;
-    }
-    else
-      if (v1 == 4)
-    {
-      *((s16 *) (p + 0x1e4)) = -150;
+ do { if (v1 == 3) { *((s16 *) (p + 0x1e4)) = 150; } else if (v1 == 4) { *((s16 *) (p + 0x1e4)) = -150; } } while (0);
     }
       v1 = p[0x206];
       if (!v1)
@@ -126,4 +122,3 @@ void func_80166FA4_ovl_14(u8 *p, void *a1, void *a2)
     *((s32 *) (new_var2 + 0x2c)) = 0;
   }
 }
-

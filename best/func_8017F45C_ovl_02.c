@@ -1,4 +1,4 @@
-s32 func_8017BB30_ovl_02(s32);
+u32 func_8017BB30_ovl_02(s32);
 s32 func_8017BB68_ovl_02(s8);
 extern s32 D_80185700_ovl_02;
 extern s8 D_80184B40_ovl_02[];

@@ -1,21 +1,19 @@
-extern u8 D_80167D8C_ovl_30[];
-void func_80171C9C_overlay_063(void *arg0)
-{
-  volatile u32 *base;
-  void (*new_var2)(void);
-  u8 index = ((u8 *) arg0)[6];
-  void (*new_var)(void);
-  u32 address = base[index];
-  if (arg0)
-  {
-    new_var = (void (*)(void)) address;
-    new_var();
-  }
-  else
-  {
-    new_var = (new_var2 = (void (*)(void)) address);
-    base = (volatile u32 *) D_80167D8C_ovl_30;
-    new_var();
-  }
-}
+/* machine draft (m2c) for sn-n64-272-0006 -G0 -mips3 -O2 -mgas -meb -mhard-float, tried by autopilot */
+#ifndef M2C_DEFINES
+#define M2C_DEFINES
+typedef s32 M2C_UNK;
+typedef s8 M2C_UNK8;
+typedef s16 M2C_UNK16;
+typedef s32 M2C_UNK32;
+#define M2C_FIELD(expr, type_ptr, offset) (*(type_ptr)((s8 *)(expr) + (offset)))
+#define M2C_BITWISE(type, expr) ((type)(expr))
+#define M2C_ERROR(desc) (0)
+#define M2C_CARRY 0
+#define M2C_OVERFLOW(a) (0)
+#endif
 
+
+extern int (*D_80173340_overlay_063[])();
+void func_80171C9C_overlay_063(void *arg0) {
+    D_80173340_overlay_063[M2C_FIELD(arg0, u8 *, 6)]();
+}

@@ -43,7 +43,7 @@ void func_801627C8_ovl_33(void *arg0, s32 arg1, s32 arg2) {
     void *temp_a0_6;
     void *temp_s0;
     void *temp_s0_2;
-    void *temp_s0_3;
+    
     void *temp_s0_4;
     void *var_s0;
 
@@ -181,11 +181,11 @@ void func_801627C8_ovl_33(void *arg0, s32 arg1, s32 arg2) {
             M2C_FIELD(arg0, s32 *, 0x1E8) = 0x3F00;
             M2C_FIELD(arg0, u16 *, 0x1F4) = 8U;
         }
-        temp_s0_3 = M2C_FIELD(arg0, void **, 0x234);
-        M2C_FIELD(temp_s0_3, u16 *, 0x5C) += M2C_FIELD(arg0, u16 *, 0x1F6);
-        M2C_FIELD(temp_s0_3, u16 *, 0x1D4) -= M2C_FIELD(arg0, u16 *, 0x1F6);
-        M2C_FIELD(temp_s0_3, u16 *, 0x34C) -= M2C_FIELD(arg0, u16 *, 0x1F6);
-        M2C_FIELD(temp_s0_3, u16 *, 0x4C4) -= ((s32) (M2C_FIELD(arg0, u16 *, 0x1F6) << 0x10) >> 0x11);
+        temp_a0_3 = M2C_FIELD(arg0, void **, 0x234);
+        M2C_FIELD(temp_a0_3, u16 *, 0x5C) += M2C_FIELD(arg0, u16 *, 0x1F6);
+        M2C_FIELD(temp_a0_3, u16 *, 0x1D4) -= M2C_FIELD(arg0, u16 *, 0x1F6);
+        M2C_FIELD(temp_a0_3, u16 *, 0x34C) -= M2C_FIELD(arg0, u16 *, 0x1F6);
+        M2C_FIELD(temp_a0_3, u16 *, 0x4C4) -= ((s32) (M2C_FIELD(arg0, u16 *, 0x1F6) << 0x10) >> 0x11);
         M2C_FIELD(arg0, u16 *, 0x1F6) -= (M2C_FIELD(arg0, s8 *, 0x206) * 2);
         func_80166518_overlay_033(arg0, M2C_FIELD(arg0, void **, 0x234));
         temp_s0_4 = M2C_FIELD(arg0, void **, 0x234);

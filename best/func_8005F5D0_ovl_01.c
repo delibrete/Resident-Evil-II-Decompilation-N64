@@ -3,7 +3,7 @@ s32 func_8006AB70_ovl_01(s32, s32 *, s32, s32);
 extern volatile short D_800C7650_ovl_01;
 extern s32 D_800DF650_ovl_01;
 extern s32 D_800E1388_ovl_01;
-static inline static static s32 inline_fn(char *arg0)
+inline static static static s32 inline_fn(char *arg0)
 {
   return *((s32 *) arg0);
 }
@@ -16,6 +16,7 @@ void func_8005F5D0_ovl_01(void *arg0)
   s32 *var_s0;
   s32 var_a1;
   volatile short *new_var2;
+  s32 new_var3;
   s32 var_s1;
   s32 var_s2;
   s32 var_s2_2;
@@ -58,7 +59,14 @@ void func_8005F5D0_ovl_01(void *arg0)
   var_s0 = *((s32 **) (((char *) ((var_s2 * 4) + (&D_800C7650_ovl_01))) + 0x19D38));
   if (!((*var_s0) & 1))
   {
-    goto loop_3;
+    if (var_s2_2)
+    {
+      goto loop_3;
+    }
+    else
+    {
+      goto loop_3;
+    }
   }
   var_a1 += 1;
   block_6:
@@ -101,11 +109,12 @@ void func_8005F5D0_ovl_01(void *arg0)
     var_s3_2 -= 1;
     sp18 = *((s32 *) (((char *) temp_s0) + 0x128));
     var_s1 = 0;
+    new_var3 = inline_fn(((char *) temp_s0) + 0x28);
     if ((*((s16 *) (((char *) temp_s0) + 0x1F2))) < 0)
     {
       goto block_14;
     }
-    if (func_80032EA4_ovl_01(arg0, inline_fn(((char *) temp_s0) + 0x28), *((s32 *) (((char *) temp_s0) + 0x30)), 0x400) != 0)
+    if (func_80032EA4_ovl_01(arg0, new_var3, *((s32 *) (((char *) temp_s0) + 0x30)), 0x400) != 0)
     {
       goto block_14;
     }
