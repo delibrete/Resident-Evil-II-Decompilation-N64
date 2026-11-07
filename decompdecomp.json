@@ -1,7 +1,7 @@
 {
  "format": 1,
- "saved_at": 1794031159.759687,
- "revision": 34516,
+ "saved_at": 1794031470.232289,
+ "revision": 34522,
  "title": "Resident Evil II",
  "platform": "n64",
  "game": {
@@ -19816,7 +19816,7 @@
   },
   "func_80165310_ovl_32": {
    "vram": 2148946704,
-   "matched_by": "restored",
+   "matched_by": "autopilot",
    "readable": false
   },
   "func_80165320_ovl_26": {
@@ -274041,8 +274041,8 @@
      "rom_sha1": "93187c4145cad272a255c17657cd9a1011b3fb3a"
     },
     "symbols_sha256": "bb629f57bc1a7dc4757d26842ea3c55c37e3025a8cd4b02d9a2fb5d58d2bc36b",
-    "recorded_at": 1793996949.985342,
-    "attempt_id": 330171,
+    "recorded_at": 1793996945.861595,
+    "attempt_id": 330169,
     "source_sha256": "ff3b85e9916d5e85cdc7676c7d977b815c910d2324257fd8cc52b31d4bcda5ad",
     "header_sha256": "6741617bf3c952bbf3b41f49aed7f8780fa9b0b41fb7a8e56fda2b5b9ed03d44",
     "context_version": 143,
