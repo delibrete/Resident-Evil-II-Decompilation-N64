@@ -5545,7 +5545,8 @@
     "-mgp32",
     "-mfp32",
     "-O2"
-   ]
+   ],
+   "timeout": 20
   },
   "68971968:2148935536": {
    "vram": 2148935536,
@@ -23657,8 +23658,8 @@
   },
   "func_8016F050_overlay_064": {
    "vram": 2148986960,
-   "best_score": 6700,
-   "best_by": "autopilot"
+   "matched_by": "autopilot",
+   "readable": false
   },
   "func_8016F054_overlay_051": {
    "vram": 2148986964,
@@ -105404,14 +105405,6 @@
    "score_after": 555
   },
   {
-   "function": "func_8016F050_overlay_064",
-   "text": "Deep permuter: score 770 \u2192 770; 0 improvements; 33 candidates tested; 0 cached skips; 0 rejected; 392s elapsed. Budget rotation: repeated function output without improvement.",
-   "by": "Retroreversing.permuter-6970",
-   "created_at": 1793884736.756657,
-   "score_before": 750,
-   "score_after": 750
-  },
-  {
    "function": "func_80165518_ovl_30",
    "text": "Deep permuter: score 190 \u2192 190; 0 improvements; 10 candidates tested; 0 cached skips; 0 rejected; 63s elapsed. Budget rotation: soft allowance reached without recent progress.",
    "by": "Retroreversing.permuter-5077",
@@ -133354,6 +133347,14 @@
    "created_at": 1793958790.1365309,
    "score_before": 760,
    "score_after": 760
+  },
+  {
+   "function": "func_8016F050_overlay_064",
+   "text": "Deep permuter: score 770 \u2192 770; 0 improvements; 33 candidates tested; 0 cached skips; 0 rejected; 392s elapsed. Budget rotation: repeated function output without improvement.",
+   "by": "Retroreversing.permuter-6970",
+   "created_at": 1793884736.756657,
+   "score_before": 750,
+   "score_after": 750
   }
  ],
  "set_aside": [
@@ -227345,8 +227346,8 @@
      "rom_sha1": "93187c4145cad272a255c17657cd9a1011b3fb3a"
     },
     "symbols_sha256": "bb629f57bc1a7dc4757d26842ea3c55c37e3025a8cd4b02d9a2fb5d58d2bc36b",
-    "recorded_at": 1793988539.915621,
-    "attempt_id": 325830,
+    "recorded_at": 1794024965.51231,
+    "attempt_id": 341692,
     "source_sha256": "1bfaa6a2c8d1e9997f9325b98880fb244b3104fe4c9dcb9c920022c908730232",
     "header_sha256": "6741617bf3c952bbf3b41f49aed7f8780fa9b0b41fb7a8e56fda2b5b9ed03d44",
     "context_version": 753,
@@ -227415,7 +227416,7 @@
      ],
      "language": "c",
      "context_unit": "local_source_278243",
-     "scoring_revision": "410a938219f799f42a41bcf80063f29ed792577587a651bc895e31f6e56c0fb1",
+     "scoring_revision": "4b0b14f0b4a6f1c3c00ce79b719f77ce975eddbf3a1f299043b0e11230486a4f",
      "context_sha256": "6741617bf3c952bbf3b41f49aed7f8780fa9b0b41fb7a8e56fda2b5b9ed03d44"
     },
     "target_sha256": "5ac4b04f3079a234e41511c48ea6a6313a5b4edb61be94adecf498a24ef18c51",
