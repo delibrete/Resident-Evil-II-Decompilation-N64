@@ -1,7 +1,7 @@
 {
  "format": 1,
- "saved_at": 1794032027.149996,
- "revision": 34555,
+ "saved_at": 1794033129.685915,
+ "revision": 34629,
  "title": "Resident Evil II",
  "platform": "n64",
  "game": {
@@ -23090,7 +23090,7 @@
   },
   "func_8016ED28_overlay_045": {
    "vram": 2148986152,
-   "matched_by": "autopilot",
+   "matched_by": "restored",
    "readable": false
   },
   "func_8016ED34_overlay_055": {
@@ -132941,14 +132941,6 @@
    "score_after": 225
   },
   {
-   "function": "func_8016ED28_overlay_045",
-   "text": "Deep permuter: score 230 \u2192 230; 0 improvements; 2 candidates tested; 0 cached skips; 0 rejected; 85s elapsed. Budget rotation: soft allowance reached without recent progress.",
-   "by": "Retroreversing.permuter-5905",
-   "created_at": 1793957037.501072,
-   "score_before": 230,
-   "score_after": 230
-  },
-  {
    "function": "func_80167DE8_ovl_28",
    "text": "Dispatch wrapper to same function table as func_80167DA4. Tried volatile u32 base and pointer/address forms; best score 225. Remaining diff is unchanged: target builds table pointer in v0 before lbu, compiler builds it later in v1. Same family issue.",
    "by": "codex-gpt-6-luna-1",
@@ -132963,6 +132955,14 @@
    "created_at": 1793944767.6855779,
    "score_before": 225,
    "score_after": 225
+  },
+  {
+   "function": "func_8016ED28_overlay_045",
+   "text": "Deep permuter: score 230 \u2192 230; 0 improvements; 2 candidates tested; 0 cached skips; 0 rejected; 85s elapsed. Budget rotation: soft allowance reached without recent progress.",
+   "by": "Retroreversing.permuter-5905",
+   "created_at": 1793957037.501072,
+   "score_before": 230,
+   "score_after": 230
   }
  ],
  "set_aside": [
@@ -274175,8 +274175,8 @@
      "rom_sha1": "93187c4145cad272a255c17657cd9a1011b3fb3a"
     },
     "symbols_sha256": "bb629f57bc1a7dc4757d26842ea3c55c37e3025a8cd4b02d9a2fb5d58d2bc36b",
-    "recorded_at": 1794009338.813921,
-    "attempt_id": 332381,
+    "recorded_at": 1794009350.901716,
+    "attempt_id": 332383,
     "source_sha256": "6a45504f161d20886268b9e8c61b0e773602660f866e17d58de67cf823c8bb63",
     "header_sha256": "6741617bf3c952bbf3b41f49aed7f8780fa9b0b41fb7a8e56fda2b5b9ed03d44",
     "context_version": 143,
@@ -274255,7 +274255,7 @@
      ],
      "language": "c",
      "context_unit": "",
-     "scoring_revision": "b1c374721b6b811ab03c074bbc732988e17d95cbfdd8ac0fda9ba44e5e32b002",
+     "scoring_revision": "4b0b14f0b4a6f1c3c00ce79b719f77ce975eddbf3a1f299043b0e11230486a4f",
      "context_sha256": "6741617bf3c952bbf3b41f49aed7f8780fa9b0b41fb7a8e56fda2b5b9ed03d44"
     },
     "target_sha256": "e8303d34f31648f0f5c8a612c2c64f8412e81eba5a0cfea3f06592d0dad7a0e6",
