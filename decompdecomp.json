@@ -13289,6 +13289,19 @@
    "timeout": 20,
    "function": "main",
    "vram": 2147484960
+  },
+  "60816:2147541520": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_8000E210",
+   "vram": 2147541520
   }
  },
  "instructions": "",
@@ -14890,7 +14903,7 @@
   },
   "func_8000E210": {
    "vram": 2147541520,
-   "matched_by": "autopilot",
+   "matched_by": "Retroreversing.saved-progress",
    "readable": false
   },
   "func_8000E350": {
@@ -70949,14 +70962,6 @@
    "text": "Best source scores 20 (99.7%), with only prologue save order mismatches: ROM stores s2 at 0x18(sp) before ra at 0x1c(sp); generated code reverses those two stores. Tried M2C field-access source and switch form (best 550), then explicit result chain `if (r == 1) goto one; if (r < 2) { if (r) return r; helper... } return r;`, which fixed all but the two save-order operands. Six compiles since best score with no improvement; remaining obstacle appears to be KMC prologue scheduling/register lifetime.",
    "by": "codex-gpt-6-luna-1",
    "created_at": 1793884671.0851982,
-   "score_before": 0,
-   "score_after": 0
-  },
-  {
-   "function": "func_8000E210",
-   "text": "MATCHED (80 insns). Video/timing parameter calc from unk14/16/17. Struct fields: +2 u16, +6 u16, +0x14 u16, +0x16 u8, +0x17 u8, +0x1C u16, +0x1E u16, +0x20/22/24/26 s16. `a3 = (unk16==2)?0x100:0x200; sh = 6 - unk17;` then if (unk14 == 0x33) branch A else branch B (see saved source). KEY TRICK for register allocation: declaring `s32 v; s32 x;` (and u32 y) INSIDE each branch brace (block scope) instead of function scope gives each branch its own pseudos with short live ranges; KMC then keeps the shared `a3` scale in $a3 and uses $v0/$v1 for the shifted values (target exact). With function-scoped temps the scale went to $t0 and the shifted value to $a3 (score 875/320). Also y must be u32 so `((y&0xFFFE)>>1)` emits srl not sra. Source order in branch A: unk1C=v; unk1E=(a3/(u16)v)*4; x=unk1C*2; unk24=x; unk22=0x7FF/unk1C+1; y=unk1E*x; unk26=y; unk20=((y&0xFFFE)>>1)-1. Branch B: unk1C=((s32)unk6>>sh)+1; unk1E=(a3/(u16)v)*4; x=((s32)unk2>>sh)*2; unk24=x; unk20=unk1C*16-1; unk22=unk1E-1; unk26=unk1E*x.",
-   "by": "opencode-deepseek-v4.1-flash-1",
-   "created_at": 1793884671.103235,
    "score_before": 0,
    "score_after": 0
   },
@@ -138799,6 +138804,14 @@
    "created_at": 1793884706.2421079,
    "score_before": 0,
    "score_after": 0
+  },
+  {
+   "function": "func_8000E210",
+   "text": "MATCHED (80 insns). Video/timing parameter calc from unk14/16/17. Struct fields: +2 u16, +6 u16, +0x14 u16, +0x16 u8, +0x17 u8, +0x1C u16, +0x1E u16, +0x20/22/24/26 s16. `a3 = (unk16==2)?0x100:0x200; sh = 6 - unk17;` then if (unk14 == 0x33) branch A else branch B (see saved source). KEY TRICK for register allocation: declaring `s32 v; s32 x;` (and u32 y) INSIDE each branch brace (block scope) instead of function scope gives each branch its own pseudos with short live ranges; KMC then keeps the shared `a3` scale in $a3 and uses $v0/$v1 for the shifted values (target exact). With function-scoped temps the scale went to $t0 and the shifted value to $a3 (score 875/320). Also y must be u32 so `((y&0xFFFE)>>1)` emits srl not sra. Source order in branch A: unk1C=v; unk1E=(a3/(u16)v)*4; x=unk1C*2; unk24=x; unk22=0x7FF/unk1C+1; y=unk1E*x; unk26=y; unk20=((y&0xFFFE)>>1)-1. Branch B: unk1C=((s32)unk6>>sh)+1; unk1E=(a3/(u16)v)*4; x=((s32)unk2>>sh)*2; unk24=x; unk20=unk1C*16-1; unk22=unk1E-1; unk26=unk1E*x.",
+   "by": "opencode-deepseek-v4.1-flash-1",
+   "created_at": 1793884671.103235,
+   "score_before": 0,
+   "score_after": 0
   }
  ],
  "set_aside": [
@@ -151582,11 +151595,11 @@
      "rom_sha1": "93187c4145cad272a255c17657cd9a1011b3fb3a"
     },
     "symbols_sha256": "bb629f57bc1a7dc4757d26842ea3c55c37e3025a8cd4b02d9a2fb5d58d2bc36b",
-    "recorded_at": 1793981055.523751,
-    "attempt_id": 324255,
+    "recorded_at": 1794058558.310215,
+    "attempt_id": 346561,
     "source_sha256": "1133c1e38e52f38841b52280fe4d810dc25f3c77988cca1e2e273ece0577d478",
     "header_sha256": "6741617bf3c952bbf3b41f49aed7f8780fa9b0b41fb7a8e56fda2b5b9ed03d44",
-    "context_version": 458,
+    "context_version": 815,
     "compiler": {
      "toolchain": "gcc-2.7.2-kmc",
      "flags": [
@@ -151647,7 +151660,7 @@
      ],
      "language": "c",
      "context_unit": "local_source_273608",
-     "scoring_revision": "410a938219f799f42a41bcf80063f29ed792577587a651bc895e31f6e56c0fb1",
+     "scoring_revision": "4b0b14f0b4a6f1c3c00ce79b719f77ce975eddbf3a1f299043b0e11230486a4f",
      "context_sha256": "6741617bf3c952bbf3b41f49aed7f8780fa9b0b41fb7a8e56fda2b5b9ed03d44"
     },
     "target_sha256": "d2a8a5433800bbf07e831b646223704a5200198336ed5a197744584c9ece6cbd",
