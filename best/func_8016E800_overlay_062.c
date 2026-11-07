@@ -1,4 +1,3 @@
-/* machine draft (m2c) for gcc-2.7.2-kmc -G0 -mips3 -mgp32 -mfp32 -O2, tried by autopilot */
 #ifndef M2C_DEFINES
 #define M2C_DEFINES
 typedef s32 M2C_UNK;
@@ -11,20 +10,22 @@ typedef s32 M2C_UNK32;
 #define M2C_CARRY 0
 #define M2C_OVERFLOW(a) (0)
 #endif
+extern int D_800E10B0;
+/* machine draft (m2c) for gcc-2.7.2-kmc -G0 -mips3 -mgp32 -mfp32 -O2, tried by autopilot */
 
 
 extern int (*D_8016F100_overlay_062[])();
-M2C_UNK func_8004DB8C_ovl_01(void *);               /* extern */
-M2C_UNK func_8004DCE8_ovl_01(void *, M2C_UNK);      /* extern */
-M2C_UNK func_80065400_ovl_01(M2C_UNK *, M2C_UNK, M2C_UNK); /* extern */
-extern M2C_UNK D_800C7650;
-extern M2C_UNK D_800E10F8;
+s32 func_8004DB8C_ovl_01();
+s32 func_8004DCE8_ovl_01();
+s32 func_80065400_ovl_01();
+extern char D_800C7650[];
+extern char D_800E10F8[];
 
 void func_8016E800_overlay_062(void *arg0) {
     u8 temp_v1;
 
-    func_80065400_ovl_01(&D_800E10F8, 0, 0);
-    if (!(M2C_FIELD(&D_800C7650, s32 *, 0x19A60) & 0x20000000)) {
+    func_80065400_ovl_01(arg0, &D_800E10F8, 0, 0);
+    if (!(D_800E10B0 & 0x20000000)) {
         temp_v1 = M2C_FIELD(arg0, u8 *, 0x26F);
         if (temp_v1 & 0x7F) {
             M2C_FIELD(arg0, u8 *, 0x26F) = (u8) (temp_v1 - 1);

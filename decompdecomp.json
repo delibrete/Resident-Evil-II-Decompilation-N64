@@ -1,7 +1,7 @@
 {
  "format": 1,
- "saved_at": 1794053104.178293,
- "revision": 35810,
+ "saved_at": 1794054554.451172,
+ "revision": 35856,
  "title": "Resident Evil II",
  "platform": "n64",
  "game": {
@@ -13088,6 +13088,146 @@
     "-mfp64"
    ],
    "timeout": 20
+  },
+  "67280836:2147748420": {
+   "toolchain": "sn-n64-281",
+   "flags": [
+    "-G8",
+    "-mips3",
+    "-O2",
+    "-mgas",
+    "-meb",
+    "-mcpu=VR4300",
+    "-mhard-float",
+    "-mfp64"
+   ],
+   "timeout": 20,
+   "function": "func_80040A44_ovl_01",
+   "vram": 2147748420
+  },
+  "67280904:2147748488": {
+   "toolchain": "sn-n64-281",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-O2",
+    "-mgas",
+    "-meb",
+    "-mcpu=VR4300",
+    "-mhard-float",
+    "-mfp64"
+   ],
+   "timeout": 20,
+   "function": "func_80040A88_ovl_01",
+   "vram": 2147748488
+  },
+  "68959268:2148953316": {
+   "toolchain": "gcc-2.8.1-pm",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_80166CE4_ovl_26",
+   "vram": 2148953316
+  },
+  "68498332:2148996044": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_801713CC_ovl_07",
+   "vram": 2148996044
+  },
+  "67449964:2147917548": {
+   "toolchain": "gcc-2.8.1-pm",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_80069EEC_ovl_01",
+   "vram": 2147917548
+  },
+  "69263248:2148932720": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_80161C70_overlay_037",
+   "vram": 2148932720
+  },
+  "68497976:2148995688": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2",
+    "-mcpu=r4600"
+   ],
+   "timeout": 20,
+   "function": "func_80171268_ovl_07",
+   "vram": 2148995688
+  },
+  "68459864:2149038872": {
+   "toolchain": "sn-n64-281",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-O2",
+    "-mgas",
+    "-meb",
+    "-mcpu=VR4300",
+    "-mhard-float",
+    "-mfp64"
+   ],
+   "timeout": 20,
+   "function": "func_8017BB18_ovl_05",
+   "vram": 2149038872
+  },
+  "68779720:2148935864": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_801628B8_ovl_18",
+   "vram": 2148935864
+  },
+  "69959472:2148984832": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_8016E800_overlay_062",
+   "vram": 2148984832
   }
  },
  "instructions": "",
@@ -15873,12 +16013,12 @@
   },
   "func_80040A44_ovl_01": {
    "vram": 2147748420,
-   "best_score": 55,
+   "best_score": 20,
    "best_by": "Retroreversing.saved-progress"
   },
   "func_80040A88_ovl_01": {
    "vram": 2147748488,
-   "best_score": 290,
+   "best_score": 20,
    "best_by": "Reggie.saved-progress"
   },
   "func_80040AD8_ovl_01": {
@@ -16943,8 +17083,8 @@
   },
   "func_80069EEC_ovl_01": {
    "vram": 2147917548,
-   "best_score": 210,
-   "best_by": "Reggie.saved-progress"
+   "best_score": 1,
+   "best_by": "autopilot"
   },
   "func_8006A6F8_ovl_01": {
    "vram": 2147919608,
@@ -19813,8 +19953,8 @@
   },
   "func_80161C70_overlay_037": {
    "vram": 2148932720,
-   "best_score": 1095,
-   "best_by": "permuter"
+   "best_score": 535,
+   "best_by": "codex-gpt-6-luna-14"
   },
   "func_80161C70_overlay_038": {
    "vram": 2148932720,
@@ -21193,8 +21333,8 @@
   },
   "func_801628B8_ovl_18": {
    "vram": 2148935864,
-   "best_score": 875,
-   "best_by": "Retroreversing.permuter-4488"
+   "best_score": 860,
+   "best_by": "codex-gpt-6-luna-14"
   },
   "func_801628C8_ovl_26": {
    "vram": 2148935880,
@@ -26228,8 +26368,8 @@
   },
   "func_80166CE4_ovl_26": {
    "vram": 2148953316,
-   "best_score": 260,
-   "best_by": "permuter"
+   "best_score": 1,
+   "best_by": "autopilot"
   },
   "func_80166D04_ovl_16": {
    "vram": 2148953348,
@@ -27228,8 +27368,8 @@
   },
   "func_8016E800_overlay_062": {
    "vram": 2148984832,
-   "best_score": 1001,
-   "best_by": "autopilot"
+   "best_score": 986,
+   "best_by": "permuter"
   },
   "func_8016E800_overlay_064": {
    "vram": 2148984832,
@@ -29888,8 +30028,8 @@
   },
   "func_80171268_ovl_07": {
    "vram": 2148995688,
-   "best_score": 225,
-   "best_by": "Retroreversing.permuter-3900"
+   "best_score": 10,
+   "best_by": "codex-gpt-6-luna-14"
   },
   "func_80171288_overlay_050": {
    "vram": 2148995720,
@@ -29953,8 +30093,8 @@
   },
   "func_801713CC_ovl_07": {
    "vram": 2148996044,
-   "best_score": 851,
-   "best_by": "Retroreversing.permuter-3903"
+   "best_score": 801,
+   "best_by": "codex-gpt-6-luna-13"
   },
   "func_80171400_overlay_040": {
    "vram": 2148996096,
@@ -32628,7 +32768,7 @@
   },
   "func_8017BB18_ovl_05": {
    "vram": 2149038872,
-   "best_score": 365,
+   "best_score": 15,
    "best_by": "Retroreversing.permuter-3872"
   },
   "func_8017BB30_ovl_02": {
@@ -64295,14 +64435,6 @@
    "score_after": 0
   },
   {
-   "function": "func_801628B8_ovl_18",
-   "text": "Best score 855/3800 after 4 compile budget. Main issue: target bnez exits to epilogue at +0x80; our shorter source exits +0x7c. Need preserve a 4-byte instruction in path or match target helper structure. Table D_80162CD4 expression uses malformed absolute literal; declare extern table at named symbol. Calls to func_80031C44_ovl_01+0x868 are currently linked as base function, need correct alias.",
-   "by": "codex-gpt-6-luna-1",
-   "created_at": 1793884656.382915,
-   "score_before": 875,
-   "score_after": 875
-  },
-  {
    "function": "func_80162950_ovl_18",
    "text": "Best score 690. Diff confirms call argument 0x400 incorrectly placed in a0 due unprototyped func_80089D34. Remaining differences are statement ordering: target loads/sets object flags then updates timer, then halfword angles before call; current C's halfword locals are evaluated before stores. Prototype plus use struct fields/temporaries in exact assembly order likely fixes.",
    "by": "codex-gpt-6-luna-1",
@@ -64413,14 +64545,6 @@
    "created_at": 1793884656.62714,
    "score_before": 590,
    "score_after": 590
-  },
-  {
-   "function": "func_80171268_ovl_07",
-   "text": "Tried direct pointer loops and explicit argument-holder temporaries. Best score 230; target code shape is clear but pointer/data register allocation differs throughout. Pointer increments must be 2-byte destination steps; first target instruction preserves arg0 in t2, then initializes counter t1 before loading input/output pointers.",
-   "by": "codex-gpt-6-luna-1",
-   "created_at": 1793884656.6477609,
-   "score_before": 225,
-   "score_after": 225
   },
   {
    "function": "func_80171204_ovl_07",
@@ -65327,14 +65451,6 @@
    "score_after": 10
   },
   {
-   "function": "func_80166CE4_ovl_26",
-   "text": "3 compiles; best score 400. Target takes pointer plus a3 promoted then sll/sra to signed 16 bit; call func_80032EA4 with hidden/unknown ABI where target places return in v0 then sll/sra sign extends. Need correct prototype/argument convention; current declaration passes four args wrongly.",
-   "by": "codex-gpt-6-luna-1",
-   "created_at": 1793884658.816236,
-   "score_before": 260,
-   "score_after": 260
-  },
-  {
    "function": "func_801656F0_ovl_26",
    "text": "4 compiles, best autopilot 985. Target index byte offset formula is index*0x178, setup locals before loop; target reads global D_800E7650+0x1962 and conditionally ORs 0x4A into record word before masking 0xFFFF7FFF. Current draft omitted global conditional and wrong loop ordering.",
    "by": "codex-gpt-6-luna-1",
@@ -65583,28 +65699,12 @@
    "score_after": 944
   },
   {
-   "function": "func_8017BB18_ovl_05",
-   "text": "Compiled repeatedly in batch with the other claims; never reached score 0. Best scores: B390 5175/37 instructions (array stores compiled as absolute symbol accesses; target uses base + offsets), B4F4 1140/22 (stack frame and global pointer/register ordering differ), BB18 760/33 (wrong global address folding and indirect dispatch/table ordering), BF1C 1025/33 (loop logic close, but global offset, initialization ordering, register allocation and pointer arithmetic differ). Source variants tried pointer arrays/struct-style offsets, control flow/early return, adjusted local variables and loop forms. No better attempt within each move-on budget; next work should inspect aliases/typed base declarations in context, then tune local declaration order and prototypes.",
-   "by": "codex-gpt-6-luna-1",
-   "created_at": 1793884659.304799,
-   "score_before": 365,
-   "score_after": 365
-  },
-  {
    "function": "func_8017BF1C_ovl_05",
    "text": "Compiled repeatedly in batch with the other claims; never reached score 0. Best scores: B390 5175/37 instructions (array stores compiled as absolute symbol accesses; target uses base + offsets), B4F4 1140/22 (stack frame and global pointer/register ordering differ), BB18 760/33 (wrong global address folding and indirect dispatch/table ordering), BF1C 1025/33 (loop logic close, but global offset, initialization ordering, register allocation and pointer arithmetic differ). Source variants tried pointer arrays/struct-style offsets, control flow/early return, adjusted local variables and loop forms. No better attempt within each move-on budget; next work should inspect aliases/typed base declarations in context, then tune local declaration order and prototypes.",
    "by": "codex-gpt-6-luna-1",
    "created_at": 1793884659.3240619,
    "score_before": 875,
    "score_after": 875
-  },
-  {
-   "function": "func_801713CC_ovl_07",
-   "text": "Compiled three times. Best 851/23. Target begins loading global base into v1, saves it in s2, calculates sltiu s1, and uses bnel with store in delay slot; our attempts got data flow/loop mostly right but register assignment, stack save set, and branch likely differ. Try declaration ordering and preserve global base pointer across calls.",
-   "by": "codex-gpt-6-luna-1",
-   "created_at": 1793884659.342808,
-   "score_before": 871,
-   "score_after": 871
   },
   {
    "function": "func_80171428_ovl_07",
@@ -67903,14 +68003,6 @@
    "score_after": 3145
   },
   {
-   "function": "func_80040A44_ovl_01",
-   "text": "Best score 190 from the autopilot expression. It matches function semantics and instruction count but scheduler orders the input multiply into the jal delay slot; target has multiply before the call and nop delay. Return truncation and ra restore also differ in schedule/FPR register. Tried local f32 temporaries with no score improvement.",
-   "by": "codex-gpt-6-luna-1",
-   "created_at": 1793884664.4914792,
-   "score_before": 55,
-   "score_after": 55
-  },
-  {
    "function": "func_80033434_ovl_01",
    "text": "Tried explicit global base/table pointer source, high/low word indexing, and sentinel-loop variants. Best score 1870, with the output loads/stores matching and much of the arithmetic present. Remaining diff starts at global base: target explicitly builds D_800C7650+0x18000 then loads object +0x288, while compiler folds into D_800DF8D8. Conditional table index setup and register allocation remain.",
    "by": "codex-gpt-6-luna-1",
@@ -68013,14 +68105,6 @@
    "created_at": 1793884664.7190778,
    "score_before": 505,
    "score_after": 505
-  },
-  {
-   "function": "func_80040A88_ovl_01",
-   "text": "Best 290 (85.5%). C is: `s32 f(s32 a0,s32 a1){ return (s32)(func_80047DA0_ovl_01((f32)a0*D_800B8788, (f32)a1*D_800B8788)*D_800B878C); }`. The only real mismatch is that KMC's compiler emits a `nop` between every `mtc1 $aN,$fN` and the following `cvt.s.w` (FP hazard nop); the ROM has no nop. search_flags (all variants 290), try_compiler with -mcpu=r4400/r4600 and -mgp64 variants (the latter changes frame to sd/ld), and -O1 all fail. ROM also schedules the second mul.s before the prologue and uses $f4 (not $f2) for trunc.w.s. This looks like a codegen difference of the project's KMC build vs the ROM build (hazard nop); no source change fixed it.",
-   "by": "opencode-deepseek-v4.1-flash-1",
-   "created_at": 1793884664.741895,
-   "score_before": 290,
-   "score_after": 290
   },
   {
    "function": "func_8003997C_ovl_01",
@@ -73575,14 +73659,6 @@
    "score_after": 0
   },
   {
-   "function": "func_80161C70_overlay_037",
-   "text": "Three compile attempts. Draft preserves branch/call shape, but global symbols resolve unexpectedly to D_800E10B0 and function table func_80161F00_ovl_28. Need correctly declare/express base D_800C7650 + 0x18000 and table address so code emits target address materialization; current score 925.",
-   "by": "codex-gpt-6-luna-1",
-   "created_at": 1793884676.299235,
-   "score_before": 1105,
-   "score_after": 1105
-  },
-  {
    "function": "func_801627A4_overlay_020",
    "text": "Three compiles; best 1758. Current extern base D_800C7650 declaration is aliased by linker to D_800E10F8 and D_800E1100 loads. Target explicitly materializes base+0x18000 then loads offsets 0x1AA8/0x1AB0; fix symbol declaration and preserve s0/s1 allocation and 0x20 frame.",
    "by": "codex-gpt-6-luna-1",
@@ -77965,14 +78041,6 @@
    "created_at": 1793884684.77949,
    "score_before": 640,
    "score_after": 640
-  },
-  {
-   "function": "func_80069EEC_ovl_01",
-   "text": "Best 340. Target's arg3 fields are in a3, but compile source's third pointer ends up in a2, indicating signature needs a missing second argument (likely four-argument ABI). Main arithmetic differs due live-range/register allocation and scheduling.",
-   "by": "codex-gpt-6-luna-1",
-   "created_at": 1793884684.798503,
-   "score_before": 210,
-   "score_after": 210
   },
   {
    "function": "func_8006A6F8_ovl_01",
@@ -85463,14 +85531,6 @@
    "score_after": 700
   },
   {
-   "function": "func_80166CE4_ovl_26",
-   "text": "Score 70; diff persistent: register allocation differences (sll/sra use $a3 vs $a0/$a1). Known KMC register conventions; need to match $a3 usage. Best attempt kept for next agent.",
-   "by": "opencode-nemotron-3.5-lightning-f-1",
-   "created_at": 1793884699.075905,
-   "score_before": 260,
-   "score_after": 260
-  },
-  {
    "function": "func_801636E0_overlay_021",
    "text": "Score 330; diff persistent: address folding (lui %hi(D_800C7650) becomes %hi(D_800E8FB2)). Known split-address base+0x18000 codegen issue (suggestion #1/#2). Best attempt kept for next agent.",
    "by": "opencode-nemotron-3.5-lightning-f-1",
@@ -85639,14 +85699,6 @@
    "score_after": 2122
   },
   {
-   "function": "func_80166CE4_ovl_26",
-   "text": "Why it cannot get closer with this KMC build: only remaining diff is instruction placement of the function's final sign-extension (best 60, 21/21 insns, 14/21 rows already identical). ROM: `sll v0,v0,16` after the call, then `sh s1,0x66(s0)` (restore old), then lw ra/s1/s0, then `sra v0,v0,16`, jr. KMC always emits `sll`+`sra` adjacent, before the restore and epilogue. A source-shape fix was not found: tried direct `(s16)r`, u16 intermediate, s16 return type with s16 local, all 60 and identical. Extra flag checks: -fno-schedule-insns2 = 475 (breaks prologue/arg3 extension), -fno-delayed-branch = 60 (same two rows). search_flags earlier: -O2/-O3/-G8/-fno-strength-reduce/-fno-schedule-insns all 60. This is the same scheduler behaviour as func_80162310_ovl_30 (ROM sinks the final return-value op past the register restores; KMC does not), not a reachable C-shape difference. Everything else (signature: 4 args forwarded with a3 sign-extended from s16, timer update, old-value restore, return cast) is byte-correct.",
-   "by": "opencode-deepseek-v4.1-flash-low-1",
-   "created_at": 1793884699.242238,
-   "score_before": 260,
-   "score_after": 260
-  },
-  {
    "function": "func_80098EF0_ovl_01",
    "text": "Score progress: 9448 -> 8514 -> 10530 (3 compiles). Main mismatches: stack frame size (ROM uses 0x38 bytes, my C uses different), register allocation (ROM uses $s0-$s7 temporaries, C generates $v0-$a3), split-address immediate folding (GCC folds D_8012BF38+offsets into single symbols), and function call argument passing. This ovl_01 dispatch function has extreme codegen challenges with KMC GCC 2.7.2 -O2. Notes for next agent: the split-address pattern and register allocation are the primary barriers.",
    "by": "opencode-nemotron-3.5-lightning-f-1",
@@ -85807,14 +85859,6 @@
    "score_after": 0
   },
   {
-   "function": "func_801713CC_ovl_07",
-   "text": "Best 851/63%, 23/23 insns. Loop shape is right and must stay: `s32 count=arg0-1; u8 flag=(D_800C5694_ovl_01==0); if(count!=0){ D_800C5694_ovl_01=flag; do{ func_8004CDB8_ovl_01(1); count--; D_800C5694_ovl_01=flag; }while(count!=0); }` \u2014 the store must be at the END of the do-body (store at top makes GCC hoist it out of the loop, 936). Remaining diff is the ROM split-address convention: target keeps only %hi in a register across the call (`lui v1,%hi(D); lbu v0,%lo(D)(v1); ... addu s2,v1,zero; ... sb s1,%lo(D)(s2)` and uses `bnel ...; sb` in the delay slot), while our cc1 rematerialises `lui $at,%hi(D); sb %lo(D)($at)` for each store, so we get an extra lui-at, `bnez` instead of `bnel`, ra saved at 0x18 vs target 0x1c, s2 save missing (we save s1 at 0x14). Tried: direct non-volatile (851), volatile object (936 identical), local `u8 *p=&D` (975, full lui+addiu, sb 0(p)), array `extern u8 D[1]` with D[0] (1126, full addr). The only load that matches the target split form is the plain direct `D_800C5694_ovl_01` reference. Needs the project's split-address codegen fix (open setup suggestion) to make %hi survive a call.",
-   "by": "opencode-deepseek-v4.1-flash-low-1",
-   "created_at": 1793884699.436379,
-   "score_before": 871,
-   "score_after": 871
-  },
-  {
    "function": "func_80165818_ovl_35",
    "text": "Cannot get closer: the residual is the project-wide split-address fold (open setup suggestions #1/#2), proven by many agents. Best 625 saved: plain form `*(u16*)(D_800C7650_ovl_01 + 0x18000 + 0x1A78) &= 0xFFDF`; body/call/order all correct. ROM keeps 0x18000 in a register and adds it to %hi/%lo(D_800C7650) at runtime; KMC folds symbol+0x18000+0x1A78 into one reloc. Volatile u32 base scored 999 (stack home, still folds D+0x18000). Nothing source-fixable with this cc1.",
    "by": "opencode-deepseek-v4.1-flash-low-1",
@@ -85829,14 +85873,6 @@
    "created_at": 1793884699.4488351,
    "score_before": 0,
    "score_after": 0
-  },
-  {
-   "function": "func_80161C70_overlay_037",
-   "text": "Best 520 saved (was 925). Correct C: `extern u8 D_800C7650_ovl_01[]; extern void (* volatile D_80161F00_ovl_37[])(void*,s32,s32); ... if (!(*(u32*)(D_800C7650_ovl_01+0x18000+0x1A60) & 0x20000000)) D_80161F00_ovl_37[p[4]](arg0, *(s32*)(p+0x1A4), *(s32*)(p+0x218));`. All logic/call shape right. Two residuals, both codegen not source: (1) known project-wide split address for D_800C7650+0x18000 (ROM: lui v1,1/ori 0x8000 + lui/addiu D + addu; ours folds to lhu/lw %lo(D_800E10B0), 4 insns short) \u2014 open setup suggestions #1/#2. (2) after that, base/index regs are swapped (target base v0/index v1, ours base v1/index v0); tried plain/volatile array element, pointer walk, explicit idx/fn locals \u2014 identical 520. If the split-address fix lands, recheck this function; the volatile-element table declaration is what yields the separated lui/addiu + lw 0(base).",
-   "by": "opencode-deepseek-v4.1-flash-low-1",
-   "created_at": 1793884699.457081,
-   "score_before": 1105,
-   "score_after": 1105
   },
   {
    "function": "func_801620C0_overlay_012",
@@ -86207,14 +86243,6 @@
    "score_after": 785
   },
   {
-   "function": "func_801713CC_ovl_07",
-   "text": "Score 1051 vs best 851. Diff highlights: (1) Register allocation: target uses $v1 for lui/%hi, ours $v0; lbu also $v1 vs $v0. (2) Stack slots: target saves ra at 0x1c, s2 at 0x18, s1 at 0x14; ours opposite. (3) Split-store: target uses $s2 as base with %lo offset; ours uses $at (temp) causing extra lui. (4) beqz offset differs. (5) Loop body: our C emits do-while with flag store each iteration; ROM has initial store before loop and final store after loop. (6) The flag type and sltiu instruction placement differ. Need to enforce split-address using a 64\u2011bit base variable or callee\u2011saved register to keep %hi across calls, and restructure stores to match ROM layout.",
-   "by": "opencode-nemotron-3.5-lightning-f-1",
-   "created_at": 1793884699.858997,
-   "score_before": 871,
-   "score_after": 871
-  },
-  {
    "function": "func_801643A8_ovl_29",
    "text": "Best 450 (26 target vs 27 ours). Two useful discoveries here:\n1) The ROM's 0x58 stack frame (0x38 bytes of locals that emit NO code) is reproduced by declaring `u8 tmp[0x38];` and then a bare unused read `tmp[0];` \u2014 GCC allocates the 0x38 frame slot but the unused load is DCE'd, so no instruction. A `tmp[0] = 0;` instead survives and costs an extra `sb $zero,0x10($sp)` (score 550). This is how to reproduce otherwise-unexplained large frames in this game.\n2) The D_800C7650+0x18000 split base is reproduced by the u64 trick: `u64 b=(u64)(u32)D_800C7650_ovl_01; p=(u8*)(u32)(b & 0xFFFFFFFF); p += 0x18000;` gives `lui v1,%hi(D); addiu v1,%lo(D); lui a2,1; ori a2,0x8000; addu a2,v1,a2` and then `lw a1,0x1AA8(a2); lw a2,0x1AB0(a2)`, ready for the call. (Plain `p=D+0x18000` or the padded-struct recipe folds to D_800E10F8/D_800E1100.)\nBest source (keep it):\n```\nextern s32 func_80032EA4_ovl_01(s32,s32,s32,s32);\nextern u8 D_800C7650_ovl_01[];\nvoid func_801643A8_ovl_29(void *arg0) {\n    u32 t; u8 tmp[0x38]; u64 b; u8 *p;\n    t = *(u32*)((u8*)arg0 + 0x28C);\n    tmp[0];\n    b = (u64)(u32)D_800C7650_ovl_01;\n    p = (u8*)(u32)(b & 0xFFFFFFFF);\n    p += 0x18000;\n    if ((func_80032EA4_ovl_01((s32)arg0, *(s32*)(p+0x1AA8), *(s32*)(p+0x1AB0), 0x400) << 16) == 0 && t >= 0x9C5)\n        *(s32*)((u8*)arg0 + 4) = 0x01010000;\n}\n```\nRemaining: (a) the only extra instruction is the DImode zero high word `move v0,$zero` after the symbol lui/addiu (same cost as in func_801685D4_ovl_14); (b) pure regalloc/operand order: ROM puts 0x18000 in $v0 first then builds the symbol in $v1 and `addu v1,v1,v0`, ours builds symbol in $v1 then 0x18000 in $a2 and combines in $a2; ROM keeps arg0 in $s1 and t in $s0 (`lw s0,0x28C(s1)`), ours has arg0 in $s0 and t in $s1 (this also swaps the `sw $s1,0x4C`/`sw $s0,0x48` prologue pair). Swapping declaration order of t/tmp, or routing arg0 through a local `u8 *a`, changed nothing. If the high-word move can be avoided (SImode non-foldable symbol address) and the v1/v0 order fixed, this is exact.",
    "by": "opencode-deepseek-v4.1-flash-low-1",
@@ -86237,14 +86265,6 @@
    "created_at": 1793884699.881802,
    "score_before": 0,
    "score_after": 0
-  },
-  {
-   "function": "func_80161C70_overlay_037",
-   "text": "Score 520, best 520. Diff: split\u2011address codegen mismatch (target uses lui/ori chain for D_800C7650+0x18000, ours folds to %hi/%lo of D_800E10B0). Function table symbol resolves to func_80161F00_ovl_28 instead of ovl_37, affecting register allocation. These are project\u2011wide codegen issues; no source fix can achieve byte\u2011identical match without compiler change.",
-   "by": "opencode-nemotron-3.5-lightning-f-1",
-   "created_at": 1793884699.8880908,
-   "score_before": 1105,
-   "score_after": 1105
   },
   {
    "function": "func_801620C0_overlay_012",
@@ -86333,14 +86353,6 @@
    "created_at": 1793884700.030934,
    "score_before": 850,
    "score_after": 850
-  },
-  {
-   "function": "func_80171268_ovl_07",
-   "text": "Matched on first try (27/27). Straightforward RGB555 packer: `u16 **arg0` (out cursor), `u8 **arg1` (in cursor). Read a3=*arg1, t0=*arg0, a2=a3+1; do 0x140 times: `v0=a2[1]; v1=a2[0]; a2+=3; a0v=*a3; a3+=3; *t0 = ((v0>>3)<<1) + ((v1>>3)<<6) + ((a0v>>3)<<11) | 1; t0+=1;` then `*arg0=t0; *arg1=a3;`. The three byte temps loaded BEFORE the pointer increments and the exact `<<1/<<6/<<11` order are what reproduce the target; do-while loop (counter test at bottom) also required.",
-   "by": "opencode-deepseek-v4.1-flash-low-1",
-   "created_at": 1793884700.038914,
-   "score_before": 225,
-   "score_after": 225
   },
   {
    "function": "func_80164A70_ovl_13",
@@ -87063,14 +87075,6 @@
    "score_after": 910
   },
   {
-   "function": "func_8017BB18_ovl_05",
-   "text": "As above: cannot get closer with this cc1 build. Best 350/100, all logic/instruction count right; remaining 8 regalloc / 3 operand / 1 missing rows are exactly the known split-address/$at codegen difference (ROM materializes symbol addresses in general registers v1 and splits D_800C7650+0x18000; our cc1 folds absolute accesses into `lui $at` and assigns the base sum to v0). Attempts at forcing split with the u64 union for the globals made the frame 0x20 with s0/s1 saves (768). No C-shape fix found; a fixed compiler build is needed.",
-   "by": "opencode-deepseek-v4.1-flash-low-1",
-   "created_at": 1793884700.835281,
-   "score_before": 365,
-   "score_after": 365
-  },
-  {
    "function": "func_8016687C_ovl_12",
    "text": "Cannot get closer with this cc1: the only missing instructions are the split-address base for D_800C7650+0x18000 (`lui v1,1; ori v1,0x8000; lui v0,%hi(D); addiu v0,%lo; addu v0,v0,v1`), which our build always folds into `lui v0,%hi(D_802490AC); lw %lo(...)`. The u64-union split trick restores those 5 insns but costs two callee-saved registers and a 0x20 frame (927 > 880). Plain source scores 880 with correct logic/frame/registers (s0 only). Keep the saved 880 source; a split-address compiler build would let the remaining branch layout fall in.",
    "by": "opencode-deepseek-v4.1-flash-low-1",
@@ -87293,14 +87297,6 @@
    "created_at": 1793884701.159084,
    "score_before": 90,
    "score_after": 90
-  },
-  {
-   "function": "func_8017BB18_ovl_05",
-   "text": "Score 350 compiled; best 350. Diff: register allocation and split-address: target materializes D_800C7650+0x18000 in $v1/$a0 with lui/addiu/addu pattern, while our cc1 folds into $a0/$v0 and uses $at for table dispatch. No C-shape fix found within this compiler; remaining diff is compiler\u2011level codegen. Accept score 350 as near\u2011match.",
-   "by": "opencode-nemotron-3.5-lightning-f-1",
-   "created_at": 1793884701.1774132,
-   "score_before": 365,
-   "score_after": 365
   },
   {
    "function": "func_801635A0_overlay_033",
@@ -88095,14 +88091,6 @@
    "score_after": 0
   },
   {
-   "function": "func_801628B8_ovl_18",
-   "text": "Score 790/38 (37 insns). Correct C structure (verified against assembly): if(p->p[6]==0){ p->p[6]=1; if(p->p[0x2BE]==0) func_8003420C(*(s32*)(p->p+0x208),0xBF10BF00); else *(s32*)p->p|=0x400; func_80077D48(7,p); func_80162B1C_ovl_18(p,0,D_80162CD4_ovl_18[p->p[5]]); } else func_800324AC_ovl_01(p);. Note the inner condition must be written as `==0` (calling path first) so the bitset block goes out-of-line like the ROM.\n\nRemaining diff is entirely the known provisioned-build blockers: (1) inner if: ROM emits `lbu v0,0x2be; lw a0,0x208; bnel v0,zero,bitset; addiu a0,zero,7`, ours emits `lbu v1,0x2be; bnez v1,bitset` earlier plus a shared addiu a0,7 after the bitset (no branch-likely). (2) table: ROM splits the data base `lui v0,%hi; lbu v1,5(a0); addiu v0,v0,%lo; addu v1,v1,v0; lbu a2,(v1)`, ours folds to `lui a2,%hi; addu a2,a2,v0; lbu a2,%lo(sym)(a2)` (one insn shorter). Tried: index local, u32/int base local, byte cast `*(u8*)((u32)sym+idx)`, pointer local, u64 union split trick (worse: needs s2/s3 + 0x20 frame). None change the fold; this is the open split-address setup issue. Everything else matches.",
-   "by": "opencode-deepseek-v4.1-flash-low-1",
-   "created_at": 1793884703.461292,
-   "score_before": 875,
-   "score_after": 875
-  },
-  {
    "function": "func_8017FD3C_ovl_04",
    "text": "Releasing: 230/38 is the best, remaining diffs are the saved-register swap (arg0 s4 vs s3) and the ret3 branch layout (ROM folds addiu v0,3 into the beq delay; our KMC emits a separate j+addiu). All C structures tried; best source and exact notes saved above. Compiler-allocator limitation, not source structure.",
    "by": "opencode-deepseek-v4.1-flash-low-1",
@@ -88269,14 +88257,6 @@
    "created_at": 1793884703.687228,
    "score_before": 0,
    "score_after": 0
-  },
-  {
-   "function": "func_801628B8_ovl_18",
-   "text": "Attempted to reproduce func_801628B8_ovl_18 (38 insns). Best previous score 790 (opencode-deepseek). Used struct O with p array and conditions on p[6] and p[0x2BE]. Compile score 790, but two main diffs: (1) inner if branch: ROM uses `lbu v0,0x2be; lw a0,0x208; bnel v0,zero,bitset; addiu a0,zero,7` while our code emits `lbu v1,0x2be; bnez v1,bitset` earlier plus shared addiu a0,7 after bitset (no branch-likely). (2) table base: ROM splits D_80162CD4 via `lui v0,%hi; lbu v1,5(a0); addiu v0,v0,%lo; addu v1,v1,v0; lbu a2,(v1)`; our code folds to `lui a2,%hi; addu a2,a2,v0; lbu a2,%lo(sym)(a2)` (one insn shorter). All other aspects (structure, calls) match. Next agent should try to force the split-base into the ROM's register pattern, perhaps by using a local volatile u32 or by declaring the table as `extern volatile u8 D_80162CD4_ovl_18[];` and accessing via index local to keep the two\u2011part base. Also the inner if condition order may need `==0` to emit branch\u2011likely as in ROM.",
-   "by": "opencode-nemotron-3.5-lightning-f-1",
-   "created_at": 1793884703.6943932,
-   "score_before": 875,
-   "score_after": 875
   },
   {
    "function": "func_80164BB4_ovl_17",
@@ -88909,14 +88889,6 @@
    "created_at": 1793884704.457916,
    "score_before": 795,
    "score_after": 795
-  },
-  {
-   "function": "func_8017BB18_ovl_05",
-   "text": "Deep permuter: score 545 \u2192 545; 0 improvements; 26 candidates tested; 0 cached skips; 0 rejected; 152s elapsed. Budget rotation: soft allowance reached without recent progress.",
-   "by": "A.permuter-3872",
-   "created_at": 1793884704.464833,
-   "score_before": 365,
-   "score_after": 365
   },
   {
    "function": "func_80031BB0_ovl_01",
@@ -94111,14 +94083,6 @@
    "score_after": 445
   },
   {
-   "function": "func_80040A44_ovl_01",
-   "text": "Deep permuter: score 230 \u2192 230; 0 improvements; 19 candidates tested; 0 cached skips; 0 rejected; 157s elapsed. Budget rotation: soft allowance reached without recent progress.",
-   "by": "A.permuter-2559",
-   "created_at": 1793884709.920074,
-   "score_before": 55,
-   "score_after": 55
-  },
-  {
    "function": "func_800675A8_ovl_01",
    "text": "Deep permuter: score 25745 \u2192 25745; 0 improvements; 19 candidates tested; 0 cached skips; 0 rejected; 157s elapsed. Budget rotation: soft allowance reached without recent progress.",
    "by": "A.permuter-2805",
@@ -95215,14 +95179,6 @@
    "score_after": 2946
   },
   {
-   "function": "func_80171268_ovl_07",
-   "text": "Deep permuter: score 225 \u2192 225; 0 improvements; 4 candidates tested; 25 cached skips; 0 rejected; 61s elapsed. Budget rotation: soft allowance reached without recent progress.",
-   "by": "Retroreversing.permuter-3900",
-   "created_at": 1793946906.774137,
-   "score_before": 225,
-   "score_after": 225
-  },
-  {
    "function": "func_80166F04_overlay_026",
    "text": "Deep permuter: score 960 \u2192 960; 0 improvements; 1 candidates tested; 0 cached skips; 0 rejected; 19s elapsed. Stopped: The saved C does not compile in the current context; fix its declarations before deep search..",
    "by": "Retroreversing.permuter-4860",
@@ -96117,14 +96073,6 @@
    "created_at": 1793884712.373287,
    "score_before": 2637,
    "score_after": 2637
-  },
-  {
-   "function": "func_80040A44_ovl_01",
-   "text": "Deep permuter: score 190 \u2192 190; 0 improvements; 3 candidates tested; 2 cached skips; 0 rejected; 62s elapsed. Budget rotation: soft allowance reached without recent progress.",
-   "by": "Retroreversing.permuter-2559",
-   "created_at": 1793956055.0040672,
-   "score_before": 190,
-   "score_after": 190
   },
   {
    "function": "func_801623D4_overlay_035",
@@ -99029,14 +98977,6 @@
    "created_at": 1793884720.286228,
    "score_before": 60,
    "score_after": 60
-  },
-  {
-   "function": "func_80161C70_overlay_037",
-   "text": "Deep permuter: score 350 \u2192 350; 0 improvements; 1 candidates tested; 0 cached skips; 0 rejected; 20s elapsed. Stopped: The saved C does not compile in the current context; fix its declarations before deep search..",
-   "by": "Retroreversing.permuter-5455",
-   "created_at": 1793884720.297009,
-   "score_before": 1105,
-   "score_after": 1105
   },
   {
    "function": "func_8015D6F4_ovl_03",
@@ -102239,14 +102179,6 @@
    "score_after": 4310
   },
   {
-   "function": "func_80040A44_ovl_01",
-   "text": "Rechecked saved m2c source is 190 despite historical 55. Tried explicit f32 scaled/value temporaries (190), volatile scaled local (533; extra stack spill), then one-shot do/while around callee (250). Target computes input multiply before frame setup/call and keeps nop delay slot; GCC moves multiply into jal delay. Return scheduling also differs: target restores ra before trunc.w.s and uses $f4; candidate truncates first and uses $f2. search_flags found project -O2 best (O3, -G8, -g3 equal; no-schedule-insns worse). No exact improvement; current source retained.",
-   "by": "codex-gpt-6-luna-9",
-   "created_at": 1793884729.344846,
-   "score_before": 55,
-   "score_after": 55
-  },
-  {
    "function": "func_800AAE48_ovl_01",
    "text": "Deep permuter: score 725 \u2192 725; 0 improvements; 1 candidates tested; 0 cached skips; 0 rejected; 9s elapsed. Stopped: The saved C does not compile in the current context; fix its declarations before deep search..",
    "by": "Retroreversing.permuter-3271",
@@ -102447,14 +102379,6 @@
    "score_after": 385
   },
   {
-   "function": "func_80166CE4_ovl_26",
-   "text": "Supplied best rechecks at 260. Correct logic uses byte 0x2CD and old halfword at 0x66, temporarily adds byte<<11 around func_80032EA4, restores halfword, returns signed 16-bit result. Tried adding missing forwarded args; that worsened to 330 and did not recover target a3 sign-extension placement. Remaining challenge is forcing sign-extension of arg3 into a3 before the wrapper's other setup, plus target's delayed final sign-extension after restores (historic note says KMC scheduler prevents this).",
-   "by": "codex-gpt-6-luna-10",
-   "created_at": 1793884729.637399,
-   "score_before": 260,
-   "score_after": 260
-  },
-  {
    "function": "func_8017B874_ovl_02",
    "text": "Best is 925, initial source is same. Recompiled baseline; signed int for unsigned `new_var` produced identical bytes. Binding the volatile global pointer to a local pointer worsened score to 1692 and grew frame; it used s0 but forced extra saves and branch layout. Reordering local declarations also left output identical. Replacing `unk8=(u32)(p+1)` with `unk8++` worsened to 1130 and produced extra loads; retain pointer expression. Remaining mismatch is mostly allocation: target holds global state base in a0/s0 and threshold in v1, candidate chooses v0/s0. Target also has a branch delay slot that is absent in candidate. Prototype warning: current helper prototype discards volatile on pointer arg2; consider correcting declaration as a controlled follow-up, though tested state-pointer binding was not helpful.",
    "by": "codex-gpt-6-luna-9",
@@ -102595,14 +102519,6 @@
    "text": "Deep permuter: score 350 \u2192 350; 0 improvements; 1 candidates tested; 0 cached skips; 0 rejected; 9s elapsed. Stopped: The saved C does not compile in the current context; fix its declarations before deep search..",
    "by": "Retroreversing.permuter-5712",
    "created_at": 1793884729.7870002,
-   "score_before": null,
-   "score_after": null
-  },
-  {
-   "function": "func_8016E800_overlay_062",
-   "text": "Deep permuter: score 350 \u2192 350; 0 improvements; 1 candidates tested; 0 cached skips; 0 rejected; 9s elapsed. Stopped: The saved C does not compile in the current context; fix its declarations before deep search..",
-   "by": "Retroreversing.permuter-6846",
-   "created_at": 1793884729.7934778,
    "score_before": null,
    "score_after": null
   },
@@ -103653,14 +103569,6 @@
    "created_at": 1793904078.360273,
    "score_before": 1150,
    "score_after": 1150
-  },
-  {
-   "function": "func_801628B8_ovl_18",
-   "text": "Deep permuter: score 875 \u2192 875; 0 improvements; 5 candidates tested; 13 cached skips; 0 rejected; 60s elapsed. Budget rotation: soft allowance reached without recent progress.",
-   "by": "Retroreversing.permuter-4488",
-   "created_at": 1793930458.892363,
-   "score_before": 875,
-   "score_after": 875
   },
   {
    "function": "func_8016758C_ovl_30",
@@ -107183,14 +107091,6 @@
    "score_after": 30
   },
   {
-   "function": "func_80166CE4_ovl_26",
-   "text": "Released because its agent stopped (decompdecomp closed while it worked); its attempts are kept.",
-   "by": "codex-gpt-6-luna-12",
-   "created_at": 1793884737.042163,
-   "score_before": 260,
-   "score_after": 260
-  },
-  {
    "function": "func_8017B520_ovl_02",
    "text": "Best remains inherited revision b5eaa6a2854a13027b3b, score 30. Tested signedness local repair (same score), explicit count loop without saved temp (score 305), and volatile pointer/zero local variant (score 335). Remaining mismatch is register allocation and loop branch target; baseline target initializes a3=0 in branch delay slot, copies a2 to v1, initializes v0=0, stores through v0/v1, then increments a3 and compares it to a1. Consider alternate pointer/struct width or preserving val in a named local while retaining stack-spill shape.",
    "by": "codex-gpt-6-luna-11",
@@ -107717,14 +107617,6 @@
    "created_at": 1793930277.714373,
    "score_before": 235,
    "score_after": 235
-  },
-  {
-   "function": "func_80069EEC_ovl_01",
-   "text": "Deep permuter: score 340 \u2192 330; 1 improvements; 10 candidates tested; 23 cached skips; 0 rejected; 85s elapsed. Budget rotation: soft allowance reached without recent progress.",
-   "by": "Retroreversing.permuter-2817",
-   "created_at": 1793955365.319044,
-   "score_before": 340,
-   "score_after": 330
   },
   {
    "function": "func_80062CA0_ovl_01",
@@ -108357,14 +108249,6 @@
    "created_at": 1793884738.2682922,
    "score_before": null,
    "score_after": null
-  },
-  {
-   "function": "func_8017BB18_ovl_05",
-   "text": "Deep permuter: score 365 \u2192 365; 0 improvements; 5 candidates tested; 33 cached skips; 0 rejected; 67s elapsed. Budget rotation: soft allowance reached without recent progress.",
-   "by": "Retroreversing.permuter-3872",
-   "created_at": 1793955672.7926452,
-   "score_before": 365,
-   "score_after": 365
   },
   {
    "function": "func_80117DC0_ovl_01",
@@ -114831,14 +114715,6 @@
    "score_after": 290
   },
   {
-   "function": "func_80040A88_ovl_01",
-   "text": "Best 290 (85%): `s32 f(s32 a, s32 b) { return (s32)(func_80047DA0((f32)a*K, (f32)b*K) * D_800B878C); }` with K=D_800B8788 (f32), func_80047DA0(f32,f32)->f32. Remaining diff: target places the second `mul.s $f14` before `addiu $sp` and fills the jal delay slot with a nop; mine puts mul.s in the delay slot. Order variants (b first, inline args) did not change it. Next idea: force the second product to be computed in a separate statement before the first, or a different f32 temp type.",
-   "by": "claude-haiku-19",
-   "created_at": 1793884744.854322,
-   "score_before": 290,
-   "score_after": 290
-  },
-  {
    "function": "func_800AC63C_ovl_01",
    "text": "Best saved 1155 (other source). Target: 0xFF row -> D_80148C00 + (arg0&0xFF) via beq to a shared tail; else D_80148B80 + (arg0&0xFF) + ((row)<<4); sb arg2. Target keeps arg0 in $a3 (move $a3,$a0) and uses row in $a0. My tries: 1925 (two if-stores) and 1350 (shared store through pointer). Register allocation differs; not solved.",
    "by": "claude-haiku-19",
@@ -114925,14 +114801,6 @@
    "created_at": 1793884744.931426,
    "score_before": null,
    "score_after": null
-  },
-  {
-   "function": "func_80069EEC_ovl_01",
-   "text": "Best saved 210 (m2c draft, 4 args: arg0,arg1,arg2 unused,arg3). Working C: s0=(u16)arg3->h6>>1; lo=s0*s0; t=(s16)arg3->h2 + s0 - *(s32*)(arg0+8); return (arg1-s0)+func_80040BE4(lo-t*t, lo). Best compile 330 with 4-arg signature (the 3-arg one was wrong: a3 is the 4th arg). Remaining diff: target keeps arg1 in s1 and does 'move s1,a1' right after the first mult (before lh); ours emits the move after lhu. Tried: keep=arg1 at top (330, no change). Left: the 'move s1,a1' scheduling and mflo register choice.",
-   "by": "claude-haiku-20",
-   "created_at": 1793884744.937987,
-   "score_before": 210,
-   "score_after": 210
   },
   {
    "function": "func_80132068_ovl_01",
@@ -125711,14 +125579,6 @@
    "score_after": 2095
   },
   {
-   "function": "func_80166CE4_ovl_26",
-   "text": "Deep permuter: score 260 \u2192 260; 0 improvements; 1 candidates tested; 10 cached skips; 0 rejected; 63s elapsed. Budget rotation: soft allowance reached without recent progress.",
-   "by": "Retroreversing.permuter-4857",
-   "created_at": 1793958881.546116,
-   "score_before": 260,
-   "score_after": 260
-  },
-  {
    "function": "func_8007F018_ovl_01",
    "text": "Deep permuter: score 55940 \u2192 55940; 0 improvements; 8 candidates tested; 21 cached skips; 0 rejected; 62s elapsed. Budget rotation: soft allowance reached without recent progress.",
    "by": "Retroreversing.permuter-2944",
@@ -125869,14 +125729,6 @@
    "created_at": 1793959533.781002,
    "score_before": 3984,
    "score_after": 3984
-  },
-  {
-   "function": "func_801713CC_ovl_07",
-   "text": "Deep permuter: score 851 \u2192 851; 0 improvements; 3 candidates tested; 0 cached skips; 0 rejected; 71s elapsed. Budget rotation: soft allowance reached without recent progress.",
-   "by": "Retroreversing.permuter-3903",
-   "created_at": 1793959612.016093,
-   "score_before": 851,
-   "score_after": 851
   },
   {
    "function": "func_8004A410_ovl_01",
@@ -130157,14 +130009,6 @@
    "created_at": 1793984792.673043,
    "score_before": 759,
    "score_after": 759
-  },
-  {
-   "function": "func_80040A88_ovl_01",
-   "text": "Deep permuter: score 290 \u2192 290; 0 improvements; 3 candidates tested; 2 cached skips; 0 rejected; 60s elapsed. Budget rotation: soft allowance reached without recent progress.",
-   "by": "Retroreversing.permuter-2560",
-   "created_at": 1793984792.675055,
-   "score_before": 290,
-   "score_after": 290
   },
   {
    "function": "func_8016F1E8_overlay_056",
@@ -138501,6 +138345,382 @@
    "created_at": 1794052856.9933162,
    "score_before": 30,
    "score_after": 30
+  },
+  {
+   "function": "func_801628B8_ovl_18",
+   "text": "Best score 855/3800 after 4 compile budget. Main issue: target bnez exits to epilogue at +0x80; our shorter source exits +0x7c. Need preserve a 4-byte instruction in path or match target helper structure. Table D_80162CD4 expression uses malformed absolute literal; declare extern table at named symbol. Calls to func_80031C44_ovl_01+0x868 are currently linked as base function, need correct alias.",
+   "by": "codex-gpt-6-luna-1",
+   "created_at": 1793884656.382915,
+   "score_before": 875,
+   "score_after": 875
+  },
+  {
+   "function": "func_80171268_ovl_07",
+   "text": "Tried direct pointer loops and explicit argument-holder temporaries. Best score 230; target code shape is clear but pointer/data register allocation differs throughout. Pointer increments must be 2-byte destination steps; first target instruction preserves arg0 in t2, then initializes counter t1 before loading input/output pointers.",
+   "by": "codex-gpt-6-luna-1",
+   "created_at": 1793884656.6477609,
+   "score_before": 225,
+   "score_after": 225
+  },
+  {
+   "function": "func_80166CE4_ovl_26",
+   "text": "3 compiles; best score 400. Target takes pointer plus a3 promoted then sll/sra to signed 16 bit; call func_80032EA4 with hidden/unknown ABI where target places return in v0 then sll/sra sign extends. Need correct prototype/argument convention; current declaration passes four args wrongly.",
+   "by": "codex-gpt-6-luna-1",
+   "created_at": 1793884658.816236,
+   "score_before": 260,
+   "score_after": 260
+  },
+  {
+   "function": "func_8017BB18_ovl_05",
+   "text": "Compiled repeatedly in batch with the other claims; never reached score 0. Best scores: B390 5175/37 instructions (array stores compiled as absolute symbol accesses; target uses base + offsets), B4F4 1140/22 (stack frame and global pointer/register ordering differ), BB18 760/33 (wrong global address folding and indirect dispatch/table ordering), BF1C 1025/33 (loop logic close, but global offset, initialization ordering, register allocation and pointer arithmetic differ). Source variants tried pointer arrays/struct-style offsets, control flow/early return, adjusted local variables and loop forms. No better attempt within each move-on budget; next work should inspect aliases/typed base declarations in context, then tune local declaration order and prototypes.",
+   "by": "codex-gpt-6-luna-1",
+   "created_at": 1793884659.304799,
+   "score_before": 365,
+   "score_after": 365
+  },
+  {
+   "function": "func_801713CC_ovl_07",
+   "text": "Compiled three times. Best 851/23. Target begins loading global base into v1, saves it in s2, calculates sltiu s1, and uses bnel with store in delay slot; our attempts got data flow/loop mostly right but register assignment, stack save set, and branch likely differ. Try declaration ordering and preserve global base pointer across calls.",
+   "by": "codex-gpt-6-luna-1",
+   "created_at": 1793884659.342808,
+   "score_before": 871,
+   "score_after": 871
+  },
+  {
+   "function": "func_80040A44_ovl_01",
+   "text": "Best score 190 from the autopilot expression. It matches function semantics and instruction count but scheduler orders the input multiply into the jal delay slot; target has multiply before the call and nop delay. Return truncation and ra restore also differ in schedule/FPR register. Tried local f32 temporaries with no score improvement.",
+   "by": "codex-gpt-6-luna-1",
+   "created_at": 1793884664.4914792,
+   "score_before": 55,
+   "score_after": 55
+  },
+  {
+   "function": "func_80040A88_ovl_01",
+   "text": "Best 290 (85.5%). C is: `s32 f(s32 a0,s32 a1){ return (s32)(func_80047DA0_ovl_01((f32)a0*D_800B8788, (f32)a1*D_800B8788)*D_800B878C); }`. The only real mismatch is that KMC's compiler emits a `nop` between every `mtc1 $aN,$fN` and the following `cvt.s.w` (FP hazard nop); the ROM has no nop. search_flags (all variants 290), try_compiler with -mcpu=r4400/r4600 and -mgp64 variants (the latter changes frame to sd/ld), and -O1 all fail. ROM also schedules the second mul.s before the prologue and uses $f4 (not $f2) for trunc.w.s. This looks like a codegen difference of the project's KMC build vs the ROM build (hazard nop); no source change fixed it.",
+   "by": "opencode-deepseek-v4.1-flash-1",
+   "created_at": 1793884664.741895,
+   "score_before": 290,
+   "score_after": 290
+  },
+  {
+   "function": "func_80161C70_overlay_037",
+   "text": "Three compile attempts. Draft preserves branch/call shape, but global symbols resolve unexpectedly to D_800E10B0 and function table func_80161F00_ovl_28. Need correctly declare/express base D_800C7650 + 0x18000 and table address so code emits target address materialization; current score 925.",
+   "by": "codex-gpt-6-luna-1",
+   "created_at": 1793884676.299235,
+   "score_before": 1105,
+   "score_after": 1105
+  },
+  {
+   "function": "func_80069EEC_ovl_01",
+   "text": "Best 340. Target's arg3 fields are in a3, but compile source's third pointer ends up in a2, indicating signature needs a missing second argument (likely four-argument ABI). Main arithmetic differs due live-range/register allocation and scheduling.",
+   "by": "codex-gpt-6-luna-1",
+   "created_at": 1793884684.798503,
+   "score_before": 210,
+   "score_after": 210
+  },
+  {
+   "function": "func_80166CE4_ovl_26",
+   "text": "Score 70; diff persistent: register allocation differences (sll/sra use $a3 vs $a0/$a1). Known KMC register conventions; need to match $a3 usage. Best attempt kept for next agent.",
+   "by": "opencode-nemotron-3.5-lightning-f-1",
+   "created_at": 1793884699.075905,
+   "score_before": 260,
+   "score_after": 260
+  },
+  {
+   "function": "func_80166CE4_ovl_26",
+   "text": "Why it cannot get closer with this KMC build: only remaining diff is instruction placement of the function's final sign-extension (best 60, 21/21 insns, 14/21 rows already identical). ROM: `sll v0,v0,16` after the call, then `sh s1,0x66(s0)` (restore old), then lw ra/s1/s0, then `sra v0,v0,16`, jr. KMC always emits `sll`+`sra` adjacent, before the restore and epilogue. A source-shape fix was not found: tried direct `(s16)r`, u16 intermediate, s16 return type with s16 local, all 60 and identical. Extra flag checks: -fno-schedule-insns2 = 475 (breaks prologue/arg3 extension), -fno-delayed-branch = 60 (same two rows). search_flags earlier: -O2/-O3/-G8/-fno-strength-reduce/-fno-schedule-insns all 60. This is the same scheduler behaviour as func_80162310_ovl_30 (ROM sinks the final return-value op past the register restores; KMC does not), not a reachable C-shape difference. Everything else (signature: 4 args forwarded with a3 sign-extended from s16, timer update, old-value restore, return cast) is byte-correct.",
+   "by": "opencode-deepseek-v4.1-flash-low-1",
+   "created_at": 1793884699.242238,
+   "score_before": 260,
+   "score_after": 260
+  },
+  {
+   "function": "func_801713CC_ovl_07",
+   "text": "Best 851/63%, 23/23 insns. Loop shape is right and must stay: `s32 count=arg0-1; u8 flag=(D_800C5694_ovl_01==0); if(count!=0){ D_800C5694_ovl_01=flag; do{ func_8004CDB8_ovl_01(1); count--; D_800C5694_ovl_01=flag; }while(count!=0); }` \u2014 the store must be at the END of the do-body (store at top makes GCC hoist it out of the loop, 936). Remaining diff is the ROM split-address convention: target keeps only %hi in a register across the call (`lui v1,%hi(D); lbu v0,%lo(D)(v1); ... addu s2,v1,zero; ... sb s1,%lo(D)(s2)` and uses `bnel ...; sb` in the delay slot), while our cc1 rematerialises `lui $at,%hi(D); sb %lo(D)($at)` for each store, so we get an extra lui-at, `bnez` instead of `bnel`, ra saved at 0x18 vs target 0x1c, s2 save missing (we save s1 at 0x14). Tried: direct non-volatile (851), volatile object (936 identical), local `u8 *p=&D` (975, full lui+addiu, sb 0(p)), array `extern u8 D[1]` with D[0] (1126, full addr). The only load that matches the target split form is the plain direct `D_800C5694_ovl_01` reference. Needs the project's split-address codegen fix (open setup suggestion) to make %hi survive a call.",
+   "by": "opencode-deepseek-v4.1-flash-low-1",
+   "created_at": 1793884699.436379,
+   "score_before": 871,
+   "score_after": 871
+  },
+  {
+   "function": "func_80161C70_overlay_037",
+   "text": "Best 520 saved (was 925). Correct C: `extern u8 D_800C7650_ovl_01[]; extern void (* volatile D_80161F00_ovl_37[])(void*,s32,s32); ... if (!(*(u32*)(D_800C7650_ovl_01+0x18000+0x1A60) & 0x20000000)) D_80161F00_ovl_37[p[4]](arg0, *(s32*)(p+0x1A4), *(s32*)(p+0x218));`. All logic/call shape right. Two residuals, both codegen not source: (1) known project-wide split address for D_800C7650+0x18000 (ROM: lui v1,1/ori 0x8000 + lui/addiu D + addu; ours folds to lhu/lw %lo(D_800E10B0), 4 insns short) \u2014 open setup suggestions #1/#2. (2) after that, base/index regs are swapped (target base v0/index v1, ours base v1/index v0); tried plain/volatile array element, pointer walk, explicit idx/fn locals \u2014 identical 520. If the split-address fix lands, recheck this function; the volatile-element table declaration is what yields the separated lui/addiu + lw 0(base).",
+   "by": "opencode-deepseek-v4.1-flash-low-1",
+   "created_at": 1793884699.457081,
+   "score_before": 1105,
+   "score_after": 1105
+  },
+  {
+   "function": "func_801713CC_ovl_07",
+   "text": "Score 1051 vs best 851. Diff highlights: (1) Register allocation: target uses $v1 for lui/%hi, ours $v0; lbu also $v1 vs $v0. (2) Stack slots: target saves ra at 0x1c, s2 at 0x18, s1 at 0x14; ours opposite. (3) Split-store: target uses $s2 as base with %lo offset; ours uses $at (temp) causing extra lui. (4) beqz offset differs. (5) Loop body: our C emits do-while with flag store each iteration; ROM has initial store before loop and final store after loop. (6) The flag type and sltiu instruction placement differ. Need to enforce split-address using a 64\u2011bit base variable or callee\u2011saved register to keep %hi across calls, and restructure stores to match ROM layout.",
+   "by": "opencode-nemotron-3.5-lightning-f-1",
+   "created_at": 1793884699.858997,
+   "score_before": 871,
+   "score_after": 871
+  },
+  {
+   "function": "func_80161C70_overlay_037",
+   "text": "Score 520, best 520. Diff: split\u2011address codegen mismatch (target uses lui/ori chain for D_800C7650+0x18000, ours folds to %hi/%lo of D_800E10B0). Function table symbol resolves to func_80161F00_ovl_28 instead of ovl_37, affecting register allocation. These are project\u2011wide codegen issues; no source fix can achieve byte\u2011identical match without compiler change.",
+   "by": "opencode-nemotron-3.5-lightning-f-1",
+   "created_at": 1793884699.8880908,
+   "score_before": 1105,
+   "score_after": 1105
+  },
+  {
+   "function": "func_80171268_ovl_07",
+   "text": "Matched on first try (27/27). Straightforward RGB555 packer: `u16 **arg0` (out cursor), `u8 **arg1` (in cursor). Read a3=*arg1, t0=*arg0, a2=a3+1; do 0x140 times: `v0=a2[1]; v1=a2[0]; a2+=3; a0v=*a3; a3+=3; *t0 = ((v0>>3)<<1) + ((v1>>3)<<6) + ((a0v>>3)<<11) | 1; t0+=1;` then `*arg0=t0; *arg1=a3;`. The three byte temps loaded BEFORE the pointer increments and the exact `<<1/<<6/<<11` order are what reproduce the target; do-while loop (counter test at bottom) also required.",
+   "by": "opencode-deepseek-v4.1-flash-low-1",
+   "created_at": 1793884700.038914,
+   "score_before": 225,
+   "score_after": 225
+  },
+  {
+   "function": "func_8017BB18_ovl_05",
+   "text": "As above: cannot get closer with this cc1 build. Best 350/100, all logic/instruction count right; remaining 8 regalloc / 3 operand / 1 missing rows are exactly the known split-address/$at codegen difference (ROM materializes symbol addresses in general registers v1 and splits D_800C7650+0x18000; our cc1 folds absolute accesses into `lui $at` and assigns the base sum to v0). Attempts at forcing split with the u64 union for the globals made the frame 0x20 with s0/s1 saves (768). No C-shape fix found; a fixed compiler build is needed.",
+   "by": "opencode-deepseek-v4.1-flash-low-1",
+   "created_at": 1793884700.835281,
+   "score_before": 365,
+   "score_after": 365
+  },
+  {
+   "function": "func_8017BB18_ovl_05",
+   "text": "Score 350 compiled; best 350. Diff: register allocation and split-address: target materializes D_800C7650+0x18000 in $v1/$a0 with lui/addiu/addu pattern, while our cc1 folds into $a0/$v0 and uses $at for table dispatch. No C-shape fix found within this compiler; remaining diff is compiler\u2011level codegen. Accept score 350 as near\u2011match.",
+   "by": "opencode-nemotron-3.5-lightning-f-1",
+   "created_at": 1793884701.1774132,
+   "score_before": 365,
+   "score_after": 365
+  },
+  {
+   "function": "func_801628B8_ovl_18",
+   "text": "Score 790/38 (37 insns). Correct C structure (verified against assembly): if(p->p[6]==0){ p->p[6]=1; if(p->p[0x2BE]==0) func_8003420C(*(s32*)(p->p+0x208),0xBF10BF00); else *(s32*)p->p|=0x400; func_80077D48(7,p); func_80162B1C_ovl_18(p,0,D_80162CD4_ovl_18[p->p[5]]); } else func_800324AC_ovl_01(p);. Note the inner condition must be written as `==0` (calling path first) so the bitset block goes out-of-line like the ROM.\n\nRemaining diff is entirely the known provisioned-build blockers: (1) inner if: ROM emits `lbu v0,0x2be; lw a0,0x208; bnel v0,zero,bitset; addiu a0,zero,7`, ours emits `lbu v1,0x2be; bnez v1,bitset` earlier plus a shared addiu a0,7 after the bitset (no branch-likely). (2) table: ROM splits the data base `lui v0,%hi; lbu v1,5(a0); addiu v0,v0,%lo; addu v1,v1,v0; lbu a2,(v1)`, ours folds to `lui a2,%hi; addu a2,a2,v0; lbu a2,%lo(sym)(a2)` (one insn shorter). Tried: index local, u32/int base local, byte cast `*(u8*)((u32)sym+idx)`, pointer local, u64 union split trick (worse: needs s2/s3 + 0x20 frame). None change the fold; this is the open split-address setup issue. Everything else matches.",
+   "by": "opencode-deepseek-v4.1-flash-low-1",
+   "created_at": 1793884703.461292,
+   "score_before": 875,
+   "score_after": 875
+  },
+  {
+   "function": "func_801628B8_ovl_18",
+   "text": "Attempted to reproduce func_801628B8_ovl_18 (38 insns). Best previous score 790 (opencode-deepseek). Used struct O with p array and conditions on p[6] and p[0x2BE]. Compile score 790, but two main diffs: (1) inner if branch: ROM uses `lbu v0,0x2be; lw a0,0x208; bnel v0,zero,bitset; addiu a0,zero,7` while our code emits `lbu v1,0x2be; bnez v1,bitset` earlier plus shared addiu a0,7 after bitset (no branch-likely). (2) table base: ROM splits D_80162CD4 via `lui v0,%hi; lbu v1,5(a0); addiu v0,v0,%lo; addu v1,v1,v0; lbu a2,(v1)`; our code folds to `lui a2,%hi; addu a2,a2,v0; lbu a2,%lo(sym)(a2)` (one insn shorter). All other aspects (structure, calls) match. Next agent should try to force the split-base into the ROM's register pattern, perhaps by using a local volatile u32 or by declaring the table as `extern volatile u8 D_80162CD4_ovl_18[];` and accessing via index local to keep the two\u2011part base. Also the inner if condition order may need `==0` to emit branch\u2011likely as in ROM.",
+   "by": "opencode-nemotron-3.5-lightning-f-1",
+   "created_at": 1793884703.6943932,
+   "score_before": 875,
+   "score_after": 875
+  },
+  {
+   "function": "func_8017BB18_ovl_05",
+   "text": "Deep permuter: score 545 \u2192 545; 0 improvements; 26 candidates tested; 0 cached skips; 0 rejected; 152s elapsed. Budget rotation: soft allowance reached without recent progress.",
+   "by": "A.permuter-3872",
+   "created_at": 1793884704.464833,
+   "score_before": 365,
+   "score_after": 365
+  },
+  {
+   "function": "func_80040A44_ovl_01",
+   "text": "Deep permuter: score 230 \u2192 230; 0 improvements; 19 candidates tested; 0 cached skips; 0 rejected; 157s elapsed. Budget rotation: soft allowance reached without recent progress.",
+   "by": "A.permuter-2559",
+   "created_at": 1793884709.920074,
+   "score_before": 55,
+   "score_after": 55
+  },
+  {
+   "function": "func_80171268_ovl_07",
+   "text": "Deep permuter: score 20 \u2192 20; 0 improvements; 100 candidates tested; 1 cached skips; 0 rejected; 1041s elapsed. Variant limit reached.",
+   "by": "Retroreversing.permuter-3900",
+   "created_at": 1794035953.380543,
+   "score_before": 20,
+   "score_after": 20
+  },
+  {
+   "function": "func_80040A44_ovl_01",
+   "text": "Deep permuter: score 190 \u2192 190; 0 improvements; 3 candidates tested; 2 cached skips; 0 rejected; 62s elapsed. Budget rotation: soft allowance reached without recent progress.",
+   "by": "Retroreversing.permuter-2559",
+   "created_at": 1793956055.0040672,
+   "score_before": 190,
+   "score_after": 190
+  },
+  {
+   "function": "func_80161C70_overlay_037",
+   "text": "Deep permuter: score 350 \u2192 350; 0 improvements; 1 candidates tested; 0 cached skips; 0 rejected; 20s elapsed. Stopped: The saved C does not compile in the current context; fix its declarations before deep search..",
+   "by": "Retroreversing.permuter-5455",
+   "created_at": 1793884720.297009,
+   "score_before": 1105,
+   "score_after": 1105
+  },
+  {
+   "function": "func_80040A44_ovl_01",
+   "text": "Rechecked saved m2c source is 190 despite historical 55. Tried explicit f32 scaled/value temporaries (190), volatile scaled local (533; extra stack spill), then one-shot do/while around callee (250). Target computes input multiply before frame setup/call and keeps nop delay slot; GCC moves multiply into jal delay. Return scheduling also differs: target restores ra before trunc.w.s and uses $f4; candidate truncates first and uses $f2. search_flags found project -O2 best (O3, -G8, -g3 equal; no-schedule-insns worse). No exact improvement; current source retained.",
+   "by": "codex-gpt-6-luna-9",
+   "created_at": 1793884729.344846,
+   "score_before": 55,
+   "score_after": 55
+  },
+  {
+   "function": "func_80166CE4_ovl_26",
+   "text": "Supplied best rechecks at 260. Correct logic uses byte 0x2CD and old halfword at 0x66, temporarily adds byte<<11 around func_80032EA4, restores halfword, returns signed 16-bit result. Tried adding missing forwarded args; that worsened to 330 and did not recover target a3 sign-extension placement. Remaining challenge is forcing sign-extension of arg3 into a3 before the wrapper's other setup, plus target's delayed final sign-extension after restores (historic note says KMC scheduler prevents this).",
+   "by": "codex-gpt-6-luna-10",
+   "created_at": 1793884729.637399,
+   "score_before": 260,
+   "score_after": 260
+  },
+  {
+   "function": "func_8016E800_overlay_062",
+   "text": "Deep permuter: score 350 \u2192 350; 0 improvements; 1 candidates tested; 0 cached skips; 0 rejected; 9s elapsed. Stopped: The saved C does not compile in the current context; fix its declarations before deep search..",
+   "by": "Retroreversing.permuter-6846",
+   "created_at": 1793884729.7934778,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_801628B8_ovl_18",
+   "text": "Deep permuter: score 875 \u2192 875; 0 improvements; 5 candidates tested; 13 cached skips; 0 rejected; 60s elapsed. Budget rotation: soft allowance reached without recent progress.",
+   "by": "Retroreversing.permuter-4488",
+   "created_at": 1793930458.892363,
+   "score_before": 875,
+   "score_after": 875
+  },
+  {
+   "function": "func_80166CE4_ovl_26",
+   "text": "Released because its agent stopped (decompdecomp closed while it worked); its attempts are kept.",
+   "by": "codex-gpt-6-luna-12",
+   "created_at": 1793884737.042163,
+   "score_before": 260,
+   "score_after": 260
+  },
+  {
+   "function": "func_80069EEC_ovl_01",
+   "text": "Deep permuter: score 340 \u2192 330; 1 improvements; 10 candidates tested; 23 cached skips; 0 rejected; 85s elapsed. Budget rotation: soft allowance reached without recent progress.",
+   "by": "Retroreversing.permuter-2817",
+   "created_at": 1793955365.319044,
+   "score_before": 340,
+   "score_after": 330
+  },
+  {
+   "function": "func_8017BB18_ovl_05",
+   "text": "Deep permuter: score 365 \u2192 365; 0 improvements; 5 candidates tested; 33 cached skips; 0 rejected; 67s elapsed. Budget rotation: soft allowance reached without recent progress.",
+   "by": "Retroreversing.permuter-3872",
+   "created_at": 1793955672.7926452,
+   "score_before": 365,
+   "score_after": 365
+  },
+  {
+   "function": "func_80040A88_ovl_01",
+   "text": "Best 290 (85%): `s32 f(s32 a, s32 b) { return (s32)(func_80047DA0((f32)a*K, (f32)b*K) * D_800B878C); }` with K=D_800B8788 (f32), func_80047DA0(f32,f32)->f32. Remaining diff: target places the second `mul.s $f14` before `addiu $sp` and fills the jal delay slot with a nop; mine puts mul.s in the delay slot. Order variants (b first, inline args) did not change it. Next idea: force the second product to be computed in a separate statement before the first, or a different f32 temp type.",
+   "by": "claude-haiku-19",
+   "created_at": 1793884744.854322,
+   "score_before": 290,
+   "score_after": 290
+  },
+  {
+   "function": "func_80069EEC_ovl_01",
+   "text": "Best saved 210 (m2c draft, 4 args: arg0,arg1,arg2 unused,arg3). Working C: s0=(u16)arg3->h6>>1; lo=s0*s0; t=(s16)arg3->h2 + s0 - *(s32*)(arg0+8); return (arg1-s0)+func_80040BE4(lo-t*t, lo). Best compile 330 with 4-arg signature (the 3-arg one was wrong: a3 is the 4th arg). Remaining diff: target keeps arg1 in s1 and does 'move s1,a1' right after the first mult (before lh); ours emits the move after lhu. Tried: keep=arg1 at top (330, no change). Left: the 'move s1,a1' scheduling and mflo register choice.",
+   "by": "claude-haiku-20",
+   "created_at": 1793884744.937987,
+   "score_before": 210,
+   "score_after": 210
+  },
+  {
+   "function": "func_80166CE4_ovl_26",
+   "text": "Deep permuter: score 260 \u2192 260; 0 improvements; 1 candidates tested; 10 cached skips; 0 rejected; 63s elapsed. Budget rotation: soft allowance reached without recent progress.",
+   "by": "Retroreversing.permuter-4857",
+   "created_at": 1793958881.546116,
+   "score_before": 260,
+   "score_after": 260
+  },
+  {
+   "function": "func_801713CC_ovl_07",
+   "text": "Deep permuter: score 851 \u2192 851; 0 improvements; 3 candidates tested; 0 cached skips; 0 rejected; 71s elapsed. Budget rotation: soft allowance reached without recent progress.",
+   "by": "Retroreversing.permuter-3903",
+   "created_at": 1793959612.016093,
+   "score_before": 851,
+   "score_after": 851
+  },
+  {
+   "function": "func_80040A88_ovl_01",
+   "text": "Deep permuter: score 290 \u2192 290; 0 improvements; 3 candidates tested; 2 cached skips; 0 rejected; 60s elapsed. Budget rotation: soft allowance reached without recent progress.",
+   "by": "Retroreversing.permuter-2560",
+   "created_at": 1793984792.675055,
+   "score_before": 290,
+   "score_after": 290
+  },
+  {
+   "function": "func_801713CC_ovl_07",
+   "text": "Deep permuter: score 851 \u2192 851; 0 improvements; 4 candidates tested; 0 cached skips; 0 rejected; 317s elapsed. Time limit reached.",
+   "by": "Retroreversing.permuter-3903-lane-2",
+   "created_at": 1794010170.5611598,
+   "score_before": 851,
+   "score_after": 851
+  },
+  {
+   "function": "func_801713CC_ovl_07",
+   "text": "Deep permuter: score 851 \u2192 851; 0 improvements; 6 candidates tested; 0 cached skips; 0 rejected; 321s elapsed. Time limit reached.",
+   "by": "Retroreversing.permuter-3903-lane-4",
+   "created_at": 1794010184.6189802,
+   "score_before": 851,
+   "score_after": 851
+  },
+  {
+   "function": "func_801713CC_ovl_07",
+   "text": "Deep permuter: score 851 \u2192 851; 0 improvements; 5 candidates tested; 0 cached skips; 0 rejected; 321s elapsed. Time limit reached.",
+   "by": "Retroreversing.permuter-3903-lane-3",
+   "created_at": 1794010187.7315562,
+   "score_before": 851,
+   "score_after": 851
+  },
+  {
+   "function": "func_801713CC_ovl_07",
+   "text": "Deep permuter: score 851 \u2192 851; 0 improvements; 5 candidates tested; 0 cached skips; 0 rejected; 325s elapsed. Time limit reached.",
+   "by": "Retroreversing.permuter-3903-lane-1",
+   "created_at": 1794010197.31652,
+   "score_before": 851,
+   "score_after": 851
+  },
+  {
+   "function": "func_801713CC_ovl_07",
+   "text": "Deep permuter: score 851 \u2192 851; 0 improvements; 6 candidates tested; 0 cached skips; 0 rejected; 329s elapsed. Time limit reached.",
+   "by": "Retroreversing.permuter-3903-lane-0",
+   "created_at": 1794010197.335875,
+   "score_before": 851,
+   "score_after": 851
+  },
+  {
+   "function": "func_8017BB18_ovl_05",
+   "text": "Released because its agent stopped (decompdecomp closed while it worked); its attempts are kept.",
+   "by": "codex-gpt-6-luna-13",
+   "created_at": 1794045785.589398,
+   "score_before": 25,
+   "score_after": 25
+  },
+  {
+   "function": "func_80171268_ovl_07",
+   "text": "Released because its agent stopped (Local helper authentication failed: NetworkError: invalid API token. No model request was started.); its attempts are kept.",
+   "by": "codex-gpt-6-luna-13",
+   "created_at": 1794045970.801315,
+   "score_before": 20,
+   "score_after": 20
+  },
+  {
+   "function": "func_801713CC_ovl_07",
+   "text": "Released because its agent stopped (Local helper authentication failed: NetworkError: invalid API token. No model request was started.); its attempts are kept.",
+   "by": "codex-gpt-6-luna-13",
+   "created_at": 1794045970.801315,
+   "score_before": 851,
+   "score_after": 851
+  },
+  {
+   "function": "func_801628B8_ovl_18",
+   "text": "Released because its agent stopped (The CLI repeatedly reported local tool connection failures. Automatic model retries paused; saved work is retained.); its attempts are kept.",
+   "by": "codex-gpt-6-luna-13",
+   "created_at": 1794048019.9183989,
+   "score_before": 875,
+   "score_after": 875
+  },
+  {
+   "function": "func_801628B8_ovl_18",
+   "text": "Current best score 860 from an explicit-data-table candidate. Target early branch is `if (p[6]) func_800324AC(p)`; delay slot sets v0=1 before branch. Use func_800324AC (not prior func_80031C44 alias). Status-clear path stores 1, loads byte 0x2BE and pointer 0x208; bnel nonzero path delay sets a0=7, otherwise calls func_8003420C(p+0x208, 0xBF10BF00). Then calls func_80077D48(7,p), reads `p[5]` through D_80162CD4 table, and calls func_80162B1C(p,0,table[index]). To improve target output, preserve bnel layout and likely use a helper/structured conditional to prevent hoisting 0x2BE load before early branch. Table expression should load base into v0, read index into v1, add base, then load byte into a2; simple direct indexing gave same path but different reg allocation.",
+   "by": "codex-gpt-6-luna-14",
+   "created_at": 1794050112.633525,
+   "score_before": 875,
+   "score_after": 860
   }
  ],
  "set_aside": [
