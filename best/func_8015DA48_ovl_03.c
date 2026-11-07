@@ -1,7 +1,7 @@
 extern u8 D_80160B9C_ovl_03[];
 extern u8 D_800C7650_ovl_01[];
 extern u8 D_80160BA2_ovl_03;
-static inline u8 inline_fn(u8 *arg0)
+inline static u8 inline_fn(u8 *arg0)
 {
   return arg0[10];
 }
@@ -11,6 +11,7 @@ void func_8015DA48_ovl_03(void)
   char *__repair_addr;
   u8 *s = D_80160B9C_ovl_03;
   u8 *g = D_800C7650_ovl_01;
+  u8 *new_var2;
   s16 n;
   u8 c;
   u8 d;
@@ -33,7 +34,7 @@ void func_8015DA48_ovl_03(void)
   {
     if (func_800276B4_ovl_01(3))
     {
-      if (s[6] != 0)
+      if ((*(new_var2 = &s[6])) != 0)
       {
         goto mode1;
       }
@@ -89,7 +90,7 @@ void func_8015DA48_ovl_03(void)
   }
   if ((*((u16 *) (g + 0x1825e))) & 4096)
   {
-    if (s[6] == 1)
+    if ((*new_var2) == 1)
     {
       func_80077B0C_ovl_01(0x04040000, 0);
       s[6] = 0;
@@ -97,7 +98,7 @@ void func_8015DA48_ovl_03(void)
   }
   if ((*((u16 *) (g + 0x1825e))) & 16384)
   {
-    if (s[6] == 0)
+    if ((*new_var2) == 0)
     {
       func_80077B0C_ovl_01(0x04040000, 0);
       s[6] = 1;

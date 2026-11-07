@@ -8,7 +8,7 @@ s32 func_80069884_ovl_01(void *arg0, s32 arg1, void *arg2)
   s32 temp_s0;
   s32 temp_s0_2;
   s32 temp_s0_3;
-  s32 var_a0;
+  
   s32 var_v0;
   s32 var_v0_2;
   s32 var_v0_4;
@@ -22,7 +22,7 @@ s32 func_80069884_ovl_01(void *arg0, s32 arg1, void *arg2)
     var_v0 = 0;
     if (((u32) ((*((u16 *) (((char *) arg2) + 4))) - 0x1F4)) >= ((u32) ((*new_var) - ((*((s16 *) (((char *) arg2) + 0))) + 0xFA))))
     {
-      var_a0 = *((s32 *) (((char *) arg0) + 0x128));
+      temp_s0_3 = *((s32 *) (((char *) arg0) + 0x128));
       var_v1 = *((u16 *) (((char *) arg2) + 6));
       var_v0_2 = (*((s16 *) (((char *) arg2) + 2))) - 0x28A;
       goto block_5;
@@ -33,13 +33,13 @@ s32 func_80069884_ovl_01(void *arg0, s32 arg1, void *arg2)
     var_v0 = 0;
     if (((u32) ((*((u16 *) (((char *) arg2) + 6))) - 0x1F4)) >= ((u32) ((*((s32 *) (((char *) arg0) + 0x128))) - ((*((s16 *) (((char *) arg2) + 2))) + 0xFA))))
     {
-      var_a0 = *new_var;
+      temp_s0_3 = *new_var;
       var_v1 = *((u16 *) (((char *) arg2) + 4));
       var_v0_2 = (*((s16 *) (((char *) arg2) + 0))) - 0x28A;
       block_5:
       var_v0 = 0;
 
-      if (((u32) (var_v1 + 0x514)) >= ((u32) (var_a0 - var_v0_2)))
+      if (((u32) (var_v1 + 0x514)) >= ((u32) (temp_s0_3 - var_v0_2)))
       {
         var_v0 = func_8006B250_overlay_001(arg2);
         temp_s0_2 = var_v0 - func_8006B294_overlay_001(arg2);

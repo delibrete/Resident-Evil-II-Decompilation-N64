@@ -1,4 +1,3 @@
-/* machine draft (m2c) for gcc-2.7.2-kmc -G0 -mips3 -mgp32 -mfp32 -O2, tried by autopilot */
 #ifndef M2C_DEFINES
 #define M2C_DEFINES
 typedef s32 M2C_UNK;
@@ -11,16 +10,19 @@ typedef s32 M2C_UNK32;
 #define M2C_CARRY 0
 #define M2C_OVERFLOW(a) (0)
 #endif
+extern short D_800E10FA;
+extern short D_800E1102;
+/* machine draft (m2c) for gcc-2.7.2-kmc -G0 -mips3 -mgp32 -mfp32 -O2, tried by autopilot */
 
-M2C_UNK func_801642DC_overlay_028(u8 *, void *, void *); /* extern */
-M2C_UNK func_801666EC_overlay_028(u8 *);            /* extern */
-M2C_UNK func_801667CC_overlay_028(u8 *);            /* extern */
-M2C_UNK func_8016695C_overlay_028(u8 *);            /* extern */
-M2C_UNK func_80166A94_overlay_028(u8 *);            /* extern */
-M2C_UNK func_80166C24_overlay_028(u8 *);            /* extern */
-M2C_UNK func_80167910_overlay_028(u8 *, void *, void *); /* extern */
-extern M2C_UNK D_800C7650;
-extern M2C_UNK D_800E8FC8;
+s32 func_801642DC_overlay_028();
+s32 func_801666EC_overlay_028();
+s32 func_801667CC_overlay_028();
+s32 func_8016695C_overlay_028();
+s32 func_80166A94_overlay_028();
+s32 func_80166C24_overlay_028();
+s32 func_80167910_overlay_028();
+extern char D_800C7650[];
+extern char D_800E8FC8[];
 
 void func_80167600_ovl_28(u8 *arg0, void *arg1, void *arg2) {
 int __repair_constant = 0x64;
@@ -35,7 +37,7 @@ int __repair_constant = 0x64;
     if (M2C_FIELD(arg0, u16 *, 0x2B8) & 0x10) {
         if (M2C_FIELD(arg0, u8 *, 6) == 0) {
             temp_s0 = M2C_FIELD(arg0, s32 *, 0x234) + 0x178;
-            temp_s4 = func_80032D44_ovl_01(M2C_FIELD(arg0, s16 *, 0x2A), M2C_FIELD(arg0, s16 *, 0x32), M2C_FIELD(&D_800C7650, s16 *, 0x19AAA), M2C_FIELD(&D_800C7650, s16 *, 0x19AB2));
+            temp_s4 = func_80032D44_ovl_01(M2C_FIELD(arg0, s16 *, 0x2A), M2C_FIELD(arg0, s16 *, 0x32));
             sp10 = 0;
             sp12 = (u16) temp_s4;
             sp14 = 0;

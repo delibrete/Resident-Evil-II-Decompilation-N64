@@ -4,6 +4,7 @@ extern s32 D_801320B0;
 s32 func_80002FE8();
 s32 func_800045DC(void *arg0, s32 arg1, s32 arg2, s32 arg3)
 {
+  s32 *new_var;
   s32 v;
   volatile s32 *p320 = &D_801320B0;
   volatile u32 *p129 = &D_801129B8;
@@ -74,6 +75,7 @@ s32 func_800045DC(void *arg0, s32 arg1, s32 arg2, s32 arg3)
   {
     return 0;
   }
-  return *((s32 *) (((u8 *) arg0) + 0x14));
+  p320 = &(*((s32 *) (((u8 *) arg0) + 0x14)));
+  return *(new_var = p320);
 }
 

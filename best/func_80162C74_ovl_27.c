@@ -4,15 +4,13 @@ s32 func_80163B38_overlay_027();
 void func_80162C74_ovl_27(void *arg0, s32 arg1, s32 arg2)
 {
   s16 var_v1;
-  u8 temp_v1;
-  temp_v1 = *((u8 *) (((char *) arg0) + 6));
-  switch (temp_v1)
+  arg2 = *((u8 *) (((char *) arg0) + 6));
+  switch (arg2)
   {
     case 0:
       *((u8 *) (((char *) arg0) + 6)) = 1U;
       *((s16 *) (((char *) arg0) + 0x2BC)) = (s16) ((*((u16 *) (((char *) arg0) + 0x2C0))) + 0x400);
       var_v1 = -0x400;
-      if (func_80033634_ovl_01() & 1)
     {
       var_v1 = 0x400;
     }

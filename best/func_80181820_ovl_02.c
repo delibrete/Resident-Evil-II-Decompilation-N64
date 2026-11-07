@@ -1,5 +1,6 @@
-volatile unsigned int func_80181820_ovl_02(void)
+void func_80181820_ovl_02(void)
 {
+  volatile unsigned long long new_var21;
   volatile unsigned long long new_var17;
   volatile long long new_var9[2];
   unsigned int new_var10;
@@ -10,6 +11,7 @@ volatile unsigned int func_80181820_ovl_02(void)
   volatile long long *new_var13;
   short new_var16;
   volatile long long *new_var8;
+  int new_var20;
   volatile long long new_var2;
   volatile unsigned long long new_var19;
   volatile unsigned long long new_var6;
@@ -42,13 +44,20 @@ volatile unsigned int func_80181820_ovl_02(void)
     {
       new_var11 = &new_var7;
       new_var15 = &new_var6;
-      new_var12 = (new_var6 = *new_var14);
-      new_var17 = new_var12;
-      new_var14 = new_var15;
-      new_var9[0] = new_var17;
-      new_var = *new_var14;
-      new_var5 = new_var11;
-      new_var16 = *new_var5;
+      new_var21 = (new_var6 = *new_var14);
+      new_var20 = new_var21;
+      if (1)
+      {
+        new_var19 = new_var20;
+        new_var12 = new_var19;
+        new_var17 = new_var12;
+        new_var14 = new_var15;
+        new_var9[0] = new_var17;
+        new_var = *new_var14;
+        new_var5 = new_var11;
+        new_var10 = *new_var5;
+        new_var16 = new_var10;
+      }
       new_var10 = new_var16;
       new_var3 = new_var10;
       (void) new_var3;

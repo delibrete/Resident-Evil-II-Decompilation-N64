@@ -14,7 +14,12 @@ s32 func_80166BE4_ovl_29(u8 *arg0)
   int new_var2;
   if ((*((u16 *) (arg0 + 0x2B8))) & 0x40)
   {
- do { return 0; } while (0); new_var = 0x40;
+    do
+    {
+      return 0;
+    }
+    while (0);
+    new_var = 0x40;
   }
   v1 = *((u8 **) (arg0 + 0x234));
   r = (volatile Rec *) (v1 + 0x8D0);
@@ -30,6 +35,7 @@ s32 func_80166BE4_ovl_29(u8 *arg0)
   r->f130 = new_var;
   r->f134 = 0x30;
   v = (*((u16 *) (arg0 + 0x2B8))) | new_var;
-  *((u16 *) (arg0 + (new_var2 = 0x2B8))) = v;
   return v;
+  *((u16 *) (arg0 + (new_var2 = 0x2B8))) = v;
 }
+

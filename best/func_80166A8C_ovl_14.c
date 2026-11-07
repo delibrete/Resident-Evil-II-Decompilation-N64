@@ -1,9 +1,11 @@
 void func_80166A8C_ovl_14(void *p)
 {
+  int new_var2;
   u16 a = *((u16 *) (((u8 *) p) + 0x2c8));
   void *new_var;
   u32 v;
-  u8 s;
+  void *new_var3;
+  new_var2 = 0x2cb;
   if (a & 0x40)
   {
     goto Z;
@@ -32,15 +34,16 @@ void func_80166A8C_ovl_14(void *p)
   N:
   v = func_80033174_ovl_01(p, *((u32 *) (((u8 *) p) + 0x2c4)));
 
-  s = v & 255;
-  switch (*(((u8 *) p) + 0x2cb))
+  a = v & 255;
+  new_var3 = p;
+  switch (*(((u8 *) p) + new_var2))
   {
     case 2:
       if ((func_80033634_ovl_01() & 15) < 5)
     {
       goto S1;
     }
-      if (!s)
+      if (!a)
     {
       goto S3;
     }
@@ -54,7 +57,7 @@ void func_80166A8C_ovl_14(void *p)
     {
       goto S1;
     }
-      if (s)
+      if (a)
     {
       goto S4;
     }
@@ -62,10 +65,10 @@ void func_80166A8C_ovl_14(void *p)
 
   }
 
-  *((u16 *) (((u8 *) p) + 0x26c)) |= 0x20;
+  *((u16 *) (((u8 *) new_var3) + 0x26c)) = (*((u16 *) (((u8 *) p) + 0x26c))) | 0x20;
   goto S6;
   C:
-  if (s)
+  if (a)
   {
     *((u16 *) (((u8 *) p) + 0x26c)) |= 0x20;
   }

@@ -57,7 +57,7 @@ s32 func_8002C3E4_ovl_01(O *a)
       n = r->n;
     }
     n--;
-    byte = *(p++);
+    byte = (sp10 = *(p++));
     sp10 = byte << 8;
     if (n == 0)
     {
@@ -70,7 +70,6 @@ s32 func_8002C3E4_ovl_01(O *a)
       n = r->n;
     }
     n--;
-    sp10 += *(p++);
     sp10 -= 2;
     while (sp10 > 0)
     {

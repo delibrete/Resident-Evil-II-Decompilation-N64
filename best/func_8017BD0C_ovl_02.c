@@ -13,7 +13,7 @@ extern s32 D_8018579C_ovl_02;
 extern void func_8017B768_ovl_02(void *, s32);
 extern s32 func_8017B874_ovl_02(void);
 extern void func_8017B96C_ovl_02(void *, s32);
-void func_8017BD0C_ovl_02(s32 arg1)
+void func_8017BD0C_ovl_02(unsigned int arg1)
 {
   s32 new_var;
   int __repair_constant = 24;
@@ -24,7 +24,7 @@ void func_8017BD0C_ovl_02(s32 arg1)
   {
     do
     {
-      if (b < 25)
+      if (25 > b)
       {
         s32 lim = __repair_constant;
         do
@@ -33,7 +33,8 @@ void func_8017BD0C_ovl_02(s32 arg1)
           {
             func_8017B96C_ovl_02(&D_80186C14_ovl_02, arg1);
           }
-          new_var = func_8017B874_ovl_02() << (lim - b);
+          lim = lim - b;
+          new_var = func_8017B874_ovl_02() << lim;
           D_80186C14_ovl_02->bits |= new_var;
           b += 8;
         }

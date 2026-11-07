@@ -13,7 +13,9 @@ void func_800328AC_ovl_01(s16 arg0)
   s32 size;
   s32 acc;
   volatile u8 *base = D_800C7650_ovl_01;
+  volatile u8 *new_var2;
   void *a;
+  volatile s32 *new_var;
   void *b;
   u8 *q;
   idx = arg0 - 0x10;
@@ -22,6 +24,7 @@ void func_800328AC_ovl_01(s16 arg0)
     return;
   }
   id = arg0;
+  new_var = (volatile s32 *) ((base + (idx * 4)) + 0x1dc0);
   if (((u32) idx) < 0x10)
   {
     id = 0x10;
@@ -40,10 +43,13 @@ void func_800328AC_ovl_01(s16 arg0)
         return;
       }
       slot--;
-      q -= 4;
-      if (slot < 0)
+      if (1)
       {
-        break;
+        q -= 4;
+        if (slot < 0)
+        {
+          break;
+        }
       }
     }
 
@@ -65,12 +71,13 @@ void func_800328AC_ovl_01(s16 arg0)
       if ((*((volatile u16 *) (q + 0x2240))) == id)
       {
         *((volatile u16 *) (q + 0x2242)) = 1;
-        *((volatile s32 *) ((base + (idx * 4)) + 0x1dc0)) = *((volatile s32 *) (((base + (idx * 4)) + (slot * 0x180)) + 0x1f40));
+        *new_var = *((volatile s32 *) (((base + (idx * 4)) + (slot * 0x180)) + 0x1f40));
         return;
       }
     }
 
-    if ((*((volatile u16 *) (base + 0x1a242))) == 0)
+    new_var2 = base + 0x1a242;
+    if ((*((volatile u16 *) new_var2)) == 0)
     {
       slot = 0;
     }
@@ -87,7 +94,7 @@ void func_800328AC_ovl_01(s16 arg0)
   q = (base + 0x18000) + (slot * 4);
   *((volatile u16 *) (q + 0x2242)) = 1;
   *((volatile u16 *) (q + 0x2240)) = id;
-  *((volatile s32 *) ((base + (idx * 4)) + 0x1dc0)) = *((volatile s32 *) (((base + (idx * 4)) + (slot * 0x180)) + 0x1f40));
+  *new_var = *((volatile s32 *) (((base + (idx * 4)) + (slot * 0x180)) + 0x1f40));
   if (id == 0x39)
   {
     id = 0x2e;

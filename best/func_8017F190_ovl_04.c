@@ -9,6 +9,7 @@ extern s32 D_80180A54_ovl_04;
 s32 func_8017F190_ovl_04(u8 *arg0)
 {
   s32 r;
+  u8 *new_var;
   s32 rc;
   u32 i;
   u8 *s1;
@@ -18,26 +19,28 @@ s32 func_8017F190_ovl_04(u8 *arg0)
   status = 6;
   func_8017FBB4_ovl_04(s1[0], s1 + 0x2C, 0xFEED, 0xDEADBEEF);
   status = 7;
+  i = 9;
   func_8017F110_ovl_04(arg0);
   status = 8;
-  if (s1[0x176] == 0)
+  new_var = s1;
+  if (new_var[0x176] == 0)
   {
     goto Ldone;
   }
-  status = 9;
+  status = i;
   i = 0;
-  s3 = s1 + 0x3F4;
+  s3 = new_var + 0x3F4;
   do
   {
     {
       status = 10;
       status = 11;
-      r = func_8017FA4C_ovl_04(s3, (s1 + (arg0[i] * 22)) + 0x2C, 0xFEED, 0xDEADBEEF, 0x80, 0x200);
+      r = func_8017FA4C_ovl_04(s3, (new_var + (arg0[i] * 22)) + 0x2C, 0xFEED, 0xDEADBEEF, 0x80, 0x200);
       if (r)
       {
         goto Ldone;
       }
-      func_800824A4_ovl_01((s1 + 0x9F4) + (i * 0x80), s3, 0x80);
+      func_800824A4_ovl_01((new_var + 0x9F4) + (i * 0x80), s3, 0x80);
     }
     i++;
     s3 += 0x80;
@@ -57,7 +60,7 @@ s32 func_8017F190_ovl_04(u8 *arg0)
   {
     return 3;
   }
-  r = func_8017FDD4_ovl_04(s1[0]);
+  r = func_8017FDD4_ovl_04(new_var[0]);
   status = 14;
   return r;
 }

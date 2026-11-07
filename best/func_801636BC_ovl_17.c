@@ -7,6 +7,7 @@ extern u16 D_80167D72_overlay_017;
 void func_801636BC_ovl_17(void *arg0, s32 arg1, s32 arg2)
 {
   void *temp_a2;
+  u16 new_var;
   temp_a2 = *((void **) (((char *) arg0) + 0x2DC));
   if ((*((u8 *) (((char *) arg0) + 6))) == 0)
   {
@@ -18,10 +19,11 @@ void func_801636BC_ovl_17(void *arg0, s32 arg1, s32 arg2)
   *((u16 *) (((char *) arg0) + 0x66)) += *((u16 *) (((char *) arg0) + 0x1F6));
   func_80089D34_ovl_01(arg0, arg1, arg2, 0x400);
   func_801678B8_overlay_017(arg0);
-  func_80166978_overlay_017(arg0, 1);
+  func_80166978_overlay_017(arg0);
+  new_var = D_80167D72_overlay_017;
   arg2 = (*((u16 *) (((char *) arg0) + 0x1F4))) - 1;
   *((u16 *) (((char *) arg0) + 0x1F4)) = arg2;
-  *((u16 *) (((char *) arg0) + 0x1E0)) += D_80167D72_overlay_017;
+  *((u16 *) (((char *) arg0) + 0x1E0)) += new_var;
   if ((arg2 << 0x10) == 0)
   {
     *((s32 *) (((char *) arg0) + 4)) = 0x01000000;

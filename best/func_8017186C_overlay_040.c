@@ -5,7 +5,6 @@ void func_8017186C_overlay_040(void *arg0)
   void (*new_var)(void);
   u32 address = base[address];
   address = address;
-  new_var = (void (*)(void)) address;
+ do { new_var = (void (*)(void)) address; } while (0);
   new_var();
 }
-

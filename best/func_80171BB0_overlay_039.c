@@ -3,7 +3,7 @@ s32 func_80077D48_ovl_01();
 s32 func_80089D34_ovl_01();
 void func_80171BB0_overlay_039(void *arg0, s32 arg1, s32 arg2)
 {
-  s32 var_a0;
+  volatile unsigned int var_a0;
   s32 temp_a0;
   u8 temp_v1;
   void *new_var;
@@ -36,7 +36,8 @@ void func_80171BB0_overlay_039(void *arg0, s32 arg1, s32 arg2)
       return;
 
     case 2:
-      temp_a0 = (*((u16 *) (((char *) new_var) + 0x2B6))) & 4;
+      temp_a0 = 4;
+      temp_a0 = (*((u16 *) (((char *) new_var) + 0x2B6))) & temp_a0;
       *((s32 *) (((char *) new_var) + 0x1E8)) = (s32) (((func_80033634_ovl_01() & 0xF) << 0x10) + 0x08000F00);
       if (temp_a0 != 0)
     {
@@ -54,7 +55,7 @@ void func_80171BB0_overlay_039(void *arg0, s32 arg1, s32 arg2)
           var_a0 = 0xB;
         }
       }
-      func_80077D48_ovl_01(var_a0, new_var);
+      func_80077D48_ovl_01(var_a0);
       *((u8 *) (((char *) arg0) + 0x2D5)) = 0x96U;
     }
 

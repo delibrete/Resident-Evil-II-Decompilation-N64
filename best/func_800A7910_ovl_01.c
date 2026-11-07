@@ -23,24 +23,26 @@ s32 func_800A7910_ovl_01(s32 arg0, u16 arg1)
   T_801443E8 *p;
   u32 hi;
   u32 lo;
-  id = func_800AF074_ovl_01();
-  if (id != (-1))
+  int new_var;
+  new_var = func_800AF074_ovl_01();
+  if (new_var != (-1))
   {
     hi = (arg1 & 0xFFFF) >> 7;
     lo = arg1 & 0x7F;
     do
     {
-      cur = id & 0xFF;
+      cur = new_var & 0xFF;
       p = &D_801443E8[(unsigned short) cur];
-      if (p->unk60 != id)
+      if (p->unk60 != new_var)
       {
         return res;
       }
+      new_var = cur;
       if (p->unk24 & 2)
       {
         res = cur;
-        func_800AC5B4_ovl_01(0x80, cur, p->unk55, hi & 0xFF);
-        func_800AC5B4_ovl_01(0x81, cur, p->unk55, lo & 0xFF);
+        func_800AC5B4_ovl_01(0x80, new_var, p->unk55, hi & 0xFF);
+        func_800AC5B4_ovl_01(0x81, new_var, p->unk55, lo & 0xFF);
       }
       else
       {
@@ -48,7 +50,7 @@ s32 func_800A7910_ovl_01(s32 arg0, u16 arg1)
         func_800AC5B4_ovl_01(0x80, cur, p->unk4B, hi & 0xFF);
         func_800AC5B4_ovl_01(0x81, cur, p->unk4B, lo & 0xFF);
       }
-      id = (D_801443E8 + ((unsigned short) cur))->unk10;
+      id = (D_801443E8 + ((unsigned short) new_var))->unk10;
       res = 0;
     }
     while (id != (-1));

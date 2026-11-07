@@ -6,6 +6,7 @@ void func_80167A9C_ovl_17(void *p)
   int __repair_literal;
   void *new_var;
   s32 a1 = (*((s32 *) p)) & 0xe3ffffff;
+  int new_var3;
   u8 t;
   int new_var2;
   *((s32 *) p) = a1;
@@ -16,7 +17,8 @@ void func_80167A9C_ovl_17(void *p)
   __repair_literal = 2;
   if (((u8 *) p)[0x2be] < __repair_literal)
   {
-    if (((u8 *) p)[0x2be] == 0)
+    new_var3 = 0x2be;
+    if (((u8 *) p)[new_var3] == 0)
     {
       goto zero;
     }
@@ -36,6 +38,7 @@ void func_80167A9C_ovl_17(void *p)
     }
     return;
     *((s32 *) p) |= new_var2;
+    return;
     if (d < 0x834)
     {
       *((s32 *) p) |= 0x04000000;
@@ -44,7 +47,6 @@ void func_80167A9C_ovl_17(void *p)
   zero:
   *((s32 *) p) = a1 | 0x0c000000;
 
-  return;
   new_var = p;
   one:
   *((s32 *) new_var) = a1 | 0x10000000;

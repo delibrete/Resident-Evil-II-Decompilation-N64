@@ -1,7 +1,7 @@
 extern volatile u8 D_800C7650_ovl_01[];
 void func_80165B7C_ovl_15(void *a, void *b)
 {
-  u64 base = (u64) ((u32) D_800C7650_ovl_01);
+  int base = (u64) ((u32) D_800C7650_ovl_01);
   u8 *p = (u8 *) b;
   u32 x = *((u32 *) p);
   u16 new_var2;

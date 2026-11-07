@@ -1,66 +1,66 @@
-/* machine draft (m2c) for gcc-2.7.2-kmc -G0 -mips3 -mgp32 -mfp32 -O2, tried by autopilot */
-#ifndef M2C_DEFINES
-#define M2C_DEFINES
-typedef s32 M2C_UNK;
-typedef s8 M2C_UNK8;
-typedef s16 M2C_UNK16;
-typedef s32 M2C_UNK32;
-#define M2C_FIELD(expr, type_ptr, offset) (*(type_ptr)((s8 *)(expr) + (offset)))
-#define M2C_BITWISE(type, expr) ((type)(expr))
-#define M2C_ERROR(desc) (0)
-#define M2C_CARRY 0
-#define M2C_OVERFLOW(a) (0)
-#endif
-
-M2C_UNK func_80032B8C_ovl_01(void *, s16);          /* extern */
-s32 func_80033634_ovl_01(M2C_UNK *);                /* extern */
-M2C_UNK func_80089D34_ovl_01(void *, M2C_UNK, M2C_UNK, M2C_UNK); /* extern */
-M2C_UNK func_80173508_overlay_045(void *, M2C_UNK); /* extern */
-s32 func_80173614_overlay_045(void *, s16);         /* extern */
-M2C_UNK func_80174448_overlay_045(void *);          /* extern */
-extern M2C_UNK D_801748F8_overlay_045;
-
-void func_8016EF64_overlay_045(void *arg0, M2C_UNK arg1, M2C_UNK arg2) {
-char *__repair_addr;
-
-    u16 temp_v1_2;
-    u8 temp_v1;
-
-    temp_v1 = M2C_FIELD(arg0, u8 *, 6);
-    switch (temp_v1) {                              /* irregular */
+s32 func_80032B8C_ovl_01(void *, s16);
+s32 func_80033634_ovl_01(s32 *);
+s32 func_80089D34_ovl_01(void *, s32, s32, s32);
+s32 func_80173508_overlay_045(void *, s32);
+s32 func_80173614_overlay_045(void *, s16);
+s32 func_80174448_overlay_045(void *);
+extern s32 D_801748F8_overlay_045;
+void func_8016EF64_overlay_045(void *arg0, s32 arg1, s32 arg2)
+{
+  char *__repair_addr;
+  u16 temp_v1_2;
+  u8 temp_v1;
+  temp_v1 = *((u8 *) (((char *) arg0) + 6));
+  switch (temp_v1)
+  {
     case 0:
-        M2C_FIELD(arg0, u8 *, 6) = 1U;
-        M2C_FIELD(arg0, s16 *, 0x1E4) = 0;
-        M2C_FIELD(arg0, s32 *, 0x1E8) = (s32) ((*(((M2C_FIELD(arg0, u8 *, 5) - 1) * 0xC) + &D_801748F8_overlay_045) << 0x18) + 0x300);
-        M2C_FIELD(arg0, u16 *, 0x1F4) = (u16) (func_80033634_ovl_01(&D_801748F8_overlay_045) & 0x2E);
-        /* fallthrough */
-    case 1:
-        M2C_FIELD(arg0, u16 *, 0x66) = (u16) (M2C_FIELD(arg0, u16 *, 0x66) + func_80173614_overlay_045(arg0, M2C_FIELD((__repair_addr = (char *)((((M2C_FIELD(arg0, u8 *, 5) - 1) * 0xC) + &D_801748F8_overlay_045))), s16 *, 6)));
-        func_80089D34_ovl_01(arg0, arg1, arg2, 0x400);
-        func_80174448_overlay_045(arg0);
-        func_80173508_overlay_045(arg0, 1);
-        M2C_FIELD(arg0, u16 *, 0x1F6) = (u16) M2C_FIELD(arg0, u16 *, 0x1E0);
-        temp_v1_2 = M2C_FIELD(arg0, u16 *, 0x1F4) - 1;
-        M2C_FIELD(arg0, u16 *, 0x1F4) = temp_v1_2;
-        M2C_FIELD(arg0, u16 *, 0x1E0) = (u16) (M2C_FIELD(arg0, u16 *, 0x1E0) + M2C_FIELD((((M2C_FIELD(arg0, u8 *, 5) - 1) * 0xC) + &D_801748F8_overlay_045), u16 *, 0xA));
-        if ((s16) temp_v1_2 != -1) {
-            if (M2C_FIELD(arg0, u8 *, 0x2BE) == 0) {
-                if (M2C_FIELD(arg0, u8 *, 0x2D3) != 0) {
-                    if ((u32) (M2C_FIELD(arg0, s32 *, 0x290) & 0x3FFFFFFF) >= 0x5DCU) {
+      *((u8 *) (((char *) arg0) + 6)) = 1U;
+      *((s16 *) (((char *) arg0) + 0x1E4)) = 0;
+      *((s32 *) (((char *) arg0) + 0x1E8)) = (s32) (((*((((*((u8 *) (((char *) arg0) + 5))) - 1) * 0xC) + (&D_801748F8_overlay_045))) << 0x18) + 0x300);
+      *((u16 *) (((char *) arg0) + 0x1F4)) = (u16) (func_80033634_ovl_01(&D_801748F8_overlay_045) & 0x2E);
 
-                    } else {
-                        goto block_11;
-                    }
-                } else if ((u32) M2C_FIELD(arg0, u32 *, 0x28C) < 0x5DCU) {
-                    goto block_10;
-                }
-            }
-        } else {
-block_10:
-block_11:
-            M2C_FIELD(arg0, s32 *, 4) = 0x01000000;
+    case 1:
+      *((u16 *) (((char *) arg0) + 0x66)) = (u16) ((*((u16 *) (((char *) arg0) + 0x66))) + func_80173614_overlay_045(arg0, *((s16 *) (((char *) (__repair_addr = (char *) ((((*((u8 *) (((char *) arg0) + 5))) - 1) * 0xC) + (&D_801748F8_overlay_045)))) + 6))));
+      do { func_80174448_overlay_045(arg0); } while (0);
+      func_80173508_overlay_045(arg0, 1);
+      *((u16 *) (((char *) arg0) + 0x1F6)) = (u16) (*((u16 *) (((char *) arg0) + 0x1E0)));
+      temp_v1_2 = (*((u16 *) (((char *) arg0) + 0x1F4))) - 1;
+      *((u16 *) (((char *) arg0) + 0x1F4)) = temp_v1_2;
+      *((u16 *) (((char *) arg0) + 0x1E0)) = (u16) ((*((u16 *) (((char *) arg0) + 0x1E0))) + (*((u16 *) (((char *) ((((*((u8 *) (((char *) arg0) + 5))) - 1) * 0xC) + (&D_801748F8_overlay_045))) + 0xA))));
+      func_80089D34_ovl_01(arg0, arg1, arg2, 0x400);
+      if (((s16) temp_v1_2) != (-1))
+    {
+      if ((*((u8 *) (((char *) arg0) + 0x2BE))) == 0)
+      {
+        if ((*((u8 *) (((char *) arg0) + 0x2D3))) != 0)
+        {
+          if (((u32) ((*((s32 *) (((char *) arg0) + 0x290))) & 0x3FFFFFFF)) >= 0x5DCU)
+          {
+          }
+          else
+          {
+            goto block_11;
+          }
         }
-        break;
+        else
+          if (((u32) (*((u32 *) (((char *) arg0) + 0x28C)))) < 0x5DCU)
+        {
+          goto block_10;
+        }
+      }
     }
-    func_80032B8C_ovl_01(arg0, M2C_FIELD(arg0, s16 *, 0x2B6));
+    else
+    {
+      block_10:
+      block_11:
+      *((s32 *) (((char *) arg0) + 4)) = 0x01000000;
+
+
+    }
+      break;
+
+  }
+
+  func_80032B8C_ovl_01(arg0, *((s16 *) (((char *) arg0) + 0x2B6)));
 }
+

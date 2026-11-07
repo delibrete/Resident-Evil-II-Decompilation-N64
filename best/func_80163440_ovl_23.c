@@ -2,7 +2,7 @@ extern u8 D_800C7650_ovl_01[];
 extern u8 func_801656D4_ovl_23[];
 extern u16 D_801660AC_ovl_23;
 extern u16 D_801660AE_ovl_23;
-s32 func_80089D34_ovl_01();
+short func_80089D34_ovl_01();
 void func_80163440_ovl_23(u8 *arg0, s32 arg1, s32 arg2)
 {
   u8 *new_var[2];
@@ -33,13 +33,13 @@ void func_80163440_ovl_23(u8 *arg0, s32 arg1, s32 arg2)
   *((s16 *) (arg0 + 0x2b8)) = 2;
   *((s32 *) (arg0 + 0x284)) = 1;
   *((s16 *) (arg0 + 0x134)) = -0x708;
-  *((s16 *) (arg0 + 0x13a)) = 0x708;
   *((s16 *) (arg0 + 0x12c)) = 1000;
   *((s16 *) (arg0 + 0x136)) = 1000;
   *((s16 *) (arg0 + 0x12e)) = 1000;
   *((s16 *) (arg0 + 0x138)) = 1000;
   arg0[0x2ba] = zero;
   arg0[0x2c4] = zero;
+  *((s16 *) (arg0 + 0x13a)) = 0x708;
   arg0[0x2c5] = zero;
   *((s32 *) (arg0 + 0x2bc)) = zero;
   *((s32 *) (arg0 + 0x2c0)) = zero;

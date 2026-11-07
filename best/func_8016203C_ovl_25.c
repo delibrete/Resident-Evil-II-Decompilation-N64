@@ -6,7 +6,7 @@ void func_8016203C_ovl_25(void *arg0, s32 arg1, s32 arg2)
   void *new_var;
   register void *p0 = arg0;
   register s32 p1 = arg1;
-  char new_var3;
+  unsigned char new_var3;
   register s32 p2 = arg2;
   Fn *new_var2;
   new_var = p0;

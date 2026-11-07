@@ -21,6 +21,7 @@ void func_8016EBC8_overlay_057(void *arg0, s32 arg1, long long arg2)
   s32 *temp_v1_5;
   s32 *temp_v1_6;
   s32 *temp_v1_7;
+  s32 *new_var2;
   s32 *temp_v1_8;
   s32 *temp_v1_9;
   s32 *var_t0;
@@ -39,6 +40,7 @@ void func_8016EBC8_overlay_057(void *arg0, s32 arg1, long long arg2)
   void *temp_t0_7;
   void *temp_t0_8;
   void *temp_t0_9;
+  new_var2 = (s32 *) (((char *) arg0) + 0);
   *((s32 *) (((char *) arg0) + 4)) = 0x01000000;
   *((s16 *) (((char *) arg0) + 0x1F2)) = 0x2BC;
   *((s16 *) (((char *) arg0) + 0x26C)) = 0;
@@ -127,7 +129,7 @@ void func_8016EBC8_overlay_057(void *arg0, s32 arg1, long long arg2)
   temp_v1 = *((s32 **) (((char *) arg0) + 0x234));
   temp_t0_6 = temp_v1 + 0x8D0;
   *((s32 *) (((char *) temp_v1) + 0x8D0)) = (s32) ((*((s32 *) (((char *) temp_v1) + 0x8D0))) | 0x400);
-temp_v1 = 0;
+  temp_v1 = 0;
   *((s16 *) (((char *) temp_t0_6) + 0x124)) = 0x800;
   *((s16 *) (((char *) temp_t0_6) + 0x126)) = 0x200;
   *((s16 *) (((char *) temp_t0_6) + 0x128)) = 0x800;
@@ -146,6 +148,7 @@ temp_v1 = 0;
   temp_v1_4 = *((s32 **) (((char *) arg0) + 0x234));
   temp_t0_9 = temp_v1_4 + 0x468;
   *((s32 *) (((char *) temp_v1_4) + 0x468)) = (s32) ((*((s32 *) (((char *) temp_v1_4) + 0x468))) | 0x400);
+  temp_v1_4 = 0;
   *((s16 *) (((char *) temp_t0_9) + 0x124)) = 0x1000;
   new_var = 0x1388;
   *((s16 *) (((char *) temp_t0_9) + 0x126)) = 0x200;
@@ -179,7 +182,7 @@ temp_v1 = 0;
   if (((*((u16 *) (((char *) arg0) + 0x1AA))) & 0xFFF) == 3)
   {
     *((s16 *) (((char *) arg0) + 0x1F2)) = new_var;
-    *((s32 *) (((char *) arg0) + 0)) = (s32) ((*((s32 *) (((char *) arg0) + 0))) | 0xA);
+    *((s32 *) (((char *) arg0) + 0)) = (s32) ((*new_var2) | 0xA);
     *((s8 *) (((char *) (*((void **) (((char *) arg0) + 0x208)))) + 0xE)) = 0;
     var_t0_3 = *((s32 **) (((char *) arg0) + 0x234));
     *((s8 *) (((char *) arg0) + 5)) = 9;

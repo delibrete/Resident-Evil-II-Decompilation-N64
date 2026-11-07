@@ -18,8 +18,11 @@ extern void *D_8013A3D0;
 void func_8009B644_ovl_01(void)
 {
   s16 temp_v1_3;
-  
-  union { s32 * pointer; s32 value; } __repair_phase_storage;
+  union 
+  {
+    s32 *pointer;
+    s32 value;
+  } __repair_phase_storage;
   void *temp_v1;
   void *temp_v1_2;
   __repair_phase_storage.pointer = (s32 *) (((char *) (&D_800C7650_ovl_01)) + 0x19A3C);
@@ -69,8 +72,13 @@ void func_8009B644_ovl_01(void)
       __repair_phase_storage.value = 0x20;
       if (temp_v1_3 == 0x34)
       {
-        do { func_8004C24C_ovl_01(__repair_phase_storage.value, 0xB8, (*((u16 *) (((char *) (&D_80131EFC_ovl_01)) + 2))) + (&D_80131EC0_ovl_01), 0x4000); } while (0);
-        func_8004C24C_ovl_01(__repair_phase_storage.value, 0xC8, (*((u16 *) (((char *) (&D_80131EFC_ovl_01)) + 4))) + (&D_80131EC0_ovl_01), 0x4000);
+        do
+        {
+          func_8004C24C_ovl_01(__repair_phase_storage.value, 0xB8, (*((u16 *) (((char *) (&D_80131EFC_ovl_01)) + 2))) + (&D_80131EC0_ovl_01), 0x4000);
+        }
+        while (0);
+        temp_v1 = &D_80131EC0_ovl_01;
+        func_8004C24C_ovl_01(__repair_phase_storage.value, 0xC8, (*((u16 *) (((char *) (&D_80131EFC_ovl_01)) + 4))) + temp_v1, 0x4000);
       }
     }
     func_80042B08_ovl_01();

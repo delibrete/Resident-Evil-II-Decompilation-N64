@@ -2,6 +2,8 @@ extern u8 D_8017E55C_ovl_05[];
 extern u8 D_8017DDA0_ovl_05[];
 extern u8 D_8017DECC_ovl_05[];
 void func_8017DBC8_ovl_05(s32 arg0, u32 arg1, s32 arg2) {
+int __repair_constant = 0x37;
+
     u8 *buf;
     s32 q;
     s32 idx;
@@ -22,11 +24,11 @@ void func_8017DBC8_ovl_05(s32 arg0, u32 arg1, s32 arg2) {
                 buf[1] = q + 0x17;
             } else {
                 buf = D_8017E55C_ovl_05 + a;
-                buf[1] = 0x37;
+                buf[1] = __repair_constant;
             }
             buf = D_8017E55C_ovl_05 + a;
             buf[0] = n % 10 + 0x17;
-            buf[2] = 0x37;
+            buf[2] = __repair_constant;
         }
         if (a != 0) {
             idx = D_8017DDA0_ovl_05[arg2 * 2] + 6;

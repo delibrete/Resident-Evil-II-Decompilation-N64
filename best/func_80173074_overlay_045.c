@@ -10,12 +10,10 @@ void func_80173074_overlay_045(void *arg0, s32 arg1, s32 arg2)
   {
     temp_v1 = *((void **) (((char *) arg0) + 0x234));
     new_var = temp_v1;
-    do
     {
       *((s32 *) (((char *) temp_v1) + 0x1BE8)) = (s32) ((*((s32 *) (((char *) new_var) + 0x1BE8))) | 0x10);
       temp_v1_2 = temp_v1;
     }
-    while (0);
     if (1)
     {
       temp_v1_2 = temp_v1_2;

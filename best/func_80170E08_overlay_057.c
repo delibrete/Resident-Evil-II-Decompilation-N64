@@ -30,7 +30,7 @@ void func_80170E08_overlay_057(void *arg0)
     var_v0 = 0x01060000;
     goto block_12;
   }
-  if (((new_var << 0x10) == 0) && (temp_s2 >= 0x9C5U))
+  if (((new_var << 0x10) == 0) && ((temp_s2 + 1) >= (0x9C5U + 1)))
   {
     *((s32 *) (((char *) arg0) + 4)) = 0x01010000;
   }
