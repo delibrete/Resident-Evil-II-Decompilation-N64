@@ -56,7 +56,8 @@ s32 func_8000A394(void *arg0, u16 *arg1, s32 arg2, s32 arg3)
   }
   if (s4)
   {
-    s3a = (s7 & 255) << 3;
+    s3a = s7;
+    s3a = (s3a & 255) << 3;
   }
   else
   {

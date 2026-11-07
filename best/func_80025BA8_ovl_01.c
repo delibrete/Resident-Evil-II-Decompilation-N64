@@ -39,13 +39,12 @@ void func_80025BA8_ovl_01(s32 arg0)
   if (temp_lo < ((u32) (var_a1 * (((*((s32 *) (((char *) new_var2) + 4))) - (*((s32 *) (((char *) new_var2) + 20)))) - (*((s32 *) (((char *) new_var2) + 16)))))))
   {
     new_var = temp_lo;
-    do
-    {
+    __repair_rows: {
       var_a2 = ((u8 *) var_a2) - 40;
       var_a1 = ((*((s32 *) (((char *) var_a2) + 0))) - (*((s32 *) (((char *) var_a2) + 12)))) - (*((s32 *) (((char *) var_a2) + 8)));
       var_a3 = var_a3 - 1;
     }
-    while (new_var < ((u32) (var_a1 * (((*((s32 *) (((char *) new_var2) + 4))) - (*((s32 *) (((char *) var_a2) + 20)))) - new_var3))));
+if (new_var < ((u32) (var_a1 * (((*((s32 *) (((char *) new_var2) + 4))) - (*((s32 *) (((char *) var_a2) + 20)))) - new_var3)))) goto __repair_rows;
   }
   D_800C75E0_ovl_01 = var_a3;
   do

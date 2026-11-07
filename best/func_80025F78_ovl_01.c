@@ -3,7 +3,7 @@ extern s32 D_800C4EA8_overlay_001;
 extern s32 D_800C4ED4_overlay_001;
 extern s32 D_800C4EEC_overlay_001;
 extern s32 D_800C5688_overlay_001;
-void func_80025F78_ovl_01(s32 arg0, u16 arg1, void *arg2)
+void func_80025F78_ovl_01(s16 arg0, u16 arg1, void *arg2)
 {
   s32 *var_a0;
   s32 temp_a1;

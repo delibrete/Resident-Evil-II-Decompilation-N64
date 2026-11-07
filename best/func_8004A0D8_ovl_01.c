@@ -25,7 +25,7 @@ void func_8004A0D8_ovl_01(void *arg0) {
     var_a3 = M2C_FIELD(arg0, u8 *, 0x1A3);
     var_a0 = var_a1 + 0x140;
     var_v1 = var_a2 + 0x140;
-    do {
+    __repair_rows: {
         *var_a1 = *var_a2;
         M2C_FIELD(var_a0, s32 *, -0x138) = (s32) M2C_FIELD(var_v1, s32 *, -0x138);
         M2C_FIELD(var_a0, s32 *, -0x134) = (s32) M2C_FIELD(var_v1, s32 *, -0x134);
@@ -68,5 +68,6 @@ void func_8004A0D8_ovl_01(void *arg0) {
         var_v1 += 0x178;
         M2C_FIELD(var_a0, s32 *, 0) = temp_v0;
         var_a0 += 0x178;
-    } while (var_a3 != 0);
+    }
+if (var_a3 != 0) goto __repair_rows;
 }

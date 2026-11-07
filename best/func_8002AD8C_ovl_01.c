@@ -46,7 +46,9 @@ void func_8002AD8C_ovl_01(void *arg0, s32 arg1)
     t = *((s32 *) (row - 0x10));
     a = *((s32 *) (row + 8));
     b = t * a;
+    /*__repair_loop_weight*/do {
     row = (b / (*((s32 *) (((u8 *) arg0) + 0x10C)))) * scale;
+    } while (0);
     b = (*((s32 *) row)) * a;
     alloc = (s32 (*)(void *, s32, s32, s32)) ((s32 **) (*((s32 **) (((u8 *) arg0) + 4))))[2];
     table[3] = alloc(arg0, 1, b, row);

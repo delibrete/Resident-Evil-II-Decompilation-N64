@@ -51,13 +51,16 @@ s32 func_800AF424_ovl_01(S_e *arg0, S_a1 *arg1)
   s32 t;
   s32 combined;
   s32 clamped;
+  S_a1 *new_var;
   s32 res;
   s32 prev;
   S_ent *ent;
   u8 *base;
   v = arg1->unk0;
-  t = arg0->unk4E; t += ((s32) (((s32) (v << 16)) >> 24));
-  combined = (((v >> 16) << 16) | (arg1->unk5 << 8)) | arg1->unk4;
+  t = arg0->unk4E; t += (s32) (((s32) (v << 16)) >> 24);
+  new_var = arg1;
+  combined = (v >> 16) << 16;
+  combined = (combined | (new_var->unk5 << 8)) | new_var->unk4;
   if (t >= 0)
   {
     clamped = 0x7F;
@@ -76,7 +79,7 @@ s32 func_800AF424_ovl_01(S_e *arg0, S_a1 *arg1)
     t |= 0x80;
   }
   arg0->unkBD = 1;
-  res = func_800B17FC_ovl_01(combined, arg0->unkBA, t & 0xFF, arg0->unk31, arg0->unk39, arg0->unk4A, arg0->unk4B, arg1->unk6, arg0->unk2F, 0, arg0->unkBE);
+  res = func_800B17FC_ovl_01(combined, arg0->unkBA, t & 0xFF, arg0->unk31, arg0->unk39, arg0->unk4A, arg0->unk4B, new_var->unk6, arg0->unk2F, 0, arg0->unkBE);
   arg0->unkBD = 0;
   if (res != (-1))
   {
