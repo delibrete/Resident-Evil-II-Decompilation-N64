@@ -13027,6 +13027,19 @@
    "timeout": 20,
    "function": "func_80181820_ovl_02",
    "vram": 2149062688
+  },
+  "59632:2147540336": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_8000DD70",
+   "vram": 2147540336
   }
  },
  "instructions": "",
@@ -14582,7 +14595,7 @@
   },
   "func_8000DD70": {
    "vram": 2147540336,
-   "matched_by": "autopilot",
+   "matched_by": "Retroreversing.saved-progress",
    "readable": false
   },
   "func_8000DE40": {
@@ -67290,14 +67303,6 @@
    "score_after": 10
   },
   {
-   "function": "func_8000DD70",
-   "text": "6 compiles total; best score now 915 from explicit 32-bit carry and early return. Improved vs autopilot 1026. Target 48 instructions, source 50; diff mostly register allocation in carry math and pointer unlink. Early null branch currently lands 0xB4 vs target 0xAC; need cut two instructions before branch (avoid extra 64-bit carry branch). Target saves global list head to a0 before unlinking, likely keep it in local for both comparison and pointer update.",
-   "by": "codex-gpt-6-luna-1",
-   "created_at": 1793884662.944167,
-   "score_before": 0,
-   "score_after": 0
-  },
-  {
    "function": "func_80004FA0",
    "text": "Four compiles, best score 10. Direct s8 global assignment gets right 3 instructions except two regalloc rows: target uses v0 address base with low offset in store; compiler uses at. Volatile pointer changed code to lui+addiu+sb, worse.",
    "by": "codex-gpt-6-luna-1",
@@ -81702,14 +81707,6 @@
    "text": "Score 4600, far from match. Stub body; function has move $t0,$a0, loop with byte loads, shifts, comparisons, and two distinct loop patterns. Best previous 1735. Need to model the signed byte counter, the two loop structures (post-check vs pre-check), and the final subu $v0,$a0,$t0. No matching C yet.",
    "by": "opencode-nemotron-3.5-lightning-f-1",
    "created_at": 1793884693.846802,
-   "score_before": 0,
-   "score_after": 0
-  },
-  {
-   "function": "func_8000DD70",
-   "text": "Score 4665, far from match. Stub return 0; function has stack frame, loads, comparison with D_80012960, carry math, linked list unlink, calls to func_800072E0, func_80007300, func_8000DE30. Best previous 915. Need to model the list handling, carry arithmetic, and the early return when pointer null. No matching C yet.",
-   "by": "opencode-nemotron-3.5-lightning-f-1",
-   "created_at": 1793884693.853415,
    "score_before": 0,
    "score_after": 0
   },
@@ -138424,6 +138421,22 @@
    "created_at": 1794038893.964705,
    "score_before": 20,
    "score_after": 20
+  },
+  {
+   "function": "func_8000DD70",
+   "text": "6 compiles total; best score now 915 from explicit 32-bit carry and early return. Improved vs autopilot 1026. Target 48 instructions, source 50; diff mostly register allocation in carry math and pointer unlink. Early null branch currently lands 0xB4 vs target 0xAC; need cut two instructions before branch (avoid extra 64-bit carry branch). Target saves global list head to a0 before unlinking, likely keep it in local for both comparison and pointer update.",
+   "by": "codex-gpt-6-luna-1",
+   "created_at": 1793884662.944167,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_8000DD70",
+   "text": "Score 4665, far from match. Stub return 0; function has stack frame, loads, comparison with D_80012960, carry math, linked list unlink, calls to func_800072E0, func_80007300, func_8000DE30. Best previous 915. Need to model the list handling, carry arithmetic, and the early return when pointer null. No matching C yet.",
+   "by": "opencode-nemotron-3.5-lightning-f-1",
+   "created_at": 1793884693.853415,
+   "score_before": 0,
+   "score_after": 0
   }
  ],
  "set_aside": [
@@ -150527,11 +150540,11 @@
      "rom_sha1": "93187c4145cad272a255c17657cd9a1011b3fb3a"
     },
     "symbols_sha256": "bb629f57bc1a7dc4757d26842ea3c55c37e3025a8cd4b02d9a2fb5d58d2bc36b",
-    "recorded_at": 1793981053.26734,
-    "attempt_id": 324254,
+    "recorded_at": 1794045618.280461,
+    "attempt_id": 345010,
     "source_sha256": "40e590a719fd4e738b71aa1728b82a2ae4f384c1922cfab665e70efa197fa034",
     "header_sha256": "6741617bf3c952bbf3b41f49aed7f8780fa9b0b41fb7a8e56fda2b5b9ed03d44",
-    "context_version": 457,
+    "context_version": 812,
     "compiler": {
      "toolchain": "gcc-2.7.2-kmc",
      "flags": [
@@ -150592,7 +150605,7 @@
      ],
      "language": "c",
      "context_unit": "local_source_273598",
-     "scoring_revision": "410a938219f799f42a41bcf80063f29ed792577587a651bc895e31f6e56c0fb1",
+     "scoring_revision": "4b0b14f0b4a6f1c3c00ce79b719f77ce975eddbf3a1f299043b0e11230486a4f",
      "context_sha256": "6741617bf3c952bbf3b41f49aed7f8780fa9b0b41fb7a8e56fda2b5b9ed03d44"
     },
     "target_sha256": "428f93bd55ebca75f1329acc526bd010a5d8aebfcd4f7a2d425a12fd7bd4e569",
