@@ -1,7 +1,7 @@
 {
  "format": 1,
- "saved_at": 1794041046.064161,
- "revision": 35348,
+ "saved_at": 1794041174.106144,
+ "revision": 35357,
  "title": "Resident Evil II",
  "platform": "n64",
  "game": {
@@ -134029,14 +134029,6 @@
    "score_after": 0
   },
   {
-   "function": "func_8016F15C_overlay_064",
-   "text": "Deep permuter: score 210 \u2192 210; 0 improvements; 1 candidates tested; 6 cached skips; 0 rejected; 60s elapsed. Budget rotation: soft allowance reached without recent progress.",
-   "by": "Retroreversing.permuter-6971",
-   "created_at": 1793986587.189976,
-   "score_before": 210,
-   "score_after": 210
-  },
-  {
    "function": "func_801714BC_overlay_063",
    "text": "Deep permuter: score 405 \u2192 405; 0 improvements; 6 candidates tested; 8 cached skips; 0 rejected; 61s elapsed. Budget rotation: soft allowance reached without recent progress.",
    "by": "Retroreversing.permuter-6925",
@@ -134051,6 +134043,14 @@
    "created_at": 1793952479.452103,
    "score_before": 405,
    "score_after": 405
+  },
+  {
+   "function": "func_8016F15C_overlay_064",
+   "text": "Deep permuter: score 210 \u2192 210; 0 improvements; 1 candidates tested; 6 cached skips; 0 rejected; 60s elapsed. Budget rotation: soft allowance reached without recent progress.",
+   "by": "Retroreversing.permuter-6971",
+   "created_at": 1793986587.189976,
+   "score_before": 210,
+   "score_after": 210
   }
  ],
  "set_aside": [
@@ -281185,8 +281185,8 @@
      "rom_sha1": "93187c4145cad272a255c17657cd9a1011b3fb3a"
     },
     "symbols_sha256": "bb629f57bc1a7dc4757d26842ea3c55c37e3025a8cd4b02d9a2fb5d58d2bc36b",
-    "recorded_at": 1794040947.56148,
-    "attempt_id": 344708,
+    "recorded_at": 1794041146.434792,
+    "attempt_id": 344742,
     "source_sha256": "62e02ede3b060a5307d579f24b381c474502cdb925faf04db2f86a36da003145",
     "header_sha256": "6741617bf3c952bbf3b41f49aed7f8780fa9b0b41fb7a8e56fda2b5b9ed03d44",
     "context_version": 143,
