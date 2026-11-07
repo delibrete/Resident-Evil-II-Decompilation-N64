@@ -13273,6 +13273,22 @@
     "-O2"
    ],
    "timeout": 20
+  },
+  "4256:2147484960": {
+   "toolchain": "sn-n64-281",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-O2",
+    "-mgas",
+    "-meb",
+    "-mcpu=VR4300",
+    "-mhard-float",
+    "-mfp64"
+   ],
+   "timeout": 20,
+   "function": "main",
+   "vram": 2147484960
   }
  },
  "instructions": "",
@@ -13909,7 +13925,7 @@
   },
   "main": {
    "vram": 2147484960,
-   "matched_by": "restored",
+   "matched_by": "Retroreversing.saved-progress",
    "readable": false
   },
   "func_80000CE4": {
@@ -67457,14 +67473,6 @@
    "score_after": 400
   },
   {
-   "function": "main",
-   "text": "Threshold reached. Best score 310 with intended function source; later compile error in batch was due to replacing main with empty body, not a new best. Loop range source gets exact 30-instruction count, remaining 10 register allocation differences plus loop branch test/ordering.",
-   "by": "codex-gpt-6-luna-1",
-   "created_at": 1793884662.8367832,
-   "score_before": 0,
-   "score_after": 0
-  },
-  {
    "function": "func_80000F08",
    "text": "Threshold reached after more than 3 attempts. Best score 765 from first draft, 17 instructions vs 18. Tried assigning t9=a0, t8=*t9 and loop variants; compiler removes initial t9=a0 move and uses a2/v1/a3/v0 registers, with beql scheduling vs target bnez/nop. Struct and semantics clear: ordered linked list insertion by node offset 4, storing next pointer at item+0, prev pointer at item+8.",
    "by": "codex-gpt-6-luna-1",
@@ -76113,14 +76121,6 @@
    "score_after": 400
   },
   {
-   "function": "main",
-   "text": "Compiled C for main; score 320, register allocation mismatches; likely cannot match with current compiler/flags; marking as not C.",
-   "by": "opencode-nemotron-3.5-lightning-f-1",
-   "created_at": 1793884681.216244,
-   "score_before": 0,
-   "score_after": 0
-  },
-  {
    "function": "func_800A2148_ovl_01",
    "text": "Confirming release: remaining diffs are the return-block layout (extra j) and base-register choice, both compiler-side; the loop body matches. Best 370 saved.",
    "by": "opencode-deepseek-v4.1-flash-low-1",
@@ -79753,14 +79753,6 @@
    "score_after": 2537
   },
   {
-   "function": "main",
-   "text": "Score 10 (29.5/30 insns, only 2 bytes differ in 2 instructions). Best source: `s32 *p=&D_800138A0; s32 n=&D_80018A80-&D_800138A0; n--; while(n!=-1){ *p++=0; n--; } func_800004F0(0); func_800070C0(); if(D_80000300==0) for(;;); func_80000598();` (30 insns, whole rest byte-identical including the BSS-clear sentinel loop and the spin loop). Remaining diff is exactly the ROM's split-symbol addressing: ROM `lui $v0,%hi(D_800138A0); addiu $a0,$v0,%lo(D_800138A0)`, ours `lui $a0,%hi(D_800138A0); addiu $a0,$a0,%lo(D_800138A0)` (knowledge #23 / the open setup suggestion). Tried: n from p, n from symbol, n declared first (80), u32 start local + n>>=2 (20; subu moved to v1), search_flags (all variants 10-20, flags not the cause). Only a compiler that emits HIGH into a scratch then LO_SUM into the destination can match; source shape does not influence it.",
-   "by": "opencode-deepseek-v4.1-flash-low-1",
-   "created_at": 1793884688.1586409,
-   "score_before": 0,
-   "score_after": 0
-  },
-  {
    "function": "func_80163B5C_ovl_16",
    "text": "Best score 1776 (88.5%); 2 compiles under my claim, no changes improved score. The body matches closely. Remaining diffs are prologue save ordering, state transition load/store scheduling, dropped redundant-looking andi 0xFF, an argument move scheduling mismatch, and unnameable interior jal func_80036BB4+0x60. Additional source ordering experiment did not alter best.",
    "by": "codex-gpt-6-luna-1",
@@ -81681,14 +81673,6 @@
    "score_after": 0
   },
   {
-   "function": "main",
-   "text": "Score 555; main attempt used pointer subtraction and post-increment clearing loop. Differs in register allocation: compiler used $v1 for first symbol high part and $v0 for second, opposite of ROM which uses $v0 for both and $a0 for first lo. Also shift amount: ROM uses sra $v1,$v0,2 (shift 2), our C compiled sra $v0,$v0,4. Also loop structure and operand ordering mismatched. Best prior score was 10 with split-symbol addressing pattern (lui $v0,%hi; addiu $a0,$v0,%lo). Attempt to emulate that pattern failed due to register allocation. Next agent should try forcing $v0 usage via volatile or explicit register constraints, or use separate hi/lo loads as in earlier matched attempt.",
-   "by": "opencode-nemotron-3.5-lightning-f-1",
-   "created_at": 1793884693.673599,
-   "score_before": 0,
-   "score_after": 0
-  },
-  {
    "function": "func_800358A4_ovl_01",
    "text": "Score 1390; sign\u2011bit test `((aa&0x80000000)==0)` folds incorrectly; register allocation and instruction ordering differ from ROM. No C form reproduced the exact lui/and/sltiu/sll/addiu sign\u2011setup. Best prior score 1155 with same pattern. Next agent should try forcing the sign pattern via explicit register usage or accept compiler limitation.",
    "by": "opencode-nemotron-3.5-lightning-f-1",
@@ -82129,14 +82113,6 @@
    "score_after": 10
   },
   {
-   "function": "main",
-   "text": "Score 10; function is a compiler ceiling with KMC GCC 2.7.2 -O2 -mips3 -G0; pure C cannot reallocate $a0 vs $v0 for split-symbol addressing. Next agent can try forcing $v0 usage.",
-   "by": "opencode-nemotron-3.5-lightning-f-1",
-   "created_at": 1793884694.134614,
-   "score_before": 0,
-   "score_after": 0
-  },
-  {
    "function": "func_80000CE4",
    "text": "Score 3095. Diff shows target begins with `move $s2,$ra` and hand-written break/instructions, plus tail at 0x80000DA0 with k0/k1 adjustments. KMC GCC 2.7.2 -O2 -mips3 -G0 ceiling; pure C cannot emit exact 60\u2011instruction pattern. Function is effectively hand\u2011written assembly.",
    "by": "opencode-nemotron-3.5-lightning-f-1",
@@ -82333,14 +82309,6 @@
    "text": "16-bit twin of func_80004FB4 (byte) and of the MATCHED func_80005134 (32-bit); use func_80005134's matched C as the template.\n\nBest 120 (97.5%), 48/48 insns, only tail delay-slot order differs:\nBEST SOURCE:\n  s32 func_80005074(u8 *arg0, u8 *arg1){\n    u8 *start = arg0; s16 n; u16 v;\n    do {\n      n = *(u16 *)arg1; arg1 += 2;\n      if (n > 0) { while (--n != -1) { *(u16 *)arg0 = *(u16 *)arg1; arg1 += 2; arg0 += 2; } }\n      else if (n < 0) { v = *(u16 *)arg1; arg1 += 2; while (++n != 1) { *(u16 *)arg0 = v; arg0 += 2; } }\n    } while (n != 0);\n    return arg0 - start;\n  }\nTarget tail: `bnez v0,loop; subu v0,a0,t0; jr ra; nop`.\nOurs:        `bnez v0,loop; nop; jr ra; subu v0,a0,t0` (subu in jr delay instead of bnez delay). Registers/operands otherwise identical.\n\nTried: same with `(s32)arg0-(s32)start`; func_80005134-style `len = arg0-start` inside the loop before `while(n!=0)` (gives subu v1 + `move v0,v1`, score 205); len declared first; v as s32; v as s16; `while(n)` vs `while(n!=0)`; search_flags (all variants 120 or worse, -fno-schedule-insns 415, -O1 765); try_compiler -fno-schedule-insns2 (180, breaks earlier loop-body schedule). No flag matches.\n\nRemaining: make KMC emit the return `subu` in the outer-loop bnez delay slot rather than the jr ra delay slot while keeping destination $v0. The func_80005134 pattern (len assigned inside loop) puts it in bnez delay but lands in $v1 here because $v0 is the sign-extension temp for the s16 counter; need len in $v0.",
    "by": "opencode-deepseek-v4.1-flash-low-1",
    "created_at": 1793884694.323591,
-   "score_before": 0,
-   "score_after": 0
-  },
-  {
-   "function": "main",
-   "text": "Released after 1 compile; score 10, 30\u2011instruction target, 30 generated. Diff only register allocation difference ($v0 vs $a0 for split\u2011symbol addressing); compiler ceiling; not reproducible in pure C.",
-   "by": "opencode-nemotron-3.5-lightning-f-1",
-   "created_at": 1793884694.330116,
    "score_before": 0,
    "score_after": 0
   },
@@ -82975,14 +82943,6 @@
    "created_at": 1793884696.1638741,
    "score_before": 180,
    "score_after": 180
-  },
-  {
-   "function": "main",
-   "text": "Compiled once score 145; diff highlights register allocation mismatch; releasing.",
-   "by": "opencode-nemotron-3.5-lightning-f-1",
-   "created_at": 1793884696.173252,
-   "score_before": 0,
-   "score_after": 0
   },
   {
    "function": "func_80000F50",
@@ -87249,14 +87209,6 @@
    "score_after": 450
   },
   {
-   "function": "main",
-   "text": "Best score 10 (99.6% match, 29.5/30 instructions). The remaining diff is exactly the ROM's split-symbol addressing pattern: ROM emits `lui $v0,%hi(D_800138A0); addiu $a0,$v0,%lo(D_800138A0)` (HIGH in scratch $v0, LO_SUM into destination $a0), but KMC GCC 2.7.2 -O2 folds this into `lui $a0,%hi(D_800138A0); addiu $a0,$a0,%lo(D_800138A0)` (single register). Tried: signed pointer arithmetic (fixes sra vs srl), variable declaration order, end-first computation, union U64 trick from proposal #52, volatile temporary. None change the register allocation for the first symbol's address calculation. This is a compiler ceiling (open proposal #50 / setup suggestion): the provided KMC build cannot emit HIGH into a scratch then LO_SUM into destination; source shape does not influence it. A different compiler or flags that preserve split-address codegen is needed to reach score 0.",
-   "by": "opencode-nemotron-3-ultra-550b-a5-1",
-   "created_at": 1793884701.038017,
-   "score_before": 0,
-   "score_after": 0
-  },
-  {
    "function": "func_80004C14",
    "text": "Re-releasing func_80004C14: stuck at score 70 \u2014 residual is scheduling (lui before addiu) + regalloc ($v1 vs $at for the %hi base of `sw $v0,%lo(D_80012884)($v1)`), a compiler codegen choice no C construct changes. Exhausted: baseline constant store (70); `s32 x=2; D=x;` (70, no effect); earlier-agent shapes (volatile global, pointer local, absolute-address store \u2192 120, scalar temp \u2014 all 70+); search_flags all 6 variants (70); try_compiler IDO 7.1 and IDO 5.3 (both 210); -fno-schedule-insns still 70. Same open setup split-symbol/store ceiling as func_80004FA0 and func_80026948_ovl_01: provided KMC GCC uses $at and schedules constant first; ROM build used general reg $v1 with lui first. Not solvable from C in this toolchain; recommend user reviews compiler/flags. Best attempt (score 70) saved. extern s32 D_80012884; suffices \u2014 nothing new needed in context.h.",
    "by": "opencode-nemotron-3.5-super-vl-fr-1",
@@ -90383,14 +90335,6 @@
    "created_at": 1793884706.234367,
    "score_before": 6136,
    "score_after": 6116
-  },
-  {
-   "function": "main",
-   "text": "Deep permuter: score 10 \u2192 10; 0 improvements; 20 candidates tested; 0 cached skips; 0 rejected; 152s elapsed. Budget rotation: soft allowance reached without recent progress.",
-   "by": "A.permuter-2129",
-   "created_at": 1793884706.2421079,
-   "score_before": 0,
-   "score_after": 0
   },
   {
    "function": "func_8006D138_ovl_01",
@@ -138783,6 +138727,78 @@
    "created_at": 1793884744.937987,
    "score_before": 210,
    "score_after": 210
+  },
+  {
+   "function": "main",
+   "text": "Threshold reached. Best score 310 with intended function source; later compile error in batch was due to replacing main with empty body, not a new best. Loop range source gets exact 30-instruction count, remaining 10 register allocation differences plus loop branch test/ordering.",
+   "by": "codex-gpt-6-luna-1",
+   "created_at": 1793884662.8367832,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "main",
+   "text": "Compiled C for main; score 320, register allocation mismatches; likely cannot match with current compiler/flags; marking as not C.",
+   "by": "opencode-nemotron-3.5-lightning-f-1",
+   "created_at": 1793884681.216244,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "main",
+   "text": "Score 10 (29.5/30 insns, only 2 bytes differ in 2 instructions). Best source: `s32 *p=&D_800138A0; s32 n=&D_80018A80-&D_800138A0; n--; while(n!=-1){ *p++=0; n--; } func_800004F0(0); func_800070C0(); if(D_80000300==0) for(;;); func_80000598();` (30 insns, whole rest byte-identical including the BSS-clear sentinel loop and the spin loop). Remaining diff is exactly the ROM's split-symbol addressing: ROM `lui $v0,%hi(D_800138A0); addiu $a0,$v0,%lo(D_800138A0)`, ours `lui $a0,%hi(D_800138A0); addiu $a0,$a0,%lo(D_800138A0)` (knowledge #23 / the open setup suggestion). Tried: n from p, n from symbol, n declared first (80), u32 start local + n>>=2 (20; subu moved to v1), search_flags (all variants 10-20, flags not the cause). Only a compiler that emits HIGH into a scratch then LO_SUM into the destination can match; source shape does not influence it.",
+   "by": "opencode-deepseek-v4.1-flash-low-1",
+   "created_at": 1793884688.1586409,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "main",
+   "text": "Score 555; main attempt used pointer subtraction and post-increment clearing loop. Differs in register allocation: compiler used $v1 for first symbol high part and $v0 for second, opposite of ROM which uses $v0 for both and $a0 for first lo. Also shift amount: ROM uses sra $v1,$v0,2 (shift 2), our C compiled sra $v0,$v0,4. Also loop structure and operand ordering mismatched. Best prior score was 10 with split-symbol addressing pattern (lui $v0,%hi; addiu $a0,$v0,%lo). Attempt to emulate that pattern failed due to register allocation. Next agent should try forcing $v0 usage via volatile or explicit register constraints, or use separate hi/lo loads as in earlier matched attempt.",
+   "by": "opencode-nemotron-3.5-lightning-f-1",
+   "created_at": 1793884693.673599,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "main",
+   "text": "Score 10; function is a compiler ceiling with KMC GCC 2.7.2 -O2 -mips3 -G0; pure C cannot reallocate $a0 vs $v0 for split-symbol addressing. Next agent can try forcing $v0 usage.",
+   "by": "opencode-nemotron-3.5-lightning-f-1",
+   "created_at": 1793884694.134614,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "main",
+   "text": "Released after 1 compile; score 10, 30\u2011instruction target, 30 generated. Diff only register allocation difference ($v0 vs $a0 for split\u2011symbol addressing); compiler ceiling; not reproducible in pure C.",
+   "by": "opencode-nemotron-3.5-lightning-f-1",
+   "created_at": 1793884694.330116,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "main",
+   "text": "Compiled once score 145; diff highlights register allocation mismatch; releasing.",
+   "by": "opencode-nemotron-3.5-lightning-f-1",
+   "created_at": 1793884696.173252,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "main",
+   "text": "Best score 10 (99.6% match, 29.5/30 instructions). The remaining diff is exactly the ROM's split-symbol addressing pattern: ROM emits `lui $v0,%hi(D_800138A0); addiu $a0,$v0,%lo(D_800138A0)` (HIGH in scratch $v0, LO_SUM into destination $a0), but KMC GCC 2.7.2 -O2 folds this into `lui $a0,%hi(D_800138A0); addiu $a0,$a0,%lo(D_800138A0)` (single register). Tried: signed pointer arithmetic (fixes sra vs srl), variable declaration order, end-first computation, union U64 trick from proposal #52, volatile temporary. None change the register allocation for the first symbol's address calculation. This is a compiler ceiling (open proposal #50 / setup suggestion): the provided KMC build cannot emit HIGH into a scratch then LO_SUM into destination; source shape does not influence it. A different compiler or flags that preserve split-address codegen is needed to reach score 0.",
+   "by": "opencode-nemotron-3-ultra-550b-a5-1",
+   "created_at": 1793884701.038017,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "main",
+   "text": "Deep permuter: score 10 \u2192 10; 0 improvements; 20 candidates tested; 0 cached skips; 0 rejected; 152s elapsed. Budget rotation: soft allowance reached without recent progress.",
+   "by": "A.permuter-2129",
+   "created_at": 1793884706.2421079,
+   "score_before": 0,
+   "score_after": 0
   }
  ],
  "set_aside": [
@@ -276233,11 +276249,11 @@
      "rom_sha1": "93187c4145cad272a255c17657cd9a1011b3fb3a"
     },
     "symbols_sha256": "bb629f57bc1a7dc4757d26842ea3c55c37e3025a8cd4b02d9a2fb5d58d2bc36b",
-    "recorded_at": 1793972760.524975,
-    "attempt_id": 320710,
+    "recorded_at": 1794057716.408813,
+    "attempt_id": 346558,
     "source_sha256": "1da6be18805e4848b4281bd07740fb9d538f111f9705be5e0d5a00d5dc8f5b1f",
     "header_sha256": "e344e28888e8adc61a3e295f0cc2732492474a1f9063c51954783241ddf71de9",
-    "context_version": 17,
+    "context_version": 814,
     "compiler": {
      "toolchain": "sn-n64-281",
      "flags": [
@@ -276313,7 +276329,7 @@
      ],
      "language": "c",
      "context_unit": "local_source_273402",
-     "scoring_revision": "410a938219f799f42a41bcf80063f29ed792577587a651bc895e31f6e56c0fb1",
+     "scoring_revision": "4b0b14f0b4a6f1c3c00ce79b719f77ce975eddbf3a1f299043b0e11230486a4f",
      "context_sha256": "e344e28888e8adc61a3e295f0cc2732492474a1f9063c51954783241ddf71de9"
     },
     "target_sha256": "da22abeb306e92d9b6eb0c359c10325f405e270109b2c44e3060d8383cb72b79",
