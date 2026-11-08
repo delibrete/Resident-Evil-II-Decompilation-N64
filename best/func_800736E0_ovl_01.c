@@ -55,7 +55,7 @@ s32 func_800736E0_ovl_01(void *arg0, s32 arg1, s32 arg2) {
     var_s3 = 0;
     sp10 = 0x26C;
     sp14 = 0;
-    func_80083800_overlay_001(M2C_FIELD(arg0, s16 *, 0x66), &sp10, &sp10);
+    func_80083800_overlay_001(M2C_FIELD(arg0, s16 *, 0x66), &sp10, &sp14);
     sp18 = sp10 + M2C_FIELD(arg0, s32 *, 0x28);
     M2C_FIELD(&D_800C7650_overlay_001, void **, 0x18288) = arg0;
     sp40 = (u32) M2C_FIELD(&D_800C7650_overlay_001, u8 *, 0x20F54);

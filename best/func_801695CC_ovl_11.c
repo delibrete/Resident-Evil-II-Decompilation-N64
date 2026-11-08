@@ -36,9 +36,9 @@ void func_801695CC_ovl_11(void *arg0, s32 arg1, s32 arg2) {
     temp_v1 = M2C_FIELD(arg0, u8 *, 6);
     switch (temp_v1) {                              /* irregular */
     case 0:
-        temp_v0 = *(&sp18 + (func_80033634_ovl_01() & 7));
+        temp_s1 = (u8)(*(&sp18 + (func_80033634_ovl_01() & 7)));
         M2C_FIELD(arg0, u8 *, 6) = 1U;
-        M2C_FIELD(arg0, s32 *, 0x1E8) = (s32) ((temp_v0 << 0x18) + 0x700);
+        M2C_FIELD(arg0, s32 *, 0x1E8) = (s32) ((temp_s1 << 0x18) + 0x700);
         M2C_FIELD(arg0, s16 *, 0x1F4) = func_80032D44_ovl_01((s32) M2C_FIELD(arg0, s16 *, 0x2A), (s32) M2C_FIELD(arg0, s16 *, 0x32), (s32) M2C_FIELD(&D_800C7650, s16 *, 0x19AAA), (s32) M2C_FIELD(&D_800C7650, s16 *, 0x19AB2));
         if ((M2C_FIELD(arg0, u8 *, 0x26E) % 3) & 0xFF) {
             temp_s1 = M2C_FIELD(arg0, s32 *, 0x234);

@@ -1,7 +1,7 @@
 {
  "format": 1,
- "saved_at": 1794175484.8088021,
- "revision": 37743,
+ "saved_at": 1794181440.802568,
+ "revision": 37946,
  "title": "Resident Evil II",
  "platform": "n64",
  "game": {
@@ -17603,6 +17603,139 @@
    "timeout": 20,
    "function": "func_8017E18C_ovl_10",
    "vram": 2149048716
+  },
+  "68166728:2148634312": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_80118EC8_ovl_01",
+   "vram": 2148634312
+  },
+  "68166732:2148634316": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_80118ECC_ovl_01",
+   "vram": 2148634316
+  },
+  "68166736:2148634320": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_80118ED0_ovl_01",
+   "vram": 2148634320
+  },
+  "68167816:2148635400": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_80119308_ovl_01",
+   "vram": 2148635400
+  },
+  "68167820:2148635404": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_8011930C_ovl_01",
+   "vram": 2148635404
+  },
+  "68167800:2148635384": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_801192F8_ovl_01",
+   "vram": 2148635384
+  },
+  "67457520:2147925104": {
+   "toolchain": "sn-n64-281",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-O2",
+    "-mgas",
+    "-meb",
+    "-mcpu=VR4300",
+    "-mhard-float",
+    "-mfp64"
+   ],
+   "timeout": 20,
+   "function": "func_8006BC70_ovl_01",
+   "vram": 2147925104
+  },
+  "68563196:2148963788": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_801695CC_ovl_11",
+   "vram": 2148963788
+  },
+  "67348208:2147815792": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_80051170_ovl_01",
+   "vram": 2147815792
+  },
+  "67413752:2147881336": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_80061178_ovl_01",
+   "vram": 2147881336
   }
  },
  "instructions": "",
@@ -21536,8 +21669,8 @@
   },
   "func_8006BC70_ovl_01": {
    "vram": 2147925104,
-   "best_score": 1300,
-   "best_by": "A.permuter-2836"
+   "best_score": 430,
+   "best_by": "claude-haiku-21"
   },
   "func_8006BCFC_ovl_01": {
    "vram": 2147925244,
@@ -31466,8 +31599,8 @@
   },
   "func_801695CC_ovl_11": {
    "vram": 2148963788,
-   "best_score": 8167,
-   "best_by": "Retroreversing.permuter-3987"
+   "best_score": 8107,
+   "best_by": "permuter"
   },
   "func_80169954_ovl_11": {
    "vram": 2148964692,
@@ -38601,7 +38734,7 @@
   },
   "func_800736E0_ovl_01": {
    "vram": 2147956448,
-   "best_score": 125738,
+   "best_score": 125699,
    "best_by": "codex-gpt-6-luna-15"
   },
   "func_8008F088_ovl_01": {
@@ -38617,6 +38750,46 @@
   "func_800B5394_ovl_01": {
    "vram": 2148225940,
    "best_score": 94400,
+   "best_by": "codex-gpt-6-luna-15"
+  },
+  "func_80118EC8_ovl_01": {
+   "vram": 2148634312,
+   "best_score": 900,
+   "best_by": "claude-haiku-23"
+  },
+  "func_80118ECC_ovl_01": {
+   "vram": 2148634316,
+   "best_score": 900,
+   "best_by": "claude-haiku-21"
+  },
+  "func_80118ED0_ovl_01": {
+   "vram": 2148634320,
+   "best_score": 900,
+   "best_by": "claude-haiku-23"
+  },
+  "func_80119308_ovl_01": {
+   "vram": 2148635400,
+   "best_score": 900,
+   "best_by": "claude-haiku-23"
+  },
+  "func_8011930C_ovl_01": {
+   "vram": 2148635404,
+   "best_score": 900,
+   "best_by": "claude-haiku-25"
+  },
+  "func_801192F8_ovl_01": {
+   "vram": 2148635384,
+   "best_score": 1000,
+   "best_by": "claude-haiku-23"
+  },
+  "func_80051170_ovl_01": {
+   "vram": 2147815792,
+   "best_score": 145760,
+   "best_by": "codex-gpt-6-luna-15"
+  },
+  "func_80061178_ovl_01": {
+   "vram": 2147881336,
+   "best_score": 146325,
    "best_by": "codex-gpt-6-luna-15"
   }
  },
@@ -76830,14 +77003,6 @@
    "score_after": 10
   },
   {
-   "function": "func_8006BC70_ovl_01",
-   "text": "Asking to release anyway: all remaining differences are the ROM's split-address form (lui %hi kept in callee-saved regs, %lo folded into every access) vs this cc1's full-address rematerialisation. Compiler build blocker.",
-   "by": "opencode-deepseek-v4.1-flash-1",
-   "created_at": 1793884674.017401,
-   "score_before": 1300,
-   "score_after": 1300
-  },
-  {
    "function": "func_8006BCFC_ovl_01",
    "text": "Asking to release anyway: same split-address compiler-build blocker (lui %hi in s0/s1/s2 + %lo folded vs full address rematerialised each loop). Semantics and best attempt saved.",
    "by": "opencode-deepseek-v4.1-flash-1",
@@ -79348,14 +79513,6 @@
    "created_at": 1793884679.848446,
    "score_before": 0,
    "score_after": 0
-  },
-  {
-   "function": "func_801695CC_ovl_11",
-   "text": "Initial attempt: empty body gave score 22460 (0.6% match). Trying to translate the full assembly is complex; the function uses many global data references (D_8016DD9C_ovl_11, D_800C7650_ovl_01) and multiple calls to helper functions (func_80033634_ovl_01, func_80032D44_ovl_01, func_80032B8C_ovl_01, func_800377B0_ovl_01, func_80089D34_ovl_01, func_80077D48_ovl_01, func_80033634_ovl_01, func_80032EA4_ovl_01, func_80032DEC_ovl_01). Struct arg0 likely S_func_801695CC_ovl_11_arg0 with fields at offsets 0x4,0x6,0x2A,0x32,0x66,0x1E0,0x1E4,0x1E8. Register usage heavily uses $s2-$s4, $v0-$v1, $a0-$a3, $t0-$t3. Early attempts failed to match due to missing struct layout and call semantics. Next step: define the struct and prototypes, then write C body mimicking the assembly control flow.",
-   "by": "opencode-nemotron-3.5-lightning-f-1",
-   "created_at": 1793884679.86699,
-   "score_before": 10371,
-   "score_after": 10371
   },
   {
    "function": "func_80181358_ovl_02",
@@ -83844,14 +84001,6 @@
    "created_at": 1793884689.732905,
    "score_before": 0,
    "score_after": 0
-  },
-  {
-   "function": "func_801695CC_ovl_11",
-   "text": "Retried the existing best attempt; score stayed 12630 (230 vs 226 instructions), now 4/8 without improvement. The severe mismatch comes from the compiler folding the D_8016DD9C byte-table copy into an 8-byte local at stack 0x10 rather than target stack 0x18 (frame is 0x40 vs target 0x38), and variable/register allocation shifts the whole body. Existing source already captures control flow and calls; next focus should be a six/eight-byte signed-char struct assignment layout with temporaries/declarations arranged to force the target stack placement and target globals. Also current D_800C7650 is wrongly resolved as a symbol at D_800E10FA in table loads due to base expressions; use explicit volatile pointer/base with unsigned offset ordering.",
-   "by": "codex-gpt-6-luna-1",
-   "created_at": 1793884689.7382479,
-   "score_before": 10371,
-   "score_after": 10371
   },
   {
    "function": "func_8000EFA0",
@@ -95372,14 +95521,6 @@
    "created_at": 1793884708.913085,
    "score_before": 2170,
    "score_after": 2170
-  },
-  {
-   "function": "func_8006BC70_ovl_01",
-   "text": "Deep permuter: score 2202 \u2192 1300; 5 improvements; 34 candidates tested; 0 cached skips; 0 rejected; 303s elapsed. Time limit reached.",
-   "by": "A.permuter-2836",
-   "created_at": 1793884708.919965,
-   "score_before": 2202,
-   "score_after": 1300
   },
   {
    "function": "func_8016BD44_ovl_31",
@@ -111006,14 +111147,6 @@
    "score_after": 3676
   },
   {
-   "function": "func_80118EC8_ovl_01",
-   "text": "Two `j D_8B342B34` words pointing into data (jump-table entries), no code body. Not reachable from C.",
-   "by": "claude-haiku-20",
-   "created_at": 1793884739.6846259,
-   "score_before": null,
-   "score_after": null
-  },
-  {
    "function": "func_8008AF4C_ovl_01",
    "text": "Target: lui $v0,%hi(D_8010B690); lw $v1,%lo($v0); lui $v0,%hi(D_8012BD24); jr; sw $v1,%lo($v0). Best 15 (97%). Only 3 register differences: mine loads into $v0 and stores via $at. Tried a local temp (no change). Flags search: project flags are already optimal. Need the load destination $v1 kept separate from the second lui base ($v0).",
    "by": "claude-haiku-19",
@@ -120126,14 +120259,6 @@
    "score_after": 1976
   },
   {
-   "function": "func_8006BC70_ovl_01",
-   "text": "Deep permuter: score 1300 \u2192 1300; 0 improvements; 1 candidates tested; 1 cached skips; 0 rejected; 70s elapsed. Budget rotation: soft allowance reached without recent progress.",
-   "by": "Retroreversing.permuter-2836",
-   "created_at": 1793959723.636277,
-   "score_before": 1300,
-   "score_after": 1300
-  },
-  {
    "function": "func_8007880C_ovl_01",
    "text": "Deep permuter: score 585 \u2192 585; 0 improvements; 3 candidates tested; 0 cached skips; 0 rejected; 66s elapsed. Budget rotation: soft allowance reached without recent progress.",
    "by": "Retroreversing.permuter-2915",
@@ -120788,14 +120913,6 @@
    "created_at": 1793924250.546758,
    "score_before": 1575,
    "score_after": 1575
-  },
-  {
-   "function": "func_801695CC_ovl_11",
-   "text": "Deep permuter: score 8167 \u2192 8167; 0 improvements; 7 candidates tested; 17 cached skips; 0 rejected; 62s elapsed. Budget rotation: soft allowance reached without recent progress.",
-   "by": "Retroreversing.permuter-3987",
-   "created_at": 1793952558.031905,
-   "score_before": 8167,
-   "score_after": 8167
   },
   {
    "function": "func_8017E29C_ovl_04",
@@ -144764,6 +144881,238 @@
    "created_at": 1794175426.29559,
    "score_before": 133305,
    "score_after": 133305
+  },
+  {
+   "function": "func_8006BC70_ovl_01",
+   "text": "Asking to release anyway: all remaining differences are the ROM's split-address form (lui %hi kept in callee-saved regs, %lo folded into every access) vs this cc1's full-address rematerialisation. Compiler build blocker.",
+   "by": "opencode-deepseek-v4.1-flash-1",
+   "created_at": 1793884674.017401,
+   "score_before": 1300,
+   "score_after": 1300
+  },
+  {
+   "function": "func_801695CC_ovl_11",
+   "text": "Initial attempt: empty body gave score 22460 (0.6% match). Trying to translate the full assembly is complex; the function uses many global data references (D_8016DD9C_ovl_11, D_800C7650_ovl_01) and multiple calls to helper functions (func_80033634_ovl_01, func_80032D44_ovl_01, func_80032B8C_ovl_01, func_800377B0_ovl_01, func_80089D34_ovl_01, func_80077D48_ovl_01, func_80033634_ovl_01, func_80032EA4_ovl_01, func_80032DEC_ovl_01). Struct arg0 likely S_func_801695CC_ovl_11_arg0 with fields at offsets 0x4,0x6,0x2A,0x32,0x66,0x1E0,0x1E4,0x1E8. Register usage heavily uses $s2-$s4, $v0-$v1, $a0-$a3, $t0-$t3. Early attempts failed to match due to missing struct layout and call semantics. Next step: define the struct and prototypes, then write C body mimicking the assembly control flow.",
+   "by": "opencode-nemotron-3.5-lightning-f-1",
+   "created_at": 1793884679.86699,
+   "score_before": 10371,
+   "score_after": 10371
+  },
+  {
+   "function": "func_801695CC_ovl_11",
+   "text": "Retried the existing best attempt; score stayed 12630 (230 vs 226 instructions), now 4/8 without improvement. The severe mismatch comes from the compiler folding the D_8016DD9C byte-table copy into an 8-byte local at stack 0x10 rather than target stack 0x18 (frame is 0x40 vs target 0x38), and variable/register allocation shifts the whole body. Existing source already captures control flow and calls; next focus should be a six/eight-byte signed-char struct assignment layout with temporaries/declarations arranged to force the target stack placement and target globals. Also current D_800C7650 is wrongly resolved as a symbol at D_800E10FA in table loads due to base expressions; use explicit volatile pointer/base with unsigned offset ordering.",
+   "by": "codex-gpt-6-luna-1",
+   "created_at": 1793884689.7382479,
+   "score_before": 10371,
+   "score_after": 10371
+  },
+  {
+   "function": "func_8006BC70_ovl_01",
+   "text": "Deep permuter: score 2202 \u2192 1300; 5 improvements; 34 candidates tested; 0 cached skips; 0 rejected; 303s elapsed. Time limit reached.",
+   "by": "A.permuter-2836",
+   "created_at": 1793884708.919965,
+   "score_before": 2202,
+   "score_after": 1300
+  },
+  {
+   "function": "func_80118EC8_ovl_01",
+   "text": "Two `j D_8B342B34` words pointing into data (jump-table entries), no code body. Not reachable from C.",
+   "by": "claude-haiku-20",
+   "created_at": 1793884739.6846259,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8006BC70_ovl_01",
+   "text": "Deep permuter: score 1300 \u2192 1300; 0 improvements; 1 candidates tested; 1 cached skips; 0 rejected; 70s elapsed. Budget rotation: soft allowance reached without recent progress.",
+   "by": "Retroreversing.permuter-2836",
+   "created_at": 1793959723.636277,
+   "score_before": 1300,
+   "score_after": 1300
+  },
+  {
+   "function": "func_801695CC_ovl_11",
+   "text": "Deep permuter: score 8167 \u2192 8167; 0 improvements; 7 candidates tested; 17 cached skips; 0 rejected; 62s elapsed. Budget rotation: soft allowance reached without recent progress.",
+   "by": "Retroreversing.permuter-3987",
+   "created_at": 1793952558.031905,
+   "score_before": 8167,
+   "score_after": 8167
+  },
+  {
+   "function": "func_800736E0_ovl_01",
+   "text": "Current candidate revision 5f2f7c4a554f69b9792d scores 125699 (7.4%, 189 emitted / 1358 target); best 125699, move-on 1/10. Started from m2c and fixed callback-table typing so it compiles; next patch replaced first call-site with D_80115230_overlay_001[index], second call-site was rewritten as direct call. Changing func_80083800 output pointer from &sp10 to &sp14 improved 125738 -> 125699. Remaining issues: frame is 0x48 vs target 0x70; target sequence uses sp14 at +0x14; raw callback table address mismatch is target 0x80115230 vs candidate 0x800E8C18; one callback assignment warning remains. Continue from this revision and inspect first mismatch/full target; do not repeat empty stub.",
+   "by": "codex-gpt-6-luna-15",
+   "created_at": 1794175546.671347,
+   "score_before": 125738,
+   "score_after": 125699
+  },
+  {
+   "function": "func_800736E0_ovl_01",
+   "text": "Held candidate rechecked at score 125699 (189/1358; 7.4%). Tried two 6-variant local-repair batches on saved revision eac0c35c93ae72707014; no generated variant improved score (signedness-only worsened). One intervening whole-function rewrite was malformed and did not compile; restored saved_best and rechecked it, which remains 125699. Main mismatch is structural from instruction 0: target frame is 0x70 with callee-saved s0-s7/fp/ra, while source emits 0x48 and only s1. Target setup preserves large-address arithmetic `&D_800C7650 + 0x18000`, callback base D_80115230 in fp, and loop pointers/counters in saved registers. Current source uses generic void pointers and misses address construction/call layout; next agent should rewrite with typed table/global pointers and actual loop structure, inspect first 320 target instructions already paged, then compare frame. No reusable compiler rule established.",
+   "by": "codex-gpt-6-luna-15",
+   "created_at": 1794175739.494498,
+   "score_before": 125699,
+   "score_after": 125699
+  },
+  {
+   "function": "func_80051170_ovl_01",
+   "text": "Claim arrived without saved C; machine draft was enormous (1459 instructions) with hundreds of independent duplicated ring-buffer flag scans, so I compiled a stub for a baseline (score 145760, 2 emitted instructions). No semantic C reconstruction attempted in this claim. Best next step is derive a shared ring-buffer iterator/helper to replace repeated draft expansion, but exact compiler inlining/code-generation structure is a major issue; start from get_function(section=\"brief\") draft and inspect target assembly.",
+   "by": "codex-gpt-6-luna-15",
+   "created_at": 1794175758.72645,
+   "score_before": 145760,
+   "score_after": 145760
+  },
+  {
+   "function": "func_80061178_ovl_01",
+   "text": "Reconstructed m2c logic into compact C. After fixing arg2-based pointer arithmetic to byte-pointer arithmetic, score improved from 146530 (4.1%, 75/1528 instructions) to 146325 (4.2%); another no-op patch left it there. Best revision 72f6b4f5ab1b535b0420. First instructions still mismatch register allocation: target saves arg0 in s6, arg1 in s5, uses s4=0x7fffffff, then s7 for result; current compiler chose different saved-register assignments. Next experiment: declare locals/use argument references to force s6/s5/s4/s7 lifetimes to align, then inspect loop arithmetic. Repairs batch did not improve. Candidate remains far from full body; detailed source is saved.",
+   "by": "codex-gpt-6-luna-15",
+   "created_at": 1794175851.937849,
+   "score_before": 146530,
+   "score_after": 146325
+  },
+  {
+   "function": "func_80118ECC_ovl_01",
+   "text": "Two `j` words to data addresses (func_8B342B34), no real code. overlay_001 data run. Suggest report_boundary review.",
+   "by": "claude-haiku-17",
+   "created_at": 1794177258.756195,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_801192F8_ovl_01",
+   "text": "Not code: three words at 0x801192F8 decoded as j to 0x8E542E54/0x8E542E58/0x8E5C0000. Table data. Reported as data region.",
+   "by": "claude-haiku-22",
+   "created_at": 1794177691.287585,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80118ECC_ovl_01",
+   "text": "Not code: two words at 0x80118ECC decode as j func_8B342B34 (out-of-range target). Data region reported.",
+   "by": "claude-haiku-22",
+   "created_at": 1794177755.2183192,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80118ED0_ovl_01",
+   "text": "Target is two identical `j func_8B342B34` words with a missing delay slot; func_8B342B34 is not a valid code address, so these bytes look like data or a jump-table fragment rather than a function. Needs boundary review before any C attempt.",
+   "by": "claude-haiku-25",
+   "created_at": 1794178181.924414,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80118ED0_ovl_01",
+   "text": "Likely data: the draft decodes as j func_8B342B34 (out-of-range), the same pattern as the neighbouring 0x80118EC4 and 0x80118ECC entries. Not verified: get_assembly timed out while I was checking, so no data region reported yet.",
+   "by": "claude-haiku-22",
+   "created_at": 1794179865.7365298,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_801192F8_ovl_01",
+   "text": "Three `j` words to data addresses, no real code. overlay_001 data run. Suggest report_boundary review.",
+   "by": "claude-haiku-17",
+   "created_at": 1794179868.7352781,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80118ECC_ovl_01",
+   "text": "Released because its agent stopped (decompdecomp closed); its attempts are kept.",
+   "by": "claude-haiku-21",
+   "created_at": 1794179973.681348,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80118ED0_ovl_01",
+   "text": "Released because its agent stopped (decompdecomp closed); its attempts are kept.",
+   "by": "claude-haiku-24",
+   "created_at": 1794179973.684941,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_801192F8_ovl_01",
+   "text": "Released because its agent stopped (decompdecomp closed); its attempts are kept.",
+   "by": "claude-haiku-21",
+   "created_at": 1794179973.6880739,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80118ECC_ovl_01",
+   "text": "Target is 8 bytes: `j D_8B342B34` twice (tail-jump thunk to an unresolved/bogus address 0x8B342B34, likely not a real function). Tried a plain `func_8B342B34();` wrapper: compiles to addiu/sw/jal/lw/jr frame (score 900). gcc-2.7 emits jal+frame for calls, not bare j. Needs a boundary/extent check (possibly a data/jump-table entry or a misparsed thunk) before C can match.",
+   "by": "claude-haiku-21",
+   "created_at": 1794180235.185073,
+   "score_before": 900,
+   "score_after": 900
+  },
+  {
+   "function": "func_801192F8_ovl_01",
+   "text": "Data: three j-words at 0x801192F8 with out-of-range targets; already reported as data region 0x801192F8\u20130x80119304.",
+   "by": "claude-haiku-22",
+   "created_at": 1794180423.628373,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80118ED0_ovl_01",
+   "text": "Target is two consecutive `j func_8B342B34` with no delay-slot nops (the second j sits in the first's delay slot). Not C: looks like a data or stub region / bad boundary. Recommend report_boundary.",
+   "by": "claude-haiku-24",
+   "created_at": 1794180463.666707,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_801192F8_ovl_01",
+   "text": "Three consecutive `j` with targets func_8E542E54, func_8E542E58, func_8E5C0000, no delay-slot nops. Data or jump table, not C. Recommend report_data_region.",
+   "by": "claude-haiku-24",
+   "created_at": 1794180567.661195,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80118ED0_ovl_01",
+   "text": "Target is `j func_8B342B34` twice (8 bytes). The address is not a valid code address, so this is data disassembled as code. Reported as a data region. No C compiled. Same pattern as func_8011930C_ovl_01.",
+   "by": "claude-haiku-25",
+   "created_at": 1794180633.808012,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80118ED0_ovl_01",
+   "text": "Two `j` words to data addresses (func_8B342B34), no real code; overlay_001 data run. Suggest report_boundary review.",
+   "by": "claude-haiku-17",
+   "created_at": 1794180687.036706,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_801192F8_ovl_01",
+   "text": "Target is three bare `j` to unresolved addresses (func_8E542E54, func_8E542E58, func_8E5C0000). These are not valid code addresses for this overlay; looks like a jump-table/data region or misparsed bytes, not C-compilable code. Same pattern as func_80118ECC_ovl_01. Needs boundary/data-region review of overlay_001 around 0x801192F8.",
+   "by": "claude-haiku-21",
+   "created_at": 1794181214.919296,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80118ED0_ovl_01",
+   "text": "Not C code: 2 words `j func_8B342B34` with no delay slots, i.e. pointer-table data mis-disassembled as code (same pattern as func_80119308). Tail-call draft scores 900 and cannot match. Suggest data-region report.",
+   "by": "claude-haiku-23",
+   "created_at": 1794181301.320153,
+   "score_before": 900,
+   "score_after": 900
+  },
+  {
+   "function": "func_801192F8_ovl_01",
+   "text": "Not C code: 3 words of `j <abs addr>` with no delay slots (jump-table data mis-disassembled as code). Draft scores 1000 and cannot match. Suggest data-region report.",
+   "by": "claude-haiku-23",
+   "created_at": 1794181316.1685278,
+   "score_before": 1000,
+   "score_after": 1000
   }
  ],
  "set_aside": [
