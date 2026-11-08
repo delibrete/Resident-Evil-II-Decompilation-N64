@@ -37,15 +37,15 @@ s16 func_80066C70_ovl_01(void *arg0, s32 arg2) {
 
     var_v0 = 0;
     if (!(M2C_FIELD(arg0, s32 *, 0) & 8)) {
-        temp_s5 = M2C_FIELD(arg0, s32 *, 0x28) + M2C_FIELD(arg0, s16 *, 0x13C);
+        temp_s3_2 = M2C_FIELD(arg0, s32 *, 0x28) + M2C_FIELD(arg0, s16 *, 0x13C);
         temp_s0 = M2C_FIELD(arg0, s32 *, 0x30) + M2C_FIELD(arg0, s16 *, 0x13E);
         var_s1 = M2C_FIELD(M2C_FIELD(&D_800C7650_ovl_01, void **, 0x1827C), void **, 0x20);
         temp_s6 = var_s1 + (M2C_FIELD(var_s1, s32 *, 4) * 0x10);
-        temp_fp = func_800667E0_ovl_01(temp_s5, temp_s0, M2C_FIELD(var_s1, s16 *, 0), M2C_FIELD(var_s1, s16 *, 2));
+        temp_fp = func_800667E0_ovl_01(temp_s3_2, temp_s0, M2C_FIELD(var_s1, s16 *, 0), M2C_FIELD(var_s1, s16 *, 2));
         D_80139DE0 = 0;
         temp_s4 = M2C_FIELD(arg0, u16 *, 0x12C);
         temp_s3 = M2C_FIELD(arg0, u16 *, 0x12E);
-        var_s5 = temp_s5 + temp_s4;
+        var_s5 = temp_s3_2 + temp_s4;
         var_s0 = temp_s0 + temp_s3;
         temp_s4_2 = temp_s4 * 2;
         temp_s3_2 = temp_s3 * 2;

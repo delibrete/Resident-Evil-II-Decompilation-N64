@@ -65,7 +65,7 @@ block_16:
         var_a2 = &D_800E138C_ovl_01;
         M2C_FIELD(&D_800C7650_ovl_01, s8 *, 0x20F6F) = var_t0;
         if (M2C_FIELD(&D_800C7650_ovl_01, s32 *, 0x1828C) != &D_800E138C_ovl_01) {
-            do {
+            __repair_rows: {
                 temp_a0 = *var_a2;
                 temp_a1 = M2C_FIELD(temp_a0, s32 *, 0);
                 if (temp_a1 & 1) {
@@ -79,7 +79,8 @@ block_16:
                     }
                 }
                 var_a2 += 4;
-            } while (var_a2 != M2C_FIELD(&D_800C7650_ovl_01, s32 *, 0x1828C));
+            }
+if (var_a2 != M2C_FIELD(&D_800C7650_ovl_01, s32 *, 0x1828C)) goto __repair_rows;
         }
         return;
     }

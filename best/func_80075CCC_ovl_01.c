@@ -42,8 +42,7 @@ void func_80075CCC_ovl_01(void)
   D_8011A230_ovl_01 = 0;
   D_80119E18_ovl_01 = 0;
   D_8011A22E_ovl_01 = 0;
-  do
-  {
+  __repair_rows: {
     if ((*((u8 *) (((char *) var_s0) + 0))) != 0)
     {
       if ((func_80079448_overlay_001(*((s8 *) (((char *) var_s0) + 2)), 0) << 0x10) != 0)
@@ -67,7 +66,7 @@ void func_80075CCC_ovl_01(void)
     }
     var_s0 += 8;
   }
-  while (((u32) var_s0) < ((u32) ((&D_80119E84_ovl_01) + 0x18)));
+if (((u32) var_s0) < ((u32) ((&D_80119E84_ovl_01) + 0x18))) goto __repair_rows;
   func_80078B70_overlay_001(0);
   var_a0 = 0;
   var_v1 = &D_80119E48_ovl_01;

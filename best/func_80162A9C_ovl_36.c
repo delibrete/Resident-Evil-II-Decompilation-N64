@@ -1,4 +1,8 @@
-static __inline__ int __repair_inline(s32 a, s32 b) { return a < b; }
+inline static int __repair_inline(s32 a, s32 b)
+{
+  return a < b;
+}
+
 typedef struct 
 {
   u8 pad[0x208];
@@ -50,14 +54,17 @@ void func_80162A9C_ovl_36(Obj *a)
     do
     {
       e = (Entry *) (((u8 *) a->arr) + off);
-      e->x = v;
+      e->x = (e->z = v);
       e->y = v;
-e->x = v;
-      e->z = v;
+      e->x = v;
       e->w = 0x400000;
       e->q = 0x10101000;
-      *((u32 *) e) |= 0x480;/*__repair_loop_weight*/do {
-      i++;} while (0);
+      *((u32 *) e) |= 0x480;
+      do
+      {
+        i++;
+      }
+      while (0);
       off += 0x178;
     }
     while (i < new_var);

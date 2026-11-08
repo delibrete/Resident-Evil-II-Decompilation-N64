@@ -1,48 +1,46 @@
-s32 func_80032C08_ovl_01(void *, s32, s32);
-s32 func_80032DEC_ovl_01(void *, s16, s16, s32);
-s32 func_80089D34_ovl_01(void *, s32, s32, s32);
-inline u16 inline_fn(u8 *arg0)
-{
-  return *((u16 *) (arg0 + 0x1E0));
-}
+/* identical to func_8016FC00_overlay_041 (matched), with its names changed by decompdecomp */
+/* machine draft (m2c) for gcc-2.8.1-pm-sn-as -G0 -mips3 -mgp32 -mfp32 -O2, tried by autopilot */
+#ifndef M2C_DEFINES
+#define M2C_DEFINES
+typedef s32 M2C_UNK;
+typedef s8 M2C_UNK8;
+typedef s16 M2C_UNK16;
+typedef s32 M2C_UNK32;
+#define M2C_FIELD(expr, type_ptr, offset) (*(type_ptr)((s8 *)(expr) + (offset)))
+#define M2C_BITWISE(type, expr) ((type)(expr))
+#define M2C_ERROR(desc) (0)
+#define M2C_CARRY 0
+#define M2C_OVERFLOW(a) (0)
+#endif
 
-void func_80163070_overlay_013(void *arg0, s32 arg1, s32 arg2)
-{
-  u8 *p = arg0;
-  u8 state = p[6];
-  u8 v;
-  u16 timer;
-  u8 *new_var;
-  ;
-  switch (state)
-  {
+M2C_UNK func_80032C08_ovl_01(void *, M2C_UNK, M2C_UNK); /* extern */
+M2C_UNK func_80032DEC_ovl_01(void *, s16, s16, M2C_UNK); /* extern */
+M2C_UNK func_80089D34_ovl_01(void *, M2C_UNK, M2C_UNK, M2C_UNK); /* extern */
+
+void func_80163070_overlay_013(void *arg0, M2C_UNK arg1, M2C_UNK arg2) {
+    u8 temp_v0;
+    u8 temp_v1;
+
+    temp_v1 = M2C_FIELD(arg0, u8 *, 6);
+    switch (temp_v1) {                              /* irregular */
     case 0:
-      *((s32 *) (p + 0x1E8)) = 0x03000700;
-      *((s16 *) (p + 0x1E2)) = 40;
-      p[0x2B5] = 0;
-      p[6] = 1;
-
+        M2C_FIELD(arg0, s32 *, 0x1E8) = 0x03000700;
+        M2C_FIELD(arg0, s16 *, 0x1E2) = 0x28;
+        M2C_FIELD(arg0, u8 *, 0x2B5) = 0U;
+        M2C_FIELD(arg0, u8 *, 6) = 1U;
+        /* fallthrough */
     case 1:
-      v = p[0x2B5] - 1;
-      p[0x2B5] = v;
-      if (v == 255)
-    {
-      if (1)
-      {
-        p[0x2B5] = 15;
-      }
+        temp_v0 = M2C_FIELD(arg0, u8 *, 0x2B5) - 1;
+        M2C_FIELD(arg0, u8 *, 0x2B5) = temp_v0;
+        if ((temp_v0 & 0xFF) == 0xFF) {
+            M2C_FIELD(arg0, u8 *, 0x2B5) = 0xFU;
+        }
+        func_80032DEC_ovl_01(arg0, M2C_FIELD(arg0, s16 *, 0x260), M2C_FIELD(arg0, s16 *, 0x262), 0x20);
+        func_80032C08_ovl_01(arg0, 0, 0);
+        if (M2C_FIELD(arg0, s16 *, 0x1E0) < 0x12C) {
+            M2C_FIELD(arg0, s16 *, 0x1E0) = (s16) ((u16) M2C_FIELD(arg0, s16 *, 0x1E0) + 1);
+        }
+        func_80089D34_ovl_01(arg0, arg1, arg2, 0x200);
+        return;
     }
-      do { func_80032DEC_ovl_01(p, *((s16 *) (p + 0x260)), *((s16 *) (p + 0x262)), 0x20); } while (0);
-      func_80032C08_ovl_01(p, 0, 0);
-      timer = inline_fn(p);
-      if (((s16) timer) < 300)
-    {
-      timer++;
-      *((u16 *) (p + 0x1E0)) = timer;
-    }
-      func_80089D34_ovl_01(p, arg1, arg2, 0x200);
-
-  }
-
 }
-
