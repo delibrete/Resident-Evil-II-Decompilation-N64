@@ -113,13 +113,13 @@ void func_800ABA74_ovl_01(s32 arg0, s32 arg1, s32 arg3)
     *((s8 *) (new_var2 + 0x41)) = 0;
     var_a2_4 = arg1 & 0xFF;
   }
-  if (var_a2_4 != 0xFF)
+  if (var_a2_4 == 0xFF)
   {
-    *(((((arg0 & 0xFF) * 0x86) + 0x5B) + (var_a2_4 * 0x860)) + (&D_80148C20)) = 0;
+    *((s8 *) (new_var2 + 0x5B)) = 0;
   }
   else
   {
-    *((s8 *) (new_var2 + 0x5B)) = 0;
+    *(((((arg0 & 0xFF) * 0x86) + 0x5B) + (var_a2_4 * 0x860)) + (&D_80148C20)) = 0;
   }
   var_a2_5 = arg1 & 0xFF;
   if (var_a2_5 != 0xFF)

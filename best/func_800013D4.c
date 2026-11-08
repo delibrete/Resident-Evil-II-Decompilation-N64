@@ -18,7 +18,7 @@ s32 func_800013D4(u32 size) {
         last = D_80013EB4 - 1;
         p = D_800138B0;
         i = 0;
-        do {
+        __repair_rows: {
             if (p->unk8 == 0 && p->unk4 >= size) {
                 p->unk8 = used;
                 if (i == last) {
@@ -28,7 +28,8 @@ s32 func_800013D4(u32 size) {
             }
             i++;
             p++;
-        } while (i < D_80013EB4);
+        }
+if (i < D_80013EB4) goto __repair_rows;
     }
 
     base = D_800138A4;

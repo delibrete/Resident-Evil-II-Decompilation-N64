@@ -18,12 +18,12 @@ extern s8 D_801762FA_overlay_057;
 extern s8 D_801762FB_overlay_057;
 
 void func_80175D28_overlay_057(void *arg0, void *arg1, u32 arg2) {
-    s32 temp_v0_2;
+    
     s32 temp_v0_3;
     u32 var_a2;
     u8 temp_v1;
     void *temp_a0;
-    void *temp_v0;
+    union { void * pointer; s32 value; } __repair_phase_storage;
     void *temp_v1_2;
     void *temp_v1_3;
 
@@ -31,17 +31,18 @@ void func_80175D28_overlay_057(void *arg0, void *arg1, u32 arg2) {
     temp_v1 = M2C_FIELD(arg0, u8 *, 0x2BD);
     switch (temp_v1) {                              /* irregular */
     case 0:
-        temp_v0 = M2C_FIELD(arg1, void **, 0x120);
-        M2C_FIELD(temp_v0, u16 *, 0xC) += 0x400;
+        __repair_phase_storage.pointer = M2C_FIELD(arg1, void **, 0x120);
+        M2C_FIELD(__repair_phase_storage.pointer, u16 *, 0xC) += 0x400;
         temp_v1_2 = M2C_FIELD(arg1, void **, 0x120);
         if ((s16) M2C_FIELD(temp_v1_2, u16 *, 0xC) >= 0x1001) {
             M2C_FIELD(temp_v1_2, u16 *, 0xC) = 0x1000U;
             M2C_FIELD(arg0, u8 *, 0x2BD) = 1U;
             M2C_FIELD(arg0, u16 *, 0x2BE) = 0U;
-            temp_v0_2 = func_80033634_ovl_01(arg0);
-            var_a2 = temp_v0_2 & 0xFF;
+            __repair_phase_storage.value = func_80033634_ovl_01(arg0);
+            var_a2 = __repair_phase_storage.value & 0xFF;
     D_801762FB_overlay_057 = 7 - ((var_a2) % 14);
-            temp_v0_3 = func_80033634_ovl_01((void *) ((temp_v0_2 & 0xFF) / 14), &D_801762FB_overlay_057, MULTU_HI(((u32) (temp_v0_2 & 0xFF) >> 1), 0x92492493));
+            var_a2 = __repair_phase_storage.value & 0xFF;
+    temp_v0_3 = func_80033634_ovl_01((void *) ((var_a2) / 14), &D_801762FB_overlay_057, MULTU_HI(((u32) (__repair_phase_storage.value & 0xFF) >> 1), 0x92492493));
             var_a2 = MULTU_HI(((u32) (temp_v0_3 & 0xFF) >> 1), 0x92492493);
             D_801762FA_overlay_057 = 7 - ((temp_v0_3 & 0xFF) % 14);
         }

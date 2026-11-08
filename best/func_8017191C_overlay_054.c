@@ -1,4 +1,3 @@
-/* identical to func_80164D8C_ovl_26 (matched), with its names changed by decompdecomp */
 typedef void (*Fn)(void *);
 typedef union 
 {
@@ -25,7 +24,7 @@ void func_8017191C_overlay_054(u8 *p)
   Fn *tbl;
   s32 i = p[5] - 1;
   b.w.lo = inline_fn(D_80173E00_overlay_054);
-  tbl = (Fn *) b.w.lo;
+  tbl = (Fn *) (&b.w)->lo;
   tbl[i](p);
   func_80173554_overlay_054(p);
   func_80173094_overlay_054(p);

@@ -13,8 +13,8 @@ void func_800AC63C_ovl_01(s32 arg0, s32 arg1, u8 arg2)
     p = (char *) D_80148B80;
     p = D_80148C00 + (arg0 & 255);
   }
-  new_var = t * 16;
-  p += (s32) ((arg0 & 255) + new_var);
+  arg1 = t * 16;
+  p += (s32) ((arg0 & 255) + arg1);
   *p = arg2;
 }
 

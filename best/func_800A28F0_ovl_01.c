@@ -13,5 +13,5 @@ void func_800A28F0_ovl_01(u16 count, s32 time) {
  else { t=(f64)time; if(time<0)t+=D_800BA558_overlay_001; frame=(((f32)t/D_800BA560_overlay_001)/D_800BA564_overlay_001)*D_800BA568_overlay_001; if(D_800BA56C_overlay_001<=frame) D_80143EEE=(s32)(frame-D_800BA56C_overlay_001)|0x8000; else D_80143EEE=(s32)frame+1; }
  D_80143EF8.p0= D_80143F90(D_80143EEE*0xA10,0,0); D_80143EF8.p4=D_80143F90(D_80143EEE*0xA10,0,0);
  D_80143F00[0]=0; D_80143F00[1]=0;
- ptr=D_80143F90(0x298,0,D_80143F00); D_80143F04=ptr; func_80006650(ptr,0x298); func_8000EFA0(D_80143F04,0x298);
+ ptr=D_80143F90(0x298,0,D_80143F00); D_80143F04=ptr; do { func_80006650(ptr,0x298); } while (0); func_8000EFA0(D_80143F04,0x298);
 }

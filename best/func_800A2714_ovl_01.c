@@ -16,7 +16,7 @@ void func_800A2714_ovl_01(void *arg0)
   u32 var_a1;
   u32 var_a1_2;
   void *temp_v0;
-  void *temp_v1;
+  
   void *var_a0;
   void *var_a2;
   void *var_a2_2;
@@ -35,6 +35,8 @@ void func_800A2714_ovl_01(void *arg0)
     var_a1 = 0;
     if ((*((u8 *) (((char *) arg0) + 0x1A))) != 0)
     {
+void *temp_v1;
+
       var_a3 = temp_v0;
       var_a2 = arg0;
       var_a0 = temp_v0;
@@ -57,6 +59,8 @@ void func_800A2714_ovl_01(void *arg0)
     }
     if ((*((u8 *) (((char *) arg0) + 0x1C))) == 1)
     {
+void *temp_v1;
+
       var_a1_2 = 0;
       temp_v1 = arg0;
       var_a2_2 = temp_v0;

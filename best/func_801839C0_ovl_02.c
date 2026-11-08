@@ -14,8 +14,7 @@ void func_801839C0_ovl_02(u8 *arg0, u8 *arg1, s32 arg2, s32 arg3, s32 arg4)
   {
     p = arg0;
     q = arg1;
-    do
-    {
+    __repair_rows: {
       a = p[0];
       c = r[0];
       b = p[1];
@@ -48,7 +47,7 @@ void func_801839C0_ovl_02(u8 *arg0, u8 *arg1, s32 arg2, s32 arg3, s32 arg4)
       }
       while (0);
     }
-    while (i < arg4);
+if (i < arg4) goto __repair_rows;
   }
 }
 

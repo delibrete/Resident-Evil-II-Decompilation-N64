@@ -12,17 +12,18 @@ void func_800A3600_ovl_01(Out *out,u32 start,u32 size,s32 kind) {
  u32 n=0, rem=size, off;
  Node *p=D_80143F38,*next;
  s32 trim;
+s32 __repair_phase_trim;
  if(p) {
   for(;p;) {
    next=p->next;
    if(p->kind==kind && p->start<end && low<p->start) {
     if(p->size!=0x600 && p->start+p->size<start+rem) {
      u32 e=start+rem;
-     trim=(e>=p->start+0x600)?0x600-p->size:((e-(p->start+p->size)+0xff)&~0xff);
+     __repair_phase_trim=(e>=p->start+0x600)?0x600-p->size:((e-(p->start+p->size)+0xff)&~0xff);
      D_80143F70+=12;
      D_80143F7C=func_80135C50_overlay_001(D_80143F7C,D_80143F70,p->start+p->size,&D_80143F38);
-     { Rec *r=D_80143F8C+D_80143F6C; r->start=p->start+p->size; r->size=trim; r->data=p->data+p->size; D_80143F6C++; }
-     p->size+=trim;
+     { Rec *r=D_80143F8C+D_80143F6C; r->start=p->start+p->size; r->size=__repair_phase_trim; r->data=p->data+p->size; D_80143F6C++; }
+     p->size+=__repair_phase_trim;
     }
     if(p!=D_80143F38) {
      if(p->prev) p->prev->next=p->next;

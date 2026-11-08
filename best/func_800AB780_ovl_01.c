@@ -48,17 +48,17 @@ void func_800AB780_ovl_01(s32 arg0, s32 arg1, s32 arg2, s32 arg3)
   temp_v0 = arg3 & 0xFFFF;
   if (((u32) ((arg0 + 0x80) & 0xFF)) < 2U)
   {
-    temp_t2_2 = temp_v0 >> 7;
+    temp_a1 = temp_v0 >> 7;
     temp_a1_4 = arg2 & 0xFF;
     temp_t1_2 = arg0 & 0xFE;
     if (temp_a1_4 == 0xFF)
     {
       temp_a2 = arg1 & 0xFF;
-      *((temp_t1_2 + (temp_a2 * 0x86)) + (&D_8014CF20)) = temp_t2_2 & 0x7F;
+      *((temp_t1_2 + (temp_a2 * 0x86)) + (&D_8014CF20)) = temp_a1 & 0x7F;
     }
     else
     {
-      *(((temp_t1_2 + (temp_a2 * 0x86)) + (temp_a1_4 * 0x860)) + (&D_80148C20)) = temp_t2_2 & 0x7F;
+      *(((temp_t1_2 + (temp_a2 * 0x86)) + (temp_a1_4 * 0x860)) + (&D_80148C20)) = temp_a1 & 0x7F;
     }
     temp_a0 = arg0 | 1;
     temp_a2_2 = arg2 & 0xFF;

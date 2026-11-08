@@ -36,7 +36,7 @@ s32 func_80038EC8_ovl_01(u32 arg0, u32 arg1, u32 arg2) {
     arg0 &= 0xFF;
     arg1 &= 0xFF;
     p = D_800EBD48_ovl_01;
-    do {
+    __repair_rows: {
         if (p->unk_1C == arg0 && p->unk_1E == arg1) {
             p->unk_01 = 0;
             p->unk_00 = 0;
@@ -44,6 +44,7 @@ s32 func_80038EC8_ovl_01(u32 arg0, u32 arg1, u32 arg2) {
         }
         i++;
         p++;
-    } while (i < 0x60);
+    }
+if (i < 0x60) goto __repair_rows;
     return 0;
 }
