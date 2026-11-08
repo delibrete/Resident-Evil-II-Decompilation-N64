@@ -15088,6 +15088,20 @@
    "timeout": 20,
    "function": "func_8016F9F4_overlay_064",
    "vram": 2148989428
+  },
+  "67180960:2147648544": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2",
+    "-mcpu=r4600"
+   ],
+   "timeout": 20,
+   "function": "func_80028420_ovl_01",
+   "vram": 2147648544
   }
  },
  "instructions": "",
@@ -17084,7 +17098,7 @@
   },
   "func_80028420_ovl_01": {
    "vram": 2147648544,
-   "matched_by": "autopilot",
+   "matched_by": "Retroreversing.saved-progress",
    "readable": false
   },
   "func_8002844C_ovl_01": {
@@ -68539,14 +68553,6 @@
    "score_after": 0
   },
   {
-   "function": "func_80028420_ovl_01",
-   "text": "Cannot get closer: 120/89%, only 3 instructions are scheduled differently around the jalr (the `lw ra` is hoisted above the store). Source is complete and in the previous note; local/struct variants made no difference.",
-   "by": "opencode-deepseek-v4.1-flash-1",
-   "created_at": 1793884661.6459599,
-   "score_before": 0,
-   "score_after": 0
-  },
-  {
    "function": "func_8002844C_ovl_01",
    "text": "Cannot get closer: 120/89%, same scheduler-only difference as func_80028420_ovl_01. Complete source is in the previous note.",
    "by": "opencode-deepseek-v4.1-flash-1",
@@ -78963,14 +78969,6 @@
    "score_after": 160
   },
   {
-   "function": "func_80028420_ovl_01",
-   "text": "Three compile attempts have reached move-on. Best C kept. Main remaining differences: 28420 indirect call loads target object field rather than treating field as function itself; CE44/CEC0 direct base global causes compiler addressing/reordering mismatch; CE70 table global/member layout is incorrect in draft.",
-   "by": "codex-gpt-6-luna-1",
-   "created_at": 1793884684.0155609,
-   "score_before": 0,
-   "score_after": 0
-  },
-  {
    "function": "func_8004CE70_ovl_01",
    "text": "Three compile attempts have reached move-on. Best C kept. Main remaining differences: 28420 indirect call loads target object field rather than treating field as function itself; CE44/CEC0 direct base global causes compiler addressing/reordering mismatch; CE70 table global/member layout is incorrect in draft.",
    "by": "codex-gpt-6-luna-1",
@@ -79715,14 +79713,6 @@
    "score_after": 1275
   },
   {
-   "function": "func_80028420_ovl_01",
-   "text": "Pure C could not reproduce the function's prologue/epilogue or the indirect call sequence. Empty function yields score 1100 (0% match) with missing stack adjustments and mismatched instruction count. Attempts to model the virtual\u2011call pattern also failed to improve the score. This function likely requires hand\u2011written assembly or a very specific struct layout that the current KMC GCC 2.7.2 cannot emit from C.",
-   "by": "opencode-nemotron-3.5-lightning-f-1",
-   "created_at": 1793884685.761067,
-   "score_before": 0,
-   "score_after": 0
-  },
-  {
    "function": "func_80082D40_ovl_01",
    "text": "Three compile attempts, best score 685. C adjusted base pointer to force D_801314F0 symbol but then address split differs; compiler expands each field into separate absolute symbols. Remaining mismatch is stable and likely compiler split-symbol addressing limitation.",
    "by": "codex-gpt-6-luna-1",
@@ -80319,14 +80309,6 @@
    "text": "Cannot get closer: score 60, the only remaining diff is the ROM's `move $a1,$zero` sitting between the two vtable loads (`lw $v0,4(a0); move a1; lw v0,0(v0)`) while this cc1 loads `lw v0,0(v0)` first. Not controllable from C (scheduling); the volatile-store trick already got everything else byte-identical. Source in the previous note.",
    "by": "opencode-deepseek-v4.1-flash-low-1",
    "created_at": 1793884687.1111062,
-   "score_before": 0,
-   "score_after": 0
-  },
-  {
-   "function": "func_80028420_ovl_01",
-   "text": "Cannot get closer: score 60, only the vtable-entry load vs `move $a1,$zero` ordering differs (same irreducible scheduler artifact as func_8002844C_ovl_01). Volatile store to +0x80 is the key to the rest; source in previous note.",
-   "by": "opencode-deepseek-v4.1-flash-low-1",
-   "created_at": 1793884687.1184661,
    "score_before": 0,
    "score_after": 0
   },
@@ -140985,6 +140967,38 @@
    "created_at": 1794070749.019742,
    "score_before": 0,
    "score_after": 0
+  },
+  {
+   "function": "func_80028420_ovl_01",
+   "text": "Cannot get closer: 120/89%, only 3 instructions are scheduled differently around the jalr (the `lw ra` is hoisted above the store). Source is complete and in the previous note; local/struct variants made no difference.",
+   "by": "opencode-deepseek-v4.1-flash-1",
+   "created_at": 1793884661.6459599,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_80028420_ovl_01",
+   "text": "Three compile attempts have reached move-on. Best C kept. Main remaining differences: 28420 indirect call loads target object field rather than treating field as function itself; CE44/CEC0 direct base global causes compiler addressing/reordering mismatch; CE70 table global/member layout is incorrect in draft.",
+   "by": "codex-gpt-6-luna-1",
+   "created_at": 1793884684.0155609,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_80028420_ovl_01",
+   "text": "Pure C could not reproduce the function's prologue/epilogue or the indirect call sequence. Empty function yields score 1100 (0% match) with missing stack adjustments and mismatched instruction count. Attempts to model the virtual\u2011call pattern also failed to improve the score. This function likely requires hand\u2011written assembly or a very specific struct layout that the current KMC GCC 2.7.2 cannot emit from C.",
+   "by": "opencode-nemotron-3.5-lightning-f-1",
+   "created_at": 1793884685.761067,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_80028420_ovl_01",
+   "text": "Cannot get closer: score 60, only the vtable-entry load vs `move $a1,$zero` ordering differs (same irreducible scheduler artifact as func_8002844C_ovl_01). Volatile store to +0x80 is the key to the rest; source in previous note.",
+   "by": "opencode-deepseek-v4.1-flash-low-1",
+   "created_at": 1793884687.1184661,
+   "score_before": 0,
+   "score_after": 0
   }
  ],
  "set_aside": [
@@ -155995,11 +156009,11 @@
      "rom_sha1": "93187c4145cad272a255c17657cd9a1011b3fb3a"
     },
     "symbols_sha256": "bb629f57bc1a7dc4757d26842ea3c55c37e3025a8cd4b02d9a2fb5d58d2bc36b",
-    "recorded_at": 1793981094.1673431,
-    "attempt_id": 324269,
+    "recorded_at": 1794090220.803617,
+    "attempt_id": 309237645538,
     "source_sha256": "537be5777d669b7d2e473a9cc45fd321e46dfd445120f430c4d75274ca3a2cf2",
     "header_sha256": "d789543ba7ec5f483d3bce700f262911dd0d34416933846943c0ddc3a13e191c",
-    "context_version": 468,
+    "context_version": 818,
     "compiler": {
      "toolchain": "gcc-2.7.2-kmc",
      "flags": [
@@ -156063,7 +156077,7 @@
      ],
      "language": "c",
      "context_unit": "local_source_273684",
-     "scoring_revision": "410a938219f799f42a41bcf80063f29ed792577587a651bc895e31f6e56c0fb1",
+     "scoring_revision": "4b0b14f0b4a6f1c3c00ce79b719f77ce975eddbf3a1f299043b0e11230486a4f",
      "context_sha256": "d789543ba7ec5f483d3bce700f262911dd0d34416933846943c0ddc3a13e191c"
     },
     "target_sha256": "2ad65b7e556fc80af45cf19ae19c1a97f73cfd8a9a7908999f18cd38262d7c57",
