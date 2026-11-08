@@ -15118,6 +15118,19 @@
     "-mfp64"
    ],
    "timeout": 20
+  },
+  "69509956:2149002788": {
+   "vram": 2149002788,
+   "function": "func_80172E24_overlay_045",
+   "toolchain": "gcc-2.8.1-pm-sn-as",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20
   }
  },
  "instructions": "",
@@ -15745,7 +15758,8 @@
   "overlay_063": "common_overlay_063.h",
   "local_source_276375": "common_local_source_276375.h",
   "overlay_011": "common_overlay_011.h",
-  "local_source_277752": "common_local_source_277752.h"
+  "local_source_277752": "common_local_source_277752.h",
+  "local_source_277248": "common_local_source_277248.h"
  },
  "functions": {
   "func_80000518": {
@@ -33395,8 +33409,8 @@
   },
   "func_80172E24_overlay_045": {
    "vram": 2149002788,
-   "best_score": 1515,
-   "best_by": "restored"
+   "matched_by": "Retroreversing.saved-progress",
+   "readable": false
   },
   "func_80172E40_overlay_040": {
    "vram": 2149002816,
@@ -126727,14 +126741,6 @@
    "score_after": null
   },
   {
-   "function": "func_80172E24_overlay_045",
-   "text": "Deep permuter: score 1515 \u2192 1515; 0 improvements; 5 candidates tested; 32 cached skips; 0 rejected; 62s elapsed. Budget rotation: soft allowance reached without recent progress.",
-   "by": "Retroreversing.permuter-5975",
-   "created_at": 1793950362.026458,
-   "score_before": 1515,
-   "score_after": 1515
-  },
-  {
    "function": "func_80118A2C_ovl_01",
    "text": "Target is 40 bytes of consecutive 'j' words into a jump table (targets D_88442844 ... D_88802880). Data, not code. Not C-matchable.",
    "by": "claude-haiku-19",
@@ -141021,6 +141027,14 @@
    "created_at": 1793946765.053113,
    "score_before": 1900,
    "score_after": 1900
+  },
+  {
+   "function": "func_80172E24_overlay_045",
+   "text": "Deep permuter: score 1515 \u2192 1515; 0 improvements; 5 candidates tested; 32 cached skips; 0 rejected; 62s elapsed. Budget rotation: soft allowance reached without recent progress.",
+   "by": "Retroreversing.permuter-5975",
+   "created_at": 1793950362.026458,
+   "score_before": 1515,
+   "score_after": 1515
   }
  ],
  "set_aside": [
@@ -265828,11 +265842,11 @@
      "rom_sha1": "93187c4145cad272a255c17657cd9a1011b3fb3a"
     },
     "symbols_sha256": "bb629f57bc1a7dc4757d26842ea3c55c37e3025a8cd4b02d9a2fb5d58d2bc36b",
-    "recorded_at": 1793961677.439522,
-    "attempt_id": 315316,
+    "recorded_at": 1794090225.89111,
+    "attempt_id": 309237645540,
     "source_sha256": "71e9c0bd4f85ee80abcbce42929f449404f952e2693ec8c68aafad68ce7866cc",
     "header_sha256": "6741617bf3c952bbf3b41f49aed7f8780fa9b0b41fb7a8e56fda2b5b9ed03d44",
-    "context_version": 143,
+    "context_version": 820,
     "compiler": {
      "toolchain": "gcc-2.8.1-pm-sn-as",
      "flags": [
@@ -265867,7 +265881,7 @@
       ],
       "timeout": 20
      },
-     "settings_source": "project configuration at recording; temporary compile overrides may differ",
+     "settings_source": "compile invocation snapshot",
      "gp": 0,
      "big_endian": true,
      "rom": {
@@ -265876,14 +265890,35 @@
       "region": "North America",
       "byte_order": "z64"
      },
-     "context_unit": "",
-     "scoring_revision": "410a938219f799f42a41bcf80063f29ed792577587a651bc895e31f6e56c0fb1",
+     "effective_command": [
+      "/Volumes/Data/Github/decompdecomp-rr/.venv/bin/python",
+      "/Volumes/Data/Github/decompdecomp-rr/src/decompnet/consoles/n64/sn64.py",
+      "--gcc",
+      "/Users/a/Library/Application Support/decompnet/toolchains/gcc-2.8.1-pm-sn-as/gcc",
+      "--assembler",
+      "/Users/a/Library/Application Support/decompnet/toolchains/sn-n64-272-0001/asn64.exe",
+      "--converter",
+      "/Users/a/Library/Application Support/decompnet/toolchains/psyq-obj-parser/psyq-obj-parser",
+      "--runner",
+      "/Users/a/Library/Application Support/decompnet/toolchains/wibo/wibo",
+      "{src}",
+      "{obj}",
+      "{include}",
+      "-G0",
+      "-mips3",
+      "-mgp32",
+      "-mfp32",
+      "-O2"
+     ],
+     "language": "c",
+     "context_unit": "local_source_277248",
+     "scoring_revision": "4b0b14f0b4a6f1c3c00ce79b719f77ce975eddbf3a1f299043b0e11230486a4f",
      "context_sha256": "6741617bf3c952bbf3b41f49aed7f8780fa9b0b41fb7a8e56fda2b5b9ed03d44"
     },
     "target_sha256": "c1854de6225ea0ab113ffa5f7d0adccd3c4e9098b4917ff5002911e9b653e636",
     "relocations_sha256": "8b057cc8229d9c6cd97099620a280e9e9fb6db4f3aade995af23218388c101e2",
     "vram": 2149002788,
-    "unit": "overlay_045",
+    "unit": "local_source_277248",
     "mode": "rom"
    },
    "func_80172E40_overlay_040": {
