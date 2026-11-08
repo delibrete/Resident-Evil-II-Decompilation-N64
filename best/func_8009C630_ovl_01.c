@@ -147,7 +147,8 @@ block_14:
     } else {
         temp_v0_2 = M2C_FIELD(&D_800C7650_overlay_001, u8 *, 0x2148B) - 0xF;
         sp30 = temp_v0_2;
-        temp_v0_3 = temp_v0_2 & 0xFFFF;
+        var_s3 = temp_v0_2 & 0xFFFF;
+    temp_v0_3 = var_s3;
         switch (temp_v0_3) {                        /* switch 1; irregular */
         case 0:                                     /* switch 1 */
             if (M2C_FIELD(&D_800C7650_overlay_001, s32 *, 0x19A5C) < 0) {

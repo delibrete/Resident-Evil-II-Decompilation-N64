@@ -73,13 +73,12 @@ void func_800A0EBC_ovl_01(s32 arg0)
         var_v1_2 = var_a0 << 9;
         if (var_s0_2 != NULL)
         {
-          do
-          {
+          __repair_rows: {
             func_800AEE20_overlay_001(*((s32 *) (((char *) var_s0_2) + 8)));
             var_s0_2 = *((void **) (((char *) var_s0_2) + 0));
             var_v1_2 = var_a0 << 9;
           }
-          while (var_s0_2 != NULL);
+if (var_s0_2 != NULL) goto __repair_rows;
         }
         temp_v1_2 = (char *) ((var_v1_2 - var_a0) * 8);
         temp_v1_2 += (s32) (&D_8013BC30);

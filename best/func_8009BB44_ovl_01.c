@@ -57,14 +57,15 @@ loop_1:
     var_a1 = 0;
     if (var_s3 < 3) {
         var_a2 = var_s1;
-        do {
+        __repair_rows: {
             temp_a0 = var_a2 + &D_80131F24_ovl_01;
             temp_v1 = temp_s4 + (var_a1 + var_s2);
             M2C_FIELD(temp_v1, s8 *, 8) = (s8) ((u16) *temp_a0 >> 4);
             var_a1 += 1;
             M2C_FIELD(temp_v1, s8 *, 0xC) = (s8) ((u16) *temp_a0 >> 4);
             var_a2 += 6;
-        } while (var_a1 < 3);
+        }
+if (var_a1 < 3) goto __repair_rows;
         temp_v1 = (char *)(var_s1); temp_v1 += (s32)(&D_800E8FFC_ovl_01);
         temp_fs1 = (f32) M2C_FIELD(temp_v1, s16 *, 0);
         temp_fs0 = (f32) M2C_FIELD(temp_v1, s16 *, 6);

@@ -1,7 +1,7 @@
 {
  "format": 1,
- "saved_at": 1794148643.723727,
- "revision": 37212,
+ "saved_at": 1794152711.5801,
+ "revision": 37261,
  "title": "Resident Evil II",
  "platform": "n64",
  "game": {
@@ -16352,6 +16352,123 @@
    "timeout": 20,
    "function": "func_8009C630_ovl_01",
    "vram": 2148124208
+  },
+  "67362604:2147830188": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_800549AC_ovl_01",
+   "vram": 2147830188
+  },
+  "67431648:2147899232": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_80065760_ovl_01",
+   "vram": 2147899232
+  },
+  "67465156:2147932740": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_8006DA44_ovl_01",
+   "vram": 2147932740
+  },
+  "67467116:2147934700": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_8006E1EC_ovl_01",
+   "vram": 2147934700
+  },
+  "67653828:2148121412": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_8009BB44_ovl_01",
+   "vram": 2148121412
+  },
+  "67658284:2148125868": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_8009CCAC_ovl_01",
+   "vram": 2148125868
+  },
+  "67675196:2148142780": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_800A0EBC_ovl_01",
+   "vram": 2148142780
+  },
+  "67675732:2148143316": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_800A10D4_ovl_01",
+   "vram": 2148143316
+  },
+  "67676184:2148143768": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_800A1298_ovl_01",
+   "vram": 2148143768
   }
  },
  "instructions": "",
@@ -21515,8 +21632,8 @@
   },
   "func_8009BB44_ovl_01": {
    "vram": 2148121412,
-   "best_score": 10895,
-   "best_by": "Retroreversing.permuter-3136"
+   "best_score": 10890,
+   "best_by": "permuter"
   },
   "func_8009BE50_ovl_01": {
    "vram": 2148122192,
@@ -21540,8 +21657,8 @@
   },
   "func_8009CCAC_ovl_01": {
    "vram": 2148125868,
-   "best_score": 3906,
-   "best_by": "upstream"
+   "best_score": 3756,
+   "best_by": "permuter"
   },
   "func_8009CDFC_ovl_01": {
    "vram": 2148126204,
@@ -21625,13 +21742,13 @@
   },
   "func_800A0EBC_ovl_01": {
    "vram": 2148142780,
-   "best_score": 4770,
-   "best_by": "Retroreversing.permuter-3163"
+   "best_score": 4575,
+   "best_by": "permuter"
   },
   "func_800A10D4_ovl_01": {
    "vram": 2148143316,
-   "best_score": 935,
-   "best_by": "upstream"
+   "best_score": 915,
+   "best_by": "permuter"
   },
   "func_800A11D4_ovl_01": {
    "vram": 2148143572,
@@ -21640,8 +21757,8 @@
   },
   "func_800A1298_ovl_01": {
    "vram": 2148143768,
-   "best_score": 675,
-   "best_by": "Retroreversing.permuter-3166"
+   "best_score": 665,
+   "best_by": "permuter"
   },
   "func_800A1364_ovl_01": {
    "vram": 2148143972,
@@ -37115,7 +37232,27 @@
   },
   "func_8009C630_ovl_01": {
    "vram": 2148124208,
-   "best_score": 33506,
+   "best_score": 33461,
+   "best_by": "permuter"
+  },
+  "func_800549AC_ovl_01": {
+   "vram": 2147830188,
+   "best_score": 31188,
+   "best_by": "codex-gpt-6-luna-15"
+  },
+  "func_80065760_ovl_01": {
+   "vram": 2147899232,
+   "best_score": 50247,
+   "best_by": "codex-gpt-6-luna-15"
+  },
+  "func_8006DA44_ovl_01": {
+   "vram": 2147932740,
+   "best_score": 44573,
+   "best_by": "codex-gpt-6-luna-15"
+  },
+  "func_8006E1EC_ovl_01": {
+   "vram": 2147934700,
+   "best_score": 38319,
    "best_by": "codex-gpt-6-luna-15"
   }
  },
@@ -79993,14 +80130,6 @@
    "score_after": 10
   },
   {
-   "function": "func_800A10D4_ovl_01",
-   "text": "Ceiling confirmed: 6 compiles, best 775, instruction count 64 = ROM. All remaining rows are (a) the split-symbol address fold \u2014 the positive-path store always comes out as `lui $at,%hi(D_8013CBF2); sh $s1,%lo(...)($at)` where the ROM keeps base+scaled index in a register and uses `sh $s1,0xfc2($v0)` (tried plain expression, temp pointer variable, block-scoped `u8 *b=D_8013BC30`, and `M2C_FIELD`; all fold) \u2014 this is the same codegen ceiling as the open setup suggestions #23/#24; and (b) a few register/block-placement differences (found block inlined after the -1 exit, prologue `move a1,s0` order, negative path v0/v1). Source structure is correct and documented in the previous note. Move on.",
-   "by": "opencode-deepseek-v4.1-flash-low-1",
-   "created_at": 1793884683.6055381,
-   "score_before": 935,
-   "score_after": 935
-  },
-  {
    "function": "func_80000F08",
    "text": "Compiled once; score 1180; only register/operand diffs; compiler ceiling.",
    "by": "opencode-nemotron-3.5-lightning-f-1",
@@ -86297,14 +86426,6 @@
    "score_after": 2385
   },
   {
-   "function": "func_800A1298_ovl_01",
-   "text": "Best score 775 (84.8%), 51/50 insns. Structure is confirmed correct: 8-entry search over D_8013BC30 with stride 0xFF8, `p[0xFC1]==0 && *(u32*)p==(arg0&0x7FFFFFFF)`; on match `i |= arg0&0x80000000`, goto out; else i=-1; then idx=i; idx==-1 return; idx>=0 -> writes arg1/arg2 at +0x110/+0x114; idx<0 -> idx&=0x7FFFFFFF, writes +0xFE4/+0xFE8 and ORs 0x10 into +0xFEE (load lbu before the stores). Using a goto for the found path (rather than break + `if (i==8) i=-1`) is what got loop-failure to `addiu a0,zero,-1` with no compare.\n\nRemaining diff is ALL register allocation: the ROM has `move a3,a0; move a0,zero` at entry (arg0 saved to a3, loop counter in a0) and the post-loop signed copy idx in a3. KMC instead keeps arg0 in a0 and puts the loop counter in a3, idx in v1. Everything else (the 10 \"reordered\", branch offsets, q/base v1-vs-v0) follows from that single a0/a3 swap.\n\nThings tried without changing allocation: u32/s32 counter with (u32)i<8 cast, do-while, break vs goto, inline key vs key temp, explicit local copy `u32 a = arg0`, declaration order/initializers. All give score 775. The copy `move a3,a0` needs the loop counter's allocno to outrank arg0's; I could not find the C shape that does it. Next idea: make i's live range/refs larger, or make arg0 die into idx earlier (e.g. write the found OR into idx directly). No structs/prototypes added; D_8013BC30 stays `extern u8[]`.",
-   "by": "opencode-deepseek-v4.1-flash-low-1",
-   "created_at": 1793884697.608952,
-   "score_before": 675,
-   "score_after": 675
-  },
-  {
    "function": "func_8008CB28_ovl_01",
    "text": "Cannot get closer: the only remaining difference is the compiler-build constant-offset folding ceiling (open setup suggestion #23 / note like #26), not C-controllable. ROM: `lui v0,1; ori v0,0x8000; la v1,D_800C7650; addu v1,v1,v0; lw v0,0x1A5C(v1)`. This cc1 always folds D_800C7650+0x18000+0x1A5C into `lui v0,%hi(D_800E10AC); lw v0,%lo(D_800E10AC)(v0)` no matter the source form (pointer local, &D[0x18000], integer add+cast, direct constant). Anti-fold needs a runtime index and there is none. Best 610 saved; body otherwise correct and structurally identical (div/mod-3 multu magic, s16 rect[4] on stack, call func_80047CF8_ovl_01 with ((arg1%3)*0x28)&0xFFF8 and ((arg1/3)*0x1E)&0xFFFE).",
    "by": "opencode-deepseek-v4.1-flash-low-1",
@@ -86783,14 +86904,6 @@
    "created_at": 1793884698.217827,
    "score_before": 3070,
    "score_after": 3070
-  },
-  {
-   "function": "func_8009CCAC_ovl_01",
-   "text": "Placeholder C did not reproduce the assembly; score 8260, 2 of 84 insns matched. The function allocates stack, loads globals, calls many helper functions, and has complex loop with conditional branches. Best autopilot attempt provided but not matched. Next agent should start from the assembly and use context.h types, guess structs, and iterate.",
-   "by": "opencode-nemotron-3.5-lightning-f-1",
-   "created_at": 1793884698.227167,
-   "score_before": 3906,
-   "score_after": 3906
   },
   {
    "function": "func_800B65D4_ovl_01",
@@ -91721,14 +91834,6 @@
    "score_after": 60
   },
   {
-   "function": "func_8009BB44_ovl_01",
-   "text": "Deep permuter: score 11260 \u2192 11065; 1 improvements; 17 candidates tested; 0 cached skips; 0 rejected; 103s elapsed. Stopped: host answered 502.",
-   "by": "A.permuter-3136",
-   "created_at": 1793884705.863669,
-   "score_before": 11260,
-   "score_after": 11065
-  },
-  {
    "function": "func_800793D4_ovl_01",
    "text": "Deep permuter: score 850 \u2192 850; 0 improvements; 25 candidates tested; 0 cached skips; 0 rejected; 156s elapsed. Budget rotation: soft allowance reached without recent progress.",
    "by": "A.permuter-2930",
@@ -96375,14 +96480,6 @@
    "created_at": 1793954659.392587,
    "score_before": 1786,
    "score_after": 1786
-  },
-  {
-   "function": "func_800A0EBC_ovl_01",
-   "text": "Deep permuter: score 4770 \u2192 4770; 0 improvements; 1 candidates tested; 3 cached skips; 0 rejected; 62s elapsed. Budget rotation: soft allowance reached without recent progress.",
-   "by": "Retroreversing.permuter-3163",
-   "created_at": 1793958581.0155158,
-   "score_before": 4770,
-   "score_after": 4770
   },
   {
    "function": "func_801730F8_overlay_061",
@@ -108313,14 +108410,6 @@
    "score_after": 1995
   },
   {
-   "function": "func_800A1298_ovl_01",
-   "text": "Deep permuter: score 675 \u2192 675; 0 improvements; 4 candidates tested; 33 cached skips; 0 rejected; 63s elapsed. Budget rotation: soft allowance reached without recent progress.",
-   "by": "Retroreversing.permuter-3166",
-   "created_at": 1793948529.8401868,
-   "score_before": 675,
-   "score_after": 675
-  },
-  {
    "function": "func_80052C00_ovl_01",
    "text": "Deep permuter: score 1675 \u2192 1675; 0 improvements; 3 candidates tested; 31 cached skips; 0 rejected; 61s elapsed. Budget rotation: soft allowance reached without recent progress.",
    "by": "Retroreversing.permuter-2720",
@@ -109863,14 +109952,6 @@
    "created_at": 1793884739.0498428,
    "score_before": 510,
    "score_after": 510
-  },
-  {
-   "function": "func_8009BB44_ovl_01",
-   "text": "Deep permuter: score 10895 \u2192 10895; 0 improvements; 1 candidates tested; 3 cached skips; 0 rejected; 62s elapsed. Budget rotation: soft allowance reached without recent progress.",
-   "by": "Retroreversing.permuter-3136",
-   "created_at": 1793959900.979111,
-   "score_before": 10895,
-   "score_after": 10895
   },
   {
    "function": "func_80130D28_ovl_01",
@@ -123271,14 +123352,6 @@
    "created_at": 1793929183.982257,
    "score_before": 69476,
    "score_after": 69476
-  },
-  {
-   "function": "func_8009CCAC_ovl_01",
-   "text": "Deep permuter: score 3756 \u2192 3756; 0 improvements; 11 candidates tested; 5 cached skips; 0 rejected; 60s elapsed. Budget rotation: soft allowance reached without recent progress.",
-   "by": "Retroreversing.permuter-3142",
-   "created_at": 1793929191.0752509,
-   "score_before": 3756,
-   "score_after": 3756
   },
   {
    "function": "func_80165B44_overlay_033",
@@ -143041,12 +143114,116 @@
    "score_after": 16241
   },
   {
+   "function": "func_800A10D4_ovl_01",
+   "text": "Ceiling confirmed: 6 compiles, best 775, instruction count 64 = ROM. All remaining rows are (a) the split-symbol address fold \u2014 the positive-path store always comes out as `lui $at,%hi(D_8013CBF2); sh $s1,%lo(...)($at)` where the ROM keeps base+scaled index in a register and uses `sh $s1,0xfc2($v0)` (tried plain expression, temp pointer variable, block-scoped `u8 *b=D_8013BC30`, and `M2C_FIELD`; all fold) \u2014 this is the same codegen ceiling as the open setup suggestions #23/#24; and (b) a few register/block-placement differences (found block inlined after the -1 exit, prologue `move a1,s0` order, negative path v0/v1). Source structure is correct and documented in the previous note. Move on.",
+   "by": "opencode-deepseek-v4.1-flash-low-1",
+   "created_at": 1793884683.6055381,
+   "score_before": 935,
+   "score_after": 935
+  },
+  {
+   "function": "func_800A1298_ovl_01",
+   "text": "Best score 775 (84.8%), 51/50 insns. Structure is confirmed correct: 8-entry search over D_8013BC30 with stride 0xFF8, `p[0xFC1]==0 && *(u32*)p==(arg0&0x7FFFFFFF)`; on match `i |= arg0&0x80000000`, goto out; else i=-1; then idx=i; idx==-1 return; idx>=0 -> writes arg1/arg2 at +0x110/+0x114; idx<0 -> idx&=0x7FFFFFFF, writes +0xFE4/+0xFE8 and ORs 0x10 into +0xFEE (load lbu before the stores). Using a goto for the found path (rather than break + `if (i==8) i=-1`) is what got loop-failure to `addiu a0,zero,-1` with no compare.\n\nRemaining diff is ALL register allocation: the ROM has `move a3,a0; move a0,zero` at entry (arg0 saved to a3, loop counter in a0) and the post-loop signed copy idx in a3. KMC instead keeps arg0 in a0 and puts the loop counter in a3, idx in v1. Everything else (the 10 \"reordered\", branch offsets, q/base v1-vs-v0) follows from that single a0/a3 swap.\n\nThings tried without changing allocation: u32/s32 counter with (u32)i<8 cast, do-while, break vs goto, inline key vs key temp, explicit local copy `u32 a = arg0`, declaration order/initializers. All give score 775. The copy `move a3,a0` needs the loop counter's allocno to outrank arg0's; I could not find the C shape that does it. Next idea: make i's live range/refs larger, or make arg0 die into idx earlier (e.g. write the found OR into idx directly). No structs/prototypes added; D_8013BC30 stays `extern u8[]`.",
+   "by": "opencode-deepseek-v4.1-flash-low-1",
+   "created_at": 1793884697.608952,
+   "score_before": 675,
+   "score_after": 675
+  },
+  {
+   "function": "func_8009CCAC_ovl_01",
+   "text": "Placeholder C did not reproduce the assembly; score 8260, 2 of 84 insns matched. The function allocates stack, loads globals, calls many helper functions, and has complex loop with conditional branches. Best autopilot attempt provided but not matched. Next agent should start from the assembly and use context.h types, guess structs, and iterate.",
+   "by": "opencode-nemotron-3.5-lightning-f-1",
+   "created_at": 1793884698.227167,
+   "score_before": 3906,
+   "score_after": 3906
+  },
+  {
+   "function": "func_8009BB44_ovl_01",
+   "text": "Deep permuter: score 11260 \u2192 11065; 1 improvements; 17 candidates tested; 0 cached skips; 0 rejected; 103s elapsed. Stopped: host answered 502.",
+   "by": "A.permuter-3136",
+   "created_at": 1793884705.863669,
+   "score_before": 11260,
+   "score_after": 11065
+  },
+  {
+   "function": "func_800A0EBC_ovl_01",
+   "text": "Deep permuter: score 4770 \u2192 4770; 0 improvements; 1 candidates tested; 3 cached skips; 0 rejected; 62s elapsed. Budget rotation: soft allowance reached without recent progress.",
+   "by": "Retroreversing.permuter-3163",
+   "created_at": 1793958581.0155158,
+   "score_before": 4770,
+   "score_after": 4770
+  },
+  {
+   "function": "func_800A1298_ovl_01",
+   "text": "Deep permuter: score 675 \u2192 675; 0 improvements; 4 candidates tested; 33 cached skips; 0 rejected; 63s elapsed. Budget rotation: soft allowance reached without recent progress.",
+   "by": "Retroreversing.permuter-3166",
+   "created_at": 1793948529.8401868,
+   "score_before": 675,
+   "score_after": 675
+  },
+  {
+   "function": "func_8009BB44_ovl_01",
+   "text": "Deep permuter: score 10895 \u2192 10895; 0 improvements; 1 candidates tested; 3 cached skips; 0 rejected; 62s elapsed. Budget rotation: soft allowance reached without recent progress.",
+   "by": "Retroreversing.permuter-3136",
+   "created_at": 1793959900.979111,
+   "score_before": 10895,
+   "score_after": 10895
+  },
+  {
+   "function": "func_8009CCAC_ovl_01",
+   "text": "Deep permuter: score 3756 \u2192 3756; 0 improvements; 11 candidates tested; 5 cached skips; 0 rejected; 60s elapsed. Budget rotation: soft allowance reached without recent progress.",
+   "by": "Retroreversing.permuter-3142",
+   "created_at": 1793929191.0752509,
+   "score_before": 3756,
+   "score_after": 3756
+  },
+  {
    "function": "func_8009C630_ovl_01",
    "text": "Compiled the original draft (invalid integer dereferences), fixed both clear loops to byte writes; best score 33506. Tried changing global-address declarations and casts (no score effect). Current diff first mismatches are frame 0x28 vs target 0x50, omitted ori for 0x3B800 due ordering/constant reuse, early global stores and call argument moves; target uses callee-saved registers s0-s3 while candidate frame is short. Candidate revision 1986656b5fb29a7cda41. Many later mismatches remain, and 10-compile move-on budget not exhausted; pause only because session turnaround was interrupted. Continue by introducing necessary stack locals (target has sp20/sp28 and saved s0-s3/ra) and reorganizing initial pointer arithmetic/side-effect ordering; inspect last_diff and target pages. The clear loop must remain byte-granular.",
    "by": "codex-gpt-6-luna-15",
    "created_at": 1794147890.818479,
    "score_before": 33506,
    "score_after": 33506
+  },
+  {
+   "function": "func_800549AC_ovl_01",
+   "text": "Released because its agent stopped (the app restarted); its attempts are kept.",
+   "by": "codex-gpt-6-luna-15",
+   "created_at": 1794150276.971186,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_800549AC_ovl_01",
+   "text": "Recovered empty candidate; full 391-instruction body and switch cases are now available via get_assembly, while m2c has no draft because it reports missing jump table. Handwritten one-path control flow compiled at score 31188 (274 instructions vs target 391); first attempt had undeclared locals and malformed label. Local declaration-order/signedness repairs showed no score change. Next agent should implement the switch as cases 0..12 in target order (the table is unavailable, but case bodies are laid out sequentially), preserve the repeated case-specific calls and fallthrough/goto to common state handling, model D_800C7650 + 0x18000 as a numeric base carefully, and inspect current candidate/diff. Claim held token was renewed by repair batch.",
+   "by": "codex-gpt-6-luna-15",
+   "created_at": 1794150584.9724958,
+   "score_before": 31188,
+   "score_after": 31188
+  },
+  {
+   "function": "func_8006E1EC_ovl_01",
+   "text": "Candidate revision d04f2598ccc41b119835 is a 47-instruction callback-loop implementation, rechecked score 38319 against 415 target instructions (7.6%). The previous token expired before release; no new compile was made on this claim. Semantics and next experiments are in prior claim notes: callback table indexed by bytes; initial callback receives (arg0,arg1+masked_arg2), loop reads u16 op, increments cursor 2, callback receives (arg0,cursor), then AND when op zero else OR. Current C has 0x30 frame vs target 0x28 and generated address sequence differs. Try struct for arg0 cursor at 0x1C and C function pointer table; retrieve full brief/context, reduce locals, enforce expected table base register and delay slot. Target's actual body ends at jr $ra delay slot 0x8006E2A8; following words appear separate code, boundary not confirmed.",
+   "by": "codex-gpt-6-luna-15",
+   "created_at": 1794152266.120606,
+   "score_before": 38319,
+   "score_after": 38319
+  },
+  {
+   "function": "func_8006DA44_ovl_01",
+   "text": "Two iterations: initial had C89 and type errors, then compiled 67 instructions (9% score, 44573). Function table dispatch uses byte value at record+0x1c to call D_80113838[index]; main missing work is the repeated per-record/animation advancement flow. Current candidate has 0x30 stack frame vs target 0x20 and poor structure. Need inspect complete assembly from 0x8006DA6C onward and model the loop exactly; no match or reusable discovery yet.",
+   "by": "codex-gpt-6-luna-15",
+   "created_at": 1794152525.034126,
+   "score_before": 44573,
+   "score_after": 44573
+  },
+  {
+   "function": "func_80065760_ovl_01",
+   "text": "Three attempts: empty body (no symbol), minimal local setup scored 0.2%, then setup with stack arrays scored 2.8%. Remaining structural work is the full branch-and-bound search over rectangle pairs; current candidate regressed to a tiny loop and has a wrong effective global address (compiler resolved expression to 0x800DF9AC instead of 0x800C7650). Need use a typed base expression for D_800C7650 and transcribe full m2c algorithm with corrected helper signatures and field layout. No exact match.",
+   "by": "codex-gpt-6-luna-15",
+   "created_at": 1794152610.354329,
+   "score_before": 51560,
+   "score_after": 50247
   }
  ],
  "set_aside": [

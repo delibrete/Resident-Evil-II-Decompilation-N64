@@ -29,8 +29,8 @@ found:
     }
     idx &= 0x7FFFFFFF;
     q = (char *)(D_8013BC30); q += (s32)(idx * 0xFF8);
-    v = *(u8 *)(q + 0xFEE);
+    idx = (u8)(*(u8 *)(q + 0xFEE));
     *(s32 *)(q + 0xFE4) = arg1;
     *(s32 *)(q + 0xFE8) = arg2;
-    *(u8 *)(q + 0xFEE) = v | 0x10;
+    *(u8 *)(q + 0xFEE) = idx | 0x10;
 }
