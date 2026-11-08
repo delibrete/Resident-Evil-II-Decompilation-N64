@@ -15,12 +15,12 @@ void func_8004AFEC_ovl_01(void) {
         func_8004B0D8_overlay_001(base);
     }
     func_8004C4D0_overlay_001(base);
-    n = (*(u32 *)(base + 0xC800) - (u32)base) / 20;
+    n = (*(u32 *)(base + 0xC800) - (u32)(base + 0x8000)) / 20;
     if (D_800FE21C_overlay_001 < n) {
         D_800FE21C_overlay_001 = n;
     }
     p = base + 0x2800;
-    n = (*(u32 *)(base + 0xC804) - (u32)p) / 20;
+    n = (*(u32 *)(base + 0xC804) - (u32)(base + 0xA800)) / 20;
     if (D_800FE220_overlay_001 < n) {
         D_800FE220_overlay_001 = n;
     }

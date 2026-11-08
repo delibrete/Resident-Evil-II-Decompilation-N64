@@ -1,7 +1,7 @@
 {
  "format": 1,
- "saved_at": 1794103950.408434,
- "revision": 36930,
+ "saved_at": 1794104911.031088,
+ "revision": 36959,
  "title": "Resident Evil II",
  "platform": "n64",
  "game": {
@@ -15651,6 +15651,129 @@
    "timeout": 20,
    "function": "func_80161D04_overlay_036",
    "vram": 2148932868
+  },
+  "67331552:2147799136": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_8004D060_ovl_01",
+   "vram": 2147799136
+  },
+  "67343052:2147810636": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_8004FD4C_ovl_01",
+   "vram": 2147810636
+  },
+  "67357628:2147825212": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_8005363C_ovl_01",
+   "vram": 2147825212
+  },
+  "67390088:2147857672": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_8005B508_ovl_01",
+   "vram": 2147857672
+  },
+  "67495664:2147963248": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_80075170_ovl_01",
+   "vram": 2147963248
+  },
+  "67502008:2147969592": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_80076A38_ovl_01",
+   "vram": 2147969592
+  },
+  "67591208:2148058792": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_8008C6A8_ovl_01",
+   "vram": 2148058792
+  },
+  "67726156:2148193740": {
+   "toolchain": "sn-n64-281",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-O2",
+    "-mgas",
+    "-meb",
+    "-mcpu=VR4300",
+    "-mhard-float",
+    "-mfp64"
+   ],
+   "timeout": 20,
+   "function": "func_800AD5CC_ovl_01",
+   "vram": 2148193740
+  },
+  "67729912:2148197496": {
+   "toolchain": "sn-n64-281",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-O2",
+    "-mgas",
+    "-meb",
+    "-mcpu=VR4300",
+    "-mhard-float",
+    "-mfp64"
+   ],
+   "timeout": 20,
+   "function": "func_800AE478_ovl_01",
+   "vram": 2148197496
   }
  },
  "instructions": "",
@@ -36179,7 +36302,7 @@
   },
   "func_8004AFEC_ovl_01": {
    "vram": 2147790828,
-   "best_score": 6317,
+   "best_score": 6132,
    "best_by": "codex-gpt-6-luna-15"
   },
   "func_801627DC_ovl_17": {
@@ -36190,6 +36313,51 @@
   "func_801661BC_ovl_28": {
    "vram": 2148950460,
    "best_score": 7038,
+   "best_by": "codex-gpt-6-luna-15"
+  },
+  "func_8004D060_ovl_01": {
+   "vram": 2147799136,
+   "best_score": 3358,
+   "best_by": "codex-gpt-6-luna-15"
+  },
+  "func_8004FD4C_ovl_01": {
+   "vram": 2147810636,
+   "best_score": 3210,
+   "best_by": "codex-gpt-6-luna-15"
+  },
+  "func_8005363C_ovl_01": {
+   "vram": 2147825212,
+   "best_score": 5942,
+   "best_by": "codex-gpt-6-luna-15"
+  },
+  "func_8005B508_ovl_01": {
+   "vram": 2147857672,
+   "best_score": 6285,
+   "best_by": "codex-gpt-6-luna-15"
+  },
+  "func_80075170_ovl_01": {
+   "vram": 2147963248,
+   "best_score": 6581,
+   "best_by": "codex-gpt-6-luna-15"
+  },
+  "func_80076A38_ovl_01": {
+   "vram": 2147969592,
+   "best_score": 5310,
+   "best_by": "codex-gpt-6-luna-15"
+  },
+  "func_8008C6A8_ovl_01": {
+   "vram": 2148058792,
+   "best_score": 7713,
+   "best_by": "codex-gpt-6-luna-15"
+  },
+  "func_800AD5CC_ovl_01": {
+   "vram": 2148193740,
+   "best_score": 6540,
+   "best_by": "codex-gpt-6-luna-15"
+  },
+  "func_800AE478_ovl_01": {
+   "vram": 2148197496,
+   "best_score": 3980,
    "best_by": "codex-gpt-6-luna-15"
   }
  },
@@ -141793,6 +141961,78 @@
    "created_at": 1794103734.511334,
    "score_before": 17710,
    "score_after": 17690
+  },
+  {
+   "function": "func_8004AFEC_ovl_01",
+   "text": "Recovered candidate compile errors and produced compiling C, but no byte match. Initial valid attempt score 6317/0%; subsequent offset experiments scored 6517 and 6132/0%, with 59 target vs 67 candidate instructions. Target derives s0=base D_800FE228 and s1=s0+0x8000; fields at s1+0x500C, +0x4800, +0x4804, +0x5008. It divides first two unsigned pointer differences by 20, compares against D_800FE21C and D_800FE220 respectively; third difference updates D_800FE218. Latest candidate introduced still larger code due constant division by 20 lowering to reciprocal multiply. Next agent should express differences as `u32` arithmetic (to preserve runtime DIVU sequence), avoid redundant locals/address materialization, and restore source mapping of callee arg 3 from assembly: target function call at tail passes a0, a1 likely D_800FE218 pointer and a2 may be register-held; confirm from full caller assembly. Original saved candidate mistaken offsets; use get_candidate.",
+   "by": "codex-gpt-6-luna-15",
+   "created_at": 1794103983.727913,
+   "score_before": 6317,
+   "score_after": 6132
+  },
+  {
+   "function": "func_800AE478_ovl_01",
+   "text": "m2c-derived corrected pointer version compiles at score 3980/119 insns. Diff shows target saved-register allocation: s1 at sp+0x14, s2 at +0x18; our source reverses them. Target maps temp_s4 from arg0+0x63 to s4 (candidate s3), table base D_801587E0 to s5 (candidate s4), target arg1 to s1 (candidate s2). Reorder locals/declaration/lifetimes to force allocation, then address residual control flow. Also target uses addiu -1 rather than candidate's immediate 0xff plus extra andi. Symbol data addresses likely require array declarations; current pointer representation produced one raw-address mismatch at final store; inspect exact source expr.",
+   "by": "codex-gpt-6-luna-15",
+   "created_at": 1794104260.300162,
+   "score_before": 3980,
+   "score_after": 3980
+  },
+  {
+   "function": "func_8008C6A8_ovl_01",
+   "text": "Historical candidate failed compilation because func_8008CB28 was declared with three parameters while the call sites pass two; reducing the prototype to two then caused the later call (three arguments, including computed destination pointer) to fail. Restored a compiling 3-argument declaration and supplied 0 for the missing first call argument; compiles at score 7713/120 target vs 136 candidate instructions, worse than inherited historical score and no improvement. Key unresolved issue is actual prototype/call semantics (callee func_8008CB28_ovl_01 best attempt is two args, while second call needs third pointer from original target\u2014inspect target call instructions and helper signature before tuning). Compilation also shows major frame/register mismatch and source fields/dimensions require correction. Current candidate revision 9aa88400deaa6db4ce08.",
+   "by": "codex-gpt-6-luna-15",
+   "created_at": 1794104338.301383,
+   "score_before": 7713,
+   "score_after": 7713
+  },
+  {
+   "function": "func_800AD5CC_ovl_01",
+   "text": "Current rechecked baseline 6540 (revision e3501321c4d592168ffc). Tried six independent local repair variants: scalar reuse, two loop forms, branch orientation, goto leaf, combined scheduling; none improved (scores 6540/7095/6750/6540/6540/6540). Target saves arg1 in s1 at sp+0x14 and arg0 in s0 at sp+0x10; candidate reverses them, suggesting prototype/source parameter or liveness ordering is an early mismatch. Remaining candidate differences span 123 rows. Next investigate get_assembly mismatch and whether a different parameter type/order or source organization induces expected register assignment; then continue loop/control-flow mismatch.",
+   "by": "codex-gpt-6-luna-15",
+   "created_at": 1794104468.527283,
+   "score_before": 6540,
+   "score_after": 6540
+  },
+  {
+   "function": "func_8004D060_ovl_01",
+   "text": "Recovered source compiles after declaring globals/helper. Best score 3358/3833 on straightforward queue loop; local repair tried six families including inline scalar predicate, best 3358. Assembly uses 0x48 frame, loops four 6-byte entries and four queue pointers. Main remaining issue is source expression/layout to recover 0x48 frame and original register/stack arrangement; inspect declaration shapes and unaligned copies. Prior failed source omitted symbols. No match yet.",
+   "by": "codex-gpt-6-luna-15",
+   "created_at": 1794104552.127302,
+   "score_before": 3833,
+   "score_after": 3358
+  },
+  {
+   "function": "func_80076A38_ovl_01",
+   "text": "M2c draft first failed due omitted shared typedefs/M2C_FIELD. Restored declarations then removed duplicate typedefs; best current score 5310/90 insns, 97 candidate insns. Target requires explicit 0x18000 base sequence and data access at D_800C7650+0x18000+0x1A3C; my expression folded into wrong symbol-based access. Also arg1/arg2 call signatures/offsets differ. Resume from revision 36d315d04df2b87fe1fa; inspect full assembly and force base-pointer C form before further tuning.",
+   "by": "codex-gpt-6-luna-15",
+   "created_at": 1794104644.67432,
+   "score_before": 5310,
+   "score_after": 5310
+  },
+  {
+   "function": "func_8004FD4C_ovl_01",
+   "text": "Implemented five jump-table cases in C switch; best score 3210/98 insns. Switch generates a local .rodata table at the wrong address (link diagnostic); target dispatch directly indexes jtbl_800B8B70. Six local repairs tried switch layout and arithmetic operand order; no improvement (move-on exceeded). Next try explicit computed jump/table representation if compiler supports C form, or restructure switch to point at extern ROM table and inspect emitted dispatch. Case-specific divisions and byte wrap matter.",
+   "by": "codex-gpt-6-luna-15",
+   "created_at": 1794104740.584534,
+   "score_before": 3210,
+   "score_after": 3210
+  },
+  {
+   "function": "func_8005363C_ovl_01",
+   "text": "Implemented eight phase states as C switch; best 5942/102 instructions. Target reads global at D_800C7650+0x20F5A using split lui/addiu/lui/addu addressing, but direct C pointer arithmetic linked at 0x800E85AA due address expression treatment; explicit integer base expression made no difference. Target uses jump table jtbl_800B8BA8. Continue by expressing base pointer via separate integer temporaries / exact 0x20000 high adjustment and preserving switch table, then inspect callee signatures (53874 has four args).",
+   "by": "codex-gpt-6-luna-15",
+   "created_at": 1794104782.058731,
+   "score_before": 5942,
+   "score_after": 5942
+  },
+  {
+   "function": "func_80075170_ovl_01",
+   "text": "Best/current score remains 6581 after signature pointer trial; mismatch unchanged and structurally wrong. Continue from current candidate by representing the actual signature as four register arguments plus stack argument(s), but note assembly reads incoming stack payload at offsets +0x38..+0x48 (4 descriptors/fields) and stores them with lwl/lwr -> swl/swr into record offsets 0x2A,0x2E,0x32,0x36. The target loop reads descriptor halfwords at offsets +2+2*j and +0xA+2*j, calls func_80004CFC for non-0xFFFF entries, and writes record offsets 0x14+4*j. Target also loads D_8011A31C table base before callee-save setup; use equivalent table pointer shape to retain v0/v1 register order. Current C\u2019s scalar-aligned dereferences created sw instructions and omitted unaligned pairs; fixing struct/array layout is the key next experiment.",
+   "by": "codex-gpt-6-luna-15",
+   "created_at": 1794104881.851327,
+   "score_before": 6581,
+   "score_after": 6581
   }
  ],
  "set_aside": [
