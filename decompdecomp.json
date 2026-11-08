@@ -1,7 +1,7 @@
 {
  "format": 1,
- "saved_at": 1794106652.2489789,
- "revision": 37018,
+ "saved_at": 1794107692.854357,
+ "revision": 37054,
  "title": "Resident Evil II",
  "platform": "n64",
  "game": {
@@ -16034,6 +16034,136 @@
    "timeout": 20,
    "function": "func_800A7B04_ovl_01",
    "vram": 2148170500
+  },
+  "27776:2147508480": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_80006100",
+   "vram": 2147508480
+  },
+  "67290504:2147758088": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_80043008_ovl_01",
+   "vram": 2147758088
+  },
+  "67325144:2147792728": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_8004B758_ovl_01",
+   "vram": 2147792728
+  },
+  "67334912:2147802496": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_8004DD80_ovl_01",
+   "vram": 2147802496
+  },
+  "67365668:2147833252": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_800555A4_ovl_01",
+   "vram": 2147833252
+  },
+  "67462048:2147929632": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_8006CE20_ovl_01",
+   "vram": 2147929632
+  },
+  "67468776:2147936360": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_8006E868_ovl_01",
+   "vram": 2147936360
+  },
+  "67502644:2147970228": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_80076CB4_ovl_01",
+   "vram": 2147970228
+  },
+  "67508812:2147976396": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_800784CC_ovl_01",
+   "vram": 2147976396
+  },
+  "67550812:2148018396": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_800828DC_ovl_01",
+   "vram": 2148018396
   }
  },
  "instructions": "",
@@ -36718,6 +36848,56 @@
   "func_800A7B04_ovl_01": {
    "vram": 2148170500,
    "best_score": 10393,
+   "best_by": "codex-gpt-6-luna-15"
+  },
+  "func_80006100": {
+   "vram": 2147508480,
+   "best_score": 34040,
+   "best_by": "codex-gpt-6-luna-15"
+  },
+  "func_80043008_ovl_01": {
+   "vram": 2147758088,
+   "best_score": 13286,
+   "best_by": "codex-gpt-6-luna-15"
+  },
+  "func_8004B758_ovl_01": {
+   "vram": 2147792728,
+   "best_score": 23460,
+   "best_by": "codex-gpt-6-luna-15"
+  },
+  "func_8004DD80_ovl_01": {
+   "vram": 2147802496,
+   "best_score": 23400,
+   "best_by": "codex-gpt-6-luna-15"
+  },
+  "func_800555A4_ovl_01": {
+   "vram": 2147833252,
+   "best_score": 11685,
+   "best_by": "codex-gpt-6-luna-15"
+  },
+  "func_8006CE20_ovl_01": {
+   "vram": 2147929632,
+   "best_score": 19400,
+   "best_by": "codex-gpt-6-luna-15"
+  },
+  "func_8006E868_ovl_01": {
+   "vram": 2147936360,
+   "best_score": 23505,
+   "best_by": "codex-gpt-6-luna-15"
+  },
+  "func_80076CB4_ovl_01": {
+   "vram": 2147970228,
+   "best_score": 20960,
+   "best_by": "codex-gpt-6-luna-15"
+  },
+  "func_800784CC_ovl_01": {
+   "vram": 2147976396,
+   "best_score": 20660,
+   "best_by": "codex-gpt-6-luna-15"
+  },
+  "func_800828DC_ovl_01": {
+   "vram": 2148018396,
+   "best_score": 20848,
    "best_by": "codex-gpt-6-luna-15"
   }
  },
@@ -78713,14 +78893,6 @@
    "created_at": 1793884681.788336,
    "score_before": 765,
    "score_after": 765
-  },
-  {
-   "function": "func_80006100",
-   "text": "Tried the stored draft unchanged (prototype conflict), then adapted it to the shared u64 two-argument ABI with explicit hi/lo extraction. The adaptation fails because the draft has incomplete-type address arithmetic for D_800119C0; a small placeholder compile scored 35585. Rewrite the large divider under the confirmed ABI and model D_800119C0 as a byte table before tuning.",
-   "by": "codex-gpt-6-luna-1",
-   "created_at": 1793884681.795723,
-   "score_before": null,
-   "score_after": null
   },
   {
    "function": "func_80000F50",
@@ -142537,6 +142709,86 @@
    "created_at": 1794106491.562304,
    "score_before": 19565,
    "score_after": 19565
+  },
+  {
+   "function": "func_80006100",
+   "text": "Tried the stored draft unchanged (prototype conflict), then adapted it to the shared u64 two-argument ABI with explicit hi/lo extraction. The adaptation fails because the draft has incomplete-type address arithmetic for D_800119C0; a small placeholder compile scored 35585. Rewrite the large divider under the confirmed ABI and model D_800119C0 as a byte table before tuning.",
+   "by": "codex-gpt-6-luna-1",
+   "created_at": 1793884681.795723,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8006CE20_ovl_01",
+   "text": "Compiled a minimal stub to establish baseline; score 19400/196 (1.0%). M2C draft appears incomplete/unreliable (ends with unknown stack symbol &unksp50) but has meaningful setup/copy/scaling logic. Need build proper C declarations/types and reconstruct tail from full assembly before tuning. Current revision 0914a38dd71dc7ef5bb1.",
+   "by": "codex-gpt-6-luna-15",
+   "created_at": 1794106842.159023,
+   "score_before": 19400,
+   "score_after": 19400
+  },
+  {
+   "function": "func_800784CC_ovl_01",
+   "text": "Compiled empty stub for baseline: score 20660/208 (0.6%). M2C draft is available and substantive: reverse loop over audio/event slots, updates playback handles and invokes audio helpers. Start from supplied draft; repair types/pointer arithmetic and verify callee signatures. Current revision 73402a245d6903f5c8a1.",
+   "by": "codex-gpt-6-luna-15",
+   "created_at": 1794106858.772636,
+   "score_before": 20660,
+   "score_after": 20660
+  },
+  {
+   "function": "func_80076CB4_ovl_01",
+   "text": "Compiled a minimal return-0 stub; score 20960/211 (0.6%). M2C draft is available for a 211-instruction subsystem cleanup/audio event routine; likely easy to start from it, but has unresolved `subroutine_arg*` placeholders and should be corrected from target ABI/context before compilation. Current baseline revision 148a9c42a5507ce2f23e.",
+   "by": "codex-gpt-6-luna-15",
+   "created_at": 1794106877.82688,
+   "score_before": 20960,
+   "score_after": 20960
+  },
+  {
+   "function": "func_8004B758_ovl_01",
+   "text": "Compiled a minimal stub to establish score 23460/236 (0.5%). M2C draft is available for a sizeable input/render state routine, but check all callee signatures and pointer-address expressions before judging. Current revision 98a93fb97059bd553b01.",
+   "by": "codex-gpt-6-luna-15",
+   "created_at": 1794106908.269727,
+   "score_before": 23460,
+   "score_after": 23460
+  },
+  {
+   "function": "func_8004DD80_ovl_01",
+   "text": "Compiled a minimal return-0 baseline; score 23400/236 (0.8%). Detailed m2c draft supplied, representing collision/overlap geometry with several symmetric axis branches and global flag. Start from draft and prioritize accurate unsigned overflow/edge tests and signedness; current revision 64c761525a721178e400.",
+   "by": "codex-gpt-6-luna-15",
+   "created_at": 1794106925.485179,
+   "score_before": 23400,
+   "score_after": 23400
+  },
+  {
+   "function": "func_8006E868_ovl_01",
+   "text": "Compiled empty stub baseline: score 23505/237 (0.8%). No machine draft supplied; target starts with a global-mode check then substantial processing and calls. Need retrieve full assembly/struct layouts and reconstruct. Current revision 3cce3da80940b83ed3bf.",
+   "by": "codex-gpt-6-luna-15",
+   "created_at": 1794106941.841277,
+   "score_before": 23505,
+   "score_after": 23505
+  },
+  {
+   "function": "func_80043008_ovl_01",
+   "text": "Recovered a compiling candidate revision 89042afbff169acd3232 (score 13286; target 240 insns, candidate 204). The saved m2c draft does not compile due undeclared saved_reg_s* and malformed callee declaration. Replaced with a simple three-pass reconstruction using func_8004279C_ovl_01(void*,void*,void*), which compiles but omits the target's 8-byte copies from each saved input pointer to s1-0x65F0 and fails to reproduce the call ABI/register usage and global record addresses/layout. Target clearly performs three call/compute/write passes using s5/s6 as source pointers and global records D_80139A30, D_80139A28, D_80139A20 (each stores x at base, y +2, w +4); function includes 240 instructions. Next: load brief/assembly and infer actual 9+ argument ABI mapping from incoming registers/saved regs; model copied 8-byte input blocks and likely per-pass state explicitly, then tune signed 16-bit coordinate arithmetic and struct/global offsets. No boundary issue apparent; epilogue ends at 0x80143380 followed by a separate 20-byte function body before endlabel.",
+   "by": "codex-gpt-6-luna-15",
+   "created_at": 1794107093.031182,
+   "score_before": 13286,
+   "score_after": 13286
+  },
+  {
+   "function": "func_800828DC_ovl_01",
+   "text": "Recovered prior non-compiling candidate and corrected the sqrt helper declaration from stale func_80040BE4_overlay_001(s32, M2C_UNK*) to canonical func_80040BE4_ovl_01(s32). This compiles but scores 20848 (166 vs target 281 instructions); frame is 0x50 vs target 0xD8 and most target body operations are missing. No further compile budget remains (3/3). Next agent: inspect target assembly/call sequence and repair the C structure, including matrix copies and helper signatures; use find_similar/redraft. The helper's canonical one-argument signature is verified from its function brief.",
+   "by": "codex-gpt-6-luna-15",
+   "created_at": 1794107228.093209,
+   "score_before": 20848,
+   "score_after": 20848
+  },
+  {
+   "function": "func_800555A4_ovl_01",
+   "text": "Tried full m2c-derived body and two compressed variants; best measured score 11685/271 instructions (56.8%), with 217-218 emitted instructions. Fixed func_800853C8 third argument from void* to s32*, which held the rechecked baseline at 11720 and removed 2 mismatch sites. Passing p,q,w to func_8005A400 with a 3-arg declaration improved current score from 11720 to 11685; restoring its one-arg form regressed to 11720. Further byte-pointer casts around the +0x1028 object path and D_800C7650 offsets had no effect. Remaining main mismatch is early register allocation and address construction, and several data offsets for object fields (+0xB4..+0xC0) compiled as +0x10dc..+0x10e8 because the candidate's pointer arithmetic/types are wrong. Resume from saved best and try typed nested structs/preserve exact member access sequence. Current last trial score 11720; saved historical candidate 11685 may not compare under same inputs, so rejudge. No exact match.",
+   "by": "codex-gpt-6-luna-15",
+   "created_at": 1794107544.144863,
+   "score_before": 11720,
+   "score_after": 11685
   }
  ],
  "set_aside": [

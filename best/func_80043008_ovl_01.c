@@ -1,0 +1,31 @@
+extern s32 func_8004279C_ovl_01(void *, void *, void *);
+extern u16 D_800EFBF0_overlay_001;
+extern u16 D_800EFBF2_overlay_001;
+extern struct { s16 x, y; u16 w; } D_80139A30, D_80139A28, D_80139A20;
+void func_80043008_ovl_01(void *arg0, void *arg1, void *arg2) {
+    struct { u16 x, y, w; } a;
+    func_8004279C_ovl_01(arg0, arg1, &a);
+    a.x += *(u16 *)((char *)arg0 + 0x16);
+    a.y += *(u16 *)((char *)arg0 + 0x1A);
+    a.w += *(u16 *)((char *)arg0 + 0x1E);
+    if (a.w == 0) a.w++;
+    D_80139A30.w = a.w;
+    D_80139A30.x = (s16)(((s32)a.x * D_800EFBF0_overlay_001) / (s16)a.w) + 0xA0;
+    D_80139A30.y = (s16)(((s32)a.y * D_800EFBF2_overlay_001) / (s16)a.w) + 0x78;
+    func_8004279C_ovl_01(arg0, arg1, &a);
+    a.x += *(u16 *)((char *)arg0 + 0x16);
+    a.y += *(u16 *)((char *)arg0 + 0x1A);
+    a.w += *(u16 *)((char *)arg0 + 0x1E);
+    if (a.w == 0) a.w++;
+    D_80139A28.w = a.w;
+    D_80139A28.x = (s16)(((s32)a.x * D_800EFBF0_overlay_001) / (s16)a.w) + 0xA0;
+    D_80139A28.y = (s16)(((s32)a.y * D_800EFBF2_overlay_001) / (s16)a.w) + 0x78;
+    func_8004279C_ovl_01(arg0, arg1, &a);
+    a.x += *(u16 *)((char *)arg0 + 0x16);
+    a.y += *(u16 *)((char *)arg0 + 0x1A);
+    a.w += *(u16 *)((char *)arg0 + 0x1E);
+    if (a.w == 0) a.w++;
+    D_80139A20.w = a.w;
+    D_80139A20.x = (s16)(((s32)a.x * D_800EFBF0_overlay_001) / (s16)a.w) + 0xA0;
+    D_80139A20.y = (s16)(((s32)a.y * D_800EFBF2_overlay_001) / (s16)a.w) + 0x78;
+}
