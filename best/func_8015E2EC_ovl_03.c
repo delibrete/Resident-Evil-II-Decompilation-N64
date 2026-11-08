@@ -46,8 +46,8 @@ void func_8015E2EC_ovl_03(s32 arg0, s32 arg1, s32 arg2, s32 arg3)
     var_s1 = 0;
     temp_s5 = var_s6 * 2;
     temp_fp = (((u32) (sp18 = ((sp10 * var_s7) * var_s7) * var_s7)) >> 1) >> 11;
-    var_s0 = 2;
-    var_t0 = *__repair_home2;
+    var_s0 = 2;/*__repair_loop_weight*/do {
+    var_t0 = *__repair_home2;} while (0);
     var_t0 = var_t0 - temp_fp;
     var_v1 = var_s2;
     loop_5:

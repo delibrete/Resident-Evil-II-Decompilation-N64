@@ -1,1 +1,112 @@
-typedef struct Obj {u8 unk[0x65];u8 x65;} Obj; s32 func_8000AA10(s32,s32);s32 func_8000A66C(Obj*);s32 func_800087A0(s32,s32,s32,void*);s32 func_80009C68(void*,u16*,u16*);s32 func_80009CAC(Obj*,void*,void*);s32 func_80009F8C(Obj*,void*);s32 func_8000ADD0(Obj*);void func_8000CFB4(void);s32 func_8000D020(void);s32 func_8000AC00(s32 a,Obj*b,s32 c){u8 x[0x40];u16 y,z; s32 r;u8*q;s32 i;func_8000CFB4();r=func_8000AA10(a,c);func_8000D020();if(r)return r;*(s32*)((u8*)b+4)=a;*(s32*)((u8*)b+8)=c;*(s32*)b=0;b->x65=0;r=func_8000A66C(b);if(r)return r;r=func_800087A0(*(s32*)((u8*)b+4),*(s32*)((u8*)b+8),1,x);if(r)return r;func_80009C68(x,&y,&z);if(*(u16*)(x+0x2c)!=y||*(u16*)(x+0x2e)!=z){r=func_80009F8C(b,x);if(r)return r;}q=x;if(*(u16*)(x+0x18)&1)goto ready;r=func_80009CAC(b,x,x+0x20);if(r)return r;q=x+0x20;if(!(*(u16*)(x+0x48)&1))return 0xb;ready:for(i=0;i<32;i++)((u8*)b)[0xc+i]=q[i];((s32*)b)[0x13]=q[0x1b];((s32*)b)[0x14]=16;((s32*)b)[0x15]=8;((u8*)b)[0x64]=q[0x1a];((s32*)b)[0x18]=q[0x1a]*2+3;((s32*)b)[0x16]=(q[0x1a]+1)*8;((s32*)b)[0x17]=((q[0x1a]+1)*8)+q[0x1a]*8;r=func_800087A0(*(s32*)((u8*)b+4),*(s32*)((u8*)b+8),7,(u8*)b+0x2c);if(r)return r;r=func_8000ADD0(b);*(s32*)b|=1;return r;}
+/* Partial candidate from function #339302416918 in project #79; rechecked locally. */
+/* machine draft (m2c) for gcc-2.7.2-kmc -G0 -mips3 -mgp32 -mfp32 -O2, tried by autopilot */
+#ifndef M2C_DEFINES
+#define M2C_DEFINES
+typedef s32 M2C_UNK;
+typedef s8 M2C_UNK8;
+typedef s16 M2C_UNK16;
+typedef s32 M2C_UNK32;
+#define M2C_FIELD(expr, type_ptr, offset) (*(type_ptr)((s8 *)(expr) + (offset)))
+#define M2C_BITWISE(type, expr) ((type)(expr))
+#define M2C_ERROR(desc) (0)
+#define M2C_CARRY 0
+#define M2C_OVERFLOW(a) (0)
+#endif
+
+s32 func_8000AA10(s32, s32);                        /* extern */
+M2C_UNK func_8000CFB4();                            /* extern */
+M2C_UNK func_8000D020();                            /* extern */
+s32 func_800087A0(s32, s32, M2C_UNK, u8 *);         /* extern */
+M2C_UNK func_80009C68(u8 *, u16 *, u16 *);          /* extern */
+s32 func_80009CAC(void *, u8 *, u8 *);              /* extern */
+s32 func_80009F8C(void *, u8 *);                    /* extern */
+s32 func_8000A66C(s32 arg0, void *);                          /* extern */
+s32 func_8000ADD0(void *);                          /* extern */
+
+s32 func_8000AC00(s32 arg0, void *arg1, s32 arg2) {
+    union {
+        unsigned char bytes[112];
+        struct { unsigned char pad[16]; u8 value; } view_sp10;
+        struct { unsigned char pad[44]; u16 value; } view_sp2C;
+        struct { unsigned char pad[46]; u16 value; } view_sp2E;
+        struct { unsigned char pad[48]; u8 value; } view_sp30;
+        struct { unsigned char pad[72]; u16 value; } view_sp48;
+        struct { unsigned char pad[80]; u16 value; } view_sp50;
+        struct { unsigned char pad[82]; u16 value; } view_sp52;
+    } m2c_initial_frame;
+
+            
+            
+             
+             
+    
+    s32 temp_v0_2;
+    
+    s32 var_a0;
+    s32 var_v0;
+s32 __repair_phase_var_v0;
+    u8 *temp_a1;
+    u8 *var_a1;
+    u8 *var_s2;
+    u8 temp_v1;
+    void *temp_v0;
+
+    func_8000CFB4();
+    __repair_phase_var_v0 = func_8000AA10(arg0, arg2);
+    func_8000D020();
+    var_v0 = __repair_phase_var_v0;
+    if (__repair_phase_var_v0 == 0) {
+        M2C_FIELD(arg1, s32 *, 4) = arg0;
+        M2C_FIELD(arg1, s32 *, 8) = arg2;
+        M2C_FIELD(arg1, s32 *, 0) = 0;
+        M2C_FIELD(arg1, s8 *, 0x65) = 0;
+        var_v0 = func_8000A66C(arg0, arg1);
+        if (var_v0 == 0) {
+            var_v0 = func_800087A0(M2C_FIELD(arg1, s32 *, 4), M2C_FIELD(arg1, s32 *, 8), 1, &m2c_initial_frame.view_sp10.value);
+            if ((var_v0 == 0) && (((func_80009C68(&m2c_initial_frame.view_sp10.value, &m2c_initial_frame.view_sp50.value, &m2c_initial_frame.view_sp52.value), var_s2 = &m2c_initial_frame.view_sp10.value, (m2c_initial_frame.view_sp2C.value == m2c_initial_frame.view_sp50.value)) && (m2c_initial_frame.view_sp2E.value == m2c_initial_frame.view_sp52.value)) || (var_v0 = func_80009F8C(arg1, var_s2), (var_v0 == 0)))) {
+                var_a0 = 0;
+                if (!(M2C_FIELD(var_s2, u16 *, 0x18) & 1)) {
+                    temp_a1 = var_s2;
+                    var_s2 = &m2c_initial_frame.view_sp30.value;
+                    __repair_phase_var_v0 = func_80009CAC(arg1, temp_a1, var_s2);
+                    if (__repair_phase_var_v0 == 0) {
+                        var_a0 = 0;
+                        if (!(m2c_initial_frame.view_sp48.value & 1)) {
+                            return 0xB;
+                        }
+                        goto block_10;
+                    }
+                    /* Duplicate return node #14. Try simplifying control flow for better match */
+                    return __repair_phase_var_v0;
+                }
+block_10:
+                var_a1 = var_s2;
+                __repair_rows: {
+                    temp_v0 = arg1 + var_a0;
+                    var_a0 += 1;
+                    M2C_FIELD(temp_v0, u8 *, 0xC) = (u8) *var_a1;
+                    var_a1 += 1;
+                }
+if (var_a0 < 0x20) goto __repair_rows;
+                M2C_FIELD(arg1, s32 *, 0x4C) = (s32) M2C_FIELD(var_s2, u8 *, 0x1B);
+                temp_v1 = M2C_FIELD(var_s2, u8 *, 0x1A);
+                M2C_FIELD(arg1, s32 *, 0x50) = 0x10;
+                M2C_FIELD(arg1, s32 *, 0x54) = 8;
+                M2C_FIELD(arg1, u8 *, 0x64) = temp_v1;
+                M2C_FIELD(arg1, s32 *, 0x60) = (s32) ((temp_v1 * 2) + 3);
+                temp_v0_2 = (M2C_FIELD(arg1, u8 *, 0x64) + 1) * 8;
+                M2C_FIELD(arg1, s32 *, 0x58) = temp_v0_2;
+                M2C_FIELD(arg1, s32 *, 0x5C) = (s32) (temp_v0_2 + (M2C_FIELD(arg1, u8 *, 0x64) * 8));
+                temp_v0_2 = func_800087A0(M2C_FIELD(arg1, s32 *, 4), M2C_FIELD(arg1, s32 *, 8), 7, arg1 + 0x2C);
+                var_v0 = temp_v0_2;
+                if (temp_v0_2 == 0) {
+                    var_v0 = func_8000ADD0(arg1);
+                    M2C_FIELD(arg1, s32 *, 0) = (s32) (M2C_FIELD(arg1, s32 *, 0) | 1);
+                }
+                /* Duplicate return node #14. Try simplifying control flow for better match */
+                return var_v0;
+            }
+        }
+    }
+    return var_v0;
+}

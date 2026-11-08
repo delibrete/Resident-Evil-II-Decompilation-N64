@@ -18,8 +18,8 @@ typedef struct {
     Blk block[2];
 } Info;
 extern void func_80007C20(void*,s32,u32,s32,s32);
-extern s32 D_800A1CD0;
-extern u8 *D_800B5AF8;
+extern s32 D_800128D0;
+extern u8 *D_80016224;
 extern void func_80007B6C(void),func_80007A9C(void);
 
 #define PI_ST (*(volatile s32 *)0xA4600010)
@@ -34,12 +34,12 @@ s32 func_80007590(void) {
     Blk *b0;
     s32 *c2;
 
-    info = (Info *)(D_800B5AF8 + 0x14);
+    info = (Info *)(D_80016224 + 0x14);
     b = &info->block[info->blockNum];
     pi = PI_ST;
     if (pi & 1) {
         b->errStatus = 0x1D;
-        D_800A1CD0 &= ~0x800;
+        D_800128D0 &= ~0x800;
         func_80007B6C();
         return 1;
     }
@@ -58,7 +58,7 @@ s32 func_80007590(void) {
         b->errStatus = 0x16;
         func_80007B6C();
         PI_ST = 2;
-        D_800A1CD0 |= 0x100401;
+        D_800128D0 |= 0x100401;
         return 1;
     }
     if (info->cmdType == 1) {
@@ -69,14 +69,14 @@ s32 func_80007590(void) {
                 return 1;
             }
             PI_ST = 2;
-            D_800A1CD0 |= 0x100401;
+            D_800128D0 |= 0x100401;
             b->errStatus = 0;
             func_80007B6C();
             return 1;
         }
         b->dramAddr += b->sectorSize;
         info->sectorNum++;
-        func_80007C20(D_800B5AF8, 1, 0x05000400, b->dramAddr, b->sectorSize);
+        func_80007C20(D_80016224, 1, 0x05000400, b->dramAddr, b->sectorSize);
         return 1;
     }
     if (info->cmdType == 0) {
@@ -119,11 +119,11 @@ s32 func_80007590(void) {
                 b->errStatus = 0x16;
             } else {
                 PI_ST = 2;
-                D_800A1CD0 |= 0x100401;
+                D_800128D0 |= 0x100401;
                 info->cmdType = 2;
                 b->errStatus = 0;
             }
-            func_80007C20(D_800B5AF8, 0, 0x05000000, b->C2Addr, b->sectorSize * 4);
+            func_80007C20(D_80016224, 0, 0x05000000, b->C2Addr, b->sectorSize * 4);
             return 1;
         }
         if (info->sectorNum == -1 && info->transferMode == 2 && info->blockNum == 1) {
@@ -131,7 +131,7 @@ s32 func_80007590(void) {
             if (b0->C1ErrNum == 0) {
                 c2 = (s32 *)b0->C2Addr;
                 if (c2[0] | c2[1] | c2[2] | c2[3]) {
-                    b0->errStatus = 24;
+                    b0->errStatus = 0x17;
                     func_80007A9C();
                     return 1;
                 }
@@ -146,7 +146,7 @@ s32 func_80007590(void) {
                 func_80007A9C();
                 return 1;
             }
-            func_80007C20(D_800B5AF8, 0, 0x05000400, b->dramAddr, b->sectorSize);
+            func_80007C20(D_80016224, 0, 0x05000400, b->dramAddr, b->sectorSize);
             b->errStatus = 0;
             return 1;
         }
