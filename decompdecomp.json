@@ -1,7 +1,7 @@
 {
  "format": 1,
- "saved_at": 1794104911.031088,
- "revision": 36959,
+ "saved_at": 1794105686.540434,
+ "revision": 36983,
  "title": "Resident Evil II",
  "platform": "n64",
  "game": {
@@ -15774,6 +15774,136 @@
    "timeout": 20,
    "function": "func_800AE478_ovl_01",
    "vram": 2148197496
+  },
+  "67320684:2147788268": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_8004A5EC_ovl_01",
+   "vram": 2147788268
+  },
+  "67456100:2147923684": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_8006B6E4_ovl_01",
+   "vram": 2147923684
+  },
+  "67550244:2148017828": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_800826A4_ovl_01",
+   "vram": 2148017828
+  },
+  "67668780:2148136364": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_8009F5AC_ovl_01",
+   "vram": 2148136364
+  },
+  "67681904:2148149488": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_800A28F0_ovl_01",
+   "vram": 2148149488
+  },
+  "67696608:2148164192": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_800A6260_ovl_01",
+   "vram": 2148164192
+  },
+  "67721396:2148188980": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_800AC334_ovl_01",
+   "vram": 2148188980
+  },
+  "67736828:2148204412": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_800AFF7C_ovl_01",
+   "vram": 2148204412
+  },
+  "67743100:2148210684": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_800B17FC_ovl_01",
+   "vram": 2148210684
+  },
+  "67451520:2147919104": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_8006A500_ovl_01",
+   "vram": 2147919104
   }
  },
  "instructions": "",
@@ -36358,6 +36488,56 @@
   "func_800AE478_ovl_01": {
    "vram": 2148197496,
    "best_score": 3980,
+   "best_by": "codex-gpt-6-luna-15"
+  },
+  "func_8004A5EC_ovl_01": {
+   "vram": 2147788268,
+   "best_score": 11400,
+   "best_by": "codex-gpt-6-luna-15"
+  },
+  "func_8006B6E4_ovl_01": {
+   "vram": 2147923684,
+   "best_score": 14443,
+   "best_by": "codex-gpt-6-luna-15"
+  },
+  "func_800826A4_ovl_01": {
+   "vram": 2148017828,
+   "best_score": 10632,
+   "best_by": "codex-gpt-6-luna-15"
+  },
+  "func_8009F5AC_ovl_01": {
+   "vram": 2148136364,
+   "best_score": 10547,
+   "best_by": "codex-gpt-6-luna-15"
+  },
+  "func_800A28F0_ovl_01": {
+   "vram": 2148149488,
+   "best_score": 11870,
+   "best_by": "codex-gpt-6-luna-15"
+  },
+  "func_800A6260_ovl_01": {
+   "vram": 2148164192,
+   "best_score": 5332,
+   "best_by": "codex-gpt-6-luna-15"
+  },
+  "func_800AC334_ovl_01": {
+   "vram": 2148188980,
+   "best_score": 15865,
+   "best_by": "codex-gpt-6-luna-15"
+  },
+  "func_800AFF7C_ovl_01": {
+   "vram": 2148204412,
+   "best_score": 8099,
+   "best_by": "codex-gpt-6-luna-15"
+  },
+  "func_800B17FC_ovl_01": {
+   "vram": 2148210684,
+   "best_score": 5198,
+   "best_by": "codex-gpt-6-luna-15"
+  },
+  "func_8006A500_ovl_01": {
+   "vram": 2147919104,
+   "best_score": 6525,
    "best_by": "codex-gpt-6-luna-15"
   }
  },
@@ -142033,6 +142213,78 @@
    "created_at": 1794104881.851327,
    "score_before": 6581,
    "score_after": 6581
+  },
+  {
+   "function": "func_8004A5EC_ovl_01",
+   "text": "Compiled one hand-reconstruction at score 11400 (103/118 instructions). It is substantially wrong in body layout and frame setup; avoid building on it as verified C. Machine draft had unresolved unksp2/unksp6/unkspA and bad alias types. Reliable observations: initial arg1+0xC8 state ptr; arg0+0x48 active buffer; state+8 field controls early clear/return. Table value is a signed halfword indexed from D_800F9DE0 using arg1+0x138 (low 15 bits and upper selector). Then nested loops walk frame/vertex records (0x10-byte records), calculating scaled signed-byte components >>6 and updating coordinates. Next agent should get a full fresh draft/recover those unknown stack temps, and preserve early conditional stack allocation shape; exact inner offsets need reconstructing from complete assembly.",
+   "by": "codex-gpt-6-luna-15",
+   "created_at": 1794104958.989248,
+   "score_before": 11400,
+   "score_after": 11400
+  },
+  {
+   "function": "func_8006B6E4_ovl_01",
+   "text": "No matching candidate; rough draft compiled (score 14443, 139 instructions vs target 123). It has correct broad state-transition logic but incorrect symbols/layout and oversized frame (0x20 vs target 0x30). Assembly target begins with func_800072E0 call and saves s0-s6; data symbols around 0x80112718, 0x80112908, 0x801129C0. Header currently treats neighboring byte globals as standalone but addresses 0x8011271C..1E are consecutive; candidate used wrong D_80112908 indexed state for at least two addresses. Next focus exact global pointer/byte addresses, call prototypes (func_8000D460 variants), and register pressure to restore the target frame.",
+   "by": "codex-gpt-6-luna-15",
+   "created_at": 1794105013.99582,
+   "score_before": 14443,
+   "score_after": 14443
+  },
+  {
+   "function": "func_8006A500_ovl_01",
+   "text": "First source reconstruction compiled at score 6525 (86/126 instructions); very rough but best current. Target is a six-way indirect switch through D_800B92B0 with table addresses [0x8006A598, 0x8006A5B4, 0x8006A684, 0x8006A5D0, 0x8006A5EC, 0x8006A608]. The compiler's generated switch table differed and emitted .rodata+0, so explicit control flow or table-address treatment is needed. Reconstruct target's common setup exactly: s7/s6 from signed halfwords +0/+2; s5/s0 from unsigned +4/+6; s3=func_8006B294 result and s4=result-s3; s1 is the fourth arg and fp the third. The helper func_8006A6F8 takes six arguments, with final two on stack, and cases choose among pairs of arg0 fields. Continue from current saved best cautiously.",
+   "by": "codex-gpt-6-luna-15",
+   "created_at": 1794105047.888886,
+   "score_before": 6525,
+   "score_after": 6525
+  },
+  {
+   "function": "func_800A6260_ovl_01",
+   "text": "Corrected invalid generated saved_reg_s1/s6 placeholders to initial values so the candidate compiles; score 5332, 136 instructions vs target 130. Mismatch still broad; source is tentative. Critical first fix: target initializes s4 to D_801443E8 base and candidate has wrong table/global offsets; judge reports row 116 target 0x801443E8 vs candidate 0x801443F8. Main iteration stride 0x1A0 and count D_801479F8. `var_s1` and `var_s6` are state carried across matching entries and should be inferred from target assembly, not initialized as guessed constants. Draft's next useful work is fixing these base/field offsets, then call argument types and frame/register allocation.",
+   "by": "codex-gpt-6-luna-15",
+   "created_at": 1794105075.978343,
+   "score_before": 5332,
+   "score_after": 5332
+  },
+  {
+   "function": "func_8009F5AC_ovl_01",
+   "text": "Reconstructed switch cases 0..4 and helper calls from assembly; current best 10547, 23.5% (137/138 instructions), no exact match. First candidate failed C89 due declarations after while; corrected. Repeated early-return attempt had no effect. Major remaining issues: initial globals emit wrong load/store order, jump table data at D_800BA520 becomes .rodata/incorrect bytes (ROM table contains branch targets), state switch control flow differs substantially. Need express computed goto/jump table in accepted C or use per-case structure with control flow shaped to layout. Target sequence is 138 insns, first target loads D_80134468, copies to D_80134464 before prologue; dispatches on values 0..4. No reusable convention established.",
+   "by": "codex-gpt-6-luna-15",
+   "created_at": 1794105179.4906712,
+   "score_before": 10547,
+   "score_after": 10547
+  },
+  {
+   "function": "func_800826A4_ovl_01",
+   "text": "Current best revision 15186df78719251e2c09, verified score 10632 (improved from baseline 11987) after reusing temp_s1_2 as the narrowed s16 loop value. Main blocker remains frame layout: target frame is 0x38 and saves $a0 in $a3 plus $ra at 0x34($sp); candidate frame is 0x48. Six local repair variants gave no better outcome. No source-mapped allocation evidence. Next investigate target assembly/structuring and live ranges to reduce frame; preserve best candidate.",
+   "by": "codex-gpt-6-luna-15",
+   "created_at": 1794105384.5451531,
+   "score_before": 11987,
+   "score_after": 10632
+  },
+  {
+   "function": "func_800B17FC_ovl_01",
+   "text": "Recovered current candidate and fixed prior undeclared D_801443E8 with a local extern. Baseline compiled at 5198/143 instructions; first mismatch is frame -0x68 vs target -0x48, with extra incoming stack reload/copy operations and saved-register allocation divergence. Ran bounded local repairs (inline byte address, scalar storage reuse, single field, branch orientation, parameter width, masked value reuse); no variant improved (one branch-orientation regression). Still 3/8 unchanged compile allowance; recommend structural frame/local lifetime rewrite, preserving target incoming stack parameter loads at offsets 0x5C/0x60.",
+   "by": "codex-gpt-6-luna-15",
+   "created_at": 1794105508.199471,
+   "score_before": 5198,
+   "score_after": 5198
+  },
+  {
+   "function": "func_800AFF7C_ovl_01",
+   "text": "Recovered source and compiled a plausible switch-based C candidate. Best verified score 8099 (~48.7%); baseline now compiles. Main mismatch is stack frame/register allocation: target frame 0x28, candidate 0x30, target preserves $s3/$s2/$s4/$s1/$s0 with arguments mapped to $s3/$s2/$s4, candidate maps differently. Follow-up should declare arg1 as a packed struct with fields at 0,4,7 and force original persistent values via typed locals/struct field accesses; then inspect full diff. Draft generator failure was specifically missing indirect jump table; switch candidate resolved compile failure.",
+   "by": "codex-gpt-6-luna-15",
+   "created_at": 1794105633.972301,
+   "score_before": 8099,
+   "score_after": 8099
+  },
+  {
+   "function": "func_800A28F0_ovl_01",
+   "text": "Compiled a typed cleanup based on m2c. Best KMC score 11870 (25.8%); trying mapped SN64 GCC 2.8.1 -G0 -mips3 -O2 -mgas -meb -mcpu=VR4300 -mhard-float -mfp64 improved to 9316 (41.8%) but not exact. Target allocates $s2 for arg1 and uses $s0 as D_80143EB4 base; candidate allocates $s0 for arg1, causing major prologue/address-register divergence. Next try rewrite in original m2c structure with minimal types, preserve D_80143EB4 base and explicit $a1=0; then inspect SN64 compile diff. Function has indirect global callbacks D_80143FA8 and D_80143F90.",
+   "by": "codex-gpt-6-luna-15",
+   "created_at": 1794105672.38818,
+   "score_before": 11870,
+   "score_after": 11870
   }
  ],
  "set_aside": [
