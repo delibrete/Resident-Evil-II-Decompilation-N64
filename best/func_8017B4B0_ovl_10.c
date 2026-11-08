@@ -61,11 +61,10 @@ void func_8017B4B0_ovl_10(void)
   if ((*((s32 *) ((D_800C7650_ovl_01.pad + 0x18000) + 0x1A3c))) & 4)
   {
     D_8011A6B8_ovl_01 = &D_801153E0;
-    do
-    {
+    __repair_rows: {
       func_80004A6C(1, 0, mode, (void *) (D_800C7650_ovl_01.pad + 0x18000));
     }
-    while (0);
+if (0) goto __repair_rows;
     *((s32 *) ((D_800C7650_ovl_01.pad + 0x18000) + 0x1A5c)) |= 0x20;
     func_80052C00_ovl_01(5, 5);
     func_80052C00_ovl_01(5, 15);

@@ -105,7 +105,7 @@ void func_8016FAC4_ovl_07(void)
           *((s32 *) (((char *) new_var2) + 0)) = temp_s7;
           temp_a1 = (*((u8 *) (((char *) temp_s0) + 4))) + (*((u8 *) (((char *) temp_s0) + 6)));
           temp_a0 = (*((u8 *) (((char *) temp_s0) + 5))) + (*((u8 *) (((char *) temp_s0) + 7)));
-          temp_t0 = var_s2 + (*((u8 *) (((char *) temp_s0) + 8)));
+          var_t2 = (s16)(var_s2 + (*((u8 *) (((char *) temp_s0) + 8))));
           temp_v0_2 = *((u8 *) (((char *) new_var2) + 2));
           temp_a2 = temp_s6 + temp_a3;
           if (temp_v0_2 != 0)
@@ -116,7 +116,7 @@ void func_8016FAC4_ovl_07(void)
           *((u16 *) (((char *) new_var2) + 6)) = temp_s6;
           *((u8 *) (((char *) new_var2) + 8)) = (u8) (*((u8 *) (((char *) temp_s0) + 4)));
           *((u8 *) (((char *) new_var2) + 9)) = (u8) (*((u8 *) (((char *) temp_s0) + 5)));
-          *((s16 *) (((char *) new_var2) + 0xC)) = temp_t0;
+          *((s16 *) (((char *) new_var2) + 0xC)) = var_t2;
           *((u16 *) (((char *) new_var2) + 0xE)) = temp_s6;
           *((s8 *) (((char *) new_var2) + 0x10)) = temp_a1;
           *((s16 *) (((char *) new_var2) + 0xA)) = (s16) ((*((u16 *) (((char *) temp_s0) + 2))) * 8);
@@ -128,7 +128,7 @@ void func_8016FAC4_ovl_07(void)
           *((s16 *) (((char *) new_var2) + 0x12)) = temp_v0_3;
           *((s8 *) (((char *) new_var2) + 0x20)) = temp_a1;
           *((s8 *) (((char *) new_var2) + 0x19)) = temp_a0;
-          *((s16 *) (((char *) new_var2) + 0x1C)) = temp_t0;
+          *((s16 *) (((char *) new_var2) + 0x1C)) = var_t2;
           new_var = (s8 *) (((char *) new_var2) + 3);
           *((s16 *) (((char *) new_var2) + 0x1E)) = temp_a2;
           *((s8 *) (((char *) new_var2) + 0x21)) = temp_a0;

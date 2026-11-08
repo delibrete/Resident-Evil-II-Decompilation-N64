@@ -1,4 +1,3 @@
-/* machine draft (m2c) for gcc-2.7.2-kmc -G0 -mips3 -mgp32 -mfp32 -O2 -mcpu=r4600, tried by autopilot */
 #ifndef M2C_DEFINES
 #define M2C_DEFINES
 typedef s32 M2C_UNK;
@@ -11,6 +10,7 @@ typedef s32 M2C_UNK32;
 #define M2C_CARRY 0
 #define M2C_OVERFLOW(a) (0)
 #endif
+/* machine draft (m2c) for gcc-2.8.1-pm -G0 -mips3 -mgp32 -mfp32 -O2, tried by autopilot */
 
 void func_80047CF8_ovl_01(void *arg0, void *arg1, s32 arg2, s32 arg3) {
     s32 temp_v0;
@@ -18,8 +18,8 @@ void func_80047CF8_ovl_01(void *arg0, void *arg1, s32 arg2, s32 arg3) {
     s32 temp_v1_2;
     s32 var_t0;
     s32 var_v1;
-    u16 *var_a2;
-    u16 *var_a3;
+    char *var_a2;
+    char *var_a3;
     u16 temp_v0_2;
 
     temp_v1 = M2C_FIELD(arg0, s32 *, 4);
@@ -32,10 +32,10 @@ void func_80047CF8_ovl_01(void *arg0, void *arg1, s32 arg2, s32 arg3) {
             var_v1 = 0;
             if (M2C_FIELD(arg1, s16 *, 4) > 0) {
                 do {
-                    temp_v0_2 = *var_a2;
+                    temp_v0_2 = *(u16 *)var_a2;
                     var_a2 += 2;
                     var_v1 += 2;
-                    *var_a3 = temp_v0_2;
+                    *(u16 *)var_a3 = temp_v0_2;
                     var_a3 += 2;
                 } while (var_v1 < M2C_FIELD(arg1, s16 *, 4));
             }

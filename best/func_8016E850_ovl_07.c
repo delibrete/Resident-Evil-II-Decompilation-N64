@@ -91,8 +91,7 @@ void func_8016E850_ovl_07(void)
   D_80171D38_overlay_007 = 0;
   D_80171D44_overlay_007 = 0x2000;
   D_80171D3C_overlay_007 = 0;
-  do
-  {
+  __repair_rows: {
     *((s32 *) (((char *) var_a1) + 0)) = (s32) (*((s32 *) (((char *) var_a0) + 0)));
     *((s32 *) (((char *) var_a1) + 4)) = (s32) (*((s32 *) (((char *) var_a0) + 4)));
     *((s32 *) (((char *) var_a1) + 8)) = (s32) (*((s32 *) (((char *) var_a0) + 8)));
@@ -100,7 +99,7 @@ void func_8016E850_ovl_07(void)
     var_a0 += 0x10;
     var_a1 += 0x10;
   }
-  while (var_a0 != temp_a2);
+if (var_a0 != temp_a2) goto __repair_rows;
   D_80171D2C_overlay_007 = 0;
   D_80171D2E_overlay_007 = 0;
   D_80171D2F_overlay_007 = 0;

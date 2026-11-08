@@ -1,7 +1,7 @@
 {
  "format": 1,
- "saved_at": 1794173281.077493,
- "revision": 37640,
+ "saved_at": 1794175484.8088021,
+ "revision": 37743,
  "title": "Resident Evil II",
  "platform": "n64",
  "game": {
@@ -17470,6 +17470,139 @@
    "timeout": 20,
    "function": "func_80168C50_ovl_31",
    "vram": 2148961360
+  },
+  "67310200:2147777784": {
+   "toolchain": "gcc-2.8.1-pm",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_80047CF8_ovl_01",
+   "vram": 2147777784
+  },
+  "67488864:2147956448": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_800736E0_ovl_01",
+   "vram": 2147956448
+  },
+  "67601928:2148069512": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_8008F088_ovl_01",
+   "vram": 2148069512
+  },
+  "67737836:2148205420": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_800B036C_ovl_01",
+   "vram": 2148205420
+  },
+  "67758356:2148225940": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_800B5394_ovl_01",
+   "vram": 2148225940
+  },
+  "68466564:2149045572": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_8017D544_ovl_05",
+   "vram": 2149045572
+  },
+  "68487200:2148984912": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_8016E850_ovl_07",
+   "vram": 2148984912
+  },
+  "68491924:2148989636": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_8016FAC4_ovl_07",
+   "vram": 2148989636
+  },
+  "68510656:2149037232": {
+   "toolchain": "sn-n64-281",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-O2",
+    "-mgas",
+    "-meb",
+    "-mcpu=VR4300",
+    "-mhard-float",
+    "-mfp64"
+   ],
+   "timeout": 20,
+   "function": "func_8017B4B0_ovl_10",
+   "vram": 2149037232
+  },
+  "68522140:2149048716": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_8017E18C_ovl_10",
+   "vram": 2149048716
   }
  },
  "instructions": "",
@@ -20558,8 +20691,8 @@
   },
   "func_80047CF8_ovl_01": {
    "vram": 2147777784,
-   "best_score": 320,
-   "best_by": "Reggie.saved-progress"
+   "best_score": 1,
+   "best_by": "autopilot"
   },
   "func_80047DA0_ovl_01": {
    "vram": 2147777952,
@@ -31633,8 +31766,8 @@
   },
   "func_8016E850_ovl_07": {
    "vram": 2148984912,
-   "best_score": 8701,
-   "best_by": "Retroreversing.permuter-3885"
+   "best_score": 8301,
+   "best_by": "permuter"
   },
   "func_8016E858_overlay_052": {
    "vram": 2148984920,
@@ -33188,8 +33321,8 @@
   },
   "func_8016FAC4_ovl_07": {
    "vram": 2148989636,
-   "best_score": 8484,
-   "best_by": "permuter-275163"
+   "best_score": 8299,
+   "best_by": "permuter"
   },
   "func_8016FAF4_overlay_051": {
    "vram": 2148989684,
@@ -36908,8 +37041,8 @@
   },
   "func_8017B4B0_ovl_10": {
    "vram": 2149037232,
-   "best_score": 6768,
-   "best_by": "Retroreversing.permuter-3908"
+   "best_score": 6169,
+   "best_by": "permuter"
   },
   "func_8017B4F4_ovl_05": {
    "vram": 2149037300,
@@ -37213,8 +37346,8 @@
   },
   "func_8017D544_ovl_05": {
    "vram": 2149045572,
-   "best_score": 11510,
-   "best_by": "Retroreversing.permuter-3880"
+   "best_score": 11505,
+   "best_by": "permuter"
   },
   "func_8017D590_ovl_10": {
    "vram": 2149045648,
@@ -37323,8 +37456,8 @@
   },
   "func_8017E18C_ovl_10": {
    "vram": 2149048716,
-   "best_score": 2935,
-   "best_by": "codex-gpt-6-luna-1"
+   "best_score": 2910,
+   "best_by": "permuter"
   },
   "func_8017E1C8_ovl_04": {
    "vram": 2149048776,
@@ -38464,6 +38597,26 @@
   "func_80168C50_ovl_31": {
    "vram": 2148961360,
    "best_score": 94060,
+   "best_by": "codex-gpt-6-luna-15"
+  },
+  "func_800736E0_ovl_01": {
+   "vram": 2147956448,
+   "best_score": 125738,
+   "best_by": "codex-gpt-6-luna-15"
+  },
+  "func_8008F088_ovl_01": {
+   "vram": 2148069512,
+   "best_score": 133305,
+   "best_by": "codex-gpt-6-luna-15"
+  },
+  "func_800B036C_ovl_01": {
+   "vram": 2148205420,
+   "best_score": 131405,
+   "best_by": "codex-gpt-6-luna-15"
+  },
+  "func_800B5394_ovl_01": {
+   "vram": 2148225940,
+   "best_score": 94400,
    "best_by": "codex-gpt-6-luna-15"
   }
  },
@@ -73733,14 +73886,6 @@
    "score_after": 845
   },
   {
-   "function": "func_8017E18C_ovl_10",
-   "text": "Two compiles, best 2730; an alternate switch got 4815. C switch with cases 0-4 emits 5-entry jump table while ROM switches on id <16 and uses a ROM jtbl symbol at func_8017E29C_ovl_04+0x5C, with entries dispatching into inline case blocks; linking fails on local generated table. Need generate 16-entry dispatch shape with correct fallthrough/trampoline arrangement or use computed goto table named jtbl_8017E2F8_ovl_10. Also current source aliases some unrelated globals causing extra D_800E10D8 load; accesses should be D_800C7650 base +0x18000.",
-   "by": "codex-gpt-6-luna-1",
-   "created_at": 1793884667.7457159,
-   "score_before": 2935,
-   "score_after": 2935
-  },
-  {
    "function": "func_80162DEC_ovl_25",
    "text": "Two compiles, best 2485. Added all state cases; switch dispatch still creates local table relocation .rodata+0x0, target references jtbl_80162F50_ovl_25. Target has distinct selector branch then 5-entry computed table, use static void *jtbl_80162F50_ovl_25[5]={&&state0,...} with goto *table[mode] to link proper symbol. Register order still differs: target a0/s1 is arg0; target s0 gets pointer from +0x250, ours reversed.",
    "by": "codex-gpt-6-luna-1",
@@ -74861,14 +75006,6 @@
    "score_after": 1270
   },
   {
-   "function": "func_8017B4B0_ovl_10",
-   "text": "Tried prior flat-array draft and a padded D_800C7650 struct with the state data referenced via func_8017E29C_ovl_04 offsets. Best score 7200 after 6 total attempts is not yet reached? Current move-on counter 0/6 since new best, so compiling needed before release.",
-   "by": "codex-gpt-6-luna-1",
-   "created_at": 1793884670.349074,
-   "score_before": 7240,
-   "score_after": 7240
-  },
-  {
    "function": "func_80164F48_ovl_26",
    "text": "Compiled 8 total attempts in this claim. Best score 3094/121 insns. Tried m2c-derived structure, explicit pointer arithmetic for D_800C7650+0x18000+0x1A78 (best), direct modulo and reciprocal arithmetic variants, and local ordering variants. Remaining dominant diffs: target global base computed as D_800C7650 + 0x18000 in a1 then added to D_800C7650 in v1, but compiler folds my equivalent to adjacent symbol D_800E10C8 and omits base arithmetic; function frame is 0x28 vs target 0x20 due extra saved s3 and locals; several temporaries/register allocations differ in 2CD calculation and modulo-by-3 branch/return layout. Try proper padded global struct through a distinct declaration or reduce locals to recover s0/s1/s2 frame.",
    "by": "codex-gpt-6-luna-1",
@@ -75643,14 +75780,6 @@
    "created_at": 1793884672.0146089,
    "score_before": 915,
    "score_after": 915
-  },
-  {
-   "function": "func_80047CF8_ovl_01",
-   "text": "Five compiles, best score 1330. Draft loop/pointer arithmetic fundamentally got signedness and register expression ordering wrong. Target starts by retaining arg0 in t1, multiplies stride by zero-extended arg3, then separately uses signed width/height and zero-extended arg2. Needs matching `u16` coordinate params and loop pointer progression; compare target's `a3` destination and `a2` source roles.",
-   "by": "codex-gpt-6-luna-1",
-   "created_at": 1793884672.031931,
-   "score_before": 320,
-   "score_after": 320
   },
   {
    "function": "func_800482C4_ovl_01",
@@ -76517,14 +76646,6 @@
    "score_after": 3291
   },
   {
-   "function": "func_8016E850_ovl_07",
-   "text": "After stub compile, added a stack array to consume a compile; score 15432 vs best 10886. No full draft/body attempted yet, so next agent should restore and compile the provided autopilot draft. Current trivial source is not useful.",
-   "by": "codex-gpt-6-luna-1",
-   "created_at": 1793884673.7287738,
-   "score_before": 11036,
-   "score_after": 11036
-  },
-  {
    "function": "func_80164218_ovl_15",
    "text": "Three successful compiles so far: best 15331 from a trivial switch, not useful; original M2C draft has correct broad control flow but unresolved helper calls. It needs a complete implementation before this claim can be meaningfully tuned. Function has switch irregularity with case 0 flowing into case 1 then case 2, and case 1 flows into case 2; case 2 is a direct jump dispatch. Calls to func_80036764_ovl_01_510+0x24 need a prototype or explicit callable alias.",
    "by": "codex-gpt-6-luna-1",
@@ -76867,14 +76988,6 @@
    "created_at": 1793884674.241596,
    "score_before": 200,
    "score_after": 200
-  },
-  {
-   "function": "func_8016FAC4_ovl_07",
-   "text": "I am releasing this large function early because I did not adapt the supplied 183-instruction draft; my only named-function compile was an empty placeholder. Best draft score 9807 remains intact for the next agent. No structural investigation was done.",
-   "by": "codex-gpt-6-luna-1",
-   "created_at": 1793884674.273717,
-   "score_before": 8484,
-   "score_after": 8484
   },
   {
    "function": "func_801623E0_ovl_12",
@@ -79595,14 +79708,6 @@
    "created_at": 1793884680.5633678,
    "score_before": 230,
    "score_after": 230
-  },
-  {
-   "function": "func_8017D544_ovl_05",
-   "text": "Best remains autopilot score 13807. Tried a reconstructed full renderer (score 15906) and simpler loop/global update rewrites; these only generated 9\u201317 instructions and did not approach the 247-instruction target. The m2c draft contains unset-register placeholders for initial t2 values and inaccurate pointer/data typing. Preserve the autopilot attempt; next pass should recover correct table types and frame pointer-based record layout, then reproduce loops and calls.",
-   "by": "codex-gpt-6-luna-1",
-   "created_at": 1793884680.570921,
-   "score_before": 14072,
-   "score_after": 14072
   },
   {
    "function": "func_8015B610_ovl_03",
@@ -93045,22 +93150,6 @@
    "score_after": 1324
   },
   {
-   "function": "func_8017B4B0_ovl_10",
-   "text": "Deep permuter: score 7240 \u2192 7240; 0 improvements; 33 candidates tested; 0 cached skips; 0 rejected; 138s elapsed. Budget rotation: repeated function output without improvement.",
-   "by": "A.permuter-3908",
-   "created_at": 1793884706.604276,
-   "score_before": 7240,
-   "score_after": 7240
-  },
-  {
-   "function": "func_80047CF8_ovl_01",
-   "text": "Deep permuter: score 1330 \u2192 1010; 2 improvements; 59 candidates tested; 0 cached skips; 0 rejected; 320s elapsed. Time limit reached.",
-   "by": "A.permuter-2627",
-   "created_at": 1793884706.6110551,
-   "score_before": 1330,
-   "score_after": 1010
-  },
-  {
    "function": "func_800073D0",
    "text": "Deep permuter: score 2700 \u2192 2700; 0 improvements; 36 candidates tested; 0 cached skips; 0 rejected; 160s elapsed. Budget rotation: soft allowance reached without recent progress.",
    "by": "A.permuter-2231",
@@ -101155,14 +101244,6 @@
    "created_at": 1793884720.563392,
    "score_before": 0,
    "score_after": 0
-  },
-  {
-   "function": "func_8016FAC4_ovl_07",
-   "text": "Deep permuter: score 8484 \u2192 8484; 0 improvements; 8 candidates tested; 19 cached skips; 0 rejected; 66s elapsed. Budget rotation: soft allowance reached without recent progress.",
-   "by": "Retroreversing.permuter-3890",
-   "created_at": 1793949538.465467,
-   "score_before": 8484,
-   "score_after": 8484
   },
   {
    "function": "func_80031C44_ovl_01",
@@ -121797,14 +121878,6 @@
    "score_after": 120
   },
   {
-   "function": "func_8017B4B0_ovl_10",
-   "text": "Deep permuter: score 6768 \u2192 6768; 0 improvements; 6 candidates tested; 25 cached skips; 0 rejected; 65s elapsed. Budget rotation: soft allowance reached without recent progress.",
-   "by": "Retroreversing.permuter-3908",
-   "created_at": 1793955539.559561,
-   "score_before": 6768,
-   "score_after": 6768
-  },
-  {
    "function": "func_8015FD58_ovl_03",
    "text": "Deep permuter: score 38487 \u2192 38487; 0 improvements; 7 candidates tested; 0 cached skips; 0 rejected; 65s elapsed. Budget rotation: soft allowance reached without recent progress.",
    "by": "Retroreversing.permuter-3835",
@@ -121907,14 +121980,6 @@
    "created_at": 1793946315.955616,
    "score_before": 945,
    "score_after": 945
-  },
-  {
-   "function": "func_8016E850_ovl_07",
-   "text": "Deep permuter: score 8701 \u2192 8701; 0 improvements; 9 candidates tested; 7 cached skips; 0 rejected; 68s elapsed. Budget rotation: soft allowance reached without recent progress.",
-   "by": "Retroreversing.permuter-3885",
-   "created_at": 1793955768.297896,
-   "score_before": 8701,
-   "score_after": 8701
   },
   {
    "function": "func_801722CC_overlay_043",
@@ -122107,14 +122172,6 @@
    "created_at": 1793956189.754982,
    "score_before": 230,
    "score_after": 220
-  },
-  {
-   "function": "func_8017D544_ovl_05",
-   "text": "Deep permuter: score 12360 \u2192 12360; 0 improvements; 6 candidates tested; 15 cached skips; 0 rejected; 62s elapsed. Budget rotation: soft allowance reached without recent progress.",
-   "by": "Retroreversing.permuter-3880",
-   "created_at": 1793946656.283555,
-   "score_before": 12360,
-   "score_after": 12360
   },
   {
    "function": "func_800A2148_ovl_01",
@@ -122595,14 +122652,6 @@
    "created_at": 1793956858.5268018,
    "score_before": 2537,
    "score_after": 2487
-  },
-  {
-   "function": "func_80047CF8_ovl_01",
-   "text": "Deep permuter: score 1330 \u2192 1155; 2 improvements; 10 candidates tested; 28 cached skips; 0 rejected; 117s elapsed. Budget rotation: soft allowance reached without recent progress.",
-   "by": "Retroreversing.permuter-2627",
-   "created_at": 1793956912.2673862,
-   "score_before": 1330,
-   "score_after": 1155
   },
   {
    "function": "func_8015AFD0_ovl_03",
@@ -124123,14 +124172,6 @@
    "created_at": 1793960282.111208,
    "score_before": 5477,
    "score_after": 5477
-  },
-  {
-   "function": "func_8017E18C_ovl_10",
-   "text": "Deep permuter: score 1900 \u2192 1900; 0 improvements; 13 candidates tested; 0 cached skips; 0 rejected; 65s elapsed. Budget rotation: soft allowance reached without recent progress.",
-   "by": "Retroreversing.permuter-3931",
-   "created_at": 1793920483.823352,
-   "score_before": 1900,
-   "score_after": 1900
   },
   {
    "function": "func_8017FD3C_ovl_04",
@@ -127979,14 +128020,6 @@
    "created_at": 1793941596.480436,
    "score_before": 840,
    "score_after": 840
-  },
-  {
-   "function": "func_80047CF8_ovl_01",
-   "text": "Best stays 320 (saved m2c-style source with void* args and u16* var_a2/var_a3). Structure is right: copy/blit of a (w x h) halfword rectangle, rows set by arg1[3] (height) and arg1[2] (width, bytes), stride in arg0+4, base in arg0+0x14, dst = base + stride*(arg3&0xFFFF) + (arg2&0xFFFF), src = base + stride*arg1[1] + arg1[0]. Remaining mismatch is register allocation: target copies arg0 into $t1 and arg1 into $t0 and uses lh 2($t0)/lh 6($t0)/lh 4($t0) with the mult/mflo order: mult v1,v0 (stride*arg3) is issued before the loads of arg1 fields. Two typed rewrites (s16* arg1 with arg1[k] indexing) scored 1215 (69.6%), worse. Untried: keep arg1 as void* and use M2C_FIELD for the header reads, then give the row loop an explicit s32 stride local so arg0 is not re-read per row.",
-   "by": "claude-haiku-19",
-   "created_at": 1793941624.766855,
-   "score_before": 320,
-   "score_after": 320
   },
   {
    "function": "func_8008C3F4_ovl_01",
@@ -144587,6 +144620,150 @@
    "created_at": 1794173260.477928,
    "score_before": 94060,
    "score_after": 94060
+  },
+  {
+   "function": "func_8017E18C_ovl_10",
+   "text": "Two compiles, best 2730; an alternate switch got 4815. C switch with cases 0-4 emits 5-entry jump table while ROM switches on id <16 and uses a ROM jtbl symbol at func_8017E29C_ovl_04+0x5C, with entries dispatching into inline case blocks; linking fails on local generated table. Need generate 16-entry dispatch shape with correct fallthrough/trampoline arrangement or use computed goto table named jtbl_8017E2F8_ovl_10. Also current source aliases some unrelated globals causing extra D_800E10D8 load; accesses should be D_800C7650 base +0x18000.",
+   "by": "codex-gpt-6-luna-1",
+   "created_at": 1793884667.7457159,
+   "score_before": 2935,
+   "score_after": 2935
+  },
+  {
+   "function": "func_8017B4B0_ovl_10",
+   "text": "Tried prior flat-array draft and a padded D_800C7650 struct with the state data referenced via func_8017E29C_ovl_04 offsets. Best score 7200 after 6 total attempts is not yet reached? Current move-on counter 0/6 since new best, so compiling needed before release.",
+   "by": "codex-gpt-6-luna-1",
+   "created_at": 1793884670.349074,
+   "score_before": 7240,
+   "score_after": 7240
+  },
+  {
+   "function": "func_80047CF8_ovl_01",
+   "text": "Five compiles, best score 1330. Draft loop/pointer arithmetic fundamentally got signedness and register expression ordering wrong. Target starts by retaining arg0 in t1, multiplies stride by zero-extended arg3, then separately uses signed width/height and zero-extended arg2. Needs matching `u16` coordinate params and loop pointer progression; compare target's `a3` destination and `a2` source roles.",
+   "by": "codex-gpt-6-luna-1",
+   "created_at": 1793884672.031931,
+   "score_before": 320,
+   "score_after": 320
+  },
+  {
+   "function": "func_8016E850_ovl_07",
+   "text": "After stub compile, added a stack array to consume a compile; score 15432 vs best 10886. No full draft/body attempted yet, so next agent should restore and compile the provided autopilot draft. Current trivial source is not useful.",
+   "by": "codex-gpt-6-luna-1",
+   "created_at": 1793884673.7287738,
+   "score_before": 11036,
+   "score_after": 11036
+  },
+  {
+   "function": "func_8016FAC4_ovl_07",
+   "text": "I am releasing this large function early because I did not adapt the supplied 183-instruction draft; my only named-function compile was an empty placeholder. Best draft score 9807 remains intact for the next agent. No structural investigation was done.",
+   "by": "codex-gpt-6-luna-1",
+   "created_at": 1793884674.273717,
+   "score_before": 8484,
+   "score_after": 8484
+  },
+  {
+   "function": "func_8017D544_ovl_05",
+   "text": "Best remains autopilot score 13807. Tried a reconstructed full renderer (score 15906) and simpler loop/global update rewrites; these only generated 9\u201317 instructions and did not approach the 247-instruction target. The m2c draft contains unset-register placeholders for initial t2 values and inaccurate pointer/data typing. Preserve the autopilot attempt; next pass should recover correct table types and frame pointer-based record layout, then reproduce loops and calls.",
+   "by": "codex-gpt-6-luna-1",
+   "created_at": 1793884680.570921,
+   "score_before": 14072,
+   "score_after": 14072
+  },
+  {
+   "function": "func_8017B4B0_ovl_10",
+   "text": "Deep permuter: score 7240 \u2192 7240; 0 improvements; 33 candidates tested; 0 cached skips; 0 rejected; 138s elapsed. Budget rotation: repeated function output without improvement.",
+   "by": "A.permuter-3908",
+   "created_at": 1793884706.604276,
+   "score_before": 7240,
+   "score_after": 7240
+  },
+  {
+   "function": "func_80047CF8_ovl_01",
+   "text": "Deep permuter: score 1330 \u2192 1010; 2 improvements; 59 candidates tested; 0 cached skips; 0 rejected; 320s elapsed. Time limit reached.",
+   "by": "A.permuter-2627",
+   "created_at": 1793884706.6110551,
+   "score_before": 1330,
+   "score_after": 1010
+  },
+  {
+   "function": "func_8016FAC4_ovl_07",
+   "text": "Deep permuter: score 8484 \u2192 8484; 0 improvements; 8 candidates tested; 19 cached skips; 0 rejected; 66s elapsed. Budget rotation: soft allowance reached without recent progress.",
+   "by": "Retroreversing.permuter-3890",
+   "created_at": 1793949538.465467,
+   "score_before": 8484,
+   "score_after": 8484
+  },
+  {
+   "function": "func_8017B4B0_ovl_10",
+   "text": "Deep permuter: score 6768 \u2192 6768; 0 improvements; 6 candidates tested; 25 cached skips; 0 rejected; 65s elapsed. Budget rotation: soft allowance reached without recent progress.",
+   "by": "Retroreversing.permuter-3908",
+   "created_at": 1793955539.559561,
+   "score_before": 6768,
+   "score_after": 6768
+  },
+  {
+   "function": "func_8016E850_ovl_07",
+   "text": "Deep permuter: score 8701 \u2192 8701; 0 improvements; 9 candidates tested; 7 cached skips; 0 rejected; 68s elapsed. Budget rotation: soft allowance reached without recent progress.",
+   "by": "Retroreversing.permuter-3885",
+   "created_at": 1793955768.297896,
+   "score_before": 8701,
+   "score_after": 8701
+  },
+  {
+   "function": "func_8017D544_ovl_05",
+   "text": "Deep permuter: score 12360 \u2192 12360; 0 improvements; 6 candidates tested; 15 cached skips; 0 rejected; 62s elapsed. Budget rotation: soft allowance reached without recent progress.",
+   "by": "Retroreversing.permuter-3880",
+   "created_at": 1793946656.283555,
+   "score_before": 12360,
+   "score_after": 12360
+  },
+  {
+   "function": "func_80047CF8_ovl_01",
+   "text": "Deep permuter: score 1330 \u2192 1155; 2 improvements; 10 candidates tested; 28 cached skips; 0 rejected; 117s elapsed. Budget rotation: soft allowance reached without recent progress.",
+   "by": "Retroreversing.permuter-2627",
+   "created_at": 1793956912.2673862,
+   "score_before": 1330,
+   "score_after": 1155
+  },
+  {
+   "function": "func_8017E18C_ovl_10",
+   "text": "Deep permuter: score 1900 \u2192 1900; 0 improvements; 13 candidates tested; 0 cached skips; 0 rejected; 65s elapsed. Budget rotation: soft allowance reached without recent progress.",
+   "by": "Retroreversing.permuter-3931",
+   "created_at": 1793920483.823352,
+   "score_before": 1900,
+   "score_after": 1900
+  },
+  {
+   "function": "func_80047CF8_ovl_01",
+   "text": "Best stays 320 (saved m2c-style source with void* args and u16* var_a2/var_a3). Structure is right: copy/blit of a (w x h) halfword rectangle, rows set by arg1[3] (height) and arg1[2] (width, bytes), stride in arg0+4, base in arg0+0x14, dst = base + stride*(arg3&0xFFFF) + (arg2&0xFFFF), src = base + stride*arg1[1] + arg1[0]. Remaining mismatch is register allocation: target copies arg0 into $t1 and arg1 into $t0 and uses lh 2($t0)/lh 6($t0)/lh 4($t0) with the mult/mflo order: mult v1,v0 (stride*arg3) is issued before the loads of arg1 fields. Two typed rewrites (s16* arg1 with arg1[k] indexing) scored 1215 (69.6%), worse. Untried: keep arg1 as void* and use M2C_FIELD for the header reads, then give the row loop an explicit s32 stride local so arg0 is not re-read per row.",
+   "by": "claude-haiku-19",
+   "created_at": 1793941624.766855,
+   "score_before": 320,
+   "score_after": 320
+  },
+  {
+   "function": "func_800B5394_ovl_01",
+   "text": "Inherited and rechecked candidate was an empty stub (score 94400). Compiled stub; no assembly match. The brief shows the target is 946 instructions and begins with a 0x140 frame, then bitstream field extraction. get_function(all) returned initial assembly pages through roughly 0x800B5AB8; repeated complete assembly and later-page requests timed out after 180s, so no viable whole-function C draft could be built. Next agent: retrieve/decode remaining assembly or generate a fresh m2c draft, then implement decoder and compile. Claim was held from prior session; starting a proper draft is still required.",
+   "by": "codex-gpt-6-luna-15",
+   "created_at": 1794174708.220684,
+   "score_before": 94400,
+   "score_after": 94400
+  },
+  {
+   "function": "func_800B036C_ovl_01",
+   "text": "Compiled the inherited empty stub: score 131405, 2 emitted instructions versus target 1316, no improvement (well below move-on limit). Draft generation is unavailable because m2c found jr at assembly line 185 without a supplied jump table. Initial assembly page shows a state/object update routine with direct calls and field writes, so this is not evidence of hand-written assembly. Next agent: supply/recover the jump table or manually reconstruct its switch, then draft and compile a substantive C implementation.",
+   "by": "codex-gpt-6-luna-15",
+   "created_at": 1794175400.6024709,
+   "score_before": 131405,
+   "score_after": 131405
+  },
+  {
+   "function": "func_8008F088_ovl_01",
+   "text": "Compiled inherited empty stub: score 133305, 2 instructions versus target 1335, no improvement. Target is a 14-state switch (lbu state at +4, jump-table dispatch through jtbl_800B9F38) followed by substantial state-specific behavior. No usable C draft or matched source was supplied; only initial assembly pages inspected. Next agent: restore/recover the missing jump table and generate m2c draft, or reconstruct states from complete assembly pages.",
+   "by": "codex-gpt-6-luna-15",
+   "created_at": 1794175426.29559,
+   "score_before": 133305,
+   "score_after": 133305
   }
  ],
  "set_aside": [
