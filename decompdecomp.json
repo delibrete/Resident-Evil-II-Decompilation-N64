@@ -1,7 +1,7 @@
 {
  "format": 1,
- "saved_at": 1794089920.1847281,
- "revision": 36674,
+ "saved_at": 1794094000.2151942,
+ "revision": 36731,
  "title": "Resident Evil II",
  "platform": "n64",
  "game": {
@@ -130291,30 +130291,6 @@
    "score_after": 10
   },
   {
-   "function": "func_80162364_overlay_035",
-   "text": "Three compiles; best score 535. Explicit table lookup uses correct address 0x80166634 but adds lui $at-based absolute load instead of target base lui/addiu plus indexed addu. To restore target form, declare table as function-pointer array at func_80166628_ovl_11+0xC; interior call after main callee is 0x80033678, currently absolute jalr adds instructions.",
-   "by": "codex-gpt-6-luna-1",
-   "created_at": 1793884676.350806,
-   "score_before": 210,
-   "score_after": 210
-  },
-  {
-   "function": "func_80162364_overlay_035",
-   "text": "Same as func_80163D70_ovl_35: 28/28 instructions, score 60, the ONLY difference is the position of one `lui $v1,%hi(func_80166634_ovl_35)`. Target places it between `sw $s2,0x18($sp)` and `sw $ra,0x1c($sp)` (before the `lbu $v0,6($s0)`); our compiler always emits sw ra, lbu, then lui. Correct body: `typedef void(*Fn)(void*,void*,void*); extern volatile Fn func_80166634_ovl_35[]; func_80162364_ovl_35(void*a,void*b,void*c){ func_80166634_ovl_35[((u8*)a)[6]](a,b,c); func_80089D34_ovl_01(a,b,c,0x100); func_80033678(a); }`. Tried volatile Fn[], volatile u32[] + cast, local tbl pointer + local u8/u32 index, explicit pointer arithmetic \u2014 all exactly 60, same reorder. Flags: project -O2 best (O3/G8/fno-strength-reduce/fno-schedule-insns also 60); IDO 7.1 = 1991. This is the known %hi placement pre-reload-scheduler gap (proposals #46/#50); can't get closer with the current compiler/source without the original construct that emits the base-address insn before the ra save.",
-   "by": "opencode-deepseek-v4.1-flash-low-1",
-   "created_at": 1793884700.129859,
-   "score_before": 210,
-   "score_after": 210
-  },
-  {
-   "function": "func_80162364_overlay_035",
-   "text": "Score 60 persistent across two compiles. Diff: target places `lui $v1, %hi(func_80166628_ovl_11+0xc)` between `sw $s2,0x18($sp)` and `sw $ra,0x1c($sp)`, before `lbu $v0,6($s0)`. All attempted C declarations emit compiler default order (sw ra then lbu then lui), giving 2 reordered insns and score 60. Attempts: volatile Fn[], local u32 lo store, explicit casts. The function indirect-calls through u8 offset[6] from arg, then calls func_80089D34_ovl_01 with 0x100, then func_80033678. No plain C could force %hi before ra save with KMC gcc -O2. See proposals #46/#50 for split-address tricks.",
-   "by": "opencode-nemotron-3.5-lightning-f-1",
-   "created_at": 1793884700.523853,
-   "score_before": 210,
-   "score_after": 210
-  },
-  {
    "function": "func_8016FB2C_overlay_051",
    "text": "Deep permuter: score 1140 \u2192 1140; 0 improvements; 6 candidates tested; 18 cached skips; 0 rejected; 66s elapsed. Budget rotation: soft allowance reached without recent progress.",
    "by": "Retroreversing.permuter-6227",
@@ -140977,6 +140953,38 @@
    "created_at": 1794061978.509739,
    "score_before": 635,
    "score_after": 635
+  },
+  {
+   "function": "func_80162364_overlay_035",
+   "text": "Three compiles; best score 535. Explicit table lookup uses correct address 0x80166634 but adds lui $at-based absolute load instead of target base lui/addiu plus indexed addu. To restore target form, declare table as function-pointer array at func_80166628_ovl_11+0xC; interior call after main callee is 0x80033678, currently absolute jalr adds instructions.",
+   "by": "codex-gpt-6-luna-1",
+   "created_at": 1793884676.350806,
+   "score_before": 210,
+   "score_after": 210
+  },
+  {
+   "function": "func_80162364_overlay_035",
+   "text": "Same as func_80163D70_ovl_35: 28/28 instructions, score 60, the ONLY difference is the position of one `lui $v1,%hi(func_80166634_ovl_35)`. Target places it between `sw $s2,0x18($sp)` and `sw $ra,0x1c($sp)` (before the `lbu $v0,6($s0)`); our compiler always emits sw ra, lbu, then lui. Correct body: `typedef void(*Fn)(void*,void*,void*); extern volatile Fn func_80166634_ovl_35[]; func_80162364_ovl_35(void*a,void*b,void*c){ func_80166634_ovl_35[((u8*)a)[6]](a,b,c); func_80089D34_ovl_01(a,b,c,0x100); func_80033678(a); }`. Tried volatile Fn[], volatile u32[] + cast, local tbl pointer + local u8/u32 index, explicit pointer arithmetic \u2014 all exactly 60, same reorder. Flags: project -O2 best (O3/G8/fno-strength-reduce/fno-schedule-insns also 60); IDO 7.1 = 1991. This is the known %hi placement pre-reload-scheduler gap (proposals #46/#50); can't get closer with the current compiler/source without the original construct that emits the base-address insn before the ra save.",
+   "by": "opencode-deepseek-v4.1-flash-low-1",
+   "created_at": 1793884700.129859,
+   "score_before": 210,
+   "score_after": 210
+  },
+  {
+   "function": "func_80162364_overlay_035",
+   "text": "Score 60 persistent across two compiles. Diff: target places `lui $v1, %hi(func_80166628_ovl_11+0xc)` between `sw $s2,0x18($sp)` and `sw $ra,0x1c($sp)`, before `lbu $v0,6($s0)`. All attempted C declarations emit compiler default order (sw ra then lbu then lui), giving 2 reordered insns and score 60. Attempts: volatile Fn[], local u32 lo store, explicit casts. The function indirect-calls through u8 offset[6] from arg, then calls func_80089D34_ovl_01 with 0x100, then func_80033678. No plain C could force %hi before ra save with KMC gcc -O2. See proposals #46/#50 for split-address tricks.",
+   "by": "opencode-nemotron-3.5-lightning-f-1",
+   "created_at": 1793884700.523853,
+   "score_before": 210,
+   "score_after": 210
+  },
+  {
+   "function": "func_80162364_overlay_035",
+   "text": "Released because its agent stopped (decompdecomp closed); its attempts are kept.",
+   "by": "codex-gpt-6-luna-15",
+   "created_at": 1794070749.019742,
+   "score_before": 0,
+   "score_after": 0
   }
  ],
  "set_aside": [
@@ -181557,11 +181565,11 @@
      "rom_sha1": "93187c4145cad272a255c17657cd9a1011b3fb3a"
     },
     "symbols_sha256": "bb629f57bc1a7dc4757d26842ea3c55c37e3025a8cd4b02d9a2fb5d58d2bc36b",
-    "recorded_at": 1794002374.5885599,
-    "attempt_id": 331282,
+    "recorded_at": 1794090219.420773,
+    "attempt_id": 309237645537,
     "source_sha256": "15c998e8e6432ae6af557c0aca0cb784486733d8f5c296db0e959fc8fbf585f2",
     "header_sha256": "6741617bf3c952bbf3b41f49aed7f8780fa9b0b41fb7a8e56fda2b5b9ed03d44",
-    "context_version": 802,
+    "context_version": 817,
     "compiler": {
      "toolchain": "sn-n64-281",
      "flags": [
@@ -181637,7 +181645,7 @@
      ],
      "language": "c",
      "context_unit": "local_source_276630",
-     "scoring_revision": "410a938219f799f42a41bcf80063f29ed792577587a651bc895e31f6e56c0fb1",
+     "scoring_revision": "4b0b14f0b4a6f1c3c00ce79b719f77ce975eddbf3a1f299043b0e11230486a4f",
      "context_sha256": "6741617bf3c952bbf3b41f49aed7f8780fa9b0b41fb7a8e56fda2b5b9ed03d44"
     },
     "target_sha256": "b7b92d755524343c1248ad7909769c1b1b242b5536cb38fd5c46310413f20d91",
