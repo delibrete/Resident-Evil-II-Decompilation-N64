@@ -40,14 +40,14 @@ void func_80098684_ovl_01(s32 arg0) {
     void *var_s0_3;
     void *var_s2_2;
 
-    var_s4 = 2;
+    
     var_s3 = 2;
     var_s1 = D_800C527C_overlay_001 + 0x3FB00;
     var_s2 = D_800C527C_overlay_001 + 0x3F800;
     var_s0 = var_s1 + 0xC;
     do {
         var_s3 -= 1;
-        func_80047B34_overlay_001(var_s1, 0);
+        func_80047B34_overlay_001((var_s4 = 2, var_s1), 0);
         func_8004789C_overlay_001(var_s1, 0x80, 0x80, 0x80);
         func_800478DC_overlay_001(var_s1, 0U, 0U);
         func_800479EC_overlay_001(var_s1, 0x70U, 0x48U);

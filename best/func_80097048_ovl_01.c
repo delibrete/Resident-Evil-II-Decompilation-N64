@@ -38,7 +38,7 @@ void func_80097048_ovl_01(void) {
     cptr = (u32)D_8012F4D0_ovl_01;
     p2 = (u8 *)(lim + 0x8B6);
     src = (S_80097048_src *)(D_801312C4_ovl_01 + 0x20);
-    do {
+    __repair_rows: {
         src--;
         count -= 1;
         func_80047B34_ovl_01(p1, 0);
@@ -49,7 +49,8 @@ void func_80097048_ovl_01(void) {
         *(s16 *)p2 = 0;
         p1 += 0x14;
         p2 += 0x14;
-    } while (count != 0);
+    }
+if (count != 0) goto __repair_rows;
     flagp[0x22] = 0x3B;
     flagp[0x23] = 0x10;
     *((u8 *)flagp + 0xE) = 2;

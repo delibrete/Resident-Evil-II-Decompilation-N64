@@ -54,8 +54,9 @@ void func_80097744_ovl_01(void)
     func_800478DC_ovl_01(var_s2, *((u8 *) (((char *) var_s0) + 0)), *((u8 *) (((char *) var_s0) + 1)));
     new_var = *((u8 *) (((char *) var_s0) + 3));
     temp_a0_2 = var_s2;
-    var_s2 += 0x14;
-    func_800479EC_ovl_01(temp_a0_2, *((u8 *) (((char *) var_s0) + 2)), new_var);
+    var_s2 += 0x14;/*__repair_call_balance*/if(var_s3){
+    func_800479EC_ovl_01(temp_a0_2, *((u8 *) (((char *) var_s0) + 2)), new_var);}else{
+    func_800479EC_ovl_01(temp_a0_2, *((u8 *) (((char *) var_s0) + 2)), new_var);}
     *((s32 **) (((char *) var_s1) + 2)) = &D_8012F4D0_ovl_01;
     *((s16 *) (((char *) var_s1) + 0)) = 0;
     var_s1 += 0x14;

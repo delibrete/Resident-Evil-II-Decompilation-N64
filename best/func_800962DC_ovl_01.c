@@ -1,4 +1,4 @@
-s32 func_80043650_overlay_001();
+s32 func_80043650_overlay_001(s32 arg0);
 s32 func_800439B8_overlay_001(s32, s32);
 s32 func_8004789C_overlay_001(s32, u8, u8, u8);
 s32 func_800478E8_overlay_001(s32, s32, s32);
@@ -82,7 +82,7 @@ void func_800962DC_ovl_01(s32 arg0)
     do
     {
  do { } while (0);
-      func_80043650_overlay_001();
+      func_80043650_overlay_001(arg0);
     }
     while (0);
     temp_a1 = var_s1;

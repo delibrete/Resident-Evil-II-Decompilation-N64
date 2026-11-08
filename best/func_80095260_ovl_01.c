@@ -104,8 +104,9 @@ int __repair_constant = 0x80;
         M2C_FIELD(&D_800C7650_overlay_001, s32 *, 0x18204) = func_800439B8_overlay_001(M2C_FIELD(&D_800C7650_overlay_001, s32 *, 0x18204), temp_s2_3, 0, 0);
     }
     temp_s2_2 = temp_s2_3 + 0x28;
-    func_8004789C_overlay_001(temp_s2_2, 0x80, 0x80, 0x80);
-    func_800478E8_overlay_001(temp_s2_2, (0xC - (M2C_FIELD(&D_8012BF38_overlay_001, u8 *, 0x29) * 3)) & 0xFFFF, 0x6E);
+    func_8004789C_overlay_001(temp_s2_2, 0x80, 0x80, 0x80);/*__repair_call_balance*/if(var_s3){
+    func_800478E8_overlay_001(temp_s2_2, (0xC - (M2C_FIELD(&D_8012BF38_overlay_001, u8 *, 0x29) * 3)) & 0xFFFF, 0x6E);}else{
+    func_800478E8_overlay_001(temp_s2_2, (0xC - (M2C_FIELD(&D_8012BF38_overlay_001, u8 *, 0x29) * 3)) & 0xFFFF, 0x6E);}
     if ((M2C_FIELD(&D_8012BF38_overlay_001, u8 *, 2) == 0) && (M2C_FIELD(&D_8012BF38_overlay_001, u8 *, 0x13) != 0)) {
         M2C_FIELD(&D_800C7650_overlay_001, s32 *, 0x18204) = func_800439B8_overlay_001(M2C_FIELD(&D_800C7650_overlay_001, s32 *, 0x18204), temp_s2_2, 0, 0);
     }

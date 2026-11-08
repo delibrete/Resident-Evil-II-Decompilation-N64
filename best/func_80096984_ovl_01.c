@@ -79,12 +79,12 @@ void func_80096984_ovl_01(void) {
         var_s0_3 -= 4;
         var_s4 -= 1;
         func_800478E8_overlay_001(var_s2, (M2C_FIELD(var_s0_3, u16 *, 0) + temp_fp) & 0xFFFF, (M2C_FIELD(var_s0_3, u16 *, 2) + temp_s7) & 0xFFFF);
-        temp_a1_3 = var_s2;
+        temp_a1_2 = var_s2;
         M2C_FIELD(var_s1, M2C_UNK **, 2) = &D_8012F4D0_overlay_001;
         M2C_FIELD(var_s1, s16 *, 0) = 0x400;
         var_s1 += 0x14;
         var_s2 += 0x14;
-        M2C_FIELD(&D_800DF650_overlay_001, s32 *, 0x204) = func_800439B8_overlay_001(M2C_FIELD(&D_800DF650_overlay_001, s32 *, 0x204), temp_a1_3, 0, 0);
+        M2C_FIELD(&D_800DF650_overlay_001, s32 *, 0x204) = func_800439B8_overlay_001(M2C_FIELD(&D_800DF650_overlay_001, s32 *, 0x204), temp_a1_2, 0, 0);
     } while (var_s4 != 0);
     if ((D_8012BF48_overlay_001 == 0) && (M2C_FIELD(&D_800C7650_overlay_001, s32 *, 0x19A5C) & 0x10000000)) {
         var_s1_2 = var_s3 + 0xA;
