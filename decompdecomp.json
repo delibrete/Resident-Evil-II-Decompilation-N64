@@ -1,7 +1,7 @@
 {
  "format": 1,
- "saved_at": 1794102461.546127,
- "revision": 36890,
+ "saved_at": 1794103950.408434,
+ "revision": 36930,
  "title": "Resident Evil II",
  "platform": "n64",
  "game": {
@@ -15518,6 +15518,139 @@
    "timeout": 20,
    "function": "func_80162B44_ovl_23",
    "vram": 2148936516
+  },
+  "67323244:2147790828": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_8004AFEC_ovl_01",
+   "vram": 2147790828
+  },
+  "68633008:2148943888": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_80164810_overlay_013",
+   "vram": 2148943888
+  },
+  "68661480:2148945208": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_80164D38_overlay_014",
+   "vram": 2148945208
+  },
+  "68745868:2148935644": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_801627DC_ovl_17",
+   "vram": 2148935644
+  },
+  "68801716:2148945412": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_80164E04_overlay_019",
+   "vram": 2148945412
+  },
+  "68811648:2148932720": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_80161C70_overlay_020",
+   "vram": 2148932720
+  },
+  "68986080:2148932720": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_80161C70_overlay_028",
+   "vram": 2148932720
+  },
+  "69003820:2148950460": {
+   "toolchain": "sn-n64-281",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-O2",
+    "-mgas",
+    "-meb",
+    "-mcpu=VR4300",
+    "-mhard-float",
+    "-mfp64"
+   ],
+   "timeout": 20,
+   "function": "func_801661BC_ovl_28",
+   "vram": 2148950460
+  },
+  "69063776:2148932720": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_80161C70_overlay_030",
+   "vram": 2148932720
+  },
+  "69250116:2148932868": {
+   "toolchain": "gcc-2.8.1-pm-sn-as",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_80161D04_overlay_036",
+   "vram": 2148932868
   }
  },
  "instructions": "",
@@ -22166,8 +22299,8 @@
   },
   "func_80161C70_overlay_020": {
    "vram": 2148932720,
-   "best_score": 17710,
-   "best_by": "upstream"
+   "best_score": 17690,
+   "best_by": "codex-gpt-6-luna-15"
   },
   "func_80161C70_overlay_021": {
    "vram": 2148932720,
@@ -22206,8 +22339,8 @@
   },
   "func_80161C70_overlay_028": {
    "vram": 2148932720,
-   "best_score": 7857,
-   "best_by": "permuter"
+   "best_score": 7172,
+   "best_by": "codex-gpt-6-luna-15"
   },
   "func_80161C70_overlay_029": {
    "vram": 2148932720,
@@ -22216,8 +22349,8 @@
   },
   "func_80161C70_overlay_030": {
    "vram": 2148932720,
-   "best_score": 2830,
-   "best_by": "upstream"
+   "best_score": 2820,
+   "best_by": "codex-gpt-6-luna-15"
   },
   "func_80161C70_overlay_032": {
    "vram": 2148932720,
@@ -22276,8 +22409,8 @@
   },
   "func_80161D04_overlay_036": {
    "vram": 2148932868,
-   "best_score": 19060,
-   "best_by": "upstream"
+   "best_score": 7726,
+   "best_by": "codex-gpt-6-luna-15"
   },
   "func_80161D1C_ovl_34": {
    "vram": 2148932892,
@@ -26101,8 +26234,8 @@
   },
   "func_80164810_overlay_013": {
    "vram": 2148943888,
-   "best_score": 15065,
-   "best_by": "upstream"
+   "best_score": 3048,
+   "best_by": "codex-gpt-6-luna-15"
   },
   "func_80164810_overlay_015": {
    "vram": 2148943888,
@@ -26461,8 +26594,8 @@
   },
   "func_80164D38_overlay_014": {
    "vram": 2148945208,
-   "best_score": 17697,
-   "best_by": "upstream"
+   "best_score": 17692,
+   "best_by": "codex-gpt-6-luna-15"
   },
   "func_80164D38_overlay_017": {
    "vram": 2148945208,
@@ -26531,8 +26664,8 @@
   },
   "func_80164E04_overlay_019": {
    "vram": 2148945412,
-   "best_score": 2779,
-   "best_by": "upstream"
+   "best_score": 2774,
+   "best_by": "codex-gpt-6-luna-15"
   },
   "func_80164E04_overlay_035": {
    "vram": 2148945412,
@@ -36043,6 +36176,21 @@
    "vram": 2149007644,
    "best_score": 2574,
    "best_by": "Retroreversing.permuter-6638-lane-0"
+  },
+  "func_8004AFEC_ovl_01": {
+   "vram": 2147790828,
+   "best_score": 6317,
+   "best_by": "codex-gpt-6-luna-15"
+  },
+  "func_801627DC_ovl_17": {
+   "vram": 2148935644,
+   "best_score": 3377,
+   "best_by": "codex-gpt-6-luna-15"
+  },
+  "func_801661BC_ovl_28": {
+   "vram": 2148950460,
+   "best_score": 7038,
+   "best_by": "codex-gpt-6-luna-15"
   }
  },
  "layout": [
@@ -74495,14 +74643,6 @@
    "score_after": 4185
   },
   {
-   "function": "func_801627DC_ovl_17",
-   "text": "Ending this session at the user's explicit limit of eight compiled claims. Only one successful compile on this eighth claim; current score 6042 (66.4%), and the C remains a broad first pass. It still needs jump-table and object-pointer address reconstruction, then per-state control flow, before meaningful register tuning. Best attempt is saved.",
-   "by": "codex-gpt-6-luna-1",
-   "created_at": 1793884674.17945,
-   "score_before": 6352,
-   "score_after": 6352
-  },
-  {
    "function": "func_800AAF10_ovl_01",
    "text": "Cannot get closer on this build. Exact C: `D_80148B74 = 0; D_80148B78 = 0;` (extern s32). 5/5 insns, score 20; the only remaining diff is the address scratch register: ROM `lui $v0,%hi(S); sw $zero,%lo(S)($v0)`, ours `lui $at,%hi(S); sw $zero,%lo(S)($at)` (4 regalloc rows). Direct globals and local-pointer forms both give $at. This is the open project-wide split-address/scratch compiler limitation, not source shape.",
    "by": "opencode-deepseek-v4.1-flash-1",
@@ -76303,14 +76443,6 @@
    "score_after": 1815
   },
   {
-   "function": "func_80161C70_overlay_030",
-   "text": "Compiled through its six-compile move-on limit. Best reported score 2830 (76%), though the best iteration left an unknown D_80167D44tab symbol warning. Corrected the byte lookup base to D_80167D44 and table lookup via func_80167C40+0x104; later best linkable source scored 3575 (69.7%). Remaining mismatch includes global D_800C7650+0x18000 computation (compiler folds it to D_800E10B0), ROM's direct jal to func_800342B0_ovl_01+0x530 (used volatile function pointer), stack frame/register allocation, and field accesses through s1=arg0+0x2B4. Control flow and remaining calls are represented.",
-   "by": "codex-gpt-6-luna-1",
-   "created_at": 1793884678.455373,
-   "score_before": 2830,
-   "score_after": 2830
-  },
-  {
    "function": "func_8017F3B0_overlay_004",
    "text": "Compiled through the 6-compile move-on threshold. Best score 5628 (54.2%, 119/123 instructions); later variants reached 5953 but were worse. Tried raw byte/word pointers at D_800C7650+0x20000, volatile access, branch reshaping, and a volatile u32 base. Key remaining mismatch: compiler repeatedly resolves accesses around +0x2148A/+0x21494 as D_800E8ADA/D_800E8AE4 global aliases and uses D_800E7650, while ROM forms D_800C7650 base then adds 0x20000 in function. Best version also has 0x28 stack frame vs ROM 0x20; decision-tree branch ordering and copy source addresses differ. Continue from best stored attempt; try explicit nested padded struct/global base representation, then adjust branch ordering and local lifetimes.",
    "by": "codex-gpt-6-luna-1",
@@ -76349,14 +76481,6 @@
    "created_at": 1793884678.516246,
    "score_before": 4774,
    "score_after": 4774
-  },
-  {
-   "function": "func_80164E04_overlay_019",
-   "text": "After 6 no-better compiles, released with best score 2749 (78.0%). Tried switch/fallthrough and conditional stage forms, nested counted loops for the ten records, and explicit signed 16-bit timer checks. Remaining mismatch: target uses a six saved-register 0x38 frame; this source has 0x30 frame and shifted saves, with wrong register allocation. Loop body currently emits ordinary per-record accesses instead of target's paired loads from offsets -0x5C and 0x0 followed by both stores; the target carries both the record cursor and field cursor separately. Stage dispatch and case-zero call delay slots also differ. The case 2 helper is at func_80031C44_ovl_01+0x868, but the corresponding alias is not recognized by linker.",
-   "by": "codex-gpt-6-luna-1",
-   "created_at": 1793884678.5238342,
-   "score_before": 2779,
-   "score_after": 2779
   },
   {
    "function": "func_80162A78_overlay_027",
@@ -76463,14 +76587,6 @@
    "score_after": 3558
   },
   {
-   "function": "func_80164810_overlay_013",
-   "text": "Best score 15065 from one-field scaffold; second attempt worsened. I could not reconstruct the long chain of repeated condition-controlled calls during this turn. Target initializes +0x1E2, computes a short value with func_80032D44, then applies flags to the object at +0x234 via func_80164A70/AD0; later callbacks follow the claim assembly.",
-   "by": "codex-gpt-6-luna-1",
-   "created_at": 1793884678.833195,
-   "score_before": 15065,
-   "score_after": 15065
-  },
-  {
    "function": "func_80163620_overlay_032",
    "text": "Best score 7283 after two compile attempts (plus a duplicate compile); no exact match. The control-flow draft includes only states 0/1 and 2/3 correctly, with state 0's call target func_800331E8+0x44 still unresolved. Diff shows frame oversized to 0x38 due three stack color locals; use explicit s16 color array at sp+0x10 (six-byte array) or adjust declarations to recover target 0x30 frame. Target uses s2=this, s3=arg1, s4=arg2, s1=object->0x234, s0 temporary; my compiled allocation shifted registers. Relocations/data accesses differ because global overlays need D_800C7650 + 0x18000; globals D_800E10D0/D4 direct symbols.",
    "by": "codex-gpt-6-luna-1",
@@ -76493,14 +76609,6 @@
    "created_at": 1793884678.915755,
    "score_before": 6391,
    "score_after": 6391
-  },
-  {
-   "function": "func_80161C70_overlay_028",
-   "text": "Three compiles; best score 7717, 52.9%. The third attempt used the shared struct name from guess_struct but failed to compile because this type/global set is not in context.h and the overlay symbols are missing. Two valid attempts explored; unresolved issue is global and function-pointer tables bound to overlays. No match.",
-   "by": "codex-gpt-6-luna-1",
-   "created_at": 1793884678.937675,
-   "score_before": 7857,
-   "score_after": 7857
   },
   {
    "function": "func_801661CC_overlay_033",
@@ -76557,14 +76665,6 @@
    "created_at": 1793884679.070679,
    "score_before": 18860,
    "score_after": 18860
-  },
-  {
-   "function": "func_80161D04_overlay_036",
-   "text": "Only stub compiled; this is an early release. The existing m2c draft has the substantive initialization and switch. I could not improve it because the 0x6002 call to func_80036764_ovl_01_510+0x294 lacks a matching entrypoint declaration; the next agent should address that before optimizing the switch.",
-   "by": "codex-gpt-6-luna-1",
-   "created_at": 1793884679.088623,
-   "score_before": 19060,
-   "score_after": 19060
   },
   {
    "function": "func_80166728_ovl_16",
@@ -77207,28 +77307,12 @@
    "score_after": 10120
   },
   {
-   "function": "func_80164D38_overlay_014",
-   "text": "I implemented only case 0 of a seven-state dispatcher, so the 17642 score (134 emitted vs 241 target instructions) confirms this source is structurally incomplete. To proceed, it needs a full seven-state reconstruction and exact calls to the interior helper addresses; the current partial case cannot be incrementally improved into a match.",
-   "by": "codex-gpt-6-luna-1",
-   "created_at": 1793884680.273597,
-   "score_before": 17697,
-   "score_after": 17697
-  },
-  {
    "function": "func_8005C294_ovl_01",
    "text": "Cannot get closer: the only diff is the compiler's constant-folding of `(base+0x1D60)+field`. ROM emits a separate `addiu $v0,$v0,0x1d60` then `sh/sb zero,0x11c/0x112/0x11e($v0)`; this KMC build folds the two constants into the displacement (`sh zero,0x1e7c($v0)` etc.), losing 1 instruction and shifting 3 operands. Tried local pointer, separate temp, volatile forms \u2014 identical. Same class as proposal #23. Correct C: ptr = *(u8**)(arg0+0x234) + 0x1D60; *(s16*)(ptr+0x11C)=0; *(s8*)(ptr+0x112)=0; *(s16*)(ptr+0x11E)=0.",
    "by": "opencode-deepseek-v4.1-flash-low-1",
    "created_at": 1793884680.29327,
    "score_before": 0,
    "score_after": 0
-  },
-  {
-   "function": "func_80161C70_overlay_020",
-   "text": "The function touches many unrelated engine systems and the current reconstruction uses an incomplete raw byte layout, leaving about 75 instructions absent and calls unresolved. The first compile pinpointed wrong global resolution, missing accurate call signatures, and an interior helper entry point; without recovering those broader declarations first, further edits to this approximate body cannot produce meaningful progress.",
-   "by": "codex-gpt-6-luna-1",
-   "created_at": 1793884680.298808,
-   "score_before": 17710,
-   "score_after": 17710
   },
   {
    "function": "func_8005C2AC_ovl_01",
@@ -77773,14 +77857,6 @@
    "created_at": 1793884681.303148,
    "score_before": 5128,
    "score_after": 5128
-  },
-  {
-   "function": "func_801661BC_ovl_28",
-   "text": "Ten counted compiles completed; best score 8469 (67.9%). Started from m2c and reconstructed the control flow with a guessed object/subobject struct, but layout/type declarations are still wrong and the compiler frame/register allocation differs. Attempted padding locals and alternate field representations. Best score source is the 226-instruction draft-style implementation; later attempts reached 8577. Core unresolved issues: object offsets for fields after +0x4, callback address D_800C7650+0x18000 (m2c target uses table; compiler resolved globals to unrelated symbols in best result), proper callees/prototypes, and stack locals at sp+0x10/+0x18 with target frame size 0x58. The guessed struct update in shared context v40 is suspect (compile score worsened), check before reuse.",
-   "by": "codex-gpt-6-luna-1",
-   "created_at": 1793884681.310783,
-   "score_before": null,
-   "score_after": null
   },
   {
    "function": "func_80162238_ovl_19",
@@ -91095,14 +91171,6 @@
    "score_after": 110
   },
   {
-   "function": "func_80164E04_overlay_019",
-   "text": "Deep permuter: score 595 \u2192 595; 0 improvements; 1 candidates tested; 0 cached skips; 0 rejected; 12s elapsed. Stopped: The saved C does not compile in the current context; fix its declarations before deep search..",
-   "by": "A.permuter-4523",
-   "created_at": 1793884706.258757,
-   "score_before": 2779,
-   "score_after": 2779
-  },
-  {
    "function": "func_8017CE8C_ovl_04",
    "text": "Deep permuter: score 113405 \u2192 112752; 3 improvements; 37 candidates tested; 0 cached skips; 0 rejected; 300s elapsed. Time limit reached.",
    "by": "A.permuter-3840",
@@ -99151,14 +99219,6 @@
    "score_after": null
   },
   {
-   "function": "func_80161C70_overlay_020",
-   "text": "Deep permuter: score 350 \u2192 350; 0 improvements; 1 candidates tested; 0 cached skips; 0 rejected; 13s elapsed. Stopped: The saved C does not compile in the current context; fix its declarations before deep search..",
-   "by": "Retroreversing.permuter-4527",
-   "created_at": 1793884720.1092422,
-   "score_before": 17710,
-   "score_after": 17710
-  },
-  {
    "function": "func_801126D8_ovl_01",
    "text": "Not C-producible; no compile attempted. read_data at 0x801126D8 shows the bytes are word pointers 0x800B9308 and 0x800B9328 (D_800B9308, D_800B9328), continuing the overlay_001 pointer table. The lb $t3/$zero decode comes from the high halfwords of those pointers. This is table data (proposal #516); its extent should be set at table level, not per 8-byte claim.",
    "by": "claude-haiku-17",
@@ -101815,14 +101875,6 @@
    "score_after": null
   },
   {
-   "function": "func_80161C70_overlay_030",
-   "text": "Deep permuter: score 350 \u2192 350; 0 improvements; 1 candidates tested; 0 cached skips; 0 rejected; 9s elapsed. Stopped: The saved C does not compile in the current context; fix its declarations before deep search..",
-   "by": "Retroreversing.permuter-5033",
-   "created_at": 1793884728.3760908,
-   "score_before": 2830,
-   "score_after": 2830
-  },
-  {
    "function": "func_8016266C_ovl_15",
    "text": "Saved source rechecks at score 10; all 11 instructions match except the JAL relocation, target `func_80036764_ovl_01_510_24+0x13c` versus candidate entry `func_80036764_ovl_01`. A GCC asm-name alias was rejected because asm is not allowed; trying an explicit function redeclaration for pointer arithmetic conflicted with context.h. Remaining path is inspect the existing prototype in get_context and test a C function-pointer expression to the interior address, or create a split label only if the target really is a distinct function entry. No C candidate has changed machine code from the matched score-10 source.",
    "by": "codex-gpt-6-luna-9",
@@ -103709,14 +103761,6 @@
    "created_at": 1793884731.062679,
    "score_before": 1080,
    "score_after": 1080
-  },
-  {
-   "function": "func_80161D04_overlay_036",
-   "text": "Deep permuter: score 1150 \u2192 1150; 0 improvements; 1 candidates tested; 0 cached skips; 0 rejected; 9s elapsed. Stopped: The saved C does not compile in the current context; fix its declarations before deep search..",
-   "by": "Retroreversing.permuter-5431",
-   "created_at": 1793904078.360273,
-   "score_before": 1150,
-   "score_after": 1150
   },
   {
    "function": "func_8016758C_ovl_30",
@@ -106437,14 +106481,6 @@
    "created_at": 1793956462.106653,
    "score_before": 8115,
    "score_after": 8115
-  },
-  {
-   "function": "func_80161C70_overlay_028",
-   "text": "Deep permuter: score 350 \u2192 350; 0 improvements; 1 candidates tested; 0 cached skips; 0 rejected; 19s elapsed. Stopped: The saved C does not compile in the current context; fix its declarations before deep search..",
-   "by": "Retroreversing.permuter-4908",
-   "created_at": 1793884736.103241,
-   "score_before": 7857,
-   "score_after": 7857
   },
   {
    "function": "func_801654AC_ovl_35",
@@ -110949,14 +110985,6 @@
    "created_at": 1793955534.85423,
    "score_before": 4365,
    "score_after": 4365
-  },
-  {
-   "function": "func_80164810_overlay_013",
-   "text": "Deep permuter: score 930 \u2192 930; 0 improvements; 1 candidates tested; 0 cached skips; 0 rejected; 27s elapsed. Stopped: The saved C does not compile in the current context; fix its declarations before deep search..",
-   "by": "Retroreversing.permuter-4147",
-   "created_at": 1793884741.631593,
-   "score_before": 15065,
-   "score_after": 15065
   },
   {
    "function": "func_8011840C_ovl_01",
@@ -123301,14 +123329,6 @@
    "created_at": 1793924262.5195572,
    "score_before": 320,
    "score_after": 320
-  },
-  {
-   "function": "func_801627DC_ovl_17",
-   "text": "Deep permuter: score 2327 \u2192 2327; 0 improvements; 1 candidates tested; 16 cached skips; 0 rejected; 61s elapsed. Budget rotation: soft allowance reached without recent progress.",
-   "by": "Retroreversing.permuter-4378",
-   "created_at": 1793934613.624437,
-   "score_before": 2327,
-   "score_after": 2327
   },
   {
    "function": "func_8016E970_overlay_063",
@@ -141565,6 +141585,214 @@
    "created_at": 1794102411.5436149,
    "score_before": 2500,
    "score_after": 2500
+  },
+  {
+   "function": "func_801627DC_ovl_17",
+   "text": "Ending this session at the user's explicit limit of eight compiled claims. Only one successful compile on this eighth claim; current score 6042 (66.4%), and the C remains a broad first pass. It still needs jump-table and object-pointer address reconstruction, then per-state control flow, before meaningful register tuning. Best attempt is saved.",
+   "by": "codex-gpt-6-luna-1",
+   "created_at": 1793884674.17945,
+   "score_before": 6352,
+   "score_after": 6352
+  },
+  {
+   "function": "func_80161C70_overlay_030",
+   "text": "Compiled through its six-compile move-on limit. Best reported score 2830 (76%), though the best iteration left an unknown D_80167D44tab symbol warning. Corrected the byte lookup base to D_80167D44 and table lookup via func_80167C40+0x104; later best linkable source scored 3575 (69.7%). Remaining mismatch includes global D_800C7650+0x18000 computation (compiler folds it to D_800E10B0), ROM's direct jal to func_800342B0_ovl_01+0x530 (used volatile function pointer), stack frame/register allocation, and field accesses through s1=arg0+0x2B4. Control flow and remaining calls are represented.",
+   "by": "codex-gpt-6-luna-1",
+   "created_at": 1793884678.455373,
+   "score_before": 2830,
+   "score_after": 2830
+  },
+  {
+   "function": "func_80164E04_overlay_019",
+   "text": "After 6 no-better compiles, released with best score 2749 (78.0%). Tried switch/fallthrough and conditional stage forms, nested counted loops for the ten records, and explicit signed 16-bit timer checks. Remaining mismatch: target uses a six saved-register 0x38 frame; this source has 0x30 frame and shifted saves, with wrong register allocation. Loop body currently emits ordinary per-record accesses instead of target's paired loads from offsets -0x5C and 0x0 followed by both stores; the target carries both the record cursor and field cursor separately. Stage dispatch and case-zero call delay slots also differ. The case 2 helper is at func_80031C44_ovl_01+0x868, but the corresponding alias is not recognized by linker.",
+   "by": "codex-gpt-6-luna-1",
+   "created_at": 1793884678.5238342,
+   "score_before": 2779,
+   "score_after": 2779
+  },
+  {
+   "function": "func_80164810_overlay_013",
+   "text": "Best score 15065 from one-field scaffold; second attempt worsened. I could not reconstruct the long chain of repeated condition-controlled calls during this turn. Target initializes +0x1E2, computes a short value with func_80032D44, then applies flags to the object at +0x234 via func_80164A70/AD0; later callbacks follow the claim assembly.",
+   "by": "codex-gpt-6-luna-1",
+   "created_at": 1793884678.833195,
+   "score_before": 15065,
+   "score_after": 15065
+  },
+  {
+   "function": "func_80161C70_overlay_028",
+   "text": "Three compiles; best score 7717, 52.9%. The third attempt used the shared struct name from guess_struct but failed to compile because this type/global set is not in context.h and the overlay symbols are missing. Two valid attempts explored; unresolved issue is global and function-pointer tables bound to overlays. No match.",
+   "by": "codex-gpt-6-luna-1",
+   "created_at": 1793884678.937675,
+   "score_before": 7857,
+   "score_after": 7857
+  },
+  {
+   "function": "func_80161D04_overlay_036",
+   "text": "Only stub compiled; this is an early release. The existing m2c draft has the substantive initialization and switch. I could not improve it because the 0x6002 call to func_80036764_ovl_01_510+0x294 lacks a matching entrypoint declaration; the next agent should address that before optimizing the switch.",
+   "by": "codex-gpt-6-luna-1",
+   "created_at": 1793884679.088623,
+   "score_before": 19060,
+   "score_after": 19060
+  },
+  {
+   "function": "func_80164D38_overlay_014",
+   "text": "I implemented only case 0 of a seven-state dispatcher, so the 17642 score (134 emitted vs 241 target instructions) confirms this source is structurally incomplete. To proceed, it needs a full seven-state reconstruction and exact calls to the interior helper addresses; the current partial case cannot be incrementally improved into a match.",
+   "by": "codex-gpt-6-luna-1",
+   "created_at": 1793884680.273597,
+   "score_before": 17697,
+   "score_after": 17697
+  },
+  {
+   "function": "func_80161C70_overlay_020",
+   "text": "The function touches many unrelated engine systems and the current reconstruction uses an incomplete raw byte layout, leaving about 75 instructions absent and calls unresolved. The first compile pinpointed wrong global resolution, missing accurate call signatures, and an interior helper entry point; without recovering those broader declarations first, further edits to this approximate body cannot produce meaningful progress.",
+   "by": "codex-gpt-6-luna-1",
+   "created_at": 1793884680.298808,
+   "score_before": 17710,
+   "score_after": 17710
+  },
+  {
+   "function": "func_801661BC_ovl_28",
+   "text": "Ten counted compiles completed; best score 8469 (67.9%). Started from m2c and reconstructed the control flow with a guessed object/subobject struct, but layout/type declarations are still wrong and the compiler frame/register allocation differs. Attempted padding locals and alternate field representations. Best score source is the 226-instruction draft-style implementation; later attempts reached 8577. Core unresolved issues: object offsets for fields after +0x4, callback address D_800C7650+0x18000 (m2c target uses table; compiler resolved globals to unrelated symbols in best result), proper callees/prototypes, and stack locals at sp+0x10/+0x18 with target frame size 0x58. The guessed struct update in shared context v40 is suspect (compile score worsened), check before reuse.",
+   "by": "codex-gpt-6-luna-1",
+   "created_at": 1793884681.310783,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80164E04_overlay_019",
+   "text": "Deep permuter: score 595 \u2192 595; 0 improvements; 1 candidates tested; 0 cached skips; 0 rejected; 12s elapsed. Stopped: The saved C does not compile in the current context; fix its declarations before deep search..",
+   "by": "A.permuter-4523",
+   "created_at": 1793884706.258757,
+   "score_before": 2779,
+   "score_after": 2779
+  },
+  {
+   "function": "func_80161C70_overlay_020",
+   "text": "Deep permuter: score 350 \u2192 350; 0 improvements; 1 candidates tested; 0 cached skips; 0 rejected; 13s elapsed. Stopped: The saved C does not compile in the current context; fix its declarations before deep search..",
+   "by": "Retroreversing.permuter-4527",
+   "created_at": 1793884720.1092422,
+   "score_before": 17710,
+   "score_after": 17710
+  },
+  {
+   "function": "func_80161C70_overlay_030",
+   "text": "Deep permuter: score 350 \u2192 350; 0 improvements; 1 candidates tested; 0 cached skips; 0 rejected; 9s elapsed. Stopped: The saved C does not compile in the current context; fix its declarations before deep search..",
+   "by": "Retroreversing.permuter-5033",
+   "created_at": 1793884728.3760908,
+   "score_before": 2830,
+   "score_after": 2830
+  },
+  {
+   "function": "func_80161D04_overlay_036",
+   "text": "Deep permuter: score 1150 \u2192 1150; 0 improvements; 1 candidates tested; 0 cached skips; 0 rejected; 9s elapsed. Stopped: The saved C does not compile in the current context; fix its declarations before deep search..",
+   "by": "Retroreversing.permuter-5431",
+   "created_at": 1793904078.360273,
+   "score_before": 1150,
+   "score_after": 1150
+  },
+  {
+   "function": "func_80161C70_overlay_028",
+   "text": "Deep permuter: score 350 \u2192 350; 0 improvements; 1 candidates tested; 0 cached skips; 0 rejected; 19s elapsed. Stopped: The saved C does not compile in the current context; fix its declarations before deep search..",
+   "by": "Retroreversing.permuter-4908",
+   "created_at": 1793884736.103241,
+   "score_before": 7857,
+   "score_after": 7857
+  },
+  {
+   "function": "func_80164810_overlay_013",
+   "text": "Deep permuter: score 930 \u2192 930; 0 improvements; 1 candidates tested; 0 cached skips; 0 rejected; 27s elapsed. Stopped: The saved C does not compile in the current context; fix its declarations before deep search..",
+   "by": "Retroreversing.permuter-4147",
+   "created_at": 1793884741.631593,
+   "score_before": 15065,
+   "score_after": 15065
+  },
+  {
+   "function": "func_801627DC_ovl_17",
+   "text": "Deep permuter: score 2327 \u2192 2327; 0 improvements; 1 candidates tested; 16 cached skips; 0 rejected; 61s elapsed. Budget rotation: soft allowance reached without recent progress.",
+   "by": "Retroreversing.permuter-4378",
+   "created_at": 1793934613.624437,
+   "score_before": 2327,
+   "score_after": 2327
+  },
+  {
+   "function": "func_80161D04_overlay_036",
+   "text": "Deep permuter: score 1150 \u2192 1150; 0 improvements; 1 candidates tested; 0 cached skips; 0 rejected; 111s elapsed. Stopped: The saved C does not compile in the current context; fix its declarations before deep search..",
+   "by": "Retroreversing.permuter-5431-lane-0",
+   "created_at": 1794090207.594468,
+   "score_before": 1150,
+   "score_after": 1150
+  },
+  {
+   "function": "func_80164D38_overlay_014",
+   "text": "Ordinary compile of inherited upstream C improved rechecked score 17697 to 17692 (26.5%, 124/241 instructions emitted). First major structural mismatch is frame target 0x40 vs candidate 0x38; target has D_801686FC loads via lwl/lwr (candidate's memcpy likely wrong), absolute globals are misdeclared, jump table state dispatch missing cases. Try compiler map gcc-2.8.1-pm-sn-as per brief. No moves exhausted.",
+   "by": "codex-gpt-6-luna-15",
+   "created_at": 1794102800.0670478,
+   "score_before": 17697,
+   "score_after": 17692
+  },
+  {
+   "function": "func_801661BC_ovl_28",
+   "text": "Recovered a compiling SN64 candidate; best current score 7038 (73.3%), not exact. Fixed M2C scaffolding by defining M2C_UNK as int, adding required extern/prototypes, changing D_80168FCC to the table address expression (direct C variable address was invalid), and changed temp_s0 to add 0x178 to the pointer loaded at arg0+0x234. Control-flow repair replaced the bit-0x80 branch goto join with an immediate func_801665DC call/return, improving score from 7504 to 7038. Original block_39 label path was preserved. Attempts to widen locals/frames and change arg1/arg2 types did not improve; avoid repeating. Current saved_best is revision 09f7354cfa89799b47e6. Major remaining mismatch starts at prologue: target frame -0x58 saves s2,s5,ra,s6,s4,s3,s1,s0; candidate frame -0x40 and different saved registers. Need recover original object/prototype and local lifetimes/stack layout. Target calls func_80040E88 with &sp10 and &sp18; later helper gets pointer &sp18 and same sp10 pointer twice. Candidate is still 25 instructions shorter.",
+   "by": "codex-gpt-6-luna-15",
+   "created_at": 1794103152.357874,
+   "score_before": 7504,
+   "score_after": 7038
+  },
+  {
+   "function": "func_80161C70_overlay_030",
+   "text": "Resumed revision 0000a471ca788b3b06c4 (fresh baseline 2825, historical best 2820). The sole remaining callee_parameter_width local repair changed func_801672F4's first parameter u8 to int and stayed 2825, with zero displayed diff rows changed. Target assembly confirms a 0x20 frame, saves s2/s1/ra/s0, then computes D_800C7650 + 0x18000 at runtime before loading offset 0x1A60; baseline still has a 0x30 frame and wrong register allocation. Candidate already has volatile global, target local and eight-byte pad. This function is >100 opcodes off and previous attempts also plateaued; move on. If revisited, inspect full diff/allocator and try an evidence-based declaration/lifetime rewrite around target global address formation and item pointer, not the failed callee width tweak. No reusable convention established.",
+   "by": "codex-gpt-6-luna-15",
+   "created_at": 1794103250.960207,
+   "score_before": 2820,
+   "score_after": 2820
+  },
+  {
+   "function": "func_80164E04_overlay_019",
+   "text": "Current verified baseline 2779. try_local_repairs offered six initial variants; explicit_loop_backedge narrowly improved to 2774 and is retained as revision 4edca68b624d584b44e1. Subsequent two address_temporary variants tied/worsened. Compiler survey with brief-recommended sn-n64-281 flags gives 1989 (better) but still 44 register, 9 stack, 18 branch-target differences; appears much closer than current-profile build and worth a compiler-scoped proposal. Target requires frame 0x38/saves s3-s5 etc; C emits 0x28. Function brief says function's map may be SN64 GCC 2.8.1 rather than current KMC. Calls in assembly: func_80089D34_ovl_01, func_8004A5E4_ovl_01, func_800324AC; candidate's func_80031C44_ovl_01_868 symbol is unresolved, producing link diagnostics for local repair trials\u2014correct to func_800324AC. Preserve target loop backedge change as current best. Exact C available in retained candidate. Move on after current trials; unresolved callee and 44+ register/stack differences remain.",
+   "by": "codex-gpt-6-luna-15",
+   "created_at": 1794103304.7780192,
+   "score_before": 2779,
+   "score_after": 2774
+  },
+  {
+   "function": "func_80164810_overlay_013",
+   "text": "Recovered full 152-instruction target and rewrote the stub. Current best 3048, 154 emitted instructions. Correct behavior is clear: zero +0x1e2; calculate an angle from D_800C7650 + 0x18000 offsets 0x1aaa/0x1ab2 and object +0x2a/+0x32; retrieve flags; toggle child handlers at offsets 0..0x11a0; then perform three repeated object calls and cleanup. Main blocker is modeling D_800C7650 as base symbol plus literal 0x18000: direct C pointer expressions relocate to wrong base. Target explicitly forms 0x18000 in v1, adds it to &D_800C7650, then loads offsets; try a volatile/dynamic integer temporary preserving that sequence or look at similar table-address code. Six local repair variants yielded no gain. Also re-evaluate call prototypes and preserve return values: target first helper call feeds s0 while second func_80033634 call's low byte feeds flags.",
+   "by": "codex-gpt-6-luna-15",
+   "created_at": 1794103438.669343,
+   "score_before": 15065,
+   "score_after": 3048
+  },
+  {
+   "function": "func_80161C70_overlay_028",
+   "text": "Reconstructed behavior from all target assembly pages; score improved 7857 -> 7472 -> 7172 (target 164 instructions; current candidate 152). Keep best revision 47f7b7a185ce3f581d3b. Repeated direct arithmetic on D_800C7650 still resolves wrongly and needs explicit pointer-base technique; assembly adds literal 0x18000 before accesses. Early output differs because local s32 p[4] causes frame -0x38; target frame -0x40 with four stack words at sp+0x18..0x24, so choose declarations/lifetimes inducing that exact frame and prologue. Frame table selection stride is 4 bytes with signed halfword loads at indexes (not s16 array stride 2); preserve two adjacent elements at offsets 0 and 2. Target calls func_80034A00 with out pointer sp+0x28, angle arg s16 +0x66, and pointer D_800E10D0 stored into object+0x250 as delay slot; subsequent reads are sp+0x28. Source currently incorrectly uses object+0x28. Gate length differs because branch layout. Local repair diagnostics were unhelpful; next work should repair data pointer/table stride, stack temp location, and exact output-pointer call sequence.",
+   "by": "codex-gpt-6-luna-15",
+   "created_at": 1794103536.3754182,
+   "score_before": 7857,
+   "score_after": 7172
+  },
+  {
+   "function": "func_801627DC_ovl_17",
+   "text": "Current best score 3377 (81.2%), 174 emitted vs 180 target instructions. Baseline first compile and subsequent independent local repair batch (6 alternatives) gave no improvement; variants worsened or tied. Best source is saved at revision 4bd88b37f7316772cd0a. Main issues: target ABI/register plan saves s1=a0, s2=a1, s3=a2 and uses s0 for selected data pointer; current compiler allocation reverses these and spills extra s4, with prologue ordering wrong. Also selected data pointer is either *(D_800C7650+0x19D3C) or D_800E10D0; current code emits .rodata+0 due to pointer/global modeling, which must be fixed before C tuning. m2c switch/fallthrough appears structurally useful. Need recover pointer expression and declaration ABI, then revisit register lifetimes. Refer to matched func_80032B8C signature as (void*,s32), but keep called routines' exact arities checked.",
+   "by": "codex-gpt-6-luna-15",
+   "created_at": 1794103583.132087,
+   "score_before": 2327,
+   "score_after": 2327
+  },
+  {
+   "function": "func_80161D04_overlay_036",
+   "text": "Recovered behavior and lowered inherited score 19060 -> 7726 (exact instruction count 192 vs target 192), but first full attempt failed compile due treating void func_80036F08 as returning an index; corrected compile retained 7726. Current best revision 6241db3d166495b09a75. Main mismatch is register/stack lifetimes: target prologue saves s0=a0, s3=a1, s4=a2, then s1=a0+0x2b4; current uses s2=a1, s3=a2 and different save order. Use named locals and split lifetimes to induce target allocation. Preserve initialization loop and type switch. For case 0x6002, target calls func_80036F08 once, then indexes D_80162FCC with that function's returned v0; correct prototype returns s32 even if compile issue came from an earlier void declaration. Check this and globals/table symbols. Body count equal, but 168 differing rows indicate significant scheduling/args/register differences.",
+   "by": "codex-gpt-6-luna-15",
+   "created_at": 1794103659.573222,
+   "score_before": 19060,
+   "score_after": 7726
+  },
+  {
+   "function": "func_80161C70_overlay_020",
+   "text": "Fresh compile with inherited KMC C gave 17690 (26.5%, 166 emitted vs target 241). Tried target-recommended SN64 GCC 2.8.1 with stated flags; score 10304 (57.2%), 163 instructions. This identifies compiler mismatch as a major blocker; source also has incomplete function/data symbols due overlay table and cross-overlay references. Preserve C revision 9c21547372ebdf01da30 as starting point; target begins by calling func_80065400(D_800E10F8,0,0,0), then forms address D_800C7650+0x18000 explicitly and dispatches through overlay function table D_80167EE0. Current declaration/cast for func_800662B8_ovl_01_2CC is unknown; judge advised resolve address from target relocation evidence before further attempts. Need restore target compiler profile before tuning and recover exact data/call symbols.",
+   "by": "codex-gpt-6-luna-15",
+   "created_at": 1794103734.511334,
+   "score_before": 17710,
+   "score_after": 17690
   }
  ],
  "set_aside": [
