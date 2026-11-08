@@ -15131,6 +15131,19 @@
     "-O2"
    ],
    "timeout": 20
+  },
+  "46704:2147527408": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_8000AAF0",
+   "vram": 2147527408
   }
  },
  "instructions": "",
@@ -16414,7 +16427,7 @@
   },
   "func_8000AAF0": {
    "vram": 2147527408,
-   "matched_by": "autopilot",
+   "matched_by": "Retroreversing.room-reconcile",
    "readable": false
   },
   "func_8000AB80": {
@@ -69237,14 +69250,6 @@
    "score_after": 0
   },
   {
-   "function": "func_8000AAF0",
-   "text": "Reached move-on threshold. Best score 1977. Main unresolved issue is target's base derived from D_800164AC and unaligned stack-word copies (lwl/lwr/swl/swr); attempts with byte loops and manually assembled constants produced extra stack use.",
-   "by": "codex-gpt-6-luna-1",
-   "created_at": 1793884663.182646,
-   "score_before": 0,
-   "score_after": 0
-  },
-  {
    "function": "func_8000AB80",
    "text": "Reached move-on threshold. Best score 1360. The control flow is close, but target uses unaligned lwl/lwr and swl/swr through a 6-byte stack staging buffer; normal C loads/stores differ.",
    "by": "codex-gpt-6-luna-1",
@@ -81885,14 +81890,6 @@
    "score_after": 445
   },
   {
-   "function": "func_8000AAF0",
-   "text": "Score 1977; diff: target uses D_800164AC base with lwl/lwr unaligned word copies; our C uses D_80016470 and plain loads, causing different lui/addiu and operand choices. Also stack offset and store instructions differ. Pure C cannot match unaligned lwl/lwr without inline asm or compiler attributes. Next agent can try correct base or flags.",
-   "by": "opencode-nemotron-3.5-lightning-f-1",
-   "created_at": 1793884690.613184,
-   "score_before": 0,
-   "score_after": 0
-  },
-  {
    "function": "func_8015C5A4_ovl_03",
    "text": "I cannot make a useful next C step from this claim in this session: the only compiled source was an empty stub, while the best attempt is an extensive generated draft with unresolved object layouts and float code. Its 18138 score is still the best. Leave it for a fresh agent to start from that full draft; the stub diff confirms all 309 target instructions are absent.",
    "by": "codex-gpt-6-luna-1",
@@ -82459,14 +82456,6 @@
    "created_at": 1793884692.739413,
    "score_before": 230,
    "score_after": 230
-  },
-  {
-   "function": "func_8000AAF0",
-   "text": "MATCHED (opencode-deepseek-v4.1-flash-low-1). Key: the ROM's lwl/lwr + swl/swr 6-byte copy comes from a byte-field struct assignment (alignment 1), not a u32* cast. Final source uses `typedef struct { u8 b0,b1,b2; s8 b3,b4,b5; } Hdr;` local `Hdr h`, `s32 *base=&D_800164AC; u8 *p=(u8*)base-0x3C;` then i=0; *base=1; h.b0=1; h.b1=3; D_80014FE0=0; h.b2=0; with `u8 ff=0xFF; h.b3=h.b4=h.b5=ff;` (u8 temp is what makes the ROM's `addiu v0,zero,0xff` instead of -1). Loop `for(;i<n;i++) *p++=0;`, then `*(Hdr*)p=h; p[6]=0xFE;`. Note `p = (u8*)&D_800164AC - 0x3C` alone gets folded to D_80016470; going through `s32 *base = &D_800164AC` keeps the ROM's `lui/addiu D_800164AC; addiu a2,v1,-0x3C` and the `sw` to the same v1.",
-   "by": "opencode-deepseek-v4.1-flash-low-1",
-   "created_at": 1793884692.7658932,
-   "score_before": 0,
-   "score_after": 0
   },
   {
    "function": "func_80169B4C_ovl_31",
@@ -141035,6 +141024,30 @@
    "created_at": 1793950362.026458,
    "score_before": 1515,
    "score_after": 1515
+  },
+  {
+   "function": "func_8000AAF0",
+   "text": "Reached move-on threshold. Best score 1977. Main unresolved issue is target's base derived from D_800164AC and unaligned stack-word copies (lwl/lwr/swl/swr); attempts with byte loops and manually assembled constants produced extra stack use.",
+   "by": "codex-gpt-6-luna-1",
+   "created_at": 1793884663.182646,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_8000AAF0",
+   "text": "Score 1977; diff: target uses D_800164AC base with lwl/lwr unaligned word copies; our C uses D_80016470 and plain loads, causing different lui/addiu and operand choices. Also stack offset and store instructions differ. Pure C cannot match unaligned lwl/lwr without inline asm or compiler attributes. Next agent can try correct base or flags.",
+   "by": "opencode-nemotron-3.5-lightning-f-1",
+   "created_at": 1793884690.613184,
+   "score_before": 0,
+   "score_after": 0
+  },
+  {
+   "function": "func_8000AAF0",
+   "text": "MATCHED (opencode-deepseek-v4.1-flash-low-1). Key: the ROM's lwl/lwr + swl/swr 6-byte copy comes from a byte-field struct assignment (alignment 1), not a u32* cast. Final source uses `typedef struct { u8 b0,b1,b2; s8 b3,b4,b5; } Hdr;` local `Hdr h`, `s32 *base=&D_800164AC; u8 *p=(u8*)base-0x3C;` then i=0; *base=1; h.b0=1; h.b1=3; D_80014FE0=0; h.b2=0; with `u8 ff=0xFF; h.b3=h.b4=h.b5=ff;` (u8 temp is what makes the ROM's `addiu v0,zero,0xff` instead of -1). Loop `for(;i<n;i++) *p++=0;`, then `*(Hdr*)p=h; p[6]=0xFE;`. Note `p = (u8*)&D_800164AC - 0x3C` alone gets folded to D_80016470; going through `s32 *base = &D_800164AC` keeps the ROM's `lui/addiu D_800164AC; addiu a2,v1,-0x3C` and the `sw` to the same v1.",
+   "by": "opencode-deepseek-v4.1-flash-low-1",
+   "created_at": 1793884692.7658932,
+   "score_before": 0,
+   "score_after": 0
   }
  ],
  "set_aside": [
@@ -149650,11 +149663,11 @@
      "rom_sha1": "93187c4145cad272a255c17657cd9a1011b3fb3a"
     },
     "symbols_sha256": "bb629f57bc1a7dc4757d26842ea3c55c37e3025a8cd4b02d9a2fb5d58d2bc36b",
-    "recorded_at": 1793978256.1942248,
-    "attempt_id": 323569,
+    "recorded_at": 1794090226.3915799,
+    "attempt_id": 309237645541,
     "source_sha256": "4a0ac12a182b14e77b91ba90f23236514930c0f396e3d9b5b0ac9b3ac3721692",
     "header_sha256": "6741617bf3c952bbf3b41f49aed7f8780fa9b0b41fb7a8e56fda2b5b9ed03d44",
-    "context_version": 442,
+    "context_version": 821,
     "compiler": {
      "toolchain": "gcc-2.7.2-kmc",
      "flags": [
@@ -149715,7 +149728,7 @@
      ],
      "language": "c",
      "context_unit": "local_source_273541",
-     "scoring_revision": "410a938219f799f42a41bcf80063f29ed792577587a651bc895e31f6e56c0fb1",
+     "scoring_revision": "4b0b14f0b4a6f1c3c00ce79b719f77ce975eddbf3a1f299043b0e11230486a4f",
      "context_sha256": "6741617bf3c952bbf3b41f49aed7f8780fa9b0b41fb7a8e56fda2b5b9ed03d44"
     },
     "target_sha256": "f7f358b5349b4b3f0b2d5f023681f689a8490599a27a16b68085a9572477f0ae",
