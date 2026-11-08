@@ -1,7 +1,7 @@
 {
  "format": 1,
- "saved_at": 1794144553.552342,
- "revision": 37126,
+ "saved_at": 1794144618.968832,
+ "revision": 37133,
  "title": "Resident Evil II",
  "platform": "n64",
  "game": {
@@ -16182,6 +16182,72 @@
     "-mfp64"
    ],
    "timeout": 20
+  },
+  "67307592:2147775176": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_800472C8_ovl_01",
+   "vram": 2147775176
+  },
+  "67577744:2148045328": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_80089210_ovl_01",
+   "vram": 2148045328
+  },
+  "67685248:2148152832": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_800A3600_ovl_01",
+   "vram": 2148152832
+  },
+  "69222608:2148933088": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_80161DE0_ovl_35",
+   "vram": 2148933088
+  },
+  "69375820:2148989756": {
+   "toolchain": "sn-n64-272-0006",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-O2",
+    "-mgas",
+    "-meb",
+    "-mhard-float"
+   ],
+   "timeout": 20,
+   "function": "func_8016FB3C_overlay_041",
+   "vram": 2148989756
   }
  },
  "instructions": "",
@@ -19145,8 +19211,8 @@
   },
   "func_80043490_ovl_01": {
    "vram": 2147759248,
-   "best_score": 360,
-   "best_by": "Retroreversing.permuter-2598"
+   "best_score": 240,
+   "best_by": "autopilot"
   },
   "func_800434E8_ovl_01": {
    "vram": 2147759336,
@@ -20935,8 +21001,8 @@
   },
   "func_8008A9E8_ovl_01": {
    "vram": 2148051432,
-   "best_score": 13507,
-   "best_by": "Retroreversing.permuter-3040"
+   "best_score": 13237,
+   "best_by": "permuter"
   },
   "func_8008AF30_ovl_01": {
    "vram": 2148052784,
@@ -23035,7 +23101,7 @@
   },
   "func_80161DE0_ovl_35": {
    "vram": 2148933088,
-   "best_score": 3607,
+   "best_score": 3387,
    "best_by": "permuter-276625"
   },
   "func_80161E20_ovl_13": {
@@ -27345,8 +27411,8 @@
   },
   "func_801650A8_ovl_13": {
    "vram": 2148946088,
-   "best_score": 355,
-   "best_by": "Reggie2.saved-progress"
+   "best_score": 85,
+   "best_by": "autopilot"
   },
   "func_801650BC_ovl_35": {
    "vram": 2148946108,
@@ -28465,8 +28531,8 @@
   },
   "func_80165E94_ovl_17": {
    "vram": 2148949652,
-   "best_score": 475,
-   "best_by": "Retroreversing.permuter-4436"
+   "best_score": 200,
+   "best_by": "autopilot"
   },
   "func_80165EC4_ovl_35": {
    "vram": 2148949700,
@@ -36130,8 +36196,8 @@
   },
   "func_8017F4C0_ovl_02": {
    "vram": 2149053632,
-   "best_score": 620,
-   "best_by": "codex-gpt-6-luna-10"
+   "best_score": 345,
+   "best_by": "autopilot"
   },
   "func_8017F53C_ovl_02": {
    "vram": 2149053756,
@@ -36855,8 +36921,8 @@
   },
   "func_80088EFC_ovl_01": {
    "vram": 2148044540,
-   "best_score": 19565,
-   "best_by": "codex-gpt-6-luna-15"
+   "best_score": 19475,
+   "best_by": "permuter"
   },
   "func_80095C14_ovl_01": {
    "vram": 2148097044,
@@ -36917,6 +36983,26 @@
    "vram": 2148018396,
    "best_score": 20848,
    "best_by": "codex-gpt-6-luna-15"
+  },
+  "func_800472C8_ovl_01": {
+   "vram": 2147775176,
+   "best_score": 18380,
+   "best_by": "codex-gpt-6-luna-15"
+  },
+  "func_80089210_ovl_01": {
+   "vram": 2148045328,
+   "best_score": 32105,
+   "best_by": "codex-gpt-6-luna-15"
+  },
+  "func_800A3600_ovl_01": {
+   "vram": 2148152832,
+   "best_score": 22125,
+   "best_by": "codex-gpt-6-luna-15"
+  },
+  "func_8016FB3C_overlay_041": {
+   "vram": 2148989756,
+   "best_score": 1477,
+   "best_by": "autopilot"
   }
  },
  "layout": [
@@ -74521,14 +74607,6 @@
    "score_after": 2605
   },
   {
-   "function": "func_80161DE0_ovl_35",
-   "text": "Best attempt remains the supplied m2c draft at 3775/145; my offset-based translation scored worse (4460). It covers most initialization and helper calls, but loses instruction scheduling and register allocation. The target's early setup has explicit pointer loops, signed division by 3, several chained field writes, and pointer-based iteration through arg0+0x234. Continue from the m2c source rather than the offset-heavy rewrite; inspect each field's exact pointer/value type before register tuning.",
-   "by": "codex-gpt-6-luna-1",
-   "created_at": 1793884672.707812,
-   "score_before": 3607,
-   "score_after": 3607
-  },
-  {
    "function": "func_80163FD0_ovl_15",
    "text": "Best source is a reconstructed three-state switch scoring 7942/146 (45.6%). It has an external jump-table mismatch (target jtbl_80165E60_ovl_15); my C switch generated a local table. The computed base for D_800C7650 state flags and bit masks in the final state also need exact offset correction. Tried a full case rewrite and several state stubs; no improvement after the compile budget.",
    "by": "codex-gpt-6-luna-1",
@@ -102329,14 +102407,6 @@
    "score_after": 1412
   },
   {
-   "function": "func_80161DE0_ovl_35",
-   "text": "Deep permuter: score 3785 \u2192 3705; 1 improvements; 3 candidates tested; 0 cached skips; 0 rejected; 136s elapsed. Time limit reached.",
-   "by": "Retroreversing.permuter-5352",
-   "created_at": 1793959740.0553129,
-   "score_before": 3785,
-   "score_after": 3705
-  },
-  {
    "function": "func_8015DDA4_ovl_03",
    "text": "Deep permuter: score 10100 \u2192 10100; 0 improvements; 1 candidates tested; 11 cached skips; 0 rejected; 64s elapsed. Budget rotation: soft allowance reached without recent progress.",
    "by": "Retroreversing.permuter-3819",
@@ -123953,14 +124023,6 @@
    "score_after": 1280
   },
   {
-   "function": "func_8016FB3C_overlay_041",
-   "text": "Deep permuter: score 1178 \u2192 1178; 0 improvements; 12 candidates tested; 15 cached skips; 0 rejected; 62s elapsed. Budget rotation: soft allowance reached without recent progress.",
-   "by": "Retroreversing.permuter-5660",
-   "created_at": 1793952476.6532989,
-   "score_before": 1178,
-   "score_after": 1178
-  },
-  {
    "function": "func_8015B568_ovl_03",
    "text": "Deep permuter: score 2257 \u2192 2257; 0 improvements; 6 candidates tested; 21 cached skips; 0 rejected; 62s elapsed. Budget rotation: soft allowance reached without recent progress.",
    "by": "Retroreversing.permuter-3801",
@@ -135873,14 +135935,6 @@
    "score_after": 52267
   },
   {
-   "function": "func_8008A9E8_ovl_01",
-   "text": "Deep permuter: score 15093 \u2192 13507; 7 improvements; 100 candidates tested; 21 cached skips; 0 rejected; 1124s elapsed. Variant limit reached.",
-   "by": "Retroreversing.permuter-3040",
-   "created_at": 1794036066.738862,
-   "score_before": 15093,
-   "score_after": 13507
-  },
-  {
    "function": "func_8016F2D8_overlay_064",
    "text": "Deep permuter: score 2328 \u2192 2328; 0 improvements; 6 candidates tested; 25 cached skips; 0 rejected; 61s elapsed. Budget rotation: soft allowance reached without recent progress.",
    "by": "Retroreversing.permuter-6973",
@@ -138049,22 +138103,6 @@
    "score_after": 605
   },
   {
-   "function": "func_80165E94_ovl_17",
-   "text": "5 actual compiles; best 590/292 (91.9%). Improved branch shape using nested `if (v>=9) { if(v<11) ... else if(v==16)... }`, which matches 73 target instructions and reduces score from 1755. Further attempts changing -1 casts/source variant did not improve. Leftover diff: prologue save and argument move order, setup constant stored in v0 versus a3, 0x1E8 store scheduling relative to state writes, and pointer flag-test temporary registers.",
-   "by": "codex-gpt-6-luna-1",
-   "created_at": 1793884666.541161,
-   "score_before": 570,
-   "score_after": 570
-  },
-  {
-   "function": "func_80043490_ovl_01",
-   "text": "Multiple pointer expression variants couldn't materialize same-base addiu. Score 630; target per global uses addiu base into v1, lh via v0 global relocation, then lhu 2(v1).",
-   "by": "codex-gpt-6-luna-1",
-   "created_at": 1793884670.661021,
-   "score_before": 580,
-   "score_after": 580
-  },
-  {
    "function": "func_800336B0_ovl_01",
    "text": "Best score 545 (93.2%) from source modeled on matched func_80162530_ovl_23, using p/obj/tmp/new_var/at and per-branch coordinate calculations. Also tried explicit `obj += arg2 * 0x468 + 0x5E0`; no improvement. Remaining diff is register allocation and scheduling: target keeps arg1 in s2 and the computed object pointer in s3; this version places the base object in s2 and arg1 in s3. It also emits one extra instruction and has several arithmetic register differences in the squared-distance branch. Six compiles since the best score reached move-on.",
    "by": "codex-gpt-6-luna-1",
@@ -138409,14 +138447,6 @@
    "score_after": 385
   },
   {
-   "function": "func_801650A8_ovl_13",
-   "text": "Current source matches 29 instruction count, score 560. Tried typed and raw function-pointer tables; first call signature/call setup has register differences (target address in a1, zero a2/a3, code uses a0 and has extra zero move); indirect table access folds symbol+4 into lw and uses $at instead of target's explicit base in v1 then index. Best attempt retained. Need manipulate table base address with volatile pointer / one-element offset and adjust call expression to keep first argument in a1 while retaining function's ABI.",
-   "by": "codex-gpt-6-luna-1",
-   "created_at": 1793884694.800836,
-   "score_before": 370,
-   "score_after": 370
-  },
-  {
    "function": "func_80025F78_ovl_01",
    "text": "Cannot get closer: blocked by the project-wide split-data-address / symbol+const folding gap, not by the logic (logic fully recovered, see below). I tried four source shapes (direct member access, Obj* locals, u8* locals, pointer assignment before/after the kind branches) \u2014 all compile to the SAME 62-instruction output at score 3310.\n\nRecovered logic:\n```\ntypedef struct { u8 pad00[2]; u16 unk02; u8 pad04[2]; u16 unk06; u8 pad08[2];\n  u16 unk0A; u8 pad0C[2]; u16 unk0E; s32 unk10; u8 pad14[2]; u8 unk16;\n  u8 unk17; u8 pad18[4]; u16 unk1C; u16 unk1E; s32 unk20; } Obj;\nextern Obj D_800C4E58_ovl_01, D_800C4EA8_ovl_01;\nextern s32 D_800C4ED4_ovl_01, D_800C4EEC_ovl_01, D_800C5688_ovl_01;\nvoid func_80025F78_ovl_01(u16 arg0, s32 arg1, u8 *arg2) {\n  Obj *p; u16 kind;\n  if (arg0) { p=&D_800C4EA8_ovl_01; D_800C4EEC_ovl_01=*(s32*)(arg2+0x18); }\n  else { p=&D_800C4E58_ovl_01; D_800C4ED4_ovl_01=*(s32*)(arg2+0x18);\n         D_800C5688_ovl_01=*(s32*)(arg2+0x14); }\n  p->unk16=arg1; kind=arg1; p->unk10=*(s32*)(arg2+0x14);\n  if (kind==0) p->unk17=2; else if (kind==2) p->unk17=1;\n  A.unk1E=0x400; B.unk1E=0x400; A.unk1C=0x400; B.unk1C=0x400;\n  A.unk20=0; B.unk20=0; A.unk02=0x500; B.unk02=0x500;\n  A.unk0E=0x3C0; B.unk0E=0x3C0; A.unk0A=0x3C0; B.unk0A=0x3C0;\n  A.unk06=0x500; B.unk06=0x500;\n}\n```\n(A/B = D_800C4EA8/D_800C4E58.) This reproduces the ROM's control flow exactly, including the cross-jumped single `sb` at .L80025FE4/bnel form.\n\nBlockers, all the same compiler gap:\n1. `lui $at,%hi(G); sw %lo(G)($at)` where ROM uses `lui $v0,%hi(G); sw %lo(G)($v0)` for the direct-symbol stores D_800C4EEC/D_800C4ED4/D_800C5688. Pointer-local `q=&G; *q=...` is optimised back to the $at form.\n2. `a=&D_800C4EA8; a->f=...` is constant-folded to absolute `sh %lo(D_800C4EC6)($at)` instead of ROM's `sh $v0,0x1E($a0)`; 7 such fields \u2192 18 extra `lui $at` insns and no base regs, which also prevents the ROM's bnel delay-slot `lui a0,%hi(D_800C4EA8)`.\n3. Loads land in v0 instead of v1 (register fallout).\nThese are exactly the open setup suggestions about split data addresses; no C shape (pointer/integer/u8*/volatile/declaration order) defeats the fold in this cc1, and search_flags shows every flag variant also 3310. Please release; next agent should not re-spend compiles on the same wall.",
    "by": "opencode-deepseek-v4.1-flash-low-1",
@@ -138663,14 +138693,6 @@
    "created_at": 1793884703.943163,
    "score_before": 460,
    "score_after": 460
-  },
-  {
-   "function": "func_801650A8_ovl_13",
-   "text": "Deep permuter: score 575 \u2192 570; 1 improvements; 32 candidates tested; 0 cached skips; 0 rejected; 177s elapsed. Budget rotation: soft allowance reached without recent progress.",
-   "by": "A.permuter-4153",
-   "created_at": 1793884704.309942,
-   "score_before": 575,
-   "score_after": 570
   },
   {
    "function": "func_80166A84_ovl_17",
@@ -139129,14 +139151,6 @@
    "score_after": 280
   },
   {
-   "function": "func_801650A8_ovl_13",
-   "text": "Deep permuter: score 570 \u2192 570; 0 improvements; 89 candidates tested; 2 cached skips; 0 rejected; 1002s elapsed. Stopped: the room's host isn't reachable right now: can't reach the host (ReadTimeout).",
-   "by": "Retroreversing.permuter-4153",
-   "created_at": 1793884736.914367,
-   "score_before": 370,
-   "score_after": 370
-  },
-  {
    "function": "func_801626D4_overlay_027",
    "text": "Released because its agent stopped (decompdecomp closed while it worked); its attempts are kept.",
    "by": "codex-gpt-6-luna-9",
@@ -139167,14 +139181,6 @@
    "created_at": 1793884739.2512488,
    "score_before": 565,
    "score_after": 565
-  },
-  {
-   "function": "func_80043490_ovl_01",
-   "text": "Deep permuter: score 580 \u2192 580; 0 improvements; 8 candidates tested; 0 cached skips; 0 rejected; 62s elapsed. Budget rotation: soft allowance reached without recent progress.",
-   "by": "Retroreversing.permuter-2598",
-   "created_at": 1793946980.532084,
-   "score_before": 580,
-   "score_after": 580
   },
   {
    "function": "func_800A1E6C_ovl_01",
@@ -139431,14 +139437,6 @@
    "created_at": 1793945909.913524,
    "score_before": 430,
    "score_after": 430
-  },
-  {
-   "function": "func_80165E94_ovl_17",
-   "text": "Deep permuter: score 590 \u2192 570; 1 improvements; 7 candidates tested; 34 cached skips; 0 rejected; 90s elapsed. Budget rotation: soft allowance reached without recent progress.",
-   "by": "Retroreversing.permuter-4436",
-   "created_at": 1793955591.089858,
-   "score_before": 590,
-   "score_after": 570
   },
   {
    "function": "func_800A1E6C_ovl_01",
@@ -140001,14 +139999,6 @@
    "score_after": 700
   },
   {
-   "function": "func_8017F4C0_ovl_02",
-   "text": "Compiled the supplied machine draft and several control-flow/local-variable variants. Best scores retained. Remaining diffs center on GCC lowering branch layout, selector register allocation, and selecting separate table bases across branches; no match found within the claim's compile budget.",
-   "by": "codex-gpt-6-luna-1",
-   "created_at": 1793884656.975771,
-   "score_before": 630,
-   "score_after": 630
-  },
-  {
    "function": "func_8015FAA0_ovl_03",
    "text": "Compiled pointer/loop version; score remains 645. Need distinct loop counter and input register, correct D_800DF650 base field +0x204, and pointer to D_80160B9C records. Best attempt preserved.",
    "by": "codex-gpt-6-luna-1",
@@ -140497,28 +140487,12 @@
    "score_after": 650
   },
   {
-   "function": "func_8017F4C0_ovl_02",
-   "text": "Best = 620 (31/31 insns), this source:\n\ns8 f(void){ s32 v; s8 *base; s8 *p; s8 c;\n  v = func_8017BB30_ovl_02(7);\n  if (v < 2) { D_80185700_ovl_02 = 1; return 0; }\n  if (v >= 0x10) { v >>= 3; base = D_80184B60_ovl_02; }\n  else { base = D_80184B80_ovl_02; }\n  p = (s8 *)(v * 2 + (s32)base);\n  c = p[1]; func_8017BB68_ovl_02(c); return p[0]; }\n\nThe `v >= 0x10`-first form scores 620; the `< 0x10`-first / else-if / goto forms all score 650 (they make GCC if-convert the second test into `beql` and tail-duplicate the `sll` into the j delay slot). Remaining diff vs ROM is the same KMC2.7.2 build gap as the matching siblings func_8017F334/F3B0/F45C/F5D8/F2F0:\n1. Second test: ROM `slti v0,s0,0x10; beqz v0,.L508; lui B80(delay)` with B80 (the <0x10 case) inline and the sra/B60 block out of line; KMC puts the sra/B60 block inline with `bnez` to the B80 block (620), or if-converts to `beql` when written the other way (650). The B80 address split (lui in bnez delay, addiu in j delay) vs KMC completing it before the j / filling the j delay with `sll`.\n2. ROM leaves `nop` in the jal delay (lb a0 before jal); KMC puts `lb a0` in the delay slot.\n3. Zero-block store: ROM `lui $v1,%hi(D_80185700); addiu $v0,$zero,1; sw $v0,%lo(D_80185700)($v1)`; KMC `addiu v0,zero,1` earlier and folds address into `lui $at` (open split-data-address setup issue).\nTried: if/else both orders, else-if, goto-common, base-before/after shift, separate p/base, int-cast sum, temp c. Very close to the compiler's limit; the setup suggestions (split %hi register) are what remain.",
-   "by": "opencode-deepseek-v4.1-flash-low-1",
-   "created_at": 1793884700.6003609,
-   "score_before": 630,
-   "score_after": 630
-  },
-  {
    "function": "func_8016207C_ovl_36",
    "text": "Best 695/32 insns with: `typedef union {u64 q; struct{u32 lo,hi;} w;} U64; typedef void(*Fn)(void*); extern u8 D_800C7650_ovl_01[]; extern volatile Fn D_80162FD0_ovl_36[]; void f(u8*p){ u8*q=p+0x2B4; U64 b; u8*base; u8 v; v=q[4]; if(v){v--; q[4]=v; if(!v){ b.w.lo=(u32)D_800C7650_ovl_01; base=(u8*)(b.w.lo+0x18000); *(u16*)(base+0x1A78)&=0xFFEF; }} v=q[1]; if(v){q[1]=v-1;} D_80162FD0_ovl_36[p[5]](p);}`. The volatile Fn table is essential for the split base (plain u32[] folds to lw %lo(at), much worse). Remaining: (1) ROM computes `addiu a3,a0,0x2B4` at entry and addresses both counter blocks via 4(a3)/1(a3); KMC folds the FIRST block's accesses into 0x2b8(a0) and keeps q in a1 for only the second block. Tried q as struct ptr, volatile u8*, u32 base+offsets, u32 casts, non-void p -- all identical fold. (2) 0x18000: ROM does `lui v0,1; ori v0,0x8000` BEFORE `lui v1,%hi(D); addiu; addu v1,v1,v0`; ours emits `lui v1,1; lui a2,D; addiu a2; ori v1; addu v1,a2,v1` (constant split around D base). A separate `u32 off=0x18000` hoists lui/ori to the very top (worse). (3) table dispatch: ROM index in v1/base in v0 (lui v0; lbu v1,5(a0); addiu v0; sll v1; addu v1,v1,v0; lw v0), ours index v0/base v1. This looks like the same compiler-revision scheduling/address-folding gap as proposal #6 / func_801629AC; flags via search_flags only made it worse.",
    "by": "opencode-deepseek-v4.1-flash-low-1",
    "created_at": 1793884700.682281,
    "score_before": 705,
    "score_after": 705
-  },
-  {
-   "function": "func_8017F4C0_ovl_02",
-   "text": "Score 620; diff highlights split-address and branch layout differences (lui register, addiu placement, beqz vs bnez, nop in delay slot). These are typical for this ovl_02 dispatch function; next agent can try forcing base register earlier and adjusting branch conditions.",
-   "by": "opencode-nemotron-3.5-lightning-f-1",
-   "created_at": 1793884700.8724842,
-   "score_before": 630,
-   "score_after": 630
   },
   {
    "function": "func_8016207C_ovl_36",
@@ -140687,14 +140661,6 @@
    "created_at": 1794033835.443022,
    "score_before": 635,
    "score_after": 635
-  },
-  {
-   "function": "func_8017F4C0_ovl_02",
-   "text": "Baseline rechecks at 630 (saved historical now 630). Current score tie. Target and candidate both 31 instructions; mismatches are branch/table path: target sets constant/store after `slti v0,s0,2; beqz`, candidate materializes constant before store; global base target `$v1` vs candidate `$at`. Table pointer choice at offset 0x80184B60/0x80184B80 is reversed in one path, with candidate extra address `addiu`; branch target and delay scheduling differ. Remaining bounded target families signedness/declaration_order were available but move-on budget is already exhausted at first compile, no improvement. Try restructuring `v>=0x10` path to match branches and direct global table references. No match.",
-   "by": "codex-gpt-6-luna-10",
-   "created_at": 1793884721.0878441,
-   "score_before": 640,
-   "score_after": 630
   },
   {
    "function": "func_80166470_ovl_30",
@@ -141135,14 +141101,6 @@
    "created_at": 1793955923.4178822,
    "score_before": 670,
    "score_after": 670
-  },
-  {
-   "function": "func_8017F4C0_ovl_02",
-   "text": "Deep permuter: score 630 \u2192 630; 0 improvements; 5 candidates tested; 36 cached skips; 0 rejected; 61s elapsed. Budget rotation: soft allowance reached without recent progress.",
-   "by": "Retroreversing.permuter-3732",
-   "created_at": 1793955981.599833,
-   "score_before": 630,
-   "score_after": 630
   },
   {
    "function": "func_80166158_overlay_013",
@@ -142625,14 +142583,6 @@
    "score_after": 14862
   },
   {
-   "function": "func_80088EFC_ovl_01",
-   "text": "Compiled inherited stub; score remained 19565/197 instructions (0.6%). Assembly begins with a 0x138-byte frame, saves s-registers and initializes state, then accesses large structs through arg0 and arg2 plus globals D_800E8FC8/D_800E8FE8. Need reconstruct from complete assembly and m2c draft; no reliable struct/prototype established. Current candidate is only `return arg1`. Continue with eligible small claims.",
-   "by": "codex-gpt-6-luna-15",
-   "created_at": 1794106491.562304,
-   "score_before": 19565,
-   "score_after": 19565
-  },
-  {
    "function": "func_80006100",
    "text": "Tried the stored draft unchanged (prototype conflict), then adapted it to the shared u64 two-argument ABI with explicit hi/lo extraction. The adaptation fails because the draft has incomplete-type address arithmetic for D_800119C0; a small placeholder compile scored 35585. Rewrite the large divider under the confirmed ABI and model D_800119C0 as a byte table before tuning.",
    "by": "codex-gpt-6-luna-1",
@@ -142807,6 +142757,166 @@
    "created_at": 1793952482.853248,
    "score_before": 580,
    "score_after": 580
+  },
+  {
+   "function": "func_8017F4C0_ovl_02",
+   "text": "Compiled the supplied machine draft and several control-flow/local-variable variants. Best scores retained. Remaining diffs center on GCC lowering branch layout, selector register allocation, and selecting separate table bases across branches; no match found within the claim's compile budget.",
+   "by": "codex-gpt-6-luna-1",
+   "created_at": 1793884656.975771,
+   "score_before": 630,
+   "score_after": 630
+  },
+  {
+   "function": "func_80165E94_ovl_17",
+   "text": "5 actual compiles; best 590/292 (91.9%). Improved branch shape using nested `if (v>=9) { if(v<11) ... else if(v==16)... }`, which matches 73 target instructions and reduces score from 1755. Further attempts changing -1 casts/source variant did not improve. Leftover diff: prologue save and argument move order, setup constant stored in v0 versus a3, 0x1E8 store scheduling relative to state writes, and pointer flag-test temporary registers.",
+   "by": "codex-gpt-6-luna-1",
+   "created_at": 1793884666.541161,
+   "score_before": 570,
+   "score_after": 570
+  },
+  {
+   "function": "func_80043490_ovl_01",
+   "text": "Multiple pointer expression variants couldn't materialize same-base addiu. Score 630; target per global uses addiu base into v1, lh via v0 global relocation, then lhu 2(v1).",
+   "by": "codex-gpt-6-luna-1",
+   "created_at": 1793884670.661021,
+   "score_before": 580,
+   "score_after": 580
+  },
+  {
+   "function": "func_80161DE0_ovl_35",
+   "text": "Best attempt remains the supplied m2c draft at 3775/145; my offset-based translation scored worse (4460). It covers most initialization and helper calls, but loses instruction scheduling and register allocation. The target's early setup has explicit pointer loops, signed division by 3, several chained field writes, and pointer-based iteration through arg0+0x234. Continue from the m2c source rather than the offset-heavy rewrite; inspect each field's exact pointer/value type before register tuning.",
+   "by": "codex-gpt-6-luna-1",
+   "created_at": 1793884672.707812,
+   "score_before": 3607,
+   "score_after": 3607
+  },
+  {
+   "function": "func_801650A8_ovl_13",
+   "text": "Current source matches 29 instruction count, score 560. Tried typed and raw function-pointer tables; first call signature/call setup has register differences (target address in a1, zero a2/a3, code uses a0 and has extra zero move); indirect table access folds symbol+4 into lw and uses $at instead of target's explicit base in v1 then index. Best attempt retained. Need manipulate table base address with volatile pointer / one-element offset and adjust call expression to keep first argument in a1 while retaining function's ABI.",
+   "by": "codex-gpt-6-luna-1",
+   "created_at": 1793884694.800836,
+   "score_before": 370,
+   "score_after": 370
+  },
+  {
+   "function": "func_8017F4C0_ovl_02",
+   "text": "Best = 620 (31/31 insns), this source:\n\ns8 f(void){ s32 v; s8 *base; s8 *p; s8 c;\n  v = func_8017BB30_ovl_02(7);\n  if (v < 2) { D_80185700_ovl_02 = 1; return 0; }\n  if (v >= 0x10) { v >>= 3; base = D_80184B60_ovl_02; }\n  else { base = D_80184B80_ovl_02; }\n  p = (s8 *)(v * 2 + (s32)base);\n  c = p[1]; func_8017BB68_ovl_02(c); return p[0]; }\n\nThe `v >= 0x10`-first form scores 620; the `< 0x10`-first / else-if / goto forms all score 650 (they make GCC if-convert the second test into `beql` and tail-duplicate the `sll` into the j delay slot). Remaining diff vs ROM is the same KMC2.7.2 build gap as the matching siblings func_8017F334/F3B0/F45C/F5D8/F2F0:\n1. Second test: ROM `slti v0,s0,0x10; beqz v0,.L508; lui B80(delay)` with B80 (the <0x10 case) inline and the sra/B60 block out of line; KMC puts the sra/B60 block inline with `bnez` to the B80 block (620), or if-converts to `beql` when written the other way (650). The B80 address split (lui in bnez delay, addiu in j delay) vs KMC completing it before the j / filling the j delay with `sll`.\n2. ROM leaves `nop` in the jal delay (lb a0 before jal); KMC puts `lb a0` in the delay slot.\n3. Zero-block store: ROM `lui $v1,%hi(D_80185700); addiu $v0,$zero,1; sw $v0,%lo(D_80185700)($v1)`; KMC `addiu v0,zero,1` earlier and folds address into `lui $at` (open split-data-address setup issue).\nTried: if/else both orders, else-if, goto-common, base-before/after shift, separate p/base, int-cast sum, temp c. Very close to the compiler's limit; the setup suggestions (split %hi register) are what remain.",
+   "by": "opencode-deepseek-v4.1-flash-low-1",
+   "created_at": 1793884700.6003609,
+   "score_before": 630,
+   "score_after": 630
+  },
+  {
+   "function": "func_8017F4C0_ovl_02",
+   "text": "Score 620; diff highlights split-address and branch layout differences (lui register, addiu placement, beqz vs bnez, nop in delay slot). These are typical for this ovl_02 dispatch function; next agent can try forcing base register earlier and adjusting branch conditions.",
+   "by": "opencode-nemotron-3.5-lightning-f-1",
+   "created_at": 1793884700.8724842,
+   "score_before": 630,
+   "score_after": 630
+  },
+  {
+   "function": "func_801650A8_ovl_13",
+   "text": "Deep permuter: score 575 \u2192 570; 1 improvements; 32 candidates tested; 0 cached skips; 0 rejected; 177s elapsed. Budget rotation: soft allowance reached without recent progress.",
+   "by": "A.permuter-4153",
+   "created_at": 1793884704.309942,
+   "score_before": 575,
+   "score_after": 570
+  },
+  {
+   "function": "func_8017F4C0_ovl_02",
+   "text": "Baseline rechecks at 630 (saved historical now 630). Current score tie. Target and candidate both 31 instructions; mismatches are branch/table path: target sets constant/store after `slti v0,s0,2; beqz`, candidate materializes constant before store; global base target `$v1` vs candidate `$at`. Table pointer choice at offset 0x80184B60/0x80184B80 is reversed in one path, with candidate extra address `addiu`; branch target and delay scheduling differ. Remaining bounded target families signedness/declaration_order were available but move-on budget is already exhausted at first compile, no improvement. Try restructuring `v>=0x10` path to match branches and direct global table references. No match.",
+   "by": "codex-gpt-6-luna-10",
+   "created_at": 1793884721.0878441,
+   "score_before": 640,
+   "score_after": 630
+  },
+  {
+   "function": "func_80161DE0_ovl_35",
+   "text": "Deep permuter: score 3785 \u2192 3705; 1 improvements; 3 candidates tested; 0 cached skips; 0 rejected; 136s elapsed. Time limit reached.",
+   "by": "Retroreversing.permuter-5352",
+   "created_at": 1793959740.0553129,
+   "score_before": 3785,
+   "score_after": 3705
+  },
+  {
+   "function": "func_801650A8_ovl_13",
+   "text": "Deep permuter: score 570 \u2192 570; 0 improvements; 89 candidates tested; 2 cached skips; 0 rejected; 1002s elapsed. Stopped: the room's host isn't reachable right now: can't reach the host (ReadTimeout).",
+   "by": "Retroreversing.permuter-4153",
+   "created_at": 1793884736.914367,
+   "score_before": 370,
+   "score_after": 370
+  },
+  {
+   "function": "func_80043490_ovl_01",
+   "text": "Deep permuter: score 580 \u2192 580; 0 improvements; 8 candidates tested; 0 cached skips; 0 rejected; 62s elapsed. Budget rotation: soft allowance reached without recent progress.",
+   "by": "Retroreversing.permuter-2598",
+   "created_at": 1793946980.532084,
+   "score_before": 580,
+   "score_after": 580
+  },
+  {
+   "function": "func_80165E94_ovl_17",
+   "text": "Deep permuter: score 590 \u2192 570; 1 improvements; 7 candidates tested; 34 cached skips; 0 rejected; 90s elapsed. Budget rotation: soft allowance reached without recent progress.",
+   "by": "Retroreversing.permuter-4436",
+   "created_at": 1793955591.089858,
+   "score_before": 590,
+   "score_after": 570
+  },
+  {
+   "function": "func_8017F4C0_ovl_02",
+   "text": "Deep permuter: score 630 \u2192 630; 0 improvements; 5 candidates tested; 36 cached skips; 0 rejected; 61s elapsed. Budget rotation: soft allowance reached without recent progress.",
+   "by": "Retroreversing.permuter-3732",
+   "created_at": 1793955981.599833,
+   "score_before": 630,
+   "score_after": 630
+  },
+  {
+   "function": "func_8008A9E8_ovl_01",
+   "text": "Deep permuter: score 15093 \u2192 13507; 7 improvements; 100 candidates tested; 21 cached skips; 0 rejected; 1124s elapsed. Variant limit reached.",
+   "by": "Retroreversing.permuter-3040",
+   "created_at": 1794036066.738862,
+   "score_before": 15093,
+   "score_after": 13507
+  },
+  {
+   "function": "func_8016FB3C_overlay_041",
+   "text": "Deep permuter: score 1178 \u2192 1178; 0 improvements; 12 candidates tested; 15 cached skips; 0 rejected; 62s elapsed. Budget rotation: soft allowance reached without recent progress.",
+   "by": "Retroreversing.permuter-5660",
+   "created_at": 1793952476.6532989,
+   "score_before": 1178,
+   "score_after": 1178
+  },
+  {
+   "function": "func_80088EFC_ovl_01",
+   "text": "Compiled inherited stub; score remained 19565/197 instructions (0.6%). Assembly begins with a 0x138-byte frame, saves s-registers and initializes state, then accesses large structs through arg0 and arg2 plus globals D_800E8FC8/D_800E8FE8. Need reconstruct from complete assembly and m2c draft; no reliable struct/prototype established. Current candidate is only `return arg1`. Continue with eligible small claims.",
+   "by": "codex-gpt-6-luna-15",
+   "created_at": 1794106491.562304,
+   "score_before": 19565,
+   "score_after": 19565
+  },
+  {
+   "function": "func_800A3600_ovl_01",
+   "text": "Low progress after 24 scored trials: at most 1% score reduction over the recent window. Best source retained. Next evidence: Mismatch focus: calls / arguments; first differing row 1; 386 differing rows (20 opcode, 107 register, 3 stack, 23 branch target, 51 operand, 15 reordered, 74 inserted, 93 deleted; advisory).\nTarget: \nCandidate: sw $s0, 0x50($sp)\nAdvisory instruction window (normalized; exact-byte verdict unchanged):\n  = addiu $sp, $sp, -0x78\n> T:  | C: sw $s0, 0x50($sp)\n> T:  | C: lui $s0, %hi(D_80143F38)\n> T:  | C: lw $s0, %lo(D_80143F38)($s0)\nMore target instructions: get_assembly(focus=\"mismatch\"). Raw/paged diff: last_diff.\n\nReleased after no better in 8/10. Best current score 22125, candidate revision 139611c92c9fd169a287; KMC GCC 2.7.2 remains better than SN64 GCC 2.8.1 (SN64 score 14960 on current best). Repairs that improved: Node layout must be next/prev/start/kind/size/data (offsets 0/4/8/C/10/14); allocator call takes one s32 kind argument (not three); caching D_80143F8C + D_80143F6C for the first trim record improved 60 points. Local repair batches found pointer order, signedness, store lifetime neutral; removing stack pad regressed slightly; branch orientation regressed. Do not keep broader record-pointer rewrite: it scored 23350. A hypothesis from the final target assembly: final output ordering compares c[0] and c[1] (lengths at stack +0x20/+0x24), not b[0]/b[1], but a c-based rewrite scored 22898 from the best; likely comparison or branch mapping needs closer checking. The first target-only mismatch remains prologue/register allocation. Current best is a miss, not exact.",
+   "by": "codex-gpt-6-luna-15",
+   "created_at": 1794108391.162265,
+   "score_before": 23805,
+   "score_after": 22125
+  },
+  {
+   "function": "func_80089210_ovl_01",
+   "text": "Recovered saved_best and rechecked it at 32105; empty-body trial scored 36100. No new useful improvement. Candidate's extensive M2C_FIELD pointer casts and hand-shaped loops remain far from the 361-instruction target; next agent should inspect full assembly and reconstruct proper typed structs/loop structure. Do not repeat empty-body trial.",
+   "by": "codex-gpt-6-luna-15",
+   "created_at": 1794108888.375416,
+   "score_before": 32105,
+   "score_after": 32105
+  },
+  {
+   "function": "func_800472C8_ovl_01",
+   "text": "Released because its agent stopped (decompdecomp closed); its attempts are kept.",
+   "by": "codex-gpt-6-luna-15",
+   "created_at": 1794144459.213575,
+   "score_before": null,
+   "score_after": null
   }
  ],
  "set_aside": [

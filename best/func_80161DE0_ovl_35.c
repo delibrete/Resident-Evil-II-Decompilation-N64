@@ -22,8 +22,7 @@ void func_80161DE0_ovl_35(void *arg0, s32 arg1, s32 arg2)
   *((s16 *) (((char *) arg0) + 0x268)) = 0;
   *((s16 *) (((char *) arg0) + 0x264)) = 0;
   *((s32 *) (((char *) arg0) + 0)) |= 0xC00000;
-  do
-  {
+  __repair_rows: {
     *((s32 *) (((char *) var_a1) + 0x2B4)) = 0;
     do
     {
@@ -32,7 +31,7 @@ void func_80161DE0_ovl_35(void *arg0, s32 arg1, s32 arg2)
     while (0);
     var_a1 += 4;
   }
-  while (var_a0 < 0xCU);
+if (var_a0 < 0xCU) goto __repair_rows;
   *((s16 *) (((char *) arg0) + 0x1E0)) = 0;
   *((s16 *) (((char *) arg0) + 0x1E2)) = 0;
   *((s16 *) (((char *) arg0) + 0x1E4)) = 0;

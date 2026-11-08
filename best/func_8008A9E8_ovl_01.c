@@ -22,7 +22,7 @@ s32 func_8008A9E8_ovl_01(void *arg0, s32 arg1, s32 *arg2, s32 arg3)
   
   volatile unsigned int temp_a3_7;
   s32 temp_v0_2;
-  s32 temp_v1;
+  
   s32 var_a3;
   s32 var_s4;
   s32 var_v0;
@@ -83,9 +83,9 @@ s32 func_8008A9E8_ovl_01(void *arg0, s32 arg1, s32 *arg2, s32 arg3)
   *((s16 *) (((char *) var_s1) + 0x28)) = (s16) (*((u16 *) (((char *) var_s1) + 0x1E)));
   *((s16 *) (((char *) var_s1) + 0x2A)) = (s16) (*((u16 *) (((char *) var_s1) + 0x22)));
   *((s16 *) (((char *) var_s1) + 0x2C)) = (s16) (*((u16 *) (((char *) var_s1) + 0x26)));
-  temp_v1 = *((s32 *) (((char *) temp_a2) + 0xC));
+  temp_a1 = *((s32 *) (((char *) temp_a2) + 0xC));
   var_a3 = var_s3 - 1;
-  *((s32 *) (((char *) var_s1) + 0x114)) = (s32) (((temp_v1 & 0xFFF) << 0x10) | (((u32) (temp_v1 & 0xFFF000)) >> 0xC));
+  *((s32 *) (((char *) var_s1) + 0x114)) = (s32) (((temp_a1 & 0xFFF) << 0x10) | (((u32) (temp_a1 & 0xFFF000)) >> 0xC));
   var_a2 = (temp_a2 + 0xC) + 4;
   *((s16 *) (((char *) var_s1) + 0x118)) = (s16) (((u8) (*((s32 *) (((char *) temp_a2) + 0xC)))) | (((*((u16 *) (((char *) var_a2) + 2))) & 0xF) << 8));
   if (var_a3 != 0)
