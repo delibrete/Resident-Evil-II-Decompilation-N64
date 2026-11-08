@@ -12,6 +12,7 @@ void func_80098068_ovl_01(void)
 {
   u8 *p;
   u8 *q;
+  u8 *new_var;
   u8 *m;
   u8 *t;
   u8 *g;
@@ -27,27 +28,32 @@ void func_80098068_ovl_01(void)
   q = D_800C527C_ovl_01 + 0x3B828;
   m = p + 0xA;
   n = 2;
+  new_var = g;
   do
   {
     t -= 4;
     n--;
-    c = 0x80;
-    if (n)
+    do
     {
-      func_80047B34_ovl_01(p, 0);
+      c = 0x80;
+      if (n)
+      {
+        func_80047B34_ovl_01(p, 0);
+      }
+      else
+      {
+        func_80047B34_ovl_01(p, 0);
+      }
+      func_8004789C_ovl_01(p, (char) c, c, c);
     }
-    else
-    {
-      func_80047B34_ovl_01(p, 0);
-    }
-    func_8004789C_ovl_01(p, (char) c, c, c);
+    while (0);
     do
     {
       func_800478DC_ovl_01(p, t[0], t[1]);
     }
     while (0);
-    func_800479EC_ovl_01(p, t[2], t[3]);
     p += 0x14;
+    func_800479EC_ovl_01(p, t[2], t[3]);
     *((u32 *) (m + 2)) = (u32) f;
     *((u16 *) (m + 0)) = 0;
     m += 0x14;
@@ -64,7 +70,7 @@ void func_80098068_ovl_01(void)
   }
   while ((--__repair_n_1) != 0);
   *((s16 *) (g + 0x64)) = 0xA;
-  *((s16 *) (g + 0x66)) = 0x46;
+  *((s16 *) (new_var + 0x66)) = 0x46;
   *((s16 *) (g + 0x3C)) = 0x3A;
   *((u16 *) (g + 0x60)) = 0;
   *((u8 *) (g + 0x63)) = 0;

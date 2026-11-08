@@ -41,8 +41,8 @@ s32 func_80087898_ovl_01(void *arg0, s32 arg1)
     {
       temp_v1 = *((void **) (((char *) var_a1) + 8));
       if ((*((s32 *) (((char *) temp_v1) + 8))) >= ((s32) var_t2))
-      {
-        var_a3 += 1;
+      {/*__repair_loop_weight*/do {do {do {
+        var_a3 += 1;} while (0);} while (0);} while (0);
         *((s32 *) (((char *) temp_v1) + 8)) = -1;
       }
       temp_v1_2 = *((s32 *) (((char *) temp_v1) + 8));

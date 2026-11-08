@@ -17,7 +17,7 @@ void func_8017B58C_ovl_02(void *arg0) {
  *(s32*)((u8*)&D_801857A4_ovl_02+4)=0;
  i=D_80134450_ovl_01; base=&D_801344B0_ovl_01[i*42];
  a=*(u16*)(base+4); b=*(u16*)(base+8); c=*(u16*)(base+10);
- func_8009E8D4_ovl_01(arg0,a,b,c,1);
+ do { func_8009E8D4_ovl_01(arg0,a,b,c,1); } while (0);
  i=D_80134450_ovl_01; base=&D_801344B0_ovl_01[i*42];
  a=*(u16*)(base+4); b=*(u16*)(base+8); c=*(u16*)(base+10);
  func_8009EBBC_ovl_01(arg0,a,b,c,1);

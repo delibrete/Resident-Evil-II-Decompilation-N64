@@ -24,7 +24,7 @@ void func_800A8068_ovl_01(s32 arg0)
   char *var_v0;
   s32 *new_var;
   s32 var_a2;
-  s32 var_a2_3;
+  
   s32 var_v1_2;
   var_a2 = 0;
   var_a1 = &D_801443E8;
@@ -79,29 +79,29 @@ void func_800A8068_ovl_01(s32 arg0)
   }
   while (__repair_inline(0x20, var_a2));
   *((s8 *) (((char *) (&D_80147A40)) + 0x4EC)) = 1;
-  var_a2_3 = 0;
+  var_a2 = 0;
   var_v1_2 = 0x398;
   new_var = &D_80147A40;
   do
   {
     *((s8 *) (((char *) inline_fn(var_v1_2)) + 0x14)) = 0;
-    var_a2_3 += 1;
+    var_a2 += 1;
     var_v1_2 += 0x28;
   }
-  while (__repair_inline(8, var_a2_3));
+  while (__repair_inline(8, var_a2));
   *((s32 *) (((char *) new_var) + 0x348)) = 0x7F0000;
   *((s32 *) (((char *) new_var) + 0x370)) = 0x7F0000;
   func_800AF020_overlay_001(new_var, 4);
   func_800AEC6C_overlay_001();
-  var_a2_3 = 0xF;
+  var_a2 = 0xF;
   var_v0 = (&D_80147F50) + 0x1E;
   do
   {
     *((s16 *) var_v0) = 0;
-    var_a2_3 -= 1;
+    var_a2 -= 1;
     var_v0 -= 2;
   }
-  while (var_a2_3 >= 0);
+  while (var_a2 >= 0);
   func_800B1A38_overlay_001();
 }
 
