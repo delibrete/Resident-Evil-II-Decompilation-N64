@@ -1,6 +1,6 @@
 extern void *D_800E1008[];
 extern void func_8008386C_ovl_01(s16, s32, s32, s16 *);
-extern s16 func_80032D44_ovl_01(s16, s16, s16, s16);
+s32 func_80032D44_ovl_01(s16, s16, s16, s16);
 extern void func_80066804_ovl_01(s32 *, s32, s32, s32);
 extern s32 func_8006A45C_ovl_01(s32 *);
 extern s32 func_8006A8B0_ovl_01(s32);

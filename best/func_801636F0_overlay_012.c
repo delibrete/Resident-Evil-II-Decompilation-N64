@@ -22,7 +22,7 @@ extern M2C_UNK D_800E10D0_ovl_01;
 
 void func_801636F0_overlay_012(void *arg0, M2C_UNK arg1, M2C_UNK arg2) {
     M2C_UNK *var_s1;
-    u8 temp_v1;
+    s8 temp_v1;
 
     if (M2C_FIELD(arg0, u8 *, 0x2C3) != 0) {
         var_s1 = M2C_FIELD(&D_800C7650_ovl_01, M2C_UNK **, 0x19D3C);

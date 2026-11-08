@@ -16,7 +16,7 @@ M2C_UNK func_80165BE8_ovl_13(M2C_UNK, u32);         /* extern */
 extern M2C_UNK D_800C7650_ovl_01;
 
 void func_801621D4_overlay_013(void *arg0) {
-    s32 var_a1;
+    u32 var_a1;
     u16 temp_v0;
     u32 temp_a2;
 

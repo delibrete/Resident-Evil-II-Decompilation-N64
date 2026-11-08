@@ -1,1 +1,43 @@
-s32 func_80033174_ovl_01(void*,void*); s32 func_80032F94_ovl_01_48(void*,void*,s32,s32); extern u8 D_800C7650_ovl_01[]; extern u8 D_800E10D0_ovl_01; s32 func_80166568_overlay_012(void*a){u8*s2=(u8*)a+0x2b4;u8*s0; s32 v,t; if(s2[15])s0=*(u8**)(D_800C7650_ovl_01+0x19d3c);else s0=&D_800E10D0_ovl_01;v=-2;if(*(s16*)(s0+0x1f2)>=0){if(s2[15])t=*(s32*)((u8*)a+0x290)&0x3fffffff;else t=*(s32*)((u8*)a+0x28c);v=0;if(t<0xfa0){v=0;if(s0[0x1a2]==*((u8*)a+0x1a2)){if(func_80032F94_ovl_01_48((u8*)a+0x28,s0+0x28,*(s16*)((u8*)a+0x66),0x100)==0)v=-1;else{v=-4;if(!(s0[0x26f]&0x80)){if(*(s16*)(s0+0x1f2)>=0x15)v=1;else if((func_80033174_ovl_01(a,s0)&255)!=0){v=1;if(*(s16*)(s2+2)>=0x258)v=-2;}}}}}}return v;}
+s32 func_80033174_ovl_01(void *, void *);
+s32 func_80032FDC(void *, void *, s32, s32);
+extern u8 D_800C7650[];
+extern u8 D_800E10D0[];
+s32 func_80166568_overlay_012(void *arg0) {
+    u8 *state = (u8 *)arg0 + 0x2B4;
+    u8 *other;
+    s32 result;
+    s32 value;
+    if (state[0xF]) {
+        other = *(u8 **)(D_800C7650 + 0x18000 + 0x1D3C);
+    } else {
+        other = D_800E10D0;
+    }
+    result = -2;
+    if (*(s16 *)(other + 0x1F2) >= 0) {
+        if (state[0xF]) {
+            value = *(s32 *)((u8 *)arg0 + 0x290) & 0x3FFFFFFF;
+        } else {
+            value = *(s32 *)((u8 *)arg0 + 0x28C);
+        }
+        result = 0;
+        if (value < 0xFA0) {
+            if (other[0x1A2] == *((u8 *)arg0 + 0x1A2)) {
+                if (func_80032FDC((u8 *)arg0 + 0x28, other + 0x28,
+                                 *(s16 *)((u8 *)arg0 + 0x66), 0x100) == 0) {
+                    result = -1;
+                } else {
+                    result = -4;
+                    if (!(other[0x26F] & 0x80)) {
+                        if (*(s16 *)(other + 0x1F2) >= 0x15) {
+                            result = 1;
+                        } else if ((func_80033174_ovl_01(arg0, other) & 0xFF) != 0) {
+                            result = 1;
+                            if (*(s16 *)(state + 2) >= 0x258) result = -2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    return result;
+}
