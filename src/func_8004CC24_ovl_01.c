@@ -2,7 +2,7 @@ extern void *func_80004550(void *, s32);
 extern s32 func_80004594(void *, s32);
 extern void func_800045DC(void *, s32, s32, s32);
 extern s32 D_8010B69C_ovl_01;
-typedef struct 
+typedef struct
 {
   s32 unk0;
   s32 unk4;
@@ -10,7 +10,7 @@ typedef struct
 } Obj;
 s32 func_8004CC24_ovl_01(Obj *p)
 {
-  u8 x[0x60];
+  u8 x[0x58];
   Obj *new_var;
   s32 out;
   new_var = p;
@@ -27,4 +27,3 @@ s32 func_8004CC24_ovl_01(Obj *p)
     return 0;
   }
 }
-
