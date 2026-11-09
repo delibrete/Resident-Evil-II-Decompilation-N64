@@ -85,7 +85,8 @@ block_30:
         if (M2C_FIELD(arg0, u8 *, 0x2B5) == 0) {
             temp_v0_5 = func_80033634_ovl_01();
             temp_v0_6 = temp_v0_5 & 0xFF;
-            temp_hi_4 = (temp_v0_5 & 0xFF) / 7;
+            temp_a0 = temp_v0_5 & 0xFF;
+    temp_hi_4 = (temp_a0) / 7;
             temp_a0 = (u32) (temp_hi_4 + ((u32) (temp_v0_6 - temp_hi_4) >> 1)) >> 2;
             temp_v1_2 = temp_v0_6 - (temp_a0 * 7);
             temp_s1 = temp_v1_2 & 0xFF;

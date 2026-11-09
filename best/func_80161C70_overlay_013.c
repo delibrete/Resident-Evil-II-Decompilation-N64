@@ -26,10 +26,13 @@ void func_80161C70_overlay_013(Obj *arg0) {
         sp28 = *(s32 *)(D_800C7650_ovl_01 + 0x19AB0);
         if (func_8006AB70_ovl_01(&sp10, &sp20, 0x8400, 0) != 0) {
             flags = arg0->x2c6 & 0xFFFD;
-        } else {
+        
+arg0->x2c6 = flags;
+} else {
             flags = arg0->x2c6 | 2;
-        }
-        arg0->x2c6 = flags;
+        
+arg0->x2c6 = flags;
+}
         if (arg0->x28c < 0x384) arg0->x134 = -0x15E;
         else arg0->x134 = 0;
         ((void (*)(Obj *, s32, s32))D_801664F0_ovl_13[arg0->f4])(arg0, arg0->x1a4, arg0->x218);

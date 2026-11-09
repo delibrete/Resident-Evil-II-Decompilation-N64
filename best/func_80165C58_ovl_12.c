@@ -8,7 +8,7 @@ extern void func_80089D34_ovl_01(void *, void *, void *, s32);
 extern u8 D_800E10D0_ovl_01;
 void func_80165C58_ovl_12(u8 *s, void *a1, void *a2)
 {
-  char x;
+  short x;
   if (s[0x2b5] == 0)
   {
     goto fallback;
