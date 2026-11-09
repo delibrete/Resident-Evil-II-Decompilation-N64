@@ -6,6 +6,7 @@ void func_80039BD8_ovl_01(void) {
     u8 *p2;
     u8 *p3;
     u8 *p4;
+    u8 *t;
     u16 a;
     u8 b;
     u16 c;
@@ -20,7 +21,8 @@ void func_80039BD8_ovl_01(void) {
     d = *(u16 *)(p1 + 0x14);
     p2 = D_800EBB34_overlay_001;
     *(u16 *)(p1 + 0x2A) = c | d;
-    p2[0x20] = (*(u8 **)(p2 + 0x70))[p2[0x21] * 8 + 2];
+    t = *(u8 **)(p2 + 0x70) + p2[0x21] * 8;
+    p2[0x20] = t[2];
 
     p3 = D_800EBB34_overlay_001;
     p3[0x1F] += p3[0xB];
