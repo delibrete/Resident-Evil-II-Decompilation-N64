@@ -1,23 +1,23 @@
 extern u8 D_800EEB4C_ovl_01[];
 
-s32 func_80038F70_ovl_01(s32 arg0) {
+void func_80038F70_ovl_01(s32 arg0) {
     u8 *a2 = D_800EEB4C_ovl_01;
-    u8 *a1 = D_800EEB4C_ovl_01 - 0x2E80 + 0x7C;
-    u8 *v1 = D_800EEB4C_ovl_01 - 0x2E68 + 0x7C;
+    u8 *a1 = D_800EEB4C_ovl_01 - 0x2E80;
+    u8 *v1 = D_800EEB4C_ovl_01 - 0x2E68;
     s32 a0;
 
     do {
+        a1 += 0x7C;
         if (v1[5] == arg0) {
             v1[-0x17] = 0;
             a1[0] = 0;
-            do {*(u16 *)v1 = 0;}while(0);
+            *(u16 *)v1 = 0;
         }
-        a1 += 0x7C;
         v1 += 0x7C;
     } while (a1 != a2);
 
-    a2 = D_800EEB4C_ovl_01 - 0x2E80 + 0x7C;
-    a1 = D_800EEB4C_ovl_01 - 0x2E68 + 0x7C;
+    a2 = D_800EEB4C_ovl_01 - 0x2E80;
+    a1 = D_800EEB4C_ovl_01 - 0x2E68;
     do {
         a0 = 1;
         if (a1[4] == 0) {
