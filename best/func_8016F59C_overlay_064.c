@@ -1,12 +1,8 @@
+typedef struct { u8 x[0x400]; } Obj;
 typedef void (*Fn)(void *);
-extern Fn D_80166D64_ovl_12[];
-extern void func_80166458_ovl_12(void *);
-void func_8016F59C_overlay_064(void *arg0)
-{
-  volatile Fn *table;
-  u8 index = ((u8 *) arg0)[6];
-  table[index](arg0);
-  func_80166458_ovl_12(arg0);
-  table = D_80166D64_ovl_12;
+extern volatile Fn D_8016FB8C_overlay_064[];
+extern void func_8016F418_overlay_064(void *);
+void func_8016F59C_overlay_064(Obj *a) {
+    D_8016FB8C_overlay_064[a->x[6]](a);
+    func_8016F418_overlay_064(a);
 }
-

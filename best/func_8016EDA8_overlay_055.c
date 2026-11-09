@@ -1,15 +1,19 @@
 s32 func_80032EA4_ovl_01(void *, s32, s32, s32);
 s32 func_80033634_ovl_01(u8);
-s32 func_80089D34_ovl_01(void *,  s32);
+s32 func_80089D34_ovl_01(void *, s32);
 extern s32 D_800C7650;
 extern s32 D_800E10D0;
+inline static s16 inline_fn(u16 arg0)
+{
+  return (s16) arg0;
+}
+
 void func_8016EDA8_overlay_055(void *arg0, s32 arg1, s32 arg2)
 {
   s32 *var_s1;
   u16 temp_v0;
   u16 temp_v1;
   u16 __repair_result_temp_v1;
-  
   u8 temp_a0_2;
   void *temp_a0;
   temp_v0 = (*((u16 *) (((char *) arg0) + 0x1F4))) - 1;
@@ -39,7 +43,7 @@ void func_8016EDA8_overlay_055(void *arg0, s32 arg1, s32 arg2)
     }
     else
     {
-      __repair_result_temp_v1 = ((s16) temp_v1) + 0x400;
+      __repair_result_temp_v1 = inline_fn(temp_v1) + 0x400;
       if (!(temp_a0_2 & 2))
       {
         __repair_result_temp_v1 = ((s16) temp_v1) - 0x400;
@@ -48,6 +52,6 @@ void func_8016EDA8_overlay_055(void *arg0, s32 arg1, s32 arg2)
     *((u16 *) (((char *) arg0) + 0x1F6)) = __repair_result_temp_v1;
     *((u16 *) (((char *) arg0) + 0x1F6)) = (u16) ((*((u16 *) (((char *) arg0) + 0x1F6))) + func_80032EA4_ovl_01(arg0, *((s32 *) (((char *) var_s1) + 0x28)), *((s32 *) (((char *) var_s1) + 0x30)), 0x100));
   }
-  func_80089D34_ovl_01(arg0,  arg1);
+  func_80089D34_ovl_01(arg0, arg1);
 }
 

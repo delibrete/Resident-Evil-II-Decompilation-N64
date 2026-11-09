@@ -7,13 +7,13 @@ void func_80163828_overlay_015(void *arg0)
 {
   u8 *new_var;
   int new_var3;
-  s8 var_v0;
+  unsigned int var_v0;
   u8 *new_var2;
   if ((*((s16 *) (((char *) arg0) + 0x1F2))) < 0x61A8)
   {
     *((u16 *) (((char *) arg0) + 0x2B4)) |= 0x20;
   }
-  if ((D_800E12C2 + 1) > 0)
+  if (((D_800E12C2 + 1) - 1) >= 0)
   {
     if ((*((u8 *) (((char *) arg0) + 0x2C2))) == 7)
     {
@@ -45,7 +45,7 @@ void func_80163828_overlay_015(void *arg0)
     }
     if ((((*((s8 *) (((char *) arg0) + 0x2C1))) == 0) && ((*new_var) == 0)) && (!(func_80033634_ovl_01(&D_800C7650, D_800C7650 + 0x18000) & 3)))
     {
-      *((s8 *) (((char *) arg0) - -0x26E)) = 4;
+      *((s8 *) (((char *) arg0) - (-0x26E))) = 4;
       *((u8 *) (((char *) arg0) + 0x2CA)) = (u8) ((func_80033634_ovl_01() & 0x3F) + 0x78);
       return;
     }
