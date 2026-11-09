@@ -8,10 +8,12 @@ extern s32 D_80112968_ovl_01[];
 void func_8006BEEC_ovl_01(s32 arg0) {
     s32 *src;
     s32 *dst;
+    s32 *end;
     s32 a, b, c, d;
 
     dst = D_80112918_ovl_01;
     src = D_80112968_ovl_01;
+    end = D_80112968_ovl_01 + 20;
     do {
         a = src[0];
         b = src[1];
@@ -23,7 +25,7 @@ void func_8006BEEC_ovl_01(s32 arg0) {
         dst[3] = d;
         src += 4;
         dst += 4;
-    } while (src != D_80112968_ovl_01 + 20);
+    } while (src != end);
     func_8000E980((s32) D_80112918_ovl_01);
     func_8006BE40_ovl_01();
     if (D_80112758_ovl_01 != 0) {
