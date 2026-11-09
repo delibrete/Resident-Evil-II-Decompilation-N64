@@ -1,7 +1,7 @@
 {
  "format": 1,
- "saved_at": 1794214534.6384058,
- "revision": 39137,
+ "saved_at": 1794216109.123935,
+ "revision": 39231,
  "title": "Resident Evil II",
  "platform": "n64",
  "game": {
@@ -18388,6 +18388,123 @@
    "timeout": 20,
    "function": "func_80052C9C_ovl_01",
    "vram": 2147822748
+  },
+  "68167836:2148635420": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_8011931C_ovl_01",
+   "vram": 2148635420
+  },
+  "68167844:2148635428": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_80119324_ovl_01",
+   "vram": 2148635428
+  },
+  "68167848:2148635432": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_80119328_ovl_01",
+   "vram": 2148635432
+  },
+  "68167852:2148635436": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_8011932C_ovl_01",
+   "vram": 2148635436
+  },
+  "68167860:2148635444": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_80119334_ovl_01",
+   "vram": 2148635444
+  },
+  "68269504:2148737088": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_80132040_ovl_01",
+   "vram": 2148737088
+  },
+  "68167864:2148635448": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_80119338_ovl_01",
+   "vram": 2148635448
+  },
+  "68162760:2148630344": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_80117F48_ovl_01",
+   "vram": 2148630344
+  },
+  "67356688:2147824272": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_80053290_ovl_01",
+   "vram": 2147824272
   }
  },
  "instructions": "",
@@ -21157,8 +21274,8 @@
   },
   "func_8003D174_ovl_01": {
    "vram": 2147733876,
-   "best_score": 3431,
-   "best_by": "Retroreversing.permuter-2555"
+   "best_score": 2495,
+   "best_by": "claude-haiku-22"
   },
   "func_8003D230_ovl_01": {
    "vram": 2147734064,
@@ -21917,8 +22034,8 @@
   },
   "func_80053290_ovl_01": {
    "vram": 2147824272,
-   "best_score": 1390,
-   "best_by": "Reggie.saved-progress"
+   "best_score": 1385,
+   "best_by": "claude-haiku-25"
   },
   "func_800532E4_ovl_01": {
    "vram": 2147824356,
@@ -39464,6 +39581,46 @@
    "vram": 2148635412,
    "best_score": 1100,
    "best_by": "claude-haiku-23"
+  },
+  "func_8011931C_ovl_01": {
+   "vram": 2148635420,
+   "best_score": 1100,
+   "best_by": "claude-haiku-23"
+  },
+  "func_80119324_ovl_01": {
+   "vram": 2148635428,
+   "best_score": 900,
+   "best_by": "claude-haiku-17"
+  },
+  "func_80119328_ovl_01": {
+   "vram": 2148635432,
+   "best_score": 900,
+   "best_by": "claude-haiku-23"
+  },
+  "func_8011932C_ovl_01": {
+   "vram": 2148635436,
+   "best_score": 900,
+   "best_by": "claude-haiku-23"
+  },
+  "func_80119334_ovl_01": {
+   "vram": 2148635444,
+   "best_score": 900,
+   "best_by": "claude-haiku-23"
+  },
+  "func_80132040_ovl_01": {
+   "vram": 2148737088,
+   "best_score": 900,
+   "best_by": "claude-haiku-23"
+  },
+  "func_80119338_ovl_01": {
+   "vram": 2148635448,
+   "best_score": 1000,
+   "best_by": "claude-haiku-17"
+  },
+  "func_80117F48_ovl_01": {
+   "vram": 2148630344,
+   "best_score": 1700,
+   "best_by": "claude-haiku-17"
   }
  },
  "layout": [
@@ -82276,14 +82433,6 @@
    "score_after": 735
   },
   {
-   "function": "func_80053290_ovl_01",
-   "text": "Cannot get closer: all remaining diffs are the split-symbol/register-coalescing ceiling (D_8010C220+2 folds to symbol D_8010C222; t0 and v1 coalesce). Tried array types, local base pointer and struct subobject. Please release.",
-   "by": "opencode-deepseek-v4.1-flash-low-1",
-   "created_at": 1793884684.7537742,
-   "score_before": 1390,
-   "score_after": 1390
-  },
-  {
    "function": "func_800537D4_ovl_01",
    "text": "Cannot get closer: the D_800C7650+0x18000 split cannot be produced by this cc1 (known ceiling; it folds to D_800DFB88). Same pattern as open func_800275F8. Please release.",
    "by": "opencode-deepseek-v4.1-flash-low-1",
@@ -108628,14 +108777,6 @@
    "score_after": 325
   },
   {
-   "function": "func_80053290_ovl_01",
-   "text": "Deep permuter: score 1390 \u2192 1390; 0 improvements; 8 candidates tested; 8 cached skips; 0 rejected; 60s elapsed. Budget rotation: soft allowance reached without recent progress.",
-   "by": "Retroreversing.permuter-2728",
-   "created_at": 1793954633.922165,
-   "score_before": 1390,
-   "score_after": 1390
-  },
-  {
    "function": "func_80163AEC_ovl_11",
    "text": "Deep permuter: score 6394 \u2192 6394; 0 improvements; 10 candidates tested; 10 cached skips; 0 rejected; 63s elapsed. Budget rotation: soft allowance reached without recent progress.",
    "by": "Retroreversing.permuter-3943",
@@ -132548,14 +132689,6 @@
    "score_after": 350
   },
   {
-   "function": "func_8003D174_ovl_01",
-   "text": "Best 2230 from draft expanded to later code. Includes initial fast-path writes (target has jr ra at that point; disassembler includes fallthrough code) and later setup. Remaining large differences from first short fast-path's unusual jr followed by function body; suspect boundary/disassembler merge or multiple entry points. Try split/report boundary or explicitly matching fall-through (current plausible C skips the early jr semantics).",
-   "by": "codex-gpt-6-luna-1",
-   "created_at": 1793884664.227201,
-   "score_before": 3571,
-   "score_after": 3571
-  },
-  {
    "function": "func_80004954",
    "text": "Best score 3735/51 with correctly sized 0x120 stack frame (s32 buf[0x40]). Earlier 3939 attempt. Current code is semantically close but compiler reorders/dereferences func_80001180 result early, loses target s0 stack-buffer pointer and s1 global base, and turns several globals into at-based stores. Need match exact callee prototypes and field/value types, preserve first call result pointer in v0 until target lw a0 just before second call, then force s1 base for D_800128A8. End D_800C7650+0x18000 base construction needs padded struct representation per known shared base-offset technique.",
    "by": "codex-gpt-6-luna-1",
@@ -133364,14 +133497,6 @@
    "score_after": 5115
   },
   {
-   "function": "func_8003D174_ovl_01",
-   "text": "Attempted compile with empty function body; score 4700, far from match. Function has complex assembly including loads, stores, arithmetic, and a jr $ra followed by additional instructions (likely merged). Best previous attempt score 2230. No matching C found within 1 compile; will need structural adjustments (struct guess, prototype, volatile pointers, etc.). Suspected boundary: jr $ra early followed by extra code; may need split or report_boundary.",
-   "by": "opencode-nemotron-3.5-lightning-f-1",
-   "created_at": 1793884693.807405,
-   "score_before": 3571,
-   "score_after": 3571
-  },
-  {
    "function": "func_8000B65C",
    "text": "Very close: 41/41 insns, best 350 (91.4%). The unaligned 8-byte copy is solved: a local `Blob8 {u8 b0,b1,b2; s8 b3,b4,b5,b6,b7;}` assigned whole (`*p = b; p++;`) produces the exact target lwl/lwr 0/3,4/7 + swl/swr 0/3,4/7, and `u8 ff=0xFF` gives addiu 0xff (not -1). Best source (keep exactly): `Blob8 b; s32 *base; Blob8 *p; u8 ff=0xFF; s32 i=0; p=(Blob8*)D_80016470; base=&D_800164AC; *base=1; b.b1=1; D_80014FE0=a0; b.b0=ff; b.b2=3; b.b3=a0; b.b4=ff;b.b5=ff;b.b6=ff;b.b7=ff; for(;i<D_80014F9C;i++){*p=b;p++;} *(u8*)p=0xFE;` with `void f(s8 a0)`, externs u8 D_80014F9C, s8 D_80014FE0, u8 D_80016470[], s32 D_800164AC. Remaining diff is only the preheader scheduling/order of 3 things: target is `addiu sp; lbu a1,D_80014F9C; lui/addiu a3,D_80016470; move a2,zero; addiu v0,1; addiu v1,0xff; lui at; sw v0,D_800164AC; addiu v0,1; sb v0,1(sp); addiu v0,3; lui at; sb a0,D_80014FE0; sb v1,0(sp); sb v0,2(sp); sb a0,3(sp); ...` while KMC emits the D_80016470 pointer setup before the count lbu and materialises v1=0xff only after the D_800164AC sw (and its 3-operand `sb v0,2(sp)` is one row earlier). Everything from the `sb` block through the loop and the 0xFE tail is byte-identical. Tried: ff/i declaration-initialised vs assigned, moving p assignment after the buffer init, b0 before/after D_80014FE0, b2 before/after, if+do-while loop (frame 8, worse 736), b0-before-D_80014FE0+b2-after (690). flags: -O2/-O3/-fno-strength-reduce 350, -fno-schedule-insns 835, -O1 1267. This is a preheader scheduling/build difference; the saved 350 source should match if a KMC build schedules the count lbu/p setup and the 0xff materialisation as the ROM does.",
    "by": "opencode-deepseek-v4.1-flash-low-1",
@@ -133394,14 +133519,6 @@
    "created_at": 1793884694.0687969,
    "score_before": 3475,
    "score_after": 3475
-  },
-  {
-   "function": "func_8003D174_ovl_01",
-   "text": "BOUNDARY: reported func_8003D174 ends at 0x8003D1A8 (13 instructions, `jr $ra; sh $v0,0x12($v1)`); the remaining 34 instructions are a separate function starting with `addiu sp,-0x28` that calls func_80077B0C_ovl_01/func_80038A50_ovl_01. Correct first-part logic: tmp obj pointer p=D_800EBB34; p[2]=0x40; reload q=D_800EBB34; q[8]=0; q[3]=0; *(u16*)(q+0xC)=0; reload r=D_800EBB34; *(u16*)(r+0x12)&=0xFFFD. Best C (3675): three separate `u8 *p,*q,*r` locals each loaded from D_800EBB34. Remaining diff is the project's known split-data-address codegen: ROM does one `lui $v1,%hi(D_800EBB34)` and three `lw v0,%lo(D)(v1)` reusing the HIGH register, plus a0 for the first pointer load; our KMC re-emits `lui` for each access (and uses v1 for the first load), and direct `D[i]` indexing is worse (3880/4040). Also ROM schedules the third `lw` before `sh zero,0xC(q)`. If the boundary is approved this becomes a 13-insn function; then the only blocker is the split-address/HIGH-reuse codegen already filed as an open setup suggestion.",
-   "by": "opencode-deepseek-v4.1-flash-low-1",
-   "created_at": 1793884694.230186,
-   "score_before": 3571,
-   "score_after": 3571
   },
   {
    "function": "func_80162568_ovl_29",
@@ -134180,14 +134297,6 @@
    "score_after": 20632
   },
   {
-   "function": "func_8003D174_ovl_01",
-   "text": "Deep permuter: score 3436 \u2192 3431; 1 improvements; 100 candidates tested; 0 cached skips; 0 rejected; 1177s elapsed. Variant limit reached.",
-   "by": "Retroreversing.permuter-2555",
-   "created_at": 1794026023.72441,
-   "score_before": 3436,
-   "score_after": 3431
-  },
-  {
    "function": "func_80166150_ovl_11",
    "text": "Deep permuter: score 23982 \u2192 23717; 3 improvements; 100 candidates tested; 0 cached skips; 0 rejected; 1256s elapsed. Variant limit reached.",
    "by": "Retroreversing.permuter-3969",
@@ -134236,14 +134345,6 @@
    "score_after": 3515
   },
   {
-   "function": "func_8003D174_ovl_01",
-   "text": "Inspected all 49 target instructions and submitted a boundary review ending at 0x8003D1A4: the first 12 instructions are a complete leaf routine ending in jr/nop, while the remaining 35 instructions form an independent framed routine with calls and its own epilogue. The review says 140 bytes remain pending user approval, so compiling against the merged range cannot be solved as one ordinary C function. Rechecked the inherited C once (score 3571, 21 candidate instructions). If the boundary is accepted, decompile the 12-instruction initializer as this function and assign/review the following routine separately. No shared matching convention established.",
-   "by": "codex-gpt-6-luna-12",
-   "created_at": 1793884729.39324,
-   "score_before": 3571,
-   "score_after": 3571
-  },
-  {
    "function": "func_80005E84",
    "text": "Tried the saved progress translation plus minor source variants. Best saved score 1105 (current candidates 1115), with major mismatch in frame/register preservation, global access/address formation, and omitted bounds/return logic. Need full assembly and accurate data semantics before further tuning; prior best source is retained.",
    "by": "codex-gpt-6-luna-11",
@@ -134266,14 +134367,6 @@
    "created_at": 1793884729.9149592,
    "score_before": 95,
    "score_after": 95
-  },
-  {
-   "function": "func_8003D174_ovl_01",
-   "text": "Target assembly shows two functions merged: first routine ends with jr ra at offset 0x2C and its store delay slot at 0x30; a fresh stack-frame prologue starts at offset 0x34. Reported boundary end 0x8003D1A8. Best C tried and three local repair variants all scored 3571; the claimed 188-byte extent cannot match one C function before boundary approval/correction. Reclaim after boundary is applied.",
-   "by": "codex-gpt-6-luna-11",
-   "created_at": 1793884730.068615,
-   "score_before": 3571,
-   "score_after": 3571
   },
   {
    "function": "func_801649E0_ovl_19",
@@ -134306,14 +134399,6 @@
    "created_at": 1793956570.918766,
    "score_before": 7231,
    "score_after": 7231
-  },
-  {
-   "function": "func_8003D174_ovl_01",
-   "text": "Boundary review found the claimed extent merges two routines: first is a 13-instruction leaf routine ending at 0x8003D1A8 after jr ra and its delay-slot sh. A new stack-frame prologue starts at 0x8003D1A8 with separate calls and epilogue. report_boundary was submitted at that split; its request says the region remains unchanged until approved. Do not tune the current 49-instruction merged extent; split/reimport and claim the continuation separately. Suggested compiler gcc-2.8.1-pm-sn-as also scored 3606 vs KMC 3571 on the merged candidate.",
-   "by": "codex-gpt-6-luna-10",
-   "created_at": 1793884730.7280252,
-   "score_before": 3571,
-   "score_after": 3571
   },
   {
    "function": "func_80167A9C_ovl_17",
@@ -134394,14 +134479,6 @@
    "created_at": 1794035877.9932978,
    "score_before": 10790,
    "score_after": 8641
-  },
-  {
-   "function": "func_8003D174_ovl_01",
-   "text": "Boundary review reported end at 0x8003D1A8 after inspecting full assembly. The first 13-instruction block (including JR and delay-slot store) is a complete function; a separate stack-framed routine starts immediately at 0x8003D1A8 and continues to the final return. Current candidate/history covers only an incomplete fragment while target grouping has 47 instructions, so compiler trials and source tuning are not meaningful until boundary is corrected/approved. After correction, reconstruct the 13-instruction function from its stores and status-bit update; the untrusted 188-byte candidate includes unrelated tail code.",
-   "by": "codex-gpt-6-luna-9",
-   "created_at": 1793884731.763371,
-   "score_before": 3571,
-   "score_after": 3571
   },
   {
    "function": "func_80163390_ovl_27",
@@ -147098,6 +147175,1838 @@
    "created_at": 1794201209.003902,
    "score_before": 330,
    "score_after": 330
+  },
+  {
+   "function": "func_8003D174_ovl_01",
+   "text": "Best 2230 from draft expanded to later code. Includes initial fast-path writes (target has jr ra at that point; disassembler includes fallthrough code) and later setup. Remaining large differences from first short fast-path's unusual jr followed by function body; suspect boundary/disassembler merge or multiple entry points. Try split/report boundary or explicitly matching fall-through (current plausible C skips the early jr semantics).",
+   "by": "codex-gpt-6-luna-1",
+   "created_at": 1793884664.227201,
+   "score_before": 3571,
+   "score_after": 3571
+  },
+  {
+   "function": "func_80053290_ovl_01",
+   "text": "Cannot get closer: all remaining diffs are the split-symbol/register-coalescing ceiling (D_8010C220+2 folds to symbol D_8010C222; t0 and v1 coalesce). Tried array types, local base pointer and struct subobject. Please release.",
+   "by": "opencode-deepseek-v4.1-flash-low-1",
+   "created_at": 1793884684.7537742,
+   "score_before": 1390,
+   "score_after": 1390
+  },
+  {
+   "function": "func_8003D174_ovl_01",
+   "text": "Attempted compile with empty function body; score 4700, far from match. Function has complex assembly including loads, stores, arithmetic, and a jr $ra followed by additional instructions (likely merged). Best previous attempt score 2230. No matching C found within 1 compile; will need structural adjustments (struct guess, prototype, volatile pointers, etc.). Suspected boundary: jr $ra early followed by extra code; may need split or report_boundary.",
+   "by": "opencode-nemotron-3.5-lightning-f-1",
+   "created_at": 1793884693.807405,
+   "score_before": 3571,
+   "score_after": 3571
+  },
+  {
+   "function": "func_8003D174_ovl_01",
+   "text": "BOUNDARY: reported func_8003D174 ends at 0x8003D1A8 (13 instructions, `jr $ra; sh $v0,0x12($v1)`); the remaining 34 instructions are a separate function starting with `addiu sp,-0x28` that calls func_80077B0C_ovl_01/func_80038A50_ovl_01. Correct first-part logic: tmp obj pointer p=D_800EBB34; p[2]=0x40; reload q=D_800EBB34; q[8]=0; q[3]=0; *(u16*)(q+0xC)=0; reload r=D_800EBB34; *(u16*)(r+0x12)&=0xFFFD. Best C (3675): three separate `u8 *p,*q,*r` locals each loaded from D_800EBB34. Remaining diff is the project's known split-data-address codegen: ROM does one `lui $v1,%hi(D_800EBB34)` and three `lw v0,%lo(D)(v1)` reusing the HIGH register, plus a0 for the first pointer load; our KMC re-emits `lui` for each access (and uses v1 for the first load), and direct `D[i]` indexing is worse (3880/4040). Also ROM schedules the third `lw` before `sh zero,0xC(q)`. If the boundary is approved this becomes a 13-insn function; then the only blocker is the split-address/HIGH-reuse codegen already filed as an open setup suggestion.",
+   "by": "opencode-deepseek-v4.1-flash-low-1",
+   "created_at": 1793884694.230186,
+   "score_before": 3571,
+   "score_after": 3571
+  },
+  {
+   "function": "func_8003D174_ovl_01",
+   "text": "Deep permuter: score 3436 \u2192 3431; 1 improvements; 100 candidates tested; 0 cached skips; 0 rejected; 1177s elapsed. Variant limit reached.",
+   "by": "Retroreversing.permuter-2555",
+   "created_at": 1794026023.72441,
+   "score_before": 3436,
+   "score_after": 3431
+  },
+  {
+   "function": "func_8003D174_ovl_01",
+   "text": "Inspected all 49 target instructions and submitted a boundary review ending at 0x8003D1A4: the first 12 instructions are a complete leaf routine ending in jr/nop, while the remaining 35 instructions form an independent framed routine with calls and its own epilogue. The review says 140 bytes remain pending user approval, so compiling against the merged range cannot be solved as one ordinary C function. Rechecked the inherited C once (score 3571, 21 candidate instructions). If the boundary is accepted, decompile the 12-instruction initializer as this function and assign/review the following routine separately. No shared matching convention established.",
+   "by": "codex-gpt-6-luna-12",
+   "created_at": 1793884729.39324,
+   "score_before": 3571,
+   "score_after": 3571
+  },
+  {
+   "function": "func_8003D174_ovl_01",
+   "text": "Target assembly shows two functions merged: first routine ends with jr ra at offset 0x2C and its store delay slot at 0x30; a fresh stack-frame prologue starts at offset 0x34. Reported boundary end 0x8003D1A8. Best C tried and three local repair variants all scored 3571; the claimed 188-byte extent cannot match one C function before boundary approval/correction. Reclaim after boundary is applied.",
+   "by": "codex-gpt-6-luna-11",
+   "created_at": 1793884730.068615,
+   "score_before": 3571,
+   "score_after": 3571
+  },
+  {
+   "function": "func_8003D174_ovl_01",
+   "text": "Boundary review found the claimed extent merges two routines: first is a 13-instruction leaf routine ending at 0x8003D1A8 after jr ra and its delay-slot sh. A new stack-frame prologue starts at 0x8003D1A8 with separate calls and epilogue. report_boundary was submitted at that split; its request says the region remains unchanged until approved. Do not tune the current 49-instruction merged extent; split/reimport and claim the continuation separately. Suggested compiler gcc-2.8.1-pm-sn-as also scored 3606 vs KMC 3571 on the merged candidate.",
+   "by": "codex-gpt-6-luna-10",
+   "created_at": 1793884730.7280252,
+   "score_before": 3571,
+   "score_after": 3571
+  },
+  {
+   "function": "func_8003D174_ovl_01",
+   "text": "Boundary review reported end at 0x8003D1A8 after inspecting full assembly. The first 13-instruction block (including JR and delay-slot store) is a complete function; a separate stack-framed routine starts immediately at 0x8003D1A8 and continues to the final return. Current candidate/history covers only an incomplete fragment while target grouping has 47 instructions, so compiler trials and source tuning are not meaningful until boundary is corrected/approved. After correction, reconstruct the 13-instruction function from its stores and status-bit update; the untrusted 188-byte candidate includes unrelated tail code.",
+   "by": "codex-gpt-6-luna-9",
+   "created_at": 1793884731.763371,
+   "score_before": 3571,
+   "score_after": 3571
+  },
+  {
+   "function": "func_80053290_ovl_01",
+   "text": "Deep permuter: score 1390 \u2192 1390; 0 improvements; 8 candidates tested; 8 cached skips; 0 rejected; 60s elapsed. Budget rotation: soft allowance reached without recent progress.",
+   "by": "Retroreversing.permuter-2728",
+   "created_at": 1793954633.922165,
+   "score_before": 1390,
+   "score_after": 1390
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "Brief shows `j func_8E702E74` as the last instruction, the same invalid-address pattern as the 0x801192xx-0x801193xx stubs. Not examined further: likely data. Verify the bytes and report_data_region if confirmed.",
+   "by": "claude-haiku-25",
+   "created_at": 1794181206.7145548,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "Two consecutive `j` instructions with no delay-slot nops (j func_8E682E6C; j func_8E702E74). Same stub/tail-jump pattern as the other overlay_001 stubs; not compilable C. Suggest report_boundary/report_data_region.",
+   "by": "claude-haiku-24",
+   "created_at": 1794181294.951175,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "Not C: 8 bytes, a single `j` to func_8E702E74 with no delay slot; this is a data/jump word, not a function body. Suggest report_boundary.",
+   "by": "claude-haiku-17",
+   "created_at": 1794182172.6634219,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "Bare `j` word (j func_8E702E74) in the jump-table run 0x801192F8-0x80119324; reported as data via report_data_region. No C to write.",
+   "by": "claude-haiku-22",
+   "created_at": 1794182234.856991,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119328_ovl_01",
+   "text": "Bare `j` word (j func_8E742E74) at 0x80119328, past the end reported in report_data_region (0x801192F8-0x80119324 exclusive). The jump table probably continues further; extend the data region when reviewing. No C to write.",
+   "by": "claude-haiku-22",
+   "created_at": 1794182259.630083,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119324_ovl_01",
+   "text": "Not C: 8 bytes, one `j` to func_8E742E74 with no delay slot. Same data jump-word run (0x80119300-0x80119330). Suggest report_boundary.",
+   "by": "claude-haiku-17",
+   "created_at": 1794182263.1547992,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119324_ovl_01",
+   "text": "Not code: two `j 0x8E742E74` words (target is outside valid overlay code). Looks like a data region in the jump-table/pointer area, same pattern as neighbouring func_80119310/801192F8_ovl_01. Should be reported as a data region, not matched as a function.",
+   "by": "claude-haiku-25",
+   "created_at": 1794182407.1183271,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119324_ovl_01",
+   "text": "8 bytes: two `j` words to the same target (j func_8E742E74 twice), no prologue or return. Jump-table/data in the overlay, not compilable C. Same class as func_80119314 and the earlier j-table entries.",
+   "by": "claude-haiku-23",
+   "created_at": 1794182547.35992,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119328_ovl_01",
+   "text": "Bare `j func_8E742E74` pair with no delay-slot nops, same stub run as func_80119310/80119320. Hand-written assembly, not C.",
+   "by": "claude-haiku-24",
+   "created_at": 1794182572.4223082,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119324_ovl_01",
+   "text": "Two bare `j func_8E742E74` instructions with no delay-slot nops, same stub pattern as neighbouring func_80119310/func_80119314 (already released as not-C). Not C-expressible.",
+   "by": "claude-haiku-24",
+   "created_at": 1794182693.837599,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119328_ovl_01",
+   "text": "8 bytes: two `j func_8E742E74` words, no prologue or return. Jump-table/data in overlay_001, not compilable C. Part of the same run of j-table entries as func_80119314, func_80119320, func_80119324.",
+   "by": "claude-haiku-23",
+   "created_at": 1794182703.173354,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "Target is 8 bytes: `j func_8E682E6C` followed by `j func_8E702E74`, with no delay slot after the second j. This looks like a data-region or jump-table fragment, not a C function body. Machine draft fails for the same reason. Not attempted in C. Needs a data-region review of the 8 bytes at 0x8011931C.",
+   "by": "claude-haiku-21",
+   "created_at": 1794183525.030078,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "Assembly is two bare `j` words (func_8E682E6C, func_8E702E74) with no prologue or return; this is jump-table data in the 0x80119300 run, not C code. Needs a report_data_region filing for that run.",
+   "by": "claude-haiku-23",
+   "created_at": 1794185736.932023,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "Bare `j` trampoline (8 bytes, no return, delay slot missing in the draft) jumping to func_8E702E74 outside the overlay. Same data/trampoline region as func_80119314 / func_80119320; not a C function.",
+   "by": "claude-haiku-22",
+   "created_at": 1794186117.6555789,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "8-byte region of raw `j` words without delay-slot nops (`j func_8E682E6C`, `j func_8E702E74`). Part of the same table run as func_80119310 / func_80119314 in overlay_001 (0x80119310-0x80119324 region); this is jump-table data, not expressible as a C function. Suggest report_data_region for that range.",
+   "by": "claude-haiku-24",
+   "created_at": 1794186213.318469,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "Same 8-byte pattern as func_80119314/func_80119318: `j func_8E682E6C` followed by `j func_8E702E74` in the delay-slot position. Not a C function (jump in delay slot, non-code targets). Part of a run of jump-stub/data entries at 0x80119314..0x80119324; needs boundary/data-region review, not matching.",
+   "by": "claude-haiku-17",
+   "created_at": 1794186586.592335,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "Target is two bare `j` instructions (to func_8E682E6C and func_8E702E74) with no prologue, delay-slot nops, or return. Same jump-stub/table data pattern as func_80117E84_ovl_01 and func_80119314_ovl_01. Suggest report_data_region.",
+   "by": "claude-haiku-25",
+   "created_at": 1794186663.395234,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011932C_ovl_01",
+   "text": "Target is two bare `j` instructions (to func_8E742E74 and func_8E782E7C), no prologue, delay-slot nop, or return. Same jump-stub table pattern as func_80117E84_ovl_01, func_80119314_ovl_01 and func_8011931C_ovl_01 at 0x80117E84-0x8011932C in overlay_001. Likely a data table; suggest report_data_region over that range.",
+   "by": "claude-haiku-25",
+   "created_at": 1794186690.686122,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "8 bytes of `j` words with the last one lacking a delay slot. Same jump-table or data fragment as func_80119310_ovl_01 and func_80119314_ovl_01. Not a C body. Needs a data-region review of the overlay_001 range 0x80119310..0x80119320.",
+   "by": "claude-haiku-21",
+   "created_at": 1794187694.1114812,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119324_ovl_01",
+   "text": "8-byte bare `j` trampoline with no return and no delay-slot body, jumping to an address outside this overlay (func_8E742E74). Same stub-table pattern as func_80119314/func_8011931C; the compiler draft fails on the missing delay slot. Not expressible as C in this overlay.",
+   "by": "claude-haiku-22",
+   "created_at": 1794187694.271452,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "Not C: 8 bytes of two bare `j` instructions (j func_8E682E6C; j func_8E702E74), no return, jumping outside the overlay. Hand-written trampoline stub, same family as func_80119314/func_80119318.",
+   "by": "claude-haiku-22",
+   "created_at": 1794189485.870002,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "Target is a bare `j func_8E702E74` (no delay slot) in the 0x80119300 jump-table run: data, not compiled C. Same as func_80119318/func_80119314. Needs report_data_region for 0x80119300 run.",
+   "by": "claude-haiku-23",
+   "created_at": 1794189575.63095,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119324_ovl_01",
+   "text": "Not C: 8 bytes of two bare `j func_8E742E74` instructions, no return, jumping outside the overlay. Hand-written trampoline stub.",
+   "by": "claude-haiku-22",
+   "created_at": 1794189581.034239,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119328_ovl_01",
+   "text": "Target is two consecutive `j func_8E742E74` with the second j in the first's delay slot (no nop); not expressible as C. Same pattern as the other j-pair trampolines in overlay_001.",
+   "by": "claude-haiku-22",
+   "created_at": 1794189726.6213691,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "8 bytes: `j func_8E682E6C` then `j func_8E702E74`, each with a delay-slot nop, no prologue or return. Same stub pattern as func_80119314/func_80119318. Data/jump-table entries, not C. Suggest report_data_region over 0x80117E84-0x8011932C.",
+   "by": "claude-haiku-25",
+   "created_at": 1794190163.4758599,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119324_ovl_01",
+   "text": "8 bytes: `j func_8E742E74` twice, each with a delay-slot nop, no prologue or return. Stub/jump-table entry, not C. Suggest report_data_region over 0x80117E84-0x8011932C.",
+   "by": "claude-haiku-25",
+   "created_at": 1794190345.8341188,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119328_ovl_01",
+   "text": "8 bytes: `j func_8E742E74` twice, each with a delay-slot nop, no prologue or return. Stub/jump-table entry, not C. Same region as 0x80119314-0x80119328; suggest report_data_region over 0x80117E84-0x8011932C.",
+   "by": "claude-haiku-25",
+   "created_at": 1794190404.513401,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "Target is two instructions: `j func_8E682E6C` with `j func_8E702E74` in its delay slot. Both targets are non-code addresses, so this is a stub or data region, not C. Same pattern as func_80119320 and func_80119318/func_80119314. Needs a boundary/data-region review.",
+   "by": "claude-haiku-17",
+   "created_at": 1794190586.664489,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011932C_ovl_01",
+   "text": "Two bare `j` instructions with delay-slot nops, no prologue/return: a jump-table stub, not C. Same pattern as the other func_80119314..328 stubs.",
+   "by": "claude-haiku-25",
+   "created_at": 1794190961.324697,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "Target is 8 bytes: two raw `j` words to 0x8E682E6C and 0x8E702E74. Those targets are not code addresses in this overlay, so the words look like pointer data, not a function. The machine draft also failed (last instruction missing a delay slot). No C can emit these jumps with real targets. Suggest the 8011931C neighbourhood be reported as a data region rather than as functions. Same pattern as func_80119314_ovl_01 and func_80119318_ovl_01 from the previous session. The not-C verdict still needs a second model.",
+   "by": "claude-haiku-21",
+   "created_at": 1794191226.117324,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "Not C: 8 bytes of two raw `j` words with no delay-slot nops (j func_8E682E6C; j func_8E702E74), inside the overlay_001 jump-table data region. Record as data via report_data_region, not as a function.",
+   "by": "claude-haiku-24",
+   "created_at": 1794191698.829249,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "Two bare `j` instructions with delay-slot nops and no prologue or return: a jump-table stub, not C. Same pattern as func_80119314..328.",
+   "by": "claude-haiku-25",
+   "created_at": 1794191818.781342,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "Bare `j func_8E702E74` with no delay slot, no prologue or return. Jump-table data entry in the 0x80119300 region, not compiled C. Same pattern as func_80119314/80119318/80119320.",
+   "by": "claude-haiku-23",
+   "created_at": 1794191861.1049862,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119324_ovl_01",
+   "text": "Bare `j func_8E742E74` with no delay slot, no prologue or return. Jump-table data entry in the 0x80119300 region, not compiled C. Same pattern as the other 0x801193xx entries.",
+   "by": "claude-haiku-23",
+   "created_at": 1794191889.833432,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119328_ovl_01",
+   "text": "Bare `j func_8E742E74` with no delay slot, no prologue/return: a jump-table entry in the 0x80119300 region, not C-expressible. Same pattern as the other entries released last session.",
+   "by": "claude-haiku-23",
+   "created_at": 1794191968.770092,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "Jump-table data (raw j words at 0x8011931C), same as func_80119314/func_80119318 which were reported as data regions. No compile made; not claimable as C. Needs data-region review, not a decomp attempt.",
+   "by": "claude-haiku-21",
+   "created_at": 1794192999.7428858,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119324_ovl_01",
+   "text": "Target is 8 bytes of two raw `j func_8E742E74` words with no return or delay-slot code; it is a data/jump-table entry, not compilable C. Reported as a data region 0x80119324-0x8011932C. No compile was run. Not-C verdict needs a second model to confirm.",
+   "by": "claude-haiku-21",
+   "created_at": 1794193079.0447302,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119328_ovl_01",
+   "text": "Target is 8 bytes of two raw `j func_8E742E74` words, identical to func_80119324: jump-table data, not compilable C. Reported as data 0x80119328-0x80119330. No compile run. Not-C verdict needs a second model to confirm.",
+   "by": "claude-haiku-21",
+   "created_at": 1794193163.606858,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "Bare tail-jump table: two `j` instructions with no delay slot and no return (j func_8E682E6C; j func_8E702E74). Not C-expressible.\n\nRe-claimed and confirmed: the 8-byte body is two bare `j` tail jumps (j func_8E682E6C; j func_8E702E74) with no delay slot and no return. Not C-expressible. Same as my earlier release this session.",
+   "by": "claude-haiku-23",
+   "created_at": 1794193166.473272,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011932C_ovl_01",
+   "text": "Target is 8 bytes: two raw 'j' words (j func_8E742E74; j func_8E782E7C) with no delay slots or return. This is jump-table data at 0x8011932C, not C code. Same pattern as func_80119324/func_80119328. No compile run. Suggest reporting the region as data.",
+   "by": "claude-haiku-21",
+   "created_at": 1794193342.879124,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "Target is two bare tail jumps: `j func_8E682E6C` then `j func_8E702E74` in the delay slot position. Last instruction has no delay slot (m2c failure). Not compilable C; looks like a data/boundary region or a thunk table, not a function. Needs boundary review.",
+   "by": "claude-haiku-17",
+   "created_at": 1794193546.257299,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "Two consecutive `j` instructions (j func_8E682E6C; j func_8E702E74), the second in the first's delay slot. Same trampoline pattern as the other j-pair functions. Not C.",
+   "by": "claude-haiku-22",
+   "created_at": 1794193693.479164,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "8 bytes: two raw `j` words (targets 0x8E682E6C, 0x8E702E74, not valid overlay addresses) with no return and no delay slots. This is jump-table/data, not a C function. Not C.",
+   "by": "claude-haiku-21",
+   "created_at": 1794194527.054956,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119324_ovl_01",
+   "text": "Target is two j instructions with no body (j func_8E742E74 twice, the second in the first's delay slot). No C can emit this; same family as func_80119314/80119318/8011931C/80119320_ovl_01. Not C.",
+   "by": "claude-haiku-22",
+   "created_at": 1794194873.302599,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "Same two-bare-jump stub pattern as func_80119318/func_80119314: `j func_8E702E74` with no delay slot, targets outside the code segment. Not C; needs boundary/data-region review.",
+   "by": "claude-haiku-17",
+   "created_at": 1794195010.58594,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "Not code: bytes at 0x8011931C are 0b 9a 0b 9b 0b 9c 0b 9d 0b 9d... (a byte-value table, e.g. lookup data). The two 'j' instructions are misdecoded data words, so no C produces this. Likely a data region; the function's real extent should be reported as data (report_data_region).",
+   "by": "claude-haiku-25",
+   "created_at": 1794195572.4574158,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "Target is 8 bytes: two raw `j` words (j func_8E682E6C; j func_8E702E74) with no delay-slot nops and no prologue. This is jump-table data in the overlay, not C code. Same pattern as func_80119314_ovl_01. Data region not reported.",
+   "by": "claude-haiku-24",
+   "created_at": 1794195737.5178409,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "Target is `j func_8E682E6C; j func_8E702E74` (8 bytes). The second j sits in the first's delay slot, which no C body produces. Same pattern as func_80119314/80119318. Data/jump-table region misread as code, not a function. Boundary not verified.",
+   "by": "claude-haiku-22",
+   "created_at": 1794196487.3163772,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "Hand-written assembly: a lone `j func_8E702E74` with no delay slot and no return; C cannot emit a bare tail-jump without a delay slot. not_c.",
+   "by": "claude-haiku-23",
+   "created_at": 1794196530.6751091,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119324_ovl_01",
+   "text": "Hand-written assembly: a lone `j func_8E742E74` with no delay slot and no return. Same pattern as the other bare-jump stubs in ovl_01 (80119314, 80119318, 8011931C). not_c.",
+   "by": "claude-haiku-23",
+   "created_at": 1794196695.956599,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119328_ovl_01",
+   "text": "Hand-written assembly: a lone `j func_8E742E74` with no delay slot and no return. Same bare-jump stub pattern as 80119314/80119318/8011931C/80119320/80119324. not_c.",
+   "by": "claude-haiku-23",
+   "created_at": 1794196769.218905,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119324_ovl_01",
+   "text": "Target is 8 bytes: `j func_8E742E74` followed by a second `j func_8E742E74` in its delay slot. A jump in a delay slot is not compilable C; this looks like a data region misread as code (same pattern as func_80119314/func_80119318). Not C; no compile attempted.",
+   "by": "claude-haiku-22",
+   "created_at": 1794197172.278812,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119324_ovl_01",
+   "text": "8 bytes = two raw `j func_8E742E74` words with no delay-slot nops: jump-table data in overlay_001 (same pattern as func_80119320/func_8011931C/func_80119318), not C.",
+   "by": "claude-haiku-24",
+   "created_at": 1794197666.386158,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "Not C: this address holds the same byte-index table as func_80119314/80119318 (data, not instructions). The disassembler's 'j func_8E702E74' is a misdecoded data word with no delay slot. Needs report_data_region for the table, which I have not filed.",
+   "by": "claude-haiku-25",
+   "created_at": 1794197686.7209659,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "Target is 8 bytes: `j func_8E682E6C` with `j func_8E702E74` in its delay slot. Same data-misread-as-code pattern as func_80119314/20/24 (a jump in a delay slot is not expressible as C). Not C; no compile attempted. The whole 0x80119314-0x8011931C run looks like a jump table or pointer data block in overlay_001 that should be reported as data.",
+   "by": "claude-haiku-22",
+   "created_at": 1794197758.207232,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "Two bare `j` instructions, no delay slot, targets func_8E682E6C and func_8E702E74 (non-code addresses). Same stub pattern as func_80119318 and func_80119320. Not C-codeable; needs boundary review (likely data or padding, not a function).",
+   "by": "claude-haiku-17",
+   "created_at": 1794197846.1848252,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119328_ovl_01",
+   "text": "Not C: 8 bytes are two `j func_8E742E74` with the second in the first's delay slot position. This is a jump/pointer table word pair (data misread as code), same pattern as func_80119314/20/1C. Should be reported as data region.",
+   "by": "claude-haiku-22",
+   "created_at": 1794197855.33183,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "8 bytes of two raw `j` words (func_8E702E74, func_8E742E74) with no delay-slot nops: jump-table data in overlay_001, not C.",
+   "by": "claude-haiku-24",
+   "created_at": 1794198018.07797,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119324_ovl_01",
+   "text": "Two bare `j func_8E742E74` instructions with no delay slots (non-code target). Same stub pattern as func_80119318, func_8011931C, func_80119320. Not C-codeable; needs boundary review.",
+   "by": "claude-haiku-17",
+   "created_at": 1794198215.897129,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119324_ovl_01",
+   "text": "Not C: 8 bytes of data (two words decoded as 'j func_8E742E74' twice), same byte-table region as func_8011931C/func_80119320. Needs report_data_region.",
+   "by": "claude-haiku-25",
+   "created_at": 1794198303.44841,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011932C_ovl_01",
+   "text": "Not C: 8 bytes are two `j` instructions (j func_8E742E74; j func_8E782E7C) with no delay slot content, i.e. a jump/pointer table misread as code. Same pattern as func_80119328 family. Should be reported as data.",
+   "by": "claude-haiku-22",
+   "created_at": 1794198348.0469482,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "8 bytes: two raw `j` words (targets 0x8E682E6C, 0x8E702E74, not valid overlay addresses), no return. Jump-table/data, not C.",
+   "by": "claude-haiku-21",
+   "created_at": 1794198405.971093,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119324_ovl_01",
+   "text": "Same family as func_80119314/318/320: 8 bytes, `j 0x8E742E74` twice (second in the first's delay slot), targets outside the overlay range. Compiled C cannot place a jump in a delay slot, so this is most likely a data table of jump entries, not code.",
+   "by": "claude-haiku-23",
+   "created_at": 1794199254.42416,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119328_ovl_01",
+   "text": "Two bare `j func_8E742E74` with no delay slots; target is not code (jump target is not a valid address). Likely padding/data in overlay_001. Needs boundary review.",
+   "by": "claude-haiku-17",
+   "created_at": 1794199343.057308,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119328_ovl_01",
+   "text": "Same family as func_80119314/318/320/324: 8 bytes, `j 0x8E742E74` with a second `j` in the first's delay slot, targets outside the overlay range. Compiled C cannot place a jump in a delay slot, so this is most likely a data table of jump entries, not code.",
+   "by": "claude-haiku-23",
+   "created_at": 1794199381.767972,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011932C_ovl_01",
+   "text": "Same family as func_80119314 to 80119328: 8 bytes, `j 0x8E742E74` then `j 0x8E782E7C` in the delay slot, targets outside the overlay range. Compiled C cannot place a jump in a delay slot, so this is most likely a data table of jump entries, not code. A boundary review of the 0x801192xx-0x8011933x run would settle it.",
+   "by": "claude-haiku-23",
+   "created_at": 1794199417.42876,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "Target is two `j` instructions to func_8E682E6C and func_8E702E74 (addresses outside the overlay), i.e. a jump/pointer table misread as code, not a C function. Same pattern as func_80119318/func_80119328/func_8011932C. Should be reported as a data region.",
+   "by": "claude-haiku-22",
+   "created_at": 1794199581.455977,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "Target is two raw MIPS `j` words (j func_8E682E6C; j func_8E702E74) with no delay-slot nops, i.e. jump-table data rather than hand-written or compilable C. Same verdict as func_80119318/func_80119320. Needs second-model agreement.",
+   "by": "claude-haiku-24",
+   "created_at": 1794199741.427256,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119324_ovl_01",
+   "text": "8 bytes: a bare `j` with no delay slot, jumping to a non-code address (func_8E742E74). Same stub pattern as the neighbouring func_80119318/20/28 stubs released as not_c last session. Looks like padding or data in overlay_001; no C can produce it.",
+   "by": "claude-haiku-17",
+   "created_at": 1794199747.076422,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "Target is 8 bytes: two raw `j` words to func_8E682E6C and func_8E702E74 (implausible addresses, no delay slot filled). Same pattern as earlier not-C releases; no C can emit this.",
+   "by": "claude-haiku-21",
+   "created_at": 1794199904.700555,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "Not C, data: 8 bytes decode as two `j` to non-code targets (func_8E702E74 and one more), same data table region 0x80119318-0x80119334 of overlay_001 as func_80119318/80119320/80119324/80119330. Needs a data-region report, not a function match.",
+   "by": "claude-haiku-25",
+   "created_at": 1794199986.011565,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119328_ovl_01",
+   "text": "8 bytes: two `j func_8E742E74` (same target twice), targets outside the overlay. A jump/pointer table in overlay data, not C. Same pattern as func_8011931C, func_80119318 and func_8011932C. Report as a data region.",
+   "by": "claude-haiku-22",
+   "created_at": 1794200789.577926,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "Two consecutive `j` instructions (j func_8E682E6C; j func_8E702E74), targets outside the overlay. Same jump-entry data pattern as the 0x801192xx run (func_80119318/80119330). Not compilable as a function; needs data-region review.",
+   "by": "claude-haiku-23",
+   "created_at": 1794201194.094374,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "Not C. Target is 8 bytes: two bare `j` words (targets func_8E682E6C and func_8E702E74, outside the overlay's plausible range) with no delay-slot instructions. A C function cannot emit a bare j without a delay slot. Looks like a data/overlay-pointer stub or linker leftover; a boundary or data-region report may be more appropriate. Confirmed by get_assembly this session.",
+   "by": "claude-haiku-21",
+   "created_at": 1794201293.6518242,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119328_ovl_01",
+   "text": "Not C. Target is 8 bytes: two identical bare `j func_8E742E74` words with no delay-slot instructions. A C function cannot emit a bare j without a delay slot; looks like a data/stub leftover. Same pattern as func_8011931C_ovl_01.",
+   "by": "claude-haiku-21",
+   "created_at": 1794201351.490344,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "8 bytes: two raw `j` words (j func_8E682E6C; j func_8E702E74) with no delay-slot nops. This is jump-table data, not code. Machine draft fails on missing delay slot. Not C.",
+   "by": "claude-haiku-24",
+   "created_at": 1794201474.031221,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "8 bytes: a bare `j` with no delay slot, targeting func_8E702E74 (not code). Same stub pattern as the func_80119318/20/24/28 stubs in overlay_001 already released as not_c. Padding or data; no C produces it.",
+   "by": "claude-haiku-17",
+   "created_at": 1794201518.855943,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "8 bytes: `j func_8E702E74` followed by a second `j` to an address outside the overlay. Jump/pointer table in overlay data, not C; the machine draft fails with \"missing delay slot\". Same as func_8011932C / func_80119318 / func_80119328. Report as a data region.",
+   "by": "claude-haiku-22",
+   "created_at": 1794201577.006009,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119328_ovl_01",
+   "text": "Bare `j func_8E742E74` twice with no delay slots; same stub/padding pattern as the other overlay_001 stubs (func_80119318/1C/20/24). Not compilable C.",
+   "by": "claude-haiku-17",
+   "created_at": 1794201667.68294,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119324_ovl_01",
+   "text": "Not C: the 8-byte region decodes as `j func_8E742E74` with a missing delay slot, i.e. data/table bytes rather than a function body. The 0x80119318\u20130x80119334 region (func_80119318/8011931C/80119320/80119324/80119330 in the earlier session) looks like data and should be reported via report_data_region rather than matched as code.",
+   "by": "claude-haiku-25",
+   "created_at": 1794201857.0165792,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119324_ovl_01",
+   "text": "8 bytes, two raw `j` words with no delay-slot nops (jump-table data, same pattern as func_8011931C_ovl_01). Machine draft fails on missing delay slot. Not C.",
+   "by": "claude-haiku-24",
+   "created_at": 1794201920.9886441,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119324_ovl_01",
+   "text": "Not C. Same 8-byte pattern as func_8011931C / func_80119328 / func_80119320: two bare `j` words (func_8E742E74 twice) with no delay-slot instructions. Likely a data/stub region in the 0x80119xxx block; a data-region report is more suitable than C.",
+   "by": "claude-haiku-21",
+   "created_at": 1794202065.022042,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "Not C: 8 bytes are two words `j 0x8E682E6C` / `j 0x8E702E74` (non-code addresses, no delay slots). Data/jump-table words in the 0x80119318 region, as with func_80119318 and func_80119324. Report the region as data.",
+   "by": "claude-haiku-25",
+   "created_at": 1794202213.519391,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119324_ovl_01",
+   "text": "Two bare `j func_8E742E74` with no delay slots; same padding stub as func_80119328 and the other overlay_001 stubs. Not compilable C.",
+   "by": "claude-haiku-17",
+   "created_at": 1794202244.2271612,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119328_ovl_01",
+   "text": "Not C: two identical words `j 0x8E742E74` with no delay slots, a jump-table/data entry in the 0x80119318\u20130x80119334 data region (same as func_80119318/8011931C/80119324/80119330). Report the region as data.",
+   "by": "claude-haiku-25",
+   "created_at": 1794202266.6903732,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011932C_ovl_01",
+   "text": "Target is two bare `j` words (j func_8E742E74; j func_8E782E7C) with no delay-slot instructions. C cannot emit this shape. Looks like a stub or data region in the 0x80119xxx block; same pattern as func_80119320/24/28/2C. Suggest a data-region report.",
+   "by": "claude-haiku-21",
+   "created_at": 1794202364.729183,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119324_ovl_01",
+   "text": "Same pattern as func_80119318_ovl_01: 8-byte block of two raw `j` instructions to addresses outside the overlay (first j func_8E742E74) \u2014 an absolute jump-table entry, not C-expressible. Should be reported as a data region; I did not call report_data_region.",
+   "by": "claude-haiku-22",
+   "created_at": 1794202445.746277,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "Two consecutive `j` (func_8E682E6C, func_8E702E74) with targets outside the overlay and no delay slots. Jump-table entry; no C can emit this. Same pattern as func_80119318 and func_80119330.",
+   "by": "claude-haiku-23",
+   "created_at": 1794202469.346126,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119328_ovl_01",
+   "text": "8 bytes of raw `j` instructions to addresses outside the overlay (j func_8E742E74), i.e. jump-table data, not a function body. Not C-expressible. Should be reported via report_data_region; not called.",
+   "by": "claude-haiku-22",
+   "created_at": 1794202491.7605739,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119324_ovl_01",
+   "text": "8-byte jump-table entry: two consecutive `j` to out-of-overlay targets (last is func_8E742E74) with no delay slot. Same pattern as func_80119318, func_8011931C. Not C.",
+   "by": "claude-haiku-23",
+   "created_at": 1794202502.189866,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119328_ovl_01",
+   "text": "8-byte jump-table entry: two consecutive `j` to out-of-overlay targets (func_8E742E74 last) with no delay slot. Same pattern as func_80119318/8011931C/80119324. Not C.",
+   "by": "claude-haiku-23",
+   "created_at": 1794202525.200772,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "Target is 2 raw absolute jump entries (j func_8E682E6C; j func_8E702E74) with no delay slots, i.e. jump-table data in overlay_001, not C code. Same pattern as func_80119318/80119324/80119328. Not yet reported with report_data_region.",
+   "by": "claude-haiku-22",
+   "created_at": 1794202596.465228,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "8 bytes of raw `j` words (j func_8E702E74; j func_8E742E74) with no delay-slot nops. This is jump-table data, not compilable C. Same as func_80119320 and func_80119324.",
+   "by": "claude-haiku-24",
+   "created_at": 1794202835.741893,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "8 bytes, two bare `j` words with no delay-slot instructions (j func_8E702E74 then j func_8E..). Same stub/data pattern as func_8011932C and func_80119320-2C. C cannot emit this. A data-region report over 0x80119xxx is the right tool.",
+   "by": "claude-haiku-21",
+   "created_at": 1794202964.576129,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119324_ovl_01",
+   "text": "Two raw absolute j entries with no delay slots (both to func_8E742E74): jump-table data in overlay_001, not C. Adjacent to func_80119320_ovl_01 (also table data). Needs report_data_region for 0x80119320-0x8011932C.",
+   "by": "claude-haiku-22",
+   "created_at": 1794203797.695981,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119324_ovl_01",
+   "text": "Target is 8 bytes of two raw `j func_8E742E74` words (no delay-slot nops, last word has no delay slot). Jump-table data, not a function body. Same pattern as func_8011931C/func_80119318 in overlay_001.",
+   "by": "claude-haiku-24",
+   "created_at": 1794203976.777836,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119324_ovl_01",
+   "text": "Target is two bare `j func_8E742E74` with no delay slots: the same padding stub as the other overlay_001 stubs. No C source emits this.",
+   "by": "claude-haiku-17",
+   "created_at": 1794204461.5802162,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119324_ovl_01",
+   "text": "Target is two consecutive `j func_8E742E74` instructions with no delay slot, an address outside the overlay. Same jump-table/stub pattern as the other 0x801192xx entries; no C compiles to this.",
+   "by": "claude-haiku-23",
+   "created_at": 1794204607.193548,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "Data region: 8 bytes of j words to non-code addresses (0x80119318\u20130x80119334 region, same as func_80119320/80119324/80119328). No delay slots, not code. Needs report_data_region for the range.",
+   "by": "claude-haiku-25",
+   "created_at": 1794204655.828445,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119324_ovl_01",
+   "text": "Data region 0x80119318\u20130x80119334 reported with report_data_region (7 entries). Not code.",
+   "by": "claude-haiku-25",
+   "created_at": 1794204784.588309,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119328_ovl_01",
+   "text": "Part of data region 0x80119318\u20130x80119334, already reported via report_data_region (7 entries). Not code.",
+   "by": "claude-haiku-25",
+   "created_at": 1794204870.938911,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011932C_ovl_01",
+   "text": "Inside reported data region 0x80119318\u20130x80119334 (j words to non-code addresses, no delay slots). Not code.",
+   "by": "claude-haiku-25",
+   "created_at": 1794204906.2350988,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119334_ovl_01",
+   "text": "Not C: the 8-byte target is a `j` to a non-code address with a missing delay slot, same data-region pattern as func_80119318-80119330 (inside the jump-table/data area of overlay_001). No C body to match.",
+   "by": "claude-haiku-25",
+   "created_at": 1794205076.806287,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119324_ovl_01",
+   "text": "Target is 8 bytes of two raw `j func_8E742E74` words with no delay-slot nops, i.e. jump-table data rather than code. No C can emit this. Same pattern previously seen at func_8011931C and func_80119318/func_80119320. Released as not C.",
+   "by": "claude-haiku-24",
+   "created_at": 1794205109.3433359,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119324_ovl_01",
+   "text": "8 bytes: two identical `j func_8E742E74` words (0x08... jump encodings to an out-of-overlay address). No valid function body; the draft fails with a missing delay slot. Looks like a jump-table or pointer data region, same family as func_80119318_ovl_01 and func_80119320_ovl_01. Suggest report_data_region for 0x80119318..0x80119328.",
+   "by": "claude-haiku-21",
+   "created_at": 1794205190.195341,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119328_ovl_01",
+   "text": "8 bytes: two `j func_8E742E74` words, no function body. Same data-table pattern as the neighbouring 0x80119318..0x80119324 entries (all in one run of pointer-like words). Not C; suggest report_data_region over this run.",
+   "by": "claude-haiku-21",
+   "created_at": 1794205233.265423,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011932C_ovl_01",
+   "text": "Target is two raw `j` words (j func_8E742E74; j func_8E782E7C) with no delay slots, in the same non-code run as func_80119318/80119320/80119324/80119328_ovl_01 (data/jump table, not C). Needs report_data_region by someone with that tool; no C can emit these.",
+   "by": "claude-haiku-21",
+   "created_at": 1794205350.642866,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "Not C: 8 bytes, two raw `j` instructions (func_8E682E6C, func_8E702E74) with no delay slots. This is jump-table data, same as func_80119318_ovl_01. Nothing to match.",
+   "by": "claude-haiku-22",
+   "created_at": 1794205399.1260202,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "Not C: 8-byte entry is `j` to a non-code address with the delay slot missing, inside the same overlay_001 data region (0x80119318-0x80119334) already reported with report_data_region.",
+   "by": "claude-haiku-25",
+   "created_at": 1794205592.646739,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "Two consecutive `j` instructions (to func_8E682E6C and func_8E702E74) with no delay slots; targets are outside the overlay. Same jump-stub pattern as func_80119324/func_80119318. No C produces this.",
+   "by": "claude-haiku-23",
+   "created_at": 1794205682.4718552,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119328_ovl_01",
+   "text": "Target is 8 bytes of two raw `j func_8E742E74` words with no delay-slot nops: jump-table data, not code. Same as func_80119324 and the func_8011931C/80119318/80119320 entries. No C can emit this.",
+   "by": "claude-haiku-24",
+   "created_at": 1794205699.737654,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "Target is 8 bytes of two raw `j` words (func_8E682E6C, func_8E702E74) with no delay-slot nops: jump-table data, not code. No C can emit this.",
+   "by": "claude-haiku-24",
+   "created_at": 1794205737.138795,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119324_ovl_01",
+   "text": "Target is 8 bytes: two bare `j func_8E742E74` instructions with no delay slots and no return. C cannot emit a bare j without a delay slot, so this is a trampoline/stub, not a C function body. Same pattern as func_80119318_ovl_01 and func_80119320_ovl_01. Not compiled.",
+   "by": "claude-haiku-17",
+   "created_at": 1794205752.443022,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011932C_ovl_01",
+   "text": "Target is 8 bytes of two raw `j` words (func_8E742E74, func_8E782E7C) with no delay-slot nops: jump-table data, not code. No C can emit this.",
+   "by": "claude-haiku-24",
+   "created_at": 1794205812.645987,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119324_ovl_01",
+   "text": "Target is two `j func_8E742E74` instructions with no delay slot (4 bytes each, 8 total), a stub jumping to an address outside the overlay. Same pattern as the other 0x801192xx stubs. Not expressible as C; the m2c draft fails on the missing delay slot.",
+   "by": "claude-haiku-23",
+   "created_at": 1794205855.104834,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119324_ovl_01",
+   "text": "Target is 8 bytes: two identical raw `j func_8E742E74` words with no delay slots (the same pattern as func_8011931C/func_80119318/func_80119320 in overlay_001). This is jump-table data, not compilable C. Not C.",
+   "by": "claude-haiku-22",
+   "created_at": 1794206342.363843,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "Target is 8 bytes: a bare `j func_8E702E74` with no delay slot (plus a second instruction; same two-bare-j trampoline pattern as func_80119318_ovl_01 / func_80119324_ovl_01). No C can emit a bare j without a delay slot. Not compiled.",
+   "by": "claude-haiku-17",
+   "created_at": 1794206403.069964,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119324_ovl_01",
+   "text": "8 bytes of raw jump-table words (j entries with no delay-slot nops) inside 0x80119318-0x80119340 jump-table data region. Not hand-written code; previous session reported the run via report_data_region. Not C.",
+   "by": "claude-haiku-24",
+   "created_at": 1794206511.805778,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "Target is 8 bytes: two raw 'j' words (j func_8E682E6C; j func_8E702E74) with no delay slots and no return. This is a jump-table/data run, not a C function. Needs report_data_region, not a C match.\n\nRe-confirmed: 8 bytes, two raw 'j' words (j func_8E682E6C; j func_8E702E74) with no delay slots and no return. Jump-table/data run, not C. Needs report_data_region.",
+   "by": "claude-haiku-21",
+   "created_at": 1794206856.5999901,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119324_ovl_01",
+   "text": "Target is two bare `j func_8E742E74` instructions with no delay slot (4 bytes each, same as func_80119318). Not expressible as C under gcc-2.7.2-kmc; hand-written assembly verdict.",
+   "by": "claude-haiku-17",
+   "created_at": 1794206902.6450438,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "Target is two `j func_8E702E74` instructions with no delay slot (8 bytes), a stub jumping outside the overlay. Same pattern as the other 0x801192xx stubs. Not expressible as C.",
+   "by": "claude-haiku-23",
+   "created_at": 1794207006.508225,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "8 bytes: two raw `j` words (j func_8E682E6C; j func_8E702E74) with no delay slots and no jr/jalr. This is jump-table data/trampoline words, not compilable C. Same pattern as func_80119324/func_80119318.",
+   "by": "claude-haiku-22",
+   "created_at": 1794207340.880033,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "Not C: 8-byte entry is `j` to a non-code address with the delay slot missing, in the overlay_001 data region 0x80119318-0x80119334 (already reported). Same verdict as earlier sessions.",
+   "by": "claude-haiku-25",
+   "created_at": 1794207441.8325891,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119324_ovl_01",
+   "text": "8 bytes: two raw 'j func_8E742E74' words with no delay slots and no return. This is a jump-table/data run, not a C function. Mark with report_data_region.",
+   "by": "claude-haiku-21",
+   "created_at": 1794207541.232689,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "Target is two bare `j` instructions (j func_8E682E6C; j func_8E702E74) with no delay slot. Same pattern as func_80119324_ovl_01. Not expressible as C; hand-written assembly / tail stubs.",
+   "by": "claude-haiku-17",
+   "created_at": 1794207685.347311,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119324_ovl_01",
+   "text": "Not C: 8 bytes, a single `j func_8E742E74` (target outside the overlay) with no delay slot in the claimed range. Same jump-stub pattern as func_80119320/80119318/8011931C.",
+   "by": "claude-haiku-23",
+   "created_at": 1794207857.494304,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "Not C: same pattern as func_80119318. The machine draft fails on a 'j' with a data word in its delay slot, so these 8 bytes are raw jump-table words, not code. Belongs to the 0x80119318\u20130x80119340 data run.",
+   "by": "claude-haiku-24",
+   "created_at": 1794208326.040168,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119328_ovl_01",
+   "text": "Not C: 8 bytes, a single `j func_8E742E74` with no delay slot in the claimed range, the same stub as func_80119318/8011931C/80119320/80119324.",
+   "by": "claude-haiku-23",
+   "created_at": 1794208420.766639,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "Not C: 8 bytes, a single `j func_8E702E74` with no delay slot in the claimed range, the same jump stub as the other 8011931x/80119320-80119328 entries.",
+   "by": "claude-haiku-23",
+   "created_at": 1794208848.627487,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "8 bytes: two `j` instructions to addresses func_8E682E6C and func_8E702E74, outside the code segment (same verdict as neighbouring func_80119320_ovl_01). Hand-written/linker stub, not C.",
+   "by": "claude-haiku-25",
+   "created_at": 1794209041.049141,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119324_ovl_01",
+   "text": "Target is 4 words: `j func_8E742E74` followed by another `j func_8E742E74`, with no delay-slot nop in the range; the target jumps outside the overlay. Same verdict as the previous session's identical-shape single-jump stubs (func_80119318/1C/20/28). Not expressible as ordinary C function body; treated as hand-written trampoline.",
+   "by": "claude-haiku-23",
+   "created_at": 1794209131.4692779,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "Two bare `j` instructions with no delay slot (last instruction j func_8E702E74 with no following delay slot). Same stub pattern as func_80119320/func_80119318/func_80119324: not C.",
+   "by": "claude-haiku-17",
+   "created_at": 1794209393.7534459,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "Target is two raw `j` words (j func_8E682E6C; j func_8E702E74) with no delay slots and no return. Data/linker leftover, not C. Needs report_data_region by someone with that tool.",
+   "by": "claude-haiku-21",
+   "created_at": 1794209511.478442,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119324_ovl_01",
+   "text": "Single bare `j func_8E742E74` with no delay slot (8 bytes, two instructions, the second a j). Same stub pattern as the other overlay_001 bare-j entries: not C.",
+   "by": "claude-haiku-17",
+   "created_at": 1794209547.6976378,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119328_ovl_01",
+   "text": "Bare `j func_8E742E74` with no delay slot, 8 bytes: same stub pattern as the other overlay_001 bare-j entries (func_80119318/80119320/80119324/8011931C). Not C.",
+   "by": "claude-haiku-17",
+   "created_at": 1794209658.51156,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119324_ovl_01",
+   "text": "Two raw `j func_8E742E74` words, no delay slots, no return. Same pattern as func_8011931C_ovl_01: a data/linker stub, not C. Needs report_data_region by someone who has that tool.",
+   "by": "claude-haiku-21",
+   "created_at": 1794209670.3314502,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119328_ovl_01",
+   "text": "8 bytes: two identical raw `j func_8E742E74` words, no delay slot, no return. Not compilable C; looks like a linker/jump stub or data region. Same pattern as func_8011931C/func_80119324 (previously released not-C). Needs report_data_region by someone with that tool.\n\nConfirmed again: 8 bytes, two raw `j func_8E742E74` words, no delay slot, no return. Not C. Part of the 0x80119318..0x80119334 stub run. Needs report_data_region.",
+   "by": "claude-haiku-21",
+   "created_at": 1794209770.387423,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011932C_ovl_01",
+   "text": "Target is two bare `j` instructions with no delay slot (j func_8E742E74; j func_8E782E7C), the same stub pattern as earlier not-C releases. No C can emit a bare jump without a delay slot.",
+   "by": "claude-haiku-17",
+   "created_at": 1794209795.443976,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "Not C: 8 bytes are `j func_8E682E6C` then `j func_8E702E74` with no real delay slots. The 'j' targets are non-code addresses (data/jump-table entries), so the words are data within the 0x80119318-0x80119340 run. No C compiles to a bare j with a j as its delay slot.",
+   "by": "claude-haiku-24",
+   "created_at": 1794209886.3841338,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119324_ovl_01",
+   "text": "8 bytes: two `j` to func_8E742E74 (same target twice), outside the code segment. Linker/stub bytes, same verdict as neighbours func_80119318/80119320. Not C.",
+   "by": "claude-haiku-25",
+   "created_at": 1794210018.636092,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8003D174_ovl_01",
+   "text": "Boundary issue: the claimed 188-byte region is two functions. The first returns at jr $ra (delay sh $v0,0x12($v1)) after 13 insns, ending at 0x8003D1A8. report_boundary(end=0x8003D1A8) is filed and awaits user approval. The second function starts at 0x8003D1A8 with addiu $sp,-0x28 and calls func_80077B0C_overlay_001 and func_80038A50_overlay_001; it is unclaimed and needs its own claim. Best C for the first part: three separate char-pointer reloads of D_800EBB34_ovl_01 (a[2]=0x40; b[8]=0; b[3]=0; c+0xC halfword=0; c+0x12 halfword &= 0xFFFD) matches the 3-load shape of the target (lui v1 once, lw a0/v0/v1 each reload). Scored 3680 on the whole region, still worse than saved best 3431 (which had a messier permuter form). Remaining diffs are all in the second function, plus a register mismatch: target uses $a0 for the first sb base, mine uses $v1. Next step: approve/apply the boundary, then match the first function alone with register allocation tweaks.",
+   "by": "claude-haiku-21",
+   "created_at": 1794210039.308309,
+   "score_before": 3431,
+   "score_after": 3431
+  },
+  {
+   "function": "func_80119328_ovl_01",
+   "text": "8 bytes: two `j` to func_8E742E74, outside the code segment. Same stub verdict as func_80119324. Not C.",
+   "by": "claude-haiku-25",
+   "created_at": 1794210052.389782,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "8 bytes: two raw `j` words (j func_8E682E6C; j func_8E702E74) with no delay slots. This is a jump-table entry pair, not compilable C. Machine draft fails with \"last instruction missing delay slot\". Released as not_c.",
+   "by": "claude-haiku-22",
+   "created_at": 1794210063.1474109,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119324_ovl_01",
+   "text": "Two bare tail jumps (`j func_8E742E74` and the following j) with no delay-slot nop. Hand-written stub pattern, not C. Same as func_80119320 and func_80119318.",
+   "by": "claude-haiku-23",
+   "created_at": 1794210069.4158359,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011932C_ovl_01",
+   "text": "8 bytes: two `j` to func_8E742E74 and func_8E782E7C, outside the code segment. Same stub verdict as the neighbouring 8-byte jump pairs. Not C.",
+   "by": "claude-haiku-25",
+   "created_at": 1794210110.9919841,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119324_ovl_01",
+   "text": "8 bytes: two raw `j func_8E742E74` words with no delay slots (jump-table entries). Not compilable C. Machine draft fails on missing delay slot.\n\nSame as before: two raw `j func_8E742E74` words, no delay slots. Jump-table entries, not compilable C.",
+   "by": "claude-haiku-22",
+   "created_at": 1794210124.596095,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80053290_ovl_01",
+   "text": "21-insn target: stores through t0 = lw of D_8010D8E0 (u8*), then v1 = t0+0x300 kept as a SEPARATE live register (addiu $v1,$t0,0x300) used for sb 0xE, sb 0xF, sh 4, sh 6, sh 2; the sh to 0x300($t0) and sb to 0x31F/2/3/0x2DE use t0. Best 1390. Compiler always folds t0+0x300 into the offsets (sb 0x30e($v0), sh 0x304($v0)), both with a u8* v1 and with a struct-typed v1 (Ent300*); no effect. Also the C220 accesses: target does lui a3 once, lhu lo(a3) for [0], addiu a3 lo, lhu 2(a3) for [1]; mine uses a separate lui/lhu. Need a way to stop t0+const folding (e.g., v1 computed from an opaque value, or an ordering that forces the addiu before the store). The 3-attempt budget ran out here.",
+   "by": "claude-haiku-21",
+   "created_at": 1794210206.2605288,
+   "score_before": 1390,
+   "score_after": 1390
+  },
+  {
+   "function": "func_8011931C_ovl_01",
+   "text": "Target is 8 bytes: `j func_8E682E6C` followed by `j func_8E702E74` in the delay slot of the first jump (no nop). C tail-call shape compiles to jal/jr with a stack frame (score 1100, 9 insns vs 2), and gcc never emits a j in a delay slot. Same pattern as func_80119320/318/324_ovl_01. Not C.",
+   "by": "claude-haiku-23",
+   "created_at": 1794210215.674348,
+   "score_before": 1100,
+   "score_after": 1100
+  },
+  {
+   "function": "func_80119334_ovl_01",
+   "text": "8 bytes: two bare `j` instructions to func_8E802E84 and func_8E882E8C, both outside the overlay code segment. Same stub pattern as the neighbouring func_801193xx entries. No C body can produce a lone unpaired-delay-slot jump pair; not C.\n\nRe-claimed; same 8-byte two-`j` stub as before (targets func_8E802E84, func_8E882E8C outside the overlay segment). Not C.",
+   "by": "claude-haiku-25",
+   "created_at": 1794210224.1349509,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119328_ovl_01",
+   "text": "Target is 8 bytes: `j func_8E742E74` with a second `j func_8E742E74` in its delay slot (no nop). C cannot emit a j in a delay slot; a tail-call from C produces jal/jr with a frame or a j plus nop. Same pattern as func_8011931C, func_80119320/318/324_ovl_01. Not C.",
+   "by": "claude-haiku-23",
+   "created_at": 1794210249.072203,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80132040_ovl_01",
+   "text": "8 bytes: two bare `j` instructions to func_80642080 and func_81502164, both outside the overlay code segment. Same unpaired-jump stub pattern as the other func_80119xxx/func_8013xxxx entries. Not C.",
+   "by": "claude-haiku-25",
+   "created_at": 1794210266.220015,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011932C_ovl_01",
+   "text": "Target is 8 bytes: `j func_8E742E74` then `j func_8E782E7C` in the first jump's delay slot (no nop). C cannot produce a j in a delay slot. Same cluster as func_8011931C, func_80119328, func_80119320/318/324_ovl_01; these look like a thunk/jump table region rather than function bodies. Not C.",
+   "by": "claude-haiku-23",
+   "created_at": 1794210298.731667,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119324_ovl_01",
+   "text": "Not C: two bare `j func_8E742E74` words (the same jump-table/data run 0x80119318-0x80119340 as func_80119318, 8011931C, 80119320). Not code that C can produce.",
+   "by": "claude-haiku-24",
+   "created_at": 1794210321.287938,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119328_ovl_01",
+   "text": "Not C: the target is two bare `j func_8E742E74` words, the same jump-table/data pattern as func_80119318/8011931C/80119320/80119324 in the 0x80119318-0x80119340 run. No function body to match; a C function cannot emit a bare j without a delay slot.",
+   "by": "claude-haiku-24",
+   "created_at": 1794210411.202573,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119334_ovl_01",
+   "text": "Same 8-byte cluster: `j func_8E802E84` followed by `j func_8E882E8C` in the first jump's delay slot (no nop). C cannot emit a j in a delay slot. Not C. Part of the overlay_001 run of two-j stubs (80119318-80119334), which looks like a thunk/jump table region; a boundary report may be worth making.",
+   "by": "claude-haiku-23",
+   "created_at": 1794210419.247971,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8011932C_ovl_01",
+   "text": "8 bytes: two raw `j` words (j func_8E742E74; j func_8E782E7C), no delay slot, no return. Not C. This is one of a run of identical 8-byte j-pair stubs at 0x80119318, 0x8011931C, 0x80119320, 0x80119324, 0x80119328, 0x8011932C. A report_data_region over 0x80119318..0x80119334 would clear the whole run in one go.",
+   "by": "claude-haiku-21",
+   "created_at": 1794210705.4004679,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119324_ovl_01",
+   "text": "8 bytes: two identical raw `j func_8E742E74` words, no delay slot, no return. Not C. Part of the 8-byte stub run at 0x80119318..0x80119334 (func_80119318, 0x80119320, 0x8011932C also not C). A report_data_region over that range would clear all of them.",
+   "by": "claude-haiku-21",
+   "created_at": 1794210767.603664,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80053290_ovl_01",
+   "text": "84-byte body, best 1385 (34%), from the volatile-v1 variant: `u8 *t0 = D_8010D8E0; volatile u8 *v1 = t0 + 0x300;` then stores via v1[0xE], v1[0xF], volatile u16 at t0+0x300, volatile s16 at v1+4/+6, u16 at v1+2 using D_8010C220[0]/[1]. Remaining diffs: target loads t0 via `lui $v0` + `lw $t0`, computes `addiu $v1,$t0,0x300` as its own instruction (compiler folds 0x300 into every store and uses the lui temp as base); target uses $a3 as D_8010C220 base with `addiu $a3,$a3,%lo` and `lhu $v0,2($a3)` (compiler reloads the lui and folds the %lo into the lhu). Attempts with an explicit `u16 *a3` pointer scored 1390, with the 0x8E add and the sb/sh ordering wrong. Still needed: a source form that keeps v1 as a live register (not folded) while t0 stays live for the sh at 0x300(t0). Stub-free; C is plausible but not found.",
+   "by": "claude-haiku-25",
+   "created_at": 1794210916.7393768,
+   "score_before": 1390,
+   "score_after": 1385
+  },
+  {
+   "function": "func_80132040_ovl_01",
+   "text": "Target is 8 bytes: `j func_80642080` whose delay slot is a second `j func_81502164` (no nop). GCC cannot emit a jump in a delay slot, so no C source reproduces this. Same shape as the other overlay_001 thunk stubs in the previous session (func_8011931C, func_80119320-80119334). Not compiled further; the verdict rests on the delay-slot shape. Boundary may be a thunk/jump-table region rather than a function; report_boundary would confirm.",
+   "by": "claude-haiku-23",
+   "created_at": 1794211102.226924,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119324_ovl_01",
+   "text": "8 bytes: `j func_8E742E74` with a second `j func_8E742E74` in its delay slot (no nop). GCC cannot emit a jump in a delay slot, so no C reproduces it. Same pattern as the other overlay_001 jump stubs. Not compiled; verdict rests on the delay-slot shape.",
+   "by": "claude-haiku-23",
+   "created_at": 1794211229.219585,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8003D174_ovl_01",
+   "text": "The real routine is 13 instructions (0x8003D174..0x8003D1A8 exclusive): lui v1/lw a0 from D_800EBB34; sb 0x40 to 2(p); sb 0 to 8(p) and 3(p); sh 0 to 0xC(p); lhu 0x12(p), andi 0xFFFD, sh back; jr $ra in the delay slot of the last sh. Boundary report for end 0x8003D1A8 is pending approval. The 49-line target span also includes a separate routine from line 13 (addiu $sp,-0x28, sw $s0, lui $s0 D_800EBB34, jal func_80077B0C, jal func_80038A50); that second routine is the one that should be claimed next. Best C so far in this claim is 2495 (saved best, unchanged). The latest attempt, which reloads D_800EBB34 per store, scored 3690 (worse). Target order: lw a0 (ptr) once, then sb to 2(a0); reloads v0 for the 8/3 stores; uses v1 for the 0x12 halfword. Compiling against the 49-line span can't reach 0 until the boundary is approved.",
+   "by": "claude-haiku-22",
+   "created_at": 1794211249.1060421,
+   "score_before": 3431,
+   "score_after": 2495
+  },
+  {
+   "function": "func_80119334_ovl_01",
+   "text": "Target is two raw MIPS words: `j func_8E802E84` then `j func_8E882E8C`. Neither has a delay slot, and there is no return. This is the same stub/data run seen at 0x80119318-0x80119338 (see prior session), not compilable C. Suggest report_data_region for the range rather than a function claim.",
+   "by": "claude-haiku-21",
+   "created_at": 1794211254.9354482,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119328_ovl_01",
+   "text": "8 bytes: `j func_8E742E74` with a second `j` in its delay slot (no nop). GCC cannot emit a jump in a delay slot, so no C reproduces it. Same pattern as the other overlay_001 jump stubs. Not compiled; verdict rests on the delay-slot shape.",
+   "by": "claude-haiku-23",
+   "created_at": 1794211279.087311,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80053290_ovl_01",
+   "text": "Best stays at inherited 1385. My plain-pointer draft (u8 *t0 = D_8010D8E0; u8 *v1 = t0+0x300; stores via v1[...]) scored 1390 (33.8%). Target keeps t0 as a loaded register and computes v1 = t0+0x300 with a separate addiu; the compiler folds 0x300 into each sb/sh offset (0x30e/0x304 etc.). Target also loads D_8010C220 through a separate lui $a3 + addiu $a3, with lhu from base and from 2($a3). Next idea: keep t0 live across the first store (volatile on v1 only, as the inherited draft does), and load C220[0] before the sb's to match the lhu/addiu-of-a3 order. A follow-up compile timed out at the server with a variant that also added an extra store; that variant was wrong and should not be reused.",
+   "by": "claude-haiku-17",
+   "created_at": 1794211604.7253592,
+   "score_before": 1385,
+   "score_after": 1385
+  },
+  {
+   "function": "func_80132040_ovl_01",
+   "text": "Target is two raw MIPS words: `j func_80642080` then `j func_81502164`, with no delay slots and no return. Not compilable as C. Part of the same stub/jump-word pattern as func_80119334 and the 0x80119318 run. Suggest report_data_region for these ranges.",
+   "by": "claude-haiku-21",
+   "created_at": 1794211622.730113,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119324_ovl_01",
+   "text": "Two bare `j func_8E742E74` instructions with no delay slot, the same stub pattern as the other overlay_001 not-C releases. C cannot emit a jump without a delay slot.",
+   "by": "claude-haiku-17",
+   "created_at": 1794211746.379068,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119328_ovl_01",
+   "text": "8 bytes: two bare `j` instructions, the second target outside the overlay segment, with no delay-slot body. Same stub family as func_80119318/8011931C/80119320 that earlier sessions verified as not C.",
+   "by": "claude-haiku-25",
+   "created_at": 1794211753.179172,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8003D174_ovl_01",
+   "text": "Target listing from glabel: lines 0-13 are a complete small leaf (lui v1; lw a0 from D_800EBB34; addiu v0,0x40; sb v0,2(a0); lw v0; sb zero,8; sb zero,3; lw v1; sh zero,0xC(v0); lhu v0,0x12(v1); andi 0xFFFD; jr ra; sh v0,0x12(v1)). The listing then continues at line 14 with a new frame (addiu sp,-0x28; sw s0; lui s0 %hi(D_800EBB34); jal func_80077B0C; jal func_80038A50) to line 49. That second part is probably a separate function with no label, so this claim's extent is likely wrong: the symbol probably ends at line 13 (14 insns). A straight C version of the 14-insn leaf with volatile global pointer reloads (`extern u8 * volatile D_800EBB34_overlay_001`) gave 3825 against the 47-insn listing, but that was the whole region, so it is not a valid score. Next agent: confirm the boundary with report_boundary before tuning; then the leaf should be easy (4 reloads of D_800EBB34, lw a0 used for the first sb, 0xFFFD mask on the halfword at 0x12).",
+   "by": "claude-haiku-24",
+   "created_at": 1794211775.373299,
+   "score_before": 2495,
+   "score_after": 2495
+  },
+  {
+   "function": "func_8011932C_ovl_01",
+   "text": "Target is two bare instructions: `j func_8E742E74` followed by `j func_8E782E7C` in its delay slot (no nop). gcc-2.7.2-kmc -O2 does not emit tail-call jumps; a call body compiles to addiu/sw ra/jal/lw/jr with a stack frame (score 900). No C reproduces the target shape. Verdict based on the shape plus one compile. Likely a thunk/jump-table region; report_boundary would confirm extent, not checked.",
+   "by": "claude-haiku-23",
+   "created_at": 1794211837.657341,
+   "score_before": 900,
+   "score_after": 900
+  },
+  {
+   "function": "func_80119324_ovl_01",
+   "text": "Not C: the target is two bare `j` words (j func_8E742E74 twice) in the 0x80119318-0x80119340 jump-table/data run, the same as the other released entries 80119318/8011931C/80119320/80119328. No function body.",
+   "by": "claude-haiku-24",
+   "created_at": 1794211837.736663,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119328_ovl_01",
+   "text": "Target is 8 bytes: two raw `j` words (j func_8E742E74 twice) with no delay slots, overlay_001 at 0x80119328. Jump-table entries, not compilable C. Same verdict as the 0x8011931C/80119318/80119320/80119324 entries.",
+   "by": "claude-haiku-22",
+   "created_at": 1794211847.452304,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80053290_ovl_01",
+   "text": "Best 1385 (saved candidate rev 11e51e0e334532a22347). Tried this session: table address held in a local `u16 *a3` and `u8 *v1 = t0 + 0x300` as a plain pointer (rev 32c432c68556976611d2): still 1385. The gcc-2.7.2-kmc output folds t0+0x300 into every store immediate (0x30e, 0x300, ...) and loads the table with `lui $v1 / lhu %lo`, while the target emits `addiu $v1,$t0,0x300` as a separate instruction and loads the table through $a3 first. Untried: a volatile/opaque source for the 0x300 offset (see proposals #309237645324 and #309237645317) so the base is not folded. Otherwise leave as is.",
+   "by": "claude-haiku-21",
+   "created_at": 1794211898.090838,
+   "score_before": 1385,
+   "score_after": 1385
+  },
+  {
+   "function": "func_80119334_ovl_01",
+   "text": "Target is 8 bytes: two raw `j` words (j func_8E802E84; j func_8E882E8C), no delay slots, overlay_001 at 0x80119334. Jump-table entries, not compilable C. Same verdict as the neighbouring 0x80119320-0x80119330 entries.",
+   "by": "claude-haiku-22",
+   "created_at": 1794212008.9970691,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119328_ovl_01",
+   "text": "Target is two bare `j func_8E742E74` words (jump-table/data entry in the 0x80119318-0x80119340 run), no C can produce it. Same verdict as neighbouring func_80119318/20/24.",
+   "by": "claude-haiku-24",
+   "created_at": 1794212031.487309,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80132040_ovl_01",
+   "text": "Target is 8 bytes: two raw `j` words (j func_80642080; j func_81502164), no delay slots, overlay_001 at 0x80132040. Jump-table entries, not compilable C. Same verdict as the other 8-byte two-`j` entries in this overlay.",
+   "by": "claude-haiku-22",
+   "created_at": 1794212074.493588,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119324_ovl_01",
+   "text": "Not C: 8 bytes, two bare `j func_8E742E74` instructions (the first's delay slot is the second `j`). Same pattern as the other 8-byte j-pair stubs released last session. Target lies outside the overlay segment, and no C statement emits a j with no nop delay slot.",
+   "by": "claude-haiku-25",
+   "created_at": 1794212127.653662,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80132040_ovl_01",
+   "text": "Target is two bare `j` words (func_80642080, func_81502164): a jump-table/data entry, not C.",
+   "by": "claude-haiku-24",
+   "created_at": 1794212154.4548988,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_8003D174_ovl_01",
+   "text": "Boundary: real function ends at 0x8003D1AC (jr $ra at 0x8003D1A0 with delay slot `sh $v0,0x12($v1)`). Instructions from 0x8003D1A8 (`addiu $sp,-0x28`, save $s0/$ra, lui $s0 D_800EBB34) belong to a different function, so the 188-byte claim extent is wrong; reported via report_boundary. Body (14 insns): p=D; sb 0x40 to p+2; then reload D each time: sb 0 to +8, sb 0 to +3, sh 0 to +0xC, lhu +0x12, andi ~2, sh back to +0x12. D_800EBB34_overlay_001 is a u8* global, reloaded from %lo each use (lw is not CSE'd by target). Best 3825 (18.6%) by my draft vs inherited 2495 which mixes in the second function, so it is worse only because of the bad extent. Remaining mismatch: compiler CSEs the global load (target uses lui v1 + lw a0 for first access, then reloads via v0/v1). Try volatile-qualified global access or separate pointer temporaries to force the per-access reloads. Not matched.",
+   "by": "claude-haiku-17",
+   "created_at": 1794212175.2102919,
+   "score_before": 2495,
+   "score_after": 2495
+  },
+  {
+   "function": "func_80119334_ovl_01",
+   "text": "Target is 8 bytes: `j 0x8E802E84` with `j 0x8E882E8C` in the delay slot. The jump targets are not valid code addresses in this overlay (0x8E... looks like data bytes read as code), so this is likely a pointer table or padding, not a C function. One compile of a plain tail call gave score 900 (compiler emits a stack frame with jal). Same shape as the other overlay_001 two-jump stubs. Not C, unless a boundary report shows otherwise.",
+   "by": "claude-haiku-23",
+   "created_at": 1794212191.194676,
+   "score_before": 900,
+   "score_after": 900
+  },
+  {
+   "function": "func_80119328_ovl_01",
+   "text": "Target is two raw 'j func_8E742E74' words with no delay slot and no return. Not expressible as C (same stub family as 0x80119318-0x80119338). Needs report_data_region, not a function claim.",
+   "by": "claude-haiku-21",
+   "created_at": 1794212195.8390841,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119324_ovl_01",
+   "text": "Target is two raw 'j func_8E742E74' words, no delay slot, no return. Same stub family as 0x80119328 and 0x80119318-0x80119338. Not C. Needs report_data_region.",
+   "by": "claude-haiku-21",
+   "created_at": 1794212326.1003468,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119338_ovl_01",
+   "text": "Three bare `j` words: jump-table data, not C. Reported as data region 0x80119338-0x80119344.",
+   "by": "claude-haiku-24",
+   "created_at": 1794212330.0538151,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80132040_ovl_01",
+   "text": "Target is 8 bytes: two bare `j` instructions (j func_80642080; j func_81502164) with no delay slot and no return. Same stub pattern as func_80119320/func_80119330. Not expressible as C. Released as not C.",
+   "by": "claude-haiku-17",
+   "created_at": 1794212353.1408582,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119328_ovl_01",
+   "text": "Target is 8 bytes: `j 0x8E742E74` with `j 0x8E742E74` in the delay slot. Jump targets are not plausible code addresses in this overlay, so this looks like data or a table misread as code. One compile of a plain tail call gave score 900 (compiler emits a frame with jal). Same shape as the other overlay_001 two-jump stubs. Not C unless a boundary report shows otherwise.",
+   "by": "claude-haiku-23",
+   "created_at": 1794212379.082589,
+   "score_before": 900,
+   "score_after": 900
+  },
+  {
+   "function": "func_80132040_ovl_01",
+   "text": "Not C: 8-byte stub of two bare `j` instructions (first to func_81502164, second in its delay slot). Same j-pair stub pattern; no C emits a j without a nop delay slot, and the targets lie outside the overlay segment.",
+   "by": "claude-haiku-25",
+   "created_at": 1794212410.5564811,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119324_ovl_01",
+   "text": "Target is 8 bytes: `j 0x8E742E74` with a second `j` in the delay slot. Same two-jump stub shape as func_80119328/func_80119334 in overlay_001, where a plain tail call compiled to a framed jal sequence (score 900). Not verified by a fresh compile here. Likely data or a jump table read as code; a boundary report would settle it.",
+   "by": "claude-haiku-23",
+   "created_at": 1794212458.334475,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80117F48_ovl_01",
+   "text": "Target is four bare `j` words (no delay slots, no return), i.e. a jump-table fragment, not a function body. Reported as a data region 0x80117F48-0x80117F58. Nothing to compile as C. Neighbouring tables likely continue; look for the table start before claiming more of these.",
+   "by": "claude-haiku-24",
+   "created_at": 1794212775.73416,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119338_ovl_01",
+   "text": "Not C: 12-byte stub of three bare `j` instructions (func_8E882E8C, func_8E902E94, func_8E982E9C, each in the previous one's delay slot). Same j-chain stub pattern; no C emits j instructions with no nop delay slot, and the targets lie outside the overlay segment.",
+   "by": "claude-haiku-25",
+   "created_at": 1794212800.760205,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80117F48_ovl_01",
+   "text": "Not C: 16-byte chain of four bare `j` instructions (three to func_80E820E8, then func_80EC0000), each in the previous one's delay slot. Same j-chain stub pattern; no C emits j with no nop delay slot, and the targets lie outside the overlay segment.",
+   "by": "claude-haiku-25",
+   "created_at": 1794212882.058323,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119324_ovl_01",
+   "text": "Target is 8 bytes: two bare `j func_8E742E74` instructions with no delay slot and no return. Same pattern as the earlier not-C stubs in overlay_001 (func_80119330, func_80119320). Not compilable as C; it looks like a jump-table or trampoline fragment, not a function body. Released as not C.",
+   "by": "claude-haiku-17",
+   "created_at": 1794212882.115177,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119324_ovl_01",
+   "text": "Two bare `j` words (both to func_8E742E74), no delay slots, no return: jump-table fragment, not a function body. Reported as data region 0x80119324-0x8011932C. The 0x80119318..0x80119344 span is one jump-table run; report it whole.",
+   "by": "claude-haiku-24",
+   "created_at": 1794213250.1668952,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80132040_ovl_01",
+   "text": "Target is 8 bytes: `j func_80642080` with `j func_81502164` in its delay slot. No C was compiled successfully. Two compile_and_diff attempts with a plain `void f(void){ func_80642080(); }` timed out after 300s each (MCP no response), so the compile server appears to be hung, not the source. The shape (two jumps, second in delay slot) is not something gcc-2.7.2 emits for a normal C function, and the previous session saw the same shape on overlay_001 stubs. Likely data or a jump-table fragment read as code. Not marked not_c because it is unverified. Next step: check the compile server, then run report_boundary or a not_c verdict on the overlay_001 two-jump stubs as a group.",
+   "by": "claude-haiku-23",
+   "created_at": 1794213574.748945,
+   "score_before": 900,
+   "score_after": 900
+  },
+  {
+   "function": "func_80119324_ovl_01",
+   "text": "Target is 8 bytes of two raw `j func_8E742E74` words with no delay-slot instructions (get_assembly confirmed). A C function cannot emit bare j words without a nop delay slot, so this looks like a jump-table entry in data rather than code. Same pattern as the other stub entries in overlay_001 (func_80119318/80119320/80119330). Suggest report_boundary / data-region review of this range instead of a C attempt. Not compiled.",
+   "by": "claude-haiku-22",
+   "created_at": 1794213648.068823,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119324_ovl_01",
+   "text": "Target is two identical raw `j func_8E742E74` words (8 bytes), no jal, no return, and the second j is a stub entry. Machine draft fails with missing delay slot. This is a linker/stub jump-table entry, not a C-compilable function. Same stub family as 0x80119318-0x80119338 flagged in earlier handoffs; should be filed with report_data_region.",
+   "by": "claude-haiku-21",
+   "created_at": 1794213800.1129012,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119338_ovl_01",
+   "text": "Target is 12 bytes of three raw j words (func_8E882E8C, func_8E902E94, func_8E982E9C), no delay-slot bodies. Same jump-table/data pattern as the other overlay_001 stubs. Not compiled. Needs a data-region review.",
+   "by": "claude-haiku-22",
+   "created_at": 1794213830.372352,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80117F48_ovl_01",
+   "text": "16 bytes of four bare `j` words, no delay slots: jump-table data, not C. Same table as func_80119318/80119320/80119324/80132050. Report the run as a data region rather than claiming these individually.",
+   "by": "claude-haiku-24",
+   "created_at": 1794213856.810315,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119324_ovl_01",
+   "text": "Not attempted as C. Same two-jump stub shape: `j func_8E742E74` with a second `j` in its delay slot; targets are outside overlay_001 code. Part of the overlay_001 stub group that appears to be data/jump-table words. Needs a group-level data/boundary verdict, not C tuning.",
+   "by": "claude-haiku-23",
+   "created_at": 1794213861.847163,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119338_ovl_01",
+   "text": "Target is three raw `j` words (j func_8E882E8C; j func_8E902E94; j func_8E982E9C), 12 bytes, no jal and no return. Same jump-stub family as 0x80119318-0x80119330. Not C-compilable; the region should be filed with report_data_region.",
+   "by": "claude-haiku-21",
+   "created_at": 1794214235.401576,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119324_ovl_01",
+   "text": "Hand-written jump-table data, not C. Two identical `j func_8E742E74` words, no delay slots, inside the jump table at ~0x80119318\u20130x80119344. Recommend reporting the whole table as a data region rather than claiming entries individually. No compile performed.",
+   "by": "claude-haiku-24",
+   "created_at": 1794214258.463787,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119338_ovl_01",
+   "text": "12 bytes: three back-to-back `j` instructions (targets func_8E882E8C, func_8E902E94, func_8E982E9C), each in the previous one's delay slot, no nop. Same stub pattern as the rest of overlay_001. Not C: a compiler always fills a jump's delay slot with a nop or useful instruction. Likely linker/overlay thunk bytes; boundary review suggested.",
+   "by": "claude-haiku-25",
+   "created_at": 1794214290.616941,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119324_ovl_01",
+   "text": "8 bytes: `j func_8E742E74` twice, no delay-slot instruction (nop or otherwise) after either jump. A compiler always fills a jump's delay slot, so this is linker/overlay thunk data, not C. Suggest a boundary review of overlay_001 at this address rather than C retries. Same pattern as the other bare-j stubs in overlay_001 (func_80119318, 80119320, 80119338, 80132050).",
+   "by": "claude-haiku-25",
+   "created_at": 1794214453.441885,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119338_ovl_01",
+   "text": "Not C: 12 bytes are three `j` words in a jump table (targets func_8E882E8C, func_8E902E94, func_8E982E9C), no delay slots, no prologue. Part of the same table as func_80119318/80119324/80119330 at roughly 0x80119318-0x80119344, which the previous session flagged as data. Should be treated as a data region, not a function.",
+   "by": "claude-haiku-24",
+   "created_at": 1794214453.7715561,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80117F48_ovl_01",
+   "text": "Not C: 16 bytes are four raw j words (targets func_80E820E8 x3, func_80EC0000) with no return. They sit inside a long j-word jump-target table spanning at least 0x80117DCC-0x80117F5F in overlay_001 (reported via report_data_region with partial bounds). Same family as the other stub entries.",
+   "by": "claude-haiku-21",
+   "created_at": 1794214604.654743,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119324_ovl_01",
+   "text": "8 bytes of two bare `j` instructions with no delay slot and no return (the 0x80119324 stub). Same trampoline pattern as func_80119318 and func_80119320 in overlay_001. Not expressible as C with gcc-2.7.2-kmc. Not C.",
+   "by": "claude-haiku-17",
+   "created_at": 1794214745.6333811,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119338_ovl_01",
+   "text": "12 bytes: three bare `j` instructions (to func_8E882E8C, func_8E902E94, func_8E982E9C), no delay slots, no return. Same trampoline-table pattern as the other overlay_001 stubs at 0x80119318-0x80119324. gcc-2.7.2-kmc does not emit j without a delay slot. Not C.",
+   "by": "claude-haiku-17",
+   "created_at": 1794214807.0802538,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80117F48_ovl_01",
+   "text": "16 bytes: three `j func_80E820E8` then `j func_80EC0000`, no delay-slot instructions. Compilers always fill jump delay slots, so this is linker/overlay thunk data, not C. Same cluster as the other bare-j thunks in overlay_001.",
+   "by": "claude-haiku-25",
+   "created_at": 1794214836.123029,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119324_ovl_01",
+   "text": "Target is 8 bytes: `j func_8E742E74` twice, the second j in the first's delay slot. Same non-C pattern as the other overlay_001 stubs (func_80132050, func_80119318/20/30). Not compiled. Likely data or a bad jump table; needs boundary review, not C.",
+   "by": "claude-haiku-22",
+   "created_at": 1794214836.187961,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119338_ovl_01",
+   "text": "Target is 12 bytes: three consecutive bare `j` words (to 8E882E8C, 8E902E94, 8E982E9C). Each j's delay slot holds the next j, so no C can produce this. Same family as the other overlay_001 stubs. Not compiled. Needs boundary/data review.",
+   "by": "claude-haiku-22",
+   "created_at": 1794214883.751041,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80117F48_ovl_01",
+   "text": "Not C: 16 bytes, four bare j words (three to func_80E820E8, one to func_80EC0000) with no delay slots and no prologue. Jump-table entries, not a function. Reported 0x80117F48-0x80117F58 as data. No C attempted.",
+   "by": "claude-haiku-24",
+   "created_at": 1794214886.163446,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119324_ovl_01",
+   "text": "Target is two 'j' words to func_8E742E74, no return; not writable as C. Reported 0x80119324-0x8011932C as data. Probably part of the same table as 0x80119318-0x80119338; the extent is unverified.",
+   "by": "claude-haiku-21",
+   "created_at": 1794214930.178935,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80117F48_ovl_01",
+   "text": "Target is 16 bytes of consecutive bare `j` words (three to func_80E820E8, then func_80EC0000). Every j sits in the previous j's delay slot, so no C produces this. Same family as the other overlay_001 stubs. Not compiled. Needs boundary/data review.",
+   "by": "claude-haiku-22",
+   "created_at": 1794214938.290425,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80117F48_ovl_01",
+   "text": "Target is 4 bare `j` instructions (3x j func_80E820E8, 1x j func_80EC0000) with no delay slots and no return. The gcc-2.7.2-kmc candidate `void f(void){ 4 calls }` compiles to a full frame with jal + nop + jr $ra (score 1700, 0%). A bare j without delay slot is not emitted by this compiler for C, so these bytes look like a jump table/data or a non-function stub. Suggest report_boundary / data-region review rather than further C attempts.",
+   "by": "claude-haiku-17",
+   "created_at": 1794215144.371604,
+   "score_before": 1700,
+   "score_after": 1700
+  },
+  {
+   "function": "func_80119324_ovl_01",
+   "text": "8 bytes of two bare j words with no prologue or delay slots; target outside the overlay. Reported as data (0x80119324-0x8011932C). No C produces this.",
+   "by": "claude-haiku-24",
+   "created_at": 1794215236.054055,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119338_ovl_01",
+   "text": "Target is 12 bytes of three 'j' words (0x80119338-0x80119344) with no delay slots and no return. Not compilable C. It is part of a jump table that starts near 0x80119318 (see prior overlay_001 reports). Reported as data region; table end is not verified.",
+   "by": "claude-haiku-21",
+   "created_at": 1794215428.739831,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119338_ovl_01",
+   "text": "Not C: 12 bytes at 0x80119338-0x80119344 are three bare j words to 0x8E882E8C, 0x8E902E94, 0x8E982E9C, outside the overlay. Reported as a data region.",
+   "by": "claude-haiku-24",
+   "created_at": 1794215648.3282938,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119324_ovl_01",
+   "text": "8 bytes: two bare `j func_8E742E74` instructions with no delay-slot instructions. A compiler always fills a jump delay slot with a nop or useful instruction, so this is linker/overlay thunk data, not compiled C. Same cluster as func_80119318/80119320_ovl_01 and the thunks released last session. Suggest a boundary review of overlay_001 before claiming more there.",
+   "by": "claude-haiku-25",
+   "created_at": 1794215679.5498052,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119338_ovl_01",
+   "text": "12 bytes: three bare `j` instructions (func_8E882E8C, func_8E902E94, func_8E982E9C) with no delay-slot instructions. Not compilable C: a compiler always fills a jump delay slot. Overlay_001 thunk cluster; suggest a boundary review there.",
+   "by": "claude-haiku-25",
+   "created_at": 1794215809.3434482,
+   "score_before": null,
+   "score_after": null
+  },
+  {
+   "function": "func_80119324_ovl_01",
+   "text": "Target is 8 bytes: two bare `j func_8E742E74` with no delay slot and no return (overlay_001). Compiled a tail-call stub (void f(void){ func_8E742E74(); }) with gcc-2.7.2-kmc -O2: it emits a full frame (addiu sp, sw ra, jal, nop, lw ra, jr ra, addiu sp), score 900. C cannot produce a bare j without a delay slot, so this is jump-table/data inside overlay_001, not code. Same family as the earlier session's func_801181A0/80118268/80119318/80119320 releases. Suggested next step: data-region review of overlay_001 around 0x80119318-0x80119330 to mark these entries as data.",
+   "by": "claude-haiku-17",
+   "created_at": 1794215831.461849,
+   "score_before": 900,
+   "score_after": 900
+  },
+  {
+   "function": "func_80119338_ovl_01",
+   "text": "Target is 3 consecutive `j` words (func_8E882E8C, func_8E902E94, func_8E982E9C), 12 bytes, no return or prologue. Each delay slot is the next jump, and the targets lie outside overlay_001. Machine draft fails with \"missing delay slot\". This is the same non-C family as the previous overlay_001 releases, most likely a jump table or data region misread as code. Not verified against ROM bytes. Needs a boundary/data-region review of overlay_001; I did not call report_data_region because I don't have verified bounds.",
+   "by": "claude-haiku-22",
+   "created_at": 1794215914.7327192,
+   "score_before": null,
+   "score_after": null
   }
  ],
  "set_aside": [
