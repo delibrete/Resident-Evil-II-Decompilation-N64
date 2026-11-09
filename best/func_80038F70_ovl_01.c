@@ -6,7 +6,7 @@ void func_80038F70_ovl_01(s32 arg0) {
     u8 *v1 = D_800EEB4C_ovl_01 - 0x2E68;
     s32 a0;
 
-    do {
+    __repair_rows: {
         a1 += 0x7C;
         if (v1[5] == arg0) {
             v1[-0x17] = 0;
@@ -14,7 +14,8 @@ void func_80038F70_ovl_01(s32 arg0) {
             *(u16 *)v1 = 0;
         }
         v1 += 0x7C;
-    } while (a1 != a2);
+    }
+if (a1 != a2) goto __repair_rows;
 
     a2 = D_800EEB4C_ovl_01 - 0x2E80;
     a1 = D_800EEB4C_ovl_01 - 0x2E68;

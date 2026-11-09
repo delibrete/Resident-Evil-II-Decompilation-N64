@@ -1,17 +1,19 @@
-extern s8 D_801362B1_ovl_01;
-int func_800A85AC_ovl_01(void)
-{
-  volatile long new_var6;
-  volatile long new_var;
-  volatile long new_var2;
-  volatile int new_var5;
-  int new_var4;
-  unsigned char new_var3;
-  new_var5 = (new_var = 0x2A);
-  new_var6 = (new_var = new_var4);
-  new_var4 = new_var5;
-  new_var3 = new_var6;
-  new_var2 = (unsigned int) ((unsigned short) new_var3);
-  D_801362B1_ovl_01 = new_var2;
-}
+s32 func_800AC71C_overlay_001(s32 a, s32 b);
+s32 func_800A6260_overlay_001(s32 a, s32 b, s32 c);
 
+s32 func_800A85AC_ovl_01(s32 a0, s32 a1, s32 a2) {
+    s32 s0 = a1 & 0xFF;
+    s32 s1;
+    s32 r;
+    if (s0 == 0xFF) {
+        return -1;
+    }
+    s1 = a2 & 0xFF;
+    if (func_800AC71C_overlay_001(s0, s1) & 0xFF) {
+        r = func_800A6260_overlay_001(a0 & 0x7F, s0, s1);
+        if (r != -1) {
+            return r;
+        }
+    }
+    return -1;
+}
