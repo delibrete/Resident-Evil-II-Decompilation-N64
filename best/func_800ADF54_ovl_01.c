@@ -8,6 +8,7 @@ s32 func_800AB3DC_ovl_01(void *a, void *base, s32 n, s32 stride, void *cmp);
 s32 func_800ADF54_ovl_01(s32 arg0, s16 *arg1) {
     u8 *p;
     s32 v;
+    s32 buf[2];
 
     p = D_8014E0F0;
     *(s16 *)(p + 4) = arg0;

@@ -1,31 +1,14 @@
-extern void func_800439B8_ovl_01(void *, s32, s32);
+extern s32 func_800439B8_ovl_01(s32 arg0, void *arg1, s32 arg2, s32 arg3);
 
-void func_80043960_ovl_01(void *x, s32 *a1)
-{
-  volatile struct {
-    s32 a;
-    s32 b;
-    s32 c;
-    s32 d;
-    s32 e;
-  } v;
-  s32 p0;
-  s32 p1;
-  s32 p2;
-  s32 p3;
-  s32 p4;
+typedef struct { s32 w[5]; } Blk;
 
-  p0 = a1[0];
-  p1 = a1[1];
-  p2 = a1[2];
-  p3 = a1[3];
-  v.a = p0;
-  v.b = p1;
-  v.c = p2;
-  v.d = p3;
-  p4 = a1[4];
-  v.e = p4;
-  ((volatile u16 *)&v)[9] = 8;
-  ((volatile u16 *)&v)[8] = 8;
-  func_800439B8_ovl_01(&v, 0, 0);
+s32 func_80043960_ovl_01(s32 arg0, s32 *arg1) {
+    Blk buf;
+    u16 *h;
+
+    buf = *(Blk *)arg1;
+    h = (u16 *)&buf.w[4];
+    h[1] = 8;
+    h[0] = 8;
+    return func_800439B8_ovl_01(arg0, &buf, 0, 0);
 }
