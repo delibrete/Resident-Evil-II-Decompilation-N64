@@ -1,14 +1,22 @@
-extern s8 D_800E9118_ovl_01;
-extern s8 D_800E9128_ovl_01;
-extern s8 D_800C7650_ovl_01;
-void func_8002751C_ovl_01(s8 a, s16 b) { *(s16 *)((u8 *)&D_800E9118_ovl_01+0xD6)=b; *(s8 *)((u8 *)&D_800E9118_ovl_01+0xC8)=a; }
-void func_800275F8_ovl_01(s32 a, s16 b, s32 c, u16 *d) {
- u8 *p=(u8 *)&D_800E9128_ovl_01+a*0x2C;
- u8 *q=(u8 *)&D_800C7650_ovl_01+0x18000;
- *(s16 *)p=b;
- *(s32 *)(p+(((u8)q[0x538])*0x10)+0x10)=c|((u32)p[0x13]<<24);
- if(d){ *(u16 *)(p+0x14)=d[0]; *(u16 *)(p+0x16)=d[1]; *(u16 *)(p+0x18)=d[2]; *(u16 *)(p+0x1A)=d[3]; }
- else { *(u32 *)(p+0x14)=0; *(u32 *)(p+0x18)=0x014000F0; }
+extern u8 D_800C7650_overlay_001[];
+extern u8 D_800E9128_overlay_001[];
+
+void func_800275F8_ovl_01(s32 arg0, s16 arg1, s32 arg2, void *arg3) {
+    volatile s32 off = 0x18000;
+    u8 *temp_a0;
+    u8 idx;
+
+    temp_a0 = D_800E9128_overlay_001 + arg0 * 0x2C;
+    *(s16 *)temp_a0 = arg1;
+    idx = D_800C7650_overlay_001[off + 0x538];
+    *(s32 *)(temp_a0 + idx * 16 + 0x10) = arg2 | (temp_a0[0x13] << 24);
+    if (arg3 != NULL) {
+        *(u16 *)(temp_a0 + 0x14) = ((u16 *)arg3)[0];
+        *(u16 *)(temp_a0 + 0x16) = ((u16 *)arg3)[1];
+        *(u16 *)(temp_a0 + 0x18) = ((u16 *)arg3)[2];
+        *(u16 *)(temp_a0 + 0x1A) = ((u16 *)arg3)[3];
+        return;
+    }
+    *(s32 *)(temp_a0 + 0x14) = 0;
+    *(s32 *)(temp_a0 + 0x18) = 0x014000F0;
 }
-void func_80027688_ovl_01(s32 a) { *(s16 *)((u8 *)&D_800E9118_ovl_01+a*0x2C+0x10)=-1; }
-u32 func_800276B4_ovl_01(s32 a) { return (u32)*(s16 *)((u8 *)&D_800E9118_ovl_01+a*0x2C+0x10)>>31; }

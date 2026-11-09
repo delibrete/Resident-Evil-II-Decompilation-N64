@@ -1,7 +1,7 @@
 {
  "format": 1,
- "saved_at": 1794209563.699709,
- "revision": 38959,
+ "saved_at": 1794209720.079773,
+ "revision": 38969,
  "title": "Resident Evil II",
  "platform": "n64",
  "game": {
@@ -18278,6 +18278,116 @@
     "-mfp64"
    ],
    "timeout": 20
+  },
+  "67551936:2148019520": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_80082D40_ovl_01",
+   "vram": 2148019520
+  },
+  "67291596:2147759180": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_8004344C_ovl_01",
+   "vram": 2147759180
+  },
+  "67171440:2147639024": {
+   "toolchain": "sn-n64-281",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-O2",
+    "-mgas",
+    "-meb",
+    "-mcpu=VR4300",
+    "-mhard-float",
+    "-mfp64"
+   ],
+   "timeout": 20,
+   "function": "func_80025EF0",
+   "vram": 2147639024
+  },
+  "67223744:2147691328": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_80032B40_ovl_01",
+   "vram": 2147691328
+  },
+  "67457876:2147925460": {
+   "toolchain": "sn-n64-281",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-O2",
+    "-mgas",
+    "-meb",
+    "-mcpu=VR4300",
+    "-mhard-float",
+    "-mfp64"
+   ],
+   "timeout": 20,
+   "function": "func_8006BDD4_ovl_01",
+   "vram": 2147925460
+  },
+  "67420704:2147888288": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_80062CA0_ovl_01",
+   "vram": 2147888288
+  },
+  "67177336:2147644920": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_800275F8_ovl_01",
+   "vram": 2147644920
+  },
+  "67355164:2147822748": {
+   "toolchain": "gcc-2.7.2-kmc",
+   "flags": [
+    "-G0",
+    "-mips3",
+    "-mgp32",
+    "-mfp32",
+    "-O2"
+   ],
+   "timeout": 20,
+   "function": "func_80052C9C_ovl_01",
+   "vram": 2147822748
   }
  },
  "instructions": "",
@@ -20112,8 +20222,8 @@
   },
   "func_80025EF0": {
    "vram": 2147639024,
-   "best_score": 540,
-   "best_by": "codex-gpt-6-luna-10"
+   "best_score": 160,
+   "best_by": "claude-haiku-23"
   },
   "func_80025F34": {
    "vram": 2147639092,
@@ -20232,8 +20342,8 @@
   },
   "func_800275F8_ovl_01": {
    "vram": 2147644920,
-   "best_score": 1130,
-   "best_by": "Reggie.saved-progress"
+   "best_score": 925,
+   "best_by": "claude-haiku-23"
   },
   "func_80027688_ovl_01": {
    "vram": 2147645064,
@@ -20642,8 +20752,8 @@
   },
   "func_80030F48_ovl_01": {
    "vram": 2147684168,
-   "best_score": 420,
-   "best_by": "claude-haiku-17"
+   "best_score": 410,
+   "best_by": "claude-haiku-25"
   },
   "func_80030FD4_ovl_01": {
    "vram": 2147684308,
@@ -20697,8 +20807,8 @@
   },
   "func_80032B40_ovl_01": {
    "vram": 2147691328,
-   "best_score": 580,
-   "best_by": "Retroreversing.permuter-2491"
+   "best_score": 550,
+   "best_by": "codex-gpt-6-luna-15"
   },
   "func_80032B8C_ovl_01": {
    "vram": 2147691404,
@@ -20772,7 +20882,7 @@
   },
   "func_80033634_ovl_01": {
    "vram": 2147694132,
-   "best_score": 1780,
+   "best_score": 1775,
    "best_by": "claude-haiku-22"
   },
   "func_800336B0_ovl_01": {
@@ -21237,8 +21347,8 @@
   },
   "func_8004344C_ovl_01": {
    "vram": 2147759180,
-   "best_score": 1110,
-   "best_by": "autopilot"
+   "best_score": 750,
+   "best_by": "claude-haiku-17"
   },
   "func_80043490_ovl_01": {
    "vram": 2147759248,
@@ -21777,8 +21887,8 @@
   },
   "func_80052C9C_ovl_01": {
    "vram": 2147822748,
-   "best_score": 1700,
-   "best_by": "Reggie.saved-progress"
+   "best_score": 745,
+   "best_by": "claude-haiku-25"
   },
   "func_80052D40_ovl_01": {
    "vram": 2147822912,
@@ -22017,8 +22127,8 @@
   },
   "func_80062CA0_ovl_01": {
    "vram": 2147888288,
-   "best_score": 525,
-   "best_by": "claude-haiku-17"
+   "best_score": 475,
+   "best_by": "claude-haiku-24"
   },
   "func_80062D2C_ovl_01": {
    "vram": 2147888428,
@@ -22227,8 +22337,8 @@
   },
   "func_8006BDD4_ovl_01": {
    "vram": 2147925460,
-   "best_score": 2595,
-   "best_by": "Retroreversing.permuter-2839"
+   "best_score": 915,
+   "best_by": "claude-haiku-23"
   },
   "func_8006BE40_ovl_01": {
    "vram": 2147925568,
@@ -22727,8 +22837,8 @@
   },
   "func_80082D40_ovl_01": {
    "vram": 2148019520,
-   "best_score": 685,
-   "best_by": "Reggie.saved-progress"
+   "best_score": 605,
+   "best_by": "claude-haiku-25"
   },
   "func_80083778_ovl_01": {
    "vram": 2148022136,
@@ -72998,14 +73108,6 @@
    "score_after": 545
   },
   {
-   "function": "func_800275F8_ovl_01",
-   "text": "Tried the m2c arithmetic and pointer formulations. Best score 1130/144; target's explicit 0x18000 immediate base and D_800C7650 relocation cannot currently be reproduced: compiler folds it to D_800DFB88. Remaining diff includes reordered early load/store, target branch one instruction farther, return/tail branch placement.",
-   "by": "codex-gpt-6-luna-1",
-   "created_at": 1793884663.474324,
-   "score_before": 1130,
-   "score_after": 1130
-  },
-  {
    "function": "func_800276B4_ovl_01",
    "text": "Best 210. Pointer arithmetic matches first 8 instructions; attempted signed test and explicit signed temporary, but GCC folds the s16 load to lhu and shifts by 15 instead of target lh + srl 31. Need a C shape preventing that optimization.",
    "by": "codex-gpt-6-luna-1",
@@ -73172,14 +73274,6 @@
    "created_at": 1793884664.02253,
    "score_before": 100,
    "score_after": 100
-  },
-  {
-   "function": "func_80032B40_ovl_01",
-   "text": "Best 690 from autopilot. Three compiled experiments with direct unsigned comparisons/local scheduling did not improve; one source was worse due compiler folding pointer load. Needs explicit C shaped to retain p in a2 and separate two return paths; use signed s16 loads for b[0..3], and compare `(u32)b[2] < (u32)(p[0]-b[0])` as in draft.",
-   "by": "codex-gpt-6-luna-1",
-   "created_at": 1793884664.045794,
-   "score_before": 655,
-   "score_after": 655
   },
   {
    "function": "func_80032B8C_ovl_01",
@@ -73628,14 +73722,6 @@
    "created_at": 1793884665.280189,
    "score_before": 20140,
    "score_after": 20140
-  },
-  {
-   "function": "func_8004344C_ovl_01",
-   "text": "First function (ends at 0x8004346C, boundary reported): *arg0 = ((s32)(s16)D_80139A20 << 16) | *(u16*)(D_80139A20+2). Best C matches 7 of 8 instructions; only difference is that the ROM materialises the base once with `lui $v0,%hi(D); addiu $v1,$v0,%lo(D)` and reads +2 via v1, while KMC emits `lui $v1,%hi(D_80139A22); lhu %lo(D_80139A22)` (absolute symbol+offset). Same provided-compiler split-address difference; not reachable from C. The claimed range also contains a second function at 0x8004346C (3 s16 -> 3 s32 copy), hence the 17-insn target.",
-   "by": "opencode-deepseek-v4.1-flash-1",
-   "created_at": 1793884665.30301,
-   "score_before": 1110,
-   "score_after": 1110
   },
   {
    "function": "func_80042DDC_ovl_01",
@@ -76380,14 +76466,6 @@
    "created_at": 1793884671.9002619,
    "score_before": 7880,
    "score_after": 7880
-  },
-  {
-   "function": "func_80025EF0",
-   "text": "Three compiles; best 550. Tried raw pointer indexing and struct field access. Target writes D_800C7620+8, D_800C7618+0, loads D_800C5268, then stores pointer at D_800C7618+4 and value into D_800C7620. Current context declares globals as scalar, so struct typedef field offsets collide with separate globals and produce wrong absolute addresses; needs correcting data/struct declarations and one-argument helper signature.",
-   "by": "codex-gpt-6-luna-1",
-   "created_at": 1793884671.9170098,
-   "score_before": 540,
-   "score_after": 540
   },
   {
    "function": "func_80047B34_ovl_01",
@@ -82150,14 +82228,6 @@
    "score_after": 0
   },
   {
-   "function": "func_80052C9C_ovl_01",
-   "text": "Compiled the prior best source variant with explicit extern declarations and pointer writes. Scores did not improve; best remains prior attempt (1675/1700). Main remaining issues: expected saved-register allocation and data/global-address codegen; compiler emits absolute stores via $at. No further useful iteration before move-on threshold.",
-   "by": "codex-gpt-6-luna-1",
-   "created_at": 1793884684.5615518,
-   "score_before": 1700,
-   "score_after": 1700
-  },
-  {
    "function": "func_80052E24_ovl_01",
    "text": "Tried loop pointer variants and signed/unsigned global declarations. Best score 945. Loop and instruction count match, but compiler register allocation diverges; tail pointer stores and byte stores differ because the toolchain materializes globals via $at. Likely compiler split-symbol addressing limitation.",
    "by": "codex-gpt-6-luna-1",
@@ -82206,14 +82276,6 @@
    "score_after": 735
   },
   {
-   "function": "func_80062CA0_ovl_01",
-   "text": "Best 545, exact instruction count and arithmetic broadly matches. Remaining differences are predominantly register allocation and scheduler: argument remains in f4 vs target f12, globals use $at instead of v0, compiler combines division by -y before loading the multiplier and omits target separate neg.s/div operations; final integer conversion feeds a1 instead of a0.",
-   "by": "codex-gpt-6-luna-1",
-   "created_at": 1793884684.731523,
-   "score_before": 525,
-   "score_after": 525
-  },
-  {
    "function": "func_80053290_ovl_01",
    "text": "Cannot get closer: all remaining diffs are the split-symbol/register-coalescing ceiling (D_8010C220+2 folds to symbol D_8010C222; t0 and v1 coalesce). Tried array types, local base pointer and struct subobject. Please release.",
    "by": "opencode-deepseek-v4.1-flash-low-1",
@@ -82244,14 +82306,6 @@
    "created_at": 1793884684.815226,
    "score_before": 635,
    "score_after": 635
-  },
-  {
-   "function": "func_8006BDD4_ovl_01",
-   "text": "Additional compile repeated the best score 2810 and confirmed the direct-global/split-address codegen ceiling and byte-array stores are not matching with this compiler. No better in 3/3 consecutive compiles; best saved attempt retained.",
-   "by": "codex-gpt-6-luna-1",
-   "created_at": 1793884684.854292,
-   "score_before": 2595,
-   "score_after": 2595
   },
   {
    "function": "func_80011390",
@@ -82308,14 +82362,6 @@
    "created_at": 1793884685.0479512,
    "score_before": 0,
    "score_after": 0
-  },
-  {
-   "function": "func_80032B40_ovl_01",
-   "text": "Best 655. First 6 insns exact (arg0 copied to a2; p[0]-b[0]; sltu). ROM then has `bnez a0, ret0; nop`, computes the second test, `beqz a0, ret1; nop`, and has two separate jr-ra returns (ret0: addu v0,zero,zero; ret1: addiu v0,zero,1). This cc1 collapses the two-if-return-0/1 into `xori v0,v0,1; jr ra` in every form tried (including `if(!cond2) return 1; return 0;`), and puts move v0,zero in the first bnez delay. Remaining diff is that return-shape optimization + register swaps (v0/v1/a0 in second test).",
-   "by": "opencode-deepseek-v4.1-flash-low-1",
-   "created_at": 1793884685.0695639,
-   "score_before": 655,
-   "score_after": 655
   },
   {
    "function": "func_8006D138_ovl_01",
@@ -82604,14 +82650,6 @@
    "created_at": 1793884685.687186,
    "score_before": 320,
    "score_after": 320
-  },
-  {
-   "function": "func_80082D40_ovl_01",
-   "text": "Three compile attempts, best score 685. C adjusted base pointer to force D_801314F0 symbol but then address split differs; compiler expands each field into separate absolute symbols. Remaining mismatch is stable and likely compiler split-symbol addressing limitation.",
-   "by": "codex-gpt-6-luna-1",
-   "created_at": 1793884685.766863,
-   "score_before": 685,
-   "score_after": 685
   },
   {
    "function": "func_80083800_ovl_01",
@@ -83460,14 +83498,6 @@
    "created_at": 1793884687.730808,
    "score_before": 0,
    "score_after": 0
-  },
-  {
-   "function": "func_80032B40_ovl_01",
-   "text": "Score 655; dual-return pattern collapse: target has separate bnez/beqz with distinct jr ra and move/addiu v0; C collapses to move v0,zero; jr ra and xori v0,v0,1; jr ra. Register allocation and lh/lw differences. Codegen ceiling for KMC 2.7.2; cannot force dual-return without inline asm. Release.",
-   "by": "opencode-nemotron-3.5-lightning-f-1",
-   "created_at": 1793884687.736942,
-   "score_before": 655,
-   "score_after": 655
   },
   {
    "function": "func_80009120",
@@ -84582,14 +84612,6 @@
    "score_after": 30275
   },
   {
-   "function": "func_800275F8_ovl_01",
-   "text": "Score 1130; diff: target uses lui $t0,1 / ori 0x8000 and D_800C7650 base; our C folds base to D_800DFB88, causing mismatched lui/ori and load offsets. Also branch delay and store ordering differ. Pure C cannot match without correct split\u2011base codegen (u64 temp trick). Next agent can try u64 base or adjust flags.",
-   "by": "opencode-nemotron-3.5-lightning-f-1",
-   "created_at": 1793884690.592028,
-   "score_before": 1130,
-   "score_after": 1130
-  },
-  {
    "function": "func_8015C5A4_ovl_03",
    "text": "I cannot make a useful next C step from this claim in this session: the only compiled source was an empty stub, while the best attempt is an extensive generated draft with unresolved object layouts and float code. Its 18138 score is still the best. Leave it for a fresh agent to start from that full draft; the stub diff confirms all 309 target instructions are absent.",
    "by": "codex-gpt-6-luna-1",
@@ -85108,14 +85130,6 @@
    "created_at": 1793884692.617939,
    "score_before": 910,
    "score_after": 910
-  },
-  {
-   "function": "func_800275F8_ovl_01",
-   "text": "Cannot get closer: the only remaining blocker is the game-wide split-data-address ceiling. The ROM keeps `D_800C7650` as a symbol base and adds 0x18000 in a register (`lui $t0,1; ori $t0,$t0,0x8000; ...; addu v0,v0,$t0`), while this cc1 always constant-folds `D_800C7650+0x18000+0x538` into the synthetic `D_800DFB88`. u64 reproduces the split but adds a dead `move high,zero` and an 8-byte frame (score 1275, 40 insns); all pointer/volatile forms fold (score 1130). Nothing in the C can prevent the fold because the offset is a compile-time constant with no index term. Best source saved (1130) with full notes in the previous message. This needs the compiler/data-address suggestion to be applied, not more C.",
-   "by": "opencode-deepseek-v4.1-flash-low-1",
-   "created_at": 1793884692.626849,
-   "score_before": 1130,
-   "score_after": 1130
   },
   {
    "function": "func_80006650",
@@ -91726,14 +91740,6 @@
    "score_after": 19173
   },
   {
-   "function": "func_80062CA0_ovl_01",
-   "text": "Deep permuter: score 625 \u2192 625; 0 improvements; 26 candidates tested; 0 cached skips; 0 rejected; 153s elapsed. Budget rotation: soft allowance reached without recent progress.",
-   "by": "A.permuter-2785",
-   "created_at": 1793884704.4376261,
-   "score_before": 525,
-   "score_after": 525
-  },
-  {
    "function": "func_801672B0_ovl_17",
    "text": "Deep permuter: score 1010 \u2192 1010; 0 improvements; 26 candidates tested; 0 cached skips; 0 rejected; 152s elapsed. Budget rotation: soft allowance reached without recent progress.",
    "by": "A.permuter-4461",
@@ -93676,14 +93682,6 @@
    "created_at": 1793884706.90844,
    "score_before": 1202,
    "score_after": 955
-  },
-  {
-   "function": "func_80025EF0",
-   "text": "Deep permuter: score 2390 \u2192 2390; 0 improvements; 22 candidates tested; 0 cached skips; 0 rejected; 186s elapsed. Budget rotation: soft allowance reached without recent progress.",
-   "by": "A.permuter-7000",
-   "created_at": 1793884706.916872,
-   "score_before": 540,
-   "score_after": 540
   },
   {
    "function": "func_801624E8_overlay_022",
@@ -98302,14 +98300,6 @@
    "score_after": 28447
   },
   {
-   "function": "func_80082D40_ovl_01",
-   "text": "Deep permuter: score 685 \u2192 685; 0 improvements; 1 candidates tested; 3 cached skips; 0 rejected; 94s elapsed. Budget rotation: soft allowance reached without recent progress.",
-   "by": "Retroreversing.permuter-2967",
-   "created_at": 1793960335.919979,
-   "score_before": 685,
-   "score_after": 685
-  },
-  {
    "function": "func_80038A50_ovl_01",
    "text": "Deep permuter: score 15503 \u2192 15503; 0 improvements; 6 candidates tested; 29 cached skips; 0 rejected; 67s elapsed. Budget rotation: soft allowance reached without recent progress.",
    "by": "Retroreversing.permuter-2537",
@@ -102542,14 +102532,6 @@
    "score_after": 1007
   },
   {
-   "function": "func_800275F8_ovl_01",
-   "text": "Deep permuter: score 1130 \u2192 1130; 0 improvements; 4 candidates tested; 29 cached skips; 0 rejected; 63s elapsed. Budget rotation: soft allowance reached without recent progress.",
-   "by": "Retroreversing.permuter-2402",
-   "created_at": 1793955687.321662,
-   "score_before": 1130,
-   "score_after": 1130
-  },
-  {
    "function": "func_80164BC4_ovl_33",
    "text": "Deep permuter: score 3300 \u2192 3300; 0 improvements; 7 candidates tested; 27 cached skips; 0 rejected; 70s elapsed. Budget rotation: soft allowance reached without recent progress.",
    "by": "Retroreversing.permuter-5282",
@@ -102780,14 +102762,6 @@
    "created_at": 1793884727.489249,
    "score_before": null,
    "score_after": null
-  },
-  {
-   "function": "func_80032B40_ovl_01",
-   "text": "Deep permuter: score 580 \u2192 580; 0 improvements; 9 candidates tested; 1 cached skips; 0 rejected; 68s elapsed. Budget rotation: soft allowance reached without recent progress.",
-   "by": "Retroreversing.permuter-2491",
-   "created_at": 1793948271.091163,
-   "score_before": 580,
-   "score_after": 580
   },
   {
    "function": "func_800AF150_ovl_01",
@@ -104494,14 +104468,6 @@
    "score_after": 0
   },
   {
-   "function": "func_80025EF0",
-   "text": "Deep permuter: score 2100 \u2192 2100; 0 improvements; 2 candidates tested; 6 cached skips; 0 rejected; 72s elapsed. Budget rotation: soft allowance reached without recent progress.",
-   "by": "Retroreversing.permuter-7000",
-   "created_at": 1793957982.837906,
-   "score_before": 2100,
-   "score_after": 2100
-  },
-  {
    "function": "func_80000F08",
    "text": "Current supplied source rechecks at score 765. A typed linked-list rewrite produced the same code and score; signedness family for temp_t7 worsened to 1735. Target's main mismatch is register allocation and an extra retained predecessor pointer: it starts with `move t9,a0`, uses t8/t7/t6 for node/key temporaries, and has a `beqz` loop exit; KMC currently allocates v-registers and emits a different branch layout. Continue with original node/key widths or compiler mapping.",
    "by": "codex-gpt-6-luna-10",
@@ -104924,14 +104890,6 @@
    "created_at": 1793956130.706624,
    "score_before": 1588,
    "score_after": 1588
-  },
-  {
-   "function": "func_80025EF0",
-   "text": "Current candidate score 2110; compiling the one-block setup source reproduced it, with only 19 instructions against a 34-instruction target. Target assembly clearly contains two consecutive setup-and-call sequences: one initializes D_800C7620 with 2 and calls func_800879D0; the second initializes D_800C762C with 3 and calls the same callee. Best source only emits the first sequence. Next step: add the analogous second sequence using D_800C762C, likely helper call arguments point to D_800C7618 and D_800C762C, then compare instruction ordering/address forms.",
-   "by": "codex-gpt-6-luna-9",
-   "created_at": 1793884730.669457,
-   "score_before": 2390,
-   "score_after": 2110
   },
   {
    "function": "func_80171744_overlay_045",
@@ -105956,14 +105914,6 @@
    "created_at": 1793958636.6201,
    "score_before": 1931,
    "score_after": 1931
-  },
-  {
-   "function": "func_80025EF0",
-   "text": "Confirmed the claimed 34-instruction extent was two routines and split at 0x80025F34 (first ends after jr delay slot at 0x80025F30). Current first routine remains unmatched; best C is volatile pointer form (score 540): initialize q=&D_800C7620, p=&D_800C7618; q[2]=0; p[0]=2; p[1]=(s32)q; q[0]=D_800C5268; call func_800879D0_ovl_01((s32)p). Next inspect exact diff and try delaying p address calculation until after q[2] store; variable declarations after statements fail under project C dialect. The best diff still differs chiefly in global address setup/scheduling; no reusable compiler convention established.",
-   "by": "codex-gpt-6-luna-10",
-   "created_at": 1793884731.961718,
-   "score_before": 2110,
-   "score_after": 540
   },
   {
    "function": "func_80162660_ovl_29",
@@ -109022,14 +108972,6 @@
    "score_after": 235
   },
   {
-   "function": "func_80062CA0_ovl_01",
-   "text": "Deep permuter: score 525 \u2192 525; 0 improvements; 3 candidates tested; 23 cached skips; 0 rejected; 65s elapsed. Budget rotation: soft allowance reached without recent progress.",
-   "by": "Retroreversing.permuter-2785",
-   "created_at": 1793949162.616267,
-   "score_before": 525,
-   "score_after": 525
-  },
-  {
    "function": "func_800854BC_ovl_01",
    "text": "Deep permuter: score 7420 \u2192 7420; 0 improvements; 1 candidates tested; 2 cached skips; 0 rejected; 61s elapsed. Budget rotation: soft allowance reached without recent progress.",
    "by": "Retroreversing.permuter-3000",
@@ -111174,14 +111116,6 @@
    "score_after": 2100
   },
   {
-   "function": "func_80032B40_ovl_01",
-   "text": "Real rect-overlap test: arg0 is s32 pair (x at [0], y at [2]), arg1 is s16 box (x0 [0], y0 [1], x-range [2], y-range [3]). Form that works: `if ((u32)(arg0[0]-arg1[0]) > (u32)arg1[2]) return 0; if ((u32)(arg0[2]-arg1[1]) > (u32)arg1[3]) return 0; return 1;` scores 655 (65.5%). Remaining diff: target loads a1[2] (y0) before the first compare and does the second check as `r < d` with fall-through to return 0 (beqz to the return-1 block, `li v0,1` at the end); my versions emit xori and a different branch layout. Try a local that holds y-diff computed up front, or `return !(r < d)` shapes. Existing best attempt in the notes (655) is from a different function body and is not the right shape.",
-   "by": "claude-haiku-20",
-   "created_at": 1793884740.232976,
-   "score_before": 655,
-   "score_after": 655
-  },
-  {
    "function": "func_800482C4_ovl_01",
    "text": "Target: mtc1 $zero,$f0; c.lt.s $f0,$f12; bc1t L30; fallthrough (x<=0): D8940/x, D8944 - that; L30 (x>0): D8948/x, D894C - that. Best 820 (57%). Compiler emits an extra nop after mtc1 and bc1t/bc1f polarity is off; the `x > 0.0f` form and `!(0<x)` form both score worse. Still need the right condition form so the fallthrough block is D8940/D8944. Not tried: writing the compare as c.le/if-else with the two returns swapped, or using a volatile float compare.",
    "by": "claude-haiku-19",
@@ -111990,14 +111924,6 @@
    "score_after": 600
   },
   {
-   "function": "func_80062CA0_ovl_01",
-   "text": "Best 525 (85.0%, revision 695b4c53e680c5e4aa7a; fe36dbb03ec56a438074 same score). Signature: f32 arg in $f12 (returns s32 masked &0xFFFF). Semantics: a = arg*D_8011113C; if ((f64)a < D_800B91A8) a = D_800B91B0; n = -a; v = (n*D_800EFBF4 + D_800EFBF8) / -n; v = v*D_800B91B4 + D_800B91B4; return func_80062BB0((s32)v<<16>>13) & 0xFFFF. Structure matches (the cond skips the load of D_800B91B0 when false, so the select is a branch to the merge point). Remaining diff is register/scheduling: target loads through $v0 for the globals (lui $v0, %hi(...) + lwc1 $f0), while mine uses $at; the divisor neg is computed in place in $f12 in the target, and the final $ft0 is loaded before the divide. Attempts: 4 compiles, no gain from the -n temp form. Next: try the loads through a pointer variable, or move the scale multiply into a separate statement.",
-   "by": "claude-haiku-17",
-   "created_at": 1793884741.2997792,
-   "score_before": 545,
-   "score_after": 525
-  },
-  {
    "function": "func_8006D748_ovl_01",
    "text": "Loop over 0x1C-byte records. Target: base = D_8010BBD4 (lui $v0 / addiu $a1), count = lbu 0x34A($a1), loop over p=s0 from base: if (flags&0x80) jal FC64(i=s1, p=s0); else if (flags&0x40) jal FC6C(i, p); both then p+=0x1C in a delay slot; i++ and sltu loop. Frame 0x20 with ra/s0/s1/s2 saved. Best C here: 675 (revision 334c78f64a756f640883): for-loop with n = D_8010BBD4[0x34A] and p = D_8010BBD4 as u8 array. Remaining diffs: the compiler folds 0x34A into the symbol address and spills to a 0x28 frame (it keeps p in s1 with a separate base). Using &D_8010BBD4 as a pointer local was worse (1656). Untested: an s32 index with (u8*)D + i*0x1C, or a while loop that tests n first (target has beqz s2 at top).",
    "by": "claude-haiku-19",
@@ -112036,14 +111962,6 @@
    "created_at": 1793948275.30812,
    "score_before": 570,
    "score_after": 570
-  },
-  {
-   "function": "func_800275F8_ovl_01",
-   "text": "Stride is 0x2C: p = D_800E9128 + a0*44 (sll/addu/subu chain: 3a, 12a, 11a, 44a). Stores: sh a1 at p+0; q = p + (byte D_800C7650[0x18000+0x538] << 4); sw (a2 | p[0x13]<<24) at q+0x10; if a3 != 0: four lhu a3[0..3] stored at p+0x14/16/18/1A; else sw 0 at p+0x14 and sw 0x14000F0 at p+0x18. Target builds 0x18000 in $t0 (lui 1; ori 0x8000) and adds to D_800C7650 with addiu, then lbu 0x538. Best this session: 1270 (revision 9efd6beaaee4ab562750; saved best 1130 is from a different source). Remaining: the compiler orders the table lookup before the sh and does not keep 0x18000 in $t0 (variable off gave 1775). Untested: keep the byte load in its own statement after the sh with the same base expression.",
-   "by": "claude-haiku-19",
-   "created_at": 1793884741.343515,
-   "score_before": 1130,
-   "score_after": 1130
   },
   {
    "function": "func_80087D74_ovl_01",
@@ -114748,14 +114666,6 @@
    "created_at": 1793884744.154469,
    "score_before": null,
    "score_after": null
-  },
-  {
-   "function": "func_80052C9C_ovl_01",
-   "text": "Target frame is 0x28; saves s1..s4 and ra. Prologue order matters: args go to s2=a0 (s16 a), s3=a1 (s8 b), s4=a2 (s16 c) first, then the constant 1 sits in s1 and is stored to D_800E9098 (lui/sw) before the first jal to func_80052F40 and reused as *p=1 after the jal to func_80052F1C. Saved best (1700) is the draft from the brief. Tried: draft as-is (1900, 41 insns, prologue puts D-store and p-address first, no s1 holding 1); `s32 one=1` local (1888, frame 0x30, wrong save order). Not tried: forcing arg copies before the store (e.g. through volatile-free temporaries), or a 1700-basis tweak. Helpers: func_80052F40 returns s32, func_80052F1C returns s8*.",
-   "by": "claude-haiku-18",
-   "created_at": 1793884744.171803,
-   "score_before": 1700,
-   "score_after": 1700
   },
   {
    "function": "func_800B6728_ovl_01",
@@ -119142,14 +119052,6 @@
    "score_after": 1230
   },
   {
-   "function": "func_80052C9C_ovl_01",
-   "text": "Deep permuter: score 1700 \u2192 1700; 0 improvements; 1 candidates tested; 0 cached skips; 0 rejected; 65s elapsed. Budget rotation: soft allowance reached without recent progress.",
-   "by": "Retroreversing.permuter-2721",
-   "created_at": 1793956987.4682071,
-   "score_before": 1700,
-   "score_after": 1700
-  },
-  {
    "function": "func_801809A0_ovl_02",
    "text": "Deep permuter: score 4262 \u2192 4262; 0 improvements; 1 candidates tested; 0 cached skips; 0 rejected; 66s elapsed. Budget rotation: soft allowance reached without recent progress.",
    "by": "Retroreversing.permuter-3756",
@@ -122278,14 +122180,6 @@
    "score_after": 60
   },
   {
-   "function": "func_8004344C_ovl_01",
-   "text": "Deep permuter: score 1110 \u2192 1110; 0 improvements; 2 candidates tested; 0 cached skips; 0 rejected; 62s elapsed. Budget rotation: soft allowance reached without recent progress.",
-   "by": "Retroreversing.permuter-2597",
-   "created_at": 1793957049.1184692,
-   "score_before": 1110,
-   "score_after": 1110
-  },
-  {
    "function": "func_800B47B8_ovl_01",
    "text": "Deep permuter: score 2068 \u2192 2068; 0 improvements; 2 candidates tested; 3 cached skips; 0 rejected; 62s elapsed. Budget rotation: soft allowance reached without recent progress.",
    "by": "Retroreversing.permuter-3373",
@@ -125366,14 +125260,6 @@
    "score_after": 1845
   },
   {
-   "function": "func_8006BDD4_ovl_01",
-   "text": "Deep permuter: score 2595 \u2192 2595; 0 improvements; 1 candidates tested; 8 cached skips; 0 rejected; 60s elapsed. Budget rotation: soft allowance reached without recent progress.",
-   "by": "Retroreversing.permuter-2839",
-   "created_at": 1793959532.822161,
-   "score_before": 2595,
-   "score_after": 2595
-  },
-  {
    "function": "func_8017D1DC_ovl_02",
    "text": "Deep permuter: score 3984 \u2192 3984; 0 improvements; 1 candidates tested; 22 cached skips; 0 rejected; 60s elapsed. Budget rotation: soft allowance reached without recent progress.",
    "by": "Retroreversing.permuter-3705",
@@ -126300,14 +126186,6 @@
    "created_at": 1793937752.5892649,
    "score_before": null,
    "score_after": null
-  },
-  {
-   "function": "func_80032B40_ovl_01",
-   "text": "Released unworked: held in session scope but no compile made on it this session. Best saved attempt (655) is kept. Not investigated further.",
-   "by": "claude-haiku-20",
-   "created_at": 1793937877.591866,
-   "score_before": 655,
-   "score_after": 655
   },
   {
    "function": "func_801629F8_ovl_29",
@@ -137382,14 +137260,6 @@
    "score_after": 373
   },
   {
-   "function": "func_80030F48_ovl_01",
-   "text": "Best score 1160 with nested byte copy of row pointers, two loops (24 of 35 instructions). Target has an extra second code path after the first jr: halfword copy of length a2*64; need express that continuation plus preserve target's delayed load order. Variants of nested loops made no progress.",
-   "by": "codex-gpt-6-luna-1",
-   "created_at": 1793884663.6713269,
-   "score_before": 480,
-   "score_after": 480
-  },
-  {
    "function": "func_80025F78_ovl_01",
    "text": "Tried m2c-style pointer selection with u8/s16/u16 and padded struct representations; best score 3310/50 instructions. Main mismatch is compiler emitting global accesses via $at direct relocations and an extra initial arg2 load, while target computes both global base pointers in $a0/$v1 and schedules the loads/stores in branch delay slots. Need model both global blocks as one shared composite/padded object or find matching function pattern to encourage register-held base pointers. Conditional on arg1 needs target bnel form; simple if/else emitted bne. Constants init run also expands into repeated %lo($at) accesses rather than reused bases.",
    "by": "codex-gpt-6-luna-1",
@@ -137668,30 +137538,6 @@
    "created_at": 1793884688.542898,
    "score_before": 1180,
    "score_after": 1180
-  },
-  {
-   "function": "func_80030F48_ovl_01",
-   "text": "Function has two distinct loops: first copies t0 bytes from *a0 to *a2 using a inner loop counted by t1 (bytewise memcpy-like). Second loop copies halfwords (16-bit) from *a0 to *a1, using a count held in a2 (shifted left 6 = *64) and advancing pointers a0,a1 by 2 each iteration, stopping when count zero. Best prior C scored 1160 with nested byte copy only (24 of 35 instructions). Our attempt failed to compile due to type-punning issues with u8*/u16*; need to use byte-level access or memcpy intrinsics. Matching all 35 instructions likely requires emitting the exact sll/addu base setup, the two-loop structure with precise branch targets, and the halfword shift\u2011by\u20116 count. For now, notes saved for next agent.",
-   "by": "opencode-nemotron-3.5-lightning-f-1",
-   "created_at": 1793884688.771592,
-   "score_before": 480,
-   "score_after": 480
-  },
-  {
-   "function": "func_80030F48_ovl_01",
-   "text": "I reported the boundary: this target merges two functions. Insns 0-23 are func_80030F48_ovl_01 (ends jr $ra;nop at 0x80030FA0-0x80030FA7); at 0x80030FA8 a separate halfword-copy routine starts (`sll $a2,$a2,6; blez; nop; loop: lhu/addiu a0/addiu a2,-1/sh/bgtz/addiu a1; jr ra;nop`). Once the report is approved the target is 24 insns. My best C (score 1160 with the merged 35-insn target) reproduces all 24 of the first function's insns except ONE reorder: the tool emits `lw $t0,0x10($sp)` first, target has it 4th (after `sll $a3,$a3,2`, immediately before `lw $t1,0x14($sp)`). Everything else is byte-identical:\n```\nvoid func_80030F48_ovl_01(u8 **a0, s32 a1, u8 **a2, s32 a3, s32 t0, s32 t1) {\n    s32 i; u8 *src; u8 *dst;\n    a0 += a1; a2 += a3;\n    if (t0 <= 0) return;\n    do {\n        src = *a0++; dst = *a2++; i = t1;\n        if (i != 0) { do { *dst++ = *src++; } while (--i != 0); }\n    } while (--t0 > 0);\n}\n```\nUntried idea for the reorder: bind the counter after the pointer arithmetic, e.g. `s32 n = t0; if (n <= 0) return; ... while (--n > 0);` \u2014 may keep the `lw` after the slls. Also tried: `if (t0 > 0) {do..}` (same), `while(1){...if(--t0<=0)break;}` (same), moving `a2 += a3` after the check (worse, 1290), -fno-schedule-insns/-O1/-O3/-G8 (all worse or same).",
-   "by": "opencode-deepseek-v4.1-flash-low-1",
-   "created_at": 1793884690.716181,
-   "score_before": 480,
-   "score_after": 480
-  },
-  {
-   "function": "func_80030F48_ovl_01",
-   "text": "Reported the boundary (real end 0x80030FA8; the last 11 of the 35 target insns are a separate halfword-copy function). Best C reproduces all 24 insns of the real function except one reorder: `lw $t0,0x10($sp)` is emitted first instead of 4th (target: sll a1; addu a0; sll a3; lw t0; lw t1; blez t0; delay addu a2). That is the only difference once the boundary is approved. Code and untried idea (bind counter to a local after the pointer arithmetic) in my add_note.",
-   "by": "opencode-deepseek-v4.1-flash-low-1",
-   "created_at": 1793884690.724412,
-   "score_before": 480,
-   "score_after": 480
   },
   {
    "function": "func_8003C208_ovl_01",
@@ -138262,14 +138108,6 @@
    "score_after": 430
   },
   {
-   "function": "func_80030F48_ovl_01",
-   "text": "Deep permuter: score 480 \u2192 480; 0 improvements; 1 candidates tested; 16 cached skips; 0 rejected; 60s elapsed. Budget rotation: soft allowance reached without recent progress.",
-   "by": "Retroreversing.permuter-2478",
-   "created_at": 1793957252.7084632,
-   "score_before": 480,
-   "score_after": 480
-  },
-  {
    "function": "func_8016203C_ovl_25",
    "text": "Deep permuter: score 380 \u2192 380; 0 improvements; 7 candidates tested; 13 cached skips; 0 rejected; 70s elapsed. Budget rotation: soft allowance reached without recent progress.",
    "by": "Retroreversing.permuter-4739",
@@ -138414,14 +138252,6 @@
    "score_after": 270
   },
   {
-   "function": "func_80030F48_ovl_01",
-   "text": "The real routine is 0x80030F48-0x80030FAC: a byte-copy over a table of pointers. a0 += a1 (word-scaled), a2 += a3, if t0 <= 0 return; then per entry: src=*a0++, dst=*a2++, copy t1 bytes (lbu/sb loop with the beqz check at top), t0--, loop while t0 > 0. The compiled C (24 insns) is 66.8% match (score 1160); the remaining diff is that gcc schedules the two stack loads (lw t0/t1 at 0x10/0x14 sp) before the sll/addu, while the target does them after. Boundary reported as ending at 0x80030FAC (the `sll $a2,$a2,6` halfword-copy loop after the jr ra is a separate routine). Boundary is awaiting user approval, so this claim still counts the 140-byte size. Please check the boundary report before tuning further.",
-   "by": "claude-haiku-19",
-   "created_at": 1793884738.58428,
-   "score_before": 1160,
-   "score_after": 480
-  },
-  {
    "function": "func_80165140_overlay_035",
    "text": "Deep permuter: score 70 \u2192 70; 0 improvements; 1 candidates tested; 0 cached skips; 0 rejected; 25s elapsed. Stopped: The saved C does not compile in the current context; fix its declarations before deep search..",
    "by": "Retroreversing.permuter-5403",
@@ -138436,14 +138266,6 @@
    "created_at": 1793884740.814537,
    "score_before": 260,
    "score_after": 260
-  },
-  {
-   "function": "func_80030F48_ovl_01",
-   "text": "Best 480 (86.2%) with fcf1340e9e9ce8b9372d. Structure is right: a0 += a1*4, a2 += a3*4; if t0>0 do { src=*a0++; dst=*a2++; copy t1 bytes; t0-- } while t0>0; else { a2 <<= 6; halfword copy loop (lhu/sh, count a2) }. The function has 35 insns with a second loop after the first jr ra. Diffs: (1) t0/t1 are stack args, target loads t0 after sll/addu (sll a3 then lw t0, lw t1, blez t0), mine loads t0 first; (2) the target's blez t0 goes to the halfword block, and my else-branch has the extra blez a2 check placed differently (target: blez a2 jumps to the final jr ra, and the loop bottom is bgtz); (3) register choice for the shift (target uses $a1 in place, mine $v0). Next: try using a3 shift before the a1 shift, and restructure the else-branch so the halfword loop is a do-while with an explicit early return.",
-   "by": "claude-haiku-17",
-   "created_at": 1793884741.1894531,
-   "score_before": 1160,
-   "score_after": 480
   },
   {
    "function": "func_8002AD8C_ovl_01",
@@ -138516,38 +138338,6 @@
    "created_at": 1793884742.6950872,
    "score_before": 440,
    "score_after": 440
-  },
-  {
-   "function": "func_80030F48_ovl_01",
-   "text": "Released because its agent stopped (decompdecomp closed while it worked); its attempts are kept.",
-   "by": "claude-haiku-18",
-   "created_at": 1793884743.3832378,
-   "score_before": 480,
-   "score_after": 480
-  },
-  {
-   "function": "func_80030F48_ovl_01",
-   "text": "Released because its agent stopped (decompdecomp closed while it worked); its attempts are kept.",
-   "by": "claude-haiku-20",
-   "created_at": 1793884743.27489,
-   "score_before": 480,
-   "score_after": 480
-  },
-  {
-   "function": "func_80030F48_ovl_01",
-   "text": "Released because its agent stopped (decompdecomp closed while it worked); its attempts are kept.",
-   "by": "claude-haiku-18",
-   "created_at": 1793884743.3832378,
-   "score_before": 480,
-   "score_after": 480
-  },
-  {
-   "function": "func_80030F48_ovl_01",
-   "text": "Best 480 (86.2%), unchanged. Tried: pointer-typed params (480, same), array-indexed loops with stack-free arg reuse (880, worse). Remaining diffs: target does `sll a1` / `addu a0,a0,a1` on the argument register itself (ours uses $v0 temp); target reloads `lw t0,0x10($sp)` in the loop; else-branch loop uses blez/bgtz where ours uses beqz/bnez. Next step: find the signature where a1 is the shift operand (e.g. a1 typed as the index, a0 as base) and the else-loop counter is a2 without an extra temp.",
-   "by": "claude-haiku-19",
-   "created_at": 1793884743.802442,
-   "score_before": 480,
-   "score_after": 480
   },
   {
    "function": "func_80095B70_ovl_01",
@@ -145558,14 +145348,6 @@
    "score_after": 200
   },
   {
-   "function": "func_80033634_ovl_01",
-   "text": "Tried the earlier byte/bit arithmetic draft and reconstructed the D_800C7650+0x18000 base access. Best score 2190. Remaining issue: target includes a larger second code sequence after an early return; direct global references fold into unrelated D_800DF8C0/C2 symbols instead of the padded base sequence.",
-   "by": "codex-gpt-6-luna-1",
-   "created_at": 1793884664.375777,
-   "score_before": 2190,
-   "score_after": 2190
-  },
-  {
    "function": "func_80043960_ovl_01",
    "text": "Best authored score 1457 with explicit trailing u16 fields. Target creates stack frame before loading constant 8, copies five words via temporaries in t regs, writes low-half constants at offsets 0x20 and 0x22, calls with local pointer in a1 and zero args. Current compiler reorders/local layout differs.",
    "by": "codex-gpt-6-luna-1",
@@ -145828,14 +145610,6 @@
    "created_at": 1793948780.483965,
    "score_before": 910,
    "score_after": 910
-  },
-  {
-   "function": "func_80033634_ovl_01",
-   "text": "Deep permuter: score 2190 \u2192 2190; 0 improvements; 1 candidates tested; 17 cached skips; 0 rejected; 63s elapsed. Budget rotation: soft allowance reached without recent progress.",
-   "by": "Retroreversing.permuter-2506",
-   "created_at": 1793948709.949427,
-   "score_before": 2190,
-   "score_after": 2190
   },
   {
    "function": "func_800ADF54_ovl_01",
@@ -146660,6 +146434,646 @@
    "created_at": 1793946980.532084,
    "score_before": 580,
    "score_after": 580
+  },
+  {
+   "function": "func_800275F8_ovl_01",
+   "text": "Tried the m2c arithmetic and pointer formulations. Best score 1130/144; target's explicit 0x18000 immediate base and D_800C7650 relocation cannot currently be reproduced: compiler folds it to D_800DFB88. Remaining diff includes reordered early load/store, target branch one instruction farther, return/tail branch placement.",
+   "by": "codex-gpt-6-luna-1",
+   "created_at": 1793884663.474324,
+   "score_before": 1130,
+   "score_after": 1130
+  },
+  {
+   "function": "func_80030F48_ovl_01",
+   "text": "Best score 1160 with nested byte copy of row pointers, two loops (24 of 35 instructions). Target has an extra second code path after the first jr: halfword copy of length a2*64; need express that continuation plus preserve target's delayed load order. Variants of nested loops made no progress.",
+   "by": "codex-gpt-6-luna-1",
+   "created_at": 1793884663.6713269,
+   "score_before": 480,
+   "score_after": 480
+  },
+  {
+   "function": "func_80032B40_ovl_01",
+   "text": "Best 690 from autopilot. Three compiled experiments with direct unsigned comparisons/local scheduling did not improve; one source was worse due compiler folding pointer load. Needs explicit C shaped to retain p in a2 and separate two return paths; use signed s16 loads for b[0..3], and compare `(u32)b[2] < (u32)(p[0]-b[0])` as in draft.",
+   "by": "codex-gpt-6-luna-1",
+   "created_at": 1793884664.045794,
+   "score_before": 655,
+   "score_after": 655
+  },
+  {
+   "function": "func_80033634_ovl_01",
+   "text": "Tried the earlier byte/bit arithmetic draft and reconstructed the D_800C7650+0x18000 base access. Best score 2190. Remaining issue: target includes a larger second code sequence after an early return; direct global references fold into unrelated D_800DF8C0/C2 symbols instead of the padded base sequence.",
+   "by": "codex-gpt-6-luna-1",
+   "created_at": 1793884664.375777,
+   "score_before": 2190,
+   "score_after": 2190
+  },
+  {
+   "function": "func_8004344C_ovl_01",
+   "text": "First function (ends at 0x8004346C, boundary reported): *arg0 = ((s32)(s16)D_80139A20 << 16) | *(u16*)(D_80139A20+2). Best C matches 7 of 8 instructions; only difference is that the ROM materialises the base once with `lui $v0,%hi(D); addiu $v1,$v0,%lo(D)` and reads +2 via v1, while KMC emits `lui $v1,%hi(D_80139A22); lhu %lo(D_80139A22)` (absolute symbol+offset). Same provided-compiler split-address difference; not reachable from C. The claimed range also contains a second function at 0x8004346C (3 s16 -> 3 s32 copy), hence the 17-insn target.",
+   "by": "opencode-deepseek-v4.1-flash-1",
+   "created_at": 1793884665.30301,
+   "score_before": 1110,
+   "score_after": 1110
+  },
+  {
+   "function": "func_80025EF0",
+   "text": "Three compiles; best 550. Tried raw pointer indexing and struct field access. Target writes D_800C7620+8, D_800C7618+0, loads D_800C5268, then stores pointer at D_800C7618+4 and value into D_800C7620. Current context declares globals as scalar, so struct typedef field offsets collide with separate globals and produce wrong absolute addresses; needs correcting data/struct declarations and one-argument helper signature.",
+   "by": "codex-gpt-6-luna-1",
+   "created_at": 1793884671.9170098,
+   "score_before": 540,
+   "score_after": 540
+  },
+  {
+   "function": "func_80052C9C_ovl_01",
+   "text": "Compiled the prior best source variant with explicit extern declarations and pointer writes. Scores did not improve; best remains prior attempt (1675/1700). Main remaining issues: expected saved-register allocation and data/global-address codegen; compiler emits absolute stores via $at. No further useful iteration before move-on threshold.",
+   "by": "codex-gpt-6-luna-1",
+   "created_at": 1793884684.5615518,
+   "score_before": 1700,
+   "score_after": 1700
+  },
+  {
+   "function": "func_80062CA0_ovl_01",
+   "text": "Best 545, exact instruction count and arithmetic broadly matches. Remaining differences are predominantly register allocation and scheduler: argument remains in f4 vs target f12, globals use $at instead of v0, compiler combines division by -y before loading the multiplier and omits target separate neg.s/div operations; final integer conversion feeds a1 instead of a0.",
+   "by": "codex-gpt-6-luna-1",
+   "created_at": 1793884684.731523,
+   "score_before": 525,
+   "score_after": 525
+  },
+  {
+   "function": "func_8006BDD4_ovl_01",
+   "text": "Additional compile repeated the best score 2810 and confirmed the direct-global/split-address codegen ceiling and byte-array stores are not matching with this compiler. No better in 3/3 consecutive compiles; best saved attempt retained.",
+   "by": "codex-gpt-6-luna-1",
+   "created_at": 1793884684.854292,
+   "score_before": 2595,
+   "score_after": 2595
+  },
+  {
+   "function": "func_80032B40_ovl_01",
+   "text": "Best 655. First 6 insns exact (arg0 copied to a2; p[0]-b[0]; sltu). ROM then has `bnez a0, ret0; nop`, computes the second test, `beqz a0, ret1; nop`, and has two separate jr-ra returns (ret0: addu v0,zero,zero; ret1: addiu v0,zero,1). This cc1 collapses the two-if-return-0/1 into `xori v0,v0,1; jr ra` in every form tried (including `if(!cond2) return 1; return 0;`), and puts move v0,zero in the first bnez delay. Remaining diff is that return-shape optimization + register swaps (v0/v1/a0 in second test).",
+   "by": "opencode-deepseek-v4.1-flash-low-1",
+   "created_at": 1793884685.0695639,
+   "score_before": 655,
+   "score_after": 655
+  },
+  {
+   "function": "func_80082D40_ovl_01",
+   "text": "Three compile attempts, best score 685. C adjusted base pointer to force D_801314F0 symbol but then address split differs; compiler expands each field into separate absolute symbols. Remaining mismatch is stable and likely compiler split-symbol addressing limitation.",
+   "by": "codex-gpt-6-luna-1",
+   "created_at": 1793884685.766863,
+   "score_before": 685,
+   "score_after": 685
+  },
+  {
+   "function": "func_80032B40_ovl_01",
+   "text": "Score 655; dual-return pattern collapse: target has separate bnez/beqz with distinct jr ra and move/addiu v0; C collapses to move v0,zero; jr ra and xori v0,v0,1; jr ra. Register allocation and lh/lw differences. Codegen ceiling for KMC 2.7.2; cannot force dual-return without inline asm. Release.",
+   "by": "opencode-nemotron-3.5-lightning-f-1",
+   "created_at": 1793884687.736942,
+   "score_before": 655,
+   "score_after": 655
+  },
+  {
+   "function": "func_80030F48_ovl_01",
+   "text": "Function has two distinct loops: first copies t0 bytes from *a0 to *a2 using a inner loop counted by t1 (bytewise memcpy-like). Second loop copies halfwords (16-bit) from *a0 to *a1, using a count held in a2 (shifted left 6 = *64) and advancing pointers a0,a1 by 2 each iteration, stopping when count zero. Best prior C scored 1160 with nested byte copy only (24 of 35 instructions). Our attempt failed to compile due to type-punning issues with u8*/u16*; need to use byte-level access or memcpy intrinsics. Matching all 35 instructions likely requires emitting the exact sll/addu base setup, the two-loop structure with precise branch targets, and the halfword shift\u2011by\u20116 count. For now, notes saved for next agent.",
+   "by": "opencode-nemotron-3.5-lightning-f-1",
+   "created_at": 1793884688.771592,
+   "score_before": 480,
+   "score_after": 480
+  },
+  {
+   "function": "func_800275F8_ovl_01",
+   "text": "Score 1130; diff: target uses lui $t0,1 / ori 0x8000 and D_800C7650 base; our C folds base to D_800DFB88, causing mismatched lui/ori and load offsets. Also branch delay and store ordering differ. Pure C cannot match without correct split\u2011base codegen (u64 temp trick). Next agent can try u64 base or adjust flags.",
+   "by": "opencode-nemotron-3.5-lightning-f-1",
+   "created_at": 1793884690.592028,
+   "score_before": 1130,
+   "score_after": 1130
+  },
+  {
+   "function": "func_80030F48_ovl_01",
+   "text": "I reported the boundary: this target merges two functions. Insns 0-23 are func_80030F48_ovl_01 (ends jr $ra;nop at 0x80030FA0-0x80030FA7); at 0x80030FA8 a separate halfword-copy routine starts (`sll $a2,$a2,6; blez; nop; loop: lhu/addiu a0/addiu a2,-1/sh/bgtz/addiu a1; jr ra;nop`). Once the report is approved the target is 24 insns. My best C (score 1160 with the merged 35-insn target) reproduces all 24 of the first function's insns except ONE reorder: the tool emits `lw $t0,0x10($sp)` first, target has it 4th (after `sll $a3,$a3,2`, immediately before `lw $t1,0x14($sp)`). Everything else is byte-identical:\n```\nvoid func_80030F48_ovl_01(u8 **a0, s32 a1, u8 **a2, s32 a3, s32 t0, s32 t1) {\n    s32 i; u8 *src; u8 *dst;\n    a0 += a1; a2 += a3;\n    if (t0 <= 0) return;\n    do {\n        src = *a0++; dst = *a2++; i = t1;\n        if (i != 0) { do { *dst++ = *src++; } while (--i != 0); }\n    } while (--t0 > 0);\n}\n```\nUntried idea for the reorder: bind the counter after the pointer arithmetic, e.g. `s32 n = t0; if (n <= 0) return; ... while (--n > 0);` \u2014 may keep the `lw` after the slls. Also tried: `if (t0 > 0) {do..}` (same), `while(1){...if(--t0<=0)break;}` (same), moving `a2 += a3` after the check (worse, 1290), -fno-schedule-insns/-O1/-O3/-G8 (all worse or same).",
+   "by": "opencode-deepseek-v4.1-flash-low-1",
+   "created_at": 1793884690.716181,
+   "score_before": 480,
+   "score_after": 480
+  },
+  {
+   "function": "func_80030F48_ovl_01",
+   "text": "Reported the boundary (real end 0x80030FA8; the last 11 of the 35 target insns are a separate halfword-copy function). Best C reproduces all 24 insns of the real function except one reorder: `lw $t0,0x10($sp)` is emitted first instead of 4th (target: sll a1; addu a0; sll a3; lw t0; lw t1; blez t0; delay addu a2). That is the only difference once the boundary is approved. Code and untried idea (bind counter to a local after the pointer arithmetic) in my add_note.",
+   "by": "opencode-deepseek-v4.1-flash-low-1",
+   "created_at": 1793884690.724412,
+   "score_before": 480,
+   "score_after": 480
+  },
+  {
+   "function": "func_800275F8_ovl_01",
+   "text": "Cannot get closer: the only remaining blocker is the game-wide split-data-address ceiling. The ROM keeps `D_800C7650` as a symbol base and adds 0x18000 in a register (`lui $t0,1; ori $t0,$t0,0x8000; ...; addu v0,v0,$t0`), while this cc1 always constant-folds `D_800C7650+0x18000+0x538` into the synthetic `D_800DFB88`. u64 reproduces the split but adds a dead `move high,zero` and an 8-byte frame (score 1275, 40 insns); all pointer/volatile forms fold (score 1130). Nothing in the C can prevent the fold because the offset is a compile-time constant with no index term. Best source saved (1130) with full notes in the previous message. This needs the compiler/data-address suggestion to be applied, not more C.",
+   "by": "opencode-deepseek-v4.1-flash-low-1",
+   "created_at": 1793884692.626849,
+   "score_before": 1130,
+   "score_after": 1130
+  },
+  {
+   "function": "func_80062CA0_ovl_01",
+   "text": "Deep permuter: score 625 \u2192 625; 0 improvements; 26 candidates tested; 0 cached skips; 0 rejected; 153s elapsed. Budget rotation: soft allowance reached without recent progress.",
+   "by": "A.permuter-2785",
+   "created_at": 1793884704.4376261,
+   "score_before": 525,
+   "score_after": 525
+  },
+  {
+   "function": "func_80025EF0",
+   "text": "Deep permuter: score 2390 \u2192 2390; 0 improvements; 22 candidates tested; 0 cached skips; 0 rejected; 186s elapsed. Budget rotation: soft allowance reached without recent progress.",
+   "by": "A.permuter-7000",
+   "created_at": 1793884706.916872,
+   "score_before": 540,
+   "score_after": 540
+  },
+  {
+   "function": "func_80082D40_ovl_01",
+   "text": "Deep permuter: score 685 \u2192 685; 0 improvements; 1 candidates tested; 3 cached skips; 0 rejected; 94s elapsed. Budget rotation: soft allowance reached without recent progress.",
+   "by": "Retroreversing.permuter-2967",
+   "created_at": 1793960335.919979,
+   "score_before": 685,
+   "score_after": 685
+  },
+  {
+   "function": "func_80030F48_ovl_01",
+   "text": "Deep permuter: score 480 \u2192 480; 0 improvements; 1 candidates tested; 16 cached skips; 0 rejected; 60s elapsed. Budget rotation: soft allowance reached without recent progress.",
+   "by": "Retroreversing.permuter-2478",
+   "created_at": 1793957252.7084632,
+   "score_before": 480,
+   "score_after": 480
+  },
+  {
+   "function": "func_800275F8_ovl_01",
+   "text": "Deep permuter: score 1130 \u2192 1130; 0 improvements; 4 candidates tested; 29 cached skips; 0 rejected; 63s elapsed. Budget rotation: soft allowance reached without recent progress.",
+   "by": "Retroreversing.permuter-2402",
+   "created_at": 1793955687.321662,
+   "score_before": 1130,
+   "score_after": 1130
+  },
+  {
+   "function": "func_80032B40_ovl_01",
+   "text": "Deep permuter: score 580 \u2192 580; 0 improvements; 9 candidates tested; 1 cached skips; 0 rejected; 68s elapsed. Budget rotation: soft allowance reached without recent progress.",
+   "by": "Retroreversing.permuter-2491",
+   "created_at": 1793948271.091163,
+   "score_before": 580,
+   "score_after": 580
+  },
+  {
+   "function": "func_80025EF0",
+   "text": "Deep permuter: score 2100 \u2192 2100; 0 improvements; 2 candidates tested; 6 cached skips; 0 rejected; 72s elapsed. Budget rotation: soft allowance reached without recent progress.",
+   "by": "Retroreversing.permuter-7000",
+   "created_at": 1793957982.837906,
+   "score_before": 2100,
+   "score_after": 2100
+  },
+  {
+   "function": "func_80025EF0",
+   "text": "Current candidate score 2110; compiling the one-block setup source reproduced it, with only 19 instructions against a 34-instruction target. Target assembly clearly contains two consecutive setup-and-call sequences: one initializes D_800C7620 with 2 and calls func_800879D0; the second initializes D_800C762C with 3 and calls the same callee. Best source only emits the first sequence. Next step: add the analogous second sequence using D_800C762C, likely helper call arguments point to D_800C7618 and D_800C762C, then compare instruction ordering/address forms.",
+   "by": "codex-gpt-6-luna-9",
+   "created_at": 1793884730.669457,
+   "score_before": 2390,
+   "score_after": 2110
+  },
+  {
+   "function": "func_80025EF0",
+   "text": "Confirmed the claimed 34-instruction extent was two routines and split at 0x80025F34 (first ends after jr delay slot at 0x80025F30). Current first routine remains unmatched; best C is volatile pointer form (score 540): initialize q=&D_800C7620, p=&D_800C7618; q[2]=0; p[0]=2; p[1]=(s32)q; q[0]=D_800C5268; call func_800879D0_ovl_01((s32)p). Next inspect exact diff and try delaying p address calculation until after q[2] store; variable declarations after statements fail under project C dialect. The best diff still differs chiefly in global address setup/scheduling; no reusable compiler convention established.",
+   "by": "codex-gpt-6-luna-10",
+   "created_at": 1793884731.961718,
+   "score_before": 2110,
+   "score_after": 540
+  },
+  {
+   "function": "func_80062CA0_ovl_01",
+   "text": "Deep permuter: score 525 \u2192 525; 0 improvements; 3 candidates tested; 23 cached skips; 0 rejected; 65s elapsed. Budget rotation: soft allowance reached without recent progress.",
+   "by": "Retroreversing.permuter-2785",
+   "created_at": 1793949162.616267,
+   "score_before": 525,
+   "score_after": 525
+  },
+  {
+   "function": "func_80030F48_ovl_01",
+   "text": "The real routine is 0x80030F48-0x80030FAC: a byte-copy over a table of pointers. a0 += a1 (word-scaled), a2 += a3, if t0 <= 0 return; then per entry: src=*a0++, dst=*a2++, copy t1 bytes (lbu/sb loop with the beqz check at top), t0--, loop while t0 > 0. The compiled C (24 insns) is 66.8% match (score 1160); the remaining diff is that gcc schedules the two stack loads (lw t0/t1 at 0x10/0x14 sp) before the sll/addu, while the target does them after. Boundary reported as ending at 0x80030FAC (the `sll $a2,$a2,6` halfword-copy loop after the jr ra is a separate routine). Boundary is awaiting user approval, so this claim still counts the 140-byte size. Please check the boundary report before tuning further.",
+   "by": "claude-haiku-19",
+   "created_at": 1793884738.58428,
+   "score_before": 1160,
+   "score_after": 480
+  },
+  {
+   "function": "func_80032B40_ovl_01",
+   "text": "Real rect-overlap test: arg0 is s32 pair (x at [0], y at [2]), arg1 is s16 box (x0 [0], y0 [1], x-range [2], y-range [3]). Form that works: `if ((u32)(arg0[0]-arg1[0]) > (u32)arg1[2]) return 0; if ((u32)(arg0[2]-arg1[1]) > (u32)arg1[3]) return 0; return 1;` scores 655 (65.5%). Remaining diff: target loads a1[2] (y0) before the first compare and does the second check as `r < d` with fall-through to return 0 (beqz to the return-1 block, `li v0,1` at the end); my versions emit xori and a different branch layout. Try a local that holds y-diff computed up front, or `return !(r < d)` shapes. Existing best attempt in the notes (655) is from a different function body and is not the right shape.",
+   "by": "claude-haiku-20",
+   "created_at": 1793884740.232976,
+   "score_before": 655,
+   "score_after": 655
+  },
+  {
+   "function": "func_80030F48_ovl_01",
+   "text": "Best 480 (86.2%) with fcf1340e9e9ce8b9372d. Structure is right: a0 += a1*4, a2 += a3*4; if t0>0 do { src=*a0++; dst=*a2++; copy t1 bytes; t0-- } while t0>0; else { a2 <<= 6; halfword copy loop (lhu/sh, count a2) }. The function has 35 insns with a second loop after the first jr ra. Diffs: (1) t0/t1 are stack args, target loads t0 after sll/addu (sll a3 then lw t0, lw t1, blez t0), mine loads t0 first; (2) the target's blez t0 goes to the halfword block, and my else-branch has the extra blez a2 check placed differently (target: blez a2 jumps to the final jr ra, and the loop bottom is bgtz); (3) register choice for the shift (target uses $a1 in place, mine $v0). Next: try using a3 shift before the a1 shift, and restructure the else-branch so the halfword loop is a do-while with an explicit early return.",
+   "by": "claude-haiku-17",
+   "created_at": 1793884741.1894531,
+   "score_before": 1160,
+   "score_after": 480
+  },
+  {
+   "function": "func_80062CA0_ovl_01",
+   "text": "Best 525 (85.0%, revision 695b4c53e680c5e4aa7a; fe36dbb03ec56a438074 same score). Signature: f32 arg in $f12 (returns s32 masked &0xFFFF). Semantics: a = arg*D_8011113C; if ((f64)a < D_800B91A8) a = D_800B91B0; n = -a; v = (n*D_800EFBF4 + D_800EFBF8) / -n; v = v*D_800B91B4 + D_800B91B4; return func_80062BB0((s32)v<<16>>13) & 0xFFFF. Structure matches (the cond skips the load of D_800B91B0 when false, so the select is a branch to the merge point). Remaining diff is register/scheduling: target loads through $v0 for the globals (lui $v0, %hi(...) + lwc1 $f0), while mine uses $at; the divisor neg is computed in place in $f12 in the target, and the final $ft0 is loaded before the divide. Attempts: 4 compiles, no gain from the -n temp form. Next: try the loads through a pointer variable, or move the scale multiply into a separate statement.",
+   "by": "claude-haiku-17",
+   "created_at": 1793884741.2997792,
+   "score_before": 545,
+   "score_after": 525
+  },
+  {
+   "function": "func_800275F8_ovl_01",
+   "text": "Stride is 0x2C: p = D_800E9128 + a0*44 (sll/addu/subu chain: 3a, 12a, 11a, 44a). Stores: sh a1 at p+0; q = p + (byte D_800C7650[0x18000+0x538] << 4); sw (a2 | p[0x13]<<24) at q+0x10; if a3 != 0: four lhu a3[0..3] stored at p+0x14/16/18/1A; else sw 0 at p+0x14 and sw 0x14000F0 at p+0x18. Target builds 0x18000 in $t0 (lui 1; ori 0x8000) and adds to D_800C7650 with addiu, then lbu 0x538. Best this session: 1270 (revision 9efd6beaaee4ab562750; saved best 1130 is from a different source). Remaining: the compiler orders the table lookup before the sh and does not keep 0x18000 in $t0 (variable off gave 1775). Untested: keep the byte load in its own statement after the sh with the same base expression.",
+   "by": "claude-haiku-19",
+   "created_at": 1793884741.343515,
+   "score_before": 1130,
+   "score_after": 1130
+  },
+  {
+   "function": "func_80030F48_ovl_01",
+   "text": "Released because its agent stopped (decompdecomp closed while it worked); its attempts are kept.",
+   "by": "claude-haiku-18",
+   "created_at": 1793884743.3832378,
+   "score_before": 480,
+   "score_after": 480
+  },
+  {
+   "function": "func_80030F48_ovl_01",
+   "text": "Released because its agent stopped (decompdecomp closed while it worked); its attempts are kept.",
+   "by": "claude-haiku-20",
+   "created_at": 1793884743.27489,
+   "score_before": 480,
+   "score_after": 480
+  },
+  {
+   "function": "func_80030F48_ovl_01",
+   "text": "Released because its agent stopped (decompdecomp closed while it worked); its attempts are kept.",
+   "by": "claude-haiku-18",
+   "created_at": 1793884743.3832378,
+   "score_before": 480,
+   "score_after": 480
+  },
+  {
+   "function": "func_80030F48_ovl_01",
+   "text": "Best 480 (86.2%), unchanged. Tried: pointer-typed params (480, same), array-indexed loops with stack-free arg reuse (880, worse). Remaining diffs: target does `sll a1` / `addu a0,a0,a1` on the argument register itself (ours uses $v0 temp); target reloads `lw t0,0x10($sp)` in the loop; else-branch loop uses blez/bgtz where ours uses beqz/bnez. Next step: find the signature where a1 is the shift operand (e.g. a1 typed as the index, a0 as base) and the else-loop counter is a2 without an extra temp.",
+   "by": "claude-haiku-19",
+   "created_at": 1793884743.802442,
+   "score_before": 480,
+   "score_after": 480
+  },
+  {
+   "function": "func_80052C9C_ovl_01",
+   "text": "Target frame is 0x28; saves s1..s4 and ra. Prologue order matters: args go to s2=a0 (s16 a), s3=a1 (s8 b), s4=a2 (s16 c) first, then the constant 1 sits in s1 and is stored to D_800E9098 (lui/sw) before the first jal to func_80052F40 and reused as *p=1 after the jal to func_80052F1C. Saved best (1700) is the draft from the brief. Tried: draft as-is (1900, 41 insns, prologue puts D-store and p-address first, no s1 holding 1); `s32 one=1` local (1888, frame 0x30, wrong save order). Not tried: forcing arg copies before the store (e.g. through volatile-free temporaries), or a 1700-basis tweak. Helpers: func_80052F40 returns s32, func_80052F1C returns s8*.",
+   "by": "claude-haiku-18",
+   "created_at": 1793884744.171803,
+   "score_before": 1700,
+   "score_after": 1700
+  },
+  {
+   "function": "func_80052C9C_ovl_01",
+   "text": "Deep permuter: score 1700 \u2192 1700; 0 improvements; 1 candidates tested; 0 cached skips; 0 rejected; 65s elapsed. Budget rotation: soft allowance reached without recent progress.",
+   "by": "Retroreversing.permuter-2721",
+   "created_at": 1793956987.4682071,
+   "score_before": 1700,
+   "score_after": 1700
+  },
+  {
+   "function": "func_8004344C_ovl_01",
+   "text": "Deep permuter: score 1110 \u2192 1110; 0 improvements; 2 candidates tested; 0 cached skips; 0 rejected; 62s elapsed. Budget rotation: soft allowance reached without recent progress.",
+   "by": "Retroreversing.permuter-2597",
+   "created_at": 1793957049.1184692,
+   "score_before": 1110,
+   "score_after": 1110
+  },
+  {
+   "function": "func_8006BDD4_ovl_01",
+   "text": "Deep permuter: score 2595 \u2192 2595; 0 improvements; 1 candidates tested; 8 cached skips; 0 rejected; 60s elapsed. Budget rotation: soft allowance reached without recent progress.",
+   "by": "Retroreversing.permuter-2839",
+   "created_at": 1793959532.822161,
+   "score_before": 2595,
+   "score_after": 2595
+  },
+  {
+   "function": "func_80032B40_ovl_01",
+   "text": "Released unworked: held in session scope but no compile made on it this session. Best saved attempt (655) is kept. Not investigated further.",
+   "by": "claude-haiku-20",
+   "created_at": 1793937877.591866,
+   "score_before": 655,
+   "score_after": 655
+  },
+  {
+   "function": "func_80033634_ovl_01",
+   "text": "Deep permuter: score 2190 \u2192 2190; 0 improvements; 1 candidates tested; 17 cached skips; 0 rejected; 63s elapsed. Budget rotation: soft allowance reached without recent progress.",
+   "by": "Retroreversing.permuter-2506",
+   "created_at": 1793948709.949427,
+   "score_before": 2190,
+   "score_after": 2190
+  },
+  {
+   "function": "func_800275F8_ovl_01",
+   "text": "Deep permuter: score 1130 \u2192 1130; 0 improvements; 0 candidates tested; 0 cached skips; 0 rejected; 60s elapsed. Stopped: the room's host isn't reachable right now: can't reach the host (ReadTimeout).",
+   "by": "Reggie2.permuter-279",
+   "created_at": 1794001657.7067552,
+   "score_before": 1130,
+   "score_after": 1130
+  },
+  {
+   "function": "func_80032B40_ovl_01",
+   "text": "Not attempted in this pass (session capacity low). No C written yet; start from get_candidate and the machine draft.",
+   "by": "claude-haiku-21",
+   "created_at": 1794182301.998207,
+   "score_before": 580,
+   "score_after": 580
+  },
+  {
+   "function": "func_80032B40_ovl_01",
+   "text": "Best saved 580. Target (23 insns): a2=a0; compare s32 a0[0]-s16 a1[0] against unsigned s16 a1[2] (bnez -> return 0); then s32 a0[2]-a1[1] against a1[3] unsigned; beqz -> return 1, else return 0. Loads in target order: lh v0=a1[0]; lw v1=a2[0]; lh a0=a1[2]; subu; sltu; bnez. Writing explicit branch-to-return-1 gives 1905 (loads reordered wrongly). The 670 variant (`if(..) return 0; ... return 1;`) got xori instead of a beqz/return-1 branch. Next: keep the a2 copy (move $a2,$a0) and write the second return as a separate branch with the same load order as the first half.",
+   "by": "claude-haiku-24",
+   "created_at": 1794182384.164962,
+   "score_before": 580,
+   "score_after": 580
+  },
+  {
+   "function": "func_80032B40_ovl_01",
+   "text": "Function is a two-stage rect-overlap test: arg0 s32* (words +0,+8), arg1 s16* (halves +0,+2,+4,+6). Stage 1: if ((u32)arg1[2] < (u32)(arg0[0]-arg1[0])) return 0. Stage 2 target: lh arg1[3], sltu against (arg0[2]-arg1[1]); bnez to shared return-0 block at +0x3c; beqz to return-1 block at +0x44. Every C variant I tried (plain two ifs, !(B) return 1, if/else-if/else) gives the same 655 score: the compiler emits xori or bnez to +0x38 with a stray move v0,0. Saved 580 is better. Unexplored: write stage 2 as a separate static helper returning s32 and make the final return the helper's result, or use s32 temps for both differences before branching, so both returns fold into the shared +0x3c block. Register order is also off (target loads arg1[1] into $v0 before arg0[2]).",
+   "by": "claude-haiku-21",
+   "created_at": 1794191535.341722,
+   "score_before": 580,
+   "score_after": 580
+  },
+  {
+   "function": "func_80062CA0_ovl_01",
+   "text": "Best 525 (inherited, 85.0%). Tried: arg reused as a (540 vs 525, same), /arg divisor form (525), neg-temp nb with /-nb (525, no effect). Remaining diff: target keeps a in $f12 and emits neg.s $f12,$f12 once, then divides by a computed as neg of the already-negated value (-(-a)). gcc folds -(-a) to a, dropping the extra neg; the target's double neg needs a form gcc does not fold. Register diff: target uses $v0 for %hi of D_8011113C/D_800EFBF4/D_800EFBF8, mine uses $at.",
+   "by": "claude-haiku-25",
+   "created_at": 1794202550.35822,
+   "score_before": 525,
+   "score_after": 525
+  },
+  {
+   "function": "func_8004344C_ovl_01",
+   "text": "Target has 17 insns, but the first 8 are a complete body ending in `jr $ra` + `sw` delay slot at +0x18. The 9 after that (lui hi(D_80139A20) ... sw to 0/4/8($a0)) are a second function. report_boundary(end=0x8004346C) filed; a user decision is pending. First body: lui $v0,hi; addiu $v1,$v0,lo; lh $v0,lo($v0); lhu $v1,2($v1); sll 16; or; jr; sw $v0,0($a0). Best 1110, which is just the 8-instruction shape without the addiu base. Missing: the target keeps the base in $v1 via addiu and reads lhu 2($v1), while the compiler folds the symbol into %lo(D_80139A22)($v1). Try a volatile or struct-typed base pointer, or the sn-n64-281 compiler.",
+   "by": "claude-haiku-21",
+   "created_at": 1794202936.45024,
+   "score_before": 1110,
+   "score_after": 1110
+  },
+  {
+   "function": "func_80033634_ovl_01",
+   "text": "Best 1775 (candidate be1561aa138ce1322a61). Real function is 16 insns (64 bytes, ends at 0x80033674 after jr ra + addiu sp,8); the rest (addiu sp,-0x18 / jal func_80077D48) is a different routine. report_boundary filed for end 0x80033674, pending approval, so the score cannot reach 0 until it is accepted. Body: v=lhu(base+0x18272); hi=(v>>7)&0xFF; lo=(v+hi)&0xFF; sw (lo|hi<<8) to base+0x18270; return lo. Blocker: gcc-2.7.2-kmc folds D_800C7650+0x18000 into a symbol offset. A `volatile s32 off` puts a spill on the stack (sw/lw) and the target has none. Still to try: the lui/ori 0x18000 then addu-to-base order, with the target's `addiu sp,-8` in the first slot (it is a real frame here; m2c leaves it). Also the target loads base with `lui $a0; addiu; addu $a0,$a0,$v0`, which my form does not reproduce yet.",
+   "by": "claude-haiku-22",
+   "created_at": 1794204773.042366,
+   "score_before": 1940,
+   "score_after": 1775
+  },
+  {
+   "function": "func_8004344C_ovl_01",
+   "text": "Listed as 68 bytes/17 insns, but the target contains two `jr $ra` epilogues: the first 8 insns (0x8004344C..0x8004346C: lui/addiu/lh/lhu/sll/or/jr/sw) store (s16)D_80139A20[0]<<16 | u16 at +2 into *arg0. The second 8 (lui/lh/addiu/lh/sw/lh/jr/sw) are a separate function. Best 940 came from a 10-insn draft that does not match the 17-insn target. Needs a report_boundary at the first `jr` end (~0x8004346C) before a match is possible. Unverified C: `*arg0 = ((s32)((s16*)&D_80139A20)[0] << 16) | ((u16*)&D_80139A20)[1];` compiles to 8 insns with the right operations but wrong address/register form (it emits lui at D_80139A22 with lhu). Try `extern s16 D_80139A20;` with the address taken via a local pointer.",
+   "by": "claude-haiku-22",
+   "created_at": 1794205404.737939,
+   "score_before": 1110,
+   "score_after": 940
+  },
+  {
+   "function": "func_80052C9C_ovl_01",
+   "text": "Saved best 1700 (58.5%); my rewrites reach 1700 (direct p-based version, first try) and 1720 (q = &D_8010C0C4 local version, worse). Target always copies args first: s2=a0 (a, s16), s3=a1 (b), s4=a2 (c), s0=&D_8010C0C4 kept live for both calls, and then D_800E9098=1 is stored after a lui/addiu that uses s1 as a scratch. Ours loads a/c from stack slots and has lui $s1 for the address; the target's order is: sw s2/s3/s4 saves, move s2=a0 etc., then lui v0 hi(D_800E9098). Also the target reloads D_8010BF44 after each store (lw v0,%lo(D_8010BF44)(v1) twice), so the global is not kept in a register. Matching needs the arguments held in s2/s3/s4 across the first call and a reload of D_8010BF44 after the sb. Not solved.",
+   "by": "claude-haiku-23",
+   "created_at": 1794205459.424503,
+   "score_before": 1700,
+   "score_after": 1700
+  },
+  {
+   "function": "func_800275F8_ovl_01",
+   "text": "Claimed in a batch but not attempted this session; released for another agent. No findings.",
+   "by": "claude-haiku-17",
+   "created_at": 1794205579.2648408,
+   "score_before": 910,
+   "score_after": 910
+  },
+  {
+   "function": "func_80062CA0_ovl_01",
+   "text": "Score improved 525 -> 515 by using `a = -a;` then `v = (a * D_800EFBF4 + D_800EFBF8) / a;` (current revision 737e65c4744276759909). Remaining diff: target uses $v0 for the lui of the data symbols (ours uses $at), and target has `neg.s` in-place on $f12 with the division by the negated value in $f12; the constant D_800B91B4 is loaded twice in target into separate regs ($ft0/$f4), ours reuses one. Also target has the frame setup (addiu sp / sw ra) ordering different. Not matched. Try reordering the final `v*M + M` or using a separate local for the second load of D_800B91B4. Compiles timed out once (300s MCP idle), so use a longer timeout if re-running.",
+   "by": "claude-haiku-17",
+   "created_at": 1794206352.9417138,
+   "score_before": 525,
+   "score_after": 515
+  },
+  {
+   "function": "func_800275F8_ovl_01",
+   "text": "Best 925 (saved, 74%). Structure is right: temp = D_800E9128 + arg0*44; sh arg1 at +0; idx = D_800C7650[0x18538]-ish; store arg2|(p[0x13]<<24) at p+idx*16+0x10; arg3 branch copies four u16 to +0x14..+0x1A, else sw 0 at +0x14 and sw 0x014000F0 at +0x18. Remaining gap: target computes base as `lui t0,0x18000 / ori` then `lui v0,D_800C7650; addiu; addu v0,v0,t0; lbu 0x538(v0)`, i.e. a runtime add of 0x18000 to the symbol address. gcc folds any constant offset into the symbol (score 1130 with `base = D + off`), and a volatile local spills to the stack (925 -> 1130 with extra sp traffic). Untried: an offset that is not a compile-time constant (e.g. loaded from a global), or an explicit u32 base with `(u8*)0 + ...` tricks. Same D_800C7650 + 0x18000 folding problem as func_8004DCE8_ovl_01.",
+   "by": "claude-haiku-23",
+   "created_at": 1794206384.74973,
+   "score_before": 910,
+   "score_after": 910
+  },
+  {
+   "function": "func_80030F48_ovl_01",
+   "text": "Not attempted this session. Best saved 420 (21 prior attempts). Target: a word-copy loop over pointer table (a0/a2 arrays of pointers, count t0 from stack 0x10), inner byte copy loop of t1 bytes, else-branch halfword copy loop of (a2<<6) iterations. Untried ideas: explicit u16 loop variable and separate pointer for the else branch; check register ordering of the sll/addu prologue.",
+   "by": "claude-haiku-17",
+   "created_at": 1794206387.5845308,
+   "score_before": 420,
+   "score_after": 420
+  },
+  {
+   "function": "func_80033634_ovl_01",
+   "text": "Target is 18 insns (ends `andi $v0,$v0,0xFF; jr $ra; addiu $sp,$sp,8`), linear, no branches. Logic: base = &D_800C7650_overlay_001 + 0x18000; v = lhu(base+0x272); t = (v>>7)&0xFF; v = ((v+t)&0xFF) | (t<<8); sw v -> base+0x270; return v&0xFF. Problem: the compiler folds 0x18000 into the symbol offset (lui a0,sym; addiu; no lui v0,1/ori/addu). Target needs lui v0,1; ori v0,0x8000; lui a0,%hi(sym); addiu a0; addu a0,a0,v0. Tried: pointer form (2225, folded); integer cast + volatile off (2000, adds a stack spill and wrong ordering). Next: find a non-folding offset source that is not a stack spill. Best saved 1775 untouched.",
+   "by": "claude-haiku-24",
+   "created_at": 1794207089.672561,
+   "score_before": 1775,
+   "score_after": 1775
+  },
+  {
+   "function": "func_8004344C_ovl_01",
+   "text": "Boundary reported (report_boundary, end=0x8004346C): this 68-byte claim is two functions. The first 8 instructions (0x8004344C-0x8004346B) end at `jr $ra` with `sw $v0,0($a0)` in the delay slot. They compute (s16)D[0] << 16 | (u16)D[1] and store it to *a0, with D = D_80139A20. The second function (0x8004346C, 9 insns) stores D[0], D[1], D[2] to a0[0..2]. Saved best 940 covers both halves, so it is capped as one function. Attempts on the first half: `*arg0 = (D[0] << 16) | (u16)D[1]` and a `s16 *p` pointer version both compile to 8 insns but use `lui v1,%hi(D+2)` + `lhu %lo(D+2)`, while the target uses `addiu v1,v0,%lo(D)` + `lhu 2(v1)`. gcc folds the +2 into the symbol. Untried: a base-pointer form that keeps the lo(D) addiu live. Next agent: wait for the boundary approval, then match the first half alone.",
+   "by": "claude-haiku-23",
+   "created_at": 1794207327.811027,
+   "score_before": 940,
+   "score_after": 940
+  },
+  {
+   "function": "func_80030F48_ovl_01",
+   "text": "Best now 410 (88.2%), saved in revision 14eed63f3e157afda33a: `a1 = a1 << 2; a0 += a1; a3 = a3 << 2; a2 += a3;` (in-place shifts) gave 420->410. Remaining diff: target's entry `blez t0` jumps to else at 0x58, mine at 0x60 (2 instructions longer before the else), and the else tail: target falls through to `jr ra` after the t0 loop and places `bgtz a2` loop at end; mine has `blez t0,0x84; j loop` at the end. Tried without effect: while(t0>0) outer loop, else as while(a2>0), inner loop as if+do-while, signedness of src (s8). Untested: put the else-branch `a2 = a2 << 6` before the if (a2 is only used there), or move the `a1 = a1<<2` line into the else-branch copy.",
+   "by": "claude-haiku-25",
+   "created_at": 1794207370.465824,
+   "score_before": 420,
+   "score_after": 410
+  },
+  {
+   "function": "func_80052C9C_ovl_01",
+   "text": "Unattempted this session: claimed as a batch member and released at low effort to free the lease. Brief: 164 bytes, best saved 1700 over 22 attempts. The brief flags that func_80052F1C's prototype is disputed (caller s8*(s32*) vs definition u8*(u8*)), so resolve that jointly before allocation searches. Also watch that the target has a non-NOP operation the best source lacks; check it first.",
+   "by": "claude-haiku-17",
+   "created_at": 1794207592.8819468,
+   "score_before": 1700,
+   "score_after": 1700
+  },
+  {
+   "function": "func_8006BDD4_ovl_01",
+   "text": "Claimed in a batch but not attempted this session (ran out of turn budget). Start from its saved best and get_assembly.",
+   "by": "claude-haiku-25",
+   "created_at": 1794207672.6271958,
+   "score_before": 1235,
+   "score_after": 1235
+  },
+  {
+   "function": "func_80062CA0_ovl_01",
+   "text": "Best 475 (was 515): divisor must be written as `v = (a*C + E) / -a;` after `a = -a;` (target does neg.s on the original a right before div.s, numerator computed first). Remaining diffs are register/order: target loads D_8011113C via $v0 (lui $v0 / lwc1 $f0) and D_800EFBF4 / D_800EFBF8 via $v0 too, while ours uses $at; target loads D_800B91B4 late (after the add) into $f4, ours early into $f2. Tried a separate numerator temporary `n` \u2014 no change. Next ideas: rewrite so arg*D_8011113C is in a temp and the constants go through different pointer expression, or swap the operand order of the mul/add (a*C vs C*a).",
+   "by": "claude-haiku-24",
+   "created_at": 1794207813.218001,
+   "score_before": 515,
+   "score_after": 475
+  },
+  {
+   "function": "func_80033634_ovl_01",
+   "text": "Claim covers two functions. The first, 17 insns (68 bytes), runs 0x80033634-0x80033677: lui/ori 0x18000, base+0x18000, lhu 0x272, the checksum-like srl/andi/addu/andi/sll/or, sw 0x270, andi, jr $ra with addiu sp,8 in the delay slot. The second starts at 0x80033678 (addiu sp,-0x18; addu a1,a0,zero; lw 0x214). Boundary reported at 0x80033678 (the tool's byte count said 56; the instruction count gives 68, so check that). The first function has not been compiled yet. Best 1775 has the same 0x18000 folding issue: use volatile off then p += off.",
+   "by": "claude-haiku-23",
+   "created_at": 1794207823.705678,
+   "score_before": 1775,
+   "score_after": 1775
+  },
+  {
+   "function": "func_8004344C_ovl_01",
+   "text": "Boundary problem. Claimed 68 bytes (17 insns) but the first 8 insns (0x8004344C-0x8004346B) are a complete function: lui/addiu D_80139A20; lh base+0; lhu base+2; sll 16; or; jr ra; sw to 0(a0) in delay slot. Value = ((s32)D[0] << 16) | (u16)D[1] stored to arg0[0]. The remaining 9 insns (from 0x8004346C: lui/lh/addiu/sw 0(a0)/lh 2/sw 4(a0)/lh 4/jr ra/sw 8(a0)) are a second function that copies three s16 halfwords to arg0[0..2] (the saved best 940/750 source). Score cannot reach 0 while the extent includes both. Suggest report_boundary: func_8004344C ends at 0x8004346C; a separate function starts there. Tried: 3-line version with arg0[0..2] (score 750); single-expression version for the first part only (1110, worse, because the candidate lacked the second part). Recommended next step: claim the second half as its own function at 0x8004346C.",
+   "by": "claude-haiku-17",
+   "created_at": 1794207870.086262,
+   "score_before": 940,
+   "score_after": 750
+  },
+  {
+   "function": "func_800275F8_ovl_01",
+   "text": "Best stays 925 (saved candidate). Remaining problem: the 0x18000 offset is folded into the symbol (lbu from %lo(D_800C7B88)/D_800DFB88) whenever it is a compile-time constant. A volatile local spills to stack (adds addiu sp/sw/lw). `register s32 off` also folds (1130). Target: lui t0,1; ori t0,t0,0x8000 kept live; lui v0 %hi(D_800C7650); addiu; addu v0,v0,t0; lbu 0x538(v0). Matches overlay_012 proposal #309237645324: needs a non-foldable runtime source for the 0x18000 value. Also the target builds arg0*44 with sll/addu/subu/sll before adding D_800E9128.",
+   "by": "claude-haiku-24",
+   "created_at": 1794207971.9775171,
+   "score_before": 910,
+   "score_after": 910
+  },
+  {
+   "function": "func_8006BDD4_ovl_01",
+   "text": "Best 915 (sn-n64-281, saved). The split statement for D_80139E00 (v|1, &~2, &~0x10, &~0x20 as separate ops) fixed the constant folding (-0x33 gone). Remaining diff: the compiler hoists `lui a2,%hi(D_80139E00)` and its lw before the D_80112908 byte stores, while the target does lui v0/sb 0..3,6 first, then lui a2 and the D_80139E00 load after sb 6 and before the D_801129BC store. Also, the target's D_80112794 byte op is `lbu` before the D_80139E00 store. Untested: separate the D_80112908 writes into a volatile pointer, or put the D_80139E00 read after the byte stores with an intervening volatile access.",
+   "by": "claude-haiku-23",
+   "created_at": 1794208029.723469,
+   "score_before": 1235,
+   "score_after": 915
+  },
+  {
+   "function": "func_80025EF0",
+   "text": "Claim brief had target assembly but compile wasn't run this pass due slow backend. Best saved 370; inspect full target and current candidate baseline, preserve stack frame and ordering; matched callee signature in brief.",
+   "by": "codex-gpt-6-luna-15",
+   "created_at": 1794208457.712511,
+   "score_before": 370,
+   "score_after": 370
+  },
+  {
+   "function": "func_80032B40_ovl_01",
+   "text": "Compile timed out after 180s; no score returned. Saved best 580, initial assembly clearly signed halfword boundary comparisons. Retry with bounded compile when service recovers; avoid claiming any result from timeout.",
+   "by": "codex-gpt-6-luna-15",
+   "created_at": 1794208588.3045278,
+   "score_before": 580,
+   "score_after": 550
+  },
+  {
+   "function": "func_80052C9C_ovl_01",
+   "text": "Best 1091 (73.3%) with s32 params: `void f(s32 a,s32 b,s32 c){ s32 *q=&D_8010C0C4_ovl_01; D_800E9098_ovl_01=1; if(func_80052F40_ovl_01(q)<32 && a){ D_8010BF44_ovl_01=func_80052F1C_ovl_01(q); D_8010BF44_ovl_01[0]=1; D_8010BF44_ovl_01[1]=b; *(s16*)(D_8010BF44_ovl_01+4)=a; *(s16*)(D_8010BF44_ovl_01+2)=c; *(s16*)(D_8010BF44_ovl_01+6)=0; } }` (decls: s8 *func_80052F1C(s32*); u32 func_80052F40(s32*)). s16 params scored 1700/1720 (worse). Remaining diffs: target keeps constant 1 in a callee-saved reg s1 (`addiu $s1,$zero,1` then stored to D_800E9098 and reused for *p) and holds &D_8010C0C4 in s0 across both calls; target also stores a/b/c into s2/s3/s4 first. Untested idea: `s32 one=1;` used for both stores (last attempt hung the MCP server, so unverified). Also the D_8010BF44 global is reloaded after each byte store in the target (aliasing, possibly volatile-ish) \u2014 not yet matched.",
+   "by": "claude-haiku-25",
+   "created_at": 1794208833.099841,
+   "score_before": 1700,
+   "score_after": 745
+  },
+  {
+   "function": "func_800275F8_ovl_01",
+   "text": "Best stays 925 (74.3%, saved candidate fb4aa3a75c139e5b91f0). Tried: (1) saved draft with `volatile s32 off=0x18000` -> 925 (volatile local spills to stack: addiu $sp/sw/lw, and folds D_800C7B88); (2) plain `(D_800C7650+0x18000)[0x538]` -> 1130, the offset folds into the symbol (matches proposal #309237645324); (3) `volatile u32 off` through a u8* cast -> 925 again. Target needs `lui/ori $t0=0x18000` kept live in a register, then `addiu $v0,D_800C7650` + `addu $v0,$v0,$t0` + `lbu 0x538($v0)`. Not yet tried: a non-folded, non-spilled runtime source for the 0x18000 value (e.g. a global volatile u32 declared via edit_context, or deriving it from a table lookup). Diff remaining: register choice ($v0 vs $t0), store order (sh $a1 scheduled after lbu), and the extra stack slot.",
+   "by": "claude-haiku-21",
+   "created_at": 1794209123.369644,
+   "score_before": 910,
+   "score_after": 910
+  },
+  {
+   "function": "func_80032B40_ovl_01",
+   "text": "Semantics are settled: return 0 if (u32)arg1[2] < (u32)(arg0[0]-arg1[0]); else return 0 if (u32)arg1[3] < (u32)(arg0[2]-arg1[1]); else return 1. Target layout: bnez c1 -> block that returns 0; beqz c2 -> block that returns 1; fallthrough returns 0 (both return-0 paths share one `jr $ra; addu $v0,$zero,$zero` block). The first version (if c1 return 0; if c2 return 0; return 1) gives 1905 then 655 with an `xori $v0,$v0,1` tail, not the target's separate return blocks. The best saved is 550 from another agent (their version returns the wrong value, so its semantics are off). Untried: a formulation that makes the compiler emit `beqz` to a separate `return 1` block, e.g. `if (!c2) return 1; return 0;` after the c1 return (tried: still 655, same xori shape). Likely needs a different expression for c2 (e.g. compare via a temp s32 difference) to get the sltu operand order. Registers differ throughout.",
+   "by": "claude-haiku-24",
+   "created_at": 1794209126.954025,
+   "score_before": 550,
+   "score_after": 550
+  },
+  {
+   "function": "func_80030F48_ovl_01",
+   "text": "Re-checked the saved best (410, same source). Only three rows differ: the branch layout. The target puts the `a2 << 6` else-loop out of line after the if-loop's `bgtz $t0,0x1c; jr $ra`, and enters it with `blez $t0` (0x58) at index 5. The candidate puts the else-loop inline and enters with `blez $t0,0x60`, then loops with `blez $t0,0x84` and `j +0x1c`. Needed: a C shape where the else-body is emitted after the return, e.g. an early `if (t0 <= 0) goto` into a block after the do-while, or moving the `a2 << 6` else out of the if. Not tried: goto-based layout. Registers look fine.",
+   "by": "claude-haiku-24",
+   "created_at": 1794209164.376447,
+   "score_before": 410,
+   "score_after": 410
+  },
+  {
+   "function": "func_80062CA0_ovl_01",
+   "text": "Best 475 (86.4%) with the saved draft shape. Target keeps the lui base in $v0 for D_8011113C, D_800EFBF4, D_800EFBF8 (lwc1 from $v0), and $at only for D_800B91A8/D_800B91B0/D_800B91B4 (ldc1/lwc1). Mine uses $at for all, so the register rows dominate. Also the target computes neg.s $fa0 once before the mul (a=-a), then div by a second neg.s $fv1,$fa0, and loads D_800B91B4 late. Next: give the D_8011113C/EFBF4/EFBF8 loads a separate pointer or temp so GCC picks $v0; keep D_800B91xx on $at. Resubmitting the same source gave the same 475 (no change).",
+   "by": "claude-haiku-22",
+   "created_at": 1794209192.0724952,
+   "score_before": 475,
+   "score_after": 475
+  },
+  {
+   "function": "func_8004344C_ovl_01",
+   "text": "Best stays 750 (saved candidate 749fd5e88c78eb533abf). The 68-byte claim is two routines. The first ends at 0x8004346C (`jr $ra` + delay `sw $v0,0($a0)`, arg0[0] = (s32)D[0]<<16 | (u16)D[1]). From 0x8004346C a second routine does lui/lh/sw/lh/sw/lh/jr/sw, storing sign-extended halfwords D[0], D[1], D[2] into arg0[0..2]. report_boundary filed for end 0x8004346C (needs approval). A one-line C for only the first routine scored 1110 because the 2nd routine is missing, so this claim can't reach a score below 750 until the boundary is settled. Compiler map suggests sn-n64-281 (try_compiler) if KMC fails.",
+   "by": "claude-haiku-21",
+   "created_at": 1794209201.391432,
+   "score_before": 750,
+   "score_after": 750
+  },
+  {
+   "function": "func_80082D40_ovl_01",
+   "text": "Best this session: score 605 with `extern u8 D_801314F0_ovl_01[]; volatile s32 *p = (volatile s32 *)(D_801314F0_ovl_01 + 0x80); a[0..2]=p[0..2]; b[0..2]=p[3..5];`. Remaining diff: gcc-2.7.2-kmc folds the +0x80 into the symbol (emits lui/addiu D_80131570 then lw 0(base)), but target emits addiu of D_801314F0 exactly and then lw 0x80($v0)..0x8c. Using `volatile s32 *p = D_801314F0_ovl_01` with p[32..37] folds the offset back to %lo(D_80131570) per load (score 695). Untried: keep the base un-offset while preventing folding, e.g. a runtime-variable offset (volatile int idx = 0x80) added to the base, or a char* base with a separate add. Target register use: base $v0, data $v1, stores to $a0/$a1.",
+   "by": "claude-haiku-25",
+   "created_at": 1794209251.034745,
+   "score_before": 685,
+   "score_after": 605
+  },
+  {
+   "function": "func_80052C9C_ovl_01",
+   "text": "Claimed but not attempted: session ended for capacity. No C written, no compiles. Start fresh from get_function brief.",
+   "by": "claude-haiku-23",
+   "created_at": 1794209290.9273741,
+   "score_before": 745,
+   "score_after": 745
+  },
+  {
+   "function": "func_8006BDD4_ovl_01",
+   "text": "Best stays 915 (66.1%, saved revision 366446a009eeabb039a4 = the saved draft). Every statement and the AND-mask sequence (|1, &-3, &-0x11, &-0x21) match the target. The remaining diff is scheduling: the compiler hoists `lui $a2,%hi(D_80139E00)` and `lw $a0` of D_80139E00 to the top, while the target emits `lui $a2` after the first sb (`sb 8` at [0], addiu $v0, then lui $a2), with the lw after the sw to D_801129BC. Tried a u8* pointer local for D_80112908 -> same 915. Untried: making the D_80139E00 read depend on a store (e.g. read after writing D_801129BC through a volatile), or a different statement order for the D_80112794 byte update. Target uses lbu/andi 0xF7/sb for the last update.",
+   "by": "claude-haiku-21",
+   "created_at": 1794209381.506262,
+   "score_before": 915,
+   "score_after": 915
+  },
+  {
+   "function": "func_80032B40_ovl_01",
+   "text": "Target semantics: returns 0 if (u16)arg1[2] < (u32)(arg0[0]-arg1[0]); else returns 0 if arg1[3] < (arg0[2]-arg1[1]); else 1. Target uses a shared `jr $ra` for the return-0 path and a `beqz a0 -> return 1` branch. Tried: 3-return if-chain (655), `>=` form (655), local pointer copy (655). GCC 2.7.2 emits xori for the value of the second test, not the branch the target uses. Best saved 550 (wrong return structure). Untried: forming the second comparison as a separate int temp and using a `goto`-free ternary; compile_variants with several return-shape alternatives.",
+   "by": "claude-haiku-22",
+   "created_at": 1794209459.724097,
+   "score_before": 550,
+   "score_after": 550
+  },
+  {
+   "function": "func_80062CA0_ovl_01",
+   "text": "Best 475 (inherited, reproduced). Target uses `lui $v0` for D_8011113C's first load and hoists the D_800B91B4 load above the division; candidates always use $at for globals, so register choice is off. Tried: (a) `v=(-a*E4+E8)/-a` without a=-a -> 540 (worse; extra neg.s missing); (b) separate `b=-a` divisor -> still 475, with B4 load and neg.s ordering wrong. Still open: get the target's neg of a into f12 before the B4 load, and the $v0-based address for the first global. Untested idea: make D_800B91B4 a single float var loaded before the division.",
+   "by": "claude-haiku-23",
+   "created_at": 1794209516.575627,
+   "score_before": 475,
+   "score_after": 475
+  },
+  {
+   "function": "func_8004344C_ovl_01",
+   "text": "Boundary: report_boundary(end=0x8004346C) is pending user approval. The first `jr $ra` at 0x80043468 ends the routine; the 9 insns after it (0x8004346C..0x8004348C, loading D_80139A20 into three words of arg0) are a separate routine. Against the 8-insn real body, the best C is `s16 *p = &D_80139A20; arg0[0] = ((s32)p[0] << 16) | (u16)p[1];` (the local pointer stops the %lo folding). Volatile pointer scored worse (1225). Scores here are against the full 17-insn target, so they cannot show a match until the boundary is approved.",
+   "by": "claude-haiku-22",
+   "created_at": 1794209628.750258,
+   "score_before": 750,
+   "score_after": 750
+  },
+  {
+   "function": "func_80032B40_ovl_01",
+   "text": "Target semantics (verified from asm): return 0 if (u32)arg1[2] < (u32)(arg0[0]-arg1[0]); else return 0 if (u32)arg1[3] < (u32)(arg0[2]-arg1[1]); else return 1. Shape: first bnez jumps to a shared 'return 0' block (jr ra; addu v0,zero,zero) and second beqz jumps to a 'return 1' block (addiu v0,zero,1), with the fallthrough being return 0. Tried: nested-if with two 'return 0' (score 655, emits bnez 0x38 + xori v0,v0,1 instead of beqz/addiu 1); 'return (cond)' tail form (845, bnel). Best stays 550 (codex-gpt-6-luna-15). Untried: forcing the 'return 1' block to be explicit via if(!c2) return 1; return 0; with the first return 0 placed as a separate nonmerged block; also check that the loads of arg1[1]/arg1[3] order matches (target loads arg1[0],arg1[2] first, then arg1[1],arg1[3]).",
+   "by": "claude-haiku-21",
+   "created_at": 1794209639.753519,
+   "score_before": 550,
+   "score_after": 550
   }
  ],
  "set_aside": [

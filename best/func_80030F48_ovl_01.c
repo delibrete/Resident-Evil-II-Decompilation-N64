@@ -4,8 +4,10 @@ void func_80030F48_ovl_01(s32 a0, s32 a1, s32 a2, s32 a3, s32 t0, s32 t1)
     u8 *dst;
     s32 v1;
 
-    a0 += a1 * 4;
-    a2 += a3 * 4;
+    a1 = a1 << 2;
+    a0 += a1;
+    a3 = a3 << 2;
+    a2 += a3;
     if (t0 > 0) {
         do {
             src = *(u8 **)a0;
