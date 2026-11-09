@@ -1,29 +1,12 @@
-#ifndef M2C_DEFINES
-#define M2C_DEFINES
-typedef s32 M2C_UNK;
-typedef s8 M2C_UNK8;
-typedef s16 M2C_UNK16;
-typedef s32 M2C_UNK32;
-#define M2C_FIELD(expr, type_ptr, offset) (*(type_ptr)((s8 *)(expr) + (offset)))
-#define M2C_BITWISE(type, expr) ((type)(expr))
-#define M2C_ERROR(desc) (0)
-#define M2C_CARRY 0
-#define M2C_OVERFLOW(a) (0)
-#endif
-/* machine draft (m2c) for gcc-2.7.2-kmc -G0 -mips3 -mgp32 -mfp32 -O2 -mcpu=r4600 -fno-schedule-insns, tried by autopilot */
-
-s32 func_80089D34_ovl_01();
-
-void func_801626D4_overlay_027(void *arg0, s32 arg1, s32 arg2) {
-    s8 var_v0;
-
-    M2C_FIELD(arg0, s8 *, 0x2C6) = 1;
+s32 func_80089D34_ovl_01(void *, s32, s32, u32);
+void func_801626D4_overlay_027(u8 *arg0, s32 arg1, s32 arg2) {
+    arg0[0x2C6] = 1;
     func_80089D34_ovl_01(arg0, arg1, arg2, 0x200);
-    M2C_FIELD(arg0, u8 *, 0x2BF) &= 0x7F;
-    var_v0 = 8;
-    if (M2C_FIELD(arg0, u8 *, 0x2C7) == 0) {
-        var_v0 = 2;
+    arg0[0x2BF] &= 0x7F;
+    if (arg0[0x2C7] == 0) {
+        arg0[5] = 2;
+    } else {
+        arg0[5] = 8;
     }
-    M2C_FIELD(arg0, s8 *, 5) = var_v0;
-    M2C_FIELD(arg0, s16 *, 6) = 0;
+    *(u16 *)(arg0 + 6) = 0;
 }
