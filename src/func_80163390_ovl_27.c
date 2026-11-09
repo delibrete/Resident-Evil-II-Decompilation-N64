@@ -23,4 +23,3 @@ void func_80163390_ovl_27(void *arg0)
     while (var_s0 < 3U);
   }
 }
-
